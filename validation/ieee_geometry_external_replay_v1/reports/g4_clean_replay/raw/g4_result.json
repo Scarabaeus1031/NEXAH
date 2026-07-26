@@ -1,0 +1,152 @@
+{
+  "canonical_v1_write_performed": false,
+  "classification": "G4_clean_replay_passed",
+  "commands": [
+    {
+      "command": [
+        "/private/tmp/nexah-sr1-g4.tCdR3H/venv/bin/python",
+        "/Users/tho2020/Documents/GitHub/NEXAH/validation/ieee_geometry_external_replay_v1/replay_development.py",
+        "--source-root",
+        "/private/tmp/nexah-sr1-g4.tCdR3H/source",
+        "--sidecar-root",
+        "/Users/tho2020/Documents/GitHub/NEXAH/validation/ieee_geometry_external_replay_v1",
+        "--out",
+        "/private/tmp/nexah-sr1-g4.tCdR3H/g4-review/development"
+      ],
+      "command_id": "ieee9-development-replay",
+      "cwd": "/private/tmp/nexah-sr1-g4.tCdR3H/source",
+      "exit_code": 0,
+      "runtime_seconds": 0.039781125029549,
+      "stderr": "",
+      "stdout": "{\n  \"case_id\": \"ieee9\",\n  \"case_role\": \"method_development\",\n  \"command\": \"development_replay\",\n  \"comparator_output_generated\": false,\n  \"comparison\": {\n    \"adjacent_steps\": 18,\n    \"campaign_positions\": 19,\n    \"case_id\": \"ieee9\",\n    \"case_role\": \"method_development\",\n    \"centered_turns\": 17,\n    \"discrepancy_count\": 0,\n    \"first_divergence\": null,\n    \"operators\": {\n      \"adjacent-displacement-v1\": {\n        \"discrepancy_count\": 0,\n        \"numeric_values_compared\": 182,\n        \"records_compared\": 18,\n        \"status\": \"equivalent\"\n      },\n      \"campaign-path-length-v1\": {\n        \"discrepancy_count\": 0,\n        \"numeric_values_compared\": 70,\n        \"records_compared\": 18,\n        \"status\": \"equivalent\"\n      },\n      \"direction-change-v1\": {\n        \"discrepancy_count\": 0,\n        \"numeric_values_compared\": 15,\n        \"records_compared\": 17,\n        \"status\": \"equivalent\"\n      },\n      \"discrete-curvature-v1\": {\n        \"discrepancy_count\": 0,\n        \"numeric_values_compared\": 15,\n        \"records_compared\": 17,\n        \"status\": \"equivalent\"\n      },\n      \"distance-to-last-converged-v1\": {\n        \"discrepancy_count\": 0,\n        \"numeric_values_compared\": 6,\n        \"records_compared\": 2,\n        \"status\": \"equivalent\"\n      },\n      \"normalized-local-drift-v1\": {\n        \"discrepancy_count\": 0,\n        \"numeric_values_compared\": 70,\n        \"records_compared\": 18,\n        \"status\": \"equivalent\"\n      }\n    },\n    \"solver_boundaries\": 2,\n    \"status\": \"equivalent\",\n    \"structural_discrepancy_count\": 0,\n    \"structural_numeric_values_compared\": 153\n  },\n  \"failed_frames\": [\n    {\n      \"campaign_index\": 17,\n      \"entity_view_count\": 0,\n      \"failure\": \"LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!\",\n      \"load_scale\": 2.3,\n      \"system_features\": null\n    },\n    {\n      \"campaign_index\": 18,\n      \"entity_view_count\": 0,\n      \"failure\": \"LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!\",\n      \"load_scale\": 2.4,\n      \"system_features\": null\n    }\n  ],\n  \"failure_policy_preserved\": true,\n  \"gap_bridged\": false,\n  \"status\": \"passed\"\n}\n"
+    },
+    {
+      "command": [
+        "/private/tmp/nexah-sr1-g4.tCdR3H/venv/bin/python",
+        "/Users/tho2020/Documents/GitHub/NEXAH/validation/ieee_geometry_external_replay_v1/replay_evaluation.py",
+        "--source-root",
+        "/private/tmp/nexah-sr1-g4.tCdR3H/source",
+        "--sidecar-root",
+        "/Users/tho2020/Documents/GitHub/NEXAH/validation/ieee_geometry_external_replay_v1",
+        "--approved-protocol",
+        "/private/tmp/nexah-sr1-g4.tCdR3H/g4-review/protocol_hash_refusal_control/g2_protocol_byte_altered.json",
+        "--approval-record",
+        "/Users/tho2020/Documents/GitHub/NEXAH/validation/ieee_geometry_external_replay_v1/protocol/g2_approval_record.json",
+        "--out",
+        "/private/tmp/nexah-sr1-g4.tCdR3H/g4-review/protocol_hash_refusal_control/result"
+      ],
+      "command_id": "protocol-hash-refusal-control",
+      "cwd": "/private/tmp/nexah-sr1-g4.tCdR3H/source",
+      "exit_code": 2,
+      "runtime_seconds": 0.03279212489724159,
+      "stderr": "evaluation replay blocked: approved protocol SHA-256 mismatch\n",
+      "stdout": "{\n  \"command\": \"evaluation_replay\",\n  \"comparator_output_generated\": false,\n  \"evaluation_source_loaded\": false,\n  \"protocol_verified_before_evaluation_load\": false,\n  \"reason\": \"approved protocol SHA-256 mismatch\",\n  \"status\": \"blocked\"\n}\n"
+    },
+    {
+      "command": [
+        "/private/tmp/nexah-sr1-g4.tCdR3H/venv/bin/python",
+        "/Users/tho2020/Documents/GitHub/NEXAH/validation/ieee_geometry_external_replay_v1/replay_evaluation.py",
+        "--source-root",
+        "/private/tmp/nexah-sr1-g4.tCdR3H/source",
+        "--sidecar-root",
+        "/Users/tho2020/Documents/GitHub/NEXAH/validation/ieee_geometry_external_replay_v1",
+        "--approved-protocol",
+        "/Users/tho2020/Documents/GitHub/NEXAH/validation/ieee_geometry_external_replay_v1/protocol/g2_protocol_approved.json",
+        "--approval-record",
+        "/Users/tho2020/Documents/GitHub/NEXAH/validation/ieee_geometry_external_replay_v1/protocol/g2_approval_record.json",
+        "--out",
+        "/private/tmp/nexah-sr1-g4.tCdR3H/g4-review/evaluation"
+      ],
+      "command_id": "ieee14-evaluation-replay",
+      "cwd": "/private/tmp/nexah-sr1-g4.tCdR3H/source",
+      "exit_code": 0,
+      "runtime_seconds": 55.06894083414227,
+      "stderr": "",
+      "stdout": "{\n  \"campaign_positions\": 19,\n  \"canonical_command\": [\n    \"/private/tmp/nexah-sr1-g4.tCdR3H/venv/bin/python\",\n    \"/private/tmp/nexah-sr1-g4.tCdR3H/source/validation/ieee_geometry_v1/run_validation.py\",\n    \"--out\",\n    \"/private/tmp/nexah-sr1-g4.tCdR3H/g4-review/evaluation/canonical_replay.json\"\n  ],\n  \"canonical_exact_json_match\": false,\n  \"canonical_exit_code\": 0,\n  \"canonical_output_exists\": true,\n  \"canonical_runtime_seconds\": 55.02458641608246,\n  \"canonical_stderr\": \"Matplotlib created a temporary cache directory at /var/folders/3d/xzcg7l8n4kv1fk25bbmfgzx40000gn/T/matplotlib-kzuqi7py because the default path (/Users/tho2020/.matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.\\nMatplotlib is building the font cache; this may take a moment.\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\nnumba cannot be imported and numba functions are disabled.\\nProbably the execution is slow.\\nPlease install numba to gain a massive speedup.\\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\\n\",\n  \"canonical_stdout\": \"\",\n  \"case_id\": \"ieee14\",\n  \"case_role\": \"locked_evaluation\",\n  \"command\": \"evaluation_replay\",\n  \"comparator_output_generated\": false,\n  \"comparison\": {\n    \"adjacent_steps\": 18,\n    \"campaign_positions\": 19,\n    \"case_id\": \"ieee14\",\n    \"case_role\": \"locked_evaluation\",\n    \"centered_turns\": 17,\n    \"discrepancy_count\": 0,\n    \"first_divergence\": null,\n    \"operators\": {\n      \"adjacent-displacement-v1\": {\n        \"discrepancy_count\": 0,\n        \"numeric_values_compared\": 198,\n        \"records_compared\": 18,\n        \"status\": \"equivalent\"\n      },\n      \"campaign-path-length-v1\": {\n        \"discrepancy_count\": 0,\n        \"numeric_values_compared\": 72,\n        \"records_compared\": 18,\n        \"status\": \"equivalent\"\n      },\n      \"direction-change-v1\": {\n        \"discrepancy_count\": 0,\n        \"numeric_values_compared\": 17,\n        \"records_compared\": 17,\n        \"status\": \"equivalent\"\n      },\n      \"discrete-curvature-v1\": {\n        \"discrepancy_count\": 0,\n        \"numeric_values_compared\": 17,\n        \"records_compared\": 17,\n        \"status\": \"equivalent\"\n      },\n      \"distance-to-last-converged-v1\": {\n        \"discrepancy_count\": 0,\n        \"numeric_values_compared\": 0,\n        \"records_compared\": 0,\n        \"status\": \"equivalent\"\n      },\n      \"normalized-local-drift-v1\": {\n        \"discrepancy_count\": 0,\n        \"numeric_values_compared\": 72,\n        \"records_compared\": 18,\n        \"status\": \"equivalent\"\n      }\n    },\n    \"solver_boundaries\": 0,\n    \"status\": \"equivalent\",\n    \"structural_discrepancy_count\": 0,\n    \"structural_numeric_values_compared\": 167\n  },\n  \"failed_frames\": 0,\n  \"protocol_verified_before_evaluation_load\": {\n    \"protocol_id\": \"sr1-ieee-geometry-comparator-analysis-v1\",\n    \"protocol_version\": \"1.0.0\",\n    \"sha256\": \"bd9d0fa2094b17333b18ec7621f33fd32271c2e759f2b01c9b27f76702ffe5ba\",\n    \"verified\": true\n  },\n  \"required_checks\": {\n    \"adapter-protocol\": true,\n    \"development-freeze\": true,\n    \"environment-lock\": true,\n    \"failure-preservation\": true,\n    \"no-evaluation-refit\": true,\n    \"outcome-boundary\": true\n  },\n  \"required_checks_pass\": true,\n  \"status\": \"passed\"\n}\n"
+    },
+    {
+      "command": [
+        "/private/tmp/nexah-sr1-g4.tCdR3H/venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/validation/test_ieee_geometry_v1.py",
+        "-q"
+      ],
+      "command_id": "frozen-v1-tests",
+      "cwd": "/private/tmp/nexah-sr1-g4.tCdR3H/source",
+      "exit_code": 0,
+      "runtime_seconds": 20.88938233302906,
+      "stderr": "",
+      "stdout": "..                                                                       [100%]\n2 passed in 20.67s\n"
+    }
+  ],
+  "commit_created": false,
+  "entry_verification": {
+    "all_pass": true,
+    "checks": {
+      "approved_protocol_bytes_match": true,
+      "exact_clean_environment": true,
+      "frozen_hashes_match": true,
+      "g3_equivalence_accepted": true,
+      "source_checkout_clean": true,
+      "source_revision_matches": true
+    },
+    "g3_result": {
+      "classification": "G3_equivalence_passed",
+      "ieee14_discrepancies": 0,
+      "ieee9_discrepancies": 0,
+      "path": "/Users/tho2020/Documents/GitHub/NEXAH/validation/ieee_geometry_external_replay_v1/reports/g3_equivalence_result.json"
+    },
+    "gate": "G4",
+    "protocol": {
+      "actual_sha256": "bd9d0fa2094b17333b18ec7621f33fd32271c2e759f2b01c9b27f76702ffe5ba",
+      "approved_sha256": "bd9d0fa2094b17333b18ec7621f33fd32271c2e759f2b01c9b27f76702ffe5ba",
+      "path": "/Users/tho2020/Documents/GitHub/NEXAH/validation/ieee_geometry_external_replay_v1/protocol/g2_protocol_approved.json"
+    },
+    "requested_source_revision": "d3a19138b96aa07dfd623bdebb1003cb02cc60e8",
+    "source_revision": "d3a19138b96aa07dfd623bdebb1003cb02cc60e8",
+    "source_status_before": ""
+  },
+  "environment_path": "environment_identity.json",
+  "frozen_hashes_after_all_match": true,
+  "frozen_hashes_after_path": "frozen_hashes_after.json",
+  "frozen_hashes_before_path": "frozen_hashes_before.json",
+  "g5_begun": false,
+  "g6_begun": false,
+  "gate": "G4",
+  "protocol_hash_refusal_control_passed": true,
+  "reader_route_required_manual_data_edit": false,
+  "reader_route_required_network_during_replay": false,
+  "reader_route_used_declared_commands_only": true,
+  "scientific_boundaries": {
+    "combined_score_generated": false,
+    "comparator_output_generated": false,
+    "development_case": "ieee9",
+    "development_failed_frames": [
+      {
+        "campaign_index": 17,
+        "entity_view_count": 0,
+        "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!",
+        "load_scale": 2.3,
+        "system_features": null
+      },
+      {
+        "campaign_index": 18,
+        "entity_view_count": 0,
+        "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!",
+        "load_scale": 2.4,
+        "system_features": null
+      }
+    ],
+    "development_failure_policy_preserved": true,
+    "development_role": "method_development",
+    "evaluation_campaign_positions": 19,
+    "evaluation_case": "ieee14",
+    "evaluation_failed_frames": 0,
+    "evaluation_role": "locked_evaluation",
+    "post_hoc_metric_added": false
+  },
+  "source_checkout_remained_clean": true,
+  "source_status_after": "",
+  "source_status_before": ""
+}

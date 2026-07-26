@@ -1,0 +1,313 @@
+{
+  "canonical_write_performed": false,
+  "classification": "G3_equivalence_passed",
+  "comparator_output_generated": false,
+  "contract": {
+    "absolute_tolerance": 1e-12,
+    "relative_tolerance": 1e-10,
+    "tolerance_changed_after_result": false
+  },
+  "frozen_hashes_after": {
+    "algorithm": "sha256",
+    "all_match": true,
+    "files": [
+      {
+        "actual_sha256": "a6df815729abdb49c3d3f0e09f6fb786395523beb402b1582095436d41bcb566",
+        "expected_sha256": "a6df815729abdb49c3d3f0e09f6fb786395523beb402b1582095436d41bcb566",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/case_manifest.json"
+      },
+      {
+        "actual_sha256": "14744e193321398536529cb81c307968ab363510493265ff1e1cf1340f1224d1",
+        "expected_sha256": "14744e193321398536529cb81c307968ab363510493265ff1e1cf1340f1224d1",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_frames.json"
+      },
+      {
+        "actual_sha256": "576bbcd13c4945f51402f926d740b06c53c4f3a5b63ac09e1643dc1768be1a22",
+        "expected_sha256": "576bbcd13c4945f51402f926d740b06c53c4f3a5b63ac09e1643dc1768be1a22",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_geometry.json"
+      },
+      {
+        "actual_sha256": "f32cc605f01f832c4fff6b54c0871c899feed1d1c43a99d136f28bbfb58c2756",
+        "expected_sha256": "f32cc605f01f832c4fff6b54c0871c899feed1d1c43a99d136f28bbfb58c2756",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_orientation.json"
+      },
+      {
+        "actual_sha256": "094918c0d985405895f00f79208cd02b52424f82add7c877d6ca903274704229",
+        "expected_sha256": "094918c0d985405895f00f79208cd02b52424f82add7c877d6ca903274704229",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_orientation_brief.json"
+      },
+      {
+        "actual_sha256": "9474d6958c29d0333fc4649026132867a0afe7d4d99c3b3a3ef86a335918ba91",
+        "expected_sha256": "9474d6958c29d0333fc4649026132867a0afe7d4d99c3b3a3ef86a335918ba91",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_orientation_brief.md"
+      },
+      {
+        "actual_sha256": "0b0f8771eb775bfbb09f3e4fa92c860c30a9422f578ddcd40c23846d6410386b",
+        "expected_sha256": "0b0f8771eb775bfbb09f3e4fa92c860c30a9422f578ddcd40c23846d6410386b",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_frames.json"
+      },
+      {
+        "actual_sha256": "1d9fedb943eaa001608e23c436234917e5009e260e095a33d5622b31324d81cc",
+        "expected_sha256": "1d9fedb943eaa001608e23c436234917e5009e260e095a33d5622b31324d81cc",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_geometry.json"
+      },
+      {
+        "actual_sha256": "91aaca4996ced9a1b7e40678b016fa266e6007b169d71d77108f77005cd9bbc7",
+        "expected_sha256": "91aaca4996ced9a1b7e40678b016fa266e6007b169d71d77108f77005cd9bbc7",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_orientation.json"
+      },
+      {
+        "actual_sha256": "cca24655ce0c6c10f819ae0826bed974465b884a7fc579eb0690156ce0d446e7",
+        "expected_sha256": "cca24655ce0c6c10f819ae0826bed974465b884a7fc579eb0690156ce0d446e7",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_orientation_brief.json"
+      },
+      {
+        "actual_sha256": "b12d519994b6dfe3fbdaa3d99364451e097b65b214fdf7e6305273854b1012b6",
+        "expected_sha256": "b12d519994b6dfe3fbdaa3d99364451e097b65b214fdf7e6305273854b1012b6",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_orientation_brief.md"
+      },
+      {
+        "actual_sha256": "823176b5a87667e09a02077d6e0e1d72b3f9dd20ef5d9485eed360685422d3bf",
+        "expected_sha256": "823176b5a87667e09a02077d6e0e1d72b3f9dd20ef5d9485eed360685422d3bf",
+        "match": true,
+        "path": "tests/validation/test_ieee_geometry_v1.py"
+      },
+      {
+        "actual_sha256": "bf9ff7f858345c553685ea382440332381d4621aef2c9792a27c3c79b1dd1ff9",
+        "expected_sha256": "bf9ff7f858345c553685ea382440332381d4621aef2c9792a27c3c79b1dd1ff9",
+        "match": true,
+        "path": "validation/ieee_geometry_v1/canonical_summary.json"
+      },
+      {
+        "actual_sha256": "abdf5e58ad377de7f909418fa59fed673e80a6c3352441cbf6ecde49b6f9b5c5",
+        "expected_sha256": "abdf5e58ad377de7f909418fa59fed673e80a6c3352441cbf6ecde49b6f9b5c5",
+        "match": true,
+        "path": "validation/ieee_geometry_v1/canonical_summary.md"
+      },
+      {
+        "actual_sha256": "eba5e944bd3895e57c2f3f69d65f2735d40119b01abb1613e9f7c27b2cac2f89",
+        "expected_sha256": "eba5e944bd3895e57c2f3f69d65f2735d40119b01abb1613e9f7c27b2cac2f89",
+        "match": true,
+        "path": "validation/ieee_geometry_v1/run_validation.py"
+      }
+    ]
+  },
+  "frozen_hashes_before": {
+    "algorithm": "sha256",
+    "all_match": true,
+    "files": [
+      {
+        "actual_sha256": "a6df815729abdb49c3d3f0e09f6fb786395523beb402b1582095436d41bcb566",
+        "expected_sha256": "a6df815729abdb49c3d3f0e09f6fb786395523beb402b1582095436d41bcb566",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/case_manifest.json"
+      },
+      {
+        "actual_sha256": "14744e193321398536529cb81c307968ab363510493265ff1e1cf1340f1224d1",
+        "expected_sha256": "14744e193321398536529cb81c307968ab363510493265ff1e1cf1340f1224d1",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_frames.json"
+      },
+      {
+        "actual_sha256": "576bbcd13c4945f51402f926d740b06c53c4f3a5b63ac09e1643dc1768be1a22",
+        "expected_sha256": "576bbcd13c4945f51402f926d740b06c53c4f3a5b63ac09e1643dc1768be1a22",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_geometry.json"
+      },
+      {
+        "actual_sha256": "f32cc605f01f832c4fff6b54c0871c899feed1d1c43a99d136f28bbfb58c2756",
+        "expected_sha256": "f32cc605f01f832c4fff6b54c0871c899feed1d1c43a99d136f28bbfb58c2756",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_orientation.json"
+      },
+      {
+        "actual_sha256": "094918c0d985405895f00f79208cd02b52424f82add7c877d6ca903274704229",
+        "expected_sha256": "094918c0d985405895f00f79208cd02b52424f82add7c877d6ca903274704229",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_orientation_brief.json"
+      },
+      {
+        "actual_sha256": "9474d6958c29d0333fc4649026132867a0afe7d4d99c3b3a3ef86a335918ba91",
+        "expected_sha256": "9474d6958c29d0333fc4649026132867a0afe7d4d99c3b3a3ef86a335918ba91",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_orientation_brief.md"
+      },
+      {
+        "actual_sha256": "0b0f8771eb775bfbb09f3e4fa92c860c30a9422f578ddcd40c23846d6410386b",
+        "expected_sha256": "0b0f8771eb775bfbb09f3e4fa92c860c30a9422f578ddcd40c23846d6410386b",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_frames.json"
+      },
+      {
+        "actual_sha256": "1d9fedb943eaa001608e23c436234917e5009e260e095a33d5622b31324d81cc",
+        "expected_sha256": "1d9fedb943eaa001608e23c436234917e5009e260e095a33d5622b31324d81cc",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_geometry.json"
+      },
+      {
+        "actual_sha256": "91aaca4996ced9a1b7e40678b016fa266e6007b169d71d77108f77005cd9bbc7",
+        "expected_sha256": "91aaca4996ced9a1b7e40678b016fa266e6007b169d71d77108f77005cd9bbc7",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_orientation.json"
+      },
+      {
+        "actual_sha256": "cca24655ce0c6c10f819ae0826bed974465b884a7fc579eb0690156ce0d446e7",
+        "expected_sha256": "cca24655ce0c6c10f819ae0826bed974465b884a7fc579eb0690156ce0d446e7",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_orientation_brief.json"
+      },
+      {
+        "actual_sha256": "b12d519994b6dfe3fbdaa3d99364451e097b65b214fdf7e6305273854b1012b6",
+        "expected_sha256": "b12d519994b6dfe3fbdaa3d99364451e097b65b214fdf7e6305273854b1012b6",
+        "match": true,
+        "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_orientation_brief.md"
+      },
+      {
+        "actual_sha256": "823176b5a87667e09a02077d6e0e1d72b3f9dd20ef5d9485eed360685422d3bf",
+        "expected_sha256": "823176b5a87667e09a02077d6e0e1d72b3f9dd20ef5d9485eed360685422d3bf",
+        "match": true,
+        "path": "tests/validation/test_ieee_geometry_v1.py"
+      },
+      {
+        "actual_sha256": "bf9ff7f858345c553685ea382440332381d4621aef2c9792a27c3c79b1dd1ff9",
+        "expected_sha256": "bf9ff7f858345c553685ea382440332381d4621aef2c9792a27c3c79b1dd1ff9",
+        "match": true,
+        "path": "validation/ieee_geometry_v1/canonical_summary.json"
+      },
+      {
+        "actual_sha256": "abdf5e58ad377de7f909418fa59fed673e80a6c3352441cbf6ecde49b6f9b5c5",
+        "expected_sha256": "abdf5e58ad377de7f909418fa59fed673e80a6c3352441cbf6ecde49b6f9b5c5",
+        "match": true,
+        "path": "validation/ieee_geometry_v1/canonical_summary.md"
+      },
+      {
+        "actual_sha256": "eba5e944bd3895e57c2f3f69d65f2735d40119b01abb1613e9f7c27b2cac2f89",
+        "expected_sha256": "eba5e944bd3895e57c2f3f69d65f2735d40119b01abb1613e9f7c27b2cac2f89",
+        "match": true,
+        "path": "validation/ieee_geometry_v1/run_validation.py"
+      }
+    ]
+  },
+  "g2_protocol": {
+    "protocol_id": "sr1-ieee-geometry-comparator-analysis-v1",
+    "protocol_version": "1.0.0",
+    "sha256": "bd9d0fa2094b17333b18ec7621f33fd32271c2e759f2b01c9b27f76702ffe5ba",
+    "verified": true
+  },
+  "g4_begun": false,
+  "gate": "G3",
+  "ieee14": {
+    "adjacent_steps": 18,
+    "campaign_positions": 19,
+    "case_id": "ieee14",
+    "case_role": "locked_evaluation",
+    "centered_turns": 17,
+    "discrepancy_count": 0,
+    "first_divergence": null,
+    "operators": {
+      "adjacent-displacement-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 198,
+        "records_compared": 18,
+        "status": "equivalent"
+      },
+      "campaign-path-length-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 72,
+        "records_compared": 18,
+        "status": "equivalent"
+      },
+      "direction-change-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 17,
+        "records_compared": 17,
+        "status": "equivalent"
+      },
+      "discrete-curvature-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 17,
+        "records_compared": 17,
+        "status": "equivalent"
+      },
+      "distance-to-last-converged-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 0,
+        "records_compared": 0,
+        "status": "equivalent"
+      },
+      "normalized-local-drift-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 72,
+        "records_compared": 18,
+        "status": "equivalent"
+      }
+    },
+    "solver_boundaries": 0,
+    "status": "equivalent",
+    "structural_discrepancy_count": 0,
+    "structural_numeric_values_compared": 167
+  },
+  "ieee9": {
+    "adjacent_steps": 18,
+    "campaign_positions": 19,
+    "case_id": "ieee9",
+    "case_role": "method_development",
+    "centered_turns": 17,
+    "discrepancy_count": 0,
+    "first_divergence": null,
+    "operators": {
+      "adjacent-displacement-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 182,
+        "records_compared": 18,
+        "status": "equivalent"
+      },
+      "campaign-path-length-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 70,
+        "records_compared": 18,
+        "status": "equivalent"
+      },
+      "direction-change-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 15,
+        "records_compared": 17,
+        "status": "equivalent"
+      },
+      "discrete-curvature-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 15,
+        "records_compared": 17,
+        "status": "equivalent"
+      },
+      "distance-to-last-converged-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 6,
+        "records_compared": 2,
+        "status": "equivalent"
+      },
+      "normalized-local-drift-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 70,
+        "records_compared": 18,
+        "status": "equivalent"
+      }
+    },
+    "solver_boundaries": 2,
+    "status": "equivalent",
+    "structural_discrepancy_count": 0,
+    "structural_numeric_values_compared": 153
+  },
+  "production_operator_imported": false
+}

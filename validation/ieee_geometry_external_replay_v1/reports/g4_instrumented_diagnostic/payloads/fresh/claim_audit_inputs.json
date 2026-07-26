@@ -1,0 +1,30 @@
+{
+  "episode_update_allowed": false,
+  "gate_checks": {
+    "adapter_protocol": true,
+    "development_freeze": true,
+    "environment_lock": true,
+    "evaluation_brief_replay": true,
+    "evaluation_geometry_replay": false,
+    "evaluation_report_replay": false,
+    "evaluation_source_replay": false,
+    "no_evaluation_refit": true
+  },
+  "gate_passed": false,
+  "outcome_status": "not_observed",
+  "prohibited_claims": [
+    "The load axis is elapsed time or an observed operational trajectory.",
+    "Pandapower non-convergence is a certified physical voltage-stability boundary.",
+    "A geometric change is a causal precursor, failure probability, or control recommendation.",
+    "IEEE benchmark behavior establishes real-world grid generalization.",
+    "The tube metaphor is a physical tube, globally smooth manifold, or universal field.",
+    "The evaluation case is historically untouched.",
+    "A benchmark computation is an observed outcome eligible for episodic memory."
+  ],
+  "supported_claims": [
+    "The declared adapter and solver produce reproducible benchmark computations under the locked environment.",
+    "Predeclared projections expose different aspects of the same ordered IEEE load campaign.",
+    "The listed discrete geometry operators can describe local change or explicit insufficiency on the sampled campaign.",
+    "The frozen method can be applied to IEEE-14 without Phase V parameter retuning after evaluation begins."
+  ]
+}

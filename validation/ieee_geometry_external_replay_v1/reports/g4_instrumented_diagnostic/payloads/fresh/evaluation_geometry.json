@@ -1,0 +1,1084 @@
+{
+  "analysis": {
+    "campaign_id": "phase-v-ieee-geometry-v1-ieee14",
+    "case_id": "ieee14",
+    "case_role": "locked_evaluation",
+    "contiguous_converged_frame_ids": [
+      "phase-v-ieee-geometry-v1-ieee14:load-000:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-001:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-002:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-003:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-004:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-005:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-006:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-007:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-008:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-009:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-010:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-011:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-012:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-013:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-014:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-015:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-016:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-017:geometry-frame",
+      "phase-v-ieee-geometry-v1-ieee14:load-018:geometry-frame"
+    ],
+    "manifest_id": "phase-v-ieee-geometry-v1",
+    "operator_ids": [
+      "adjacent-displacement-v1",
+      "normalized-local-drift-v1",
+      "campaign-path-length-v1",
+      "direction-change-v1",
+      "discrete-curvature-v1",
+      "distance-to-last-converged-v1"
+    ],
+    "projected_frames": [
+      {
+        "campaign_index": 0,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-000:geometry-frame",
+        "load_scale": 0.6,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.5411189151246811,
+          3.077422171706486,
+          -0.5464134174590349,
+          -1.2361831932334764,
+          -1.9840460161547977,
+          -2.048655930952816,
+          -2.4737644200620115
+        ]
+      },
+      {
+        "campaign_index": 1,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-001:geometry-frame",
+        "load_scale": 0.7,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.5411189151246811,
+          3.011933757137416,
+          -0.5541359837497337,
+          -1.0514864089896432,
+          -1.9807514035772784,
+          -1.8881965204878588,
+          -2.5517008961875107
+        ]
+      },
+      {
+        "campaign_index": 2,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-002:geometry-frame",
+        "load_scale": 0.8,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.5411189151246811,
+          2.944502582414723,
+          -0.5555506406344807,
+          -0.8648611566994343,
+          -1.977359511762186,
+          -1.7277371100229015,
+          -2.5769623649348286
+        ]
+      },
+      {
+        "campaign_index": 3,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-003:geometry-frame",
+        "load_scale": 0.9,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.5411189151246842,
+          2.875060690156828,
+          -0.5501487343142212,
+          -0.6761708750633423,
+          -1.9739021226587712,
+          -1.5672776995579447,
+          -2.5809552902186472
+        ]
+      },
+      {
+        "campaign_index": 4,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-004:geometry-frame",
+        "load_scale": 1.0,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.5411189151246842,
+          2.8035340415422088,
+          -0.5375455977355864,
+          -0.4852689694577523,
+          -1.9703855182716876,
+          -1.4068182890929881,
+          -2.453056041328972
+        ]
+      },
+      {
+        "campaign_index": 5,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-005:geometry-frame",
+        "load_scale": 1.1,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.541118915124678,
+          2.7298418455764923,
+          -0.5175021584458405,
+          -0.2919975591222395,
+          -1.9668120451259636,
+          -1.2463588786280309,
+          -2.332906037368946
+        ]
+      },
+      {
+        "campaign_index": 6,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-006:geometry-frame",
+        "load_scale": 1.2,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.5411189151246811,
+          2.6538957827726994,
+          -0.48992829043819275,
+          -0.096186030874185,
+          -1.9631819490959155,
+          -1.0858994681630738,
+          -2.220782820162233
+        ]
+      },
+      {
+        "campaign_index": 7,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-007:geometry-frame",
+        "load_scale": 1.3,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.51778891561009,
+          2.575599102673608,
+          -0.4548676940037265,
+          0.1023506393439335,
+          -1.9594942064935692,
+          -0.9254400576981161,
+          -2.098293372787106
+        ]
+      },
+      {
+        "campaign_index": 8,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-008:geometry-frame",
+        "load_scale": 1.4,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.4696067176476266,
+          2.4948455696771705,
+          -0.41246869308757445,
+          0.30381384516996424,
+          -1.9557469258815139,
+          -0.7649806472331597,
+          -1.9670935563901604
+        ]
+      },
+      {
+        "campaign_index": 9,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-009:geometry-frame",
+        "load_scale": 1.5,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.4190355329723314,
+          2.4115182252212084,
+          -0.3629479095410024,
+          0.5084236489945645,
+          -1.9519375464260018,
+          -0.6045212367682026,
+          -1.8448129715224595
+        ]
+      },
+      {
+        "campaign_index": 10,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-010:geometry-frame",
+        "load_scale": 1.6,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.365956994563387,
+          2.3254879260544485,
+          -0.30655368042374337,
+          0.7164214976210208,
+          -1.9480629302094297,
+          -0.4440618263032446,
+          -1.7318439613922119
+        ]
+      },
+      {
+        "campaign_index": 11,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-011:geometry-frame",
+        "load_scale": 1.7,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.3078447381189262,
+          2.2366116073828026,
+          -0.2435340857967599,
+          0.9280734512302158,
+          -1.9441193934410543,
+          -0.28360241583828816,
+          -1.6286189527441453
+        ]
+      },
+      {
+        "campaign_index": 12,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-012:geometry-frame",
+        "load_scale": 1.8,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.2149084773325927,
+          2.144730205162963,
+          -0.17411186696183037,
+          1.1436740501195874,
+          -1.9401026980228955,
+          -0.12314300537333098,
+          -1.5356163869743835
+        ]
+      },
+      {
+        "campaign_index": 13,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-013:geometry-frame",
+        "load_scale": 1.9,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.11953662841589,
+          2.049666152336443,
+          -0.09846636280372638,
+          1.3635509808620794,
+          -1.9360080134485023,
+          0.04563351739132625,
+          -1.4533678474705196
+        ]
+      },
+      {
+        "campaign_index": 14,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-014:geometry-frame",
+        "load_scale": 2.0,
+        "reason": null,
+        "status": "available",
+        "values": [
+          1.0215755339102228,
+          1.9512203373378747,
+          -0.016721281889906597,
+          1.588070754124443,
+          -1.93182985277999,
+          0.22076620727933194,
+          -1.3824666940162105
+        ]
+      },
+      {
+        "campaign_index": 15,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-015:geometry-frame",
+        "load_scale": 2.1,
+        "reason": null,
+        "status": "available",
+        "values": [
+          0.9208527736070335,
+          1.8491683767993943,
+          0.071063411949595,
+          1.8176456761467512,
+          -1.9275619825295074,
+          0.395898897167338,
+          -1.3235786157336473
+        ]
+      },
+      {
+        "campaign_index": 16,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-016:geometry-frame",
+        "load_scale": 2.2,
+        "reason": null,
+        "status": "available",
+        "values": [
+          0.8171738041572499,
+          1.7432560035457616,
+          0.16489726608681748,
+          2.0527424934594416,
+          -1.9231973032480447,
+          0.5710315870553448,
+          -1.2774546543422292
+        ]
+      },
+      {
+        "campaign_index": 17,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-017:geometry-frame",
+        "load_scale": 2.3,
+        "reason": null,
+        "status": "available",
+        "values": [
+          0.7103177708231946,
+          1.6331932989172178,
+          0.2648643430774403,
+          2.2938932290329532,
+          -1.9187276946873473,
+          0.746164276943351,
+          -1.2449474482144238
+        ]
+      },
+      {
+        "campaign_index": 18,
+        "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-018:geometry-frame",
+        "load_scale": 2.4,
+        "reason": null,
+        "status": "available",
+        "values": [
+          0.6000322263409593,
+          1.5186473945579326,
+          0.3711288381787286,
+          2.5417089283590655,
+          -1.9141438159409536,
+          0.921296966831357,
+          -1.227031733984951
+        ]
+      }
+    ],
+    "projection_model": {
+      "feature_names": [
+        "minimum_bus_voltage",
+        "mean_bus_voltage",
+        "bus_voltage_std",
+        "bus_angle_range",
+        "maximum_line_loading",
+        "total_bus_consumption_p",
+        "total_bus_consumption_q"
+      ],
+      "fit_campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "fit_case_id": "ieee9",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "means": [
+        0.900438863159333,
+        0.9655140400326917,
+        0.034014544777061326,
+        20.582020685775518,
+        111.7457253792428,
+        445.3513564361333,
+        164.61699706287467
+      ],
+      "population_stddevs": [
+        0.07109194220213903,
+        0.02959098753869935,
+        0.024382417627105944,
+        9.372897183188611,
+        55.94750671636508,
+        147.88786728829734,
+        51.55515992681765
+      ],
+      "projection_id": "system-summary-standardized-v1",
+      "provenance": {
+        "metadata": {
+          "campaign_axis": "ordered_load_scale_not_time",
+          "case_id": "ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1",
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9:geometry-frames"
+        },
+        "method": "IEEE-9 development population standardization v1",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:standardization",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "source": "pandapower.networks.case9"
+      },
+      "reason": null,
+      "schema_version": "1.0",
+      "status": "available",
+      "uncertainty": {
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "kind": "unknown",
+        "lower": null,
+        "upper": null,
+        "value": null
+      },
+      "zero_variance_features": []
+    },
+    "provenance": {
+      "metadata": {
+        "campaign_axis": "ordered_load_scale_not_time",
+        "case_id": "ieee14",
+        "manifest_id": "phase-v-ieee-geometry-v1",
+        "source_record_id": "phase-v-ieee-geometry-v1-ieee14:geometry-frames"
+      },
+      "method": "manifest-bound IEEE geometry operators v1",
+      "record_id": "phase-v-ieee-geometry-v1-ieee14:geometry-analysis",
+      "recorded_at": "2026-07-14T18:00:00+00:00",
+      "source": "pandapower.networks.case14"
+    },
+    "schema_version": "1.0",
+    "solver_boundaries": [],
+    "steps": [
+      {
+        "cumulative_path_length": 0.26512910774291776,
+        "delta_load_scale": 0.09999999999999998,
+        "delta_vector": [
+          0.0,
+          -0.06548841456906995,
+          -0.007722566290698785,
+          0.18469678424383318,
+          0.0032946125775192847,
+          0.16045941046495704,
+          -0.07793647612549925
+        ],
+        "displacement": 0.26512910774291776,
+        "normalized_local_drift": 2.6512910774291782,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-000:geometry-frame",
+        "source_index": 0,
+        "source_load_scale": 0.6,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-001:geometry-frame",
+        "target_index": 1,
+        "target_load_scale": 0.7
+      },
+      {
+        "cumulative_path_length": 0.521595125981371,
+        "delta_load_scale": 0.10000000000000009,
+        "delta_vector": [
+          0.0,
+          -0.06743117472269278,
+          -0.0014146568847469565,
+          0.18662525229020888,
+          0.0033918918150923627,
+          0.16045941046495726,
+          -0.025261468747317828
+        ],
+        "displacement": 0.2564660182384533,
+        "normalized_local_drift": 2.5646601823845305,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-001:geometry-frame",
+        "source_index": 1,
+        "source_load_scale": 0.7,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-002:geometry-frame",
+        "target_index": 2,
+        "target_load_scale": 0.8
+      },
+      {
+        "cumulative_path_length": 0.7789479941889232,
+        "delta_load_scale": 0.09999999999999998,
+        "delta_vector": [
+          3.1086244689504383e-15,
+          -0.06944189225789499,
+          0.0054019063202594975,
+          0.18869028163609203,
+          0.003457389103414865,
+          0.16045941046495682,
+          -0.003992925283818671
+        ],
+        "displacement": 0.2573528682075522,
+        "normalized_local_drift": 2.5735286820755228,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-002:geometry-frame",
+        "source_index": 2,
+        "source_load_scale": 0.8,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-003:geometry-frame",
+        "target_index": 3,
+        "target_load_scale": 0.9
+      },
+      {
+        "cumulative_path_length": 1.0684928868346482,
+        "delta_load_scale": 0.09999999999999998,
+        "delta_vector": [
+          0.0,
+          -0.07152664861461933,
+          0.012603136578634766,
+          0.19090190560559,
+          0.003516604387083566,
+          0.1604594104649566,
+          0.1278992488896753
+        ],
+        "displacement": 0.28954489264572486,
+        "normalized_local_drift": 2.895448926457249,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-003:geometry-frame",
+        "source_index": 3,
+        "source_load_scale": 0.9,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-004:geometry-frame",
+        "target_index": 4,
+        "target_load_scale": 1.0
+      },
+      {
+        "cumulative_path_length": 1.3572525322606814,
+        "delta_load_scale": 0.10000000000000009,
+        "delta_vector": [
+          -6.217248937900877e-15,
+          -0.07369219596571641,
+          0.020043439289745946,
+          0.19327141033551276,
+          0.003573473145723982,
+          0.16045941046495726,
+          0.12015000396002584
+        ],
+        "displacement": 0.28875964542603333,
+        "normalized_local_drift": 2.8875964542603305,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-004:geometry-frame",
+        "source_index": 4,
+        "source_load_scale": 1.0,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-005:geometry-frame",
+        "target_index": 5,
+        "target_load_scale": 1.1
+      },
+      {
+        "cumulative_path_length": 1.645700609196327,
+        "delta_load_scale": 0.09999999999999987,
+        "delta_vector": [
+          3.1086244689504383e-15,
+          -0.0759460628037929,
+          0.027573868007647717,
+          0.19581152824805453,
+          0.0036300960300481577,
+          0.16045941046495704,
+          0.11212321720671303
+        ],
+        "displacement": 0.28844807693564567,
+        "normalized_local_drift": 2.8844807693564607,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-005:geometry-frame",
+        "source_index": 5,
+        "source_load_scale": 1.1,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-006:geometry-frame",
+        "target_index": 6,
+        "target_load_scale": 1.2
+      },
+      {
+        "cumulative_path_length": 1.9424921191929165,
+        "delta_load_scale": 0.10000000000000009,
+        "delta_vector": [
+          -0.023329999514591027,
+          -0.07829668009909163,
+          0.03506059643446624,
+          0.1985366702181185,
+          0.003687742602346278,
+          0.1604594104649577,
+          0.12248944737512701
+        ],
+        "displacement": 0.29679150999658954,
+        "normalized_local_drift": 2.967915099965893,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-006:geometry-frame",
+        "source_index": 6,
+        "source_load_scale": 1.2,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-007:geometry-frame",
+        "target_index": 7,
+        "target_load_scale": 1.3
+      },
+      {
+        "cumulative_path_length": 2.2494162339405674,
+        "delta_load_scale": 0.09999999999999987,
+        "delta_vector": [
+          -0.04818219796246348,
+          -0.08075353299643728,
+          0.04239900091615206,
+          0.20146320582603072,
+          0.003747280612055315,
+          0.16045941046495638,
+          0.13119981639694567
+        ],
+        "displacement": 0.3069241147476511,
+        "normalized_local_drift": 3.069241147476515,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-007:geometry-frame",
+        "source_index": 7,
+        "source_load_scale": 1.3,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-008:geometry-frame",
+        "target_index": 8,
+        "target_load_scale": 1.4
+      },
+      {
+        "cumulative_path_length": 2.5568778512067523,
+        "delta_load_scale": 0.10000000000000009,
+        "delta_vector": [
+          -0.0505711846752952,
+          -0.08332734445596213,
+          0.04952078354657202,
+          0.20460980382460026,
+          0.003809379455512074,
+          0.16045941046495715,
+          0.12228058486770088
+        ],
+        "displacement": 0.30746161726618476,
+        "normalized_local_drift": 3.074616172661845,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-008:geometry-frame",
+        "source_index": 8,
+        "source_load_scale": 1.4,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-009:geometry-frame",
+        "target_index": 9,
+        "target_load_scale": 1.5
+      },
+      {
+        "cumulative_path_length": 2.8654004436253815,
+        "delta_load_scale": 0.10000000000000009,
+        "delta_vector": [
+          -0.0530785384089445,
+          -0.08603029916675986,
+          0.056394229117259054,
+          0.20799784862645632,
+          0.0038746162165721465,
+          0.16045941046495799,
+          0.11296901013024763
+        ],
+        "displacement": 0.3085225924186294,
+        "normalized_local_drift": 3.0852259241862914,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-009:geometry-frame",
+        "source_index": 9,
+        "source_load_scale": 1.5,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-010:geometry-frame",
+        "target_index": 10,
+        "target_load_scale": 1.6
+      },
+      {
+        "cumulative_path_length": 3.175984135152524,
+        "delta_load_scale": 0.09999999999999987,
+        "delta_vector": [
+          -0.05811225644446072,
+          -0.08887631867164592,
+          0.06301959462698348,
+          0.21165195360919498,
+          0.003943536768375333,
+          0.16045941046495643,
+          0.10322500864806661
+        ],
+        "displacement": 0.3105836915271425,
+        "normalized_local_drift": 3.105836915271429,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-010:geometry-frame",
+        "source_index": 10,
+        "source_load_scale": 1.6,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-011:geometry-frame",
+        "target_index": 11,
+        "target_load_scale": 1.7
+      },
+      {
+        "cumulative_path_length": 3.4966010979615003,
+        "delta_load_scale": 0.10000000000000009,
+        "delta_vector": [
+          -0.09293626078633355,
+          -0.09188140221983954,
+          0.06942221883492952,
+          0.21560059888937166,
+          0.0040166954181588554,
+          0.16045941046495718,
+          0.09300256576976174
+        ],
+        "displacement": 0.3206169628089765,
+        "normalized_local_drift": 3.206169628089762,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-011:geometry-frame",
+        "source_index": 11,
+        "source_load_scale": 1.7,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-012:geometry-frame",
+        "target_index": 12,
+        "target_load_scale": 1.8
+      },
+      {
+        "cumulative_path_length": 3.824424486398746,
+        "delta_load_scale": 0.09999999999999987,
+        "delta_vector": [
+          -0.09537184891670258,
+          -0.0950640528265203,
+          0.07564550415810399,
+          0.21987693074249193,
+          0.004094684574393215,
+          0.1687765227646572,
+          0.0822485395038639
+        ],
+        "displacement": 0.32782338843724584,
+        "normalized_local_drift": 3.278233884372463,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-012:geometry-frame",
+        "source_index": 12,
+        "source_load_scale": 1.8,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-013:geometry-frame",
+        "target_index": 13,
+        "target_load_scale": 1.9
+      },
+      {
+        "cumulative_path_length": 4.159230745333675,
+        "delta_load_scale": 0.10000000000000009,
+        "delta_vector": [
+          -0.09796109450566726,
+          -0.09844581499856808,
+          0.08174508091381978,
+          0.2245197732623636,
+          0.004178160668512287,
+          0.17513268988800568,
+          0.07090115345430914
+        ],
+        "displacement": 0.33480625893492855,
+        "normalized_local_drift": 3.3480625893492824,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-013:geometry-frame",
+        "source_index": 13,
+        "source_load_scale": 1.9,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-014:geometry-frame",
+        "target_index": 14,
+        "target_load_scale": 2.0
+      },
+      {
+        "cumulative_path_length": 4.498535849826051,
+        "delta_load_scale": 0.10000000000000009,
+        "delta_vector": [
+          -0.10072276030318927,
+          -0.10205196053848042,
+          0.0877846938395016,
+          0.22957492202230823,
+          0.004267870250482586,
+          0.17513268988800607,
+          0.05888807828256315
+        ],
+        "displacement": 0.33930510449237566,
+        "normalized_local_drift": 3.3930510449237534,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-014:geometry-frame",
+        "source_index": 14,
+        "source_load_scale": 2.0,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-015:geometry-frame",
+        "target_index": 15,
+        "target_load_scale": 2.1
+      },
+      {
+        "cumulative_path_length": 4.843296628503475,
+        "delta_load_scale": 0.10000000000000009,
+        "delta_vector": [
+          -0.10367896944978361,
+          -0.10591237325363267,
+          0.09383385413722248,
+          0.2350968173126904,
+          0.004364679281462669,
+          0.17513268988800684,
+          0.04612396139141817
+        ],
+        "displacement": 0.34476077867742416,
+        "normalized_local_drift": 3.4476077867742387,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-015:geometry-frame",
+        "source_index": 15,
+        "source_load_scale": 2.1,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-016:geometry-frame",
+        "target_index": 16,
+        "target_load_scale": 2.2
+      },
+      {
+        "cumulative_path_length": 5.194618787608282,
+        "delta_load_scale": 0.09999999999999964,
+        "delta_vector": [
+          -0.10685603333405536,
+          -0.11006270462854384,
+          0.0999670769906228,
+          0.24115073557351163,
+          0.004469608560697447,
+          0.17513268988800612,
+          0.03250720612780533
+        ],
+        "displacement": 0.3513221591048075,
+        "normalized_local_drift": 3.5132215910480875,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-016:geometry-frame",
+        "source_index": 16,
+        "source_load_scale": 2.2,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-017:geometry-frame",
+        "target_index": 17,
+        "target_load_scale": 2.3
+      },
+      {
+        "cumulative_path_length": 5.553787095100708,
+        "delta_load_scale": 0.10000000000000009,
+        "delta_vector": [
+          -0.11028554448223526,
+          -0.11454590435928513,
+          0.10626449510128833,
+          0.24781569932611225,
+          0.004583878746393655,
+          0.175132689888006,
+          0.0179157142294728
+        ],
+        "displacement": 0.3591683074924257,
+        "normalized_local_drift": 3.5916830749242536,
+        "parameter_semantics": "ordered_load_scale_not_time",
+        "reason": null,
+        "source_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-017:geometry-frame",
+        "source_index": 17,
+        "source_load_scale": 2.3,
+        "status": "available",
+        "target_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-018:geometry-frame",
+        "target_index": 18,
+        "target_load_scale": 2.4
+      }
+    ],
+    "terminal_frame_id": null,
+    "total_path_length": 5.553787095100708,
+    "turns": [
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-001:geometry-frame",
+        "center_index": 1,
+        "direction_change_radians": 0.20133140679727088,
+        "discrete_curvature": 0.771983466749118,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-002:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-000:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-002:geometry-frame",
+        "center_index": 2,
+        "direction_change_radians": 0.08761557196763342,
+        "discrete_curvature": 0.3410367905066895,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-003:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-001:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-003:geometry-frame",
+        "center_index": 3,
+        "direction_change_radians": 0.47384793084800503,
+        "discrete_curvature": 1.732857454412325,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-004:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-002:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-004:geometry-frame",
+        "center_index": 4,
+        "direction_change_radians": 0.038683784695699254,
+        "discrete_curvature": 0.133783438133419,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-005:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-003:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-005:geometry-frame",
+        "center_index": 5,
+        "direction_change_radians": 0.039898576424326496,
+        "discrete_curvature": 0.13824685595362152,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-006:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-004:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-006:geometry-frame",
+        "center_index": 6,
+        "direction_change_radians": 0.08724000401508272,
+        "discrete_curvature": 0.29813432297834025,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-007:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-005:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-007:geometry-frame",
+        "center_index": 7,
+        "direction_change_radians": 0.08509964602988783,
+        "discrete_curvature": 0.2819196407776911,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-008:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-006:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-008:geometry-frame",
+        "center_index": 8,
+        "direction_change_radians": 0.04016562001538095,
+        "discrete_curvature": 0.13075049735847846,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-009:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-007:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-009:geometry-frame",
+        "center_index": 9,
+        "direction_change_radians": 0.04080206226166711,
+        "discrete_curvature": 0.13247762400450053,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-010:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-008:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-010:geometry-frame",
+        "center_index": 10,
+        "direction_change_radians": 0.043511701171486714,
+        "discrete_curvature": 0.14056294468268696,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-011:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-009:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-011:geometry-frame",
+        "center_index": 11,
+        "direction_change_radians": 0.11353311451468814,
+        "discrete_curvature": 0.3597369987966803,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-012:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-010:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-012:geometry-frame",
+        "center_index": 12,
+        "direction_change_radians": 0.04427199425704416,
+        "discrete_curvature": 0.1365491649986274,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-013:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-011:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-013:geometry-frame",
+        "center_index": 13,
+        "direction_change_radians": 0.04240258843845402,
+        "discrete_curvature": 0.12798276867511804,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-014:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-012:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-014:geometry-frame",
+        "center_index": 14,
+        "direction_change_radians": 0.042663689574181714,
+        "discrete_curvature": 0.1265775712703367,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-015:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-013:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-015:geometry-frame",
+        "center_index": 15,
+        "direction_change_radians": 0.043752317710005886,
+        "discrete_curvature": 0.12791843238042502,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-016:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-014:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-016:geometry-frame",
+        "center_index": 16,
+        "direction_change_radians": 0.0448832867152468,
+        "discrete_curvature": 0.1289595945513276,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-017:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-015:geometry-frame",
+        "reason": null,
+        "status": "available"
+      },
+      {
+        "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-017:geometry-frame",
+        "center_index": 17,
+        "direction_change_radians": 0.04602969198499773,
+        "discrete_curvature": 0.1295715963803109,
+        "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-018:geometry-frame",
+        "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-016:geometry-frame",
+        "reason": null,
+        "status": "available"
+      }
+    ],
+    "uncertainty": {
+      "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+      "kind": "unknown",
+      "lower": null,
+      "upper": null,
+      "value": null
+    }
+  },
+  "standardization_model": {
+    "feature_names": [
+      "minimum_bus_voltage",
+      "mean_bus_voltage",
+      "bus_voltage_std",
+      "bus_angle_range",
+      "maximum_line_loading",
+      "total_bus_consumption_p",
+      "total_bus_consumption_q"
+    ],
+    "fit_campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+    "fit_case_id": "ieee9",
+    "manifest_id": "phase-v-ieee-geometry-v1",
+    "means": [
+      0.900438863159333,
+      0.9655140400326917,
+      0.034014544777061326,
+      20.582020685775518,
+      111.7457253792428,
+      445.3513564361333,
+      164.61699706287467
+    ],
+    "population_stddevs": [
+      0.07109194220213903,
+      0.02959098753869935,
+      0.024382417627105944,
+      9.372897183188611,
+      55.94750671636508,
+      147.88786728829734,
+      51.55515992681765
+    ],
+    "projection_id": "system-summary-standardized-v1",
+    "provenance": {
+      "metadata": {
+        "campaign_axis": "ordered_load_scale_not_time",
+        "case_id": "ieee9",
+        "manifest_id": "phase-v-ieee-geometry-v1",
+        "source_record_id": "phase-v-ieee-geometry-v1-ieee9:geometry-frames"
+      },
+      "method": "IEEE-9 development population standardization v1",
+      "record_id": "phase-v-ieee-geometry-v1-ieee9:standardization",
+      "recorded_at": "2026-07-14T14:00:00+00:00",
+      "source": "pandapower.networks.case9"
+    },
+    "reason": null,
+    "schema_version": "1.0",
+    "status": "available",
+    "uncertainty": {
+      "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+      "kind": "unknown",
+      "lower": null,
+      "upper": null,
+      "value": null
+    },
+    "zero_variance_features": []
+  }
+}

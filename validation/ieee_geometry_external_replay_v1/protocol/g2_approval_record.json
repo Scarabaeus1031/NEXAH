@@ -1,0 +1,45 @@
+{
+  "approval_date": "2026-07-26",
+  "approved_protocol_files": [
+    {
+      "authority": "normative_machine_readable_contract",
+      "path": "validation/ieee_geometry_external_replay_v1/protocol/g2_protocol_approved.json",
+      "sha256": "bd9d0fa2094b17333b18ec7621f33fd32271c2e759f2b01c9b27f76702ffe5ba"
+    },
+    {
+      "authority": "human_readable_companion",
+      "path": "validation/ieee_geometry_external_replay_v1/protocol/COMPARATOR_PROTOCOL.md"
+    },
+    {
+      "authority": "human_readable_companion",
+      "path": "validation/ieee_geometry_external_replay_v1/protocol/ANALYSIS_PROTOCOL.md"
+    },
+    {
+      "authority": "tier_1_omission_record",
+      "path": "validation/ieee_geometry_external_replay_v1/protocol/TIER1_FEASIBILITY.md"
+    },
+    {
+      "authority": "approval_mechanism",
+      "path": "validation/ieee_geometry_external_replay_v1/protocol/G2_HASH_AND_APPROVAL_PROTOCOL.md"
+    },
+    {
+      "authority": "ieee9_manual_fixture",
+      "path": "validation/ieee_geometry_external_replay_v1/fixtures/ieee9_manual_comparator_fixtures.json"
+    }
+  ],
+  "approving_authority": "Thomas Hofmann / NEXAH",
+  "binding_invalidation_rule": "Any byte change to g2_protocol_approved.json invalidates this approval binding and requires a new G2 review before any IEEE-14 Comparator evaluation.",
+  "byte_serialization_convention": {
+    "encoding": "utf-8",
+    "indent_spaces": 2,
+    "line_endings": "LF",
+    "non_finite_numbers": "forbidden",
+    "sort_keys_recursively": true,
+    "trailing_lf_count": 1
+  },
+  "explicit_non_authorisation": "G2 approval does not authorise generation, loading, inspection, or display of new IEEE-14 Comparator outputs.",
+  "approved_sha256": "bd9d0fa2094b17333b18ec7621f33fd32271c2e759f2b01c9b27f76702ffe5ba",
+  "protocol_id": "sr1-ieee-geometry-comparator-analysis-v1",
+  "protocol_version": "1.0.0",
+  "status": "approved"
+}

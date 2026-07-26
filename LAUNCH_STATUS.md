@@ -1,14 +1,89 @@
 # NEXAH Launch Status
 
+**Current-status review:** 26 July 2026
+
+**Current classification:** **PUBLIC RESEARCH SURFACES LIVE — bounded
+external-resonance test ready; integrated ORION service not claimed**
+
+This section is the current operational handoff. The dated Launch Control 02
+record below is preserved as historical execution evidence and no longer
+describes the present public state.
+
+## Current verified state
+
+- **Framework:** NEXAH Framework 1.0 is frozen at annotated tag
+  `framework-v1.0.0`, commit
+  `87f438d05a8841166ea32719b9fda807acf5cb6b`. Later documentation does not move
+  or alter that baseline.
+- **Public repositories:** `NEXAH`, `NEXAH-ORION`, `NEXAH-Experience` and
+  `NEXAHEDRON` exist publicly. Their versions and authority boundaries remain
+  independent.
+- **Public sites:** `https://nexah.de` and `https://nexahedron.com` are live.
+  `nexah.de` is the public entry and Visitor Guide; NEXAHEDRON is the
+  Human-facing reference implementation and a bounded development preview.
+- **Experience:** the static public home is deployed. The exact source revision
+  of the current `nexah.de` deployment has not been attested in the repository
+  and remains explicitly unknown.
+- **ORION Version 1:** the certified frozen Core is public at tag `v1.0.0`,
+  commit `d34fbb2f99334534f4db89465a29f8bdb16d14d3`. Its certified responsibility
+  runs from confirmed structural Representation through UNDERSTAND, Relations,
+  Navigation, Orientation Map and Expression. Runtime, Gateway, applications,
+  Human Reports, presentation, interpretation and decision-making are excluded
+  from that certified baseline.
+- **NEXAHEDRON Version 1 source:** the public source release is tagged
+  `v1.0.0` at commit
+  `cf21e8f03e6adde02245fbe077a827a367644c40`. Its repository contains a
+  NEXAHEDRON-owned, fail-closed Consumer Seam to a separately governed
+  Gateway path. That local seam is not a certified ORION Version 1
+  responsibility.
+- **Public ORION connection:** the currently deployed NEXAHEDRON preview has
+  no configured `ORION_GATEWAY_URL`. It therefore offers a Human-owned
+  Workspace and Orientation Record, not a public ORION-backed execution route.
+- **Product boundary:** NEXAHEDRON is a reference implementation, not a
+  production-complete product. Framework 1.0 is a bounded research baseline,
+  not an ecosystem-wide product release.
+- **Outreach:** Track A is prepared for a bounded Visitor Guide comprehension
+  and resonance test. Preparation is not completed outreach: no participant
+  selection, invitation or external contact is recorded by this status.
+
+## Current unresolved operational facts
+
+1. The deployed NEXAHEDRON site derives from precursor commit `f273ae5…`, not
+   the tagged Version 1 source commit `cf21e8f…`; aligning them requires a
+   separately authorised deployment.
+2. NEXAHEDRON apex and `www` canonical-host behavior is not yet attested as one
+   permanent redirect.
+3. The exact deployed `nexah.de` source revision is not recorded.
+4. A production ORION transport is not configured and is not required for the
+   current Track A Visitor Guide test.
+
+## Current entry route
+
+```text
+https://nexah.de
+→ https://nexah.de/visitor-guide/
+→ optional Library or one pinned GitHub object
+```
+
+This route tests whether the public problem and authority boundaries are
+understood. It does not test product value, scientific validity or an
+ORION-backed NEXAHEDRON workflow.
+
+---
+
+## Preserved historical handoff — Launch Control 02
+
 **Control:** Launch Control 02
 
 **Date:** 22 July 2026
 
 **Status:** **HOLD — local execution complete; external authority required**
 
-This is the concise operational handoff for the first public launch. It applies
-the adopted Constitution and Governance without changing them. Detailed
-history remains in `GOVERNANCE/OPERATIONS_01_PUBLIC_LAUNCH_PREPARATION.md` and
+This was the concise operational handoff for the first public launch at the
+date above. It applies the adopted Constitution and Governance without changing
+them. It is preserved for history and is superseded for current-state purposes
+by the verified section above. Detailed history remains in
+`GOVERNANCE/OPERATIONS_01_PUBLIC_LAUNCH_PREPARATION.md` and
 `GOVERNANCE/OPERATIONS_02_LAUNCH_EXECUTION.md`.
 
 ## Completed

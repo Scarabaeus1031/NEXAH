@@ -1,0 +1,20 @@
+{
+  "approval_authority": "Thomas Hofmann / NEXAH",
+  "approval_date": "2026-07-26",
+  "authorised_diagnostic_replays": 1,
+  "binding_invalidation_rule": "Any byte change to the protocol or instrumentation invalidates this binding and stops execution.",
+  "g4_official_classification": "G4_clean_replay_failed",
+  "g5_authorised": false,
+  "g6_authorised": false,
+  "instrumentation_path": "validation/ieee_geometry_external_replay_v1/diagnostic/instrumented_replay.py",
+  "instrumentation_sha256": "527ee8beaf5475d744b89b27bf1495851c4cfc94372a3745a6a6b51978316d3c",
+  "pre_execution_root_cause_classification": "E — unresolved",
+  "protocol_id": "sr1-g4-instrumented-evidence-retention-v1",
+  "protocol_path": "validation/ieee_geometry_external_replay_v1/diagnostic/INSTRUMENTED_REPLAY_PROTOCOL.md",
+  "protocol_sha256": "b8afa3d79582c0031ec754e542641ef70d7352f1095a82e996249225051ac968",
+  "retry_authorised": false,
+  "source_revision": "d3a19138b96aa07dfd623bdebb1003cb02cc60e8",
+  "status": "approved",
+  "verifier_path": "validation/ieee_geometry_external_replay_v1/diagnostic/verify_observational_only.py",
+  "verifier_sha256": "442443eaa02bad0ec19b5a646e32f6e9dd7056a5a356ef194bc133b17e3b4d72"
+}

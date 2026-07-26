@@ -1,0 +1,12 @@
+{
+  "algorithm": "sha256",
+  "baseline_revision": "d3a19138b96aa07dfd623bdebb1003cb02cc60e8",
+  "checked_files": 15,
+  "expected_hash_manifest": "validation/ieee_geometry_external_replay_v1/fixtures/expected_hashes.json",
+  "first_mismatch": null,
+  "post_g3_all_match": true,
+  "pre_g3_all_match": true,
+  "result_details": "validation/ieee_geometry_external_replay_v1/reports/g3_equivalence_result.json#/frozen_hashes_after",
+  "schema_version": "1.0",
+  "verification_stage": "after IEEE-9 and conditional IEEE-14 equivalence"
+}

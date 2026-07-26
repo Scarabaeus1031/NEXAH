@@ -1,0 +1,26 @@
+{
+  "derivation_sources": [
+    "APPLICATIONS/power_systems/ieee_geometry_v1/case_manifest.json",
+    "committed physical-frame public artifact contract",
+    "validation/ieee_geometry_external_replay_v1/independent/G3_EQUIVALENCE_CONTRACT.md"
+  ],
+  "implementation_files": [
+    {
+      "path": "validation/ieee_geometry_external_replay_v1/independent/operators_v1.py",
+      "sha256": "38512b7d1ea5f1143170a191a631a26f62f765f1dac050cacd7975da93223edb"
+    },
+    {
+      "path": "validation/ieee_geometry_external_replay_v1/independent/run_g3_equivalence.py",
+      "sha256": "c12be29f5dcaf7c70a7024f564cac8642707806a5be913606b3a45e950fc0403"
+    }
+  ],
+  "independence_assertions": {
+    "case_specific_ieee14_logic": false,
+    "copied_production_implementation": false,
+    "imports_production_geometry_operators": false,
+    "standard_library_only_operator_module": true
+  },
+  "purpose": "internal specification equivalence; not external or independent scientific reproduction",
+  "recorded_at": "2026-07-26",
+  "schema_version": "1.0"
+}

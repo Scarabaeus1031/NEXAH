@@ -1,0 +1,35 @@
+{
+  "final_test_run": {
+    "command": "MPLCONFIGDIR=/private/tmp/nexah-mpl /opt/anaconda3/bin/python -m pytest validation/ieee_geometry_external_replay_v1/tests/test_g3_equivalence.py -q -o cache_dir=/private/tmp/nexah-sr1-g3-pytest-cache",
+    "duration_seconds": 0.06,
+    "failed": 0,
+    "passed": 6,
+    "result": "6 passed in 0.06s"
+  },
+  "initial_test_attempt": {
+    "classification": "test_collection_path_error",
+    "error": "ModuleNotFoundError: No module named 'operators_v1'",
+    "result": "collection failed before tests ran",
+    "resolution": "Corrected the new sidecar test's repository-root calculation from parents[4] to parents[3]; no scientific source, formula, tolerance, target, or result changed."
+  },
+  "manual_gate_runs": [
+    {
+      "case_id": "ieee9",
+      "discrepancy_count": 0,
+      "result": "equivalent",
+      "stage": "mandatory first case"
+    },
+    {
+      "case_id": "ieee14",
+      "condition": "executed only after IEEE-9 equivalence passed",
+      "discrepancy_count": 0,
+      "result": "equivalent"
+    }
+  ],
+  "recorded_at": "2026-07-26",
+  "schema_version": "1.0",
+  "test_source": {
+    "path": "validation/ieee_geometry_external_replay_v1/tests/test_g3_equivalence.py",
+    "sha256": "c6ed8ea256d4c1440f810063b3b403a201a4a32f7df2234026b5fce34f4bcf97"
+  }
+}

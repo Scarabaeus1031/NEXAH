@@ -1,0 +1,172 @@
+[
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-001:geometry-frame",
+    "center_index": 1,
+    "direction_change_radians": 0.20133140679727088,
+    "discrete_curvature": 0.771983466749118,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-002:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-000:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-002:geometry-frame",
+    "center_index": 2,
+    "direction_change_radians": 0.08761557196763342,
+    "discrete_curvature": 0.3410367905066895,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-003:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-001:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-003:geometry-frame",
+    "center_index": 3,
+    "direction_change_radians": 0.47384793084800503,
+    "discrete_curvature": 1.732857454412325,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-004:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-002:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-004:geometry-frame",
+    "center_index": 4,
+    "direction_change_radians": 0.038683784695699254,
+    "discrete_curvature": 0.133783438133419,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-005:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-003:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-005:geometry-frame",
+    "center_index": 5,
+    "direction_change_radians": 0.039898576424326496,
+    "discrete_curvature": 0.13824685595362152,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-006:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-004:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-006:geometry-frame",
+    "center_index": 6,
+    "direction_change_radians": 0.08724000401508272,
+    "discrete_curvature": 0.29813432297834025,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-007:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-005:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-007:geometry-frame",
+    "center_index": 7,
+    "direction_change_radians": 0.08509964602988783,
+    "discrete_curvature": 0.2819196407776911,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-008:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-006:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-008:geometry-frame",
+    "center_index": 8,
+    "direction_change_radians": 0.04016562001538095,
+    "discrete_curvature": 0.13075049735847846,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-009:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-007:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-009:geometry-frame",
+    "center_index": 9,
+    "direction_change_radians": 0.04080206226166711,
+    "discrete_curvature": 0.13247762400450053,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-010:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-008:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-010:geometry-frame",
+    "center_index": 10,
+    "direction_change_radians": 0.043511701171486714,
+    "discrete_curvature": 0.14056294468268696,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-011:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-009:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-011:geometry-frame",
+    "center_index": 11,
+    "direction_change_radians": 0.11353311451468814,
+    "discrete_curvature": 0.3597369987966803,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-012:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-010:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-012:geometry-frame",
+    "center_index": 12,
+    "direction_change_radians": 0.04427199425704416,
+    "discrete_curvature": 0.1365491649986274,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-013:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-011:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-013:geometry-frame",
+    "center_index": 13,
+    "direction_change_radians": 0.04240258843845402,
+    "discrete_curvature": 0.12798276867511804,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-014:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-012:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-014:geometry-frame",
+    "center_index": 14,
+    "direction_change_radians": 0.042663689574181714,
+    "discrete_curvature": 0.1265775712703367,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-015:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-013:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-015:geometry-frame",
+    "center_index": 15,
+    "direction_change_radians": 0.043752317710005886,
+    "discrete_curvature": 0.12791843238042502,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-016:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-014:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-016:geometry-frame",
+    "center_index": 16,
+    "direction_change_radians": 0.0448832867152468,
+    "discrete_curvature": 0.1289595945513276,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-017:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-015:geometry-frame",
+    "reason": null,
+    "status": "available"
+  },
+  {
+    "center_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-017:geometry-frame",
+    "center_index": 17,
+    "direction_change_radians": 0.04602969198499773,
+    "discrete_curvature": 0.1295715963803109,
+    "next_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-018:geometry-frame",
+    "previous_frame_id": "phase-v-ieee-geometry-v1-ieee14:load-016:geometry-frame",
+    "reason": null,
+    "status": "available"
+  }
+]

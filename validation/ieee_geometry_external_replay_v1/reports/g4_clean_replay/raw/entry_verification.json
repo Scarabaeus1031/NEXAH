@@ -1,0 +1,26 @@
+{
+  "all_pass": true,
+  "checks": {
+    "approved_protocol_bytes_match": true,
+    "exact_clean_environment": true,
+    "frozen_hashes_match": true,
+    "g3_equivalence_accepted": true,
+    "source_checkout_clean": true,
+    "source_revision_matches": true
+  },
+  "g3_result": {
+    "classification": "G3_equivalence_passed",
+    "ieee14_discrepancies": 0,
+    "ieee9_discrepancies": 0,
+    "path": "/Users/tho2020/Documents/GitHub/NEXAH/validation/ieee_geometry_external_replay_v1/reports/g3_equivalence_result.json"
+  },
+  "gate": "G4",
+  "protocol": {
+    "actual_sha256": "bd9d0fa2094b17333b18ec7621f33fd32271c2e759f2b01c9b27f76702ffe5ba",
+    "approved_sha256": "bd9d0fa2094b17333b18ec7621f33fd32271c2e759f2b01c9b27f76702ffe5ba",
+    "path": "/Users/tho2020/Documents/GitHub/NEXAH/validation/ieee_geometry_external_replay_v1/protocol/g2_protocol_approved.json"
+  },
+  "requested_source_revision": "d3a19138b96aa07dfd623bdebb1003cb02cc60e8",
+  "source_revision": "d3a19138b96aa07dfd623bdebb1003cb02cc60e8",
+  "source_status_before": ""
+}

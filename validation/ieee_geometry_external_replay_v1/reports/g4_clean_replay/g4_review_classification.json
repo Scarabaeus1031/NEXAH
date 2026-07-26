@@ -1,0 +1,48 @@
+{
+  "canonical_v1_write_performed": false,
+  "classification": "G4_clean_replay_failed",
+  "commit_created": false,
+  "discrepancies": [
+    {
+      "check_id": "evaluation-source-replay",
+      "passed": false
+    },
+    {
+      "check_id": "evaluation-geometry-replay",
+      "passed": false
+    },
+    {
+      "check_id": "evaluation-report-replay",
+      "passed": false
+    },
+    {
+      "field": "evaluation.frames_sha256",
+      "reference": "467530b81c9347a1ce0fe5e5ac501dde2c540686eadd5b9de454e773d9e59219",
+      "replay": "0383a113e74031057d608e61a3726195807615ee7a964d47e8331dcd16bac186"
+    },
+    {
+      "field": "evaluation.geometry_sha256",
+      "reference": "ab49aae70f94fa0a29d7660f4d5ae55a0d21df6ca7aa8cb2e445dcf189f72729",
+      "replay": "d84a1bbe64fe68918a84d339573069d9d86373a361b82ca6147b83fcba29cd38"
+    },
+    {
+      "field": "evaluation.orientation_sha256",
+      "reference": "2faa1fc7445bc11003add6bc3ed926570a15989cdaca6fdae38fc842d1fdad2b",
+      "replay": "4ab908c2e79547c3ba22fe2faab04c3e3b5f948e26ef0aaf56d06ed804a5d299"
+    },
+    {
+      "field": "evaluation.total_path_length",
+      "reference": 5.55378709510072,
+      "replay": 5.553787095100708
+    }
+  ],
+  "frozen_hashes_after_all_match": true,
+  "g5_begun": false,
+  "g6_begun": false,
+  "initial_runner_classification_superseded": "G4_clean_replay_passed",
+  "initial_runner_result_sha256": "783f6fcd69b7c1300bf6ba8989f8b8760f085e500c7fc821c29b6f397bfeec87",
+  "protocol_hash_refusal_control_passed": true,
+  "reason": "The fresh canonical IEEE-14 replay exited successfully but failed three canonical replay checks, changed three generated artifact hashes, changed the reported path length at floating precision, and set gate_passed to false. G4 therefore fails without protocol repair or reinterpretation.",
+  "source_checkout_remained_clean": true
+}
+

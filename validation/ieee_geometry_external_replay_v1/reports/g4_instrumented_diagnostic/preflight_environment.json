@@ -1,0 +1,1189 @@
+{
+  "installed_package_lock": {
+    "command": [
+      "/private/tmp/nexah-sr1-g4.tCdR3H/venv/bin/python",
+      "-m",
+      "pip",
+      "freeze",
+      "--all"
+    ],
+    "exit_code": 0,
+    "stderr": "WARNING: The directory '/Users/tho2020/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\n",
+    "stdout": "annotated-types==0.8.0\ncontourpy==1.3.3\ncycler==0.12.1\ndeepdiff==8.6.2\nfonttools==4.63.0\ngeojson==3.3.0\niniconfig==2.3.0\njoblib==1.5.3\nkiwisolver==1.5.0\nmatplotlib==3.9.2\nmypy_extensions==1.1.0\nnetworkx==3.6.1\nnexah @ file:///private/tmp/nexah-sr1-g4.tCdR3H/source\nnumpy==1.26.4\norderly-set==5.5.0\npackaging==25.0\npandapower==3.4.0\npandas==2.3.3\npandera==0.26.1\npillow==12.3.0\npip==24.2\npluggy==1.6.0\npydantic==2.13.4\npydantic_core==2.46.4\npyparsing==3.3.2\npytest==7.4.4\npython-dateutil==2.9.0.post0\npytz==2026.3.post1\nPyYAML==6.0.1\nscikit-learn==1.5.1\nscipy==1.13.1\nsetuptools==82.0.0\nsix==1.17.0\nthreadpoolctl==3.6.0\ntqdm==4.69.1\ntypeguard==4.5.2\ntyping-inspect==0.9.0\ntyping-inspection==0.4.2\ntyping_extensions==4.16.0\ntzdata==2026.3\n"
+  },
+  "key_distributions": [
+    {
+      "binary_extensions": [],
+      "dist_info": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/nexah-0.7.0.dist-info",
+      "installed": true,
+      "metadata_files": {
+        "INSTALLER": {
+          "bytes": 4,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/nexah-0.7.0.dist-info/INSTALLER",
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+          "text": "pip\n"
+        },
+        "METADATA": {
+          "bytes": 13488,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/nexah-0.7.0.dist-info/METADATA",
+          "sha256": "99482b55d540392a7a5746919538301fb19cced57894cee1220abf20ee6808d9"
+        },
+        "RECORD": {
+          "bytes": 9874,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/nexah-0.7.0.dist-info/RECORD",
+          "sha256": "eb84adec7c0d1a99cf0e695e43833dc027710ae6bcc0bea4d5a281768a3ca418"
+        },
+        "WHEEL": {
+          "bytes": 91,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/nexah-0.7.0.dist-info/WHEEL",
+          "sha256": "6027f0606398322e49870d9f538c8d83012bc9b6f6217e4f13004a57865b741a",
+          "text": "Wheel-Version: 1.0\nGenerator: setuptools (82.0.0)\nRoot-Is-Purelib: true\nTag: py3-none-any\n\n"
+        },
+        "direct_url.json": {
+          "bytes": 73,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/nexah-0.7.0.dist-info/direct_url.json",
+          "sha256": "5be91f92bfac23edf6849f9510a3fdbcff67e4ef534571b517c3559112d8fa26",
+          "text": "{\"dir_info\": {}, \"url\": \"file:///private/tmp/nexah-sr1-g4.tCdR3H/source\"}"
+        }
+      },
+      "name": "nexah",
+      "version": "0.7.0"
+    },
+    {
+      "binary_extensions": [
+        {
+          "bytes": 158976,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/.dylibs/libgcc_s.1.1.dylib",
+          "sha256": "baee2e6118dd54c0852f881d718516d70884de84bfaa085de5d8d8f90baa3b06"
+        },
+        {
+          "bytes": 3700784,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/.dylibs/libgfortran.5.dylib",
+          "sha256": "5eb02fa55064ff8ae537dbdb1b0ae0b2175c845adbba089bd44616c06ec321eb"
+        },
+        {
+          "bytes": 23198400,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+          "sha256": "dde2b735d01caa531885115ea853b5a4172b935167b95a1acb2a10243e0d97e7"
+        },
+        {
+          "bytes": 371440,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/.dylibs/libquadmath.0.dylib",
+          "sha256": "1b341ae276c4adcb30c070b774ec6e68e819c883e897f0de8941d553f7989a0d"
+        },
+        {
+          "bytes": 122468,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/core/_multiarray_tests.cpython-312-darwin.so",
+          "sha256": "1bde96789a338c081e54596d43a69e3e966cfb2121721660a33a851c7897b29b"
+        },
+        {
+          "bytes": 3180800,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/core/_multiarray_umath.cpython-312-darwin.so",
+          "sha256": "a51276f3aab2d91051aa0ced3ddaa39a776ae60132ca4c07a91b82a8b7a92ea7"
+        },
+        {
+          "bytes": 50982,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/core/_operand_flag_tests.cpython-312-darwin.so",
+          "sha256": "7ce8ff02611b3c24acea6e32af816f03aee2d0424b775e5bd0f6b885c3b3b0aa"
+        },
+        {
+          "bytes": 72674,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/core/_rational_tests.cpython-312-darwin.so",
+          "sha256": "70f2050c9837f6fb35338ee11da2057b188dd9e243eb4bdcc7b207dbe2812e54"
+        },
+        {
+          "bytes": 339720,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/core/_simd.cpython-312-darwin.so",
+          "sha256": "fb50e65a0d91275615500d72e8d7bc9d4ab0ea53a2fbaee2724fadf3248ecd17"
+        },
+        {
+          "bytes": 51270,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/core/_struct_ufunc_tests.cpython-312-darwin.so",
+          "sha256": "62f443322b89973ca8187354be5de633851ccba6d716d19b7147edf4cf166c1f"
+        },
+        {
+          "bytes": 70847,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/core/_umath_tests.cpython-312-darwin.so",
+          "sha256": "83768e8b31bbb9ec5e50015d9ff41c62bc089f0b70096cbcf535e03e2891814c"
+        },
+        {
+          "bytes": 102310,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/fft/_pocketfft_internal.cpython-312-darwin.so",
+          "sha256": "cb0d6746e9435b5f24509a00ce3b659f6d82b819195fc031ae61a3e4f94029dd"
+        },
+        {
+          "bytes": 173040,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/linalg/_umath_linalg.cpython-312-darwin.so",
+          "sha256": "86f6ed1fc4db4ff11231795e78656dfa158e624fd9655916329a8695ea0448f7"
+        },
+        {
+          "bytes": 70640,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/linalg/lapack_lite.cpython-312-darwin.so",
+          "sha256": "f220d5799269974b4187ed31550479616b9f26b1e0ff33e93089fe17e24312d5"
+        },
+        {
+          "bytes": 331636,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/random/_bounded_integers.cpython-312-darwin.so",
+          "sha256": "fd071d0f62a76d4642b3eac399872beb05f2e19ca0dbb649537d30d834a3c70d"
+        },
+        {
+          "bytes": 234234,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/random/_common.cpython-312-darwin.so",
+          "sha256": "154bac74a2b55ff825da6b39c858c0ef548bc902d88a219719c6f8f4ec15c96c"
+        },
+        {
+          "bytes": 810333,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/random/_generator.cpython-312-darwin.so",
+          "sha256": "0295669c7840dc1c42009d800658e047516af89e8a639e85c4d10907dec296b1"
+        },
+        {
+          "bytes": 112315,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/random/_mt19937.cpython-312-darwin.so",
+          "sha256": "9d59ab74ca36a6fe6ae56dab2a17eaf7244f70bc03106d24db7f47bf1f78d59b"
+        },
+        {
+          "bytes": 129337,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/random/_pcg64.cpython-312-darwin.so",
+          "sha256": "dda7ccc6b5f83a05644c29783bb99cc1aade60c5ee5db5cb64a22d4416ec7229"
+        },
+        {
+          "bytes": 111706,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/random/_philox.cpython-312-darwin.so",
+          "sha256": "860e0f097b25f2c8aaca091ce6323ef6f407360f594c3e14684b7823ecca8bd2"
+        },
+        {
+          "bytes": 93545,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/random/_sfc64.cpython-312-darwin.so",
+          "sha256": "1ac2e80b026a43a3aba66a7ce148f39260dc7a9447524125c21d0a9e5d50a5a1"
+        },
+        {
+          "bytes": 207856,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/random/bit_generator.cpython-312-darwin.so",
+          "sha256": "bff6147d617fe179e4fda2fa799b2aa929d1d2c728b7e4622cc5ee44c0950494"
+        },
+        {
+          "bytes": 683673,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy/random/mtrand.cpython-312-darwin.so",
+          "sha256": "f79ca82d8dcc5d0706beee30dd0959482367f197bf3d83da73256478722323da"
+        }
+      ],
+      "dist_info": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy-1.26.4.dist-info",
+      "installed": true,
+      "metadata_files": {
+        "INSTALLER": {
+          "bytes": 4,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy-1.26.4.dist-info/INSTALLER",
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+          "text": "pip\n"
+        },
+        "METADATA": {
+          "bytes": 61064,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy-1.26.4.dist-info/METADATA",
+          "sha256": "804ce5ed37916ab3a6d4a50b7e13769fe64aa9f1265cfe3aefb6f90737bacc66"
+        },
+        "RECORD": {
+          "bytes": 98507,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy-1.26.4.dist-info/RECORD",
+          "sha256": "66a42ee0665883f3699bb8363469992f266d3695dbadaba2ccbf57610be9031c"
+        },
+        "WHEEL": {
+          "bytes": 93,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/numpy-1.26.4.dist-info/WHEEL",
+          "sha256": "06581da0677628d54490fc83f10c3b234e0177d49ad046f7111462eb2271222b",
+          "text": "Wheel-Version: 1.0\nGenerator: meson\nRoot-Is-Purelib: false\nTag: cp312-cp312-macosx_11_0_arm64"
+        }
+      },
+      "name": "numpy",
+      "version": "1.26.4"
+    },
+    {
+      "binary_extensions": [
+        {
+          "bytes": 156896,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/.dylibs/libgcc_s.1.1.dylib",
+          "sha256": "78c829714221c1dda22108a2f8f58e18a7480d4649700b60e7c25cfafc796de3"
+        },
+        {
+          "bytes": 1846176,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/.dylibs/libgfortran.5.dylib",
+          "sha256": "1f737e838f989ce9d7b9a1fb438c441e1f6d7f3ca863eb93784c2f0de4483e40"
+        },
+        {
+          "bytes": 19738544,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/.dylibs/libopenblas.0.dylib",
+          "sha256": "1be5c2040a97a276c90742470ce0f76073000d3a8cab4c9ed4d62c73cfcef304"
+        },
+        {
+          "bytes": 349408,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/.dylibs/libquadmath.0.dylib",
+          "sha256": "c3636f3bf764d561b8ea79ba1bd1f4b41f3016aa76e55fcfacfbc639440bc6df"
+        },
+        {
+          "bytes": 115983,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/_lib/_ccallback_c.cpython-312-darwin.so",
+          "sha256": "a530edecff8533b95226e690a31cbcf2f2ecee55777ed5dd855a169eebab80c2"
+        },
+        {
+          "bytes": 50203,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/_lib/_fpumode.cpython-312-darwin.so",
+          "sha256": "9a56c282b7f91a3d09091f22b724dbb1a706453721cba58b316aee0c2be2f784"
+        },
+        {
+          "bytes": 53250,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/_lib/_test_ccallback.cpython-312-darwin.so",
+          "sha256": "6b1d9438896b2753b60d03964e05242d351d7bee63b1deae90055290a3b815ab"
+        },
+        {
+          "bytes": 74745,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/_lib/_test_deprecation_call.cpython-312-darwin.so",
+          "sha256": "8c082f54e4b2d0ad684bed0d3ae34f710dedc0b70da8e992c79c70ac7e38fbed"
+        },
+        {
+          "bytes": 56360,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/_lib/_test_deprecation_def.cpython-312-darwin.so",
+          "sha256": "92a2edbb4b7cef78ba18aeb637c86a16788cc0fc76aa1bc1f52694bb410bafac"
+        },
+        {
+          "bytes": 121098,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/_lib/_uarray/_uarray.cpython-312-darwin.so",
+          "sha256": "46c82a6683041027e8b853f02d730773f91a91b974f0ac2f2384acb06de305ef"
+        },
+        {
+          "bytes": 97600,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/_lib/messagestream.cpython-312-darwin.so",
+          "sha256": "46205bb3cb6a209aaf232daea1e8926483e30e51870e22c64059aeb210e47d8d"
+        },
+        {
+          "bytes": 333453,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/cluster/_hierarchy.cpython-312-darwin.so",
+          "sha256": "00389644bb22ef645007d4e14732e49f99030eeffa8870d4a5110bda92d477b2"
+        },
+        {
+          "bytes": 246393,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/cluster/_optimal_leaf_ordering.cpython-312-darwin.so",
+          "sha256": "44be94b14a332ee981d3179b822ea523bab94cb3ff0ad8b3734efebf2c4450a6"
+        },
+        {
+          "bytes": 129350,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/cluster/_vq.cpython-312-darwin.so",
+          "sha256": "1280e8d9d334b6e42075ea3e09ba79f07f2b6484ce86ab393d9b7e6758da457a"
+        },
+        {
+          "bytes": 899870,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/fft/_pocketfft/pypocketfft.cpython-312-darwin.so",
+          "sha256": "062f826b2066c547b69bfd3699c31742e1461d4f060becdde53d7652ff77bb49"
+        },
+        {
+          "bytes": 225803,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/fftpack/convolve.cpython-312-darwin.so",
+          "sha256": "529a5ae4a3e318ffaf3cb306fe219e7159b4607389ac9f319cc936a1d8c7f78a"
+        },
+        {
+          "bytes": 142944,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/integrate/_dop.cpython-312-darwin.so",
+          "sha256": "ca84ea3a2da25fe96dbf9990ab0790d70cea627f5be186e9e05c33e59abd82ff"
+        },
+        {
+          "bytes": 144032,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/integrate/_lsoda.cpython-312-darwin.so",
+          "sha256": "6cf48855767d06498451331907c10fbe940d53cc2600ef5db70ef9353404c569"
+        },
+        {
+          "bytes": 122400,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/integrate/_odepack.cpython-312-darwin.so",
+          "sha256": "0668df114ab22eef9fb12ba1b6439c2f23952b673d9ca36e4fd913661593fac3"
+        },
+        {
+          "bytes": 140224,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/integrate/_quadpack.cpython-312-darwin.so",
+          "sha256": "e1ac387c1c8d14dd38832f3dd07009b57ce96fcc2ef79a6785d5db35eaaba22e"
+        },
+        {
+          "bytes": 50677,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/integrate/_test_multivariate.cpython-312-darwin.so",
+          "sha256": "e60c92cc4ba413271b8058707e466b02eb3e83002f0f61ac3aefaa3f076652c5"
+        },
+        {
+          "bytes": 144032,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/integrate/_test_odeint_banded.cpython-312-darwin.so",
+          "sha256": "1bbe91b4b5b25cdddbbea0dedf0a0d03f248f2e3fcc2e24d6bd0bc222c288e39"
+        },
+        {
+          "bytes": 195152,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/integrate/_vode.cpython-312-darwin.so",
+          "sha256": "f65cbaa9196408af7e53970ab925628ec9bc5f0ba0cda9c6fb5b4a746889a391"
+        },
+        {
+          "bytes": 452456,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/interpolate/_bspl.cpython-312-darwin.so",
+          "sha256": "3477568dfe0d9217a106c41601e86b8553e1abd8c585e9e6d4408d1ae8aa3aba"
+        },
+        {
+          "bytes": 121168,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/interpolate/_fitpack.cpython-312-darwin.so",
+          "sha256": "b2de7e9bdeb1586a5889a7bcd3775b1378d5c73b9b0c8dff0552a30afb9642a6"
+        },
+        {
+          "bytes": 347401,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/interpolate/_ppoly.cpython-312-darwin.so",
+          "sha256": "0a55b36720905dc664cdecd889ee056a88afadb6a12411b2ae2358bd8e7a300d"
+        },
+        {
+          "bytes": 320437,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/interpolate/_rbfinterp_pythran.cpython-312-darwin.so",
+          "sha256": "c75b633a3d87e260574ef35c2459c26f36a9a163646dc4f1b2db7a536b947e97"
+        },
+        {
+          "bytes": 228078,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/interpolate/_rgi_cython.cpython-312-darwin.so",
+          "sha256": "1ec08d10b5accc7819bd0b7a12a36f16668a044911a721ce79e20108f554b273"
+        },
+        {
+          "bytes": 313312,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/interpolate/dfitpack.cpython-312-darwin.so",
+          "sha256": "e4d4e6fb57f87999e06c9da69d607676e8fc51cce196860e81f3a5f51a8fa261"
+        },
+        {
+          "bytes": 368587,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/interpolate/interpnd.cpython-312-darwin.so",
+          "sha256": "32d7e19a78b4e73f69236bf7cd49afd1604d005d9ff3f664cfa690417f657091"
+        },
+        {
+          "bytes": 2046908,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/io/_fast_matrix_market/_fmm_core.cpython-312-darwin.so",
+          "sha256": "67ae0ce5ce796132f48848a6ff75f1b066bfaa206dee7f2ead7b1250427f4f18"
+        },
+        {
+          "bytes": 92288,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/io/_test_fortran.cpython-312-darwin.so",
+          "sha256": "9d7aa628312ab927d29f2609254204a76e607c108f14f63ac2f5004f1bba18c6"
+        },
+        {
+          "bytes": 228222,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/io/matlab/_mio5_utils.cpython-312-darwin.so",
+          "sha256": "cf1e84a09d6a426a430533dbbcf74a3e208f7a44cf9a09a5e15a258de8c85791"
+        },
+        {
+          "bytes": 94717,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/io/matlab/_mio_utils.cpython-312-darwin.so",
+          "sha256": "50c1ce595bb1a93370b57f3114cdbdd0a7571179314cfb4572907e9c1e585b81"
+        },
+        {
+          "bytes": 135131,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/io/matlab/_streams.cpython-312-darwin.so",
+          "sha256": "42c798aeaec66e776923ebe465478f3f4b7c9b51a2137bff91d2f7e7a1c50a1d"
+        },
+        {
+          "bytes": 472698,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/linalg/_cythonized_array_utils.cpython-312-darwin.so",
+          "sha256": "2942ff7f7beb94ce5f0ef3058e1f52a22a95af5d0aee3bf5dc355ebc2d128e5e"
+        },
+        {
+          "bytes": 224820,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/linalg/_decomp_lu_cython.cpython-312-darwin.so",
+          "sha256": "b6dfe9794ac897eac9826f58f369a82edc6b16984f126204c02b36e960f35485"
+        },
+        {
+          "bytes": 287665,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/linalg/_decomp_update.cpython-312-darwin.so",
+          "sha256": "b6c99d50e00121d2cfe759d29fbaf3cf489a8b44ca6e934d934d5b2742788644"
+        },
+        {
+          "bytes": 549632,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/linalg/_fblas.cpython-312-darwin.so",
+          "sha256": "76bc494b29819555e308b562655a974b300eedec13e8d4210a853f749aa486d3"
+        },
+        {
+          "bytes": 1708496,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/linalg/_flapack.cpython-312-darwin.so",
+          "sha256": "ba3ee98799ba7bda17e2d04dc535ea52e4a8e64452beffee5d5ee4720b004bdd"
+        },
+        {
+          "bytes": 429264,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/linalg/_interpolative.cpython-312-darwin.so",
+          "sha256": "6f8da8e5cf36363ec16ab21f17767fdc7a178b85aa17e5b8cf076aa6f8a7520c"
+        },
+        {
+          "bytes": 380785,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/linalg/_matfuncs_expm.cpython-312-darwin.so",
+          "sha256": "713781632037bbb7e3c0a5dd68df45633b6c34025aa092d4876ad9261c356de2"
+        },
+        {
+          "bytes": 226711,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/linalg/_matfuncs_sqrtm_triu.cpython-312-darwin.so",
+          "sha256": "4fb06e23c465f4f7b65414fe14ec3be0bafff34a70ac0b6b56a21f58f5749b26"
+        },
+        {
+          "bytes": 227794,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/linalg/_solve_toeplitz.cpython-312-darwin.so",
+          "sha256": "245c9ece6b56f7cede887d1728ba42542eeb80fe70322a2dd3056c6e2af52eaa"
+        },
+        {
+          "bytes": 277424,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/linalg/cython_blas.cpython-312-darwin.so",
+          "sha256": "209e0122ce81be352b681c228d8f9f4fd8ba81099381311af446cf2bde7e3161"
+        },
+        {
+          "bytes": 695344,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/linalg/cython_lapack.cpython-312-darwin.so",
+          "sha256": "c086a40e8f81e74ede59a48c74562de09fb52abd8428cec4193a5aa58d3c7da4"
+        },
+        {
+          "bytes": 51113,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/ndimage/_ctest.cpython-312-darwin.so",
+          "sha256": "a774271a579d7a1d2e7bf36d0aa118c47e7f0faf037ac2d247e3f07116d9e7f2"
+        },
+        {
+          "bytes": 96874,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/ndimage/_cytest.cpython-312-darwin.so",
+          "sha256": "57f8161d76447a6abf9a8e161a1e170a4acc34063323c7d8f5c3da7558f092d9"
+        },
+        {
+          "bytes": 156316,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/ndimage/_nd_image.cpython-312-darwin.so",
+          "sha256": "0c2ae1b7e51250091b228214660289f89c866ca1fbddf9c8e927259cb5879c5d"
+        },
+        {
+          "bytes": 331996,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/ndimage/_ni_label.cpython-312-darwin.so",
+          "sha256": "e1a4671bc90a76e22f43c68fc336d15e4703ec00fdec293750755bb509fdb8cc"
+        },
+        {
+          "bytes": 240272,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/odr/__odrpack.cpython-312-darwin.so",
+          "sha256": "f5cc93dd515ed5a5276335857097c55dbbaf4ab089d831228638b2cf8d1d816a"
+        },
+        {
+          "bytes": 282750,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_bglu_dense.cpython-312-darwin.so",
+          "sha256": "19fc4c6d8c41c1309e2472719e1bef71c71e9bc93f380679ded0ee752271938f"
+        },
+        {
+          "bytes": 125712,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_cobyla.cpython-312-darwin.so",
+          "sha256": "c60ce0f9990289d9f241848a132fcc32fee3ed5f3e8793cef1e47a09de55321d"
+        },
+        {
+          "bytes": 69290,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_direct.cpython-312-darwin.so",
+          "sha256": "690daef431083d3f7972f9587f4bfb4b255fc86e845b86d269c258b3c68ce3cb"
+        },
+        {
+          "bytes": 95025,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_group_columns.cpython-312-darwin.so",
+          "sha256": "c1c0a58a94daa37d048063e7930fc8d06c1db33610705e2b046842e28793f329"
+        },
+        {
+          "bytes": 73699,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_highs/_highs_constants.cpython-312-darwin.so",
+          "sha256": "5ff360aa35cb1498ebab5792dd56e544a328fe9e99321dccb488a51e4359ba6e"
+        },
+        {
+          "bytes": 3206545,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_highs/_highs_wrapper.cpython-312-darwin.so",
+          "sha256": "0564a0f64ba9530610efe01a227ed07c02c785082ae578274839207e660f3ca0"
+        },
+        {
+          "bytes": 143296,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_lbfgsb.cpython-312-darwin.so",
+          "sha256": "0f0e222ed0b6621e1b42babeb54bee581049a8fbfd60da23afb37e1ff4ceabf5"
+        },
+        {
+          "bytes": 70792,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_lsap.cpython-312-darwin.so",
+          "sha256": "271fabef98d96a99206ed95347c8b1644148eed5803d415c1bee0f6f2e2562c7"
+        },
+        {
+          "bytes": 191189,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_lsq/givens_elimination.cpython-312-darwin.so",
+          "sha256": "3d242e4c5887286eddcf4a7278e166177bfdb2eafd9f778cc9c79c551ced2f5c"
+        },
+        {
+          "bytes": 87563,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_minpack.cpython-312-darwin.so",
+          "sha256": "6b9142127416c40b7eda0faddf692159f11d266a3a52310d351a7ca4230efbd6"
+        },
+        {
+          "bytes": 73292,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_minpack2.cpython-312-darwin.so",
+          "sha256": "d8a817fba129c40db29b0548e4e96720e737843b7cd3bde5094370831afbe750"
+        },
+        {
+          "bytes": 147869,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_moduleTNC.cpython-312-darwin.so",
+          "sha256": "4c63198d15902f4701caefd72fd1fccc0f883b2ae91b6135b4af640380ca8b7a"
+        },
+        {
+          "bytes": 179455,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_pava_pybind.cpython-312-darwin.so",
+          "sha256": "e2149ffb1c2a9a6157de7f31080a048c4dca2e90c700ebd7c8f7b9eaefdf73f6"
+        },
+        {
+          "bytes": 107017,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_slsqp.cpython-312-darwin.so",
+          "sha256": "554dc7cde2691660ec8e7081be8ed3afc6ce2d48b3fd1b7f0071fb952f3c04ef"
+        },
+        {
+          "bytes": 297200,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_trlib/_trlib.cpython-312-darwin.so",
+          "sha256": "cdfb8c4ef3dfbe2812c1ae5a74c383b96e502b64651b37a0a1324b340e1580c8"
+        },
+        {
+          "bytes": 51337,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/_zeros.cpython-312-darwin.so",
+          "sha256": "e17d416093f9b93292db74ce6a50ddf04cbdf6d8b9b95742aaa52fd703df4527"
+        },
+        {
+          "bytes": 114633,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/optimize/cython_optimize/_zeros.cpython-312-darwin.so",
+          "sha256": "72e855f1d9b7dd56b87e662a02c0ad02f0fa533466b84b077aa31420d0ddbd26"
+        },
+        {
+          "bytes": 76661,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/signal/_max_len_seq_inner.cpython-312-darwin.so",
+          "sha256": "7e19dcd16c342c87024ee83014762c227f5843499a733703b662d1ae77e16d64"
+        },
+        {
+          "bytes": 244182,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/signal/_peak_finding_utils.cpython-312-darwin.so",
+          "sha256": "9daceac7c3345568a7bd8513a931dcf675d97949101cbcd584e4bbfaacffa06f"
+        },
+        {
+          "bytes": 122700,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/signal/_sigtools.cpython-312-darwin.so",
+          "sha256": "08f048ce0a1435ad5a76f08b7523e87c066ac722add0f115ca38e86e0e3905c9"
+        },
+        {
+          "bytes": 244027,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/signal/_sosfilt.cpython-312-darwin.so",
+          "sha256": "6874e01c11d1314d1db5b70797c28318188d85ed42d47db941f7d911ad4a91ac"
+        },
+        {
+          "bytes": 77212,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/signal/_spectral.cpython-312-darwin.so",
+          "sha256": "a5d4546e36218375c431a45d73120d38631db2104ceb370fd26e954acdd92737"
+        },
+        {
+          "bytes": 69738,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/signal/_spline.cpython-312-darwin.so",
+          "sha256": "28aadd69c131184feb68b04ab2634a78b76f06124c431c09ea6ae2f48f14279e"
+        },
+        {
+          "bytes": 296113,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/signal/_upfirdn_apply.cpython-312-darwin.so",
+          "sha256": "0f1b90baff48b186f84d513cc0c7eeae064b87a1a4a44bb0c157969d97a3557c"
+        },
+        {
+          "bytes": 532288,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/_csparsetools.cpython-312-darwin.so",
+          "sha256": "d421fae887db6dbf5b1c20342dfbf152569cb514263267a2734fd934041fcc69"
+        },
+        {
+          "bytes": 3754031,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/_sparsetools.cpython-312-darwin.so",
+          "sha256": "f7e80e5a3cb9973ffb2b178f8be3a3750e662bbdcfb9d2f22018b65b507f6afb"
+        },
+        {
+          "bytes": 278632,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/csgraph/_flow.cpython-312-darwin.so",
+          "sha256": "3a16189ecc4198a3ef16868507a5dfc21f5bee6af25b139beddc47dcb07c61c7"
+        },
+        {
+          "bytes": 276892,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/csgraph/_matching.cpython-312-darwin.so",
+          "sha256": "bdf8df52fe9cc67e6824182b575e56c406659ddccf7fc140755ee90d29996892"
+        },
+        {
+          "bytes": 209381,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-312-darwin.so",
+          "sha256": "3e6542731a36fc1ae780415f8240fa528d6dfd3c1a5722af834473c842b71dd3"
+        },
+        {
+          "bytes": 262206,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/csgraph/_reordering.cpython-312-darwin.so",
+          "sha256": "a9ee2a283fb51840408374afe8924e2e867c8b12e95f81b7b0cc0223aa2f3425"
+        },
+        {
+          "bytes": 364225,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/csgraph/_shortest_path.cpython-312-darwin.so",
+          "sha256": "b2169d1c3977c7f360f5d35b1764332449f6adee3f693f0afb646d4d15eb1603"
+        },
+        {
+          "bytes": 183897,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/csgraph/_tools.cpython-312-darwin.so",
+          "sha256": "4a274f9ea7c1f55333ed2fbbd37cb09b455348ddd558d5cfda3531e98714ca8b"
+        },
+        {
+          "bytes": 480333,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/csgraph/_traversal.cpython-312-darwin.so",
+          "sha256": "b2c157bf7424713d24491ab0b043ec4139386fe142d8956e0eea4dc0bbcbb5b5"
+        },
+        {
+          "bytes": 341248,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/linalg/_dsolve/_superlu.cpython-312-darwin.so",
+          "sha256": "d120d3e6fce94b261aa5b9873e45a0c3ba0d650602c42d127753b910b8a59eb7"
+        },
+        {
+          "bytes": 475504,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/linalg/_eigen/arpack/_arpack.cpython-312-darwin.so",
+          "sha256": "bf8133c5196606ae69c3d628f8cf5b74d97e63a037e10d4e16207dffa9d100c4"
+        },
+        {
+          "bytes": 180048,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/linalg/_propack/_cpropack.cpython-312-darwin.so",
+          "sha256": "eddf2bae263a42f29ced987becb857f1bd0671ce0d5427edaeaf98f5312e515a"
+        },
+        {
+          "bytes": 161584,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/linalg/_propack/_dpropack.cpython-312-darwin.so",
+          "sha256": "b6fca79b95837f3db3d398a41acdffd2a2dc8feba33918301fc1e482d1af3ea2"
+        },
+        {
+          "bytes": 161584,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/linalg/_propack/_spropack.cpython-312-darwin.so",
+          "sha256": "20df1e25bafd3c10ba622158f3b8ab49caee262047702dc24f6a81979405fa13"
+        },
+        {
+          "bytes": 180064,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/sparse/linalg/_propack/_zpropack.cpython-312-darwin.so",
+          "sha256": "836d0576379e730731d858fdb6f67e6b15761a2da0b7d8b1e67158f87ec82553"
+        },
+        {
+          "bytes": 667067,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/spatial/_ckdtree.cpython-312-darwin.so",
+          "sha256": "470eae1f42c04d8a3ae793f526d02ea512a8c5ba571c3eb0cfcf5f7f4b0127ed"
+        },
+        {
+          "bytes": 603411,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/spatial/_distance_pybind.cpython-312-darwin.so",
+          "sha256": "9da58e38b0ac3198ff2c7ca6d01a5702972e28d6b69da7c0246a098cc9fce2d2"
+        },
+        {
+          "bytes": 121105,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/spatial/_distance_wrap.cpython-312-darwin.so",
+          "sha256": "8c98329cd5d2d539fe6ac66f187e154ab150b1de717ead08ee6cbe5847dc0df6"
+        },
+        {
+          "bytes": 191869,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/spatial/_hausdorff.cpython-312-darwin.so",
+          "sha256": "474f858f0286a47190b7cfa465bb258883fe63e5d8f8d4622388a22b27f8cc86"
+        },
+        {
+          "bytes": 906569,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/spatial/_qhull.cpython-312-darwin.so",
+          "sha256": "b63289b9ace5f37337c5298c50ce767d62190cb3e9564a12b0b7b8920971ac3d"
+        },
+        {
+          "bytes": 191435,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/spatial/_voronoi.cpython-312-darwin.so",
+          "sha256": "929af5a8b46b6fa5488fb9b3597b36f893bce530a5a4f385949776eefe2e8c43"
+        },
+        {
+          "bytes": 733420,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/spatial/transform/_rotation.cpython-312-darwin.so",
+          "sha256": "745f480eda82647950f50e164039a58fc5f54cfac1af73739ae5a53ad48b2310"
+        },
+        {
+          "bytes": 180586,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/special/_cdflib.cpython-312-darwin.so",
+          "sha256": "2c1ac266e3dee589a57e9992b948b368c2e978a88213c98bfc4518a6fd561f9c"
+        },
+        {
+          "bytes": 77512,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/special/_comb.cpython-312-darwin.so",
+          "sha256": "4f7994fe5e17fad5abdbb12d88a25b4c4621797e4c5aa4fb0cc48fe16dc3417d"
+        },
+        {
+          "bytes": 132496,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/special/_ellip_harm_2.cpython-312-darwin.so",
+          "sha256": "02bbb54115703ced1b31cec942a8e7dd55e9523a356d55e8f6a06ac4c460b7c3"
+        },
+        {
+          "bytes": 238507,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/special/_specfun.cpython-312-darwin.so",
+          "sha256": "873a1e1f61403efc1a7fe872e06e27d9c1041fb1d81ba7f539f604d7ea7f949d"
+        },
+        {
+          "bytes": 210353,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/special/_test_internal.cpython-312-darwin.so",
+          "sha256": "3404f5cfd0f8a4a0971427a09d8b5520394a683aadd7bb24ada6db8d08e15fcc"
+        },
+        {
+          "bytes": 1016752,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/special/_ufuncs.cpython-312-darwin.so",
+          "sha256": "dde4dc5e4de07e10ca6ffff5ad632d46c6120caa1058107d1aed2d0b317ed62d"
+        },
+        {
+          "bytes": 437294,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/special/_ufuncs_cxx.cpython-312-darwin.so",
+          "sha256": "9bb6d294e12e21560593351bec811a4542e649ec02d219a238bb42a492c5b184"
+        },
+        {
+          "bytes": 2017585,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/special/cython_special.cpython-312-darwin.so",
+          "sha256": "deea0560c7c575b89939af1e4bc9ee1cc56c88eac9f73d2bcb30447b84e9f62c"
+        },
+        {
+          "bytes": 228299,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_ansari_swilk_statistics.cpython-312-darwin.so",
+          "sha256": "cfe505f216f73e1f8e2cecda44daf1fb7f048eeb757eb2fd44afdbae0ae42a8d"
+        },
+        {
+          "bytes": 233053,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_biasedurn.cpython-312-darwin.so",
+          "sha256": "b2b9112a3ede6c3447f4eb369c2e63fb4aa00d30c1e59c684eb18cd08e2c0069"
+        },
+        {
+          "bytes": 188525,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_boost/beta_ufunc.cpython-312-darwin.so",
+          "sha256": "d3c0a07a67ed8eaeb16f41103aef2952f405d4d2cb7c2db539a06bc55929b587"
+        },
+        {
+          "bytes": 168382,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_boost/binom_ufunc.cpython-312-darwin.so",
+          "sha256": "57fa8d28d41d4c21059ee7fce33503c3776c8b9ba8bae4b7707c184b88892941"
+        },
+        {
+          "bytes": 135410,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_boost/hypergeom_ufunc.cpython-312-darwin.so",
+          "sha256": "eba97b76fd8a08429a2aae6ae7da382a02429bef9f30b3b4c0d2dd85609d411b"
+        },
+        {
+          "bytes": 155745,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_boost/invgauss_ufunc.cpython-312-darwin.so",
+          "sha256": "5163686366c6d360704f000be74c956de5a9a9830d96968d88436329799c9488"
+        },
+        {
+          "bytes": 172111,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_boost/nbinom_ufunc.cpython-312-darwin.so",
+          "sha256": "df79e94c746ca49e9514ed61d1c2dedce1f2f2c773179988898c30532a334392"
+        },
+        {
+          "bytes": 148412,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_boost/ncf_ufunc.cpython-312-darwin.so",
+          "sha256": "d9a4a6bd8ffa0574088127616452a01193a3e11ef073a3c158dcf07ccdc59707"
+        },
+        {
+          "bytes": 196988,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_boost/nct_ufunc.cpython-312-darwin.so",
+          "sha256": "4ebb007723e18e3e6e40290a57c0551f6cb72fbc578a08b1472a4005a0dda9d5"
+        },
+        {
+          "bytes": 172893,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_boost/ncx2_ufunc.cpython-312-darwin.so",
+          "sha256": "dd5e4ca35c6091c54be15ded397a96b1182d1d60cf829afb9dc0e9680376238c"
+        },
+        {
+          "bytes": 105713,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_boost/skewnorm_ufunc.cpython-312-darwin.so",
+          "sha256": "38003f4d3cd2baf7df86eac8a463fe0983f65a536ea49ef0732912908ffd8ae9"
+        },
+        {
+          "bytes": 78313,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_levy_stable/levyst.cpython-312-darwin.so",
+          "sha256": "db6268a6fa9a20c35ca51a7218b4bc7919ad03318886d27f3ca972824b8e62c1"
+        },
+        {
+          "bytes": 107831,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_mvn.cpython-312-darwin.so",
+          "sha256": "8f08a65f20257c46f53249b3f987c865fbf1e5f0c4f7fb5121e03491b44e676e"
+        },
+        {
+          "bytes": 237162,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_qmc_cy.cpython-312-darwin.so",
+          "sha256": "d710a76e40713b165f49458ba57feb34aa41ed85adfd0225ead68747c5474641"
+        },
+        {
+          "bytes": 246136,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_rcont/rcont.cpython-312-darwin.so",
+          "sha256": "a4b4a5d9e44a0ebb6edaf1f3b126fbb1b103f46dfd18f7e60e8dfa383d8c7b57"
+        },
+        {
+          "bytes": 312457,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_sobol.cpython-312-darwin.so",
+          "sha256": "a770f2261db4621a13a04dac47a93e69c568ae5d8d6b4140e01cc8ed902d7d84"
+        },
+        {
+          "bytes": 538777,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_stats.cpython-312-darwin.so",
+          "sha256": "80654274f5843ccc94e49b206c1a5a3fccb06e7e6e1106fbb2d99fbc35a800a0"
+        },
+        {
+          "bytes": 147921,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_stats_pythran.cpython-312-darwin.so",
+          "sha256": "3dba53a1960ce2c5d92f0df15666ecb26c032e9b8c70a621f8027c094376e4c8"
+        },
+        {
+          "bytes": 1202033,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy/stats/_unuran/unuran_wrapper.cpython-312-darwin.so",
+          "sha256": "9679fec0f44c35395463c24295ee1ef10343aa25d4073a56084ecce8bcea0445"
+        }
+      ],
+      "dist_info": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy-1.13.1.dist-info",
+      "installed": true,
+      "metadata_files": {
+        "INSTALLER": {
+          "bytes": 4,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy-1.13.1.dist-info/INSTALLER",
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+          "text": "pip\n"
+        },
+        "METADATA": {
+          "bytes": 60571,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy-1.13.1.dist-info/METADATA",
+          "sha256": "1dcb51211d980ba75ad33aeb45216dd278e7c424ab171d748bcdae6d6b580603"
+        },
+        "RECORD": {
+          "bytes": 179351,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy-1.13.1.dist-info/RECORD",
+          "sha256": "f9a7a43500a7e67c03ef93d14ef777f410e058c33a9cfef3ceeae09480733c06"
+        },
+        "WHEEL": {
+          "bytes": 93,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/scipy-1.13.1.dist-info/WHEEL",
+          "sha256": "cd4c74dc310f9631cc596e8961809c4bc4ce70916bee9d7b7aece325ce7a0a31",
+          "text": "Wheel-Version: 1.0\nGenerator: meson\nRoot-Is-Purelib: false\nTag: cp312-cp312-macosx_12_0_arm64"
+        }
+      },
+      "name": "scipy",
+      "version": "1.13.1"
+    },
+    {
+      "binary_extensions": [
+        {
+          "bytes": 1614072,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/algos.cpython-312-darwin.so",
+          "sha256": "bf80a11ba46bf7f6f72630c7d98db1d201b1e89ba0c51d3d5f999f4b17f34895"
+        },
+        {
+          "bytes": 136496,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/arrays.cpython-312-darwin.so",
+          "sha256": "0b03f145e903fb46046c309ed6d6e7c0fe9ffcac00562b7e8f47b224fd7e2536"
+        },
+        {
+          "bytes": 76784,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/byteswap.cpython-312-darwin.so",
+          "sha256": "7fde1a598ae9279b7d64dc27a2d1f4f70d409460849cab78e3fb03f25603446e"
+        },
+        {
+          "bytes": 2043440,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/groupby.cpython-312-darwin.so",
+          "sha256": "f285096208aa81fb333fe4c8fa5c4cf21d3fa77ef1d3d250c18db2c5e5a9f02a"
+        },
+        {
+          "bytes": 193088,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/hashing.cpython-312-darwin.so",
+          "sha256": "40fea3a6a28ec026180e55ffee1a1178c94b4b3cf53ebf7461a7f85330dc9e02"
+        },
+        {
+          "bytes": 1743456,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/hashtable.cpython-312-darwin.so",
+          "sha256": "7a2bef68b77aeaaa592210af8935d7c1b2eebe2001b0298b4c60b3edb83fd081"
+        },
+        {
+          "bytes": 772280,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/index.cpython-312-darwin.so",
+          "sha256": "19d1b685b78962875a666e118fe946fe3c6823b20eafbb318b2a11fe6186fddb"
+        },
+        {
+          "bytes": 97824,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/indexing.cpython-312-darwin.so",
+          "sha256": "7c1900bbad621ca80aeb28c6f8c12fe2118cb3487b04efd81a42a3f554844683"
+        },
+        {
+          "bytes": 342768,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/internals.cpython-312-darwin.so",
+          "sha256": "0336cdd35b073471fcbcd74e03d7062e7361bdbe935aa70eb77c06f338cd3c09"
+        },
+        {
+          "bytes": 1064288,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/interval.cpython-312-darwin.so",
+          "sha256": "3cb54c3e12d3ec248a71549572d54967bf89bbb5dd7d6a9183186b94bf82d0ef"
+        },
+        {
+          "bytes": 1017544,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/join.cpython-312-darwin.so",
+          "sha256": "3052341a9edd19cd701c792e4dc323e3682b10b1f48f9579aea9607ede60484e"
+        },
+        {
+          "bytes": 93608,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/json.cpython-312-darwin.so",
+          "sha256": "3701725720028a2a4873043703ad469735ea4b823e290057b9e3c76055537232"
+        },
+        {
+          "bytes": 699384,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/lib.cpython-312-darwin.so",
+          "sha256": "8373213c1d643fbdfba360c733d485cc2699308d13fe37a29dc8e181cf124364"
+        },
+        {
+          "bytes": 193488,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/missing.cpython-312-darwin.so",
+          "sha256": "c9a889167ae844b1915427c4c05fb0d4107dafc1f50fcec52904c812a35d9349"
+        },
+        {
+          "bytes": 228088,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/ops.cpython-312-darwin.so",
+          "sha256": "530c8719f740297ccfbb0aadcc5f075d6241c2949bf253e67b40e2521dbea968"
+        },
+        {
+          "bytes": 79968,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/ops_dispatch.cpython-312-darwin.so",
+          "sha256": "fbc2132d7ba16ccb30385647ff4ec987f845babaa3868b301edcd7f4dee02757"
+        },
+        {
+          "bytes": 70184,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/pandas_datetime.cpython-312-darwin.so",
+          "sha256": "6d1a7402c33c5da0a492c270aa6187dfb8447a40478f8586c5e4c3be5ea7cd9a"
+        },
+        {
+          "bytes": 70080,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/pandas_parser.cpython-312-darwin.so",
+          "sha256": "67b6b698c6ae7dfc568fb007069e1c97299382db26245170dd8e28c7045fbe9a"
+        },
+        {
+          "bytes": 449504,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/parsers.cpython-312-darwin.so",
+          "sha256": "63f0abe3a9f5871961feed4772d57bef688b88585d48548744e34b36838b210e"
+        },
+        {
+          "bytes": 99824,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/properties.cpython-312-darwin.so",
+          "sha256": "32f1240541605d5642e53ed4d492f7e599fff79a3ce511f4d21641d57a08f690"
+        },
+        {
+          "bytes": 264160,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/reshape.cpython-312-darwin.so",
+          "sha256": "2fda1ff51619e347283f269f5be3b25105cfbafae264b89f17341c528a45035e"
+        },
+        {
+          "bytes": 229480,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/sas.cpython-312-darwin.so",
+          "sha256": "053a9caba60ab198a67e9c913f136af852d486ee7400e0f3441e0e7516128076"
+        },
+        {
+          "bytes": 703136,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/sparse.cpython-312-darwin.so",
+          "sha256": "efd5daad86b70d21f4239e0b2e4bafe243156004a5aa71d6f1173bd6b1bf77e7"
+        },
+        {
+          "bytes": 149872,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/testing.cpython-312-darwin.so",
+          "sha256": "e0dc140f49055b83cd19d3c85674c2add77ba07f80adef31c72ea8b8288954bc"
+        },
+        {
+          "bytes": 282712,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslib.cpython-312-darwin.so",
+          "sha256": "74232f019528748e2f1ec2102ef26234716a68cc4427615f4ca30ae580306a6d"
+        },
+        {
+          "bytes": 96520,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/base.cpython-312-darwin.so",
+          "sha256": "1d85a29b0066f2529737f39446cdb77ecdae8682b710600480363b3792986194"
+        },
+        {
+          "bytes": 98416,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/ccalendar.cpython-312-darwin.so",
+          "sha256": "6cd94ba0ecb4a2109df64e26f66bbf900ce495ffc9476313d20165678a3c6575"
+        },
+        {
+          "bytes": 265744,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/conversion.cpython-312-darwin.so",
+          "sha256": "e83829eb277d21ff9dda9467f79ea7e5663fe7660cbea2b47a5f8fc5c979360f"
+        },
+        {
+          "bytes": 199568,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/dtypes.cpython-312-darwin.so",
+          "sha256": "abf4f0d938a9a2ff65ebbfe2be56e233ebb2d57b108568edb6ed602b92fa21ab"
+        },
+        {
+          "bytes": 284400,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/fields.cpython-312-darwin.so",
+          "sha256": "ea50856205ce7d137f883ff7e3a8995c4d40166f68bd85b16456a22d0de53c7f"
+        },
+        {
+          "bytes": 230704,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/nattype.cpython-312-darwin.so",
+          "sha256": "b43e37cae72ac2232383f0a76c272233b14ccaf91b40fd47d1a5357be73c91a5"
+        },
+        {
+          "bytes": 153664,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/np_datetime.cpython-312-darwin.so",
+          "sha256": "0e0afd6f6ac9aff962b33df6dd251336c8a7b8529d2c8bc590e3af6b8c7b4187"
+        },
+        {
+          "bytes": 905152,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/offsets.cpython-312-darwin.so",
+          "sha256": "06b28db008cbeccdae324b96b60c570f39e063164d441644002323ff783093f6"
+        },
+        {
+          "bytes": 360352,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/parsing.cpython-312-darwin.so",
+          "sha256": "02a5c1cc8cc7d5fe3f16df53ee85faff3a0d4108eda676d3c5a9c5cf987fadc9"
+        },
+        {
+          "bytes": 431984,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/period.cpython-312-darwin.so",
+          "sha256": "91dc8246fc7f0f20c6831557e28d934d0ddb0808d7355e2362bcc4e8bb808f50"
+        },
+        {
+          "bytes": 320112,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/strptime.cpython-312-darwin.so",
+          "sha256": "56ff11b8d47b67a4cca346d533e700602698e857210de0b0719b3809f9feb54a"
+        },
+        {
+          "bytes": 488816,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/timedeltas.cpython-312-darwin.so",
+          "sha256": "6a24750d13fe5bcc225581ce1f4627ab6f416bacf1eb3bced9e4714917e224d8"
+        },
+        {
+          "bytes": 542080,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/timestamps.cpython-312-darwin.so",
+          "sha256": "d12aa09a00ba758c4c72095ffe3a0ef52100a86b8fdf06c8895b94c1f430e075"
+        },
+        {
+          "bytes": 247344,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/timezones.cpython-312-darwin.so",
+          "sha256": "2aa25958557afe973b438d070888273b9289d834692aa5d2ac3f2d6563a64ea4"
+        },
+        {
+          "bytes": 265360,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/tzconversion.cpython-312-darwin.so",
+          "sha256": "2f47adf15694ea11270e304046f566c542935b31ee899449a27d5d63a69eb3f2"
+        },
+        {
+          "bytes": 211328,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/tslibs/vectorized.cpython-312-darwin.so",
+          "sha256": "74b9c28d7bfd625331e52318bee809ac48769a6998fa16abd2525618bebe1ccb"
+        },
+        {
+          "bytes": 344032,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/window/aggregations.cpython-312-darwin.so",
+          "sha256": "c4c7a6c7ffbb5c25cf3c055a230025ac3de12e6f6ad016b98c6e938449d97264"
+        },
+        {
+          "bytes": 192336,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/window/indexers.cpython-312-darwin.so",
+          "sha256": "875e361fcb43e2089ef1f244ea25789ccac8fa964c271bb4f6b2a9702a98eed0"
+        },
+        {
+          "bytes": 213040,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas/_libs/writers.cpython-312-darwin.so",
+          "sha256": "e9204a61ac92027bf008479888080254e4b0c84d9b0d1c46562c064f2515ff98"
+        }
+      ],
+      "dist_info": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas-2.3.3.dist-info",
+      "installed": true,
+      "metadata_files": {
+        "INSTALLER": {
+          "bytes": 4,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas-2.3.3.dist-info/INSTALLER",
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+          "text": "pip\n"
+        },
+        "METADATA": {
+          "bytes": 91215,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas-2.3.3.dist-info/METADATA",
+          "sha256": "40ee953dc7ca155840b639a1881ff84578075187fce0ac20eeda55a7fa0d9a90"
+        },
+        "RECORD": {
+          "bytes": 243583,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas-2.3.3.dist-info/RECORD",
+          "sha256": "097d40117fe8444660b1d86fb293ba1dadce5701613df28543301227e7a50a5f"
+        },
+        "WHEEL": {
+          "bytes": 122,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandas-2.3.3.dist-info/WHEEL",
+          "sha256": "1a77459ac1909217ac24c074f71779c72d4915ac0a2650d9b7a00c320a89f8fc",
+          "text": "Wheel-Version: 1.0\nGenerator: meson\nRoot-Is-Purelib: false\nTag: cp312-cp312-macosx_11_0_arm64\nGenerator: delocate 0.13.0\n\n"
+        }
+      },
+      "name": "pandas",
+      "version": "2.3.3"
+    },
+    {
+      "binary_extensions": [],
+      "dist_info": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandapower-3.4.0.dist-info",
+      "installed": true,
+      "metadata_files": {
+        "INSTALLER": {
+          "bytes": 4,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandapower-3.4.0.dist-info/INSTALLER",
+          "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+          "text": "pip\n"
+        },
+        "METADATA": {
+          "bytes": 9149,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandapower-3.4.0.dist-info/METADATA",
+          "sha256": "904590114b426b3d2bb50f470eea90473ccf88c40e1e8b28076c2ec497336e74"
+        },
+        "RECORD": {
+          "bytes": 65814,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandapower-3.4.0.dist-info/RECORD",
+          "sha256": "02556425c8cd3c81bb63ddff4d140ac7f3a679b8e5a7a9412b76443491ea0de2"
+        },
+        "WHEEL": {
+          "bytes": 91,
+          "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/lib/python3.12/site-packages/pandapower-3.4.0.dist-info/WHEEL",
+          "sha256": "6027f0606398322e49870d9f538c8d83012bc9b6f6217e4f13004a57865b741a",
+          "text": "Wheel-Version: 1.0\nGenerator: setuptools (82.0.0)\nRoot-Is-Purelib: true\nTag: py3-none-any\n\n"
+        }
+      },
+      "name": "pandapower",
+      "version": "3.4.0"
+    },
+    {
+      "installed": false,
+      "name": "numba"
+    },
+    {
+      "installed": false,
+      "name": "llvmlite"
+    }
+  ],
+  "numpy_configuration": "Build Dependencies:\n  blas:\n    detection method: pkgconfig\n    found: true\n    include directory: /opt/arm64-builds/include\n    lib directory: /opt/arm64-builds/lib\n    name: openblas64\n    openblas configuration: USE_64BITINT=1 DYNAMIC_ARCH=1 DYNAMIC_OLDER= NO_CBLAS=\n      NO_LAPACK= NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP= SANDYBRIDGE MAX_THREADS=3\n    pc file directory: /usr/local/lib/pkgconfig\n    version: 0.3.23.dev\n  lapack:\n    detection method: internal\n    found: true\n    include directory: unknown\n    lib directory: unknown\n    name: dep4335021056\n    openblas configuration: unknown\n    pc file directory: unknown\n    version: 1.26.4\nCompilers:\n  c:\n    args: -fno-strict-aliasing, -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    commands: cc\n    linker: ld64\n    linker args: -fno-strict-aliasing, -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    name: clang\n    version: 14.0.0\n  c++:\n    args: -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    commands: c++\n    linker: ld64\n    linker args: -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    name: clang\n    version: 14.0.0\n  cython:\n    commands: cython\n    linker: cython\n    name: cython\n    version: 3.0.8\nMachine Information:\n  build:\n    cpu: aarch64\n    endian: little\n    family: aarch64\n    system: darwin\n  host:\n    cpu: aarch64\n    endian: little\n    family: aarch64\n    system: darwin\nPython Information:\n  path: /private/var/folders/76/zy5ktkns50v6gt5g8r0sf6sc0000gn/T/cibw-run-q69bfk1p/cp312-macosx_arm64/build/venv/bin/python\n  version: '3.12'\nSIMD Extensions:\n  baseline:\n  - NEON\n  - NEON_FP16\n  - NEON_VFPV4\n  - ASIMD\n  found:\n  - ASIMDHP\n  not found:\n  - ASIMDFHM\n\n",
+  "operating_system": {
+    "machine": "arm64",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "processor": "arm",
+    "release": "25.5.0",
+    "system": "Darwin",
+    "version": "Darwin Kernel Version 25.5.0: Tue Jun  9 22:28:24 PDT 2026; root:xnu-12377.121.10~1/RELEASE_ARM64_T6020"
+  },
+  "pandapower_execution_identity": {
+    "algorithm": "nr",
+    "independent_load_points": true,
+    "initialization": "auto",
+    "max_iteration": 30,
+    "numba_module_available": false,
+    "tolerance_mva": 1e-06
+  },
+  "python": {
+    "abi_flags": "",
+    "cache_tag": "cpython-312",
+    "configuration_arguments": "'--prefix=/opt/anaconda3''--build=arm64-apple-darwin20.0.0''--host=arm64-apple-darwin20.0.0''--enable-ipv6''--with-ensurepip=no''--with-tzpath=/opt/anaconda3/share/zoneinfo:/opt/anaconda3/share/tzinfo''--with-computed-gotos''--with-system-expat''--enable-loadable-sqlite-extensions''--with-tcltk-includes=-I/opt/anaconda3/include''--with-tcltk-libs=-L/opt/anaconda3/lib -ltcl8.6 -ltk8.6''--with-platlibdir=lib''--with-lto=full''--enable-optimizations''-oldincludedir=/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_b8i1j7z6w5/croot/python-split_1728047644694/_build_env/arm64-apple-darwin20.0.0/sysroot/usr/include''--disable-shared''PROFILE_TASK=-m test --pgo''build_alias=arm64-apple-darwin20.0.0''host_alias=arm64-apple-darwin20.0.0''PKG_CONFIG_PATH=/opt/anaconda3/lib/pkgconfig''MACHDEP=darwin''CC=clang''CFLAGS=-fPIC   -O2 -isystem /opt/anaconda3/include -arch arm64 ''LDFLAGS=-Wl,-rpath,/opt/anaconda3/lib -L/opt/anaconda3/lib''CPPFLAGS=-D_FORTIFY_SOURCE=2 -isystem /opt/anaconda3/include -mmacosx-version-min=11.1 -I/opt/anaconda3/include'",
+    "executable": {
+      "bytes": 6917232,
+      "path": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/bin/python",
+      "sha256": "3a816ef2cfd417287d7cdfaaec687c668c1dd21b51acad45f5a8e7d7bff89daa"
+    },
+    "implementation": "CPython",
+    "is_virtual_environment": true,
+    "platform_tag": "macosx-11.1-arm64",
+    "sys_base_prefix": "/opt/anaconda3",
+    "sys_prefix": "/private/tmp/nexah-sr1-g4.tCdR3H/venv",
+    "version": "3.12.7"
+  },
+  "recorded_at": "2026-07-26T10:25:08.375798+00:00",
+  "source_revision": "d3a19138b96aa07dfd623bdebb1003cb02cc60e8",
+  "source_status": "",
+  "thread_environment": {
+    "BLIS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "NUMEXPR_NUM_THREADS": null,
+    "OMP_DYNAMIC": null,
+    "OMP_NUM_THREADS": null,
+    "OMP_PROC_BIND": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "VECLIB_MAXIMUM_THREADS": null
+  }
+}

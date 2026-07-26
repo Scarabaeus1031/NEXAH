@@ -1,0 +1,19 @@
+{
+  "approval_binding_sha256": "e46336489a3045552a297b060308f9986b2aab6d79990ca583901729ab4210a6",
+  "binding_verified": true,
+  "clean_source_checkout": true,
+  "frozen_files_all_match": true,
+  "frozen_files_checked": 15,
+  "frozen_hash_authority": "validation/ieee_geometry_external_replay_v1/fixtures/expected_hashes.json",
+  "instrumentation_sha256": "527ee8beaf5475d744b89b27bf1495851c4cfc94372a3745a6a6b51978316d3c",
+  "observational_only_verification": "passed",
+  "preflight_environment_sha256": "8845770bd477d28a3cfe531ce3bff63e66a2eb24f556a2c6d01cbe73c8d4e3ef",
+  "preserved_g4_evidence_all_match": true,
+  "preserved_g4_evidence_files_checked": 11,
+  "preserved_g4_evidence_root": "validation/ieee_geometry_external_replay_v1/reports/g4_clean_replay/raw",
+  "protocol_sha256": "b8afa3d79582c0031ec754e542641ef70d7352f1095a82e996249225051ac968",
+  "source_revision": "d3a19138b96aa07dfd623bdebb1003cb02cc60e8",
+  "status": "passed",
+  "verifier_sha256": "442443eaa02bad0ec19b5a646e32f6e9dd7056a5a356ef194bc133b17e3b4d72"
+}
+

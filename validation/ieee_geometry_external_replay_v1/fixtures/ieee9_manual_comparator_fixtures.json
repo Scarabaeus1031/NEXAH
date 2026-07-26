@@ -1,0 +1,182 @@
+{
+  "case_id": "ieee9",
+  "case_role": "method_development",
+  "fixture_purpose": "manual checks of G2 definitions only; not comparator implementation output",
+  "numeric_check": {
+    "absolute_tolerance": 1e-12,
+    "relative_tolerance": 1e-10,
+    "rule": "abs(actual - expected) <= absolute_tolerance + relative_tolerance * abs(expected)"
+  },
+  "source": {
+    "artifact": "APPLICATIONS/power_systems/ieee_geometry_v1/development_frames.json",
+    "sha256": "14744e193321398536529cb81c307968ab363510493265ff1e1cf1340f1224d1"
+  },
+  "level_fixtures": [
+    {
+      "campaign_index": 0,
+      "expected": {
+        "angle_spread_degree": 18.977493575168396,
+        "l_max_percent": 65.21200848458764,
+        "v_dev_rms_pu": 0.009032886012042602,
+        "v_min_pu": 0.9793529600400099
+      },
+      "load_scale": 0.6,
+      "raw_inputs": {
+        "bus_va_degree": [
+          0.0,
+          18.977493575168396,
+          13.850095322661158,
+          1.740082086999755,
+          3.1065685972088954,
+          11.029727853410868,
+          10.86045864687375,
+          13.171828670278709,
+          3.255307697146881
+        ],
+        "bus_vm_pu": [
+          1.0,
+          0.9999999999999999,
+          1.0,
+          0.9938668321836355,
+          0.9931310219221238,
+          1.012299166467833,
+          1.0046106430434616,
+          1.0071211569196197,
+          0.9793529600400099
+        ],
+        "line_loading_percent": [
+          21.45187227030619,
+          11.194784883543392,
+          55.033524135028664,
+          29.024996448286455,
+          12.051945927172312,
+          22.734360536149634,
+          65.21200848458764,
+          42.51675567815978,
+          16.180576817800386
+        ]
+      },
+      "status": "converged"
+    },
+    {
+      "campaign_index": 4,
+      "expected": {
+        "angle_spread_degree": 14.01867470264505,
+        "l_max_percent": 65.4560555563808,
+        "v_dev_rms_pu": 0.01763338857276648,
+        "v_min_pu": 0.9576210404662128
+      },
+      "load_scale": 1.0,
+      "raw_inputs": {
+        "bus_va_degree": [
+          0.0,
+          9.6687411272709,
+          4.771073237902751,
+          -2.406643919211978,
+          -4.017264326071865,
+          1.9256016875710975,
+          0.6215445561818055,
+          3.799120193409044,
+          -4.349933575374151
+        ],
+        "bus_vm_pu": [
+          1.0,
+          1.0000000000000002,
+          1.0000000000000002,
+          0.9870068524067375,
+          0.9754721770987566,
+          1.0033754364577536,
+          0.9856448817330974,
+          0.9961852458185345,
+          0.9576210404662128
+        ],
+        "line_loading_percent": [
+          30.34941530016632,
+          13.728971151035536,
+          42.12848528922875,
+          28.359429917862755,
+          23.1544839470714,
+          31.136974595206702,
+          65.4560555563808,
+          35.60690767482404,
+          22.700496619454373
+        ]
+      },
+      "status": "converged"
+    },
+    {
+      "campaign_index": 16,
+      "expected": {
+        "angle_spread_degree": 45.11073983296861,
+        "l_max_percent": 240.17119485168675,
+        "v_dev_rms_pu": 0.14057197818681255,
+        "v_min_pu": 0.7289326835692247
+      },
+      "load_scale": 2.2,
+      "raw_inputs": {
+        "bus_va_degree": [
+          0.0,
+          -31.88415728130211,
+          -36.15362215164312,
+          -19.224047714185318,
+          -36.22713152593915,
+          -39.223263704585484,
+          -45.11073983296861,
+          -38.30979311680267,
+          -39.47717844286367
+        ],
+        "bus_vm_pu": [
+          1.0,
+          0.9999999999999999,
+          0.9999999999999997,
+          0.8384285069097145,
+          0.780149370696911,
+          0.9301634909334041,
+          0.8696002309270795,
+          0.9103007521328462,
+          0.7289326835692247
+        ],
+        "line_loading_percent": [
+          240.17119485168675,
+          105.02633663306979,
+          69.09043747240736,
+          49.41400174731883,
+          75.17419858007895,
+          62.95432642567553,
+          89.33233971624878,
+          48.662362268015926,
+          138.52362696427664
+        ]
+      },
+      "status": "converged"
+    }
+  ],
+  "local_change_fixture": {
+    "current_campaign_index": 4,
+    "current_load_scale": 1.0,
+    "expected_signed_change": {
+      "angle_spread_degree": -0.4305605801844443,
+      "l_max_percent": 0.14727980982758027,
+      "v_dev_rms_pu": 0.003222585435078404,
+      "v_min_pu": -0.0065988930748216434
+    },
+    "formula": "current level minus previous level",
+    "previous_campaign_index": 3,
+    "previous_load_scale": 0.9
+  },
+  "missingness_fixture": {
+    "campaign_index": 17,
+    "expected_levels": {
+      "angle_spread_degree": null,
+      "l_max_percent": null,
+      "v_dev_rms_pu": null,
+      "v_min_pu": null
+    },
+    "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!",
+    "load_scale": 2.3,
+    "required_behavior": "preserve failure; do not bridge, impute, rerun, or fabricate",
+    "status": "failed"
+  },
+  "schema_version": "1.0"
+}
+

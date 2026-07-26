@@ -1,0 +1,43 @@
+{
+  "baseline_revision": "d3a19138b96aa07dfd623bdebb1003cb02cc60e8",
+  "canonical_summary_sha256": "bf9ff7f858345c553685ea382440332381d4621aef2c9792a27c3c79b1dd1ff9",
+  "checks": [
+    {"check_id": "environment-lock", "passed": true},
+    {"check_id": "adapter-protocol", "passed": true},
+    {"check_id": "development-freeze", "passed": true},
+    {"check_id": "no-evaluation-refit", "passed": true},
+    {"check_id": "evaluation-source-replay", "passed": true},
+    {"check_id": "evaluation-geometry-replay", "passed": true},
+    {"check_id": "evaluation-report-replay", "passed": true},
+    {"check_id": "evaluation-brief-replay", "passed": true},
+    {"check_id": "failure-preservation", "passed": true},
+    {"check_id": "outcome-boundary", "passed": true}
+  ],
+  "development": {
+    "converged_frames": 17,
+    "declared_frames": 19,
+    "failed_frames": 2,
+    "failed_load_scales": [2.3, 2.4],
+    "failure_values_fabricated": false
+  },
+  "evaluation": {
+    "available_steps": 18,
+    "available_turns": 17,
+    "converged_frames": 19,
+    "declared_frames": 19,
+    "failed_frames": 0,
+    "solver_boundaries": 0
+  },
+  "gate": "G1",
+  "gate_passed": true,
+  "manifest_id": "phase-v-ieee-geometry-v1",
+  "parameter_retuning": false,
+  "pytest": {
+    "failed": 0,
+    "passed": 2,
+    "result": "2 passed in 23.25s"
+  },
+  "recorded_at": "2026-07-26T03:30:59+02:00",
+  "schema_version": "1.0",
+  "source_worktree_clean_before_run": true
+}

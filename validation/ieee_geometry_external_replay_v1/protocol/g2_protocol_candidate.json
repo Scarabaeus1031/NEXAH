@@ -1,0 +1,212 @@
+{
+  "analysis": {
+    "case_reporting": "separate",
+    "comparisons": [
+      {
+        "comparator_measure": "absolute_adjacent_change",
+        "geometry_measures": [
+          "adjacent-displacement-v1",
+          "normalized-local-drift-v1"
+        ],
+        "unit": "adjacent_pair_ending_at_current_index"
+      },
+      {
+        "comparator_measure": "centered_absolute_second_difference",
+        "geometry_measures": [
+          "direction-change-v1",
+          "discrete-curvature-v1"
+        ],
+        "unit": "centered_triplet"
+      },
+      {
+        "comparator_measure": "cumulative_absolute_variation",
+        "geometry_measures": [
+          "campaign-path-length-v1"
+        ],
+        "unit": "same_contiguous_converged_segment"
+      }
+    ],
+    "distance_to_last_converged": {
+      "comparison": "availability_status_only",
+      "physical_proxy": null
+    },
+    "minimum_paired_observations": 5,
+    "minimum_tolerance_distinct_groups_per_variable": 3,
+    "permitted_statistics": [
+      "spearman_rank_correlation_with_average_ties",
+      "tie_inclusive_top_k_intersection_count",
+      "tie_inclusive_top_k_union_count",
+      "tie_inclusive_top_k_jaccard"
+    ],
+    "prohibited_statistics": [
+      "p_value",
+      "confidence_interval",
+      "accuracy",
+      "auroc",
+      "lead_time",
+      "false_alarm_rate",
+      "forecast_skill",
+      "combined_score",
+      "fitted_threshold"
+    ],
+    "result_classes": [
+      "reproduced_descriptively_distinct",
+      "reproduced_substantially_redundant",
+      "reproduced_comparison_indeterminate",
+      "not_reproduced",
+      "protocol_specification_ambiguity"
+    ],
+    "substantial_redundancy_rule": {
+      "absolute_spearman_minimum": 0.9,
+      "applicability": "one direct comparator must satisfy the rule for every applicable local geometry measure in IEEE-9 and IEEE-14",
+      "top_5_requirement": "tie-inclusive sets identical in IEEE-9 and IEEE-14"
+    },
+    "top_k": [
+      3,
+      5
+    ]
+  },
+  "campaign_contract": {
+    "axis": "ordered_load_scale_not_time",
+    "development_case": {
+      "case_id": "ieee9",
+      "role": "method_development",
+      "source": "APPLICATIONS/power_systems/ieee_geometry_v1/development_frames.json"
+    },
+    "evaluation_case": {
+      "case_id": "ieee14",
+      "role": "locked_evaluation",
+      "source": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_frames.json"
+    },
+    "pool_cases": false
+  },
+  "command_separation": {
+    "development": {
+      "allowed_case_literal": "ieee9",
+      "may_import_or_access_evaluation_path": false,
+      "requires_explicit_command": true
+    },
+    "evaluation": {
+      "allowed_case_literal": "ieee14",
+      "load_evaluation_only_after_hash_verification": true,
+      "requires_approved_protocol_record": true,
+      "requires_explicit_command": true
+    },
+    "shared_auto_run": false
+  },
+  "comparators": [
+    {
+      "entity_scope": "all bus rows",
+      "formula": "min(vm_pu)",
+      "id": "v_min_pu",
+      "independence": "direct input control; not independent validation",
+      "source_field": "bus entity view variable vm_pu; corresponds to pandapower res_bus.vm_pu",
+      "unit": "pu"
+    },
+    {
+      "entity_scope": "all bus rows",
+      "formula": "sqrt(sum((vm_pu - 1.0)^2) / bus_count)",
+      "id": "v_dev_rms_pu",
+      "independence": "derived from an existing V1 bus-voltage profile; not external evidence",
+      "source_field": "bus entity view variable vm_pu; corresponds to pandapower res_bus.vm_pu",
+      "unit": "pu"
+    },
+    {
+      "entity_scope": "all line rows; transformer and other branch scopes excluded",
+      "formula": "max(loading_percent)",
+      "id": "l_max_percent",
+      "independence": "direct input control; not independent validation",
+      "source_field": "line entity view variable loading_percent; corresponds to pandapower res_line.loading_percent",
+      "unit": "percent"
+    },
+    {
+      "angle_handling": "solver reference retained; raw max minus min; no modulo, wrapping, or unwrapping",
+      "entity_scope": "all bus rows",
+      "formula": "max(va_degree) - min(va_degree)",
+      "id": "angle_spread_degree",
+      "independence": "direct input control; not independent validation",
+      "source_field": "bus entity view variable va_degree; corresponds to pandapower res_bus.va_degree",
+      "unit": "degree"
+    }
+  ],
+  "derived_measures": {
+    "absolute_adjacent_change": "abs(c_i - c_(i-1))",
+    "centered_absolute_second_difference": "abs(c_(i+1) - 2*c_i + c_(i-1))",
+    "cumulative_absolute_variation": "sum of absolute adjacent changes over the same contiguous converged segment",
+    "signed_adjacent_change": "c_i - c_(i-1)"
+  },
+  "fixtures": {
+    "case_id": "ieee9",
+    "path": "validation/ieee_geometry_external_replay_v1/fixtures/ieee9_manual_comparator_fixtures.json",
+    "source_sha256": "14744e193321398536529cb81c307968ab363510493265ff1e1cf1340f1224d1"
+  },
+  "hash_contract": {
+    "algorithm": "sha256",
+    "approval_precedes_new_ieee14_comparator_output": true,
+    "candidate_digest_path": "validation/ieee_geometry_external_replay_v1/protocol/g2_protocol_candidate.sha256",
+    "candidate_path": "validation/ieee_geometry_external_replay_v1/protocol/g2_protocol_candidate.json",
+    "canonical_bytes": {
+      "encoding": "utf-8",
+      "indent_spaces": 2,
+      "non_finite_numbers": "forbidden",
+      "sort_keys_recursively": true,
+      "trailing_lf_count": 1
+    }
+  },
+  "missingness": {
+    "available_level_requires": [
+      "frame status equals converged",
+      "exactly one bus entity view",
+      "exactly one line entity view",
+      "required variable names exist",
+      "entity and value row counts match",
+      "required scopes are non-empty",
+      "all required values are finite JSON numbers"
+    ],
+    "centered_measure_requires": "three adjacent available positions",
+    "failed_level_value": null,
+    "local_change_requires": "two adjacent available positions",
+    "preserve_original_failure": true,
+    "prohibited": [
+      "bridge",
+      "interpolate",
+      "impute",
+      "carry_forward",
+      "rerun_solver",
+      "fabricate"
+    ]
+  },
+  "numeric_contract": {
+    "artifact_absolute_tolerance": 1e-12,
+    "artifact_relative_tolerance": 1e-10,
+    "comparison_rule": "abs(actual - expected) <= absolute_tolerance + relative_tolerance * abs(expected)",
+    "scaling": "raw declared units; no normalization, clipping, sign inversion, cross-field aggregation, or cross-case fit"
+  },
+  "protocol_id": "sr1-ieee-geometry-comparator-analysis-v1",
+  "protocol_status": "candidate_for_g2_review",
+  "protocol_version": "1.0.0",
+  "ranking": {
+    "magnitude": "descending absolute local magnitude",
+    "spearman_ties": "average ranks",
+    "stable_order_within_tie": "campaign_index_ascending",
+    "tie_rule": "same numeric tolerance as artifact comparison",
+    "top_k_boundary": "include complete boundary tie group; result may exceed k"
+  },
+  "scope": {
+    "adds_new_theory": false,
+    "alters_frozen_v1": false,
+    "begins_g3": false,
+    "begins_g4": false,
+    "generates_or_reads_new_ieee14_comparator_output": false
+  },
+  "sensitivity": {
+    "leave_one_feature_out": "omitted because it recomputes a changed representation",
+    "permitted": "frozen numeric comparison tolerance only"
+  },
+  "tier_1": {
+    "candidate": "smallest singular value of Newton power-flow Jacobian",
+    "decision": "omitted",
+    "reason": "Pandapower 3.4.0 provides no stable top-level public Jacobian result; implementation would depend on internal _ppc state or low-level pandapower.pf/pandapower.pypower modules",
+    "substitute_metric": null
+  }
+}

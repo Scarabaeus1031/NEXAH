@@ -1,0 +1,6 @@
+numpy==1.26.4
+pandas==2.3.3
+pandapower==3.4.0
+scipy==1.13.1
+pytest==7.4.4
+

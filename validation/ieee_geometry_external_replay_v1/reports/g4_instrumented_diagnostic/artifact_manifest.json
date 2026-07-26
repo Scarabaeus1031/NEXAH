@@ -1,0 +1,131 @@
+{
+  "algorithm": "sha256",
+  "artifacts": [
+    {
+      "bytes": 4911,
+      "path": "diagnostic/INSTRUMENTED_REPLAY_PROTOCOL.md",
+      "sha256": "b8afa3d79582c0031ec754e542641ef70d7352f1095a82e996249225051ac968"
+    },
+    {
+      "bytes": 22437,
+      "path": "diagnostic/instrumented_replay.py",
+      "sha256": "527ee8beaf5475d744b89b27bf1495851c4cfc94372a3745a6a6b51978316d3c"
+    },
+    {
+      "bytes": 1206,
+      "path": "diagnostic/instrumented_replay_approval_binding.json",
+      "sha256": "e46336489a3045552a297b060308f9986b2aab6d79990ca583901729ab4210a6"
+    },
+    {
+      "bytes": 4024,
+      "path": "diagnostic/verify_observational_only.py",
+      "sha256": "442443eaa02bad0ec19b5a646e32f6e9dd7056a5a356ef194bc133b17e3b4d72"
+    },
+    {
+      "bytes": 8559,
+      "path": "reports/g4_instrumented_diagnostic/INSTRUMENTED_REPLAY_FINDINGS.md",
+      "sha256": "dc43c586ae1fa78f5fbb1310a56a8ef150ccdf065f46fe350f741454643c867f"
+    },
+    {
+      "bytes": 1771,
+      "path": "reports/g4_instrumented_diagnostic/REMEDIATION_OPTIONS.md",
+      "sha256": "5130cd5d08fdbc3453b35c779eadb829a04092fb06aee3fe5648709faff51d6c"
+    },
+    {
+      "bytes": 3195,
+      "path": "reports/g4_instrumented_diagnostic/instrumented_replay_classification.json",
+      "sha256": "88dd418a524e20be0a896ef8d465c8c4b6db22fe2c33608f13002f55c3039bb5"
+    },
+    {
+      "bytes": 1446,
+      "path": "reports/g4_instrumented_diagnostic/observational_verification.json",
+      "sha256": "685e68fdce3c7b49d6f31731963b2bab7670bbfee42d5967d3fd2aa9b0f4aad4"
+    },
+    {
+      "bytes": 2439,
+      "path": "reports/g4_instrumented_diagnostic/payloads/diagnostic_summary.json",
+      "sha256": "48ebf56fe2025e1995442ed019616b8e5fecfeae4fef1c88fcfafa9d5d27ffb4"
+    },
+    {
+      "bytes": 457,
+      "path": "reports/g4_instrumented_diagnostic/payloads/execution_ledger.json",
+      "sha256": "d18034328ef93a116729c37b6b2b953fe593b8f77c5245122c1eb3ee0aa98612"
+    },
+    {
+      "bytes": 1465,
+      "path": "reports/g4_instrumented_diagnostic/payloads/fresh/claim_audit_inputs.json",
+      "sha256": "a3afb605830d6f8eed467a585300e4feecc49395a0d89c6ccee207a6b5ec8e81"
+    },
+    {
+      "bytes": 150664,
+      "path": "reports/g4_instrumented_diagnostic/payloads/fresh/evaluation_frames.json",
+      "sha256": "c294791fb9c33646b6c095641f423dc08dd05b22a6c40a610b062ac807edcc2f"
+    },
+    {
+      "bytes": 38590,
+      "path": "reports/g4_instrumented_diagnostic/payloads/fresh/evaluation_geometry.json",
+      "sha256": "5266228d13ef3f709bcef9bb307edee094d94cdbc1ef6583131cf5f11fa0d2c6"
+    },
+    {
+      "bytes": 57598,
+      "path": "reports/g4_instrumented_diagnostic/payloads/fresh/evaluation_orientation.json",
+      "sha256": "74464ccabcb410d75729c369c63f42e82914264db043703d50355222f5f7e22a"
+    },
+    {
+      "bytes": 13192,
+      "path": "reports/g4_instrumented_diagnostic/payloads/fresh/evaluation_orientation_brief.json",
+      "sha256": "e3dfcd2604ec355f78ab3af93c4ecabfcaab9845f4c5b0c6e4b3bb60348b5101"
+    },
+    {
+      "bytes": 8611,
+      "path": "reports/g4_instrumented_diagnostic/payloads/fresh/evaluation_orientation_brief.md",
+      "sha256": "b12d519994b6dfe3fbdaa3d99364451e097b65b214fdf7e6305273854b1012b6"
+    },
+    {
+      "bytes": 7328,
+      "path": "reports/g4_instrumented_diagnostic/payloads/fresh/geometry_projected_frames.json",
+      "sha256": "7d983c388e2843bd070a0cd9f057c862fdb6169c060c1ef327c93b8ff34d1901"
+    },
+    {
+      "bytes": 3,
+      "path": "reports/g4_instrumented_diagnostic/payloads/fresh/geometry_solver_boundaries.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "bytes": 14156,
+      "path": "reports/g4_instrumented_diagnostic/payloads/fresh/geometry_steps.json",
+      "sha256": "2f0dbf24ed9d2884009eec778e7fd50c02fb8b976d1f8c2858cd465bcf3b568e"
+    },
+    {
+      "bytes": 7210,
+      "path": "reports/g4_instrumented_diagnostic/payloads/fresh/geometry_turns.json",
+      "sha256": "774cc34643c0c3abd2ec264fd6109dc54cb6e0f357bf6f17cf95eb036bb3d43e"
+    },
+    {
+      "bytes": 2361,
+      "path": "reports/g4_instrumented_diagnostic/payloads/fresh/orientation_report.json",
+      "sha256": "6fe2cfa5ec10c36ff34b599532f90d0a3a87f55fccea833e3c38992028b5d442"
+    },
+    {
+      "bytes": 1773437,
+      "path": "reports/g4_instrumented_diagnostic/payloads/raw_numeric_representations.json",
+      "sha256": "26977a5d74dd675598c7faa1a059749e1423878bd0d2293331d086dfccf3f840"
+    },
+    {
+      "bytes": 1822710,
+      "path": "reports/g4_instrumented_diagnostic/payloads/recursive_diff.json",
+      "sha256": "1ae3ccfd8b37f015cfb530a5adbf2810359afa16d166997665f9b451d7034d19"
+    },
+    {
+      "bytes": 1035,
+      "path": "reports/g4_instrumented_diagnostic/pre_execution_verification.json",
+      "sha256": "e49f5b06e2c7d7845a66d3a7640f04b048b72fe2315fa4d8fb980094d6789e56"
+    },
+    {
+      "bytes": 65235,
+      "path": "reports/g4_instrumented_diagnostic/preflight_environment.json",
+      "sha256": "8845770bd477d28a3cfe531ce3bff63e66a2eb24f556a2c6d01cbe73c8d4e3ef"
+    }
+  ],
+  "root": "/Users/tho2020/Documents/GitHub/NEXAH/validation/ieee_geometry_external_replay_v1"
+}

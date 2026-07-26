@@ -1,0 +1,76 @@
+{
+  "case_id": "ieee9",
+  "case_role": "method_development",
+  "command": "development_replay",
+  "comparator_output_generated": false,
+  "comparison": {
+    "adjacent_steps": 18,
+    "campaign_positions": 19,
+    "case_id": "ieee9",
+    "case_role": "method_development",
+    "centered_turns": 17,
+    "discrepancy_count": 0,
+    "first_divergence": null,
+    "operators": {
+      "adjacent-displacement-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 182,
+        "records_compared": 18,
+        "status": "equivalent"
+      },
+      "campaign-path-length-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 70,
+        "records_compared": 18,
+        "status": "equivalent"
+      },
+      "direction-change-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 15,
+        "records_compared": 17,
+        "status": "equivalent"
+      },
+      "discrete-curvature-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 15,
+        "records_compared": 17,
+        "status": "equivalent"
+      },
+      "distance-to-last-converged-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 6,
+        "records_compared": 2,
+        "status": "equivalent"
+      },
+      "normalized-local-drift-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 70,
+        "records_compared": 18,
+        "status": "equivalent"
+      }
+    },
+    "solver_boundaries": 2,
+    "status": "equivalent",
+    "structural_discrepancy_count": 0,
+    "structural_numeric_values_compared": 153
+  },
+  "failed_frames": [
+    {
+      "campaign_index": 17,
+      "entity_view_count": 0,
+      "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!",
+      "load_scale": 2.3,
+      "system_features": null
+    },
+    {
+      "campaign_index": 18,
+      "entity_view_count": 0,
+      "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!",
+      "load_scale": 2.4,
+      "system_features": null
+    }
+  ],
+  "failure_policy_preserved": true,
+  "gap_bridged": false,
+  "status": "passed"
+}

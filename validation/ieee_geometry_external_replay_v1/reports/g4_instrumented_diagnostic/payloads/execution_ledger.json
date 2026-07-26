@@ -1,0 +1,13 @@
+{
+  "attempt_number": 1,
+  "authorised_ieee14_diagnostic_attempts": 1,
+  "binding": {
+    "instrumentation_sha256": "527ee8beaf5475d744b89b27bf1495851c4cfc94372a3745a6a6b51978316d3c",
+    "protocol_sha256": "b8afa3d79582c0031ec754e542641ef70d7352f1095a82e996249225051ac968",
+    "verified": true
+  },
+  "completed": true,
+  "completed_at": "2026-07-26T10:26:43.529884+00:00",
+  "retry_permitted": false,
+  "started_at": "2026-07-26T10:26:21.986753+00:00"
+}

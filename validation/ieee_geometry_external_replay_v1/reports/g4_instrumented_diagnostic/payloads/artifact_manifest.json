@@ -1,0 +1,80 @@
+{
+  "algorithm": "sha256",
+  "artifacts": [
+    {
+      "bytes": 2439,
+      "path": "diagnostic_summary.json",
+      "sha256": "48ebf56fe2025e1995442ed019616b8e5fecfeae4fef1c88fcfafa9d5d27ffb4"
+    },
+    {
+      "bytes": 457,
+      "path": "execution_ledger.json",
+      "sha256": "d18034328ef93a116729c37b6b2b953fe593b8f77c5245122c1eb3ee0aa98612"
+    },
+    {
+      "bytes": 1465,
+      "path": "fresh/claim_audit_inputs.json",
+      "sha256": "a3afb605830d6f8eed467a585300e4feecc49395a0d89c6ccee207a6b5ec8e81"
+    },
+    {
+      "bytes": 150664,
+      "path": "fresh/evaluation_frames.json",
+      "sha256": "c294791fb9c33646b6c095641f423dc08dd05b22a6c40a610b062ac807edcc2f"
+    },
+    {
+      "bytes": 38590,
+      "path": "fresh/evaluation_geometry.json",
+      "sha256": "5266228d13ef3f709bcef9bb307edee094d94cdbc1ef6583131cf5f11fa0d2c6"
+    },
+    {
+      "bytes": 57598,
+      "path": "fresh/evaluation_orientation.json",
+      "sha256": "74464ccabcb410d75729c369c63f42e82914264db043703d50355222f5f7e22a"
+    },
+    {
+      "bytes": 13192,
+      "path": "fresh/evaluation_orientation_brief.json",
+      "sha256": "e3dfcd2604ec355f78ab3af93c4ecabfcaab9845f4c5b0c6e4b3bb60348b5101"
+    },
+    {
+      "bytes": 8611,
+      "path": "fresh/evaluation_orientation_brief.md",
+      "sha256": "b12d519994b6dfe3fbdaa3d99364451e097b65b214fdf7e6305273854b1012b6"
+    },
+    {
+      "bytes": 7328,
+      "path": "fresh/geometry_projected_frames.json",
+      "sha256": "7d983c388e2843bd070a0cd9f057c862fdb6169c060c1ef327c93b8ff34d1901"
+    },
+    {
+      "bytes": 3,
+      "path": "fresh/geometry_solver_boundaries.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "bytes": 14156,
+      "path": "fresh/geometry_steps.json",
+      "sha256": "2f0dbf24ed9d2884009eec778e7fd50c02fb8b976d1f8c2858cd465bcf3b568e"
+    },
+    {
+      "bytes": 7210,
+      "path": "fresh/geometry_turns.json",
+      "sha256": "774cc34643c0c3abd2ec264fd6109dc54cb6e0f357bf6f17cf95eb036bb3d43e"
+    },
+    {
+      "bytes": 2361,
+      "path": "fresh/orientation_report.json",
+      "sha256": "6fe2cfa5ec10c36ff34b599532f90d0a3a87f55fccea833e3c38992028b5d442"
+    },
+    {
+      "bytes": 1773437,
+      "path": "raw_numeric_representations.json",
+      "sha256": "26977a5d74dd675598c7faa1a059749e1423878bd0d2293331d086dfccf3f840"
+    },
+    {
+      "bytes": 1822710,
+      "path": "recursive_diff.json",
+      "sha256": "1ae3ccfd8b37f015cfb530a5adbf2810359afa16d166997665f9b451d7034d19"
+    }
+  ]
+}

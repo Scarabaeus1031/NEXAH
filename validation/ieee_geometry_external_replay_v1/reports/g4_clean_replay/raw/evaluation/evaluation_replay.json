@@ -1,0 +1,87 @@
+{
+  "campaign_positions": 19,
+  "canonical_command": [
+    "/private/tmp/nexah-sr1-g4.tCdR3H/venv/bin/python",
+    "/private/tmp/nexah-sr1-g4.tCdR3H/source/validation/ieee_geometry_v1/run_validation.py",
+    "--out",
+    "/private/tmp/nexah-sr1-g4.tCdR3H/g4-review/evaluation/canonical_replay.json"
+  ],
+  "canonical_exact_json_match": false,
+  "canonical_exit_code": 0,
+  "canonical_output_exists": true,
+  "canonical_runtime_seconds": 55.02458641608246,
+  "canonical_stderr": "Matplotlib created a temporary cache directory at /var/folders/3d/xzcg7l8n4kv1fk25bbmfgzx40000gn/T/matplotlib-kzuqi7py because the default path (/Users/tho2020/.matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.\nMatplotlib is building the font cache; this may take a moment.\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\nnumba cannot be imported and numba functions are disabled.\nProbably the execution is slow.\nPlease install numba to gain a massive speedup.\n(or if you prefer slow execution, set the flag numba=False to avoid this warning!)\n",
+  "canonical_stdout": "",
+  "case_id": "ieee14",
+  "case_role": "locked_evaluation",
+  "command": "evaluation_replay",
+  "comparator_output_generated": false,
+  "comparison": {
+    "adjacent_steps": 18,
+    "campaign_positions": 19,
+    "case_id": "ieee14",
+    "case_role": "locked_evaluation",
+    "centered_turns": 17,
+    "discrepancy_count": 0,
+    "first_divergence": null,
+    "operators": {
+      "adjacent-displacement-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 198,
+        "records_compared": 18,
+        "status": "equivalent"
+      },
+      "campaign-path-length-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 72,
+        "records_compared": 18,
+        "status": "equivalent"
+      },
+      "direction-change-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 17,
+        "records_compared": 17,
+        "status": "equivalent"
+      },
+      "discrete-curvature-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 17,
+        "records_compared": 17,
+        "status": "equivalent"
+      },
+      "distance-to-last-converged-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 0,
+        "records_compared": 0,
+        "status": "equivalent"
+      },
+      "normalized-local-drift-v1": {
+        "discrepancy_count": 0,
+        "numeric_values_compared": 72,
+        "records_compared": 18,
+        "status": "equivalent"
+      }
+    },
+    "solver_boundaries": 0,
+    "status": "equivalent",
+    "structural_discrepancy_count": 0,
+    "structural_numeric_values_compared": 167
+  },
+  "failed_frames": 0,
+  "protocol_verified_before_evaluation_load": {
+    "protocol_id": "sr1-ieee-geometry-comparator-analysis-v1",
+    "protocol_version": "1.0.0",
+    "sha256": "bd9d0fa2094b17333b18ec7621f33fd32271c2e759f2b01c9b27f76702ffe5ba",
+    "verified": true
+  },
+  "required_checks": {
+    "adapter-protocol": true,
+    "development-freeze": true,
+    "environment-lock": true,
+    "failure-preservation": true,
+    "no-evaluation-refit": true,
+    "outcome-boundary": true
+  },
+  "required_checks_pass": true,
+  "status": "passed"
+}

@@ -1,0 +1,57 @@
+{
+  "direct_package_versions": {
+    "nexah": "0.7.0",
+    "numpy": "1.26.4",
+    "pandapower": "3.4.0",
+    "pandas": "2.3.3",
+    "pytest": "7.4.4",
+    "scipy": "1.13.1"
+  },
+  "exact_environment_match": true,
+  "expected_direct_package_versions": {
+    "numpy": "1.26.4",
+    "pandapower": "3.4.0",
+    "pandas": "2.3.3",
+    "pytest": "7.4.4",
+    "scipy": "1.13.1"
+  },
+  "is_virtual_environment": true,
+  "machine": "arm64",
+  "numpy_blas_lapack_configuration": "Build Dependencies:\n  blas:\n    detection method: pkgconfig\n    found: true\n    include directory: /opt/arm64-builds/include\n    lib directory: /opt/arm64-builds/lib\n    name: openblas64\n    openblas configuration: USE_64BITINT=1 DYNAMIC_ARCH=1 DYNAMIC_OLDER= NO_CBLAS=\n      NO_LAPACK= NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP= SANDYBRIDGE MAX_THREADS=3\n    pc file directory: /usr/local/lib/pkgconfig\n    version: 0.3.23.dev\n  lapack:\n    detection method: internal\n    found: true\n    include directory: unknown\n    lib directory: unknown\n    name: dep4335021056\n    openblas configuration: unknown\n    pc file directory: unknown\n    version: 1.26.4\nCompilers:\n  c:\n    args: -fno-strict-aliasing, -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    commands: cc\n    linker: ld64\n    linker args: -fno-strict-aliasing, -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    name: clang\n    version: 14.0.0\n  c++:\n    args: -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    commands: c++\n    linker: ld64\n    linker args: -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    name: clang\n    version: 14.0.0\n  cython:\n    commands: cython\n    linker: cython\n    name: cython\n    version: 3.0.8\nMachine Information:\n  build:\n    cpu: aarch64\n    endian: little\n    family: aarch64\n    system: darwin\n  host:\n    cpu: aarch64\n    endian: little\n    family: aarch64\n    system: darwin\nPython Information:\n  path: /private/var/folders/76/zy5ktkns50v6gt5g8r0sf6sc0000gn/T/cibw-run-q69bfk1p/cp312-macosx_arm64/build/venv/bin/python\n  version: '3.12'\nSIMD Extensions:\n  baseline:\n  - NEON\n  - NEON_FP16\n  - NEON_VFPV4\n  - ASIMD\n  found:\n  - ASIMDHP\n  not found:\n  - ASIMDFHM\n\n",
+  "operating_system": "Darwin",
+  "operating_system_release": "25.5.0",
+  "pip_check": {
+    "command": [
+      "/private/tmp/nexah-sr1-g4.tCdR3H/venv/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "cwd": "/private/tmp/nexah-sr1-g4.tCdR3H/source",
+    "exit_code": 0,
+    "runtime_seconds": 0.20024883281439543,
+    "stderr": "WARNING: The directory '/Users/tho2020/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\n",
+    "stdout": "No broken requirements found.\n"
+  },
+  "pip_freeze_all": {
+    "command": [
+      "/private/tmp/nexah-sr1-g4.tCdR3H/venv/bin/python",
+      "-m",
+      "pip",
+      "freeze",
+      "--all"
+    ],
+    "cwd": "/private/tmp/nexah-sr1-g4.tCdR3H/source",
+    "exit_code": 0,
+    "runtime_seconds": 0.17214716621674597,
+    "stderr": "WARNING: The directory '/Users/tho2020/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\n",
+    "stdout": "annotated-types==0.8.0\ncontourpy==1.3.3\ncycler==0.12.1\ndeepdiff==8.6.2\nfonttools==4.63.0\ngeojson==3.3.0\niniconfig==2.3.0\njoblib==1.5.3\nkiwisolver==1.5.0\nmatplotlib==3.9.2\nmypy_extensions==1.1.0\nnetworkx==3.6.1\nnexah @ file:///private/tmp/nexah-sr1-g4.tCdR3H/source\nnumpy==1.26.4\norderly-set==5.5.0\npackaging==25.0\npandapower==3.4.0\npandas==2.3.3\npandera==0.26.1\npillow==12.3.0\npip==24.2\npluggy==1.6.0\npydantic==2.13.4\npydantic_core==2.46.4\npyparsing==3.3.2\npytest==7.4.4\npython-dateutil==2.9.0.post0\npytz==2026.3.post1\nPyYAML==6.0.1\nscikit-learn==1.5.1\nscipy==1.13.1\nsetuptools==82.0.0\nsix==1.17.0\nthreadpoolctl==3.6.0\ntqdm==4.69.1\ntypeguard==4.5.2\ntyping-inspect==0.9.0\ntyping-inspection==0.4.2\ntyping_extensions==4.16.0\ntzdata==2026.3\n"
+  },
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "processor": "arm",
+  "python_executable": "/private/tmp/nexah-sr1-g4.tCdR3H/venv/bin/python",
+  "python_implementation": "CPython",
+  "python_version": "3.12.7",
+  "sys_base_prefix": "/opt/anaconda3",
+  "sys_prefix": "/private/tmp/nexah-sr1-g4.tCdR3H/venv"
+}

@@ -1,0 +1,50 @@
+{
+  "algorithm": "sha256",
+  "artifacts": [
+    {
+      "bytes": 2146,
+      "path": "development/development_replay.json",
+      "sha256": "c9a896265c8aa915625aa54eb9417db3e6092a843a81f7786bbb3cd9c64cb01a"
+    },
+    {
+      "bytes": 1042,
+      "path": "entry_verification.json",
+      "sha256": "14926b120c8a742e80a28c2e2965655881cabb83074662f67ce59298fde440c6"
+    },
+    {
+      "bytes": 4539,
+      "path": "environment_identity.json",
+      "sha256": "f4a4b5c7150ce865ea5abc03a4da31ffbf2b5b49a350d7801ea0d90eba7f65ad"
+    },
+    {
+      "bytes": 6185,
+      "path": "evaluation/canonical_replay.json",
+      "sha256": "1622acd09fa6772b6030724db08f9e9bc9a146e2686843f8a32832b1d948db1e"
+    },
+    {
+      "bytes": 7394,
+      "path": "evaluation/evaluation_replay.json",
+      "sha256": "d826dcd6a2d3c71729b31fd7557a214fc0f677e4a9a2dac376718ca8940fa90f"
+    },
+    {
+      "bytes": 4623,
+      "path": "frozen_hashes_after.json",
+      "sha256": "d664b32222c2d8edcfeb9e1763adbcb07da26118cf7aac367024dee25693f555"
+    },
+    {
+      "bytes": 4623,
+      "path": "frozen_hashes_before.json",
+      "sha256": "d664b32222c2d8edcfeb9e1763adbcb07da26118cf7aac367024dee25693f555"
+    },
+    {
+      "bytes": 7691,
+      "path": "protocol_hash_refusal_control/g2_protocol_byte_altered.json",
+      "sha256": "7796144c16fc9c4fc88d7dfabbb42113cf76e7c0655f7776e5317d4d579e8cbc"
+    },
+    {
+      "bytes": 240,
+      "path": "protocol_hash_refusal_control/result/evaluation_replay.json",
+      "sha256": "7c4420448ac95e2e4f1f1a976d75d9983b734ff5f469fa842f6e819d4d3ed27a"
+    }
+  ]
+}

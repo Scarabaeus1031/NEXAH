@@ -1,0 +1,93 @@
+{
+  "classification": {
+    "code": "C",
+    "label": "environment-dependent scientific computation",
+    "qualification": "The resolved category is numerical computation below the structural and categorical layers. The exact library/backend mechanism remains unidentified, and same-environment payload hashes also vary between the original G4 run and this diagnostic run."
+  },
+  "first_difference": {
+    "absolute_difference": 1.4210854715202004e-13,
+    "canonical_binary64_be_hex": "c05de9d9c1a6e61a",
+    "canonical_float_hex": "-0x1.de9d9c1a6e61ap+6",
+    "canonical_repr": "-119.65391579912867",
+    "entity_id": "bus:0",
+    "entity_scope": "bus",
+    "field": "p_mw",
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-000:geometry-frame",
+    "frame_index": 0,
+    "fresh_binary64_be_hex": "c05de9d9c1a6e624",
+    "fresh_float_hex": "-0x1.de9d9c1a6e624p+6",
+    "fresh_repr": "-119.65391579912881",
+    "json_pointer": "/frames/0/entity_views/0/values/0/2",
+    "load_scale": 0.6,
+    "processing_stage": "pandapower result extraction into the manifest-bound bus entity view",
+    "relative_difference": 1.1876631550494958e-15,
+    "ulp_distance": 10,
+    "unit": "MW"
+  },
+  "difference_counts": {
+    "brief": {
+      "categorical": 0,
+      "length": 0,
+      "mapping_order": 0,
+      "missing_key": 0,
+      "numeric": 0,
+      "type": 0
+    },
+    "frames": {
+      "categorical": 0,
+      "length": 0,
+      "mapping_order": 0,
+      "missing_key": 0,
+      "numeric": 1425,
+      "type": 0
+    },
+    "geometry": {
+      "categorical": 0,
+      "length": 0,
+      "mapping_order": 0,
+      "missing_key": 0,
+      "numeric": 258,
+      "type": 0
+    },
+    "orientation": {
+      "categorical": 0,
+      "length": 0,
+      "mapping_order": 0,
+      "missing_key": 0,
+      "numeric": 258,
+      "type": 0
+    }
+  },
+  "diagnostic_fresh_payload_sha256": {
+    "brief": "37fa06f10d3795672eb32a1ea30b6b29228ded30c34985ec9777c817dc739198",
+    "frames": "6577023ea39d07737523d5d4539d996a3ea12c50eb65f7994870e8baf26ceba8",
+    "geometry": "e18c4bc74bb9f6784620b0a459244008065999622568486da827db8c55ec8607",
+    "orientation": "a19ae0e7327ab64b54bfeb3eac12913f89ae22b69a07ad6767b94de86c0c0e7f"
+  },
+  "original_g4_fresh_payload_sha256": {
+    "brief": "37fa06f10d3795672eb32a1ea30b6b29228ded30c34985ec9777c817dc739198",
+    "frames": "0383a113e74031057d608e61a3726195807615ee7a964d47e8331dcd16bac186",
+    "geometry": "d84a1bbe64fe68918a84d339573069d9d86373a361b82ca6147b83fcba29cd38",
+    "orientation": "4ab908c2e79547c3ba22fe2faab04c3e3b5f948e26ef0aaf56d06ed804a5d299"
+  },
+  "official_g4_classification": "G4_clean_replay_failed",
+  "official_g4_classification_changed": false,
+  "replay_count": {
+    "authorised": 1,
+    "completed": 1,
+    "retried": 0
+  },
+  "structural_results": {
+    "array_shapes_identical": true,
+    "categorical_values_identical": true,
+    "convergence_flags_identical": true,
+    "entity_keys_identical": true,
+    "entity_order_identical": true,
+    "failure_boundaries_identical": true,
+    "frame_order_identical": true,
+    "mapping_key_order_identical": true,
+    "null_placement_identical": true,
+    "topology_ids_identical": true
+  }
+}
+

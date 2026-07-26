@@ -1,0 +1,87 @@
+{
+  "binding": {
+    "instrumentation_sha256": "527ee8beaf5475d744b89b27bf1495851c4cfc94372a3745a6a6b51978316d3c",
+    "protocol_sha256": "b8afa3d79582c0031ec754e542641ef70d7352f1095a82e996249225051ac968",
+    "verified": true
+  },
+  "checks": {
+    "adapter_protocol": true,
+    "development_freeze": true,
+    "environment_lock": true,
+    "evaluation_brief_replay": true,
+    "evaluation_geometry_replay": false,
+    "evaluation_report_replay": false,
+    "evaluation_source_replay": false,
+    "no_evaluation_refit": true
+  },
+  "claim_audit_inputs_path": "fresh/claim_audit_inputs.json",
+  "comparator_output_generated": false,
+  "difference_counts": {
+    "brief": {
+      "categorical": 0,
+      "length": 0,
+      "mapping_order": 0,
+      "missing_key": 0,
+      "numeric": 0,
+      "type": 0
+    },
+    "frames": {
+      "categorical": 0,
+      "length": 0,
+      "mapping_order": 0,
+      "missing_key": 0,
+      "numeric": 1425,
+      "type": 0
+    },
+    "geometry": {
+      "categorical": 0,
+      "length": 0,
+      "mapping_order": 0,
+      "missing_key": 0,
+      "numeric": 258,
+      "type": 0
+    },
+    "orientation": {
+      "categorical": 0,
+      "length": 0,
+      "mapping_order": 0,
+      "missing_key": 0,
+      "numeric": 258,
+      "type": 0
+    }
+  },
+  "exactly_one_ieee14_replay_attempted": true,
+  "first_global_difference": {
+    "absolute_difference": 1.4210854715202004e-13,
+    "artifact": "frames",
+    "canonical": {
+      "binary64_be_hex": "c05de9d9c1a6e61a",
+      "hex": "-0x1.de9d9c1a6e61ap+6",
+      "path": "/frames/0/entity_views/0/values/0/2",
+      "repr": "-119.65391579912867",
+      "type": "float",
+      "ulp": 1.4210854715202004e-14,
+      "value": -119.65391579912867
+    },
+    "fresh": {
+      "binary64_be_hex": "c05de9d9c1a6e624",
+      "hex": "-0x1.de9d9c1a6e624p+6",
+      "path": "/frames/0/entity_views/0/values/0/2",
+      "repr": "-119.65391579912881",
+      "type": "float",
+      "ulp": 1.4210854715202004e-14,
+      "value": -119.65391579912881
+    },
+    "kind": "numeric",
+    "path": "/frames/0/entity_views/0/values/0/2",
+    "relative_difference": 1.1876631550494958e-15,
+    "ulp_distance": 10
+  },
+  "g4_official_classification": "G4_clean_replay_failed",
+  "g5_begun": false,
+  "g6_begun": false,
+  "retry_permitted": false,
+  "runtime_seconds": 19.698501749895513,
+  "source_revision": "d3a19138b96aa07dfd623bdebb1003cb02cc60e8",
+  "source_status_after": ""
+}

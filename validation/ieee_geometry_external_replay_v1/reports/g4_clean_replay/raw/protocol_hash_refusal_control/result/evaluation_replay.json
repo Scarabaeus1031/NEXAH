@@ -1,0 +1,8 @@
+{
+  "command": "evaluation_replay",
+  "comparator_output_generated": false,
+  "evaluation_source_loaded": false,
+  "protocol_verified_before_evaluation_load": false,
+  "reason": "approved protocol SHA-256 mismatch",
+  "status": "blocked"
+}

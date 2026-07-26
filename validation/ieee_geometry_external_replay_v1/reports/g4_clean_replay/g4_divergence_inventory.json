@@ -1,0 +1,249 @@
+{
+  "classification": {
+    "code": "E",
+    "label": "unresolved",
+    "reason": "The preserved G4 output proves that divergence begins in the freshly solved IEEE-14 campaign and propagates numerically, but the fresh frame, geometry, and Orientation payloads were not retained. The first differing frame, entity, and source field therefore cannot be recovered without a prohibited second replay."
+  },
+  "comparison_scope": {
+    "canonical_reference": "validation/ieee_geometry_v1/canonical_summary.json",
+    "frozen_frames": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_frames.json",
+    "frozen_geometry": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_geometry.json",
+    "frozen_orientation": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_orientation.json",
+    "preserved_replay_summary": "validation/ieee_geometry_external_replay_v1/reports/g4_clean_replay/raw/evaluation/canonical_replay.json",
+    "fresh_frame_payload_retained": false,
+    "fresh_geometry_payload_retained": false,
+    "fresh_orientation_payload_retained": false,
+    "second_replay_performed": false
+  },
+  "first_divergence": {
+    "earliest_observable_stage": "fresh IEEE-14 source campaign equality check",
+    "source_location": "validation/ieee_geometry_v1/run_validation.py:159",
+    "comparison_expression_location": "validation/ieee_geometry_v1/run_validation.py:160",
+    "comparison_expression": "evaluation_campaign.to_dict() == committed_evaluation_frames",
+    "result": false,
+    "earlier_checks": {
+      "adapter-protocol": true,
+      "development-freeze": true,
+      "environment-lock": true,
+      "no-evaluation-refit": true
+    },
+    "field": null,
+    "frame_index": null,
+    "frame_id": null,
+    "entity_scope": null,
+    "entity_id": null,
+    "variable": null,
+    "why_more_specific_is_unavailable": "The runner retained only SHA-256 values and aggregate summary fields for the fresh campaign; it did not serialize the fresh campaign payload or a recursive diff."
+  },
+  "summary_differences": [
+    {
+      "kind": "boolean",
+      "path": "$.checks[4].passed",
+      "reference": true,
+      "replay": false
+    },
+    {
+      "kind": "boolean",
+      "path": "$.checks[5].passed",
+      "reference": true,
+      "replay": false
+    },
+    {
+      "kind": "boolean",
+      "path": "$.checks[6].passed",
+      "reference": true,
+      "replay": false
+    },
+    {
+      "kind": "categorical",
+      "path": "$.claim_audit.supported[0].status",
+      "reference": "supported_within_manifest",
+      "replay": "not_supported_by_failed_gate"
+    },
+    {
+      "kind": "categorical",
+      "path": "$.claim_audit.supported[1].status",
+      "reference": "supported_within_manifest",
+      "replay": "not_supported_by_failed_gate"
+    },
+    {
+      "kind": "categorical",
+      "path": "$.claim_audit.supported[2].status",
+      "reference": "supported_within_manifest",
+      "replay": "not_supported_by_failed_gate"
+    },
+    {
+      "kind": "categorical",
+      "path": "$.claim_audit.supported[3].status",
+      "reference": "supported_within_manifest",
+      "replay": "not_supported_by_failed_gate"
+    },
+    {
+      "kind": "sha256",
+      "path": "$.evaluation_result.frames_sha256",
+      "reference": "467530b81c9347a1ce0fe5e5ac501dde2c540686eadd5b9de454e773d9e59219",
+      "replay": "0383a113e74031057d608e61a3726195807615ee7a964d47e8331dcd16bac186"
+    },
+    {
+      "kind": "sha256",
+      "path": "$.evaluation_result.geometry_sha256",
+      "reference": "ab49aae70f94fa0a29d7660f4d5ae55a0d21df6ca7aa8cb2e445dcf189f72729",
+      "replay": "d84a1bbe64fe68918a84d339573069d9d86373a361b82ca6147b83fcba29cd38"
+    },
+    {
+      "kind": "sha256",
+      "path": "$.evaluation_result.orientation_sha256",
+      "reference": "2faa1fc7445bc11003add6bc3ed926570a15989cdaca6fdae38fc842d1fdad2b",
+      "replay": "4ab908c2e79547c3ba22fe2faab04c3e3b5f948e26ef0aaf56d06ed804a5d299"
+    },
+    {
+      "absolute_difference": 1.2434497875801753e-14,
+      "kind": "binary64",
+      "path": "$.evaluation_result.total_path_length",
+      "reference": 5.55378709510072,
+      "reference_ulp": 8.881784197001252e-16,
+      "relative_difference": 2.238922317848817e-15,
+      "replay": 5.553787095100708,
+      "replay_ulp": 8.881784197001252e-16,
+      "ulp_distance": 14
+    },
+    {
+      "kind": "boolean",
+      "path": "$.gate_passed",
+      "reference": true,
+      "replay": false
+    }
+  ],
+  "numeric_comparison_completeness": {
+    "differing_numeric_values_retained_in_both_summaries": 1,
+    "differing_numeric_values_compared": 1,
+    "all_retained_differing_numeric_values_compared": true,
+    "all_underlying_payload_numeric_differences_compared": false,
+    "reason": "Underlying fresh payload values are absent, so their count and ULP distances are unknowable from preserved evidence."
+  },
+  "structural_comparison": {
+    "exactly_equal_in_summary": {
+      "available_steps": 18,
+      "available_turns": 17,
+      "brief_sha256": "37fa06f10d3795672eb32a1ea30b6b29228ded30c34985ec9777c817dc739198",
+      "converged_frames": 19,
+      "declared_frames": 19,
+      "failed_frames": 0,
+      "failed_load_scales": [],
+      "freeze_object": true,
+      "insufficient_steps": 0,
+      "insufficient_turns": 0,
+      "limitations": true,
+      "solver_boundaries": 0
+    },
+    "frozen_payload_shape": {
+      "bus_entities_per_frame": 14,
+      "bus_variables": 4,
+      "entity_views_per_frame": 2,
+      "frames": 19,
+      "geometry_projected_frames": 19,
+      "geometry_solver_boundaries": 0,
+      "geometry_steps": 18,
+      "geometry_turns": 17,
+      "line_entities_per_frame": 15,
+      "line_variables": 3,
+      "null_system_features": 0
+    },
+    "fresh_payload_exact_checks": {
+      "array_shapes": "not retained",
+      "categorical_values": "partially retained; aggregate values equal",
+      "convergence_flags": "aggregate 19 converged and 0 failed",
+      "entity_keys": "not retained",
+      "entity_ordering": "not retained",
+      "failure_boundaries": "aggregate count 0",
+      "frame_ordering": "not retained",
+      "mapping_keys": "not retained",
+      "null_placement": "not retained",
+      "topology_id": "not retained in replay summary"
+    },
+    "structural_divergence_excluded": false,
+    "structural_equivalence_proved": false
+  },
+  "propagation": [
+    {
+      "stage": 1,
+      "source": "pandapower IEEE-14 solve and adapter extraction",
+      "retained_effect": "fresh campaign SHA-256 differs"
+    },
+    {
+      "stage": 2,
+      "source": "manifest-bound frame construction",
+      "retained_effect": "evaluation-source-replay is false"
+    },
+    {
+      "stage": 3,
+      "source": "fixed IEEE-9 standardization and geometry operators",
+      "retained_effect": "geometry SHA-256 differs; total path length differs by 14 ULP"
+    },
+    {
+      "stage": 4,
+      "source": "five probes and Orientation context",
+      "retained_effect": "Orientation SHA-256 differs; evaluation-report-replay is false"
+    },
+    {
+      "stage": 5,
+      "source": "Orientation brief",
+      "retained_effect": "brief SHA-256 remains identical, consistent with selected and formatted values remaining unchanged"
+    },
+    {
+      "stage": 6,
+      "source": "gate aggregation",
+      "retained_effect": "gate_passed changes from true to false"
+    },
+    {
+      "stage": 7,
+      "source": "claim-audit status conditional on gate_passed",
+      "retained_effect": "four statuses change to not_supported_by_failed_gate without changing claim text"
+    }
+  ],
+  "reproducibility_classification": {
+    "byte_reproducibility": "failed",
+    "numerical_reproducibility": "not fully assessable; one retained aggregate differs by 14 ULP",
+    "scientific_result_equivalence": "not proved or disproved by retained evidence",
+    "structural_equivalence": "not proved; aggregate structure matches"
+  },
+  "environment_evidence": {
+    "g4": {
+      "architecture": "arm64",
+      "blas": "openblas64 0.3.23.dev, ILP64, pip NumPy wheel",
+      "numba": "unavailable; pandapower emitted the disabled-numba warning for all 19 solves",
+      "operating_system": "macOS 26.5.2 / Darwin 25.5.0",
+      "python": "CPython 3.12.7"
+    },
+    "reference_contract_records": {
+      "architecture": "arm64",
+      "blas_lapack": "not recorded",
+      "numba_availability": "not recorded",
+      "operating_system": "macOS 26.5.2",
+      "python": "CPython 3.12.7",
+      "transitive_package_lock": "not recorded",
+      "wheel_or_conda_build_identity": "not recorded"
+    },
+    "source_history": "Commit c6104446549657f7c82e02cb69902faaf9f49498 states that solver and renderer byte streams may vary across operating systems even under the frozen Python package set and relaxed the test away from byte equality.",
+    "serialization": "SHA-256 canonicalization sorts mapping keys, so mapping insertion order alone cannot explain a hash difference. Numeric serialization reflects the computed binary64 values; the retained path-length value itself differs, excluding a formatting-only explanation.",
+    "unresolved_possible_causes": [
+      "different BLAS/LAPACK build or reduction path",
+      "numba-enabled versus numba-disabled pandapower execution",
+      "different pip/conda wheel build despite equal top-level versions",
+      "solver-level floating-point path",
+      "list/entity ordering difference not visible in retained summary",
+      "other unrecorded transitive dependency or runtime setting"
+    ]
+  },
+  "prohibitions_respected": {
+    "canonical_changed": false,
+    "comparator_result_created": false,
+    "g5_begun": false,
+    "g6_begun": false,
+    "new_metric_created": false,
+    "protocol_changed": false,
+    "scientific_replay_performed": false
+  },
+  "schema_version": "1.0"
+}
+

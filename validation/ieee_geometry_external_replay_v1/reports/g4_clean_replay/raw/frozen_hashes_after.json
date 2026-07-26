@@ -1,0 +1,97 @@
+{
+  "algorithm": "sha256",
+  "all_match": true,
+  "baseline_revision": "d3a19138b96aa07dfd623bdebb1003cb02cc60e8",
+  "files": [
+    {
+      "actual_sha256": "a6df815729abdb49c3d3f0e09f6fb786395523beb402b1582095436d41bcb566",
+      "expected_sha256": "a6df815729abdb49c3d3f0e09f6fb786395523beb402b1582095436d41bcb566",
+      "match": true,
+      "path": "APPLICATIONS/power_systems/ieee_geometry_v1/case_manifest.json"
+    },
+    {
+      "actual_sha256": "14744e193321398536529cb81c307968ab363510493265ff1e1cf1340f1224d1",
+      "expected_sha256": "14744e193321398536529cb81c307968ab363510493265ff1e1cf1340f1224d1",
+      "match": true,
+      "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_frames.json"
+    },
+    {
+      "actual_sha256": "576bbcd13c4945f51402f926d740b06c53c4f3a5b63ac09e1643dc1768be1a22",
+      "expected_sha256": "576bbcd13c4945f51402f926d740b06c53c4f3a5b63ac09e1643dc1768be1a22",
+      "match": true,
+      "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_geometry.json"
+    },
+    {
+      "actual_sha256": "f32cc605f01f832c4fff6b54c0871c899feed1d1c43a99d136f28bbfb58c2756",
+      "expected_sha256": "f32cc605f01f832c4fff6b54c0871c899feed1d1c43a99d136f28bbfb58c2756",
+      "match": true,
+      "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_orientation.json"
+    },
+    {
+      "actual_sha256": "094918c0d985405895f00f79208cd02b52424f82add7c877d6ca903274704229",
+      "expected_sha256": "094918c0d985405895f00f79208cd02b52424f82add7c877d6ca903274704229",
+      "match": true,
+      "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_orientation_brief.json"
+    },
+    {
+      "actual_sha256": "9474d6958c29d0333fc4649026132867a0afe7d4d99c3b3a3ef86a335918ba91",
+      "expected_sha256": "9474d6958c29d0333fc4649026132867a0afe7d4d99c3b3a3ef86a335918ba91",
+      "match": true,
+      "path": "APPLICATIONS/power_systems/ieee_geometry_v1/development_orientation_brief.md"
+    },
+    {
+      "actual_sha256": "0b0f8771eb775bfbb09f3e4fa92c860c30a9422f578ddcd40c23846d6410386b",
+      "expected_sha256": "0b0f8771eb775bfbb09f3e4fa92c860c30a9422f578ddcd40c23846d6410386b",
+      "match": true,
+      "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_frames.json"
+    },
+    {
+      "actual_sha256": "1d9fedb943eaa001608e23c436234917e5009e260e095a33d5622b31324d81cc",
+      "expected_sha256": "1d9fedb943eaa001608e23c436234917e5009e260e095a33d5622b31324d81cc",
+      "match": true,
+      "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_geometry.json"
+    },
+    {
+      "actual_sha256": "91aaca4996ced9a1b7e40678b016fa266e6007b169d71d77108f77005cd9bbc7",
+      "expected_sha256": "91aaca4996ced9a1b7e40678b016fa266e6007b169d71d77108f77005cd9bbc7",
+      "match": true,
+      "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_orientation.json"
+    },
+    {
+      "actual_sha256": "cca24655ce0c6c10f819ae0826bed974465b884a7fc579eb0690156ce0d446e7",
+      "expected_sha256": "cca24655ce0c6c10f819ae0826bed974465b884a7fc579eb0690156ce0d446e7",
+      "match": true,
+      "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_orientation_brief.json"
+    },
+    {
+      "actual_sha256": "b12d519994b6dfe3fbdaa3d99364451e097b65b214fdf7e6305273854b1012b6",
+      "expected_sha256": "b12d519994b6dfe3fbdaa3d99364451e097b65b214fdf7e6305273854b1012b6",
+      "match": true,
+      "path": "APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_orientation_brief.md"
+    },
+    {
+      "actual_sha256": "823176b5a87667e09a02077d6e0e1d72b3f9dd20ef5d9485eed360685422d3bf",
+      "expected_sha256": "823176b5a87667e09a02077d6e0e1d72b3f9dd20ef5d9485eed360685422d3bf",
+      "match": true,
+      "path": "tests/validation/test_ieee_geometry_v1.py"
+    },
+    {
+      "actual_sha256": "bf9ff7f858345c553685ea382440332381d4621aef2c9792a27c3c79b1dd1ff9",
+      "expected_sha256": "bf9ff7f858345c553685ea382440332381d4621aef2c9792a27c3c79b1dd1ff9",
+      "match": true,
+      "path": "validation/ieee_geometry_v1/canonical_summary.json"
+    },
+    {
+      "actual_sha256": "abdf5e58ad377de7f909418fa59fed673e80a6c3352441cbf6ecde49b6f9b5c5",
+      "expected_sha256": "abdf5e58ad377de7f909418fa59fed673e80a6c3352441cbf6ecde49b6f9b5c5",
+      "match": true,
+      "path": "validation/ieee_geometry_v1/canonical_summary.md"
+    },
+    {
+      "actual_sha256": "eba5e944bd3895e57c2f3f69d65f2735d40119b01abb1613e9f7c27b2cac2f89",
+      "expected_sha256": "eba5e944bd3895e57c2f3f69d65f2735d40119b01abb1613e9f7c27b2cac2f89",
+      "match": true,
+      "path": "validation/ieee_geometry_v1/run_validation.py"
+    }
+  ]
+}

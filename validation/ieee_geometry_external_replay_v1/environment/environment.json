@@ -1,0 +1,17 @@
+{
+  "implementation": "CPython",
+  "machine": "arm64",
+  "packages": {
+    "nexah": "0.7.0",
+    "numpy": "1.26.4",
+    "pandapower": "3.4.0",
+    "pandas": "2.3.3",
+    "pytest": "7.4.4",
+    "scipy": "1.13.1"
+  },
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.7",
+  "recorded_at": "2026-07-26T03:30:59+02:00",
+  "role": "g1_reference_environment",
+  "schema_version": "1.0"
+}

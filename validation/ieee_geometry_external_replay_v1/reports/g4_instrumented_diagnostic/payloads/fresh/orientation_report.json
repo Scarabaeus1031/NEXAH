@@ -1,0 +1,56 @@
+{
+  "assumptions": [
+    "The campaign axis is ordered load scale, not elapsed time.",
+    "Frames are independent Pandapower steady-state benchmark computations.",
+    "Solver non-convergence is a numerical result, not a certified physical limit.",
+    "Geometry values describe the frozen standardized projection only."
+  ],
+  "blocked_options": [],
+  "change": [
+    "19 of 19 physical frames converged.",
+    "18 of 18 adjacent relations support frozen geometry measurements."
+  ],
+  "evidence_references": [
+    "phase-v-ieee-geometry-v1-ieee14:geometry-frames",
+    "phase-v-ieee-geometry-v1-ieee9:standardization",
+    "phase-v-ieee-geometry-v1-ieee14:geometry-analysis"
+  ],
+  "explanation": "This report locates the last converged sampled position and summarizes descriptive geometry and numerical boundaries in the declared IEEE benchmark campaign. It provides orientation, not prediction, causal attribution, control authority, or an operational-grid conclusion.",
+  "missing_information": [
+    "Dynamic trajectories between independently solved load cases",
+    "A prospectively declared cross-projection comparison metric",
+    "Calibrated physical or probabilistic uncertainty",
+    "Independent operational measurements and observed outcomes"
+  ],
+  "position": {
+    "identifier": {
+      "scope": "phase-v-ieee-geometry-v1-ieee14",
+      "value": "phase-v-ieee-geometry-v1-ieee14:load-018:geometry-frame"
+    },
+    "label": "last converged sampled position at load scale 2.4"
+  },
+  "provenance": {
+    "metadata": {
+      "case_id": "ieee14",
+      "case_role": "locked_evaluation",
+      "geometry_analysis_id": "phase-v-ieee-geometry-v1-ieee14:geometry-analysis",
+      "manifest_id": "phase-v-ieee-geometry-v1"
+    },
+    "method": "IEEE geometry orientation report v1",
+    "record_id": "phase-v-ieee-geometry-v1-ieee14:orientation-report",
+    "recorded_at": "2026-07-14T18:00:00+00:00",
+    "source": "pandapower.networks.case14"
+  },
+  "reachable_options": [],
+  "regimes": [],
+  "schema_version": "1.0",
+  "similar_episodes": [],
+  "timestamp": "2026-07-14T18:00:00+00:00",
+  "uncertainty": {
+    "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+    "kind": "unknown",
+    "lower": null,
+    "upper": null,
+    "value": null
+  }
+}

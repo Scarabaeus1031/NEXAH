@@ -1,0 +1,306 @@
+[
+  {
+    "campaign_index": 0,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-000:geometry-frame",
+    "load_scale": 0.6,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.5411189151246811,
+      3.077422171706486,
+      -0.5464134174590349,
+      -1.2361831932334764,
+      -1.9840460161547977,
+      -2.048655930952816,
+      -2.4737644200620115
+    ]
+  },
+  {
+    "campaign_index": 1,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-001:geometry-frame",
+    "load_scale": 0.7,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.5411189151246811,
+      3.011933757137416,
+      -0.5541359837497337,
+      -1.0514864089896432,
+      -1.9807514035772784,
+      -1.8881965204878588,
+      -2.5517008961875107
+    ]
+  },
+  {
+    "campaign_index": 2,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-002:geometry-frame",
+    "load_scale": 0.8,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.5411189151246811,
+      2.944502582414723,
+      -0.5555506406344807,
+      -0.8648611566994343,
+      -1.977359511762186,
+      -1.7277371100229015,
+      -2.5769623649348286
+    ]
+  },
+  {
+    "campaign_index": 3,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-003:geometry-frame",
+    "load_scale": 0.9,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.5411189151246842,
+      2.875060690156828,
+      -0.5501487343142212,
+      -0.6761708750633423,
+      -1.9739021226587712,
+      -1.5672776995579447,
+      -2.5809552902186472
+    ]
+  },
+  {
+    "campaign_index": 4,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-004:geometry-frame",
+    "load_scale": 1.0,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.5411189151246842,
+      2.8035340415422088,
+      -0.5375455977355864,
+      -0.4852689694577523,
+      -1.9703855182716876,
+      -1.4068182890929881,
+      -2.453056041328972
+    ]
+  },
+  {
+    "campaign_index": 5,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-005:geometry-frame",
+    "load_scale": 1.1,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.541118915124678,
+      2.7298418455764923,
+      -0.5175021584458405,
+      -0.2919975591222395,
+      -1.9668120451259636,
+      -1.2463588786280309,
+      -2.332906037368946
+    ]
+  },
+  {
+    "campaign_index": 6,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-006:geometry-frame",
+    "load_scale": 1.2,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.5411189151246811,
+      2.6538957827726994,
+      -0.48992829043819275,
+      -0.096186030874185,
+      -1.9631819490959155,
+      -1.0858994681630738,
+      -2.220782820162233
+    ]
+  },
+  {
+    "campaign_index": 7,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-007:geometry-frame",
+    "load_scale": 1.3,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.51778891561009,
+      2.575599102673608,
+      -0.4548676940037265,
+      0.1023506393439335,
+      -1.9594942064935692,
+      -0.9254400576981161,
+      -2.098293372787106
+    ]
+  },
+  {
+    "campaign_index": 8,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-008:geometry-frame",
+    "load_scale": 1.4,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.4696067176476266,
+      2.4948455696771705,
+      -0.41246869308757445,
+      0.30381384516996424,
+      -1.9557469258815139,
+      -0.7649806472331597,
+      -1.9670935563901604
+    ]
+  },
+  {
+    "campaign_index": 9,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-009:geometry-frame",
+    "load_scale": 1.5,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.4190355329723314,
+      2.4115182252212084,
+      -0.3629479095410024,
+      0.5084236489945645,
+      -1.9519375464260018,
+      -0.6045212367682026,
+      -1.8448129715224595
+    ]
+  },
+  {
+    "campaign_index": 10,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-010:geometry-frame",
+    "load_scale": 1.6,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.365956994563387,
+      2.3254879260544485,
+      -0.30655368042374337,
+      0.7164214976210208,
+      -1.9480629302094297,
+      -0.4440618263032446,
+      -1.7318439613922119
+    ]
+  },
+  {
+    "campaign_index": 11,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-011:geometry-frame",
+    "load_scale": 1.7,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.3078447381189262,
+      2.2366116073828026,
+      -0.2435340857967599,
+      0.9280734512302158,
+      -1.9441193934410543,
+      -0.28360241583828816,
+      -1.6286189527441453
+    ]
+  },
+  {
+    "campaign_index": 12,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-012:geometry-frame",
+    "load_scale": 1.8,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.2149084773325927,
+      2.144730205162963,
+      -0.17411186696183037,
+      1.1436740501195874,
+      -1.9401026980228955,
+      -0.12314300537333098,
+      -1.5356163869743835
+    ]
+  },
+  {
+    "campaign_index": 13,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-013:geometry-frame",
+    "load_scale": 1.9,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.11953662841589,
+      2.049666152336443,
+      -0.09846636280372638,
+      1.3635509808620794,
+      -1.9360080134485023,
+      0.04563351739132625,
+      -1.4533678474705196
+    ]
+  },
+  {
+    "campaign_index": 14,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-014:geometry-frame",
+    "load_scale": 2.0,
+    "reason": null,
+    "status": "available",
+    "values": [
+      1.0215755339102228,
+      1.9512203373378747,
+      -0.016721281889906597,
+      1.588070754124443,
+      -1.93182985277999,
+      0.22076620727933194,
+      -1.3824666940162105
+    ]
+  },
+  {
+    "campaign_index": 15,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-015:geometry-frame",
+    "load_scale": 2.1,
+    "reason": null,
+    "status": "available",
+    "values": [
+      0.9208527736070335,
+      1.8491683767993943,
+      0.071063411949595,
+      1.8176456761467512,
+      -1.9275619825295074,
+      0.395898897167338,
+      -1.3235786157336473
+    ]
+  },
+  {
+    "campaign_index": 16,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-016:geometry-frame",
+    "load_scale": 2.2,
+    "reason": null,
+    "status": "available",
+    "values": [
+      0.8171738041572499,
+      1.7432560035457616,
+      0.16489726608681748,
+      2.0527424934594416,
+      -1.9231973032480447,
+      0.5710315870553448,
+      -1.2774546543422292
+    ]
+  },
+  {
+    "campaign_index": 17,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-017:geometry-frame",
+    "load_scale": 2.3,
+    "reason": null,
+    "status": "available",
+    "values": [
+      0.7103177708231946,
+      1.6331932989172178,
+      0.2648643430774403,
+      2.2938932290329532,
+      -1.9187276946873473,
+      0.746164276943351,
+      -1.2449474482144238
+    ]
+  },
+  {
+    "campaign_index": 18,
+    "frame_id": "phase-v-ieee-geometry-v1-ieee14:load-018:geometry-frame",
+    "load_scale": 2.4,
+    "reason": null,
+    "status": "available",
+    "values": [
+      0.6000322263409593,
+      1.5186473945579326,
+      0.3711288381787286,
+      2.5417089283590655,
+      -1.9141438159409536,
+      0.921296966831357,
+      -1.227031733984951
+    ]
+  }
+]
