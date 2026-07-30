@@ -18,6 +18,7 @@ and historical areas make those responsibilities inspectable.
 | Goal | Entry point |
 |---|---|
 | Get the full overview | **[README.md](README.md)** |
+| Understand the adopted cross-repository research architecture | **[NEXAH Research & Ecosystem Architecture](ARCHITECTURE/NEXAH_RESEARCH_ECOSYSTEM_ARCHITECTURE.md)** |
 | Read the published Orientation Language | **[ORIENTATION_LANGUAGE/README.md](ORIENTATION_LANGUAGE/README.md)** |
 | Use or develop the current implementation | **[nexah/README.md](nexah/README.md)** |
 | Enter the research layer | **[RESEARCH/README.md](RESEARCH/README.md)** |

@@ -40,6 +40,7 @@ six responsibilities distinct:
 | Question | Document |
 |---|---|
 | Which subsystem owns which responsibility? | **[Repository Front Door](../README.md)** |
+| How is the complete research ecosystem organized across repositories? | **[Adopted Research & Ecosystem Architecture](NEXAH_RESEARCH_ECOSYSTEM_ARCHITECTURE.md)** |
 | What is the canonical semantic authority? | **[Orientation Language](../ORIENTATION_LANGUAGE/README.md)** |
 | What is actually implemented? | **[SYSTEM_STATE.md](SYSTEM_STATE.md)** |
 | Which visuals describe current state or research models? | **[Architecture Visuals](visuals/README.md)** |

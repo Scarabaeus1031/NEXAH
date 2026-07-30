@@ -30,6 +30,7 @@ problem of orientation.
 | I want to… | Begin here |
 |---|---|
 | Enter the public Experience | **[nexah.de](https://nexah.de)** — the public entrance to NEXAH |
+| Understand the adopted cross-repository research architecture | **[Research & Ecosystem Architecture](ARCHITECTURE/NEXAH_RESEARCH_ECOSYSTEM_ARCHITECTURE.md)** — research questions, responsibilities, methodological rails and public interfaces |
 | Inspect the certified deterministic Core | **[NEXAH-ORION](https://github.com/Scarabaeus1031/NEXAH-ORION)** — structural representation, relations, navigation, orientation map and certified expression |
 | Try one Human-facing Orientation Session | **[NEXAHEDRON](https://nexahedron.com)** — the reference Workspace |
 | Inspect the Experience source | **[NEXAH-Experience](https://github.com/Scarabaeus1031/NEXAH-Experience)** — public presentation, Library, Living Atlas, Laboratory and Reading Spaces |
