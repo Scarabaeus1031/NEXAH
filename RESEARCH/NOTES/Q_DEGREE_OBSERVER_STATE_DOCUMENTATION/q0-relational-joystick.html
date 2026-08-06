@@ -1,0 +1,165 @@
+<div id="q0-relational-joystick">
+  <style>
+    #q0-relational-joystick {
+      color: var(--foreground);
+      background: transparent;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 1rem 0;
+    }
+    #q0-relational-joystick .stage {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 1.5rem;
+      align-items: center;
+      padding: 1.25rem 0;
+    }
+    #q0-relational-joystick .view {
+      min-width: 0;
+      text-align: center;
+    }
+    #q0-relational-joystick .view-label {
+      margin-bottom: .75rem;
+      color: var(--muted-foreground);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    #q0-relational-joystick svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+    #q0-relational-joystick .equation {
+      margin-top: .75rem;
+      font-family: ui-serif, Georgia, "Times New Roman", serif;
+      font-size: clamp(1.05rem, 2.5vw, 1.5rem);
+    }
+    #q0-relational-joystick .meaning {
+      margin-top: .35rem;
+      color: var(--muted-foreground);
+    }
+    #q0-relational-joystick .control {
+      margin: 1rem auto 0;
+      max-width: 34rem;
+    }
+    #q0-relational-joystick .control-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: .4rem;
+      color: var(--muted-foreground);
+    }
+    #q0-relational-joystick input[type="range"] {
+      width: 100%;
+    }
+    #q0-relational-joystick .chain {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: .45rem;
+      margin-top: 1.4rem;
+      color: var(--muted-foreground);
+    }
+    #q0-relational-joystick .chain strong {
+      color: var(--foreground);
+      font-weight: 500;
+    }
+    @media (max-width: 680px) {
+      #q0-relational-joystick .stage {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <div class="stage" aria-label="Two views of the Q degree relational joystick">
+    <section class="view" aria-label="Quaternion state and five-leaf control view">
+      <div class="view-label">State + relational control</div>
+      <svg viewBox="0 0 520 440" role="img" aria-label="Four quaternion basis leaves around the Q degree operator">
+        <g fill="color-mix(in srgb, var(--viz-series-1) 15%, transparent)" stroke="var(--border)" stroke-width="2">
+          <ellipse cx="260" cy="105" rx="78" ry="105"/>
+          <ellipse cx="415" cy="220" rx="105" ry="78"/>
+          <ellipse cx="260" cy="335" rx="78" ry="105"/>
+          <ellipse cx="105" cy="220" rx="105" ry="78"/>
+        </g>
+        <g stroke="var(--border)" stroke-width="2">
+          <line x1="260" y1="58" x2="260" y2="382"/>
+          <line x1="58" y1="220" x2="462" y2="220"/>
+        </g>
+        <g fill="var(--foreground)" font-family="Georgia, serif" font-size="38" text-anchor="middle">
+          <text x="260" y="92">1</text>
+          <text x="426" y="232">i</text>
+          <text x="260" y="370">j</text>
+          <text x="94" y="232">k</text>
+        </g>
+        <circle cx="260" cy="220" r="72" fill="color-mix(in srgb, var(--viz-series-3) 26%, var(--card))" stroke="var(--viz-series-3)" stroke-width="3"/>
+        <text x="260" y="229" text-anchor="middle" fill="var(--foreground)" font-family="Georgia, serif" font-size="38">𝒬°</text>
+        <text x="260" y="264" text-anchor="middle" fill="var(--muted-foreground)" font-family="system-ui, sans-serif" font-size="16">OPERATOR</text>
+        <g fill="var(--muted-foreground)" font-family="system-ui, sans-serif" font-size="16">
+          <text x="260" y="20" text-anchor="middle">scalar / identity</text>
+          <text x="496" y="225" text-anchor="end">rotation basis</text>
+          <text x="260" y="430" text-anchor="middle">rotation basis</text>
+          <text x="24" y="225">rotation basis</text>
+        </g>
+      </svg>
+      <div class="equation">q = a + bi + cj + dk</div>
+      <div class="meaning">Quaternion = orientation state · 𝒬° ≠ fifth component</div>
+    </section>
+
+    <section class="view" aria-label="Three-lift normalized joystick view">
+      <div class="view-label">Two rails + moving belt</div>
+      <svg viewBox="0 0 520 440" role="img" aria-label="Two rails bound a moving central belt whose normalized position is between minus one and plus one">
+        <rect x="94" y="48" width="26" height="330" rx="13" fill="color-mix(in srgb, var(--viz-series-2) 24%, var(--card))" stroke="var(--border)" stroke-width="2"/>
+        <rect x="400" y="48" width="26" height="330" rx="13" fill="color-mix(in srgb, var(--viz-series-2) 24%, var(--card))" stroke="var(--border)" stroke-width="2"/>
+        <line x1="120" y1="92" x2="400" y2="92" stroke="var(--border)" stroke-width="2"/>
+        <line x1="120" y1="350" x2="400" y2="350" stroke="var(--border)" stroke-width="2"/>
+        <text x="107" y="414" text-anchor="middle" fill="var(--muted-foreground)" font-family="system-ui, sans-serif" font-size="18">L</text>
+        <text x="413" y="414" text-anchor="middle" fill="var(--muted-foreground)" font-family="system-ui, sans-serif" font-size="18">R</text>
+        <text x="260" y="82" text-anchor="middle" fill="var(--muted-foreground)" font-family="Georgia, serif" font-size="23">S = R − L</text>
+        <path id="q0-belt" d="M260 112 L260 328" stroke="var(--viz-series-1)" stroke-width="18" stroke-linecap="round"/>
+        <circle id="q0-knob" cx="260" cy="220" r="42" fill="var(--card)" stroke="var(--viz-series-3)" stroke-width="4"/>
+        <text id="q0-knob-label" x="260" y="228" text-anchor="middle" fill="var(--foreground)" font-family="Georgia, serif" font-size="27">0.00</text>
+        <text x="72" y="227" text-anchor="end" fill="var(--muted-foreground)" font-family="Georgia, serif" font-size="22">−1</text>
+        <text x="448" y="227" fill="var(--muted-foreground)" font-family="Georgia, serif" font-size="22">+1</text>
+        <path d="M138 220 L382 220" stroke="var(--border)" stroke-width="2" stroke-dasharray="5 7"/>
+      </svg>
+      <div class="equation">ξ<sub>Q</sub> = 2(x − L)/(R − L) − 1 ∈ [−1,+1]</div>
+      <div class="meaning">Rails = bounds · belt = channel · width = scale</div>
+      <div class="control">
+        <div class="control-head"><span>Joystick coordinate ξ<sub>Q</sub></span><strong id="q0-value">0.00</strong></div>
+        <input id="q0-slider" type="range" min="-1" max="1" value="0" step="0.01" aria-label="Normalized Q degree joystick coordinate">
+      </div>
+    </section>
+  </div>
+
+  <div class="chain" aria-label="Interpretation chain">
+    <strong>q</strong><span>state</span><span>·</span>
+    <strong>𝒬°</strong><span>operator</span><span>·</span>
+    <strong>ξQ</strong><span>control coordinate</span><span>·</span>
+    <strong>wᵢ</strong><span>pressures / weights</span><span>·</span>
+    <strong>Δq</strong><span>orientation change</span>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.getElementById("q0-relational-joystick");
+      const slider = root.querySelector("#q0-slider");
+      const knob = root.querySelector("#q0-knob");
+      const knobLabel = root.querySelector("#q0-knob-label");
+      const valueLabel = root.querySelector("#q0-value");
+
+      function update() {
+        const value = Number(slider.value);
+        const x = 260 + value * 122;
+        const shown = value.toFixed(2);
+        knob.setAttribute("cx", String(x));
+        knobLabel.setAttribute("x", String(x));
+        knobLabel.textContent = shown;
+        valueLabel.textContent = shown;
+      }
+
+      slider.addEventListener("input", update);
+      update();
+    })();
+  </script>
+</div>
