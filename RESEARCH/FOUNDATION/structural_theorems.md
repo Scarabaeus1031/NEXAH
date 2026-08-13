@@ -1,5 +1,13 @@
 # 🔷 NEXAH — Structural Theorems
 
+> **SEMI-FORMAL HISTORICAL PROPOSITIONS.** “Theorem,” “validated” and “invariant”
+> language below records a research-stage formulation. No mathematical theorem,
+> universal or physical invariant, decoder-independent structural invariant, or
+> general controllability result has been established. Internal translation
+> experiments support at most a collision-aware robustness/discrimination
+> evaluation candidate; the exact original hierarchy did not independently
+> replicate and the broad trade-off is known in prior literature.
+
 Status: SEMI-FORMAL  
 Scope: Cross-system (Lorenz, Rössler, Duffing, IEEE-inspired systems, …)
 

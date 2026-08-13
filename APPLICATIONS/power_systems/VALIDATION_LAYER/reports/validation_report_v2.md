@@ -1,4 +1,11 @@
 # ⚡ NEXAH — Validation Report v2
+
+> **SUPERSEDED BY CONTROLLED VALIDATION — HISTORICAL REPORT.** Early-warning,
+> precursor, prediction, risk and stability interpretations below are not
+> current NEXAH claims. Level-1C concluded `INCONCLUSIVE` after 2,613 valid
+> held-out runs, 0 terminal events, 0 `R` detections and 0 `V` detections. It did
+> not disprove early warning; the frozen protocol could not identify relative
+> performance. Original metrics and interpretations are preserved as history.
 ### (Geometric Early Warning in Power System Dynamics)
 
 ---

@@ -1,5 +1,17 @@
 # NEXAH Framework — Application Cases
 
+> **CURRENT SCIENTIFIC STATUS — SUPERSEDED AS A CAPABILITY SUMMARY.** The
+> supported Power Systems scope is reproducible IEEE benchmark computation,
+> failure-aware geometry extraction, unchanged IEEE-9→IEEE-14 method transfer,
+> bounded structural replay, and provenance-bearing Orientation Briefs. NEXAH
+> has not established prospective early warning, failure/stability/risk
+> prediction, causal precursors, operational grid decision support, validated
+> control, or universal scaling. The broader claims below are preserved as
+> historical exploratory research, not current capabilities.
+>
+> **Application 001 — `PROPOSED / NOT_ADOPTED`:** *IEEE Benchmark Geometry
+> Replay and Orientation Brief*. It is not power-grid decision support.
+
 The NEXAH framework is designed to analyze and navigate stability in complex dynamical systems.
 
 Rather than covering all possible domains, current applications focus on systems where:

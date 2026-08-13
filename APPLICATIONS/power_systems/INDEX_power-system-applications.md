@@ -1,6 +1,17 @@
 # ⚡ NEXAH — Power Systems Applications
 
-### Atlas-Guided Stability Analysis, Prediction, Recovery and Control for Electrical Power Networks
+### Current IEEE Benchmark Scope and Historical Research Program
+
+> **CURRENT EVIDENCE BOUNDARY.** Current demonstrated scope is reproducible IEEE
+> benchmark computation, failure-aware geometry extraction, unchanged
+> IEEE-9→IEEE-14 method transfer, structural replay, and bounded Orientation
+> Brief generation. Prospective warning, prediction, risk, stability
+> forecasting, causal precursors, operational control, and universal scaling
+> are **not established**. Historical programs and their original outputs remain
+> preserved below but are not current capability claims.
+>
+> Application 001, *IEEE Benchmark Geometry Replay and Orientation Brief*, is
+> `PROPOSED / NOT_ADOPTED` and is not power-grid decision support.
 
 ## Current maintained entry
 
@@ -41,7 +52,7 @@ The long-term objective is to transform stability analysis from observation towa
 
 ---
 
-# Current Validation Status
+# Historical Program Validation Claims (superseded as current capability)
 
 Large-scale validation has been conducted using IEEE benchmark power systems.
 
@@ -230,7 +241,7 @@ Atlas-derived information provides a foundation for future geometry-aware interv
 
 ---
 
-# Current Capabilities
+# Historical Program Capabilities (not current validated capabilities)
 
 | Capability | Status |
 |------------|---------|

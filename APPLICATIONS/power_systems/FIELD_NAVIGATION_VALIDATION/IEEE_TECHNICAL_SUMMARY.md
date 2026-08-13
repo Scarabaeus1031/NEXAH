@@ -1,5 +1,13 @@
 # NEXAH Power Systems
 
+> **SUPERSEDED BY CONTROLLED VALIDATION — HISTORICAL TECHNICAL SYNTHESIS.**
+> Early-warning, precursor, prediction, risk and stability interpretations in
+> this document are not current NEXAH claims. Level-1C concluded `INCONCLUSIVE`
+> after 2,613 valid held-out runs, 0 terminal events, 0 `R` detections and 0 `V`
+> detections. No operational control or universal scaling result is established.
+> This document preserves original historical metrics and interpretations;
+> software replay is not scientific confirmation.
+
 ## Atlas-Guided Stability Analysis, Navigation and Control
 
 ### Technical Summary (EXP_01 – EXP_44S)
@@ -46,7 +54,11 @@ For theoretical background and framework architecture see:
 
 ## Figure 1 — Current NEXAH Status VIII
 
-![NEXAH Current Status VIII](./outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS_VIII.png)
+![Historical NEXAH Power Systems status visual containing superseded capability claims](./outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS_VIII.png)
+
+> **Historical status visual.** This image contains superseded capability
+> claims, including early-warning/control language, and is not current
+> scientific evidence.
 
 This figure summarizes the complete evolution of the NEXAH framework from structure discovery through transport architecture discovery.
 
@@ -238,7 +250,7 @@ Reconstruction
 
 ---
 
-# Current Status
+# Historical Program Status (not current capability status)
 
 The NEXAH framework currently demonstrates:
 
@@ -457,4 +469,3 @@ The atlas supports:
 - historical reconstruction.
 
 The next stage is external validation and deployment on previously unseen systems.
-

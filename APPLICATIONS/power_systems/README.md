@@ -1,6 +1,6 @@
 # ⚡ NEXAH Power Systems
 
-### Atlas-Guided Stability Analysis, Navigation and Control for Electrical Power Networks
+### IEEE Benchmark Geometry and Historical Power-Systems Research
 
 > **Current maintained development entry:**
 > **[IEEE Geometry V1 frozen protocol](ieee_geometry_v1/README.md)**,
@@ -10,6 +10,32 @@
 > observed operational-grid evidence. The broader material below records a
 > large historical research program; individual claims require their linked
 > validation evidence and are not automatically current capabilities.
+
+## Current Demonstrated Scope
+
+- reproducible IEEE benchmark computation;
+- failure-aware geometry extraction;
+- unchanged IEEE-9→IEEE-14 method transfer;
+- bounded structural/geometric replay;
+- provenance-complete Orientation Brief generation.
+
+**Not established:** prospective warning, prediction, risk, stability
+forecasting, causal precursors, operational control, or universal scaling.
+Software validation and reproducibility do not constitute scientific
+confirmation.
+
+**Application 001 — `PROPOSED / NOT_ADOPTED`:** *IEEE Benchmark Geometry Replay
+and Orientation Brief*. It is not power-grid decision support.
+
+## Historical Research Program
+
+The Power Systems experiments and their original metrics, plots,
+interpretations, hypotheses, scripts and reports remain preserved below as
+research lineage. Present-tense capability language in that historical record
+is not a current NEXAH scientific claim. Level-1C concluded `INCONCLUSIVE` after
+2,613 valid held-out runs produced 0 terminal events, 0 `R` detections and 0 `V`
+detections. The later frozen IEEE/PEGASE scaling protocol accepted no stable
+interior precursor, and PEGASE-9241 was not testable.
 
 ---
 
@@ -177,7 +203,7 @@ that remain recoverable from historical archives.
 
 ---
 
-## Experimental Status
+## Historical Experimental Status (as originally reported)
 
 The NEXAH Power Systems program currently contains more than 43 validation and reconstruction experiments.
 
@@ -311,7 +337,7 @@ Atlas
 
 ---
 
-## Current Development Status
+## Historical Program Status (not current capability status)
 
 | Capability | Status |
 |------------|---------|

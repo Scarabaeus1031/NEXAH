@@ -1,5 +1,12 @@
 # ⚡ Stability Field Dynamics
 
+> **HISTORICAL SCALING HYPOTHESIS / SUPERSEDED CURRENTNESS.** The later frozen
+> protocol accepted no stable interior precursor, and PEGASE-9241 was not
+> testable. Broader precursor, cross-scale consistency, scaling and universality
+> interpretations below are historical exploratory context, not current NEXAH
+> capability. Early-warning performance also remains `INCONCLUSIVE` under
+> Level-1C. Original experiments and outputs are preserved.
+
 A collection of NEXAH-based experiments, applications, and validation studies for stability analysis, transition geometry, and navigation in complex dynamical systems.
 
 ---

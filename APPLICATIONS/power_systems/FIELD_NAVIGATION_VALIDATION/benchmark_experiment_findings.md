@@ -1,5 +1,10 @@
 # 🧭 NEXAH Atlas Findings
 
+> **HISTORICAL / EXPLORATORY / NOT CURRENT EVIDENCE.** This file preserves a
+> bounded earlier atlas experiment series. Its robustness, navigation and atlas
+> interpretations are study-local and are not current evidence of prediction,
+> early warning, safe operation, risk estimation or control.
+
 ## Executive Summary
 
 The FIELD_NAVIGATION_VALIDATION program investigated whether real IEEE39 operating states form a structured and navigable state-space geometry.

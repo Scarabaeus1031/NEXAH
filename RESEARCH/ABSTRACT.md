@@ -1,5 +1,11 @@
 # 🧠 NEXAH — Transition Geometry & Phase-Driven Structure in Dynamical Systems
 
+> **WORKING HISTORICAL SYNTHESIS / NOT CURRENT GENERAL EVIDENCE.** Mechanism,
+> early-detection, stability and directional-control statements below are
+> hypotheses or bounded internal observations, not established prediction,
+> causality, control, universality or physical law. Read current claims through
+> the Evidence Atlas and maintained validation records.
+
 > **Status — transition-geometry research program.** This document summarizes
 > one locally owned NEXAH research program; it does not define the identity of
 > the whole repository. Mechanism statements below are working interpretations

@@ -1,5 +1,11 @@
 # NEXAH — Dynamical Unification (Lorenz ↔ Halvorsen ↔ Control)
 
+> **HISTORICAL THEORETICAL SYNTHESIS / NOT CURRENT PREDICTIVE EVIDENCE.** The
+> cross-system, transition, stability and control interpretations below arise
+> from limited internal comparisons. They do not establish predictive
+> performance, causality, universal dynamics, physical invariance or validated
+> control.
+
 **Status:** THEORETICAL SYNTHESIS
 
 **Scope:** Cross-system interpretation based on limited empirical comparisons

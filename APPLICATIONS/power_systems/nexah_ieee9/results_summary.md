@@ -10,6 +10,11 @@
 
 ---
 
+> **HISTORICAL SYNTHETIC CONTROL PROTOTYPE / NOT CURRENT CAPABILITY.** This
+> summary records an earlier synthetic-solver experiment. Its risk, prediction,
+> early-warning, safe-navigation and anticipatory-control language is not
+> operational power-grid evidence and is not a current validated NEXAH claim.
+
 ## ⚡ Key Metrics
 
 - **Max Risk:** ~0.76  
@@ -360,6 +365,5 @@ Reactive → Anticipatory → Navigational
 NEXAH enters:
 
 *field-driven control of complex dynamical systems*
-
 
 

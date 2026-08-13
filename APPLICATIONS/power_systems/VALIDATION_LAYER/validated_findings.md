@@ -1,4 +1,11 @@
 # ⚡ NEXAH — Validated Findings
+
+> **SUPERSEDED BY CONTROLLED VALIDATION — HISTORICAL FINDINGS RECORD.** The
+> early-warning, precursor, invariant-transition, prediction, risk and stability
+> interpretations below are not current NEXAH claims. Level-1C concluded
+> `INCONCLUSIVE` after 2,613 valid held-out runs, 0 terminal events, 0 `R`
+> detections and 0 `V` detections. No universal transition invariant or causal
+> precursor was established. Original result language is retained as lineage.
 ### (Unified Results from Skeleton + Experiments)
 
 ---

@@ -1,5 +1,14 @@
 # ⚡ NEXAH — Validation Layer
 
+> **SUPERSEDED BY CONTROLLED VALIDATION — HISTORICAL / EXPLORATORY.**
+> Early-warning, precursor, prediction, risk and stability interpretations in
+> this document are not current NEXAH claims. Level-1C concluded `INCONCLUSIVE`
+> after 2,613 valid held-out runs, 0 terminal events, 0 `R` detections and 0 `V`
+> detections. It did not disprove early warning; the frozen protocol was
+> unidentifiable. Historical results below are preserved unchanged in meaning.
+> `SOFTWARE_VALIDATED != SCIENTIFICALLY_VALIDATED` and
+> `REPRODUCIBLE != SCIENTIFICALLY_CONFIRMED`.
+
 ## Overview
 
 The Validation Layer provides the first quantitative evaluation of the NEXAH framework.

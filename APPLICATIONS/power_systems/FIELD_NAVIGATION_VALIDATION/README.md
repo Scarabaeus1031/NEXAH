@@ -1,5 +1,16 @@
 # NEXAH State Navigation
 
+> **SUPERSEDED BY CONTROLLED VALIDATION — HISTORICAL RESEARCH PROGRAM.**
+> Early-warning, precursor, prediction, risk, stability, recovery and control
+> interpretations in this document are not current NEXAH claims. Level-1C
+> concluded `INCONCLUSIVE` after 2,613 valid held-out runs, 0 terminal events,
+> 0 `R` detections and 0 `V` detections. The later frozen IEEE/PEGASE scaling
+> protocol accepted no stable interior precursor; PEGASE-9241 was not testable.
+> Current supported IEEE scope is benchmark computation, failure-aware geometry,
+> unchanged IEEE-9→IEEE-14 method transfer, structural replay and bounded
+> Orientation Brief generation. `SOFTWARE_VALIDATED != SCIENTIFICALLY_VALIDATED`
+> and `REPRODUCIBLE != SCIENTIFICALLY_CONFIRMED`.
+
 ### Discovering Navigable Structure in Complex Dynamical Systems
 
 NEXAH is a framework for discovering, mapping, and navigating latent stability structures in complex dynamical systems.
@@ -58,9 +69,14 @@ The NEXAH validation program currently consists of six major phases.
 
 ---
 
-# Current Status
+# Historical Research Status (not current capability status)
 
-![Current Status](outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS_VIII.png)
+## Historical status visual
+
+![Historical NEXAH Power Systems status visual containing superseded capability claims](outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS_VIII.png)
+
+> This historical visual contains superseded capability claims, including
+> early-warning/control language, and is not current scientific evidence.
 
 
 Key questions addressed:
@@ -471,7 +487,7 @@ FIELD_NAVIGATION_VALIDATION/
 
 ---
 
-# Current Development Status
+# Historical Program Status (as originally reported)
 
 | Capability | Status |
 |------------|---------|

@@ -58,7 +58,7 @@ If you are completely new to NEXAH, begin with the repository
 |---|---|---|
 | **[Network Orientation](network_orientation/)** | Typed graph topology, reachability, structural comparison, five read-only probes, and V1/V2 fixtures | Verified illustrative application |
 | **[Orientation Translation](orientation_translation/)** | Source-bounded public-knowledge pilots, Reflections, Neighborhoods, comparisons, methodological studies, and reviews | Applied methodological research; reader effect not yet tested |
-| **[Power Systems](power_systems/)** | IEEE benchmark studies, stability fields, atlas discovery, prediction, recovery, and control experiments | Active applied research |
+| **[Power Systems](power_systems/)** | Current IEEE benchmark geometry/replay plus historical exploratory warning, prediction, recovery, scaling, and control programs | Bounded benchmark evidence / historical research lineage |
 | **[Lorenz Research](dynamical_systems/lorenz/)** | Density, FTLE, Lyapunov, separatrix, regime, and navigation analysis | Active reference system |
 | **[Halvorsen Research](dynamical_systems/halvorsen/)** | Distributed transport, transition graphs, residue models, reachability, and policy experiments | Experimental research |
 | **[Lorenz Demo](demos/lorenz_demo/)** | Compact visual pipeline for geometry and transport structures | Runnable demonstration |
@@ -89,6 +89,13 @@ design. Reader effect has not yet been established.
 ---
 
 ## ⚡ Power Systems
+
+> **Current demonstrated scope:** reproducible IEEE benchmark computation,
+> failure-aware geometry extraction, unchanged IEEE-9→IEEE-14 method transfer,
+> structural replay and bounded Orientation Brief generation. Prospective
+> warning, prediction, risk, stability forecasting, causal precursors,
+> operational control and universal scaling are not established. Historical
+> experiments remain preserved as research lineage.
 
 **[APPLICATIONS/power_systems/](power_systems/)** is currently the most
 developed applied research program in NEXAH.
