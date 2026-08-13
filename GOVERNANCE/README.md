@@ -69,6 +69,12 @@ its articles.
 The documentation-only alignment review is recorded in
 [`ECOSYSTEM_CONSTITUTION_ADOPTION.md`](ECOSYSTEM_CONSTITUTION_ADOPTION.md).
 
+The compact
+[`Current Ecosystem Architecture Status`](CURRENT_ECOSYSTEM_ARCHITECTURE_STATUS.md)
+transcribes the presently adopted Human, NEXAH, ORION, Experience, Research,
+LUCY, LYRA and Interface boundaries without adding a capability or replacing
+their controlling Owner records.
+
 ## Operations reviews
 
 Publication readiness is assessed in
