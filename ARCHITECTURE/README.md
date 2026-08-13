@@ -27,7 +27,7 @@ six responsibilities distinct:
 > capability claim, an OLS conformance statement, or evidence that every
 > depicted function exists in one integrated runtime.
 
-![NEXAH — The Orientation Laboratory](visuals/current/orientation-laboratory.png)
+![NEXAH Laboratory — implementation-oriented secondary view](visuals/current/orientation-laboratory.png)
 
 > **Implementation-oriented secondary view.** This visual emphasizes research,
 > representation, validation, and human orientation. It remains useful, but it

@@ -94,8 +94,8 @@ failures, missing information, and uncertainty must remain visible.
 
 ## The Orientation Laboratory
 
-NEXAH is best understood as a computational research laboratory for
-evidence-bound orientation.
+The Laboratory is NEXAH’s experimental environment for evidence-bound
+orientation research.
 
 Its recurring movement is:
 
@@ -226,6 +226,8 @@ diffs, review, and controlled writing preserve human editorial intent.
 
 It is an editorial coordination architecture—not a technical operating system
 and not an autonomous publisher.
+
+No single discipline, subsystem or publication is NEXAH by itself.
 
 Together these responsibilities create an integrated orientation ecosystem:
 
