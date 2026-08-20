@@ -118,3 +118,10 @@ changes the bounded status. Adding a link does not validate a claim. Removing a
 blocked status requires a repository-addressable primary source and a separate
 evidence review. No automated promotion, ranking, claim inference, or
 machine-readable registry is part of this first version.
+
+Completed external or desk-owned results that may affect this Atlas enter
+through the [Desk 03 Repository Integration and Currentness](../../GOVERNANCE/REPOSITORY_INTEGRATION_AND_CURRENTNESS.md)
+route. Candidates remain in the
+[Evidence Atlas Update Queue](EVIDENCE_ATLAS_UPDATE_QUEUE.md) until their Source
+Authority, immutable source, bounded wording, limits and required owner review
+are verified. A handoff or queue row alone does not create an Atlas finding.

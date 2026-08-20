@@ -37,18 +37,23 @@ versioned external citation.
   SHA-256 `9f2c9e587c7f59073554aa4eb5ef2d5ca6c6841a130d994e5d6d91a0d4783f0e`.
 - **Authority required:** IEEE/PEGASE scientific owner + Evidence Atlas owner.
 
-### EAQ-003 — Application 001
+### EAQ-003 — IEEE Benchmark Geometry Replay candidate
 
-- **Proposed status:** `PROPOSED / NOT_ADOPTED`
+- **Portfolio status:** `UNNUMBERED_CANDIDATE / NOT_ACTIVATED`
+- **Prospective status authority:** Portfolio Decision `D-021`, 2026-08-20;
+  the IEEE candidate is not `NEXAH-APP-01`.
 - **Proposed claim:** *IEEE Benchmark Geometry Replay and Orientation Brief* is
   a proposed bounded reproducibility application built on existing Phase-V
   artifacts.
 - **Limit:** It is not power-grid decision support and establishes no stability,
   prediction, warning, risk, intervention, control or real-world generalization.
+  Its prior proposed `Application 001` label is historical and grants no current
+  Application ID or activation.
 - **External source candidate:** `FINAL_APPLICATION_PHASE_1_REPORT.md`, SHA-256
   `1ee2ffa6efb61d2d5ea88d9fbc0ca0d13318732996f97b297e69c5b364a2eef3`.
 - **Authority required:** Application owner + Evidence Atlas owner. Adoption
-  requires a separate decision.
+  into the Atlas requires a separate source and evidence review; D-021 changes
+  portfolio identity only and does not validate the scientific claim.
 
 ### EAQ-004 — Translation Fidelity
 

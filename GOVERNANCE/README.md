@@ -69,6 +69,15 @@ its articles.
 The documentation-only alignment review is recorded in
 [`ECOSYSTEM_CONSTITUTION_ADOPTION.md`](ECOSYSTEM_CONSTITUTION_ADOPTION.md).
 
+## Repository integration and currentness
+
+Completed ecosystem results that affect the public NEXAH projection,
+Framework/OLS status, Evidence Atlas, Library Registry, architecture overview,
+release identity or provenance enter through the
+[`Desk 03 Repository Integration and Currentness`](REPOSITORY_INTEGRATION_AND_CURRENTNESS.md)
+route. It connects Source Repositories to the existing queues and drift checks
+without transferring Source Authority or creating a second ledger.
+
 ## Operations reviews
 
 Publication readiness is assessed in
