@@ -25,6 +25,17 @@ problem of orientation.
 
 ---
 
+## How the Parts Connect
+
+NEXAH defines the shared orientation semantics, boundaries, and contracts.
+ORION provides revision-bound deterministic structural execution within its
+certified scope, while NEXAHEDRON provides a bounded Human-facing workspace for
+inspection and interaction. Science Lab tests bounded research questions and
+usefulness, but no research cycle is currently active. Meaning, approval,
+decision, and STOP remain with the Human.
+
+---
+
 ## Choose Your Entry Point
 
 | I want to… | Begin here |
@@ -32,7 +43,7 @@ problem of orientation.
 | Enter the public Experience | **[nexah.de](https://nexah.de)** — the public entrance to NEXAH |
 | Understand the adopted cross-repository research architecture | **[Research & Ecosystem Architecture](ARCHITECTURE/NEXAH_RESEARCH_ECOSYSTEM_ARCHITECTURE.md)** — research questions, responsibilities, methodological rails and public interfaces |
 | Inspect the certified deterministic Core | **[NEXAH-ORION](https://github.com/Scarabaeus1031/NEXAH-ORION)** — structural representation, relations, navigation, orientation map and certified expression |
-| Try one Human-facing Orientation Session | **[NEXAHEDRON](https://nexahedron.com)** — the reference Workspace |
+| Inspect the Human-facing orientation workspace | **[NEXAHEDRON](https://nexahedron.com)** — the bounded reference Workspace |
 | Inspect the Experience source | **[NEXAH-Experience](https://github.com/Scarabaeus1031/NEXAH-Experience)** — public presentation, Library, Living Atlas, Laboratory and Reading Spaces |
 | Understand the purpose and principles | **[Ecosystem Constitution v1.0](GOVERNANCE/ECOSYSTEM_CONSTITUTION.md)** · **[Governance Index](GOVERNANCE/README.md)** · **[NEXAH Manifesto](MANIFESTO.md)** |
 | Read the published specification | **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** |
@@ -85,7 +96,10 @@ non-canonical historical evidence in
 
 - **Orientation Language 1.0** is published as the canonical semantic authority.
 - **Orientation Kernel v0.7** is maintained as the current implementation track.
-- **Research** remains active, scoped, and evidence-bound.
+- **Research** is maintained as a scoped, evidence-bound portfolio. No Science
+  Lab research cycle is currently active; new research requires an explicit
+  Human reopen decision. Existing research remains preserved and is neither
+  deprecated nor archived by this operational pause.
 - **Reference applications** for Network Orientation and IEEE Geometry are maintained.
 - **Library and Editorial infrastructure** operate within documented human-governance boundaries.
 
@@ -103,6 +117,24 @@ tag.
 
 ---
 
+## Current Development Direction
+
+NEXAH is currently concentrating on one bounded question: whether its
+orientation principles can provide measurable benefit in a Human-readable
+task. The immediate evidence direction is to:
+
+1. freeze one bounded usefulness contract;
+2. make one evidence object clean and citable;
+3. test one understandable external entry route; and
+4. preserve a later ORION semantic Research Session as a separate candidate
+   rather than claiming it as a present capability.
+
+These are bounded evidence goals, not claims of active execution or completed
+capability. No general ORION Research Session, unified Runtime, autonomous
+research agent, or cross-domain usefulness claim is currently adopted.
+
+---
+
 ## Run NEXAH
 
 Install the current Python implementation:
@@ -113,7 +145,7 @@ source .venv/bin/activate
 python -m pip install -e .
 ```
 
-Run one declared Network Orientation case:
+Run the maintained Supply Chain reference/demo case:
 
 ```bash
 nexah orient-network APPLICATIONS/datasets/supply_chain.json \
@@ -124,8 +156,9 @@ nexah orient-network APPLICATIONS/datasets/supply_chain.json \
   --format brief
 ```
 
-The result is an inspectable report over the supplied representation—not a
-real-world risk judgment or authorization to intervene.
+The result is an inspectable report over the supplied representation—not an
+active Supply Chain application, validated domain usefulness, a real-world risk
+judgment, or authorization to intervene.
 
 Continue with the **[Kernel Start](nexah/START_HERE.md)**, browse
 **[Applications](APPLICATIONS/README.md)**, or inspect the executable
