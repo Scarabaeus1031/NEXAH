@@ -10,6 +10,18 @@
 
 **Operational return:** `02 Mission Control Director`
 
+<!-- BEGIN FRAMEWORK FREEZE CURRENTNESS 2026-08-30 -->
+## Current framework freeze pointer
+
+Desk 03 records the 30 August 2026
+[Science & Framework Freeze](../../../30 SCIENCE LAB/NEXAH-Science-Lab/NEXAH_SCIENCE_FRAMEWORK_FREEZE_2026-08-30.md)
+as `CURRENTNESS_SYNC`. The conceptual Framework is `CLOSED_AND_FROZEN`.
+This is a pointer-only status update: no NEXAH architecture, OLS contract,
+Evidence Atlas entry, Library record, implementation or public claim is adopted
+or changed. Engineering gaps G01–G06 retain exactly the statuses in the source
+freeze and require separate Human Authority.
+<!-- END FRAMEWORK FREEZE CURRENTNESS 2026-08-30 -->
+
 ## Purpose
 
 This is the single NEXAH entry point for completed, repository-relevant results
