@@ -1,0 +1,44 @@
+{
+  "audit_id": "NEXAH_RESEARCH_PAPER_READINESS_AUDIT_2026-08-30",
+  "mode": "BOUNDED_DOCUMENTARY_PAPER_READINESS_AUDIT",
+  "research_tree": {
+    "files": 1543,
+    "directories": 227,
+    "approximate_size_mb": 869,
+    "entire_tree_accounted_for": true
+  },
+  "primary_paper_class": "D_METHODOLOGICAL_CONCEPTUAL_FRAMEWORK",
+  "compatible_secondary_class": "F_REPRODUCIBILITY_PROVENANCE_SCIENTIFIC_WORKFLOW",
+  "central_contribution_supported": "SUPPORTED_WITH_REFRAMING",
+  "metaphor_removal_leaves_paper": true,
+  "technical_novelty_established": false,
+  "methodological_contribution_supported": true,
+  "roles": {
+    "ieee": "SECONDARY_CASE_STUDY",
+    "wni": "FORMAL_CASE_STUDY",
+    "titan": "EXTERNAL_CONTROL_EXAMPLE",
+    "nos": "SYNTHESIS_DESTRUCTION_CONTROL"
+  },
+  "existing_documents": {
+    "paper_draft_current": false,
+    "paper_draft_status": "STALE_OVERCLAIMED",
+    "abstract_current": false,
+    "abstract_status": "STALE_OVERCLAIMED"
+  },
+  "minimum_gaps": [
+    "BOUNDED_PRIOR_ART_AND_NOVELTY_REVIEW",
+    "FROZEN_SOURCE_MANUSCRIPT_CONSOLIDATION_AND_SKEPTICAL_EXTERNAL_REVIEW"
+  ],
+  "literature_review_required": true,
+  "new_experiment_required": false,
+  "new_software_required": false,
+  "external_review_required": true,
+  "paper_readiness_class": "C_PAPER_CONTRIBUTION_PLAUSIBLE_BUT_REQUIRES_ONE_OR_TWO_SPECIFIC_GAPS",
+  "new_research_activation": false,
+  "implementation_activation": false,
+  "orion_v1_modified": false,
+  "existing_paper_draft_modified": false,
+  "existing_abstract_modified": false,
+  "next_action": "STOP"
+}
+
