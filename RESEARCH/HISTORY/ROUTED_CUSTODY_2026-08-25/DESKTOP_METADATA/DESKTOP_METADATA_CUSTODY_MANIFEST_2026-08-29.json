@@ -1,0 +1,51 @@
+{
+  "manifest_type": "DESKTOP_METADATA_CUSTODY_MANIFEST",
+  "original_container": "/Users/tho2020/Desktop/00_INCOMING_ROUTED_2026-08-25",
+  "metadata_file_count": 7,
+  "handoff_date": "2026-08-29",
+  "owner_authority": "Thomas Hofmann — routed custody final execution",
+  "files": [
+    {
+      "original_relative_path": ".DS_Store",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/DESKTOP_METADATA/ROOT/.DS_Store",
+      "size_bytes": 6148,
+      "sha256": "1cced041adefe009d76e81fedfacff654f74e497a398e186e5483e09119583dc"
+    },
+    {
+      "original_relative_path": "OUT_OF_SCOPE_ARCHIVE/.DS_Store",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/DESKTOP_METADATA/OUT_OF_SCOPE_ARCHIVE/.DS_Store",
+      "size_bytes": 6148,
+      "sha256": "18c9484c7df2ec5cf8ab3ea3b5ac2264b38f3c0c5d696b1a37af48d61faca52c"
+    },
+    {
+      "original_relative_path": "OUT_OF_SCOPE_ARCHIVE/DESKTOP_METADATA/.DS_Store",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/DESKTOP_METADATA/OUT_OF_SCOPE_ARCHIVE_DESKTOP_METADATA/.DS_Store",
+      "size_bytes": 14340,
+      "sha256": "98ccca7f19f73cf3364f850abbc3de61d56e4035a320995812078cdc70b203ff"
+    },
+    {
+      "original_relative_path": "OUT_OF_SCOPE_ARCHIVE/Conzept Circle Zirkus TRANSVERSUM/.DS_Store",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/ORIENTATION_LANGUAGE/VISUALS/ARCHIVE/Conzept Circle Zirkus TRANSVERSUM/.DS_Store",
+      "size_bytes": 8196,
+      "sha256": "07ab2d32c63907f91b1622d27e931329a7cb51c58dfd6b8fd3aef7235032e95a"
+    },
+    {
+      "original_relative_path": "OUT_OF_SCOPE_ARCHIVE/Conzept Circle Zirkus TRANSVERSUM/NEW/.DS_Store",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/ORIENTATION_LANGUAGE/VISUALS/ARCHIVE/Conzept Circle Zirkus TRANSVERSUM/NEW/.DS_Store",
+      "size_bytes": 6148,
+      "sha256": "ce7f44d39792ac755af7fef353bdcd7e9d43c5e5c3dc564e91ef2a66fa780d46"
+    },
+    {
+      "original_relative_path": "OUT_OF_SCOPE_ARCHIVE/Conzept Circle Zirkus TRANSVERSUM/Transversum Zirkel/.DS_Store",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/ORIENTATION_LANGUAGE/VISUALS/ARCHIVE/Conzept Circle Zirkus TRANSVERSUM/Transversum Zirkel/.DS_Store",
+      "size_bytes": 6148,
+      "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3"
+    },
+    {
+      "original_relative_path": "OUT_OF_SCOPE_ARCHIVE/POLAR|PASS BUILD PROJECT/.DS_Store",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/ORIENTATION_LANGUAGE/VISUALS/ARCHIVE/POLARPASS_BUILD_PROJECT_2026-08-25/EXPRESSION_MEDIA/SOURCE_METADATA/.DS_Store",
+      "size_bytes": 40964,
+      "sha256": "021c41510ff9081a06c7f58253bbfbb606b9e093cdae1aa71c499ac860ad832f"
+    }
+  ]
+}

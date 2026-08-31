@@ -1,0 +1,238 @@
+{
+  "manifest_type": "PACKAGE_CUSTODY_MANIFEST",
+  "original_routed_package_name": "GH_KKK",
+  "original_desktop_source_path": "/Users/tho2020/Desktop/00_INCOMING_ROUTED_2026-08-25/OUT_OF_SCOPE_ARCHIVE/GH_KKK",
+  "original_relative_directory_structure": "PRESERVED_BY_PER_FILE_RELATIVE_PATH",
+  "substantive_file_count": 21,
+  "total_substantive_bytes": 23970925,
+  "package_snapshot_sha256": "b97fbdb6d25c9abc4f8869374cb5152628b6dd3246ad9a36baf3bd714c10f95b",
+  "custody_classification": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+  "permanent_destination": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK",
+  "scientific_status_boundary": [
+    "HISTORICAL_SOURCE",
+    "ARCHIVED_EVIDENCE",
+    "ARCHIVAL_PREDECESSOR",
+    "NO_SCIENTIFIC_ADOPTION",
+    "RELATED_LINEAGE_HOLD_CONFLICTING_DEFINITIONS"
+  ],
+  "duplicate_source_file_count": 13,
+  "handoff_date": "2026-08-29",
+  "owner_authority": "Thomas Hofmann — explicit routed custody final execution authorization",
+  "source_files_edited": false,
+  "files": [
+    {
+      "original_relative_path": "A_complex_digital_diagram_illustrates_interconnect.png",
+      "size_bytes": 2311529,
+      "sha256": "c676ac07eb62abae010de0a52eabee9bc9f338a443705e478a487bcbb829a6fe",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/A_complex_digital_diagram_illustrates_interconnect.png",
+      "exact_byte_counterparts_before_handoff": [
+
+      ]
+    },
+    {
+      "original_relative_path": "Aperture Rotation — Iota 60° Turn_svg-Screenshot.png",
+      "size_bytes": 169944,
+      "sha256": "bc9ca4df23e097ac86d490029ee509120c278d07e7007c199e7019a0aa1e0e51",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/Aperture Rotation — Iota 60° Turn_svg-Screenshot.png",
+      "exact_byte_counterparts_before_handoff": [
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂🜂🜂 ANKH 2040 — QED Summary Index/🧭 NEXAH GH-Resonance — Math & Physics & Engineering_Validation/THE CCC↔KKK APERTURE SERIES_FresnelDiagrams_visual-gallery/Aperture Rotation — Iota 60° Turn_svg-Screenshot.png"
+      ]
+    },
+    {
+      "original_relative_path": "BioNeon_Bridge_ObserverV_neon.png",
+      "size_bytes": 417254,
+      "sha256": "122bee678c8cf2724b17e393ec6656fa7ff84b23aac689fda6c02c5d89f07934",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/BioNeon_Bridge_ObserverV_neon.png",
+      "exact_byte_counterparts_before_handoff": [
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂🜂🜂 ANKH 2040 — QED Summary Index/🧭 NEXAH GH-Resonance — Math & Physics & Engineering_Validation/gh-resonance-Layers/BioNeon_Bridge_ObserverV_neon.png"
+      ]
+    },
+    {
+      "original_relative_path": "BioNeon_Bridge_ObserverV_parchment.png",
+      "size_bytes": 454355,
+      "sha256": "06f734bf833011645d3235838b9354d4750dfa59806ea1c7a472498d21c8a0e5",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/BioNeon_Bridge_ObserverV_parchment.png",
+      "exact_byte_counterparts_before_handoff": [
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂🜂🜂 ANKH 2040 — QED Summary Index/🧭 NEXAH GH-Resonance — Math & Physics & Engineering_Validation/gh-resonance-Layers/BioNeon_Bridge_ObserverV_parchment.png"
+      ]
+    },
+    {
+      "original_relative_path": "CCC ↔ KKK Resonance Aperture.png",
+      "size_bytes": 3258251,
+      "sha256": "58ebeccfe083adc270d488f772a9b72e1f516af53a14f86459edc0061b88a0cd",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/CCC ↔ KKK Resonance Aperture.png",
+      "exact_byte_counterparts_before_handoff": [
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂🜂🜂 ANKH 2040 — QED Summary Index/🧭 NEXAH GH-Resonance — Math & Physics & Engineering_Validation/THE CCC↔KKK APERTURE SERIES_FresnelDiagrams_visual-gallery/CCC ↔ KKK Resonance Aperture.png"
+      ]
+    },
+    {
+      "original_relative_path": "CCC_KKK_Bridge_Diagram (1).png",
+      "size_bytes": 160288,
+      "sha256": "0239565f67daef9d2e83e376eac17fa5a2f619f9c33b0770e94dfd9e80f4f8ec",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/CCC_KKK_Bridge_Diagram (1).png",
+      "exact_byte_counterparts_before_handoff": [
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂 🜂 Quanturm Gravty Resonance Series🜂 Galactic_q_🜂 Module/⚙️ HO BLACK WATER_CONTINUUM_VII/HO BLACK WATER_M'nM_visuals/CCC_KKK_Bridge_Diagram.png",
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂 🜂 Quanturm Gravty Resonance Series🜂 Galactic_q_🜂 Module/🜂 QUANTUM GRAVITY RESONANCE _ I /QGR_visuals_and_data/visuals/CCC_KKK_Bridge_Diagram.png",
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂🜂🜂 ANKH 2040 — QED Summary Index/🧭 NEXAH GH-Resonance — Math & Physics & Engineering_Validation/Saturn Data/CCC_KKK_Bridge_Diagram.png"
+      ]
+    },
+    {
+      "original_relative_path": "CCC_KKK_Bridge_Diagram (2).png",
+      "size_bytes": 1664783,
+      "sha256": "76f9410b47ed97aa27a47125b125e3e13f75c97362eb820c5cc9ef1eff582e6d",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/CCC_KKK_Bridge_Diagram (2).png",
+      "exact_byte_counterparts_before_handoff": [
+
+      ]
+    },
+    {
+      "original_relative_path": "CCC_KKK_Bridge_Diagram.png",
+      "size_bytes": 160288,
+      "sha256": "0239565f67daef9d2e83e376eac17fa5a2f619f9c33b0770e94dfd9e80f4f8ec",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/CCC_KKK_Bridge_Diagram.png",
+      "exact_byte_counterparts_before_handoff": [
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂 🜂 Quanturm Gravty Resonance Series🜂 Galactic_q_🜂 Module/⚙️ HO BLACK WATER_CONTINUUM_VII/HO BLACK WATER_M'nM_visuals/CCC_KKK_Bridge_Diagram.png",
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂 🜂 Quanturm Gravty Resonance Series🜂 Galactic_q_🜂 Module/🜂 QUANTUM GRAVITY RESONANCE _ I /QGR_visuals_and_data/visuals/CCC_KKK_Bridge_Diagram.png",
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂🜂🜂 ANKH 2040 — QED Summary Index/🧭 NEXAH GH-Resonance — Math & Physics & Engineering_Validation/Saturn Data/CCC_KKK_Bridge_Diagram.png"
+      ]
+    },
+    {
+      "original_relative_path": "FRESNEL_DIAGRAMS--VISUAL INDEX_FD--VI.png",
+      "size_bytes": 2441303,
+      "sha256": "6fecc53563f449cbfa85e4d23c215a6691a69670309a1da0c01da3c79ed8ee2d",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/FRESNEL_DIAGRAMS--VISUAL INDEX_FD--VI.png",
+      "exact_byte_counterparts_before_handoff": [
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂🜂🜂 ANKH 2040 — QED Summary Index/🧭 NEXAH GH-Resonance — Math & Physics & Engineering_Validation/FRESNEL_DIAGRAMS--VISUAL INDEX_FD--VI.png"
+      ]
+    },
+    {
+      "original_relative_path": "GH_Resonance_Layer_Map.png",
+      "size_bytes": 1341162,
+      "sha256": "0bd051841f25284c710e2ef5552f03de266a634c0c2901a2dd2ae886abb94e1b",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/GH_Resonance_Layer_Map.png",
+      "exact_byte_counterparts_before_handoff": [
+
+      ]
+    },
+    {
+      "original_relative_path": "PART_H•T-LAYER_RESONANCE_TIME_AXIS.png",
+      "size_bytes": 3352527,
+      "sha256": "e7bbe99b035558e141ec544cfd6b1430a2263faf5602b2d1f4a1d5848403769d",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/PART_H•T-LAYER_RESONANCE_TIME_AXIS.png",
+      "exact_byte_counterparts_before_handoff": [
+
+      ]
+    },
+    {
+      "original_relative_path": "PI_RING_MAP_Triad_Bands.png",
+      "size_bytes": 219954,
+      "sha256": "a020b0e8e9e245678bf91cd0c2a33332ef21f0bbeb05139aede44212dfbab811",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/PI_RING_MAP_Triad_Bands.png",
+      "exact_byte_counterparts_before_handoff": [
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂🜂🜂 ANKH 2040 — QED Summary Index/Breathing Crystal · Π‑ring · LIC_Resonant Atlas_Tesla Staricase/VISUALS/PI_RING_MAP_Triad_Bands.png"
+      ]
+    },
+    {
+      "original_relative_path": "Screenshot 2025-11-03 at 11.56.01 PM.png",
+      "size_bytes": 142004,
+      "sha256": "30943cd68ce18bfb407c5d0b7d80c37a6c26bf0de5ca790460118b43587bbd87",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/Screenshot 2025-11-03 at 11.56.01 PM.png",
+      "exact_byte_counterparts_before_handoff": [
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂🜂🜂 ANKH 2040 — QED Summary Index/🧭 NEXAH GH-Resonance — Math & Physics & Engineering_Validation/gh-resonance-Layers/screenshots_overlay/Screenshot 2025-11-03 at 11.56.01 PM.png"
+      ]
+    },
+    {
+      "original_relative_path": "Screenshot 2025-11-03 at 11.57.12 PM.png",
+      "size_bytes": 108157,
+      "sha256": "270d743c63a8c05aa7c262fd761965d92c3c7a9d1fd981083c5f853467edff12",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/Screenshot 2025-11-03 at 11.57.12 PM.png",
+      "exact_byte_counterparts_before_handoff": [
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂🜂🜂 ANKH 2040 — QED Summary Index/🧭 NEXAH GH-Resonance — Math & Physics & Engineering_Validation/gh-resonance-Layers/screenshots_overlay/Screenshot 2025-11-03 at 11.57.12 PM.png"
+      ]
+    },
+    {
+      "original_relative_path": "Screenshot 2026-08-25 at 3.22.51 AM.png",
+      "size_bytes": 1173500,
+      "sha256": "b7dbe948f6600af66cc8124e2b0eb3d22138150d8f686caa0fbe87131273e5e1",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/Screenshot 2026-08-25 at 3.22.51 AM.png",
+      "exact_byte_counterparts_before_handoff": [
+
+      ]
+    },
+    {
+      "original_relative_path": "The_Blue_Lens_197.png",
+      "size_bytes": 1147729,
+      "sha256": "88241ebb3349a9980476491c6ae5407cd847a01cb26d0f387d4697b876383044",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/The_Blue_Lens_197.png",
+      "exact_byte_counterparts_before_handoff": [
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂🜂🜂 ANKH 2040 — QED Summary Index/The_Blue_Lens_197.png"
+      ]
+    },
+    {
+      "original_relative_path": "aperture-rotation_IOTA.png",
+      "size_bytes": 2270514,
+      "sha256": "bd099322bd518aebae96d5719bf52b13bc521ab579b39d5d29bb1895b85cb1fc",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/aperture-rotation_IOTA.png",
+      "exact_byte_counterparts_before_handoff": [
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂🜂🜂 ANKH 2040 — QED Summary Index/🧭 NEXAH GH-Resonance — Math & Physics & Engineering_Validation/THE CCC↔KKK APERTURE SERIES_FresnelDiagrams_visual-gallery/aperture-rotation_IOTA.png"
+      ]
+    },
+    {
+      "original_relative_path": "aperture_rotation_iota.png",
+      "size_bytes": 83000,
+      "sha256": "ad03541322e5783f588c2a00fa979bd1ce220d046ec31c5c5b69114e712086bc",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/aperture_rotation_iota.png",
+      "exact_byte_counterparts_before_handoff": [
+        "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/CIKADA_3301_LATER_MARKER_PROVENANCE_INTAKE/CIKADA 3301 LATER MARKER CORPUS/🧭🧭🧭GITHUB-TODO_UPLOAD NAVIGATION/🜂🜂🜂 ANKH 2040 — QED Summary Index/🧭 NEXAH GH-Resonance — Math & Physics & Engineering_Validation/THE CCC↔KKK APERTURE SERIES_FresnelDiagrams_visual-gallery/aperture_rotation_iota.png"
+      ]
+    },
+    {
+      "original_relative_path": "planeten_spiralen.gif",
+      "size_bytes": 936506,
+      "sha256": "1c3da3f94c78e257be6f5450d07776433d4eeba34b1d2b3e4ce092455243fea6",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/planeten_spiralen.gif",
+      "exact_byte_counterparts_before_handoff": [
+
+      ]
+    },
+    {
+      "original_relative_path": "solar_harmonic_retrograde_flower_1940_2040 (gif too big).png",
+      "size_bytes": 1639115,
+      "sha256": "650c45ecd1c149a99cf7281f0eab17ef326ebd25bc35836d4b79382dea0e1f03",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/solar_harmonic_retrograde_flower_1940_2040 (gif too big).png",
+      "exact_byte_counterparts_before_handoff": [
+
+      ]
+    },
+    {
+      "original_relative_path": "torus_fourier_slicing.gif",
+      "size_bytes": 518762,
+      "sha256": "049a82a68bb11b537b169cd1897edee74626d25b2e8fec7f7d1e018430a4d488",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/GH_KKK/torus_fourier_slicing.gif",
+      "exact_byte_counterparts_before_handoff": [
+
+      ]
+    }
+  ]
+}

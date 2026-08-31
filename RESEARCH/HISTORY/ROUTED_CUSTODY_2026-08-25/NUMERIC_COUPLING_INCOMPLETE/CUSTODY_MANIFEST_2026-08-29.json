@@ -1,0 +1,52 @@
+{
+  "manifest_type": "PACKAGE_CUSTODY_MANIFEST",
+  "original_routed_package_name": "NUMERIC_COUPLING_INCOMPLETE",
+  "original_desktop_source_path": "/Users/tho2020/Desktop/00_INCOMING_ROUTED_2026-08-25/HOLD_PENDING_RECHECK/NUMERIC_COUPLING_INCOMPLETE",
+  "original_relative_directory_structure": "PRESERVED_BY_PER_FILE_RELATIVE_PATH",
+  "substantive_file_count": 3,
+  "total_substantive_bytes": 5387,
+  "package_snapshot_sha256": "6cd008a43d1fd6f4b1589fbf240587275feb65634009171dd00e29bc2e745f9b",
+  "custody_classification": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+  "permanent_destination": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/NUMERIC_COUPLING_INCOMPLETE",
+  "scientific_status_boundary": [
+    "CLOSED_INCOMPLETE",
+    "NO_SCIENTIFIC_REOPEN",
+    "FOUR_OF_SEVEN_REQUESTED_MARKDOWN_DELIVERABLES_ABSENT"
+  ],
+  "duplicate_source_file_count": 0,
+  "handoff_date": "2026-08-29",
+  "owner_authority": "Thomas Hofmann — explicit routed custody final execution authorization",
+  "source_files_edited": false,
+  "files": [
+    {
+      "original_relative_path": "03_TOTIENT_GAP_REPORT.md",
+      "size_bytes": 1370,
+      "sha256": "7889d9b7e58b2a1c7fdadaa13e1f834aa8bcd13a4140e655fed8935fc8b30c59",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/NUMERIC_COUPLING_INCOMPLETE/03_TOTIENT_GAP_REPORT.md",
+      "exact_byte_counterparts_before_handoff": [
+
+      ]
+    },
+    {
+      "original_relative_path": "05_ILAU_AND_ANNOTATION_LEDGER.md",
+      "size_bytes": 1955,
+      "sha256": "4a566abebe2b059aca3b68318f2fc8c81d569961ad1aed70ba36bfa998cbb9d1",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/NUMERIC_COUPLING_INCOMPLETE/05_ILAU_AND_ANNOTATION_LEDGER.md",
+      "exact_byte_counterparts_before_handoff": [
+
+      ]
+    },
+    {
+      "original_relative_path": "FINAL_NUMERIC_COUPLING_DECISION.md",
+      "size_bytes": 2062,
+      "sha256": "057705053c13900391fbf053555b1a0f2e1c54061463b033a85220146d6f4f07",
+      "custody_class": "FILE_IN_HISTORICAL_PROVENANCE_ARCHIVE",
+      "permanent_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/ROUTED_CUSTODY_2026-08-25/NUMERIC_COUPLING_INCOMPLETE/FINAL_NUMERIC_COUPLING_DECISION.md",
+      "exact_byte_counterparts_before_handoff": [
+
+      ]
+    }
+  ]
+}
