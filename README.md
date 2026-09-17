@@ -119,9 +119,13 @@ tag.
 
 ## Current Development Direction
 
-NEXAH is currently concentrating on one bounded question: whether its
-orientation principles can provide measurable benefit in a Human-readable
-task. The immediate evidence direction is to:
+Broad exploratory research is currently paused by Human Owner decision. The
+active ecosystem priority is Mission Control currentness and system
+archaeology, not a new research cycle. The strongest preserved candidate for a
+later evidence cycle remains one bounded question: whether NEXAH's orientation
+principles can provide measurable benefit in a Human-readable task.
+
+If that candidate is explicitly reopened, the evidence direction is to:
 
 1. freeze one bounded usefulness contract;
 2. make one evidence object clean and citable;
@@ -129,9 +133,10 @@ task. The immediate evidence direction is to:
 4. preserve a later ORION semantic Research Session as a separate candidate
    rather than claiming it as a present capability.
 
-These are bounded evidence goals, not claims of active execution or completed
-capability. No general ORION Research Session, unified Runtime, autonomous
-research agent, or cross-domain usefulness claim is currently adopted.
+These are parked, bounded evidence goals, not an active programme, claims of
+execution or completed capability. No general ORION Research Session, unified
+Runtime, autonomous research agent, or cross-domain usefulness claim is
+currently adopted.
 
 ---
 
