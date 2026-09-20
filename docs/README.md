@@ -14,6 +14,9 @@ responsibility and boundary.
   navigation
 - **[Evidence Atlas](evidence/README.md)** — bounded claims, status, limits,
   and links to authoritative owning sources
+- **[NEXAH Public Status](status/NEXAH_PUBLIC_STATUS.md)** — dated read-only
+  Mission Control projection with operating state, custody counts and explicit
+  non-claims
 
 ## Library documentation
 

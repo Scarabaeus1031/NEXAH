@@ -94,6 +94,11 @@ non-canonical historical evidence in
 
 ## Current State
 
+For the dated, ecosystem-wide read-only projection, see
+**[NEXAH Public Status](docs/status/NEXAH_PUBLIC_STATUS.md)**. It summarizes
+current operation, evidence custody and explicit non-claims without exposing
+the private Mission Control plane.
+
 - **Orientation Language 1.0** is published as the canonical semantic authority.
 - **Orientation Kernel v0.7** is maintained as the current implementation track.
 - **Research** is maintained as a scoped, evidence-bound portfolio. No Science

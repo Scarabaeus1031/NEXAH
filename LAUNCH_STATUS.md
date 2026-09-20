@@ -1,5 +1,9 @@
 # NEXAH Launch Status
 
+This file records launch, deployment and public-infrastructure status. For the
+broader dated ecosystem state, evidence boundary and current work limits, see
+**[NEXAH Public Status](docs/status/NEXAH_PUBLIC_STATUS.md)**.
+
 **Current-status review:** 26 July 2026
 
 **Current classification:** **PUBLIC RESEARCH SURFACES LIVE — bounded

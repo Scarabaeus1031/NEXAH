@@ -1,0 +1,78 @@
+{
+  "schema": "nexah-public-status/0.1",
+  "as_of": "2026-09-20",
+  "projection_source": {
+    "system": "NEXAH Mission Control",
+    "revision": "53cb1e4",
+    "visibility": "private_control_plane",
+    "authority": "currentness_routing_and_activation"
+  },
+  "projection_boundary": "Read-only public projection. Creates no authorization, release, research activation, outreach action or scientific claim.",
+  "operating_state": {
+    "mode": "CONSOLIDATION",
+    "active_priority_id": "MC-TRUTH-01",
+    "active_priority": "Stage 0 currentness and system archaeology",
+    "broad_exploratory_research": "STOPPED_BY_HUMAN_OWNER",
+    "active_science_lab_cycle": "NONE",
+    "scientific_novelty": "NOT_DEMONSTRATED",
+    "external_usefulness": "NOT_YET_TESTED",
+    "outreach_campaign": "NOT_ACTIVE",
+    "new_scientific_publication_claim": "NONE_AUTHORIZED"
+  },
+  "custody": {
+    "internal_controlling_sources_verified": 40,
+    "internal_controlling_sources_total": 40,
+    "upstream_custody_verified": 25,
+    "upstream_custody_total": 40,
+    "remaining_bindings": 15,
+    "remaining_gate": "SCIENCE_LAB_PUBLIC_SAFE_CUT",
+    "note": "Upstream custody is not equivalent to anonymous public availability."
+  },
+  "public_repositories": [
+    {
+      "name": "NEXAH",
+      "url": "https://github.com/Scarabaeus1031/NEXAH",
+      "role": "framework_language_research_navigation_and_bounded_implementation"
+    },
+    {
+      "name": "NEXAH-Science-Lab",
+      "url": "https://github.com/Scarabaeus1031/NEXAH-Science-Lab",
+      "public_main_revision": "8f7817d601481c7952d8fa9fbec5c8f0dd3279c5",
+      "role": "experiments_audits_negative_results_and_evidence_packages"
+    },
+    {
+      "name": "NEXAH-ORION",
+      "url": "https://github.com/Scarabaeus1031/NEXAH-ORION",
+      "role": "bounded_deterministic_structural_processing"
+    },
+    {
+      "name": "NEXAHEDRON",
+      "url": "https://github.com/Scarabaeus1031/NEXAHEDRON",
+      "role": "human_facing_reference_workspace_and_demonstrator"
+    },
+    {
+      "name": "NEXAH-Experience",
+      "url": "https://github.com/Scarabaeus1031/NEXAH-Experience",
+      "role": "public_site_library_atlas_and_reading_routes"
+    }
+  ],
+  "supported": [
+    "coherent separation of source, view, transformation, residual, uncertainty, decision and STOP",
+    "bounded validators, reference implementations and deterministic components within declared scopes",
+    "separate preservation of positive, negative, inconclusive and open results",
+    "visual resemblance is not measurement or mechanism",
+    "ABSTAIN, unresolved and STOP are permitted outcomes"
+  ],
+  "not_established": [
+    "new scientific discipline or universal mechanism",
+    "general advantage over established methods",
+    "externally adopted product or community workflow",
+    "independent usefulness, scientific novelty or cross-domain efficacy",
+    "authority for automated decisions or unsupervised action"
+  ],
+  "next_potential_evidence": {
+    "state": "PARKED",
+    "action": "one bounded external contrast test",
+    "activation_authority": "Human Owner"
+  }
+}
