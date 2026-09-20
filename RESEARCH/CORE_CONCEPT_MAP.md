@@ -1,5 +1,14 @@
 # 🧠 NEXAH — Core Concept Map
 
+> **Scope — transition-geometry concept map.** This document maps one
+> historically developed NEXAH research program. It is not a proof of a
+> universal mechanism, a catalogue of all NEXAH mathematics, or an ORION
+> engineering contract. Read terms through the
+> **[mathematical glossary](FOUNDATION/MATHEMATICAL_FOUNDATIONS_GLOSSARY.md)**
+> and use the **[Mathematics Map](MATHEMATICS_MAP.md)** to distinguish
+> established mathematics, NEXAH synthesis, bounded results, hypotheses, and
+> historical material.
+
 NEXAH investigates how structure emerges from dynamics,  
 how transitions become geometrically organized,  
 and how navigation becomes possible inside nonlinear systems.

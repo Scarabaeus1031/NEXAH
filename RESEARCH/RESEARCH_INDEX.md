@@ -10,6 +10,13 @@
 This document defines the primary navigation layer
 for the NEXAH research framework.
 
+For a cross-cutting map of established mathematics, system models,
+transformations, evidence status, and historical source pointers, see
+**[MATHEMATICS_MAP.md](MATHEMATICS_MAP.md)**.
+
+For controlled mathematical definitions and their validity boundaries, see
+**[MATHEMATICAL_FOUNDATIONS_GLOSSARY.md](FOUNDATION/MATHEMATICAL_FOUNDATIONS_GLOSSARY.md)**.
+
 It describes:
 
 - how the research stack is organized

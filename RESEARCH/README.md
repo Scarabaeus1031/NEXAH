@@ -1,13 +1,16 @@
-# 🧠 NEXAH — Research Layer
+# NEXAH Research
 
-The Research Layer contains the conceptual foundations, empirical evidence,
-working hypotheses, and theoretical extensions of NEXAH.
+NEXAH Research is the canonical home for the mathematical school, conceptual
+foundations, system definitions, research synthesis, and open questions of
+NEXAH.
 
-NEXAH investigates whether complex dynamical systems can be understood as
-motion through structured fields containing persistent regions, transition
-corridors, directional constraints, and navigable geometry.
+It connects established mathematics, NEXAH representations, bounded
+computational results, and historical sources without treating them as one
+authority or one physical mechanism.
 
-It is an active research program, not a finalized theory.
+This is a maintained research corpus and framework, not a finalized theory.
+Whether a research cycle is operationally active is decided by Mission
+Control, not by the presence of material in this directory.
 
 ---
 
@@ -18,9 +21,14 @@ Choose the entry that matches your goal:
 | Goal | Start with |
 |---|---|
 | Understand NEXAH in a few minutes | **[ABSTRACT.md](ABSTRACT.md)** |
+| Check the meaning of a mathematical term | **[Mathematical Foundations and Glossary](FOUNDATION/MATHEMATICAL_FOUNDATIONS_GLOSSARY.md)** |
+| Navigate mathematics, models, experiments, and historical sources | **[MATHEMATICS_MAP.md](MATHEMATICS_MAP.md)** |
 | Follow the recommended research path | **[RESEARCH_INDEX.md](RESEARCH_INDEX.md)** |
 | Understand the conceptual direction | **[RESEARCH_VISION.md](RESEARCH_VISION.md)** |
 | See how the central concepts connect | **[CORE_CONCEPT_MAP.md](CORE_CONCEPT_MAP.md)** |
+| Check neutral definitions of studied systems | **[SYSTEM_MODELS/](SYSTEM_MODELS/)** |
+| Locate bounded tests and evidence | **[VALIDATION/](VALIDATION/)** |
+| Recover historical mathematical material | **[Historical pointers](HISTORY/CODEX_MATHEMATICS_POINTERS.md)** |
 | Read the integrated manuscript | **[PAPER_DRAFT.md](PAPER_DRAFT.md)** |
 | Run the reference implementation | **[NEXAH Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)** |
 
@@ -28,6 +36,8 @@ Recommended first reading:
 
 ```text
 ABSTRACT
+→ MATHEMATICAL FOUNDATIONS AND GLOSSARY
+→ MATHEMATICS MAP
 → RESEARCH VISION
 → CORE CONCEPT MAP
 → VALIDATION
@@ -36,6 +46,37 @@ ABSTRACT
 
 For complete navigation through the research archive, use
 **[RESEARCH_INDEX.md](RESEARCH_INDEX.md)**.
+
+---
+
+## Ownership and migration rule
+
+```text
+NEXAH Research  -> definitions, mathematical framing, synthesis, open questions
+Science Lab     -> protocols, controls, evidence packages, bounded decisions
+Applications    -> domain programs and implementations
+ORION           -> certified deterministic engineering
+Library / Books -> cultural, editorial, and narrative Works
+Mission Control -> currentness, routing, activation, and source bindings
+NEXAH-CODEX     -> frozen exploratory provenance
+```
+
+Material is not moved here merely because it is mathematically interesting.
+Use the following rule:
+
+- maintain a canonical definition or synthesis here;
+- leave code, datasets, test reports, and outputs with their owning package;
+- add a pointer when an existing topic becomes relevant;
+- import a historical artifact only when a current research object genuinely
+  depends on it;
+- never promote visual similarity or symbolic language into a shared mechanism
+  by directory placement alone.
+
+Accordingly, Lorenz, Roessler, Halvorsen, Kuramoto, Mandelbrot/Julia,
+prime-residue and CRT work, IEEE field reconstructions, QRT, grids, cuts,
+projections, residuals, and invariants are now jointly navigable through the
+Mathematics Map. Their evidence and implementation files remain where they are
+owned.
 
 ---
 
@@ -150,9 +191,9 @@ remains open.
 | Area | Role | Status |
 |---|---|---|
 | **[FOUNDATION/](FOUNDATION/)** | Assumptions, variables, structural grammar | Foundational |
-| **[CORE_CONCEPTS/](CORE_CONCEPTS/)** | Field, phase, mismatch, geometry, JANUS | Active core |
-| **[VALIDATION/](VALIDATION/)** | Reproducibility, robustness, and cross-system experiments | Active evidence layer |
-| **[FINDINGS/](FINDINGS/)** | Condensed observations from experiments | Active synthesis |
+| **[CORE_CONCEPTS/](CORE_CONCEPTS/)** | Field, phase, mismatch, geometry, JANUS | Current conceptual core |
+| **[VALIDATION/](VALIDATION/)** | Reproducibility, robustness, and cross-system experiments | Evidence corpus |
+| **[FINDINGS/](FINDINGS/)** | Condensed observations from experiments | Research synthesis |
 | **[APPLIED_CASES/](APPLIED_CASES/)** | Concrete dynamical systems and scenarios | Applied research |
 | **[FIGURES/](FIGURES/)** | Curated visual synthesis and paper figures | Visual evidence |
 | **[NEXAH_TRANSLATIONS/](NEXAH_TRANSLATIONS/)** | Connections to adjacent disciplines | Interpretive layer |
@@ -160,10 +201,12 @@ remains open.
 | **[NEXAH_DEVELOPMENT/](NEXAH_DEVELOPMENT/)** | Earlier prototypes and development tracks | Legacy / experimental |
 | **[HISTORY/](HISTORY/)** | Historical context | Archive |
 | **[NOTES/](NOTES/)** | Informal working notes | Non-canonical |
+| **[SYSTEM_MODELS/](SYSTEM_MODELS/)** | Neutral system definitions and pointers | Navigation |
 
 The directory names describe research roles, not confidence levels. Check the
 status and limitations stated inside each experiment before treating a result
-as established evidence.
+as established evidence. They also do not declare an operationally active
+research cycle.
 
 ---
 
@@ -226,6 +269,8 @@ and **[Method Archaeology 01](../APPLICATIONS/orientation_translation/studies/me
 ## 🔗 Related Entry Points
 
 - **[Repository overview](../README.md)**
+- **[Mission Control Research Atlas](https://github.com/Scarabaeus1031/NEXAH-Mission-Control/blob/codex/mission-control-status-sync/CURRENT/RESEARCH_ATLAS.md)**
+- **[Science Lab](https://github.com/Scarabaeus1031/NEXAH-Science-Lab)**
 - **[Architecture visual guide](../ARCHITECTURE/visuals/README.md)**
 - **[Architecture](../ARCHITECTURE/README.md)**
 - **[NEXAH Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)**

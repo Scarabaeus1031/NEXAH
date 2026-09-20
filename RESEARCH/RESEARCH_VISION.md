@@ -2,6 +2,15 @@
 # 🧠 NEXAH — Research Vision  
 ## Structured Dynamics · Transition Geometry · Directional Navigation
 
+> **Scope — one research program, not the whole NEXAH identity.** This vision
+> preserves the transition-geometry direction as a working synthesis.
+> Statements about fields, mechanisms, emergence, navigation, or control must
+> be read through the local validation record; they are not universal laws or
+> automatically active research commitments. Begin with the
+> **[mathematical glossary](FOUNDATION/MATHEMATICAL_FOUNDATIONS_GLOSSARY.md)**
+> and **[Mathematics Map](MATHEMATICS_MAP.md)** for controlled definitions,
+> evidence classes, adjacent topics, and repository ownership.
+
 NEXAH is a research framework for reconstructing, analyzing,
 and navigating transitions inside complex dynamical systems.
 

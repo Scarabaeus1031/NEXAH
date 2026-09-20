@@ -6,6 +6,15 @@ and how navigation becomes possible inside structured fields.
 
 This directory contains the current foundational layer of the NEXAH framework.
 
+## Mathematical glossary
+
+The canonical, maintained mathematical vocabulary is
+**[NEXAH Mathematical Foundations and Glossary](MATHEMATICAL_FOUNDATIONS_GLOSSARY.md)**.
+It fixes the meanings and limits of source, relation, frame, transformation,
+cut, projection, grid, orbit, residual, CRT, prime-index and related terms.
+The glossary composes established mathematics and NEXAH research notation; it
+does not claim a new theorem.
+
 ## Current framework note
 
 **[Evidence-Bound Orientation over Heterogeneous State–Transition Systems —
