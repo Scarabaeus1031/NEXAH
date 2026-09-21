@@ -133,6 +133,15 @@ That leaves meaningful work for others: alternative projections, established
 baselines, new benchmark cases, observed measurements, uncertainty models, and
 better explanations.
 
+## Implemented projection-comparison sidecar
+
+The later
+[`IEEE Projection Fidelity Sidecar V1`](ieee_projection_fidelity_v1/README.md)
+implements one prospectively declared comparison using the committed IEEE-9
+and IEEE-14 frames. It measures quotient loss, explicit-residual recovery and
+classical baselines. It is a separate bounded result, not a retroactive change
+to Geometry V1 and not evidence of stability prediction or control readiness.
+
 ## Release gate
 
 The showcase is public-ready when:

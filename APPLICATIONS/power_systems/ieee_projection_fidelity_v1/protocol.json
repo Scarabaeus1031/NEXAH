@@ -1,0 +1,43 @@
+{
+  "protocol_id": "ieee-projection-fidelity-v1",
+  "schema_version": "1.0",
+  "status": "FROZEN",
+  "development_case": "ieee9",
+  "evaluation_case": "ieee14",
+  "source_protocol": "phase-v-ieee-geometry-v1",
+  "source_artifacts": [
+    "../ieee_geometry_v1/case_manifest.json",
+    "../ieee_geometry_v1/development_frames.json",
+    "../ieee_geometry_v1/evaluation_frames.json"
+  ],
+  "feature_names": [
+    "mean_bus_voltage",
+    "bus_voltage_std",
+    "bus_angle_range",
+    "maximum_line_loading",
+    "total_bus_consumption_p",
+    "total_bus_consumption_q",
+    "minimum_bus_voltage",
+    "maximum_bus_voltage"
+  ],
+  "paired_coordinates": [
+    "minimum_bus_voltage",
+    "maximum_bus_voltage"
+  ],
+  "quotient": "q=(z_min+z_max)/sqrt(2)",
+  "residual": "r=(z_min-z_max)/sqrt(2)",
+  "representations": [
+    "FULL8",
+    "Q_ONLY7",
+    "Q_PLUS_R8",
+    "PCA7",
+    "RANDOM7",
+    "DROP_MIN7",
+    "DROP_MAX7",
+    "MAINTAINED7"
+  ],
+  "random_seed": 8208,
+  "primary_tolerance": 1e-12,
+  "evaluation_refit_allowed": false,
+  "claim_ceiling": "BOUNDED_IEEE_REPRESENTATION_FIDELITY_AUDIT"
+}

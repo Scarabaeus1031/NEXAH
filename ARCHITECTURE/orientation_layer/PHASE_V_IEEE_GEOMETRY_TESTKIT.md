@@ -149,6 +149,13 @@ unimplemented: the manifest identifies the projections but does not yet freeze
 a comparison metric. Adding one after inspecting the development geometry would
 silently enlarge the protocol.
 
+Later disposition: Geometry V1 remains unchanged. A separately preregistered
+and versioned
+[`IEEE Projection Fidelity Sidecar V1`](../../APPLICATIONS/power_systems/ieee_projection_fidelity_v1/README.md)
+now supplies a bounded quotient/residual comparison over the committed frames.
+Its result belongs to the sidecar protocol and must not be read back into the
+original Phase V gate.
+
 Operators must return explicit insufficiency when sampling, alignment, or scale
 does not support a value. No prime-number gates, fixed angular apertures,
 universal return law, or control semantics are assumed.
