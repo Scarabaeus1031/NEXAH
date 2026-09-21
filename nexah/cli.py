@@ -23,6 +23,7 @@ import json
 import os
 import shlex
 from datetime import datetime
+from pathlib import Path
 from nexah.backends import V07BackendAdapter
 from nexah.applications import (
     NetworkOrientationApplication,
@@ -38,12 +39,17 @@ from nexah.power_systems import (
     IEEEGeometryCampaign,
     IEEEStandardizationModel,
     analyze_ieee_geometry,
+    build_ieee_projection_fidelity_computation_record,
+    analysis_from_result_payload,
     build_ieee_geometry_orientation_brief,
     build_ieee_geometry_campaign,
     check_manifest_adapter_protocol,
     check_manifest_environment,
     fit_ieee_standardization,
     run_ieee_geometry_probe_suite,
+    sha256_reference,
+    verify_ieee_projection_fidelity_evidence_bundle,
+    write_ieee_projection_fidelity_evidence_bundle,
 )
 from nexah.sources import IEEEPandapowerAdapter
 from nexah.orientation import (
@@ -435,6 +441,41 @@ def analyze_ieee_geometry_command(args):
         print(json.dumps(payload, indent=2))
 
 
+def export_ieee_projection_fidelity_evidence_command(args):
+    """Create one hash-bound bundle from a canonical validation result."""
+
+    result_source = load_json_object(args.analysis_result)
+    if result_source is None:
+        return
+    analysis_payload = Path(args.analysis_result).read_bytes()
+    analysis = analysis_from_result_payload(result_source)
+    source_hashes = result_source.get("source_sha256")
+    if not isinstance(source_hashes, dict):
+        raise ValueError("canonical result lacks source SHA-256 references")
+    development_hash = source_hashes.get("development_frames.json")
+    evaluation_hash = source_hashes.get("evaluation_frames.json")
+    if not isinstance(development_hash, str) or not isinstance(evaluation_hash, str):
+        raise ValueError("canonical result lacks campaign SHA-256 references")
+    development_reference = f"development_campaign:sha256:{development_hash}"
+    evaluation_reference = f"evaluation_campaign:sha256:{evaluation_hash}"
+    record = build_ieee_projection_fidelity_computation_record(
+        analysis,
+        computed_at=args.computed_at,
+        development_reference=development_reference,
+        evaluation_reference=evaluation_reference,
+        analysis_payload=analysis_payload,
+    )
+    manifest = write_ieee_projection_fidelity_evidence_bundle(
+        Path(args.out_dir), analysis, record, analysis_payload=analysis_payload
+    )
+    print(json.dumps(manifest, indent=2))
+
+
+def verify_ieee_projection_fidelity_evidence_command(args):
+    manifest = verify_ieee_projection_fidelity_evidence_bundle(Path(args.bundle))
+    print(json.dumps(manifest, indent=2))
+
+
 def validate_outcome_firewall_command(args):
     envelope_source = load_json_object(args.envelope)
     record_source = load_json_object(args.record)
@@ -583,6 +624,30 @@ def main():
     )
     geometry_parser.add_argument("--out")
 
+    # EXPORT IEEE PROJECTION FIDELITY EVIDENCE
+    fidelity_parser = subparsers.add_parser(
+        "export-ieee-projection-fidelity-evidence",
+        description=(
+            "Export a hash-bound IEEE Projection Fidelity computation bundle"
+        ),
+    )
+    fidelity_parser.add_argument(
+        "analysis_result",
+        help="canonical projection-fidelity validation result JSON",
+    )
+    fidelity_parser.add_argument(
+        "--computed-at",
+        type=parse_timestamp,
+        required=True,
+    )
+    fidelity_parser.add_argument("--out-dir", required=True)
+
+    fidelity_verify_parser = subparsers.add_parser(
+        "verify-ieee-projection-fidelity-evidence",
+        description="Verify every file and cross-reference in an evidence bundle",
+    )
+    fidelity_verify_parser.add_argument("bundle")
+
     # VALIDATE OUTCOME FIREWALL
     firewall_parser = subparsers.add_parser(
         "validate-outcome-firewall",
@@ -615,6 +680,10 @@ def main():
         build_ieee_frames_command(args)
     elif args.command == "analyze-ieee-geometry":
         analyze_ieee_geometry_command(args)
+    elif args.command == "export-ieee-projection-fidelity-evidence":
+        export_ieee_projection_fidelity_evidence_command(args)
+    elif args.command == "verify-ieee-projection-fidelity-evidence":
+        verify_ieee_projection_fidelity_evidence_command(args)
     elif args.command == "validate-outcome-firewall":
         validate_outcome_firewall_command(args)
     else:

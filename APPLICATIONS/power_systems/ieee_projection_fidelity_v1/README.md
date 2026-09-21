@@ -59,3 +59,46 @@ Geometry V1 remains frozen and continues to report cross-projection agreement
 as unknown under its original protocol. This sidecar is a new, separately
 declared analysis. A later Orientation protocol may cite the sidecar; it must
 not rewrite the V1 report retrospectively.
+
+## Bound computation evidence bundle
+
+The Core can export the analysis as a closed four-file bundle:
+
+- `analysis.json`: exact canonical sidecar analysis;
+- `computation_result.json`: existing `ComputationResultRecord` binding;
+- `report.md`: faithful Human-readable projection;
+- `manifest.json`: file allowlist, byte counts, SHA-256 checksums, claim
+  ceiling and Human-authority boundary.
+
+Export requires an explicit timezone-aware computation timestamp and refuses
+to overwrite an existing directory:
+
+```bash
+python -m nexah.cli export-ieee-projection-fidelity-evidence \
+  validation/ieee_projection_fidelity_v1/canonical_result.json \
+  --computed-at 2026-09-21T12:00:00+00:00 \
+  --out-dir /tmp/nexah-ieee-projection-evidence
+```
+
+Verify every byte and the record-to-analysis cross-reference:
+
+```bash
+python -m nexah.cli verify-ieee-projection-fidelity-evidence \
+  /tmp/nexah-ieee-projection-evidence
+```
+
+The bundle is classified `COMPUTATION_RESULT_ONLY`. It is not an independent
+observation, an ORION Orientation Report, a THE EYE A2 comparison result or a
+Human decision. A NEXAHEDRON Compare view remains separately governance-gated;
+the bundle does not silently activate that deferred product surface.
+
+The exporter preserves the canonical result bytes exactly. It does not rerun
+SVD or QR during packaging; this avoids giving platform-level floating-point
+variation a new artifact identity. Numerical reproduction remains the job of
+the separate canonical validation runner.
+
+The committed reference export is
+[`validation/ieee_projection_fidelity_v1/evidence_bundle_v1`](../../../validation/ieee_projection_fidelity_v1/evidence_bundle_v1/manifest.json).
+It was sealed with the explicit packaging timestamp
+`2026-09-21T21:32:57+00:00`; using that timestamp and the command above
+reproduces its `computation_result.json` byte for byte.

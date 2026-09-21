@@ -26,7 +26,9 @@ python -m validation.ieee_projection_fidelity_v1.run_validation \
 
 See [`canonical_summary.md`](canonical_summary.md),
 [`canonical_result.json`](canonical_result.json), and
-[`VALIDATION_RECORD.md`](VALIDATION_RECORD.md).
+[`VALIDATION_RECORD.md`](VALIDATION_RECORD.md). The separately packaged,
+hash-bound computation evidence is available in
+[`evidence_bundle_v1`](evidence_bundle_v1/manifest.json).
 
 ## Boundary
 

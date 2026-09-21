@@ -398,7 +398,9 @@ def _derived_row(frame: IEEEGeometryFrame) -> tuple[tuple[float, ...], float]:
         raise IEEEProjectionFidelityError(
             "system summary lacks required features: " + ", ".join(sorted(missing))
         )
-    error = max(abs(derived[name] - maintained[name]) for name in derived)
+    reproduction_error = max(
+        abs(derived[name] - maintained[name]) for name in derived
+    )
     row = (
         maintained["mean_bus_voltage"],
         maintained["bus_voltage_std"],
@@ -409,7 +411,7 @@ def _derived_row(frame: IEEEGeometryFrame) -> tuple[tuple[float, ...], float]:
         maintained["minimum_bus_voltage"],
         float(np.max(vm)),
     )
-    return row, float(error)
+    return row, float(reproduction_error)
 
 
 def _fit_standardization(values: FloatArray) -> tuple[FloatArray, FloatArray]:
@@ -425,7 +427,10 @@ def _standardized_matrix(
     model: IEEEProjectionFidelityModel,
 ) -> FloatArray:
     raw, _, _ = _campaign_matrix(campaign)
-    return (raw - np.asarray(model.means)) / np.asarray(model.population_stddevs)
+    return np.asarray(
+        (raw - np.asarray(model.means)) / np.asarray(model.population_stddevs),
+        dtype=np.float64,
+    )
 
 
 def _maintained_raw(raw: FloatArray) -> FloatArray:
@@ -513,7 +518,10 @@ def _fidelity_metrics(
 def _pairwise_distances(values: FloatArray) -> FloatArray:
     delta = values[:, None, :] - values[None, :, :]
     matrix = np.sqrt(np.sum(delta * delta, axis=2))
-    return matrix[np.triu_indices(len(values), 1)]
+    return np.asarray(
+        matrix[np.triu_indices(len(values), 1)],
+        dtype=np.float64,
+    )
 
 
 def _turns(values: FloatArray) -> FloatArray:

@@ -1,0 +1,436 @@
+{
+  "decision": "IEEE_PROJECTION_FIDELITY_CONFIRMED",
+  "development": {
+    "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+    "case_id": "ieee9",
+    "case_role": "method_development",
+    "converged_prefix_count": 17,
+    "failed_frame_count": 2,
+    "frame_count": 19,
+    "load_scale_max_converged": 2.2,
+    "load_scale_min": 0.6,
+    "metrics": [
+      {
+        "adjacent_relative_error_max": 0.0,
+        "adjacent_relative_error_median": 0.0,
+        "pair_distance_correlation": 1.0,
+        "pair_distance_max_abs_error": 0.0,
+        "pair_distance_nrmse": 0.0,
+        "path_length_relative_error": 0.0,
+        "representation": "FULL8",
+        "stored_scalars": 8,
+        "turn_angle_mae_degrees": 0.0
+      },
+      {
+        "adjacent_relative_error_max": 0.1634639020744317,
+        "adjacent_relative_error_median": 0.037213831933584116,
+        "pair_distance_correlation": 0.9986455247267518,
+        "pair_distance_max_abs_error": 0.5338699869160313,
+        "pair_distance_nrmse": 0.04695530742063206,
+        "path_length_relative_error": 0.07065467133887961,
+        "representation": "Q_ONLY7",
+        "stored_scalars": 7,
+        "turn_angle_mae_degrees": 1.626463378122895
+      },
+      {
+        "adjacent_relative_error_max": 1.8763604758868404e-16,
+        "adjacent_relative_error_median": 0.0,
+        "pair_distance_correlation": 1.0,
+        "pair_distance_max_abs_error": 8.881784197001252e-16,
+        "pair_distance_nrmse": 5.74960357138917e-17,
+        "path_length_relative_error": 0.0,
+        "representation": "Q_PLUS_R8",
+        "stored_scalars": 8,
+        "turn_angle_mae_degrees": 5.5288642212774134e-14
+      },
+      {
+        "adjacent_relative_error_max": 4.91875186471299e-06,
+        "adjacent_relative_error_median": 5.185355218863918e-07,
+        "pair_distance_correlation": 0.9999999999999846,
+        "pair_distance_max_abs_error": 2.33829348045278e-06,
+        "pair_distance_nrmse": 1.3957014228306609e-07,
+        "path_length_relative_error": 1.022036746880927e-06,
+        "representation": "PCA7",
+        "stored_scalars": 7,
+        "turn_angle_mae_degrees": 0.0008498191256388373
+      },
+      {
+        "adjacent_relative_error_max": 0.061826864492341885,
+        "adjacent_relative_error_median": 0.002981425422022052,
+        "pair_distance_correlation": 0.9999832335082403,
+        "pair_distance_max_abs_error": 0.053113790499628166,
+        "pair_distance_nrmse": 0.007817947935803801,
+        "path_length_relative_error": 0.006916346857731545,
+        "representation": "RANDOM7",
+        "stored_scalars": 7,
+        "turn_angle_mae_degrees": 0.7038753583534473
+      },
+      {
+        "adjacent_relative_error_max": 0.10777932722313303,
+        "adjacent_relative_error_median": 0.05271280915062747,
+        "pair_distance_correlation": 0.9994325057263985,
+        "pair_distance_max_abs_error": 0.7095013961120955,
+        "pair_distance_nrmse": 0.07931539118744806,
+        "path_length_relative_error": 0.056020700655635164,
+        "representation": "DROP_MIN7",
+        "stored_scalars": 7,
+        "turn_angle_mae_degrees": 0.34958047047603047
+      },
+      {
+        "adjacent_relative_error_max": 0.5861737934089037,
+        "adjacent_relative_error_median": 0.0,
+        "pair_distance_correlation": 0.9774821580700498,
+        "pair_distance_max_abs_error": 1.875704436839781,
+        "pair_distance_nrmse": 0.16543751942174537,
+        "path_length_relative_error": 0.15722876635225916,
+        "representation": "DROP_MAX7",
+        "stored_scalars": 7,
+        "turn_angle_mae_degrees": 5.762606642617212
+      },
+      {
+        "adjacent_relative_error_max": 0.5861737934089039,
+        "adjacent_relative_error_median": 0.0,
+        "pair_distance_correlation": 0.97748215807005,
+        "pair_distance_max_abs_error": 1.875704436839781,
+        "pair_distance_nrmse": 0.16543751942174537,
+        "path_length_relative_error": 0.15722876635225916,
+        "representation": "MAINTAINED7",
+        "stored_scalars": 7,
+        "turn_angle_mae_degrees": 5.762606642617169
+      }
+    ],
+    "raw_reconstruction_max_error": 2.842170943040401e-14,
+    "source_reproduction_max_error": 0.0,
+    "standardized_reconstruction_max_error": 4.440892098500626e-16
+  },
+  "evaluation": {
+    "campaign_id": "phase-v-ieee-geometry-v1-ieee14",
+    "case_id": "ieee14",
+    "case_role": "locked_evaluation",
+    "converged_prefix_count": 19,
+    "failed_frame_count": 0,
+    "frame_count": 19,
+    "load_scale_max_converged": 2.4,
+    "load_scale_min": 0.6,
+    "metrics": [
+      {
+        "adjacent_relative_error_max": 0.0,
+        "adjacent_relative_error_median": 0.0,
+        "pair_distance_correlation": 1.0,
+        "pair_distance_max_abs_error": 0.0,
+        "pair_distance_nrmse": 0.0,
+        "path_length_relative_error": 0.0,
+        "representation": "FULL8",
+        "stored_scalars": 8,
+        "turn_angle_mae_degrees": 0.0
+      },
+      {
+        "adjacent_relative_error_max": 0.023855719610163653,
+        "adjacent_relative_error_median": 0.007106763132793334,
+        "pair_distance_correlation": 0.9999479183682536,
+        "pair_distance_max_abs_error": 0.059433791241581435,
+        "pair_distance_nrmse": 0.012304960925787834,
+        "path_length_relative_error": 0.011300411230909498,
+        "representation": "Q_ONLY7",
+        "stored_scalars": 7,
+        "turn_angle_mae_degrees": 0.24681755963370608
+      },
+      {
+        "adjacent_relative_error_max": 2.2541894707946485e-15,
+        "adjacent_relative_error_median": 5.068981950050597e-16,
+        "pair_distance_correlation": 1.0,
+        "pair_distance_max_abs_error": 1.3322676295501878e-15,
+        "pair_distance_nrmse": 2.3751229852531143e-16,
+        "path_length_relative_error": 3.1984604540697377e-16,
+        "representation": "Q_PLUS_R8",
+        "stored_scalars": 8,
+        "turn_angle_mae_degrees": 1.4845706704360592e-13
+      },
+      {
+        "adjacent_relative_error_max": 0.015638077143128554,
+        "adjacent_relative_error_median": 0.0014135296592525152,
+        "pair_distance_correlation": 0.9999890568976292,
+        "pair_distance_max_abs_error": 0.023887209212344995,
+        "pair_distance_nrmse": 0.0042563794747159656,
+        "path_length_relative_error": 0.004542878015204856,
+        "representation": "PCA7",
+        "stored_scalars": 7,
+        "turn_angle_mae_degrees": 0.25988113005894503
+      },
+      {
+        "adjacent_relative_error_max": 0.08085824198787755,
+        "adjacent_relative_error_median": 0.053897452434851174,
+        "pair_distance_correlation": 0.9998347404058399,
+        "pair_distance_max_abs_error": 0.331004618584247,
+        "pair_distance_nrmse": 0.06982973560214506,
+        "path_length_relative_error": 0.05918213439064987,
+        "representation": "RANDOM7",
+        "stored_scalars": 7,
+        "turn_angle_mae_degrees": 0.23650261198523237
+      },
+      {
+        "adjacent_relative_error_max": 0.04830923495303502,
+        "adjacent_relative_error_median": 0.014264869040372169,
+        "pair_distance_correlation": 0.9997835504237683,
+        "pair_distance_max_abs_error": 0.1198904926750819,
+        "pair_distance_nrmse": 0.024798626826770788,
+        "path_length_relative_error": 0.022838880092041134,
+        "representation": "DROP_MIN7",
+        "stored_scalars": 7,
+        "turn_angle_mae_degrees": 0.6341376070879216
+      },
+      {
+        "adjacent_relative_error_max": 2.1570053451469076e-16,
+        "adjacent_relative_error_median": 0.0,
+        "pair_distance_correlation": 1.0,
+        "pair_distance_max_abs_error": 8.881784197001252e-16,
+        "pair_distance_nrmse": 8.359741096074049e-17,
+        "path_length_relative_error": 0.0,
+        "representation": "DROP_MAX7",
+        "stored_scalars": 7,
+        "turn_angle_mae_degrees": 3.056606594612365e-14
+      },
+      {
+        "adjacent_relative_error_max": 2.1570053451469076e-16,
+        "adjacent_relative_error_median": 0.0,
+        "pair_distance_correlation": 1.0,
+        "pair_distance_max_abs_error": 4.440892098500626e-16,
+        "pair_distance_nrmse": 5.701832253799388e-17,
+        "path_length_relative_error": 0.0,
+        "representation": "MAINTAINED7",
+        "stored_scalars": 7,
+        "turn_angle_mae_degrees": 1.2495370340484979e-13
+      }
+    ],
+    "raw_reconstruction_max_error": 5.684341886080802e-14,
+    "source_reproduction_max_error": 0.0,
+    "standardized_reconstruction_max_error": 3.552713678800501e-15
+  },
+  "evaluation_refit": false,
+  "gate_passed": true,
+  "model": {
+    "feature_names": [
+      "mean_bus_voltage",
+      "bus_voltage_std",
+      "bus_angle_range",
+      "maximum_line_loading",
+      "total_bus_consumption_p",
+      "total_bus_consumption_q",
+      "minimum_bus_voltage",
+      "maximum_bus_voltage"
+    ],
+    "fit_campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+    "fit_case_id": "ieee9",
+    "maintained_means": [
+      0.9004388631593329,
+      0.9655140400326917,
+      0.03401454477706132,
+      20.582020685775515,
+      111.7457253792428,
+      445.3513564361333,
+      164.61699706287467
+    ],
+    "maintained_population_stddevs": [
+      0.07109194220213903,
+      0.029590987538699348,
+      0.024382417627105944,
+      9.372897183188611,
+      55.94750671636508,
+      147.88786728829734,
+      51.55515992681766
+    ],
+    "means": [
+      0.9655140400326917,
+      0.03401454477706132,
+      20.582020685775515,
+      111.7457253792428,
+      445.3513564361333,
+      164.61699706287467,
+      0.9004388631593329,
+      1.0024046865963756
+    ],
+    "pca_basis": [
+      [
+        -0.3748219277934509,
+        -0.06415467789107349,
+        0.1459474571132997,
+        0.3569689779099879,
+        -0.012751332629656435,
+        -0.09282194309443277,
+        -0.47982805078644414
+      ],
+      [
+        0.37336413150593595,
+        0.10880766117938581,
+        -0.1912793549793548,
+        -0.40366114699815814,
+        0.1505799941423102,
+        -0.13111253220530478,
+        -0.7751217616256332
+      ],
+      [
+        0.33603517133844385,
+        0.47002842624145696,
+        -0.3852222115355886,
+        0.6352738579841357,
+        0.256958506866209,
+        0.21887217245330542,
+        0.003112484156722434
+      ],
+      [
+        0.36860082636836333,
+        0.2019677011964917,
+        0.16261632937059115,
+        0.20630898124669542,
+        -0.760947361405018,
+        -0.41825720731075483,
+        -0.01813729334309567
+      ],
+      [
+        0.36738687845380186,
+        -0.18875341042316432,
+        0.5041962614789127,
+        0.19324187901813325,
+        0.5467957023060779,
+        -0.4756866109303318,
+        0.11215703981709972
+      ],
+      [
+        0.36918994254389403,
+        -0.15737007484844445,
+        0.5196954700795828,
+        0.04117331048737412,
+        -0.1355827650640148,
+        0.7242645527976801,
+        -0.1483850039561145
+      ],
+      [
+        -0.3743672281328046,
+        -0.07644323469385386,
+        0.18644244310795027,
+        0.40467533664102046,
+        -0.02966728427803486,
+        -0.016132694438461683,
+        -0.3647039477405036
+      ],
+      [
+        -0.2447373868837565,
+        0.8099942208664879,
+        0.4563039436383347,
+        -0.24636307240425032,
+        0.11766959590677678,
+        0.015884374385292412,
+        0.031723286215627575
+      ]
+    ],
+    "population_stddevs": [
+      0.029590987538699348,
+      0.024382417627105944,
+      9.372897183188611,
+      55.94750671636508,
+      147.88786728829734,
+      51.55515992681766,
+      0.07109194220213903,
+      0.004040970405394241
+    ],
+    "protocol_id": "ieee-projection-fidelity-v1",
+    "random_basis": [
+      [
+        -0.1439670792280836,
+        0.38909928695640517,
+        -0.3254385806071226,
+        0.5041190303491838,
+        -0.4783165502863423,
+        0.31293477248974605,
+        -0.34910797584703035
+      ],
+      [
+        0.47320338912711507,
+        -0.2560265081038752,
+        -0.562709748667422,
+        0.314202573136736,
+        0.5068222411407256,
+        0.19370199128692508,
+        -0.02643969158558344
+      ],
+      [
+        0.24986957193101075,
+        0.7737607138418958,
+        0.12372101583566843,
+        0.23227268776025636,
+        0.2708907034675622,
+        -0.2682004274425063,
+        0.34950269013472357
+      ],
+      [
+        0.05030355117296756,
+        0.18205488450251048,
+        0.07045385080362973,
+        -0.13518004472780853,
+        0.23781791752254616,
+        -0.2087409053134297,
+        -0.7819795793978072
+      ],
+      [
+        0.4658666088133462,
+        0.21504498200609012,
+        0.03614737752162461,
+        -0.49526206396492173,
+        -0.03840685930621998,
+        0.1466837455286036,
+        -0.26727518047284776
+      ],
+      [
+        0.489244632480864,
+        -0.2050222139400121,
+        -0.1324514809313622,
+        0.11312241696350377,
+        -0.5400055567929992,
+        -0.6245585125392337,
+        0.0043843099149626615
+      ],
+      [
+        0.4303889004878918,
+        0.06565439648448097,
+        0.17571689033443724,
+        -0.16456028419548738,
+        -0.2901775415068992,
+        0.5725151790432682,
+        0.18516727786087636
+      ],
+      [
+        0.22081704892917478,
+        -0.2421024504403154,
+        0.7123555158087792,
+        0.5382891601593958,
+        0.08438758607331534,
+        0.09840754485501495,
+        -0.19503385819297686
+      ]
+    ],
+    "random_seed": 8208,
+    "schema_version": "1.0"
+  },
+  "nonclaims": [
+    "no stability prediction or early warning",
+    "no risk, causal, or control claim",
+    "no physical AXIS08 identity",
+    "no universal compression superiority",
+    "Q_PLUS_R8 stores eight scalars and is not compression"
+  ],
+  "protocol_id": "ieee-projection-fidelity-v1",
+  "protocol_sha256": "b51144d61ddaa4954a24de4e215221498bcfc901d3152acb31d3114598629db1",
+  "q_only_kernel_max_distance": 2.220446049250313e-16,
+  "q_plus_r_kernel_detection_rate": 1.0,
+  "q_plus_r_pair_distance_max_error": 1.3322676295501878e-15,
+  "q_plus_r_raw_reconstruction_max_error": 5.684341886080802e-14,
+  "q_plus_r_standardized_reconstruction_max_error": 3.552713678800501e-15,
+  "schema_version": "1.0",
+  "source_reproduction_max_error": 0.0,
+  "source_sha256": {
+    "case_manifest.json": "a6df815729abdb49c3d3f0e09f6fb786395523beb402b1582095436d41bcb566",
+    "development_frames.json": "14744e193321398536529cb81c307968ab363510493265ff1e1cf1340f1224d1",
+    "evaluation_frames.json": "0b0f8771eb775bfbb09f3e4fa92c860c30a9422f578ddcd40c23846d6410386b"
+  },
+  "status": "PASS"
+}
