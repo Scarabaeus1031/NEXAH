@@ -58,7 +58,7 @@ If you are completely new to NEXAH, begin with the repository
 |---|---|---|
 | **[Network Orientation](network_orientation/)** | Typed graph topology, reachability, structural comparison, five read-only probes, and V1/V2 fixtures | Verified illustrative application |
 | **[Orientation Translation](orientation_translation/)** | Source-bounded public-knowledge pilots, Reflections, Neighborhoods, comparisons, methodological studies, and reviews | Applied methodological research; reader effect not yet tested |
-| **[Power Systems](power_systems/)** | Current IEEE benchmark geometry/replay plus historical exploratory warning, prediction, recovery, scaling, and control programs | Bounded benchmark evidence / historical research lineage |
+| **[Power Systems](power_systems/)** | Current IEEE benchmark geometry/replay and projection-fidelity sidecar plus historical exploratory warning, prediction, recovery, scaling, and control programs | Bounded benchmark evidence / historical research lineage |
 | **[Lorenz Research](dynamical_systems/lorenz/)** | Density, FTLE, Lyapunov, separatrix, regime, and navigation analysis | Active reference system |
 | **[Halvorsen Research](dynamical_systems/halvorsen/)** | Distributed transport, transition graphs, residue models, reachability, and policy experiments | Experimental research |
 | **[Lorenz Demo](demos/lorenz_demo/)** | Compact visual pipeline for geometry and transport structures | Runnable demonstration |
@@ -92,7 +92,8 @@ design. Reader effect has not yet been established.
 
 > **Current demonstrated scope:** reproducible IEEE benchmark computation,
 > failure-aware geometry extraction, unchanged IEEE-9→IEEE-14 method transfer,
-> structural replay and bounded Orientation Brief generation. Prospective
+> a prospectively declared quotient/residual fidelity comparison, structural
+> replay and bounded Orientation Brief generation. Prospective
 > warning, prediction, risk, stability forecasting, causal precursors,
 > operational control and universal scaling are not established. Historical
 > experiments remain preserved as research lineage.
@@ -141,6 +142,11 @@ The maintained public-use path is the completed
 **[IEEE Geometry V1 Showcase](power_systems/ieee_geometry_v1/showcase/README.md)**,
 with a 90-second map, a ten-minute replay, a research path, and reproducible
 figures governed by the Phase V evidence and outcome testkit.
+The separately versioned
+**[IEEE Projection Fidelity Sidecar V1](power_systems/ieee_projection_fidelity_v1/README.md)**
+adds a typed, reproducible quotient/residual comparison over the committed
+IEEE-9/14 frames without rewriting Geometry V1 or implying stability,
+prediction or control capability.
 
 ---
 

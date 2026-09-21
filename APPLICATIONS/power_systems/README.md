@@ -4,6 +4,7 @@
 
 > **Current maintained development entry:**
 > **[IEEE Geometry V1 frozen protocol](ieee_geometry_v1/README.md)**,
+> **[IEEE Projection Fidelity Sidecar V1](ieee_projection_fidelity_v1/README.md)**,
 > **[IEEE Geometry Showcase Plan](IEEE_GEOMETRY_SHOWCASE_PLAN.md)**, and
 > **[Phase V specification](../../ARCHITECTURE/orientation_layer/PHASE_V_IEEE_GEOMETRY_TESTKIT.md)**.
 > Phase V treats IEEE/Pandapower as reproducible benchmark computation, not as
@@ -16,6 +17,8 @@
 - reproducible IEEE benchmark computation;
 - failure-aware geometry extraction;
 - unchanged IEEE-9→IEEE-14 method transfer;
+- prospectively declared projection-fidelity comparison with an explicit
+  residual and locked IEEE-14 evaluation;
 - bounded structural/geometric replay;
 - provenance-complete Orientation Brief generation.
 

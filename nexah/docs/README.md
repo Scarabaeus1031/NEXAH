@@ -17,6 +17,9 @@ These documents describe or record the minimal `nexah` package.
 - **[IEEE Orientation Validation V1](../../validation/ieee_orientation_v1/)** —
   coupled pandapower source, scoped report, entity attribution, and held-out
   domain validation.
+- **[IEEE Projection Fidelity V1](../../validation/ieee_projection_fidelity_v1/)** —
+  frozen IEEE-9 fit, locked IEEE-14 evaluation, explicit quotient/residual
+  reconstruction, classical baselines, and bounded claim surface.
 - **[IEEE Scaling Pattern V1](../../validation/ieee_scaling_pattern_v1/)** —
   physical reconstruction and critical audit of the historical cross-scale
   curvature hypothesis through PEGASE-9241.

@@ -281,6 +281,10 @@ The current public-use plan is
 **[IEEE_GEOMETRY_SHOWCASE_PLAN.md](APPLICATIONS/power_systems/IEEE_GEOMETRY_SHOWCASE_PLAN.md)**.
 It translates the historical Tube concept into a parameterized IEEE state
 family with explicit benchmark, simulation, observation, and outcome labels.
+The separately versioned
+**[IEEE Projection Fidelity Sidecar V1](APPLICATIONS/power_systems/ieee_projection_fidelity_v1/README.md)**
+provides the executable quotient/residual comparison over the committed
+IEEE-9/14 frames; it does not modify the frozen Geometry V1 result.
 
 `APPLICATIONS/archive/` preserves superseded and historical application demos.
 
