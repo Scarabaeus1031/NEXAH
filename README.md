@@ -6,9 +6,11 @@
 
 This repository preserves the research, framework, Orientation Language, experiments, applications, governance and historical development of the **NEXAH Orientation Ecosystem**.
 
-**Public path:** [Discover NEXAH](https://nexah.de) · [Use the Visitor Guide](https://nexah.de/visitor-guide/) · [Try NEXAHEDRON](https://nexahedron.com) · [Inspect ORION](https://github.com/Scarabaeus1031/NEXAH-ORION)
+**Public path:** [Discover NEXAH](https://nexah.de) · [Use the Visitor Guide](https://nexah.de/visitor-guide/) · [Inspect Science Lab](https://github.com/Scarabaeus1031/NEXAH-Science-Lab) · [Try NEXAHEDRON](https://nexahedron.com) · [Inspect ORION](https://github.com/Scarabaeus1031/NEXAH-ORION)
 
-It is not the public landing page, the ORION repository or the Human-facing Workspace. It is the scientific workshop and long-term record behind those public chapters.
+It is not the public landing page, Science Lab, the ORION repository or the
+Human-facing Workspace. It is the framework, semantic and implementation home
+that connects those public responsibilities while preserving their boundaries.
 
 **Understanding before action.**
 
@@ -48,7 +50,7 @@ decision, and STOP remain with the Human.
 | Understand the purpose and principles | **[Ecosystem Constitution v1.0](GOVERNANCE/ECOSYSTEM_CONSTITUTION.md)** · **[Governance Index](GOVERNANCE/README.md)** · **[NEXAH Manifesto](MANIFESTO.md)** |
 | Read the published specification | **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** |
 | Use or develop the software | **[Orientation Kernel](nexah/README.md)** |
-| Inspect research and evidence | **[Evidence Atlas](docs/evidence/README.md)** · **[Research Portal](RESEARCH/README.md)** |
+| Inspect research and evidence | **[NEXAH Science Lab](https://github.com/Scarabaeus1031/NEXAH-Science-Lab)** · **[Evidence Atlas](docs/evidence/README.md)** · **[Research Portal](RESEARCH/README.md)** |
 | Explore Works, journeys, or editorial practice | **[Begin with THE ATLAS OF ATLASES](docs/library/atlas-of-atlases/README.md)** · **[Public Library on Are.na](https://www.are.na/nexah-scarabaeus1031/channels)** · **[Library Architecture & Registry](LIBRARY/README.md)** · **[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)** |
 | Evaluate a domain application | **[Applications](APPLICATIONS/README.md)** |
 | Inspect Orientation Translation pilots and methodological evidence | **[Applications / Orientation Translation](APPLICATIONS/orientation_translation/)** |
@@ -101,10 +103,10 @@ the private Mission Control plane.
 
 - **Orientation Language 1.0** is published as the canonical semantic authority.
 - **Orientation Kernel v0.7** is maintained as the current implementation track.
-- **Research** is maintained as a scoped, evidence-bound portfolio. No Science
-  Lab research cycle is currently active; new research requires an explicit
-  Human reopen decision. Existing research remains preserved and is neither
-  deprecated nor archived by this operational pause.
+- **Research** is maintained as a scoped, evidence-bound portfolio. The public
+  Science Lab currently records 42 results across 18 research families and one
+  admitted method/protocol contribution candidate. No Science Lab research
+  cycle is active; these counts do not establish novelty or usefulness.
 - **Reference applications** for Network Orientation and IEEE Geometry are maintained.
 - **Library and Editorial infrastructure** operate within documented human-governance boundaries.
 
@@ -124,24 +126,22 @@ tag.
 
 ## Current Development Direction
 
-Broad exploratory research is currently paused by Human Owner decision. The
-active ecosystem priority is Mission Control currentness and system
-archaeology, not a new research cycle. The strongest preserved candidate for a
-later evidence cycle remains one bounded question: whether NEXAH's orientation
-principles can provide measurable benefit in a Human-readable task.
+Broad exploratory research remains paused. The main programme is
+**Orientation**; the current product direction is **NEXAH Compare — Translation,
+Record & Return Stack**, a small Boundary and Transition instrument assembled
+from existing semantics, software and evidence. This is a strategy direction,
+not an active build or product-readiness claim.
 
-If that candidate is explicitly reopened, the evidence direction is to:
+The next strategy decision is to select or decline one exact Human-usefulness
+wedge. If selected, the sequence is deliberately small:
 
-1. freeze one bounded usefulness contract;
-2. make one evidence object clean and citable;
-3. test one understandable external entry route; and
-4. preserve a later ORION semantic Research Session as a separate candidate
-   rather than claiming it as a present capability.
+1. freeze one person, task, baseline, outcome and STOP rule;
+2. assemble the minimum inspectable comparison and Return path;
+3. test it against a strong equal-information baseline; and
+4. publish one bounded result with its residuals, uncertainty and claim limits.
 
-These are parked, bounded evidence goals, not an active programme, claims of
-execution or completed capability. No general ORION Research Session, unified
-Runtime, autonomous research agent, or cross-domain usefulness claim is
-currently adopted.
+No wedge or research cycle is currently active. External Human usefulness,
+scientific novelty and an integrated product remain unvalidated.
 
 ---
 

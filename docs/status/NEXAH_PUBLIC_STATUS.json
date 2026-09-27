@@ -1,31 +1,36 @@
 {
-  "schema": "nexah-public-status/0.1",
-  "as_of": "2026-09-20",
+  "schema": "nexah-public-status/0.2",
+  "as_of": "2026-09-27",
   "projection_source": {
     "system": "NEXAH Mission Control",
-    "revision": "53cb1e4",
+    "revision": "2820ab3",
     "visibility": "private_control_plane",
     "authority": "currentness_routing_and_activation"
   },
   "projection_boundary": "Read-only public projection. Creates no authorization, release, research activation, outreach action or scientific claim.",
   "operating_state": {
     "mode": "CONSOLIDATION",
-    "active_priority_id": "MC-TRUTH-01",
-    "active_priority": "Stage 0 currentness and system archaeology",
+    "main_programme": "ORIENTATION",
+    "product_direction": "NEXAH_COMPARE_TRANSLATION_RECORD_AND_RETURN_STACK",
+    "active_priority_id": null,
+    "active_priority": "NONE",
     "broad_exploratory_research": "STOPPED_BY_HUMAN_OWNER",
     "active_science_lab_cycle": "NONE",
+    "registered_research_results": 42,
+    "research_families": 18,
+    "admitted_contribution_candidates": 1,
     "scientific_novelty": "NOT_DEMONSTRATED",
-    "external_usefulness": "NOT_YET_TESTED",
+    "external_usefulness": "NOT_VALIDATED",
     "outreach_campaign": "NOT_ACTIVE",
     "new_scientific_publication_claim": "NONE_AUTHORIZED"
   },
   "custody": {
-    "internal_controlling_sources_verified": 40,
-    "internal_controlling_sources_total": 40,
-    "upstream_custody_verified": 25,
-    "upstream_custody_total": 40,
-    "remaining_bindings": 15,
-    "remaining_gate": "SCIENCE_LAB_PUBLIC_SAFE_CUT",
+    "internal_controlling_sources_verified": 101,
+    "internal_controlling_sources_total": 101,
+    "upstream_custody_verified": 101,
+    "upstream_custody_total": 101,
+    "remaining_bindings": 0,
+    "remaining_gate": "NONE",
     "note": "Upstream custody is not equivalent to anonymous public availability."
   },
   "public_repositories": [
@@ -37,7 +42,7 @@
     {
       "name": "NEXAH-Science-Lab",
       "url": "https://github.com/Scarabaeus1031/NEXAH-Science-Lab",
-      "public_main_revision": "8f7817d601481c7952d8fa9fbec5c8f0dd3279c5",
+      "public_main_revision": "2a209cd3023b3c8dcb9c3d9711c97ef3cdae9b52",
       "role": "experiments_audits_negative_results_and_evidence_packages"
     },
     {
@@ -71,8 +76,9 @@
     "authority for automated decisions or unsupervised action"
   ],
   "next_potential_evidence": {
-    "state": "PARKED",
-    "action": "one bounded external contrast test",
+    "state": "UNSELECTED",
+    "action": "select or decline one exact Human-usefulness wedge",
+    "after_selection": "one preregistered equal-information comparison against a strong baseline",
     "activation_authority": "Human Owner"
   }
 }
