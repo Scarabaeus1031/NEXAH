@@ -1,8 +1,10 @@
 # NEXAH Public Status
 
-**As of:** 20 September 2026  
-**Snapshot:** `nexah-public-status/0.1`  
-**Projection source:** NEXAH Mission Control snapshot `53cb1e4`
+**As of:** 27 September 2026
+
+**Snapshot:** `nexah-public-status/0.2`
+
+**Projection source:** NEXAH Mission Control snapshot `2820ab3`
 
 This is a public, read-only projection from NEXAH Mission Control. Mission
 Control remains the authority for currentness, routing and activation. This
@@ -14,14 +16,16 @@ action or scientific claim.
 | Area | Current public status |
 |---|---|
 | Operating mode | Consolidation |
-| Active ecosystem priority | Stage 0 currentness and system archaeology (`MC-TRUTH-01`) |
+| Main programme | Orientation |
+| Product direction | NEXAH Compare — Translation, Record & Return Stack |
+| Active ecosystem priority | None |
 | Broad exploratory research | Stopped by Human Owner decision |
 | Active Science Lab research cycle | None |
-| Scientific novelty | Not demonstrated |
-| External usefulness | Not yet tested |
+| Scientific contribution funnel | One admitted method/protocol candidate; novelty not demonstrated |
+| External usefulness | Not validated |
 | Outreach campaign | Not active |
 | New scientific publication claim | None authorized |
-| Next potentially status-changing evidence | One bounded external contrast test, only after explicit Human reopen |
+| Next strategy decision | Select or decline one exact Human-usefulness wedge |
 
 ## What NEXAH is
 
@@ -39,7 +43,7 @@ a new scientific discipline, general usefulness or product adoption.
 | Component | Public role | Current boundary |
 |---|---|---|
 | [NEXAH](https://github.com/Scarabaeus1031/NEXAH) | Framework, Orientation Language, research navigation and bounded implementation | Current public framework home; maturity differs by subsystem |
-| [NEXAH Science Lab](https://github.com/Scarabaeus1031/NEXAH-Science-Lab) | Experiments, audits, negative results and evidence packages | Public `main` is at the reviewed grid-observatory baseline `8f7817d`; two later custody commits remain held for a public-safe cut |
+| [NEXAH Science Lab](https://github.com/Scarabaeus1031/NEXAH-Science-Lab) | Experiments, audits, negative results and evidence packages | Current research baseline is published on public `main` at merge commit `2a209cd` |
 | [NEXAH ORION](https://github.com/Scarabaeus1031/NEXAH-ORION) | Deterministic structural processing | Version 1 authority is limited to its certified scope |
 | [NEXAHEDRON](https://github.com/Scarabaeus1031/NEXAHEDRON) | Human-facing reference workspace and demonstrator | Not a production-complete product or autonomous system |
 | [NEXAH Experience](https://github.com/Scarabaeus1031/NEXAH-Experience) | Public site, Library, Atlas and reading routes | Presentation surface; not scientific or activation authority |
@@ -47,12 +51,11 @@ a new scientific discipline, general usefulness or product adoption.
 
 ## Evidence and custody
 
-The current internal registry verifies all **40 of 40** controlling source
-bindings. The stricter upstream-custody check currently verifies **25 of 40**
-against their configured repository revisions. The remaining 15 bindings are
-held behind the Science Lab public-safe cut. Upstream custody is not the same as
-anonymous public availability: some control-plane sources remain deliberately
-private.
+The current internal registry verifies all **101 of 101** controlling source
+bindings. The stricter release-custody check also verifies **101 of 101**
+against their configured upstream revisions. Upstream custody is not the same
+as anonymous public availability: some control-plane sources remain
+deliberately private.
 
 These counts establish repository currentness and traceability only. They do
 not establish scientific novelty, efficacy, reproducibility by an independent
@@ -78,16 +81,13 @@ party or external usefulness.
 
 ## Current work boundary
 
-Current work is limited to consolidation, public-safe custody, navigation and
-maintenance of truthful status surfaces. The parked Science Lab public-safe cut
-must exclude unresolved raw media and add explicit third-party licensing before
-owner review. No broad research programme, publication campaign or outreach
-campaign is activated by this status.
+Current work remains limited to consolidation, truthful navigation and
+selection. No broad research programme, product build, publication campaign or
+outreach campaign is activated by this status.
 
-The only proposed evidence step that could change the external-usefulness
-status is one small contrast test in which an outside participant applies a
-minimal NEXAH profile and an established baseline to the same bounded problem.
-That test is not active.
+The next strategy decision is whether to select one exact person, recurring
+task, strong baseline, primary outcome and STOP rule. Only after that separate
+decision could a bounded equal-information usefulness test be activated.
 
 ## Update rule
 
@@ -95,4 +95,3 @@ This projection is updated only after a meaningful status change. Every update
 must preserve the source authority, date, evidence boundary, public repository
 links and explicit non-claims. The machine-readable companion is
 [`NEXAH_PUBLIC_STATUS.json`](NEXAH_PUBLIC_STATUS.json).
-
