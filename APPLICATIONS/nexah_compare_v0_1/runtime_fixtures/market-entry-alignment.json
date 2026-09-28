@@ -1,0 +1,43 @@
+{
+  "profile_id": "NC01-ADVISORY-0.1",
+  "case_id": "CASE-MARKET-ENTRY",
+  "reference_analysis_id": "AN-MARKET-ENTRY-ALPHA",
+  "groups": [
+    {
+      "alignment_key": "MARKET-GROWTH",
+      "mode": "DECLARED_KEY",
+      "criterion": "Compare the two declared annual-market-growth claims without inferring prose equivalence",
+      "claim_ids": {
+        "AN-MARKET-ENTRY-ALPHA": "CLM-ALPHA-0001",
+        "AN-MARKET-ENTRY-BETA": "CLM-BETA-0001"
+      }
+    },
+    {
+      "alignment_key": "LOCAL-TEAM-COST",
+      "mode": "DECLARED_KEY",
+      "criterion": "Compare formula operands result unit and time basis exactly",
+      "claim_ids": {
+        "AN-MARKET-ENTRY-ALPHA": "CLM-ALPHA-0002",
+        "AN-MARKET-ENTRY-BETA": "CLM-BETA-0002"
+      }
+    },
+    {
+      "alignment_key": "LOCAL-TEAM-LEARNING-ASSUMPTION",
+      "mode": "DECLARED_KEY",
+      "criterion": "Record the assumption that is absent from the reference analysis",
+      "claim_ids": {
+        "AN-MARKET-ENTRY-ALPHA": null,
+        "AN-MARKET-ENTRY-BETA": "CLM-BETA-0003"
+      }
+    },
+    {
+      "alignment_key": "FIRST-YEAR-OPERATING-MODE",
+      "mode": "DECLARED_KEY",
+      "criterion": "Compare recommendation statement evidence and conditions exactly",
+      "claim_ids": {
+        "AN-MARKET-ENTRY-ALPHA": "CLM-ALPHA-0003",
+        "AN-MARKET-ENTRY-BETA": "CLM-BETA-0004"
+      }
+    }
+  ]
+}

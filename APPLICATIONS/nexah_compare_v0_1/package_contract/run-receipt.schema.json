@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexah.local/schemas/nexah-compare/0.1/run-receipt.schema.json",
+  "title": "NEXAH Compare v0.1 Deterministic Run Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_id", "schema_version", "receipt_id", "package_id", "profile_id", "runtime_version", "schema_engine", "command", "status", "manifest_sha256", "comparison_id", "comparison_sha256", "report_sha256", "relation_counts", "residual_count", "abstention_count"],
+  "properties": {
+    "schema_id": {"const": "nexah.compare.run-receipt"},
+    "schema_version": {"const": "0.1.0"},
+    "receipt_id": {"type": "string", "pattern": "^RUN-[A-Z0-9][A-Z0-9._-]{3,124}$"},
+    "package_id": {"type": "string", "pattern": "^PKG-[A-Z0-9][A-Z0-9._-]{3,124}$"},
+    "profile_id": {"const": "NC01-ADVISORY-0.1"},
+    "runtime_version": {"const": "0.1.0"},
+    "schema_engine": {"const": "jsonschema-draft-2020-12"},
+    "command": {"const": "nexah-compare run-package --package ."},
+    "status": {"const": "VALID"},
+    "manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "comparison_id": {"type": "string", "pattern": "^CMP-[A-Z0-9][A-Z0-9._-]{3,124}$"},
+    "comparison_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "report_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "relation_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["INVARIANT", "LOST", "ADDED", "UNAVAILABLE"],
+      "properties": {
+        "INVARIANT": {"type": "integer", "minimum": 0},
+        "LOST": {"type": "integer", "minimum": 0},
+        "ADDED": {"type": "integer", "minimum": 0},
+        "UNAVAILABLE": {"type": "integer", "minimum": 0}
+      }
+    },
+    "residual_count": {"type": "integer", "minimum": 0},
+    "abstention_count": {"type": "integer", "minimum": 0}
+  }
+}

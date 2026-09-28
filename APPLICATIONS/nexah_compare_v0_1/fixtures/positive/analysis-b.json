@@ -1,0 +1,72 @@
+{
+  "schema_id": "nexah.compare.analysis-record",
+  "schema_version": "0.1.0",
+  "record_id": "AN-MARKET-ENTRY-BETA",
+  "profile_id": "NC01-ADVISORY-0.1",
+  "case_id": "CASE-MARKET-ENTRY",
+  "source": {
+    "source_id": "SRC-BETA-01",
+    "title": "Synthetic analysis Beta",
+    "producer_class": "MODEL_ASSISTED_HUMAN_CONFIRMED",
+    "source_sha256": "4444444444444444444444444444444444444444444444444444444444444444"
+  },
+  "claims": [
+    {
+      "claim_id": "CLM-BETA-0001",
+      "kind": "FACT",
+      "statement": "The admitted dataset reports annual market growth of 5.0 percent.",
+      "materiality": "MATERIAL",
+      "evidence_ids": ["EVD-MARKET-0001"],
+      "uncertainty": "DECLARED_LOW",
+      "conditions": [],
+      "calculation": null
+    },
+    {
+      "claim_id": "CLM-BETA-0002",
+      "kind": "CALCULATION",
+      "statement": "The local-team cost is EUR 360000 per month.",
+      "materiality": "CRITICAL",
+      "evidence_ids": ["EVD-COST-0002"],
+      "uncertainty": "DECLARED_HIGH",
+      "conditions": [],
+      "calculation": {
+        "formula": "annual_cost",
+        "operands": [
+          {
+            "name": "annual_cost",
+            "quantity": {"value": "360000", "unit": "EUR", "unit_system": "ISO_4217", "time_basis": "YEAR"}
+          }
+        ],
+        "result": {"value": "360000", "unit": "EUR", "unit_system": "ISO_4217", "time_basis": "MONTH"},
+        "tolerance": "0"
+      }
+    },
+    {
+      "claim_id": "CLM-BETA-0003",
+      "kind": "ASSUMPTION",
+      "statement": "A local team would improve partner-independent customer learning.",
+      "materiality": "MATERIAL",
+      "evidence_ids": [],
+      "uncertainty": "DECLARED_HIGH",
+      "conditions": ["The team can recruit before the second quarter"],
+      "calculation": null
+    },
+    {
+      "claim_id": "CLM-BETA-0004",
+      "kind": "RECOMMENDATION",
+      "statement": "Build a local team immediately.",
+      "materiality": "MATERIAL",
+      "evidence_ids": ["EVD-COST-0002"],
+      "uncertainty": "DECLARED_HIGH",
+      "conditions": ["The stated monthly cost is correct"],
+      "calculation": null
+    }
+  ],
+  "limitations": ["The calculation mixes annual and monthly time bases"],
+  "human_confirmation": {
+    "status": "CONFIRMED",
+    "actor_id": "ACTOR-OWNER-01",
+    "confirmed_at": "2026-09-27T12:10:00Z",
+    "confirmation_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  }
+}

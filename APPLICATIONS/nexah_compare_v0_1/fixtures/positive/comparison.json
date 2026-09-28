@@ -1,0 +1,88 @@
+{
+  "schema_id": "nexah.compare.comparison-record",
+  "schema_version": "0.1.0",
+  "record_id": "CMP-MARKET-ENTRY-ADVISORY-01",
+  "profile_id": "NC01-ADVISORY-0.1",
+  "case_id": "CASE-MARKET-ENTRY",
+  "analysis_ids": ["AN-MARKET-ENTRY-ALPHA", "AN-MARKET-ENTRY-BETA"],
+  "reference_analysis_id": "AN-MARKET-ENTRY-ALPHA",
+  "relation_groups": [
+    {
+      "relation_id": "REL-MARKET-ENTRY-0001",
+      "classification": "INVARIANT",
+      "criterion": "Same annual growth quantity and admitted evidence locator",
+      "reason_code": "MATERIAL_EQUIVALENCE",
+      "members": [
+        {"analysis_id": "AN-MARKET-ENTRY-ALPHA", "claim_id": "CLM-ALPHA-0001", "role": "REFERENCE"},
+        {"analysis_id": "AN-MARKET-ENTRY-BETA", "claim_id": "CLM-BETA-0001", "role": "COUNTERPART"}
+      ]
+    },
+    {
+      "relation_id": "REL-MARKET-ENTRY-0002",
+      "classification": "UNAVAILABLE",
+      "criterion": "Equivalent cost result requires compatible unit and time basis",
+      "reason_code": "TIME_BASIS_MISMATCH",
+      "members": [
+        {"analysis_id": "AN-MARKET-ENTRY-ALPHA", "claim_id": "CLM-ALPHA-0002", "role": "REFERENCE"},
+        {"analysis_id": "AN-MARKET-ENTRY-BETA", "claim_id": "CLM-BETA-0002", "role": "COUNTERPART"}
+      ]
+    },
+    {
+      "relation_id": "REL-MARKET-ENTRY-0003",
+      "classification": "ADDED",
+      "criterion": "Assumption appears outside the reference analysis",
+      "reason_code": "PRESENT_ONLY_OUTSIDE_REFERENCE",
+      "members": [
+        {"analysis_id": "AN-MARKET-ENTRY-ALPHA", "claim_id": null, "role": "MISSING"},
+        {"analysis_id": "AN-MARKET-ENTRY-BETA", "claim_id": "CLM-BETA-0003", "role": "COUNTERPART"}
+      ]
+    },
+    {
+      "relation_id": "REL-MARKET-ENTRY-0004",
+      "classification": "UNAVAILABLE",
+      "criterion": "Recommendation boundaries depend on the unresolved cost calculation",
+      "reason_code": "RECOMMENDATION_BOUNDARY_CONFLICT",
+      "members": [
+        {"analysis_id": "AN-MARKET-ENTRY-ALPHA", "claim_id": "CLM-ALPHA-0003", "role": "REFERENCE"},
+        {"analysis_id": "AN-MARKET-ENTRY-BETA", "claim_id": "CLM-BETA-0004", "role": "COUNTERPART"}
+      ]
+    }
+  ],
+  "calculation_checks": [
+    {
+      "check_id": "CHK-MARKET-ENTRY-0001",
+      "claim_ids": ["CLM-ALPHA-0002", "CLM-BETA-0002"],
+      "status": "MISMATCH",
+      "reason_code": "TIME_BASIS_MISMATCH",
+      "detail": "The numeric value 360000 is annual in Alpha and monthly in Beta. No conversion is authorized."
+    }
+  ],
+  "residuals": [
+    {
+      "residual_id": "RES-MARKET-ENTRY-0001",
+      "relation_id": "REL-MARKET-ENTRY-0002",
+      "severity": "CRITICAL",
+      "reason_code": "TIME_BASIS_MISMATCH",
+      "expected": "Compatible declared time basis",
+      "observed": "YEAR versus MONTH",
+      "gate_effect": "ABSTAIN"
+    },
+    {
+      "residual_id": "RES-MARKET-ENTRY-0002",
+      "relation_id": "REL-MARKET-ENTRY-0004",
+      "severity": "MATERIAL",
+      "reason_code": "RECOMMENDATION_BOUNDARY_CONFLICT",
+      "expected": "Recommendation comparison after calculation reconciliation",
+      "observed": "Opposed recommendations depend on unresolved cost basis",
+      "gate_effect": "ABSTAIN"
+    }
+  ],
+  "abstentions": [
+    {
+      "subject_id": "REL-MARKET-ENTRY-0004",
+      "reason_code": "INCOMPATIBLE_TIME_BASIS",
+      "statement": "The record comparison cannot determine which recommendation is better."
+    }
+  ],
+  "claim_ceiling": "DECLARED_CONFIRMED_RECORD_COMPARISON_ONLY_NO_TRUTH_CORRECTNESS_COMPLETENESS_SAFETY_SUITABILITY_CAUSALITY_RECOMMENDATION_BUSINESS_SUCCESS_OR_PRODUCT_MARKET_FIT_CLAIM"
+}

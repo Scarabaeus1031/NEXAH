@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexah.local/schemas/nexah-compare/0.1/analysis-record.schema.json",
+  "title": "NEXAH Compare v0.1 AnalysisRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_id", "schema_version", "record_id", "profile_id", "case_id", "source", "claims", "limitations", "human_confirmation"],
+  "properties": {
+    "schema_id": {"const": "nexah.compare.analysis-record"},
+    "schema_version": {"const": "0.1.0"},
+    "record_id": {"$ref": "common.schema.json#/$defs/id"},
+    "profile_id": {"const": "NC01-ADVISORY-0.1"},
+    "case_id": {"$ref": "common.schema.json#/$defs/id"},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "title", "producer_class", "source_sha256"],
+      "properties": {
+        "source_id": {"$ref": "common.schema.json#/$defs/id"},
+        "title": {"type": "string", "minLength": 1, "maxLength": 240},
+        "producer_class": {"enum": ["HUMAN", "ORGANIZATION", "MODEL_ASSISTED_HUMAN_CONFIRMED"]},
+        "source_sha256": {"$ref": "common.schema.json#/$defs/sha256"}
+      }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim_id", "kind", "statement", "materiality", "evidence_ids", "uncertainty", "conditions", "calculation"],
+        "properties": {
+          "claim_id": {"$ref": "common.schema.json#/$defs/id"},
+          "kind": {"enum": ["FACT", "ASSUMPTION", "CALCULATION", "RECOMMENDATION"]},
+          "statement": {"type": "string", "minLength": 1, "maxLength": 4000},
+          "materiality": {"enum": ["CRITICAL", "MATERIAL", "CONTEXT"]},
+          "evidence_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"$ref": "common.schema.json#/$defs/id"}
+          },
+          "uncertainty": {"enum": ["DECLARED_LOW", "DECLARED_MEDIUM", "DECLARED_HIGH", "UNAVAILABLE"]},
+          "conditions": {
+            "type": "array",
+            "items": {"type": "string", "minLength": 1, "maxLength": 1000}
+          },
+          "calculation": {
+            "anyOf": [
+              {"type": "null"},
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["formula", "operands", "result", "tolerance"],
+                "properties": {
+                  "formula": {"type": "string", "minLength": 1, "maxLength": 1000},
+                  "operands": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": ["name", "quantity"],
+                      "properties": {
+                        "name": {"type": "string", "minLength": 1, "maxLength": 128},
+                        "quantity": {"$ref": "common.schema.json#/$defs/quantity"}
+                      }
+                    }
+                  },
+                  "result": {"$ref": "common.schema.json#/$defs/quantity"},
+                  "tolerance": {"$ref": "common.schema.json#/$defs/decimal"}
+                }
+              }
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {"properties": {"kind": {"const": "CALCULATION"}}},
+            "then": {"properties": {"calculation": {"type": "object"}}},
+            "else": {"properties": {"calculation": {"type": "null"}}}
+          }
+        ]
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1, "maxLength": 1000}
+    },
+    "human_confirmation": {"$ref": "common.schema.json#/$defs/confirmation"}
+  }
+}

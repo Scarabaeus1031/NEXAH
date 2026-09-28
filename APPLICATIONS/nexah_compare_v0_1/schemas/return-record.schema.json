@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexah.local/schemas/nexah-compare/0.1/return-record.schema.json",
+  "title": "NEXAH Compare v0.1 ReturnRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_id", "schema_version", "record_id", "profile_id", "case_id", "comparison_id", "comparison_sha256", "human_action", "selected_residual_ids", "amendments", "human_statement", "returned_at", "actor_id"],
+  "properties": {
+    "schema_id": {"const": "nexah.compare.return-record"},
+    "schema_version": {"const": "0.1.0"},
+    "record_id": {"$ref": "common.schema.json#/$defs/id"},
+    "profile_id": {"const": "NC01-ADVISORY-0.1"},
+    "case_id": {"$ref": "common.schema.json#/$defs/id"},
+    "comparison_id": {"$ref": "common.schema.json#/$defs/id"},
+    "comparison_sha256": {"$ref": "common.schema.json#/$defs/sha256"},
+    "human_action": {"enum": ["CONFIRM", "AMEND", "ABSTAIN", "STOP"]},
+    "selected_residual_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "common.schema.json#/$defs/id"}},
+    "amendments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["target_id", "replacement", "reason"],
+        "properties": {
+          "target_id": {"$ref": "common.schema.json#/$defs/id"},
+          "replacement": {"type": "string", "minLength": 1, "maxLength": 4000},
+          "reason": {"type": "string", "minLength": 1, "maxLength": 2000}
+        }
+      }
+    },
+    "human_statement": {"type": "string", "minLength": 1, "maxLength": 4000},
+    "returned_at": {"type": "string", "format": "date-time"},
+    "actor_id": {"$ref": "common.schema.json#/$defs/id"}
+  }
+}

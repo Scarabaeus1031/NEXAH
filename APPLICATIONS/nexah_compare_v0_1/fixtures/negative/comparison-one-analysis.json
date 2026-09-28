@@ -1,0 +1,14 @@
+{
+  "schema_id": "nexah.compare.comparison-record",
+  "schema_version": "0.1.0",
+  "record_id": "CMP-NEGATIVE-COUNT",
+  "profile_id": "NC01-ADVISORY-0.1",
+  "case_id": "CASE-MARKET-ENTRY",
+  "analysis_ids": ["AN-MARKET-ENTRY-ALPHA"],
+  "reference_analysis_id": "AN-MARKET-ENTRY-ALPHA",
+  "relation_groups": [],
+  "calculation_checks": [],
+  "residuals": [],
+  "abstentions": [],
+  "claim_ceiling": "DECLARED_CONFIRMED_RECORD_COMPARISON_ONLY_NO_TRUTH_CORRECTNESS_COMPLETENESS_SAFETY_SUITABILITY_CAUSALITY_RECOMMENDATION_BUSINESS_SUCCESS_OR_PRODUCT_MARKET_FIT_CLAIM"
+}

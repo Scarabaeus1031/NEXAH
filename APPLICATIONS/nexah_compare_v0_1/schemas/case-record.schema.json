@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexah.local/schemas/nexah-compare/0.1/case-record.schema.json",
+  "title": "NEXAH Compare v0.1 CaseRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_id", "schema_version", "record_id", "profile_id", "title", "decision_question", "domain", "decision_options", "decision_period", "privacy_class", "evidence", "constraints", "human_confirmation"],
+  "properties": {
+    "schema_id": {"const": "nexah.compare.case-record"},
+    "schema_version": {"const": "0.1.0"},
+    "record_id": {"$ref": "common.schema.json#/$defs/id"},
+    "profile_id": {"const": "NC01-ADVISORY-0.1"},
+    "title": {"type": "string", "minLength": 1, "maxLength": 240},
+    "decision_question": {"type": "string", "minLength": 1, "maxLength": 2000},
+    "domain": {"const": "BUSINESS_STRATEGY_NON_REGULATED"},
+    "decision_options": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 12,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["option_id", "label"],
+        "properties": {
+          "option_id": {"$ref": "common.schema.json#/$defs/id"},
+          "label": {"type": "string", "minLength": 1, "maxLength": 240}
+        }
+      }
+    },
+    "decision_period": {"$ref": "common.schema.json#/$defs/period"},
+    "privacy_class": {"enum": ["SYNTHETIC", "LICENSED_DEIDENTIFIED"]},
+    "evidence": {
+      "type": "array",
+      "items": {"$ref": "common.schema.json#/$defs/evidenceRef"}
+    },
+    "constraints": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1, "maxLength": 1000}
+    },
+    "human_confirmation": {"$ref": "common.schema.json#/$defs/confirmation"}
+  }
+}

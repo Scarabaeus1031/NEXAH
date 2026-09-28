@@ -1,0 +1,45 @@
+{
+  "schema_id": "nexah.compare.case-record",
+  "schema_version": "0.1.0",
+  "record_id": "CASE-MARKET-ENTRY",
+  "profile_id": "NC01-ADVISORY-0.1",
+  "title": "Synthetic regional market-entry decision",
+  "decision_question": "Should the project build a local team or use a distribution partner for the first operating year?",
+  "domain": "BUSINESS_STRATEGY_NON_REGULATED",
+  "decision_options": [
+    {"option_id": "OPT-BUILD", "label": "Build a local team"},
+    {"option_id": "OPT-PARTNER", "label": "Use a distribution partner"}
+  ],
+  "decision_period": {
+    "start": "2027-01-01T00:00:00Z",
+    "end": "2027-12-31T23:59:59Z",
+    "basis": "YEAR",
+    "timezone": "UTC"
+  },
+  "privacy_class": "SYNTHETIC",
+  "evidence": [
+    {
+      "evidence_id": "EVD-MARKET-0001",
+      "status": "ADMITTED",
+      "kind": "DATASET",
+      "path": "evidence/market.csv",
+      "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "locator": "rows 2-13"
+    },
+    {
+      "evidence_id": "EVD-COST-0002",
+      "status": "ADMITTED",
+      "kind": "CALCULATION",
+      "path": "evidence/cost-model.json",
+      "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "locator": "scenario base"
+    }
+  ],
+  "constraints": ["No regulated financial advice", "First-year operating budget is capped at EUR 500000"],
+  "human_confirmation": {
+    "status": "CONFIRMED",
+    "actor_id": "ACTOR-OWNER-01",
+    "confirmed_at": "2026-09-27T12:00:00Z",
+    "confirmation_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  }
+}

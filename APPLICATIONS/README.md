@@ -43,6 +43,7 @@ application.
 | Compare a different chaotic flow | **[dynamical_systems/halvorsen/](dynamical_systems/halvorsen/)** |
 | Explore the most developed applied program | **[power_systems/](power_systems/)** |
 | Study governed orientation over fixed public knowledge sources | **[Orientation Translation](orientation_translation/)** |
+| Run the local NEXAH Compare v0.1 instrument | **[NEXAH Compare v0.1](nexah_compare_v0_1/)** |
 | Connect another system to NEXAH | **[adapters/](adapters/)** |
 | Inspect experimental navigation tools | **[navigation/](navigation/)** |
 | Understand the conceptual model families | **[models/dynamical_models/](models/dynamical_models/)** |
@@ -58,6 +59,7 @@ If you are completely new to NEXAH, begin with the repository
 |---|---|---|
 | **[Network Orientation](network_orientation/)** | Typed graph topology, reachability, structural comparison, five read-only probes, and V1/V2 fixtures | Verified illustrative application |
 | **[Orientation Translation](orientation_translation/)** | Source-bounded public-knowledge pilots, Reflections, Neighborhoods, comparisons, methodological studies, and reviews | Applied methodological research; reader effect not yet tested |
+| **[NEXAH Compare v0.1](nexah_compare_v0_1/)** | Frozen records plus a deterministic local comparator, sealed Case package, faithful report, replay receipt and Human Return | WP4 local instrument complete; WP5 benchmark not active; no utility result |
 | **[Power Systems](power_systems/)** | Current IEEE benchmark geometry/replay plus historical exploratory warning, prediction, recovery, scaling, and control programs | Bounded benchmark evidence / historical research lineage |
 | **[Lorenz Research](dynamical_systems/lorenz/)** | Density, FTLE, Lyapunov, separatrix, regime, and navigation analysis | Active reference system |
 | **[Halvorsen Research](dynamical_systems/halvorsen/)** | Distributed transport, transition graphs, residue models, reachability, and policy experiments | Experimental research |

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexah.local/schemas/nexah-compare/0.1/case-package.schema.json",
+  "title": "NEXAH Compare v0.1 Case Package Descriptor",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_id", "schema_version", "package_id", "profile_id", "privacy_class", "case_path", "analysis_paths", "alignment_path", "reference_analysis_id", "comparison_path", "report_path", "manifest_path", "receipt_path", "return_path"],
+  "properties": {
+    "schema_id": {"const": "nexah.compare.case-package"},
+    "schema_version": {"const": "0.1.0"},
+    "package_id": {"type": "string", "pattern": "^PKG-[A-Z0-9][A-Z0-9._-]{3,124}$"},
+    "profile_id": {"const": "NC01-ADVISORY-0.1"},
+    "privacy_class": {"enum": ["SYNTHETIC", "LICENSED_DEIDENTIFIED"]},
+    "case_path": {"const": "inputs/case.json"},
+    "analysis_paths": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 4,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^inputs/analyses/[A-Za-z0-9._-]+\\.json$"}
+    },
+    "alignment_path": {
+      "anyOf": [
+        {"const": "inputs/alignment.json"},
+        {"type": "null"}
+      ]
+    },
+    "reference_analysis_id": {"type": "string", "pattern": "^AN-[A-Z0-9][A-Z0-9._-]{2,125}$"},
+    "comparison_path": {"const": "outputs/comparison.json"},
+    "report_path": {"const": "outputs/report.md"},
+    "manifest_path": {"const": "manifest.json"},
+    "receipt_path": {"const": "receipts/run-receipt.json"},
+    "return_path": {"const": "returns/return.json"}
+  }
+}

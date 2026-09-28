@@ -1,0 +1,9 @@
+{
+  "positive": ["positive/case.json", "positive/analysis-a.json", "positive/analysis-b.json", "positive/comparison.json", "positive/return.json"],
+  "negative": {
+    "negative/analysis-invalid-kind.json": "INVALID_CLAIM_KIND",
+    "negative/case-path-traversal.json": "UNSAFE_EVIDENCE_PATH",
+    "negative/analysis-unconfirmed.json": "NOT_HUMAN_CONFIRMED",
+    "negative/comparison-one-analysis.json": "ANALYSIS_COUNT_OUT_OF_RANGE"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nexah.local/schemas/nexah-compare/0.1/comparison-record.schema.json",
+  "title": "NEXAH Compare v0.1 ComparisonRecord",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_id", "schema_version", "record_id", "profile_id", "case_id", "analysis_ids", "reference_analysis_id", "relation_groups", "calculation_checks", "residuals", "abstentions", "claim_ceiling"],
+  "properties": {
+    "schema_id": {"const": "nexah.compare.comparison-record"},
+    "schema_version": {"const": "0.1.0"},
+    "record_id": {"$ref": "common.schema.json#/$defs/id"},
+    "profile_id": {"const": "NC01-ADVISORY-0.1"},
+    "case_id": {"$ref": "common.schema.json#/$defs/id"},
+    "analysis_ids": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 4,
+      "uniqueItems": true,
+      "items": {"$ref": "common.schema.json#/$defs/id"}
+    },
+    "reference_analysis_id": {"$ref": "common.schema.json#/$defs/id"},
+    "relation_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["relation_id", "classification", "criterion", "reason_code", "members"],
+        "properties": {
+          "relation_id": {"$ref": "common.schema.json#/$defs/id"},
+          "classification": {"enum": ["INVARIANT", "LOST", "ADDED", "UNAVAILABLE"]},
+          "criterion": {"type": "string", "minLength": 1, "maxLength": 1000},
+          "reason_code": {"enum": ["MATERIAL_EQUIVALENCE", "MISSING_COUNTERPART", "PRESENT_ONLY_OUTSIDE_REFERENCE", "EVIDENCE_MISSING", "EVIDENCE_ASYMMETRY", "ASSUMPTION_CONFLICT", "FORMULA_MISMATCH", "OPERAND_MISMATCH", "UNIT_MISMATCH", "TIME_BASIS_MISMATCH", "RECOMMENDATION_BOUNDARY_CONFLICT", "DOMAIN_INCOMPATIBLE", "CRITERION_UNAVAILABLE", "REQUIRED_METADATA_UNAVAILABLE"]},
+          "members": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["analysis_id", "claim_id", "role"],
+              "properties": {
+                "analysis_id": {"$ref": "common.schema.json#/$defs/id"},
+                "claim_id": {"anyOf": [{"$ref": "common.schema.json#/$defs/id"}, {"type": "null"}]},
+                "role": {"enum": ["REFERENCE", "COUNTERPART", "MISSING"]}
+              }
+            }
+          }
+        }
+      }
+    },
+    "calculation_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["check_id", "claim_ids", "status", "reason_code", "detail"],
+        "properties": {
+          "check_id": {"$ref": "common.schema.json#/$defs/id"},
+          "claim_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "common.schema.json#/$defs/id"}},
+          "status": {"enum": ["MATCH", "MISMATCH", "UNRESOLVED", "NOT_APPLICABLE"]},
+          "reason_code": {"enum": ["FORMULA_MATCH", "FORMULA_MISMATCH", "OPERAND_MISMATCH", "UNIT_MISMATCH", "TIME_BASIS_MISMATCH", "REQUIRED_METADATA_UNAVAILABLE", "NOT_APPLICABLE"]},
+          "detail": {"type": "string", "minLength": 1, "maxLength": 2000}
+        }
+      }
+    },
+    "residuals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["residual_id", "relation_id", "severity", "reason_code", "expected", "observed", "gate_effect"],
+        "properties": {
+          "residual_id": {"$ref": "common.schema.json#/$defs/id"},
+          "relation_id": {"anyOf": [{"$ref": "common.schema.json#/$defs/id"}, {"type": "null"}]},
+          "severity": {"enum": ["CRITICAL", "MATERIAL", "CONTEXT"]},
+          "reason_code": {"enum": ["MISSING_COUNTERPART", "PRESENT_ONLY_OUTSIDE_REFERENCE", "EVIDENCE_MISSING", "EVIDENCE_ASYMMETRY", "ASSUMPTION_CONFLICT", "FORMULA_MISMATCH", "OPERAND_MISMATCH", "UNIT_MISMATCH", "TIME_BASIS_MISMATCH", "RECOMMENDATION_BOUNDARY_CONFLICT", "DOMAIN_INCOMPATIBLE", "CRITERION_UNAVAILABLE", "REQUIRED_METADATA_UNAVAILABLE"]},
+          "expected": {"type": ["string", "null"], "maxLength": 2000},
+          "observed": {"type": ["string", "null"], "maxLength": 2000},
+          "gate_effect": {"enum": ["NONE", "ABSTAIN", "STOP"]}
+        }
+      }
+    },
+    "abstentions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["subject_id", "reason_code", "statement"],
+        "properties": {
+          "subject_id": {"$ref": "common.schema.json#/$defs/id"},
+          "reason_code": {"enum": ["INSUFFICIENT_EVIDENCE", "INCOMPATIBLE_UNITS", "INCOMPATIBLE_TIME_BASIS", "UNSUPPORTED_OPERATION", "OUTSIDE_CLAIM_CEILING"]},
+          "statement": {"type": "string", "minLength": 1, "maxLength": 2000}
+        }
+      }
+    },
+    "claim_ceiling": {"const": "DECLARED_CONFIRMED_RECORD_COMPARISON_ONLY_NO_TRUTH_CORRECTNESS_COMPLETENESS_SAFETY_SUITABILITY_CAUSALITY_RECOMMENDATION_BUSINESS_SUCCESS_OR_PRODUCT_MARKET_FIT_CLAIM"}
+  }
+}
