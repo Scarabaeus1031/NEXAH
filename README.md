@@ -8,6 +8,15 @@ This repository preserves the research, framework, Orientation Language, experim
 
 **Public path:** [Discover NEXAH](https://nexah.de) · [Use the Visitor Guide](https://nexah.de/visitor-guide/) · [Inspect Science Lab](https://github.com/Scarabaeus1031/NEXAH-Science-Lab) · [Try NEXAHEDRON](https://nexahedron.com) · [Inspect ORION](https://github.com/Scarabaeus1031/NEXAH-ORION)
 
+**Three perspectives:** [Human](https://nexah.de/visitor-guide/) ·
+[Science](https://github.com/Scarabaeus1031/NEXAH-Science-Lab) ·
+[Builder](#choose-your-entry-point)
+
+The Human entrance supports orientation and responsible choice; the Science
+entrance exposes questions, evidence, results and limits; the Builder entrance
+opens the Orientation Language, contracts, implementations and applications.
+They are complementary views into one ecosystem.
+
 It is not the public landing page, Science Lab, the ORION repository or the
 Human-facing Workspace. It is the framework, semantic and implementation home
 that connects those public responsibilities while preserving their boundaries.
