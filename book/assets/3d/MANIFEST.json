@@ -1,0 +1,39 @@
+{
+  "title": "NEXAH A0 Book 3D Asset Manifest",
+  "status": "SOURCE_BOUND_ILLUSTRATIVE_ASSETS",
+  "updated": "2026-10-09",
+  "claim_ceiling": "Conceptual and cultural orientation instruments; not scientific evidence and not physical mechanism claims.",
+  "viewer": {
+    "library": "@google/model-viewer",
+    "version": "4.3.1",
+    "interaction": "manual reveal, camera controls, no automatic rotation"
+  },
+  "assets": [
+    {
+      "file": "nexah_roedelheim_record_play.glb",
+      "label": "Record / Play",
+      "book_location": "index.html#record-player",
+      "role": "Human opening for cut, record, replay and return",
+      "source_note": "Owner-supplied procedural GLB imported unchanged from the Rödelheim final-machine archive.",
+      "sha256": "fc3d99d44a55e0bb80471d42fc05f8d110869eba127f7f17454534ee081364fb",
+      "nonclaims": [
+        "not scientific evidence",
+        "not a physical energy model",
+        "not a complete field reconstruction"
+      ]
+    },
+    {
+      "file": "nexah_pq_conjugate_orbit_v7.glb",
+      "label": "Crystal View / PQ Conjugate Orbit v7",
+      "book_location": "06_PROJECTION_FOURIER_SHADOWS.html#crystal-view",
+      "role": "Inspectable perspective and conditioned-appearance illustration",
+      "source_note": "Byte-identical copy of the Clockwork custody output asset in the Science Lab case-study corpus.",
+      "sha256": "c819195b69c1bb9b0513f4d582c80fc5856a2e5415d4fa58c501adb784494fc9",
+      "nonclaims": [
+        "not scientific evidence",
+        "not a universal projection law",
+        "not a physical mechanism"
+      ]
+    }
+  ]
+}

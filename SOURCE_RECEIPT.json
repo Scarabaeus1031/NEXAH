@@ -1,0 +1,16 @@
+{
+  "release_id": "NEXAH_PUBLIC_PREVIEW_2026_10_09",
+  "generated_at": "2026-10-09T14:55:27.621Z",
+  "source_repository": "Scarabaeus1031/NEXAH-Science-Lab",
+  "source_branch": "codex/grid-observatory-mission-control",
+  "source_commit": "d8fbf0e06f6ae033fca7021de9f7158697b006e9",
+  "surfaces": [
+    "book",
+    "navigator"
+  ],
+  "copied_source_records": 310,
+  "boundary": "Static public preview. Source records retain their own authority and claim ceilings.",
+  "deployment_repository": "Scarabaeus1031/NEXAH",
+  "deployment_surface": "book",
+  "public_url": "https://scarabaeus1031.github.io/NEXAH/book/"
+}

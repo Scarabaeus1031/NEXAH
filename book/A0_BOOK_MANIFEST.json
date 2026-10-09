@@ -1,0 +1,114 @@
+{
+  "schema_id": "nexah.a0-book.manifest",
+  "schema_version": "0.1",
+  "book_id": "NEXAH:A0:FROM_DISTINCTION_TO_READOUT",
+  "title": "NEXAH A0 — From Distinction to Readout",
+  "status": "PUBLIC_PREVIEW_EXPORT_DOCUMENTATION_ONLY",
+  "operational_effect": "NONE",
+  "navigator_admission": "BOUNDED_PUBLIC_PREVIEW_EXPORT",
+  "updated": "2026-10-09",
+  "entry_surface": "index.html",
+  "interactive_assets": {
+    "manifest": "assets/3d/MANIFEST.json",
+    "viewer": "assets/vendor/model-viewer.min.js",
+    "viewer_license": "assets/vendor/MODEL_VIEWER_LICENSE.txt",
+    "record_play_glb": "assets/3d/nexah_roedelheim_record_play.glb",
+    "crystal_view_glb": "assets/3d/nexah_pq_conjugate_orbit_v7.glb",
+    "claim_boundary": "ILLUSTRATIVE_CULTURAL_ORIENTATION_ASSETS_NOT_SCIENTIFIC_EVIDENCE"
+  },
+  "chapters": [
+    {
+      "chapter_id": "A0-01",
+      "title": "From Line to Readout",
+      "surface": "01_FROM_LINE_TO_READOUT.html",
+      "source_record": "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/17_COMPLEX_NUMBERS_PHASE_AND_READOUT_NEXAH_FUNDAMENTALS_CROSSWALK_2026-10-08.md",
+      "claim_boundary": "ESTABLISHED_MATHEMATICS_PLUS_BOUNDED_NEXAH_CROSSWALK"
+    },
+    {
+      "chapter_id": "A0-02",
+      "title": "Point, Line and Coordinate",
+      "surface": "02_POINT_LINE_COORDINATE.html",
+      "source_record": "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/E8_DEMOS_INTERACTIVE_ORIENTATION_2026-09-21/COXETER_ORBIT_TOPOLOGY_LAB_2026-10-05/README.md",
+      "claim_boundary": "ESTABLISHED_GEOMETRY_PLUS_DECLARED_THREE_BIT_RECORD_AND_TYPED_E8_BRIDGE"
+    },
+    {
+      "chapter_id": "A0-03",
+      "title": "Three Positions, Seam and Return",
+      "surface": "03_THREE_POSITIONS_SEAM_RETURN.html",
+      "source_record": "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/SPLIT%20REST%20CHemestHR%C2%A5/Documents/REPORT.md",
+      "claim_boundary": "EXACT_FINITE_PROJECTION_PLUS_EXECUTED_SYNTHETIC_KEYED_RECONSTRUCTION_NO_PHYSICAL_MECHANISM_CLAIM"
+    },
+    {
+      "chapter_id": "A0-04",
+      "title": "Discrete Carriers and Neighborhoods",
+      "surface": "04_DISCRETE_CARRIERS_NEIGHBORHOODS.html",
+      "source_record": "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/NEXAH_TRANSITION_IDENTIFIABILITY_OBSERVATORY_V1_2026-10-07/MULTI_GRID_RELATION_FINDING_2026-10-07.md",
+      "supporting_records": [
+        "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/NEXAH_VIEW_INDUCED_TOPOLOGY_CALIBRATION_CA_IDENT_09_2026-10-08/CA_IDENT_09_RESULT.json",
+        "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/NAVIGATION/EVIDENCE/BREATHING_PRIME_CRYSTAL_INSTRUMENT_2026-10-08/BREATHING_PRIME_CRYSTAL_BINDER_V1_2026-10-08.json"
+      ],
+      "claim_boundary": "ESTABLISHED_FINITE_NEIGHBORHOOD_MATHEMATICS_PLUS_TYPED_MULTI_GRID_CROSSWALK_NO_SHARED_DYNAMICS_CLAIM"
+    },
+    {
+      "chapter_id": "A0-05",
+      "title": "Dynamics, Transition and Stability",
+      "surface": "05_DYNAMICS_TRANSITION_STABILITY.html",
+      "source_record": "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/NEXAH_LIFE_ORBIT_P1_2026-10-07/README.md",
+      "claim_boundary": "EXACT_FINITE_B3_S23_RECONSTRUCTION_PLUS_OBJECT_SPECIFIC_LORENZ_CROSSING_CONTROL_NO_UNIVERSAL_TRANSITION_OR_STABILITY_CLAIM"
+    },
+    {
+      "chapter_id": "A0-06",
+      "title": "Projection, Fourier and Shadows",
+      "surface": "06_PROJECTION_FOURIER_SHADOWS.html",
+      "source_record": "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/NEXAH_VIEW_OPERATOR_AUDIT_01_RECIPROCAL_POLAR_DFT_2026-10-07/01_RESULT_ASSESSMENT.md",
+      "supporting_records": [
+        "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/13_GREY_LENS_CORE_CONTRACT_CANDIDATE_2026-10-03.md",
+        "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/17_COMPLEX_NUMBERS_PHASE_AND_READOUT_NEXAH_FUNDAMENTALS_CROSSWALK_2026-10-08.md",
+        "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/NEXAH_LIFE_MULTI_VIEW_IDENTIFIABILITY_CA_IDENT_01_2026-10-08/results/CA_IDENT_01_RESULT.json",
+        "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/NEXAH_LIFE_CUBE_MEMORY_FOURIER_CA_IDENT_03_2026-10-08/results/CA_IDENT_03_RESULT.json",
+        "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/NEXAH_LIFE_CUBE_MEMORY_FOURIER_CA_IDENT_03_2026-10-08/CRT_SHADOW_ANNEX.md",
+        "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/CRIP01_CROSS_REPRESENTATION_INFORMATION_PRESERVATION_AUDIT/11_INFORMATION_LOSS_LEDGER.md"
+      ],
+      "claim_boundary": "EXACT_FINITE_DFT_RETURN_PLUS_TYPED_INFORMATION_LOSS_AND_INTERNAL_MULTI_VIEW_FIXTURES_NO_UNIVERSAL_PROJECTION_OR_PHYSICAL_RESONANCE_CLAIM"
+    },
+    {
+      "chapter_id": "A0-07",
+      "title": "Evidence, Comparison and Decision",
+      "surface": "07_EVIDENCE_COMPARISON_DECISION.html",
+      "source_record": "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/NEXAH_LIFE_KAPPA_OPEN_SET_CA_IDENT_06_2026-10-08/results/CA_IDENT_06_RESULT.json",
+      "supporting_records": [
+        "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/NEXAH_LIFE_KAPPA_OPEN_SET_CA_IDENT_06_2026-10-08/PREREGISTRATION.json",
+        "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/NEXAH_LIFE_ALPHA_BETA_RESIDUAL_CA_IDENT_05_2026-10-08/results/CA_IDENT_05_RESULT.json",
+        "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/NAVIGATION/APP/README.md"
+      ],
+      "claim_boundary": "EXECUTED_INTERNAL_COMPARISON_AND_COVERAGE_GATED_ABSTENTION_RECORD_NO_UNKNOWN_DETECTION_UTILITY_OR_EXTERNAL_VALIDITY_CLAIM"
+    },
+    {
+      "chapter_id": "A0-08",
+      "title": "Return: One Carrier, Seven Questions",
+      "surface": "08_RETURN_ONE_CARRIER_SEVEN_QUESTIONS.html",
+      "source_record": "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/11_MATHEMATICAL_FOUNDATIONS_GLOSSARY.md",
+      "supporting_records": [
+        "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/WS01_RELATIONAL_LANGUAGE_AND_ILAU_HUMAN_OWNER_CLOSURE_2026-09-08/04_ILAU_DECISION_RULE_BOUNDARY.md",
+        "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/ILAU_FIELD_LAB_NEON_NBAND_INTAKE_2026-09-04/00_README.md",
+        "https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/NAVIGATION/EVIDENCE/ILAU_ORIENTATION_INSTRUMENTS_2026-10-09/ILAU_ORIENTATION_INSTRUMENTS_BINDER_V1_2026-10-09.json",
+        "LAB_ORIENTATION_MACHINE.html"
+      ],
+      "claim_boundary": "BOOK_LEVEL_VISUAL_SYNTHESIS_PLUS_LOCAL_ILAU_COMPARISON_LEDGER_AND_BYTE_PRESERVED_DOCUMENTARY_INSTRUMENT_CLASSIFICATION_REMAINS_DISTINCT_FROM_DECISION_RULE_OR_SCIENTIFIC_PROOF"
+    }
+  ],
+  "source_milestone": {
+    "id": "A0_READER_PROOF_2026-10-09",
+    "record": "MILESTONE_A0_READER_PROOF_2026-10-09.md",
+    "sha256_manifest": "MILESTONE_SHA256.txt",
+    "reader_status": "INTERNAL_REVIEWED_NO_INDEPENDENT_READER_RETURN",
+    "publication_status": "NOT_PUBLIC"
+  },
+  "source_status": "LOCAL_READER_PROOF_FROZEN_DOCUMENTATION_ONLY_NOT_PUBLIC",
+  "publication": {
+    "release_id": "NEXAH_PUBLIC_PREVIEW_2026_10_09",
+    "source_repository": "Scarabaeus1031/NEXAH-Science-Lab",
+    "source_commit": "d8fbf0e06f6ae033fca7021de9f7158697b006e9",
+    "note": "Reader-facing paths and public-preview labels were adapted for this static export. Scientific content and claim ceilings remain source-bound."
+  }
+}

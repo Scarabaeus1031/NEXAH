@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NEXAH A0 — From Line to Readout</title>
+  <meta name="description" content="NEXAH A0 Book, Chapter 01: eine kontrollierte Einführung von Zahlengerade, komplexer Ebene und Readout bis zum NEXAH-Crosswalk.">
+  <style>
+    :root{
+      --paper:#f4f0e7;--paper-2:#fffdf8;--ink:#121a23;--muted:#5b6570;
+      --line:#cfc7b8;--dark:#07131e;--dark-2:#0b1c29;--dark-line:#284153;
+      --gold:#eab849;--cyan:#43cae7;--mint:#5ce0a6;--pink:#e548b5;
+      --serif:Georgia,"Times New Roman",serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;
+      --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6}
+    a{color:inherit}
+    .topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 4vw;background:rgba(255,253,248,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    .brand{font-weight:850;letter-spacing:.16em;text-decoration:none}
+    .brand span{font-weight:500;color:var(--muted);letter-spacing:.03em}
+    .toplinks{display:flex;gap:18px;flex-wrap:wrap}
+    .toplinks a{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;text-decoration:none;color:#34404b}
+    .toplinks a:hover{color:#9a6b00}
+    .hero{min-height:auto;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);align-items:center;gap:7vw;padding:clamp(44px,6vw,72px) 7vw clamp(38px,5vw,60px);background:
+      radial-gradient(circle at 82% 20%,rgba(67,202,231,.13),transparent 25%),
+      linear-gradient(135deg,var(--paper-2),#eee8dc)}
+    .eyebrow,.kicker{font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#85620b}
+    .hero h1{font:700 clamp(3.8rem,8vw,7.2rem)/.84 var(--serif);letter-spacing:-.065em;margin:.25em 0 .2em}
+    .hero h1 span{display:block;font:650 clamp(1.75rem,4vw,4rem)/1.04 var(--sans);letter-spacing:-.045em;margin-top:.35em}
+    .lead{font:400 clamp(1.15rem,2vw,1.6rem)/1.45 var(--serif);max-width:760px}
+    .hero-card{align-self:center;border:1px solid var(--ink);padding:30px;background:rgba(255,255,255,.54);box-shadow:12px 12px 0 rgba(234,184,73,.23)}
+    .hero-card strong{font:700 1.55rem var(--serif);display:block;margin:.25rem 0 1rem}
+    .status{display:grid;gap:9px;margin-top:22px}
+    .status span{font:600 .72rem var(--mono);padding:8px 10px;border-left:3px solid var(--gold);background:#ece5d7}
+    .contract{background:var(--dark);color:#e9f0f4;padding:22px 6vw;overflow:auto;border-top:4px solid var(--gold)}
+    .contract ol{list-style:none;margin:0 auto;padding:0;max-width:1200px;display:flex;align-items:center;justify-content:space-between;gap:20px;min-width:880px}
+    .contract li{font:700 .72rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#9db1bf;white-space:nowrap}
+    .contract li:not(:last-child)::after{content:"→";color:var(--gold);margin-left:20px}
+    .chapter-intro{max-width:1200px;margin:0 auto;padding:68px 6vw 34px}
+    .chapter-intro-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:46px;align-items:start;margin-bottom:30px}
+    .chapter-intro h2{font-size:clamp(2.3rem,4.5vw,4.2rem)}
+    .chapter-intro .promise{font:400 1.12rem/1.65 var(--serif);color:#46515b;border-left:4px solid var(--gold);padding-left:22px;margin:0}
+    .chapter-map{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+    .chapter-map article{background:var(--paper-2);border:1px solid var(--line);padding:18px;min-height:160px}
+    .chapter-map small{display:block;font:700 .62rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#85620b;margin-bottom:10px}
+    .chapter-map strong{display:block;font:700 1.03rem/1.2 var(--serif);margin-bottom:8px}
+    .chapter-map p{font-size:.78rem;line-height:1.48;color:#59646d;margin:0}
+    .nexah-contribution{margin-top:18px;display:grid;grid-template-columns:180px 1fr;border:1px solid var(--ink);background:var(--paper-2)}
+    .nexah-contribution .title{background:var(--dark);color:var(--gold);padding:22px;font:700 .7rem/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+    .nexah-contribution .copy{padding:22px}.nexah-contribution .copy p{margin:0}
+    .chapter-nav{display:flex;gap:9px;flex-wrap:wrap;max-width:1200px;margin:0 auto;padding:32px 6vw}
+    .chapter-nav a{text-decoration:none;border:1px solid var(--line);background:var(--paper-2);padding:9px 12px;font:650 .72rem var(--mono);text-transform:uppercase;letter-spacing:.06em}
+    main section{scroll-margin-top:82px}
+    .spread{max-width:1200px;margin:0 auto;padding:74px 6vw}
+    .section-head{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start;margin-bottom:38px}
+    .section-no{font:700 3.6rem/.8 var(--serif);color:#b3903e}
+    h2{font:700 clamp(2.5rem,5vw,5rem)/.95 var(--serif);letter-spacing:-.045em;margin:0}
+    h3{font:700 1.5rem/1.15 var(--serif);margin:.2em 0 .75em}
+    .subhead{font:400 1.05rem/1.6 var(--serif);color:#46515b;max-width:790px;margin:18px 0 0}
+    .dual{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .lens{position:relative;padding:30px;border:1px solid var(--line);background:var(--paper-2)}
+    .lens::before{content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:4px;background:var(--cyan)}
+    .lens.human::before{background:var(--gold)}
+    .lens .tag,.dark-tag{font:700 .68rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#477685}
+    .lens.human .tag{color:#85620b}
+    .lens p:last-child{margin-bottom:0}
+    .equation{font:600 clamp(1.2rem,2.4vw,2rem)/1.45 var(--mono);padding:22px;border-left:4px solid var(--cyan);background:#e9f6f7;overflow:auto}
+    .blackbook{background:var(--dark);color:#dce8ee;border-top:1px solid #193142;border-bottom:1px solid #193142}
+    .blackbook .spread{max-width:1280px}
+    .blackbook h2,.blackbook h3{color:#fff}
+    .blackbook .subhead{color:#94a8b5}
+    .blackbook .section-no{color:var(--cyan)}
+    .instrument{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(270px,.75fr);gap:28px}
+    .scope{min-height:500px;border:1px solid var(--dark-line);background:var(--dark-2);padding:18px;position:relative}
+    .scope svg{width:100%;height:440px;display:block}
+    .controls{border:1px solid var(--dark-line);padding:24px;background:#091823}
+    .controls label{display:block;font:700 .68rem var(--mono);letter-spacing:.11em;text-transform:uppercase;color:#86a2b3;margin:18px 0 5px}
+    input[type=range]{width:100%;accent-color:var(--gold)}
+    .readout{font:700 1.35rem var(--mono);color:var(--cyan);padding:14px 0;border-bottom:1px solid var(--dark-line)}
+    .controls p{color:#a9bbc6}
+    .legend{display:grid;gap:8px;margin-top:22px}
+    .legend span{font:.75rem var(--mono);color:#91a6b3}
+    .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px}
+    .rules{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .rule{min-height:210px;padding:20px;background:var(--paper-2);border:1px solid var(--line)}
+    .rule b{font:700 2rem var(--serif);color:#a6780c}
+    .rule h3{font-size:1.12rem;margin:.6rem 0}
+    .rule p{font-size:.88rem;color:#53606b}
+    .pipeline{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:28px 0}
+    .step{padding:20px 16px;border:1px solid var(--dark-line);background:#0a1b27;min-height:120px}
+    .step:not(:last-child){border-right:0}
+    .step small{display:block;color:var(--gold);font:700 .63rem var(--mono);letter-spacing:.11em;text-transform:uppercase}
+    .step b{display:block;color:#f4f7f8;margin-top:10px}
+    .step span{font-size:.75rem;color:#8da3b1}
+    .callout{border:1px solid var(--dark-line);border-left:4px solid var(--pink);padding:18px 22px;background:#091822;color:#aebfca;margin-top:24px}
+    .buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .btn{display:inline-block;text-decoration:none;border:1px solid currentColor;padding:10px 13px;font:700 .69rem var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--cyan)}
+    .btn.gold{color:var(--gold)}
+    .ledger{width:100%;border-collapse:collapse;background:var(--paper-2);font-size:.9rem}
+    .ledger th,.ledger td{text-align:left;vertical-align:top;padding:15px;border:1px solid var(--line)}
+    .ledger th{font:.7rem var(--mono);text-transform:uppercase;letter-spacing:.08em;background:#e7e0d4}
+    .badge{display:inline-block;font:700 .62rem var(--mono);letter-spacing:.05em;padding:5px 7px;border:1px solid}
+    .established{color:#157550}.exact{color:#126d82}.open{color:#8b6410}
+    .return{background:linear-gradient(120deg,#fdfaf3,#e9f3f1);border-top:1px solid var(--line)}
+    .return-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+    .return blockquote{font:700 clamp(1.65rem,3.6vw,3rem)/1.2 var(--serif);margin:0;border-left:5px solid var(--gold);padding-left:25px}
+    .return ol{padding-left:1.2em}
+    footer{background:#050d14;color:#8fa4b0;padding:48px 6vw;border-top:4px solid var(--gold)}
+    footer .foot{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr auto;gap:30px}
+    footer strong{display:block;color:#fff;letter-spacing:.14em}
+    footer p{max-width:720px}
+    @media(max-width:900px){
+      .hero,.instrument,.return-grid,.chapter-intro-head{grid-template-columns:1fr}
+      .hero{min-height:auto;padding-top:70px}.dual{grid-template-columns:1fr}
+      .rules{grid-template-columns:1fr 1fr}.pipeline{grid-template-columns:1fr}
+      .chapter-map{grid-template-columns:1fr 1fr}.nexah-contribution{grid-template-columns:1fr}
+      .step:not(:last-child){border-right:1px solid var(--dark-line);border-bottom:0}
+      .toplinks{display:none}
+    }
+    @media(max-width:560px){
+      .spread{padding:54px 5vw}.section-head{grid-template-columns:1fr}.section-no{font-size:2.4rem}
+      .rules,.chapter-map{grid-template-columns:1fr}.hero h1{font-size:4.2rem}
+      .ledger{font-size:.75rem}.ledger th,.ledger td{padding:9px}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">NEXAH <span>· A0 BOOK</span></a>
+    <nav class="toplinks" aria-label="Externe Navigation">
+      <a href="index.html">Book Index</a>
+      <a href="https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/17_COMPLEX_NUMBERS_PHASE_AND_READOUT_NEXAH_FUNDAMENTALS_CROSSWALK_2026-10-08.md">Foundation Record</a>
+      <a href="https://scarabaeus1031.github.io/NEXAH-Science-Lab/navigator/#home">Science Navigator</a>
+      <a href="https://nexah.de/" target="_blank" rel="noreferrer">NEXAH.DE</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Chapter 01 · Orientation route</div>
+        <h1>A0<span>From Line to Readout</span></h1>
+        <p class="lead">Eine Zahl ist noch keine Welt. Eine Darstellung ist noch kein Gegenstand. Dieses Kapitel beginnt deshalb nicht mit einer großen Erklärung, sondern mit einer kontrollierten Frage: <em>Was genau sehen wir — und wodurch?</em></p>
+      </div>
+      <aside class="hero-card">
+        <div class="kicker">Reading contract</div>
+        <strong>Wissenschaft und Human View nebeneinander.</strong>
+        <p>Links die formale Aussage. Rechts die verständliche Rückgabe. Dazwischen bleibt sichtbar, was exakt, was übertragen und was noch offen ist.</p>
+        <div class="status">
+          <span>DOCUMENTATION ONLY</span>
+          <span>PUBLIC PREVIEW · NOT PUBLIC</span>
+          <span>SCOPE · MATHEMATICS + READOUT</span>
+        </div>
+      </aside>
+    </section>
+
+    <div class="contract" aria-label="A0 audit sequence">
+      <ol><li>Source</li><li>Carrier</li><li>Operator</li><li>Representation</li><li>Readout</li><li>Residual</li><li>Return</li></ol>
+    </div>
+
+    <section class="chapter-intro" id="chapter-introduction">
+      <div class="chapter-intro-head">
+        <div>
+          <div class="kicker">Chapter introduction · what to expect</div>
+          <h2>Wie wird aus einer mathematischen Form ein interpretierbarer Record?</h2>
+        </div>
+        <p class="promise">Dieses Orientierungskapitel verfolgt eine erste vollständige Route: von der eindimensionalen Ordnung über Ebene und Rotation bis zu Projektion, Vergleich und Return. Es zeigt dabei sowohl die bekannte Mathematik als auch die besondere Arbeit, die NEXAH an ihren Übergängen leistet.</p>
+      </div>
+      <div class="chapter-map">
+        <article><small>Question</small><strong>Was wird untersucht?</strong><p>Wie verändern Träger, Operator und Darstellung das, was anschließend als Readout verfügbar ist?</p></article>
+        <article><small>Known foundation</small><strong>Was ist etabliert?</strong><p>Zahlenlinie, komplexe Ebene, Rotation mit <code>i</code>, reelle Matrixdarstellung und exakte Arithmetik.</p></article>
+        <article><small>NEXAH work</small><strong>Was wird hinzugefügt?</strong><p>Eine gemeinsame Auditfolge für Carrier, View, Transformation, Readout, Residual und Return.</p></article>
+        <article><small>Records</small><strong>Woran wird es gezeigt?</strong><p>Komplexes Ebeneninstrument, äquivalente reelle Darstellung und ausgeführter LIFE-Multi-View-Test.</p></article>
+        <article><small>Human return</small><strong>Was soll klarer werden?</strong><p>Warum eine sichtbare Form erst durch ihre Erzeugungs- und Leseregel zuverlässig interpretierbar wird.</p></article>
+      </div>
+      <div class="nexah-contribution">
+        <div class="title">NEXAH contribution<br>in this chapter</div>
+        <div class="copy"><p>NEXAH verbindet bekannte Strukturen in einer typisierten Vergleichsarchitektur. Es rekonstruiert die mathematische Aussage, benennt den Träger und den ausgeführten Operator, verfolgt den Weg bis zum Readout und führt das Ergebnis als Evidence Record und verständlichen Human Return zurück. Das Kapitel prüft damit nicht nur eine Formel, sondern die gesamte Strecke ihrer Darstellung.</p></div>
+      </div>
+    </section>
+
+    <nav class="chapter-nav" aria-label="Kapitelabschnitte">
+      <a href="#chapter-introduction">00 Overview</a><a href="#distinction">01 Distinction</a><a href="#plane">02 Complex plane</a><a href="#rules">03 Audit rules</a>
+      <a href="#life">04 LIFE record</a><a href="#ledger">05 Evidence ledger</a><a href="#return">06 Human return</a>
+    </nav>
+
+    <section class="spread" id="distinction">
+      <header class="section-head">
+        <div class="section-no">01</div>
+        <div><div class="kicker">The first cut</div><h2>Eine Linie ordnet. Eine Ebene orientiert.</h2>
+          <p class="subhead">Die Zahlengerade trägt eine Koordinate. Die komplexe Ebene ergänzt eine zweite reelle Achse und damit eine gerichtete Phasenbeziehung. Das ist etablierte Mathematik — noch keine Aussage darüber, woraus die Natur „besteht“.</p></div>
+      </header>
+      <div class="dual">
+        <article class="lens">
+          <div class="tag">Science View · established mathematics</div>
+          <h3>Komplexe Zahl als geordnetes reelles Paar</h3>
+          <div class="equation">z = x + iy ↔ (x,y)<br>|z| = √(x²+y²)</div>
+          <p>Multiplikation mit <code>i</code> wirkt als Vierteldrehung: <code>i(x+iy) = -y+ix</code>. Dieselbe Struktur lässt sich reell durch die Matrix <code>J=[[0,-1],[1,0]]</code> mit <code>J²=-I</code> darstellen.</p>
+        </article>
+        <article class="lens human">
+          <div class="tag">Human View · intuitive return</div>
+          <h3>Mehr Raum heißt nicht automatisch mehr Wahrheit</h3>
+          <p>Auf einer Linie weißt du: weiter links oder rechts. In einer Ebene kannst du zusätzlich fragen: <em>in welche Richtung?</em> Die neue Darstellung bewahrt andere Beziehungen — aber sie bleibt eine Darstellung.</p>
+          <p><strong>Die NEXAH-Frage:</strong> Welche Beziehung wird durch die gewählte Sicht sichtbar, und welche verschwindet?</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="blackbook" id="plane">
+      <div class="spread">
+        <header class="section-head">
+          <div class="section-no">02</div>
+          <div><div class="dark-tag">Interactive instrument · exact local geometry</div><h2>Phase ist eine Relation, kein Dekor.</h2>
+            <p class="subhead">Bewege Winkel und Betrag. Das Instrument zeigt denselben Punkt als kartesisches Paar und als Betrag mit Phase. Der zweite Vektor ist exakt die Multiplikation mit <code>i</code>.</p></div>
+        </header>
+        <div class="instrument">
+          <div class="scope">
+            <svg id="complexSvg" viewBox="-220 -220 440 440" role="img" aria-label="Interaktive komplexe Ebene">
+              <defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#173244" stroke-width="1"/></pattern></defs>
+              <rect x="-220" y="-220" width="440" height="440" fill="url(#grid)"/>
+              <line x1="-210" y1="0" x2="210" y2="0" stroke="#567184"/><line x1="0" y1="-210" x2="0" y2="210" stroke="#567184"/>
+              <circle cx="0" cy="0" r="160" fill="none" stroke="#294657"/>
+              <path id="phaseArc" fill="none" stroke="#eab849" stroke-width="3"/>
+              <line id="zLine" x1="0" y1="0" x2="120" y2="-120" stroke="#43cae7" stroke-width="4"/>
+              <line id="izLine" x1="0" y1="0" x2="120" y2="120" stroke="#e548b5" stroke-width="3" stroke-dasharray="8 7"/>
+              <circle id="zPoint" cx="120" cy="-120" r="7" fill="#43cae7"/><circle id="izPoint" cx="120" cy="120" r="6" fill="#e548b5"/>
+              <text id="zLabel" x="130" y="-130" fill="#8ee9f5" font-family="monospace" font-size="14">z</text>
+              <text id="izLabel" x="130" y="135" fill="#f184d2" font-family="monospace" font-size="14">iz</text>
+              <text x="194" y="-10" fill="#718b9b" font-family="monospace" font-size="12">Re</text><text x="8" y="-196" fill="#718b9b" font-family="monospace" font-size="12">Im</text>
+            </svg>
+          </div>
+          <aside class="controls">
+            <div class="dark-tag">Live readout</div>
+            <label for="angle">Phase θ · <span id="angleValue">38°</span></label>
+            <input id="angle" type="range" min="0" max="359" value="38">
+            <label for="radius">Magnitude |z| · <span id="radiusValue">0.78</span></label>
+            <input id="radius" type="range" min="20" max="100" value="78">
+            <div class="readout" id="cartesian">z = 0.61 + 0.48i</div>
+            <div class="readout" id="rotated">iz = −0.48 + 0.61i</div>
+            <p>Die Darstellung ändert sich, der lokale Operator nicht: Multiplikation mit <code>i</code> rotiert um <code>+90°</code> und erhält den Betrag.</p>
+            <div class="legend">
+              <span><i class="dot" style="background:var(--cyan)"></i>z · Ausgangsdarstellung</span>
+              <span><i class="dot" style="background:var(--pink)"></i>iz · Operatorwirkung</span>
+              <span><i class="dot" style="background:var(--gold)"></i>θ · relative Phase</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="spread" id="rules">
+      <header class="section-head">
+        <div class="section-no">03</div>
+        <div><div class="kicker">A0 audit grammar</div><h2>Fünf Regeln vor jeder großen Deutung.</h2>
+          <p class="subhead">Diese Regeln sind keine Naturgesetze. Sie sind die Arbeitsdisziplin, mit der NEXAH Gleichsetzungen verhindert und überprüfbare Fragen vorbereitet.</p></div>
+      </header>
+      <div class="rules">
+        <article class="rule"><b>1</b><h3>Carrier before view</h3><p>Welcher Gegenstand oder Zustandsraum trägt die Information, bevor eine Ansicht erzeugt wird?</p></article>
+        <article class="rule"><b>2</b><h3>Operator before analogy</h3><p>Welche Abbildung wurde tatsächlich ausgeführt? Formähnlichkeit wird so zur Ausgangsfrage für einen präzisen Vergleich.</p></article>
+        <article class="rule"><b>3</b><h3>Readout ≠ source</h3><p>Das Mess- oder Bildresultat ist ein Record des Gegenstands, nicht automatisch der ganze Gegenstand.</p></article>
+        <article class="rule"><b>4</b><h3>Projection leaves residual</h3><p>Jede begrenzte Ansicht kann Information verwerfen. Der Rest muss benannt werden dürfen.</p></article>
+        <article class="rule"><b>5</b><h3>Relation ≠ identity</h3><p>Eine exakte Übersetzung, Formähnlichkeit oder Kopplung macht zwei Objekte nicht identisch.</p></article>
+      </div>
+    </section>
+
+    <section class="blackbook" id="life">
+      <div class="spread">
+        <header class="section-head">
+          <div class="section-no">04</div>
+          <div><div class="dark-tag">Worked record · CA-IDENT-01</div><h2>LIFE: ein Träger, mehrere Schatten.</h2>
+            <p class="subhead">Conway LIFE liefert einen exakt berechneten Carrier. Grid, Fourier-Bild, Shadow Memory, Shadow-gon, Poincaré-Disk und E8-Adapter sind deklarierte Ansichten oder Übersetzungen. Der Test fragt, welche Ansicht spätere Verhaltensklassen besser identifiziert.</p></div>
+        </header>
+        <div class="pipeline">
+          <div class="step"><small>1 · Carrier</small><b>40×40 binary cells</b><span>exacter LIFE-Zustand</span></div>
+          <div class="step"><small>2 · Memory</small><b>five retained frames</b><span>verlustbehafteter Zeitrecord</span></div>
+          <div class="step"><small>3 · Views</small><b>grid · DFT · 17/19/29-gon</b><span>getrennte Projektionen</span></div>
+          <div class="step"><small>4 · Adapter</small><b>8-coordinate record</b><span>experimentell, nicht identisch</span></div>
+          <div class="step"><small>5 · Return</small><b>8-generation class</b><span>übersetzter Holdout</span></div>
+        </div>
+        <div class="dual">
+          <article class="lens" style="background:#0a1a25;border-color:#294353;color:#cbd9e1">
+            <div class="tag">Exact</div><h3>Carrier und LIFE-Regel</h3><p>Jeder Zustand und jeder B3/S23-Schritt werden direkt auf dem endlichen 40×40-Träger berechnet.</p>
+          </article>
+          <article class="lens human" style="background:#0a1a25;border-color:#294353;color:#cbd9e1">
+            <div class="tag">Human return</div><h3>Mehr Sichtweisen werden vergleichbar</h3><p>Eine zusätzliche Linse wird nützlich, wenn sie für die gestellte Aufgabe relevante Unterschiede bewahrt und sichtbar macht.</p>
+          </article>
+        </div>
+        <div class="callout"><strong>Record scope:</strong> Der ausgeführte Test vergleicht deklarierte Projektionen desselben LIFE-Carriers. Er liefert messbare Unterschiede zwischen den Ansichten und einen reproduzierbaren Ausgangspunkt für weitere Aufgaben.</div>
+        <div class="buttons">
+          <a class="btn" href="https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/SCIENCE_LAB/CASE_STUDIES/NEXAH_LIFE_MULTI_VIEW_IDENTIFIABILITY_CA_IDENT_01_2026-10-08/index.html">Open executed LIFE instrument</a>
+          <a class="btn gold" href="https://scarabaeus1031.github.io/NEXAH-Science-Lab/navigator/#life-orbit">Open LIFE in Navigator</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="spread" id="ledger">
+      <header class="section-head">
+        <div class="section-no">05</div>
+        <div><div class="kicker">Evidence ledger · findings and consequences</div><h2>Ergebnisse dieses Kapitels.</h2>
+          <p class="subhead">Das Ledger hält die gefundenen Strukturen, ihren jeweiligen Record und die daraus folgende Arbeitsregel zusammen.</p></div>
+      </header>
+      <table class="ledger">
+        <thead><tr><th>Fund</th><th>Record</th><th>Konsequenz für NEXAH</th></tr></thead>
+        <tbody>
+          <tr><td>Komplexe Koordinaten verbinden Betrag und gerichtete Phase.</td><td><span class="badge established">Established mathematics</span></td><td>Carrier, Koordinate und geometrische Relation können gemeinsam benannt werden.</td></tr>
+          <tr><td>Multiplikation mit <code>i</code> erzeugt eine exakte Vierteldrehung.</td><td><span class="badge established">Operator record</span></td><td>Eine Transformation wird durch ihre Wirkung und ihre Invarianten beschrieben.</td></tr>
+          <tr><td>Dieselbe Rotation besitzt eine komplexe und eine reelle Matrixdarstellung.</td><td><span class="badge exact">Exact translation</span></td><td>Verschiedene Repräsentationen können bei erhaltener Übersetzungsregel verglichen werden.</td></tr>
+          <tr><td>Der LIFE-Carrier lässt sich in mehrere kontrollierte Ansichten übersetzen.</td><td><span class="badge exact">Executed fixture</span></td><td>Views werden über Aufgabe, Score und erhaltene Information miteinander verglichen.</td></tr>
+          <tr><td>Kapitel 01 verbindet Mathematik, Darstellung und Readout in einer gemeinsamen Auditfolge.</td><td><span class="badge open">A0 method</span></td><td>Source → Carrier → Operator → Representation → Readout → Residual → Return.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="return" id="return">
+      <div class="spread return-grid">
+        <div><div class="section-no" style="margin-bottom:28px">06</div><blockquote>Wir beschreiben eine Form so genau, dass aus dem sichtbaren Muster eine prüfbare Frage werden kann.</blockquote></div>
+        <div>
+          <div class="kicker">Human Return · Chapter 01</div>
+          <h3>Was bleibt?</h3>
+          <ol>
+            <li>Eine Darstellung macht ausgewählte Beziehungen sichtbar; Carrier und Readout bestimmen ihre Reichweite.</li>
+            <li>Die deklarierte Operation gibt einem Pluszeichen, Kreis oder wiederkehrenden Muster seine konkrete Bedeutung.</li>
+            <li>NEXAHs belastbarer Beitrag beginnt dort, wo Carrier, Sicht, Transformation, Verlust und Claim-Grenze gemeinsam dokumentiert werden.</li>
+            <li>Der nächste Schritt ist kein größerer Claim, sondern ein besserer Test.</li>
+          </ol>
+          <div class="buttons">
+            <a class="btn gold" href="02_POINT_LINE_COORDINATE.html">Continue to Chapter 02 →</a>
+            <a class="btn gold" href="https://scarabaeus1031.github.io/NEXAH-Science-Lab/sources/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/17_COMPLEX_NUMBERS_PHASE_AND_READOUT_NEXAH_FUNDAMENTALS_CROSSWALK_2026-10-08.md">Read the controlled foundation record</a>
+            <a class="btn" style="color:#126d82" href="https://scarabaeus1031.github.io/NEXAH-Science-Lab/navigator/#home">Return to Science Navigator</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div><strong>NEXAH · A0 BOOK</strong><p>Public guided-reading preview. Documentation only. Source records retain their own claim ceilings; visual analogy is not scientific evidence.</p></div>
+      <div class="kicker">2026-10-08 · v0.1</div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var angle=document.getElementById('angle'), radius=document.getElementById('radius');
+      var angleValue=document.getElementById('angleValue'), radiusValue=document.getElementById('radiusValue');
+      var zLine=document.getElementById('zLine'), izLine=document.getElementById('izLine');
+      var zPoint=document.getElementById('zPoint'), izPoint=document.getElementById('izPoint');
+      var zLabel=document.getElementById('zLabel'), izLabel=document.getElementById('izLabel');
+      var phaseArc=document.getElementById('phaseArc'), cartesian=document.getElementById('cartesian'), rotated=document.getElementById('rotated');
+      function fmt(v){return (Math.abs(v)<0.005?'0':v.toFixed(2)).replace('-', '−')}
+      function signed(v){return (v>=0?' + ':' − ')+Math.abs(v).toFixed(2)+'i'}
+      function updateComplex(){
+        var deg=Number(angle.value), mag=Number(radius.value)/100, rad=deg*Math.PI/180, scale=180*mag;
+        var x=Math.cos(rad)*scale, y=-Math.sin(rad)*scale, ix=-Math.sin(rad)*scale, iy=-Math.cos(rad)*scale;
+        zLine.setAttribute('x2',x);zLine.setAttribute('y2',y);zPoint.setAttribute('cx',x);zPoint.setAttribute('cy',y);
+        izLine.setAttribute('x2',ix);izLine.setAttribute('y2',iy);izPoint.setAttribute('cx',ix);izPoint.setAttribute('cy',iy);
+        zLabel.setAttribute('x',x+10);zLabel.setAttribute('y',y-10);izLabel.setAttribute('x',ix+10);izLabel.setAttribute('y',iy-10);
+        var ax=70*Math.cos(rad), ay=-70*Math.sin(rad), large=deg>180?1:0;
+        phaseArc.setAttribute('d','M 70 0 A 70 70 0 '+large+' 0 '+ax+' '+ay);
+        angleValue.textContent=deg+'°';radiusValue.textContent=mag.toFixed(2);
+        var re=mag*Math.cos(rad), im=mag*Math.sin(rad);
+        cartesian.textContent='z = '+fmt(re)+signed(im);
+        rotated.textContent='iz = '+fmt(-im)+signed(re);
+      }
+      angle.addEventListener('input',updateComplex);radius.addEventListener('input',updateComplex);updateComplex();
+
+    })();
+  </script>
+  
+</body>
+</html>
