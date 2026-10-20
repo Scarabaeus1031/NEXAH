@@ -1,0 +1,1381 @@
+{
+  "contract_id": "A0-BL-023:JANUS_PN_HANDLE_VM_TRANSFER_AUDIT:V1",
+  "date": "2026-10-11",
+  "classification": "PASS_EXACT_JANUS_PN_SIX_STEP_INTERTWINER_WITH_RADIX_GRAMMAR_AND_DAMPING_OPEN",
+  "summary": {
+    "passed": 71,
+    "total": 71
+  },
+  "source_resolution": {
+    "ncs_snc_result": {
+      "path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/NCS_SNC_292_929_ORDER_ENVELOPE_RETURN_TEST_2026-10-11/RESULT.json",
+      "sha256": "9b957cdd6bccb70a98cd9197f8f68fb17fb7b3fc39d9faef8251eb36b8c3cc6a",
+      "class": "frozen_sources"
+    },
+    "q106_result": {
+      "path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "330bc8a1b9b9a29bde53e77c43088b8487992252a86e63fdcee7701479d363d1",
+      "class": "frozen_sources"
+    },
+    "crt_qrt_r17_readme": {
+      "path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/NAVIGATION/EVIDENCE/CRT_QRT_37_CARRIER_LADDER_2026-10-11/README.md",
+      "sha256": "ba9f08c90c3c4e8c55a19dba5e379df11a36dc17ad3a48c1fd5b5f44eaf32c5c",
+      "class": "frozen_sources"
+    },
+    "historical_elevator_pdf": {
+      "path": "/Users/tho2020/Desktop/Desktop TASKS/DESKTOP_archy/THOOTH DASHBOARD/Nexahedron_Codex Staging Modules/AEON History pi phi pr|oof - Scarabline-Root7/CODEX_BIG_ELEVATOR_SCARABLINE/Codex Big Elevator.pdf",
+      "sha256": "b5a7df16018dc5ab5305f06696570806cd2986c97a8d57033ea3b793e4055c9f",
+      "class": "frozen_sources"
+    },
+    "historical_gallery_pdf": {
+      "path": "/Users/tho2020/Desktop/Desktop TASKS/DESKTOP_archy/THOOTH DASHBOARD/Nexahedron_Codex Staging Modules/AEON History pi phi pr|oof - Scarabline-Root7/CODEX_BIG_ELEVATOR_SCARABLINE/🌀 Visual Gallery · CODEX_BIG_ELEVATOR_1933_1945V2.pdf",
+      "sha256": "d6e5f1560dcce956750d12f9ebb1c2ad949adb818c091e5371a4a3924091efc1",
+      "class": "frozen_sources"
+    },
+    "vm_clarification_pdf": {
+      "path": "/Users/tho2020/Desktop/Desktop TASKS/DESKTOP_archy/x-1033_Release_some Symoblik stuff/Q-Space Λ — A Pre-Geometric Axiom Chain/Q° _ Vm _ & — Structural Clarification.pdf",
+      "sha256": "f951febd8b6ead5da7765acc6d11bca431c93912e17ec27224b673c9c2b50b45",
+      "class": "frozen_sources"
+    },
+    "am_pm_vm_map": {
+      "path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/9/9895FE16-55CB-4D25-9642-1B3AB23EF9C9_1_105_c.jpeg",
+      "sha256": "dfd86f58940dc6a2511d8aa0fefcfca113b596b2486fd377afea3963ac89a084",
+      "class": "visual_sources"
+    },
+    "visual_index": {
+      "path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/5/54FE91CA-2499-4144-852C-1552A9C2ADF0_1_105_c.jpeg",
+      "sha256": "2e639e4e403dcdcb94916078427f711e497496217c97e9d547bed8ee98260ec6",
+      "class": "visual_sources"
+    },
+    "polygon_escape": {
+      "path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/5/5150EFB5-092E-4E78-9F0F-0886C67AD317_1_105_c.jpeg",
+      "sha256": "969c6584999ab303ee5da804b75eba50fe964ba5cdae58a2df7eeff553badab3",
+      "class": "visual_sources"
+    },
+    "time_resonance_ring": {
+      "path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/E/E0A90C38-A8E0-4811-BB4A-8C726CA144FE_1_102_o.jpeg",
+      "sha256": "8664e95dd82c71ecb89a887d8d7bd15add6295c26c820386023fe3de7a080d1d",
+      "class": "visual_sources"
+    },
+    "record_play_432": {
+      "path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/C/CFE7E871-BE6D-4035-A537-B601DB09D323_1_102_o.jpeg",
+      "sha256": "ffed3213181543dccc796b45f5808a151a2520414f33a42a9addedc2b5f1a342",
+      "class": "visual_sources"
+    },
+    "intertwined_clefs": {
+      "path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/A/A4B64F9D-0E16-4A79-BB14-BBE4E1C26572_1_102_o.jpeg",
+      "sha256": "c8759c3bf0e99ee0c7ba3dd8ecaa22f42d8d1334d1ff2e5260da93985747d39d",
+      "class": "visual_sources"
+    },
+    "relational_40_41_42": {
+      "path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/8/882C5AA8-B49F-4758-BA70-4783F2D863A3_1_102_o.jpeg",
+      "sha256": "52760dd5381f97cf04536344e89794b300e04abfc9e3bd193930593711ac01f1",
+      "class": "visual_sources"
+    },
+    "crown_seam_root": {
+      "path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/5/5B2A4544-ED74-4632-A031-67A0D5B221F5_1_102_o.jpeg",
+      "sha256": "0a291d481b802dbeb1480a653b78a53cbcc0b90b705f5534f8b9404b227c9f80",
+      "class": "visual_sources"
+    },
+    "orientation_machine": {
+      "path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/0/0171A167-BF38-40BB-88A2-9542B0A0F4C5_1_105_c.jpeg",
+      "sha256": "75218a040dfa4ffb26a2ab652f56cca32a8575098dae6b030452a403e6d4ad9b",
+      "class": "visual_sources"
+    },
+    "khippu_cuts_knots_threads": {
+      "path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/9/9FE9E2D2-9D3E-441F-B71E-559378F30B90_1_105_c.jpeg",
+      "sha256": "9b6d3ed6146cd362906a2c6d3ede1f016fe9ae6554ce2a710116a97e22afc602",
+      "class": "visual_sources"
+    },
+    "return_residual_bounded_lock": {
+      "path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/B/B7F52C2D-1C16-426B-837D-DBBF6C9EAADF_1_105_c.jpeg",
+      "sha256": "6c5560a81400f59b4782209f4a30afc162df706efc43013bae01171172c0d4d6",
+      "class": "visual_sources"
+    },
+    "oeis_relation_machine": {
+      "path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/0/0F06661E-63E0-4EDC-B10B-DDF4DDEEF4D0_1_105_c.jpeg",
+      "sha256": "934ed50f1bd0101d4da21568a649401465643eb03e3190034ccc95243274021a",
+      "class": "visual_sources"
+    },
+    "seam_reconstruction_gate": {
+      "path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/B/B7FB54C6-E673-4538-AD5C-E7E8FC253852_1_105_c.jpeg",
+      "sha256": "18dd4de4f772ece5d0c8c8a945a473345ed3a17e7291f6e19e66b5d9de8e29bd",
+      "class": "visual_sources"
+    },
+    "ilau_cartography_extension": {
+      "path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/4/4627982E-4082-4039-986E-F368C57034B5_1_105_c.jpeg",
+      "sha256": "89dc8acde2015aba7cdf50d0c332436690fa7d02dbb154335648c88c8f0e82fd",
+      "class": "visual_sources"
+    }
+  },
+  "derived": {
+    "prime_indices": [
+      25,
+      27,
+      29
+    ],
+    "prime_row": [
+      97,
+      103,
+      109
+    ],
+    "year_row": [
+      1933,
+      1939,
+      1945
+    ],
+    "residual_1729": [
+      204,
+      210,
+      216
+    ],
+    "residual_1836": [
+      97,
+      103,
+      109
+    ],
+    "nested_centers": {
+      "center_97_109": 103,
+      "center_103_109": 106
+    },
+    "handle_7_6": {
+      "7+6": 13,
+      "7*6": 42,
+      "p6": 13,
+      "p13": 41,
+      "p14": 43
+    },
+    "prime_six_step_control": {
+      "range": "start indices 1..1000",
+      "single_hit_count": 99,
+      "double_chains": [
+        {
+          "start_index": 3,
+          "indices": [
+            3,
+            5,
+            7
+          ],
+          "values": [
+            5,
+            11,
+            17
+          ]
+        },
+        {
+          "start_index": 4,
+          "indices": [
+            4,
+            6,
+            8
+          ],
+          "values": [
+            7,
+            13,
+            19
+          ]
+        },
+        {
+          "start_index": 5,
+          "indices": [
+            5,
+            7,
+            9
+          ],
+          "values": [
+            11,
+            17,
+            23
+          ]
+        },
+        {
+          "start_index": 25,
+          "indices": [
+            25,
+            27,
+            29
+          ],
+          "values": [
+            97,
+            103,
+            109
+          ]
+        },
+        {
+          "start_index": 26,
+          "indices": [
+            26,
+            28,
+            30
+          ],
+          "values": [
+            101,
+            107,
+            113
+          ]
+        },
+        {
+          "start_index": 234,
+          "indices": [
+            234,
+            236,
+            238
+          ],
+          "values": [
+            1481,
+            1487,
+            1493
+          ]
+        },
+        {
+          "start_index": 285,
+          "indices": [
+            285,
+            287,
+            289
+          ],
+          "values": [
+            1867,
+            1873,
+            1879
+          ]
+        },
+        {
+          "start_index": 483,
+          "indices": [
+            483,
+            485,
+            487
+          ],
+          "values": [
+            3457,
+            3463,
+            3469
+          ]
+        },
+        {
+          "start_index": 742,
+          "indices": [
+            742,
+            744,
+            746
+          ],
+          "values": [
+            5647,
+            5653,
+            5659
+          ]
+        }
+      ]
+    },
+    "suffixes": [
+      29,
+      33,
+      45
+    ],
+    "suffix_pn_row": [
+      109,
+      137,
+      197
+    ],
+    "local_gains": [
+      "7",
+      "5"
+    ],
+    "bounded_gain_hits": [
+      {
+        "start": 29,
+        "values": [
+          109,
+          137,
+          197
+        ],
+        "gains": [
+          "7",
+          "5"
+        ]
+      }
+    ],
+    "bounded_r17_hits": [
+      {
+        "start": 21,
+        "values": [
+          73,
+          97,
+          157
+        ],
+        "gains": [
+          "6",
+          "5"
+        ]
+      },
+      {
+        "start": 29,
+        "values": [
+          109,
+          137,
+          197
+        ],
+        "gains": [
+          "7",
+          "5"
+        ]
+      },
+      {
+        "start": 62,
+        "values": [
+          293,
+          317,
+          397
+        ],
+        "gains": [
+          "6",
+          "20/3"
+        ]
+      }
+    ],
+    "prime_permutations_3565": [
+      5563,
+      5653,
+      6553
+    ],
+    "vm_roles": {
+      "VM_VERTICAL_AXIS": "AM/PM orientation visual",
+      "vm_CONTRACTION_BRANCH": "polygon escape visual",
+      "VM_VORSTELLUNGS_MEDIUM": "structural clarification PDF",
+      "VM_TIME_RING_LABEL": "time resonance ring visual"
+    },
+    "first_four_prime_radix_grammar": {
+      "seed_primes": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "decimal_views": {
+        "27": 27,
+        "72": 72,
+        "35": 35,
+        "53": 53
+      },
+      "connector_core": {
+        "2*5": 10,
+        "3+7": 10,
+        "2*3": 6,
+        "2+5": 7
+      },
+      "radix_test_range": "8..1000",
+      "radix_theorem_passed": true,
+      "reverse_pair_arithmetic": {
+        "gcd_27_72": 9,
+        "lcm_27_72": 216,
+        "ratio_72_27": "8/3",
+        "difference_53_35": 18,
+        "difference_72_27": 45
+      },
+      "connector_6_9": {
+        "6": 6,
+        "9": 9,
+        "ratio": "3/2",
+        "difference": 3,
+        "sum": 15,
+        "gcd": 3,
+        "lcm": 18
+      },
+      "block_216_post_hoc": {
+        "L": 216,
+        "2L": 432,
+        "8L+1": 1729,
+        "9L": 1944,
+        "9L+1": 1945,
+        "27*72": 1944
+      },
+      "sum_107_control_hits": [
+        {
+          "partition": [
+            [
+              2,
+              3
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "values": [
+            32,
+            75
+          ]
+        },
+        {
+          "partition": [
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "values": [
+            72,
+            35
+          ]
+        }
+      ],
+      "ilau": {
+        "I_retained": [
+          "first-four-prime tuple",
+          "declared radix formula",
+          "exact arithmetic"
+        ],
+        "L_lost": [
+          "unwritten radix and orientation"
+        ],
+        "A_added": [
+          "decimal concatenation",
+          "color roles",
+          "5/S glyph analogy"
+        ],
+        "U_unresolved": [
+          "physical connector meaning",
+          "visual dynamics"
+        ]
+      }
+    },
+    "interpretation": {
+      "six_step_prime_translation": "ESTABLISHED_EXACTLY",
+      "nested_q106_center": "ESTABLISHED_EXACTLY",
+      "suffix_pn_gain_drop": "ESTABLISHED_FOR_TWO_INTERVALS",
+      "damping_law": "NOT_ESTABLISHED",
+      "vm_unification": "NOT_ESTABLISHED",
+      "physical_interaction": "NOT_ESTABLISHED",
+      "radix_adjacent_pair": "ESTABLISHED_EXACTLY",
+      "five_s_glyph_identity": "NOT_ESTABLISHED"
+    }
+  },
+  "checks": [
+    {
+      "name": "identity reused without creation",
+      "status": "PASS",
+      "observed": {
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+        "source_object": "NCS-292 / Q106",
+        "parent_contract": "A0-BL-023:NCS_292_Q106_INTERTWINER_RETURN_PACKAGE:V1",
+        "creates": []
+      },
+      "expected": {
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+        "creates": []
+      }
+    },
+    {
+      "name": "source integrity ncs_snc_result",
+      "status": "PASS",
+      "observed": "9b957cdd6bccb70a98cd9197f8f68fb17fb7b3fc39d9faef8251eb36b8c3cc6a",
+      "expected": "9b957cdd6bccb70a98cd9197f8f68fb17fb7b3fc39d9faef8251eb36b8c3cc6a"
+    },
+    {
+      "name": "source integrity q106_result",
+      "status": "PASS",
+      "observed": "330bc8a1b9b9a29bde53e77c43088b8487992252a86e63fdcee7701479d363d1",
+      "expected": "330bc8a1b9b9a29bde53e77c43088b8487992252a86e63fdcee7701479d363d1"
+    },
+    {
+      "name": "source integrity crt_qrt_r17_readme",
+      "status": "PASS",
+      "observed": "ba9f08c90c3c4e8c55a19dba5e379df11a36dc17ad3a48c1fd5b5f44eaf32c5c",
+      "expected": "ba9f08c90c3c4e8c55a19dba5e379df11a36dc17ad3a48c1fd5b5f44eaf32c5c"
+    },
+    {
+      "name": "source integrity historical_elevator_pdf",
+      "status": "PASS",
+      "observed": "b5a7df16018dc5ab5305f06696570806cd2986c97a8d57033ea3b793e4055c9f",
+      "expected": "b5a7df16018dc5ab5305f06696570806cd2986c97a8d57033ea3b793e4055c9f"
+    },
+    {
+      "name": "source integrity historical_gallery_pdf",
+      "status": "PASS",
+      "observed": "d6e5f1560dcce956750d12f9ebb1c2ad949adb818c091e5371a4a3924091efc1",
+      "expected": "d6e5f1560dcce956750d12f9ebb1c2ad949adb818c091e5371a4a3924091efc1"
+    },
+    {
+      "name": "source integrity vm_clarification_pdf",
+      "status": "PASS",
+      "observed": "f951febd8b6ead5da7765acc6d11bca431c93912e17ec27224b673c9c2b50b45",
+      "expected": "f951febd8b6ead5da7765acc6d11bca431c93912e17ec27224b673c9c2b50b45"
+    },
+    {
+      "name": "source integrity am_pm_vm_map",
+      "status": "PASS",
+      "observed": "dfd86f58940dc6a2511d8aa0fefcfca113b596b2486fd377afea3963ac89a084",
+      "expected": "dfd86f58940dc6a2511d8aa0fefcfca113b596b2486fd377afea3963ac89a084"
+    },
+    {
+      "name": "source integrity visual_index",
+      "status": "PASS",
+      "observed": "2e639e4e403dcdcb94916078427f711e497496217c97e9d547bed8ee98260ec6",
+      "expected": "2e639e4e403dcdcb94916078427f711e497496217c97e9d547bed8ee98260ec6"
+    },
+    {
+      "name": "source integrity polygon_escape",
+      "status": "PASS",
+      "observed": "969c6584999ab303ee5da804b75eba50fe964ba5cdae58a2df7eeff553badab3",
+      "expected": "969c6584999ab303ee5da804b75eba50fe964ba5cdae58a2df7eeff553badab3"
+    },
+    {
+      "name": "source integrity time_resonance_ring",
+      "status": "PASS",
+      "observed": "8664e95dd82c71ecb89a887d8d7bd15add6295c26c820386023fe3de7a080d1d",
+      "expected": "8664e95dd82c71ecb89a887d8d7bd15add6295c26c820386023fe3de7a080d1d"
+    },
+    {
+      "name": "source integrity record_play_432",
+      "status": "PASS",
+      "observed": "ffed3213181543dccc796b45f5808a151a2520414f33a42a9addedc2b5f1a342",
+      "expected": "ffed3213181543dccc796b45f5808a151a2520414f33a42a9addedc2b5f1a342"
+    },
+    {
+      "name": "source integrity intertwined_clefs",
+      "status": "PASS",
+      "observed": "c8759c3bf0e99ee0c7ba3dd8ecaa22f42d8d1334d1ff2e5260da93985747d39d",
+      "expected": "c8759c3bf0e99ee0c7ba3dd8ecaa22f42d8d1334d1ff2e5260da93985747d39d"
+    },
+    {
+      "name": "source integrity relational_40_41_42",
+      "status": "PASS",
+      "observed": "52760dd5381f97cf04536344e89794b300e04abfc9e3bd193930593711ac01f1",
+      "expected": "52760dd5381f97cf04536344e89794b300e04abfc9e3bd193930593711ac01f1"
+    },
+    {
+      "name": "source integrity crown_seam_root",
+      "status": "PASS",
+      "observed": "0a291d481b802dbeb1480a653b78a53cbcc0b90b705f5534f8b9404b227c9f80",
+      "expected": "0a291d481b802dbeb1480a653b78a53cbcc0b90b705f5534f8b9404b227c9f80"
+    },
+    {
+      "name": "source integrity orientation_machine",
+      "status": "PASS",
+      "observed": "75218a040dfa4ffb26a2ab652f56cca32a8575098dae6b030452a403e6d4ad9b",
+      "expected": "75218a040dfa4ffb26a2ab652f56cca32a8575098dae6b030452a403e6d4ad9b"
+    },
+    {
+      "name": "source integrity khippu_cuts_knots_threads",
+      "status": "PASS",
+      "observed": "9b6d3ed6146cd362906a2c6d3ede1f016fe9ae6554ce2a710116a97e22afc602",
+      "expected": "9b6d3ed6146cd362906a2c6d3ede1f016fe9ae6554ce2a710116a97e22afc602"
+    },
+    {
+      "name": "source integrity return_residual_bounded_lock",
+      "status": "PASS",
+      "observed": "6c5560a81400f59b4782209f4a30afc162df706efc43013bae01171172c0d4d6",
+      "expected": "6c5560a81400f59b4782209f4a30afc162df706efc43013bae01171172c0d4d6"
+    },
+    {
+      "name": "source integrity oeis_relation_machine",
+      "status": "PASS",
+      "observed": "934ed50f1bd0101d4da21568a649401465643eb03e3190034ccc95243274021a",
+      "expected": "934ed50f1bd0101d4da21568a649401465643eb03e3190034ccc95243274021a"
+    },
+    {
+      "name": "source integrity seam_reconstruction_gate",
+      "status": "PASS",
+      "observed": "18dd4de4f772ece5d0c8c8a945a473345ed3a17e7291f6e19e66b5d9de8e29bd",
+      "expected": "18dd4de4f772ece5d0c8c8a945a473345ed3a17e7291f6e19e66b5d9de8e29bd"
+    },
+    {
+      "name": "source integrity ilau_cartography_extension",
+      "status": "PASS",
+      "observed": "89dc8acde2015aba7cdf50d0c332436690fa7d02dbb154335648c88c8f0e82fd",
+      "expected": "89dc8acde2015aba7cdf50d0c332436690fa7d02dbb154335648c88c8f0e82fd"
+    },
+    {
+      "name": "M1 prime-index row",
+      "status": "PASS",
+      "observed": [
+        97,
+        103,
+        109
+      ],
+      "expected": [
+        97,
+        103,
+        109
+      ]
+    },
+    {
+      "name": "M1 common six-step",
+      "status": "PASS",
+      "observed": {
+        "prime": [
+          6,
+          6
+        ],
+        "year": [
+          6,
+          6
+        ]
+      },
+      "expected": [
+        6,
+        6
+      ]
+    },
+    {
+      "name": "M1 translation by carrier 1836",
+      "status": "PASS",
+      "observed": [
+        1933,
+        1939,
+        1945
+      ],
+      "expected": [
+        1933,
+        1939,
+        1945
+      ]
+    },
+    {
+      "name": "M2 J206 swaps 97 and 109 and fixes 103",
+      "status": "PASS",
+      "observed": [
+        109,
+        103,
+        97
+      ],
+      "expected": [
+        109,
+        103,
+        97
+      ]
+    },
+    {
+      "name": "M2 J3878 swaps 1933 and 1945 and fixes 1939",
+      "status": "PASS",
+      "observed": [
+        1945,
+        1939,
+        1933
+      ],
+      "expected": [
+        1945,
+        1939,
+        1933
+      ]
+    },
+    {
+      "name": "M2 carrier translation intertwines Janus maps",
+      "status": "PASS",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "M2 Q106 is nested center of 103 and 109",
+      "status": "PASS",
+      "observed": [
+        109,
+        106,
+        103
+      ],
+      "expected": [
+        109,
+        106,
+        103
+      ]
+    },
+    {
+      "name": "M2 Q106 is not a member of prime triad",
+      "status": "PASS",
+      "observed": {
+        "in_row": false,
+        "prime": false
+      },
+      "expected": {
+        "in_row": false,
+        "prime": false
+      }
+    },
+    {
+      "name": "M2 additive handle reaches p6",
+      "status": "PASS",
+      "observed": {
+        "7+6": 13,
+        "7*6": 42,
+        "p6": 13,
+        "p13": 41,
+        "p14": 43
+      },
+      "expected": {
+        "7+6": 13,
+        "p6": 13
+      }
+    },
+    {
+      "name": "M2 multiplicative handle equals 42",
+      "status": "PASS",
+      "observed": 42,
+      "expected": 42
+    },
+    {
+      "name": "M2 42 is bracketed by consecutive primes",
+      "status": "PASS",
+      "observed": {
+        "p13": 41,
+        "center": 42,
+        "p14": 43
+      },
+      "expected": {
+        "p13": 41,
+        "center": 42,
+        "p14": 43
+      }
+    },
+    {
+      "name": "M2 standard prime-index boundary for 53 and 19",
+      "status": "PASS",
+      "observed": {
+        "p16": 53,
+        "2*p16": 106,
+        "p19": 67
+      },
+      "expected": {
+        "p16": 53,
+        "2*p16": 106,
+        "p19": 67
+      }
+    },
+    {
+      "name": "M2 bounded prime six-step recurrence count",
+      "status": "PASS",
+      "observed": {
+        "single_hits": 99,
+        "double_starts": [
+          3,
+          4,
+          5,
+          25,
+          26,
+          234,
+          285,
+          483,
+          742
+        ]
+      },
+      "expected": {
+        "single_hits": 99,
+        "double_starts": [
+          3,
+          4,
+          5,
+          25,
+          26,
+          234,
+          285,
+          483,
+          742
+        ]
+      }
+    },
+    {
+      "name": "M2 selected prime six-step chains",
+      "status": "PASS",
+      "observed": {
+        "4": [
+          7,
+          13,
+          19
+        ],
+        "25": [
+          97,
+          103,
+          109
+        ],
+        "742": [
+          5647,
+          5653,
+          5659
+        ]
+      },
+      "expected": {
+        "4": [
+          7,
+          13,
+          19
+        ],
+        "25": [
+          97,
+          103,
+          109
+        ],
+        "742": [
+          5647,
+          5653,
+          5659
+        ]
+      }
+    },
+    {
+      "name": "M3 residual row at 1729",
+      "status": "PASS",
+      "observed": [
+        204,
+        210,
+        216
+      ],
+      "expected": [
+        204,
+        210,
+        216
+      ]
+    },
+    {
+      "name": "M3 residual row at 1836",
+      "status": "PASS",
+      "observed": [
+        97,
+        103,
+        109
+      ],
+      "expected": [
+        97,
+        103,
+        109
+      ]
+    },
+    {
+      "name": "M3 endpoint factorizations",
+      "status": "PASS",
+      "observed": {
+        "204": "12*17",
+        "210": "2*3*5*7",
+        "216": "6^3"
+      },
+      "expected": true
+    },
+    {
+      "name": "M3 carrier gap is p28",
+      "status": "PASS",
+      "observed": {
+        "gap": 107,
+        "p28": 107
+      },
+      "expected": 107
+    },
+    {
+      "name": "M3 raw carrier/year interaction is zero",
+      "status": "PASS",
+      "observed": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "M4 suffix PN row",
+      "status": "PASS",
+      "observed": [
+        109,
+        137,
+        197
+      ],
+      "expected": [
+        109,
+        137,
+        197
+      ]
+    },
+    {
+      "name": "M4 local transfer gains",
+      "status": "PASS",
+      "observed": [
+        "7",
+        "5"
+      ],
+      "expected": [
+        "7",
+        "5"
+      ]
+    },
+    {
+      "name": "M4 two-step gain drop",
+      "status": "PASS",
+      "observed": {
+        "gains": [
+          "7",
+          "5"
+        ],
+        "drop": "2"
+      },
+      "expected": {
+        "drop": "2"
+      }
+    },
+    {
+      "name": "M4 final PN outputs lock to QRT residue 17",
+      "status": "PASS",
+      "observed": [
+        9,
+        17,
+        17
+      ],
+      "expected": [
+        9,
+        17,
+        17
+      ]
+    },
+    {
+      "name": "M4 bounded gain-pattern control is unique",
+      "status": "PASS",
+      "observed": [
+        {
+          "start": 29,
+          "values": [
+            109,
+            137,
+            197
+          ],
+          "gains": [
+            "7",
+            "5"
+          ]
+        }
+      ],
+      "expected": [
+        {
+          "start": 29
+        }
+      ]
+    },
+    {
+      "name": "M4 r17 lock alone is non-unique",
+      "status": "PASS",
+      "observed": [
+        21,
+        29,
+        62
+      ],
+      "expected": [
+        21,
+        29,
+        62
+      ]
+    },
+    {
+      "name": "M4 1929 keeps typed 929 component",
+      "status": "PASS",
+      "observed": {
+        "split": [
+          1000,
+          929
+        ],
+        "p158": 929
+      },
+      "expected": {
+        "split": [
+          1000,
+          929
+        ],
+        "p158": 929
+      }
+    },
+    {
+      "name": "M4 suffix-PN closes 1929 to final offset",
+      "status": "PASS",
+      "observed": {
+        "P(29)": 109,
+        "1945-1836": 109
+      },
+      "expected": 109
+    },
+    {
+      "name": "M5 J3565 exchanges the carriers",
+      "status": "PASS",
+      "observed": [
+        1836,
+        1729
+      ],
+      "expected": [
+        1836,
+        1729
+      ]
+    },
+    {
+      "name": "M5 fixed-width reversal",
+      "status": "PASS",
+      "observed": 5653,
+      "expected": 5653
+    },
+    {
+      "name": "M5 5653 is p744",
+      "status": "PASS",
+      "observed": 5653,
+      "expected": 5653
+    },
+    {
+      "name": "M5 typed 1461 decomposition",
+      "status": "PASS",
+      "observed": {
+        "1461": [
+          14,
+          61
+        ],
+        "14": "2*7",
+        "18": "2*3^2"
+      },
+      "expected": true
+    },
+    {
+      "name": "M5 proposed split map sends 1461 to 5653",
+      "status": "PASS",
+      "observed": {
+        "F(1461)": 5653,
+        "56": "7*8",
+        "p16": 53
+      },
+      "expected": {
+        "F(1461)": 5653
+      }
+    },
+    {
+      "name": "M5 decimal-permutation control",
+      "status": "PASS",
+      "observed": {
+        "unique": 12,
+        "primes": [
+          5563,
+          5653,
+          6553
+        ]
+      },
+      "expected": {
+        "unique": 12,
+        "primes": [
+          5563,
+          5653,
+          6553
+        ]
+      }
+    },
+    {
+      "name": "M6 VM roles remain source-typed and distinct",
+      "status": "PASS",
+      "observed": {
+        "VM_VERTICAL_AXIS": "AM/PM orientation visual",
+        "vm_CONTRACTION_BRANCH": "polygon escape visual",
+        "VM_VORSTELLUNGS_MEDIUM": "structural clarification PDF",
+        "VM_TIME_RING_LABEL": "time resonance ring visual"
+      },
+      "expected": "four distinct typed aliases"
+    },
+    {
+      "name": "M7 first four primes",
+      "status": "PASS",
+      "observed": [
+        2,
+        3,
+        5,
+        7
+      ],
+      "expected": [
+        2,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "name": "M7 declared decimal views",
+      "status": "PASS",
+      "observed": {
+        "27": 27,
+        "72": 72,
+        "35": 35,
+        "53": 53
+      },
+      "expected": {
+        "27": 27,
+        "72": 72,
+        "35": 35,
+        "53": 53
+      }
+    },
+    {
+      "name": "M7 connector coefficient identities",
+      "status": "PASS",
+      "observed": {
+        "2*5": 10,
+        "3+7": 10,
+        "2*3": 6,
+        "2+5": 7
+      },
+      "expected": {
+        "2*5": 10,
+        "3+7": 10,
+        "2*3": 6,
+        "2+5": 7
+      }
+    },
+    {
+      "name": "M7 radix-independent adjacent-pair theorem",
+      "status": "PASS",
+      "observed": {
+        "range": "8..1000",
+        "all_pass": true
+      },
+      "expected": true
+    },
+    {
+      "name": "M7 decimal radix closes at Q106 and p28",
+      "status": "PASS",
+      "observed": {
+        "base": 10,
+        "A": 106,
+        "B": 107,
+        "difference": 1
+      },
+      "expected": {
+        "base": 10,
+        "A": 106,
+        "B": 107,
+        "difference": 1
+      }
+    },
+    {
+      "name": "M7 decimal factor views",
+      "status": "PASS",
+      "observed": {
+        "27": 27,
+        "72_as_6x12": 72,
+        "72_as_8x9": 72,
+        "35": 35,
+        "53_is_prime": true
+      },
+      "expected": "declared decimal factorizations"
+    },
+    {
+      "name": "M7 reversal-pair divisors and ratios",
+      "status": "PASS",
+      "observed": {
+        "gcd_27_72": 9,
+        "lcm_27_72": 216,
+        "ratio_72_27": "8/3",
+        "difference_53_35": 18,
+        "difference_72_27": 45
+      },
+      "expected": {
+        "gcd": 9,
+        "lcm": 216,
+        "ratio": "8/3",
+        "differences": [
+          18,
+          45
+        ]
+      }
+    },
+    {
+      "name": "M7 reversal-pair powers close through 6 and 9",
+      "status": "PASS",
+      "observed": {
+        "gcd_27_72": 9,
+        "lcm_27_72": 216,
+        "ratio_72_27": "8/3",
+        "difference_53_35": 18,
+        "difference_72_27": 45
+      },
+      "expected": {
+        "lcm": "6^3",
+        "18": "2*9=3*6",
+        "45": "5*9"
+      }
+    },
+    {
+      "name": "M7 216 block ladder",
+      "status": "PASS",
+      "observed": {
+        "L": 216,
+        "2L": 432,
+        "8L+1": 1729,
+        "9L": 1944,
+        "9L+1": 1945,
+        "27*72": 1944
+      },
+      "expected": {
+        "L": 216,
+        "2L": 432,
+        "8L+1": 1729,
+        "9L": 1944,
+        "9L+1": 1945,
+        "27*72": 1944
+      }
+    },
+    {
+      "name": "M7 six-nine connector",
+      "status": "PASS",
+      "observed": {
+        "6": 6,
+        "9": 9,
+        "ratio": "3/2",
+        "difference": 3,
+        "sum": 15,
+        "gcd": 3,
+        "lcm": 18
+      },
+      "expected": {
+        "ratio": "3/2",
+        "difference": 3,
+        "sum": 15,
+        "gcd": 3,
+        "lcm": 18
+      }
+    },
+    {
+      "name": "M7 432 record/play closure",
+      "status": "PASS",
+      "observed": {
+        "72*6": 432,
+        "27*16": 432,
+        "2^4*3^3": 432
+      },
+      "expected": 432
+    },
+    {
+      "name": "M7 432 normalized rings",
+      "status": "PASS",
+      "observed": [
+        "4/5",
+        "3/5",
+        "2/5"
+      ],
+      "expected": [
+        "4/5",
+        "3/5",
+        "2/5"
+      ]
+    },
+    {
+      "name": "M7 40-41-42 seam",
+      "status": "PASS",
+      "observed": {
+        "40": "2^3*5",
+        "41": 41,
+        "42": "6*7",
+        "J82": [
+          42,
+          41,
+          40
+        ]
+      },
+      "expected": {
+        "J82": [
+          42,
+          41,
+          40
+        ]
+      }
+    },
+    {
+      "name": "M7 pairing-orientation control for 107",
+      "status": "PASS",
+      "observed": [
+        {
+          "partition": [
+            [
+              2,
+              3
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "values": [
+            32,
+            75
+          ]
+        },
+        {
+          "partition": [
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "values": [
+            72,
+            35
+          ]
+        }
+      ],
+      "expected": {
+        "hit_count": 2,
+        "values": [
+          [
+            32,
+            75
+          ],
+          [
+            72,
+            35
+          ]
+        ]
+      }
+    },
+    {
+      "name": "M7 ILAU boundary remains explicit",
+      "status": "PASS",
+      "observed": {
+        "I_retained": [
+          "first-four-prime tuple",
+          "declared radix formula",
+          "exact arithmetic"
+        ],
+        "L_lost": [
+          "unwritten radix and orientation"
+        ],
+        "A_added": [
+          "decimal concatenation",
+          "color roles",
+          "5/S glyph analogy"
+        ],
+        "U_unresolved": [
+          "physical connector meaning",
+          "visual dynamics"
+        ]
+      },
+      "expected": "nonempty typed I/L/A/U boundary"
+    },
+    {
+      "name": "claim ceiling remains open",
+      "status": "PASS",
+      "observed": {
+        "six_step_prime_translation": "ESTABLISHED_EXACTLY",
+        "nested_q106_center": "ESTABLISHED_EXACTLY",
+        "suffix_pn_gain_drop": "ESTABLISHED_FOR_TWO_INTERVALS",
+        "damping_law": "NOT_ESTABLISHED",
+        "vm_unification": "NOT_ESTABLISHED",
+        "physical_interaction": "NOT_ESTABLISHED",
+        "radix_adjacent_pair": "ESTABLISHED_EXACTLY",
+        "five_s_glyph_identity": "NOT_ESTABLISHED"
+      },
+      "expected": "open interpretation claims"
+    }
+  ],
+  "claim_boundary": [
+    "formal finite arithmetic and source-provenance audit only",
+    "no new Navigator identity, Study, source, binder, or evidence promotion",
+    "historical PDFs and visuals are provenance or hypothesis sources, not scientific authorities",
+    "PN means the declared one-based prime-index map P(k)=p_k",
+    "AM, PM, VM, vm, vertical axis, and Vorstellungs-Medium remain source-typed labels",
+    "the observed two-step gain drop is not a fitted damping law",
+    "no physical, cosmological, biological, resonance, chronology-causation, or publication claim"
+  ]
+}

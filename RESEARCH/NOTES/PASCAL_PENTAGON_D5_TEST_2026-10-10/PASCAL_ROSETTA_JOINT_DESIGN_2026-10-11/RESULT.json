@@ -1,0 +1,177 @@
+{
+  "checks": [
+    {
+      "expected": {
+        "contract_id": "A0-BL-023:PASCAL_ROSETTA_JOINT_DESIGN:V1",
+        "creates": [],
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST"
+      },
+      "name": "machine-readable contract identity",
+      "observed": {
+        "contract_id": "A0-BL-023:PASCAL_ROSETTA_JOINT_DESIGN:V1",
+        "creates": [],
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST"
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": 140,
+      "name": "raw incidence count",
+      "observed": 140,
+      "status": "PASS"
+    },
+    {
+      "expected": 106,
+      "name": "quotient node count",
+      "observed": 106,
+      "status": "PASS"
+    },
+    {
+      "expected": 140,
+      "name": "raw encoding injective",
+      "observed": 140,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "failures": 0,
+        "tested": 105
+      },
+      "name": "left Pascal/gear intertwining",
+      "observed": {
+        "failures": 0,
+        "tested": 105
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "failures": 0,
+        "tested": 105
+      },
+      "name": "right Pascal/gear intertwining",
+      "observed": {
+        "failures": 0,
+        "tested": 105
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "collapsed_to_left": 105,
+        "collapsed_to_right": 105,
+        "generic_counter": 0,
+        "generic_locked": 0
+      },
+      "name": "matched controls do not reproduce the branch-aware schedule",
+      "observed": {
+        "collapsed_to_left": 105,
+        "collapsed_to_right": 105,
+        "generic_counter": 0,
+        "generic_locked": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "1": 75,
+        "2": 30,
+        "5": 1
+      },
+      "name": "quotient relation fibre profile",
+      "observed": {
+        "1": 75,
+        "2": 30,
+        "5": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "failures": 0,
+        "tested": 140
+      },
+      "name": "exact relational return",
+      "observed": {
+        "failures": 0,
+        "tested": 140
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "failures": 0,
+        "tested": 106
+      },
+      "name": "C5 relation equivariance",
+      "observed": {
+        "failures": 0,
+        "tested": 106
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "failures": 0,
+        "tested": 106
+      },
+      "name": "reflection relation equivariance",
+      "observed": {
+        "failures": 0,
+        "tested": 106
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": "FAIL_NO_FIXED_ADDRESS_OVER_FIXED_APEX",
+      "name": "negative control: equivariant single-address apex selector",
+      "observed": "FAIL_NO_FIXED_ADDRESS_OVER_FIXED_APEX",
+      "status": "PASS"
+    },
+    {
+      "expected": "cross-quotient collisions > 0",
+      "name": "negative control: remove B wheel",
+      "observed": {
+        "addresses": 130,
+        "cross_quotient_collision_addresses": 10,
+        "maximum_quotient_multiplicity": 2
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": "cross-quotient collisions > 0",
+      "name": "negative control: remove Q envelope",
+      "observed": {
+        "addresses": 120,
+        "cross_quotient_collision_addresses": 15,
+        "maximum_quotient_multiplicity": 3
+      },
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary": "Finite formal design validation only; no PENT-08, Family, admitted run, physical identity, novelty or publication claim.",
+  "classification": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_ACTIVE",
+  "contract_id": "A0-BL-023:PASCAL_ROSETTA_JOINT_DESIGN:V1",
+  "failures": [],
+  "provenance": {
+    "contract_sha256": "c9f5c6b3864c4eb0fbded99fd84b3181bc5da094145464901d8c0c1f3f34165a",
+    "scc003_manifest_sha256": "621a8d1e81a068e24b3a5a14564da3991afb2169ac555208fa46dc27317e2343"
+  },
+  "status": "PASS",
+  "summary": {
+    "checks": 14,
+    "face_edge_incidences": 210,
+    "failures": 0,
+    "gear_image_states": 140,
+    "quotient_nodes": 106,
+    "quotient_relation_addresses": 140,
+    "raw_incidences": 140
+  },
+  "verdicts": {
+    "generic_schedule_controls": "PASS_REJECTED_AS_FULL_INTERTWINERS",
+    "quotient_joint": "PASS_RELATION",
+    "raw_intertwiner": "PASS",
+    "return": "PASS_EXACT_WITH_RELATION_PROVENANCE",
+    "single_state_quotient_selector": "EXPECTED_FAIL"
+  }
+}

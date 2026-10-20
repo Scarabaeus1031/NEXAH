@@ -1,0 +1,37 @@
+{
+  "id": "LIFE08-BOUNDARY-CYLINDER-v1",
+  "date": "2026-10-11",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "owner": "Human Owner",
+  "question": "Which exact LIFE05D event relations survive when finite-dead is replaced by a cylinder closing exactly one coordinate axis?",
+  "rule": "B3/S23",
+  "schedule": "synchronous",
+  "boundary_modes": ["finite-dead", "cylinder-x", "cylinder-y"],
+  "fixtures": [
+    {"id":"BLOCK-C","kind":"pattern","pattern":"block","size":32,"horizon":40},
+    {"id":"BLINKER-C","kind":"pattern","pattern":"blinker","size":32,"horizon":40},
+    {"id":"GLIDER-C","kind":"pattern","pattern":"glider","size":32,"horizon":96},
+    {"id":"GLIDER-X-SEAM","kind":"explicit","size":32,"cells":[[29,1],[30,2],[28,3],[29,3],[30,3]],"horizon":40},
+    {"id":"GLIDER-Y-SEAM","kind":"explicit","size":32,"cells":[[1,29],[2,30],[0,31],[1,31],[2,31]],"horizon":40},
+    {"id":"RANDOM-17","kind":"random","size":32,"density":0.17,"seed":510017,"horizon":96}
+  ],
+  "metrics": [
+    "first divergence generation versus finite-dead",
+    "exact-state agreement rate",
+    "lag-2 count-return rate by event channel",
+    "lag-2 event-set Jaccard",
+    "boundary-aware component count",
+    "seam-crossing birth count",
+    "quaternion register roundtrip"
+  ],
+  "gates": {
+    "negativeControlsStable": "centered Block and Blinker match finite-dead under both cylinders for the frozen horizon",
+    "cylinderXEquivariant": "one-cell cyclic x translation commutes with one cylinder-x update",
+    "cylinderYEquivariant": "one-cell cyclic y translation commutes with one cylinder-y update",
+    "boundaryEffectDetected": "at least one boundary-exposed fixture diverges from finite-dead",
+    "quaternionRegisterExact": "Phi(B,S,D)=(B+S+D,B,S,D) returns B,S,D exactly for every recorded row",
+    "deterministicReplay": "Primary and Replay canonical JSON are byte-identical"
+  },
+  "decision_rule": "All six gates yield BOUNDED_CYLINDER_RELATION_PASS; any implementation/control gate failure yields INVALID_STUDY; no detected boundary effect yields BOUNDARY_EFFECT_NOT_DETECTED.",
+  "claim_ceiling": "Finite deterministic B3/S23 boundary comparison on six declared fixtures. No Prime specificity, universal Life code, biology, physics, Möbius mechanism or cross-domain identity."
+}

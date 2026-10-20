@@ -1,0 +1,25 @@
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const crypto = require("node:crypto");
+const E = require("./cylinder-engine.js");
+const protocol = require("./PREREGISTRATION.json");
+const lock = require("./PREREGISTRATION_LOCK.json");
+
+assert.equal(crypto.createHash("sha256").update(fs.readFileSync("PREREGISTRATION.json")).digest("hex"), lock.sha256);
+assert.deepEqual(E.mapCoord(-1, 4, 8, "cylinder-x"), [7, 4]);
+assert.deepEqual(E.mapCoord(4, -1, 8, "cylinder-y"), [4, 7]);
+assert.equal(E.mapCoord(4, -1, 8, "cylinder-x"), null);
+const block = E.initial({ id: "b", kind: "pattern", pattern: "block", size: 32, horizon: 4 }, "finite-dead");
+assert.deepEqual(E.step(block).live, block.live);
+for (const counts of [[0, 0, 0], [3, 7, 2], [29, 31, 37]]) assert.deepEqual(E.quaternionInverse(E.quaternionRegister(counts)), counts);
+for (const pattern of ["toad", "beehive", "beehiveBloom", "rPentomino", "acorn", "lwss"]) assert.ok(E.PATTERNS[pattern]);
+const beehive = E.initial({ id: "h", kind: "pattern", pattern: "beehive", size: 32, horizon: 1 }, "finite-dead");
+assert.equal(beehive.live.length, 6);
+assert.deepEqual(E.step(beehive).live, beehive.live);
+const appSource = fs.readFileSync("app.js", "utf8");
+for (const control of ["playPause", "stepForward", "projectionMode", "four-plus-one", "phase-register", "transition-rosette", "componentOutlines", "lifecrystal:render", "residual"]) assert.match(appSource, new RegExp(control));
+const validation = require("./results/LIFE08_VALIDATION_REPORT.json");
+assert.equal(validation.status, "PASS");
+assert.ok(Object.values(validation.gates).every(Boolean));
+assert.equal(protocol.boundary_modes.length, 3);
+console.log("PASS 20/20");

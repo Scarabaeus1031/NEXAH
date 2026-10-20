@@ -1,0 +1,741 @@
+{
+  "status": "PASS_COMPLETE_FINITE_GRID_FOLD_CHANNEL_FORMAL_DESIGN",
+  "classification": "TYPED_INTERFACE_QUOTIENT_UPDATE_AND_MINIMAL_RESIDUAL_RETURN",
+  "checks": {
+    "passed": 55,
+    "total": 55
+  },
+  "contract": {
+    "typed_chain": [
+      "carrier",
+      "fold",
+      "embedding",
+      "envelope",
+      "interface",
+      "assembly",
+      "update",
+      "Return"
+    ],
+    "assembly": "two labelled folded carriers quotiented only at corresponding declared interface anchors",
+    "admissible_update": "branch bijections preserve interface and agree through one interface permutation",
+    "fibre_size": "2^(k(y)+g(y)) where g(y)=1 on the glued interface and 0 otherwise",
+    "minimal_residual": "k(y) fold bits plus g(y) branch bit"
+  },
+  "controls": {
+    "PATH_SEAM_M2_D1_REFLECTION": {
+      "dimension": 1,
+      "target_points": 3,
+      "interface_points": 2,
+      "assembled_observations": 4,
+      "source_states": 8,
+      "fibre_profile": {
+        "2": 4
+      },
+      "update_order": 2
+    },
+    "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION": {
+      "dimension": 2,
+      "target_points": 9,
+      "interface_points": 8,
+      "assembled_observations": 10,
+      "source_states": 32,
+      "fibre_profile": {
+        "2": 4,
+        "4": 6
+      },
+      "update_order": 4
+    }
+  },
+  "negative_controls": {
+    "missing_interface_branch_bit": "REJECTED_BY_COLLISION",
+    "missing_fold_bits": "REJECTED_BY_COLLISION",
+    "interface_nonpreserving_translation": "REJECTED_UPDATE_NOT_WELL_DEFINED_ON_ASSEMBLY"
+  },
+  "a0_bl_025": {
+    "formal_design_checklist": "COMPLETE_ON_TWO_NON_IDENTICAL_CONTROLS",
+    "study_admission": "NOT_ADMITTED_REQUIRES_SEPARATE_OWNER_DECISION",
+    "physical_stability_or_flow": null,
+    "historical_visual_generator": null
+  },
+  "claim_boundary": "Internal bounded formal-design evidence only. Passing establishes the declared finite interface contract and its two controls. It does not identify historical visuals with the construction, establish physical flow or stability, admit A0-BL-025 as a Study, create a canonical Navigator object, or authorize publication.",
+  "checks_detail": [
+    {
+      "name": "extends general fold audit",
+      "passed": true,
+      "observed": "A0-BL-025:GENERAL_COORDINATE_FOLD_MINIMAL_RESIDUAL_RETURN_AUDIT:V1",
+      "expected": "A0-BL-025:GENERAL_COORDINATE_FOLD_MINIMAL_RESIDUAL_RETURN_AUDIT:V1"
+    },
+    {
+      "name": "formal non-admitted status",
+      "passed": true,
+      "observed": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_NEW_STUDY",
+      "expected": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_NEW_STUDY"
+    },
+    {
+      "name": "creates no identity",
+      "passed": true,
+      "observed": [],
+      "expected": []
+    },
+    {
+      "name": "complete typed chain",
+      "passed": true,
+      "observed": [
+        "carrier",
+        "fold",
+        "embedding",
+        "envelope",
+        "interface",
+        "assembly",
+        "update",
+        "Return"
+      ],
+      "expected": [
+        "carrier",
+        "fold",
+        "embedding",
+        "envelope",
+        "interface",
+        "assembly",
+        "update",
+        "Return"
+      ]
+    },
+    {
+      "name": "source exists: SRC:GFC:PARENT_GENERAL_FOLD_RESULT",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:GFC:PARENT_GENERAL_FOLD_RESULT",
+      "passed": true,
+      "observed": "b0d03440c0db6cff2eda79b2baa7f785a9ddf4ad8cd776e9db48affb718a2c86",
+      "expected": "b0d03440c0db6cff2eda79b2baa7f785a9ddf4ad8cd776e9db48affb718a2c86"
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: embedding injective",
+      "passed": true,
+      "observed": 3,
+      "expected": 3
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: envelope proper subset",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: anchors injective",
+      "passed": true,
+      "observed": 2,
+      "expected": 2
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: left/right carriers distinct before assembly",
+      "passed": true,
+      "observed": 6,
+      "expected": 6
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: exact Return",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: fibre profile",
+      "passed": true,
+      "observed": {
+        "2": 4
+      },
+      "expected": {
+        "2": 4
+      }
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: assembled observation count",
+      "passed": true,
+      "observed": 4,
+      "expected": 4
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: source conservation",
+      "passed": true,
+      "observed": 8,
+      "expected": 8
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: interface-plus-fold fibre formula",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: pointwise residual minimality",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: update target bijection",
+      "passed": true,
+      "observed": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: update preserves envelope",
+      "passed": true,
+      "observed": [
+        [
+          0
+        ],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        [
+          0
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: update preserves interface",
+      "passed": true,
+      "observed": [
+        [
+          0
+        ],
+        [
+          2
+        ]
+      ],
+      "expected": [
+        [
+          0
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: update descends through assembly",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: source lift commutes with fold",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: update then Return exact",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: update order at (0,)",
+      "passed": true,
+      "observed": [
+        0
+      ],
+      "expected": [
+        0
+      ]
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: update order at (1,)",
+      "passed": true,
+      "observed": [
+        1
+      ],
+      "expected": [
+        1
+      ]
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: update order at (2,)",
+      "passed": true,
+      "observed": [
+        2
+      ],
+      "expected": [
+        2
+      ]
+    },
+    {
+      "name": "PATH_SEAM_M2_D1_REFLECTION: invalid translation rejected",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: embedding injective",
+      "passed": true,
+      "observed": 9,
+      "expected": 9
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: envelope proper subset",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: anchors injective",
+      "passed": true,
+      "observed": 8,
+      "expected": 8
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: left/right carriers distinct before assembly",
+      "passed": true,
+      "observed": 18,
+      "expected": 18
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: exact Return",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: fibre profile",
+      "passed": true,
+      "observed": {
+        "2": 4,
+        "4": 6
+      },
+      "expected": {
+        "2": 4,
+        "4": 6
+      }
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: assembled observation count",
+      "passed": true,
+      "observed": 10,
+      "expected": 10
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: source conservation",
+      "passed": true,
+      "observed": 32,
+      "expected": 32
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: interface-plus-fold fibre formula",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: pointwise residual minimality",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: update target bijection",
+      "passed": true,
+      "observed": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: update preserves envelope",
+      "passed": true,
+      "observed": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: update preserves interface",
+      "passed": true,
+      "observed": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: update descends through assembly",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: source lift commutes with fold",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: update then Return exact",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: update order at (0, 1)",
+      "passed": true,
+      "observed": [
+        0,
+        1
+      ],
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: update order at (1, 2)",
+      "passed": true,
+      "observed": [
+        1,
+        2
+      ],
+      "expected": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: update order at (2, 1)",
+      "passed": true,
+      "observed": [
+        2,
+        1
+      ],
+      "expected": [
+        2,
+        1
+      ]
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: update order at (0, 0)",
+      "passed": true,
+      "observed": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: update order at (1, 1)",
+      "passed": true,
+      "observed": [
+        1,
+        1
+      ],
+      "expected": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: update order at (2, 0)",
+      "passed": true,
+      "observed": [
+        2,
+        0
+      ],
+      "expected": [
+        2,
+        0
+      ]
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: update order at (0, 2)",
+      "passed": true,
+      "observed": [
+        0,
+        2
+      ],
+      "expected": [
+        0,
+        2
+      ]
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: update order at (2, 2)",
+      "passed": true,
+      "observed": [
+        2,
+        2
+      ],
+      "expected": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: update order at (1, 0)",
+      "passed": true,
+      "observed": [
+        1,
+        0
+      ],
+      "expected": [
+        1,
+        0
+      ]
+    },
+    {
+      "name": "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION: invalid translation rejected",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "controls are non-identical dimensions",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "controls are non-identical update orders",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "controls are non-identical interface sizes",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    }
+  ]
+}

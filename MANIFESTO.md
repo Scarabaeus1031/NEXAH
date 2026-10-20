@@ -11,16 +11,17 @@
 
 ## NEXAH in One Sentence
 
-**NEXAH is a human-oriented, editorially governed, evidence-bound orientation
-infrastructure that connects heterogeneous representations, preserves their
-boundaries and provenance, and creates explainable paths between them for human
-judgment.**
+**NEXAH is an open perspective and practice of orientation across culture, science,
+design and technology. It compares bounded representations, preserves their
+boundaries and provenance, and returns interpretation, judgment and decision
+to the Human.**
 
 It investigates whether recurring transition patterns can be compared across
 bounded representations of complex systems without collapsing them into a
 single explanation.
 
-In architectural terms:
+Its technical and editorial architecture supports this wider orientation
+practice. In architectural terms:
 
 > NEXAH is an evidence-bound orientation ecosystem.
 
@@ -94,8 +95,9 @@ failures, missing information, and uncertainty must remain visible.
 
 ## The Orientation Laboratory
 
-NEXAH is best understood as a computational research laboratory for
-evidence-bound orientation.
+The computational research laboratory is one part of NEXAH. It investigates
+evidence-bound orientation through models, experiments and reproducible
+records; it does not define the whole identity or purpose of the practice.
 
 Its recurring movement is:
 

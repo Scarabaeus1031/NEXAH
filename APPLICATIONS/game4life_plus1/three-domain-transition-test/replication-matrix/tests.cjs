@@ -1,0 +1,10 @@
+const assert=require("node:assert/strict");
+const R=require("./replication-engine.js");
+const config={n:16,horizon:8,thresholds:[.18,.22,.26],seedCount:3,boundary:"cylinder-x",comparator:"open",baseSeed:1701};
+const seeds=[1701,2618,3535],rowsA=seeds.map(seed=>R.runSeed(seed,config)),rowsB=seeds.map(seed=>R.runSeed(seed,config));
+assert.deepEqual(rowsA,rowsB,"deterministic rows");
+const a=R.buildResult(rowsA,config),b=R.buildResult(rowsB,config);
+assert.equal(a.fingerprint,b.fingerprint,"deterministic fingerprint");assert.equal(a.rows.length,3);assert.equal(Object.keys(a.summary.chemistry).length,3);
+for(const domain of[...Object.values(a.summary.chemistry),a.summary.life,a.summary.physics])for(const key of["response","peak","detection","seedDetection"])assert.ok(domain[key]>=0&&domain[key]<=1,`${key} bounded`);
+assert.equal(a.schema,"nexah.life08.three-domain-replication.v1");assert.equal(a.authority,"UNADMITTED_MODEL_ONLY");
+console.log(`PASS REPLICATION MATRIX 18/18 · ${a.fingerprint}`);

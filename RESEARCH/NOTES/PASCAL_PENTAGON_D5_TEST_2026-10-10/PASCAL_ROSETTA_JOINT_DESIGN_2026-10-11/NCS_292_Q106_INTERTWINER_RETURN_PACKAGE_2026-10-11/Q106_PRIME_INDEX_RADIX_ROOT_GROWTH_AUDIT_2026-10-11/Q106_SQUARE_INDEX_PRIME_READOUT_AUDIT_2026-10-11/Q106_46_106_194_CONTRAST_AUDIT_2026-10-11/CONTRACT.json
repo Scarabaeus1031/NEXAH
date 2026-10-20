@@ -1,0 +1,50 @@
+{
+  "contract_id": "A0-Q106:46_106_194_CONTRAST_AUDIT:V1",
+  "date": "2026-10-11",
+  "status": "OWNER_AUTHORIZED_BOUNDED_FORMAL_AUDIT",
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "carrier": "SCC-003 / Q106",
+    "parent_contract": "A0-Q106:SQUARE_INDEX_PRIME_READOUT_AUDIT:V1",
+    "creates": []
+  },
+  "question": "Is the exact Q106 return equation locally selective and absent from the immediate square-index-prime homologues C3=46 and C5=194, without inventing R(Q46), R(Q194), a universal prime law or a new Pascal identity?",
+  "frozen_source": {
+    "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT_2026-10-11/Q106_SQUARE_INDEX_PRIME_READOUT_AUDIT_2026-10-11/RESULT.json",
+    "sha256": "31e4315f9e1a3de86fdb0212d135b71d269de8ef3f3c18a6c859ca5724e02492"
+  },
+  "definitions": {
+    "prime_indexing": "p_n is the nth prime with one-based indexing",
+    "comparison_carrier": "C_k=2*p_(k^2)",
+    "left_center_right": "(p_((k-1)^2),p_(k^2),p_((k+1)^2))",
+    "return_equation": "E(k): 2*p_(k^2)-p_((k+1)^2)=(k-1)^2"
+  },
+  "declared_windows": {
+    "homologues": [3, 4, 5],
+    "finite_scan": {"minimum_k": 2, "maximum_k": 1000},
+    "local_perturbations": [104, 105, 106, 107, 108]
+  },
+  "expected_exact_values": {
+    "C3": 46,
+    "C4": 106,
+    "C5": 194,
+    "homologue_return_residuals": [-7, 9, 43],
+    "homologue_target_squares": [4, 9, 16],
+    "finite_scan_hits": [4],
+    "local_exact_hit": [106]
+  },
+  "outcomes": [
+    "PASS_Q106_LOCAL_AND_BOUNDED_HOMOLOGUE_SELECTIVITY",
+    "FAIL_Q106_NOT_SELECTIVE_IN_DECLARED_WINDOWS",
+    "FAIL_SOURCE_INTEGRITY",
+    "CONTRACT_INVALID"
+  ],
+  "stop_rule": "Stop before defining R on 46 or 194, extrapolating the finite scan to all k, or creating a Prime Pascal Pyramid, PENT layer, node embedding, physical mechanism, resonance or publication claim.",
+  "claim_boundary": [
+    "exact finite arithmetic for k=3,4,5 and 2<=k<=1000",
+    "46 and 194 are arithmetic comparison carriers only; no R(Q46) or R(Q194) is defined",
+    "the finite scan establishes bounded selectivity, not uniqueness for all positive integers",
+    "the test adds no Pascal coefficient transform and does not establish a Prime Pascal Pyramid",
+    "no new Study, PENT layer, Family, operator or Navigator identity"
+  ]
+}

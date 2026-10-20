@@ -1,0 +1,40 @@
+{
+  "contract_id": "A0-BL-023:PASCAL_INTRINSIC_SEAM_HOLONOMY_AUDIT:V1",
+  "date": "2026-10-11",
+  "status": "FORMAL_AUDIT_NOT_ADMITTED_NOT_PENT_08",
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "source_object": "SCC-003 / Q106",
+    "parent_candidate": "A0-BL-023:PASCAL_LISSAJOUS_MOBIUS_RETURN_CANDIDATE:V1",
+    "creates": []
+  },
+  "question": "Does the frozen Q106 Pascal carrier determine a nontrivial intrinsic Z2 orientation holonomy while preserving all local Pascal diamonds and the declared D5 action?",
+  "complex": {
+    "vertices": 106,
+    "undirected_edges": 180,
+    "connected_components": 1,
+    "pascal_diamond_2_cells": 75,
+    "edge_labels": "omega:E->Z2",
+    "local_closure": "sum of omega on every Pascal diamond boundary equals 0 mod 2"
+  },
+  "controls": {
+    "graph_only": "retain no diamond 2-cells",
+    "intrinsic_closed": "retain all 75 diamond 2-cells",
+    "single_cut": "remove one diamond constraint without D5 invariance",
+    "d5_symmetric_cut": "remove one complete D5 orbit of diamond constraints and require invariant edge labels"
+  },
+  "expected_result_classes": [
+    "UNIQUE_INTRINSIC_TWIST",
+    "MULTIPLE_NONCANONICAL_TWISTS",
+    "ONLY_AFTER_ADDED_SEAM",
+    "NO_COMPATIBLE_TWIST",
+    "INVALID_FIXTURE"
+  ],
+  "claim_boundary": [
+    "finite F2 cellular audit of the frozen SCC-003 reference only",
+    "Pascal diamonds are declared 2-cells because LR and RL commute to the same endpoint",
+    "graph-only cycles do not by themselves select topology",
+    "no continuous Mobius embedding or physical mechanism is inferred",
+    "no PENT-08 identity, admitted Study, new Family, publication or claim promotion"
+  ]
+}

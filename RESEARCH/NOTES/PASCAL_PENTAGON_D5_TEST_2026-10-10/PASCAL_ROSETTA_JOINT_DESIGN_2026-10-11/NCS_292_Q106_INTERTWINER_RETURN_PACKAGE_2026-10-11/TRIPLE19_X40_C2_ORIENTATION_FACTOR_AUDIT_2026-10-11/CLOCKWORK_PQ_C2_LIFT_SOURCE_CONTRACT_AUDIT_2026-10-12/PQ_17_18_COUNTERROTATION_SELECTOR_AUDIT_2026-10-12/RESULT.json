@@ -1,0 +1,147 @@
+{
+  "status": "PASS_CONDITIONAL_ORDERED_17_18_SELECTOR",
+  "classification": "OWNER_DECLARED_ORDER_BREAKS_GLOBAL_PQ_LABEL_AMBIGUITY_WITHIN_DECLARED_SIGN_PARITY_CONVENTION",
+  "checks": {
+    "passed": 18,
+    "total": 18
+  },
+  "candidate_contract": {
+    "ordered_register_assignment": {
+      "P": 17,
+      "Q": 18
+    },
+    "parity": "e(n)=n mod 2",
+    "turn_encoding": "turn=2e-1",
+    "selected_labeling": {
+      "e=1": "P / 17 / +1 turn",
+      "e=0": "Q / 18 / -1 turn"
+    },
+    "deck_flip": "P<->Q corresponds to 17<->18, e<->1-e and turn<->-turn"
+  },
+  "reverse_control": {
+    "ordered_register_assignment": {
+      "P": 18,
+      "Q": 17
+    },
+    "status": "VALID_ONLY_WITH_REVERSED_SIGN_TO_BIT_CONVENTION",
+    "meaning": "The unordered pair {17,18} and counter-rotation alone do not select a global labeling."
+  },
+  "authority": {
+    "ordered_assignment": "OWNER_DECLARED_CANDIDATE_NOT_HISTORICALLY_RECOVERED",
+    "historical_source_recovery": null,
+    "canonical_within_declared_contract": true,
+    "canonical_without_owner_contract": false
+  },
+  "maps": {
+    "clockwork_glb_nodes_to_x20": null,
+    "x20_adjacency": null,
+    "typed_x20_to_q106_intertwiner": null,
+    "historical_janus_selection": null
+  },
+  "negative_controls": {
+    "PENT-07": "no direct C5/C6 identification and no Pascal-106 selector map",
+    "A0-BL-035": "oriented seam separates the frozen population but yields no compressed Splinter selector"
+  },
+  "sources": [
+    {
+      "name": "parent_factor",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "d8caf0e18e3aa7687d8d7a09e40169e4716cb73d1aebe430bb771b41e2ee01b6"
+    },
+    {
+      "name": "clockwork_lift",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/RESULT.json",
+      "sha256": "8ffaf5d53433fbb685a0a6b0a40b663136c95e0986d6ed5c83f5a0aab48bd217"
+    },
+    {
+      "name": "owner_input",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/PQ_17_18_COUNTERROTATION_SELECTOR_AUDIT_2026-10-12/OWNER_INPUT.md",
+      "sha256": "cf728e9af1d081fef55ca97145213c231684ecc7bb6f7a3006d62a4b795ba676"
+    },
+    {
+      "name": "pent07_control",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_HEXAGON_COUPLING_AUDIT_2026-10-10/RESULT.json",
+      "sha256": "45258781365657a3caa5ba2c3cbea3d5872e02769ecb35241f375a84477e4afd"
+    },
+    {
+      "name": "splinter_control",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_035_SPLINTER_LOCAL_EXTRACTION_2026-10-10/artifacts/PRIMARY_RESULT.json",
+      "sha256": "e8e05d7a20db80130d8473a02a31d9b5a62604e008d9ac8cedfebf8dc661e1b3"
+    }
+  ],
+  "claim_boundary": "Conditional Owner-declared labeling contract only. No historical recovery, X20 graph, GLB-node map, Q106 intertwiner, Janus-law selection, new Study, A0 evidence promotion, physical mechanism or publication authority follows.",
+  "checks_detail": [
+    {
+      "name": "source exists: parent_factor",
+      "passed": true
+    },
+    {
+      "name": "source exists: clockwork_lift",
+      "passed": true
+    },
+    {
+      "name": "source exists: owner_input",
+      "passed": true
+    },
+    {
+      "name": "source exists: pent07_control",
+      "passed": true
+    },
+    {
+      "name": "source exists: splinter_control",
+      "passed": true
+    },
+    {
+      "name": "parent factor is C2 orientation",
+      "passed": true
+    },
+    {
+      "name": "parent operator flips the bit",
+      "passed": true
+    },
+    {
+      "name": "P has positive turn",
+      "passed": true
+    },
+    {
+      "name": "Q has negative turn",
+      "passed": true
+    },
+    {
+      "name": "unlabeled parent has two global labelings",
+      "passed": true
+    },
+    {
+      "name": "ordered 17/18 parity labels P=1 and Q=0",
+      "passed": true
+    },
+    {
+      "name": "ordered assignment satisfies turn=2e-1",
+      "passed": true
+    },
+    {
+      "name": "reverse control swaps both bit labels",
+      "passed": true
+    },
+    {
+      "name": "reverse control remains valid under reversed sign convention",
+      "passed": true
+    },
+    {
+      "name": "PENT-07 remains a bounded control",
+      "passed": true
+    },
+    {
+      "name": "PENT-07 supplies no Pascal carrier selector map",
+      "passed": true
+    },
+    {
+      "name": "A0-BL-035 remains SPLINTER_PARTIAL",
+      "passed": true
+    },
+    {
+      "name": "A0-BL-035 supplies no compressed selector",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "contract_id": "A0-BL-023:PASCAL_QUATERNION_NCS_P4_ADAPTER_GATE_AUDIT:V1",
+  "date": "2026-10-12",
+  "status": "FORMAL_SOURCE_BOUND_ADAPTER_AUDIT_NOT_ADMITTED",
+  "identity": {
+    "extends": "A0-BL-023:ROOT40_FIBONACCI_C30_P4_SOURCE_BINDING_AUDIT:V1",
+    "reuses": [
+      "A0OE:PASCAL_QUATERNION_TEST",
+      "A0OE:PASCAL_PENTAGON_D5_TEST",
+      "NN:MRB_ACR_NCS_Q106_RETURN_CROSSWALK"
+    ],
+    "creates": []
+  },
+  "question": "Does any bijection from the proved Pascal-quaternion slots {scalar,i,j,k} to the declared NCS P4 roles {carrier,frame_cut,transform_view,return_record} preserve both exact Return and the declared source operators?",
+  "source_carrier": {
+    "slots": ["scalar", "i", "j", "k"],
+    "semantics": {"scalar": "depth=a+b+c", "i": "a", "j": "b", "k": "c"},
+    "operator": {"scalar": "scalar", "i": "j", "j": "k", "k": "i"},
+    "return": "Ad(u^-1) o Ad(u)=id"
+  },
+  "target_carrier": {
+    "roles": ["carrier", "frame_cut", "transform_view", "return_record"],
+    "declared_rotation": "r_X(s,p)=(s+1 mod 5,p)",
+    "declared_janus_actions": ["J_c(s,p,e)=(s,p,1-e)", "J_d(s,p,e)=(-s mod 5,p,1-e)"],
+    "induced_action_on_roles": "identity"
+  },
+  "gates": [
+    "G1_SOURCE_HASH_AND_TYPE_FREEZE",
+    "G2_ENUMERATE_ALL_4_FACTORIAL_STATIC_BIJECTIONS",
+    "G3_EXACT_ADDRESS_RETURN",
+    "G4_C3_TO_DECLARED_NCS_ROLE_ACTION_INTERTWINER",
+    "G5_INDUCED_TARGET_ACTION_CLASSIFICATION",
+    "G6_CANONICAL_ADAPTER_DECISION"
+  ],
+  "outcomes": [
+    "UNIQUE_OPERATOR_EQUIVARIANT_ADAPTER",
+    "MULTIPLE_OPERATOR_EQUIVARIANT_ADAPTERS",
+    "NO_OPERATOR_EQUIVARIANT_ADAPTER_UNDER_DECLARED_ACTION",
+    "CONTRACT_INVALID"
+  ],
+  "stop_rule": "Stop before assigning quaternion slots to NCS roles by vocabulary, display order, coefficient value, Root-40 resemblance, wobble phase, or target fit. A bijection must preserve the explicitly declared operators or remain a chosen address convention only.",
+  "claim_boundary": [
+    "formal source-bound adapter audit only; not an admitted Study or scientific run",
+    "A0 evidence is read-only and is not modified or promoted",
+    "no new Navigator identity, Family, P4 operator, X20 adjacency, Q106 intertwiner, physical mechanism or publication state",
+    "an induced target C3 action is a mathematical consequence of a chosen bijection, not a recovered NCS source law"
+  ]
+}

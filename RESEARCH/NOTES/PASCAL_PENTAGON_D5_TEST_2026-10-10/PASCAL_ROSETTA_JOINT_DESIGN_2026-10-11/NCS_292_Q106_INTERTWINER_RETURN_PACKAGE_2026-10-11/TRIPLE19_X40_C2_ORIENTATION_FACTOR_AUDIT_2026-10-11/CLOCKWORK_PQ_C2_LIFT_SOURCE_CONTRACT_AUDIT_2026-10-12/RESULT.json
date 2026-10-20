@@ -1,0 +1,343 @@
+{
+  "status": "PASS_UNLABELED_C2_DISPLAY_LIFT",
+  "classification": "CLOCKWORK_PQ_REALIZES_TWO_SHEET_DISPLAY_LIFT_WITH_GLOBAL_LABEL_AMBIGUITY",
+  "checks": {
+    "passed": 37,
+    "total": 37
+  },
+  "clockwork_source": {
+    "version": "v7-pq-conjugate-orbit",
+    "relation": "q = mirror(p)",
+    "p": {
+      "color": "green",
+      "tilt_deg": 68,
+      "azimuth_deg": 42,
+      "turns_per_48s": 1
+    },
+    "q": {
+      "color": "conjugate blue",
+      "tilt_deg": -68,
+      "azimuth_deg": 138,
+      "turns_per_48s": -1
+    },
+    "gamma_status": "VISUAL_COUPLING_GRAMMAR_ONLY"
+  },
+  "display_lift": {
+    "carrier": "L_PQ=X20 x {p,q}",
+    "states": 40,
+    "base_states": 20,
+    "fibre_size": 2,
+    "admissible_global_labelings": 2,
+    "canonical_orientation_bit_to_pq_labeling": null,
+    "deck_flip": "p<->q",
+    "compatible_x40_operators": [
+      "J_c",
+      "J_d"
+    ]
+  },
+  "gamma_basis": {
+    "symmetric": "(p+q)/2 is invariant under p<->q",
+    "antisymmetric": "(p-q)/2 changes sign under p<->q",
+    "status": "DISPLAY_BASIS_ONLY_NOT_NUMERIC_NCS_OPERATOR"
+  },
+  "maps": {
+    "clockwork_glb_nodes_to_x20": null,
+    "x20_adjacency": null,
+    "triple19_to_x20": null,
+    "typed_x20_to_q106_intertwiner": null,
+    "full_carrier_intertwiner": null,
+    "historical_janus_selection": null
+  },
+  "ncs_contribution": "Clockwork v7 supplies a source-bound visual two-sheet lift for the C2 coordinate already proved to be lost by X40->X20; it supplies no X20 graph and does not choose either global bit labeling or Janus law.",
+  "claim_boundary": "Internal bounded formal-design evidence only. The audit may establish a source-bound two-sheet display lift and its labeling ambiguity. It cannot create an X20 adjacency, Triple-19-to-X20 map, Q106 intertwiner, canonical Janus selection, physical orbit, new Study, Family, A0 evidence promotion or publication authority.",
+  "checks_detail": [
+    {
+      "name": "extends the existing C2 factor audit",
+      "passed": true,
+      "observed": "A0-BL-023:TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT:V1",
+      "expected": "existing factor audit"
+    },
+    {
+      "name": "creates no identity",
+      "passed": true,
+      "observed": [],
+      "expected": []
+    },
+    {
+      "name": "reuses NN readout module and crosswalk",
+      "passed": true,
+      "observed": [
+        "MOD:READOUT_RECONSTRUCTION",
+        "NN:MRB_ACR_NCS_Q106_RETURN_CROSSWALK"
+      ],
+      "expected": [
+        "MOD:READOUT_RECONSTRUCTION",
+        "NN:MRB_ACR_NCS_Q106_RETURN_CROSSWALK"
+      ]
+    },
+    {
+      "name": "four frozen sources",
+      "passed": true,
+      "observed": 4,
+      "expected": 4
+    },
+    {
+      "name": "source inside ecosystem: SRC:CLOCKWORK_C2:PARENT_FACTOR_RESULT",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/RESULT.json",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:CLOCKWORK_C2:PARENT_FACTOR_RESULT",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:CLOCKWORK_C2:PARENT_FACTOR_RESULT",
+      "passed": true,
+      "observed": "d8caf0e18e3aa7687d8d7a09e40169e4716cb73d1aebe430bb771b41e2ee01b6",
+      "expected": "d8caf0e18e3aa7687d8d7a09e40169e4716cb73d1aebe430bb771b41e2ee01b6"
+    },
+    {
+      "name": "source inside ecosystem: SRC:CLOCKWORK_C2:V7_BUILDER",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/clockwork/generators/build_pq_conjugate_orbit_glb.mjs",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:CLOCKWORK_C2:V7_BUILDER",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:CLOCKWORK_C2:V7_BUILDER",
+      "passed": true,
+      "observed": "80e8ceb129eca4a8c1dc3a0fbead9e24ac4e0cb85b0c9f8ccae5df3e3d51a306",
+      "expected": "80e8ceb129eca4a8c1dc3a0fbead9e24ac4e0cb85b0c9f8ccae5df3e3d51a306"
+    },
+    {
+      "name": "source inside ecosystem: SRC:CLOCKWORK_C2:V7_REFERENCE_GLB",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/clockwork/reference/nexah_pq_conjugate_orbit_v7.glb",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:CLOCKWORK_C2:V7_REFERENCE_GLB",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:CLOCKWORK_C2:V7_REFERENCE_GLB",
+      "passed": true,
+      "observed": "c390d4c6a6e1054116cfdd2c96953d810a333e97f654d815b2e1fe47cd60ecae",
+      "expected": "c390d4c6a6e1054116cfdd2c96953d810a333e97f654d815b2e1fe47cd60ecae"
+    },
+    {
+      "name": "source inside ecosystem: SRC:CLOCKWORK_C2:NN_INTAKE_RESULT",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/results/INTAKE_AUDIT_RESULTS.json",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:CLOCKWORK_C2:NN_INTAKE_RESULT",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:CLOCKWORK_C2:NN_INTAKE_RESULT",
+      "passed": true,
+      "observed": "4f6ba83ba836015538d1b28a33cdbb0d06818f19856cfadab2a86f09cb9b6b4a",
+      "expected": "4f6ba83ba836015538d1b28a33cdbb0d06818f19856cfadab2a86f09cb9b6b4a"
+    },
+    {
+      "name": "parent C2 factor passed",
+      "passed": true,
+      "observed": "PASS_SHARED_C2_ORIENTATION_FACTOR_WITH_QUOTIENT_LOSS",
+      "expected": "PASS_SHARED_C2_ORIENTATION_FACTOR_WITH_QUOTIENT_LOSS"
+    },
+    {
+      "name": "parent factor is C2 orientation",
+      "passed": true,
+      "observed": "C2_orientation",
+      "expected": "C2_orientation"
+    },
+    {
+      "name": "parent quotient has twenty two-state fibres",
+      "passed": true,
+      "observed": [
+        20,
+        2
+      ],
+      "expected": [
+        20,
+        2
+      ]
+    },
+    {
+      "name": "parent orientation does not factor through X20",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "v7 source version",
+      "passed": true,
+      "observed": "v7-pq-conjugate-orbit",
+      "expected": "v7-pq-conjugate-orbit"
+    },
+    {
+      "name": "p/q mirror relation declared",
+      "passed": true,
+      "observed": "q = mirror(p)",
+      "expected": "q = mirror(p)"
+    },
+    {
+      "name": "opposite p/q tilt",
+      "passed": true,
+      "observed": [
+        68,
+        -68
+      ],
+      "expected": [
+        68,
+        -68
+      ]
+    },
+    {
+      "name": "mirrored p/q azimuth",
+      "passed": true,
+      "observed": [
+        42,
+        138
+      ],
+      "expected": [
+        42,
+        138
+      ]
+    },
+    {
+      "name": "opposite p/q turns",
+      "passed": true,
+      "observed": [
+        1,
+        -1
+      ],
+      "expected": [
+        1,
+        -1
+      ]
+    },
+    {
+      "name": "gamma remains visual grammar",
+      "passed": true,
+      "observed": "VISUAL_COUPLING_GRAMMAR_ONLY",
+      "expected": "VISUAL_COUPLING_GRAMMAR_ONLY"
+    },
+    {
+      "name": "sum and difference modes declared",
+      "passed": true,
+      "observed": [
+        "(p+q)/2",
+        "(p-q)/2"
+      ],
+      "expected": [
+        "(p+q)/2",
+        "(p-q)/2"
+      ]
+    },
+    {
+      "name": "X40 and display lift each have forty states",
+      "passed": true,
+      "observed": [
+        40,
+        40
+      ],
+      "expected": [
+        40,
+        40
+      ]
+    },
+    {
+      "name": "both global p/q labelings are bijective",
+      "passed": true,
+      "observed": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "both labelings commute with projection",
+      "passed": true,
+      "observed": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "J_c induces p/q sheet swap under both labelings",
+      "passed": true,
+      "observed": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "J_d induces p/q sheet swap under both labelings",
+      "passed": true,
+      "observed": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "source does not silently select an orientation-bit labeling",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "exactly two admissible global labelings remain",
+      "passed": true,
+      "observed": 2,
+      "expected": 2
+    },
+    {
+      "name": "historical Janus selection remains null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "full carrier intertwiner remains null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Triple19-to-X20 map remains null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    }
+  ]
+}

@@ -1,0 +1,1213 @@
+{
+  "schema": "nexah.ncs-292-q106-intertwiner-return-result/1.2.0",
+  "date": "2026-10-11",
+  "status": "PASS_WITH_OPEN_INTERTWINER",
+  "classification": "RECOVERED_LAYERED_PIPELINE_WITH_OPEN_FIBONACCI_TRANSPORT_BETA_JANUS",
+  "identity_reused": "A0OE:PASCAL_PENTAGON_D5_TEST",
+  "creates": [],
+  "summary": {
+    "checks_passed": 44,
+    "checks_total": 44,
+    "q106_orbits": 16,
+    "unique_connected_15_ring_interface": 1,
+    "unique_connected_20_ring_interface": 1,
+    "connected_40_ring_interface": 0,
+    "unique_connected_6_residual": 1,
+    "base20_samples": 5,
+    "base20_projection_injective": false,
+    "vendissimal_namespaces_identified": false,
+    "c30_address_fibre_profile": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "beta_candidates": 720,
+    "canonical_beta_selected": null,
+    "fibonacci_Q5": [
+      [
+        8,
+        5
+      ],
+      [
+        5,
+        3
+      ]
+    ],
+    "fibonacci_Q10": [
+      [
+        89,
+        55
+      ],
+      [
+        55,
+        34
+      ]
+    ],
+    "fibonacci_transport_selected": null,
+    "typed_intertwiner_to_q106": null,
+    "historical_janus_law_selected": null
+  },
+  "module_1": {
+    "classification": "COMMON_XY_TRANSLATION_IDENTITY_LABEL_ACTION",
+    "four_points": [
+      [
+        -1.1,
+        -1.1,
+        0.1
+      ],
+      [
+        -0.5,
+        -0.5,
+        0.2
+      ],
+      [
+        0.6,
+        0.6,
+        0.25
+      ],
+      [
+        1.15,
+        1.15,
+        0.3
+      ]
+    ],
+    "sample_delta_frame_7": 0.20162249904753718,
+    "package_permutation_recovered": null
+  },
+  "module_2": {
+    "orbit_sizes": [
+      1,
+      5,
+      5,
+      5,
+      5,
+      10,
+      5,
+      10,
+      5,
+      5,
+      10,
+      10,
+      5,
+      10,
+      10,
+      5
+    ],
+    "orbit_profile": {
+      "1": 1,
+      "5": 9,
+      "10": 6
+    },
+    "interfaces": {
+      "15": {
+        "invariant_unions": 138,
+        "connected_unions": 1,
+        "pure_five_orbit_unions": 84,
+        "connected_pure_five_orbit_unions": 1,
+        "connected_examples": [
+          {
+            "orbit_indices": [
+              1,
+              2,
+              3
+            ],
+            "orbit_sizes": [
+              5,
+              5,
+              5
+            ],
+            "connected": true,
+            "undirected_internal_edges": 15,
+            "boundary_incidence": 30
+          }
+        ],
+        "pure_five_connected_examples": [
+          {
+            "orbit_indices": [
+              1,
+              2,
+              3
+            ],
+            "orbit_sizes": [
+              5,
+              5,
+              5
+            ],
+            "connected": true,
+            "undirected_internal_edges": 15,
+            "boundary_incidence": 30
+          }
+        ]
+      },
+      "20": {
+        "invariant_unions": 357,
+        "connected_unions": 4,
+        "pure_five_orbit_unions": 126,
+        "connected_pure_five_orbit_unions": 1,
+        "connected_examples": [
+          {
+            "orbit_indices": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "orbit_sizes": [
+              5,
+              5,
+              5,
+              5
+            ],
+            "connected": true,
+            "undirected_internal_edges": 20,
+            "boundary_incidence": 40
+          },
+          {
+            "orbit_indices": [
+              1,
+              3,
+              5
+            ],
+            "orbit_sizes": [
+              5,
+              5,
+              10
+            ],
+            "connected": true,
+            "undirected_internal_edges": 20,
+            "boundary_incidence": 40
+          },
+          {
+            "orbit_indices": [
+              2,
+              3,
+              5
+            ],
+            "orbit_sizes": [
+              5,
+              5,
+              10
+            ],
+            "connected": true,
+            "undirected_internal_edges": 20,
+            "boundary_incidence": 40
+          },
+          {
+            "orbit_indices": [
+              2,
+              5,
+              8
+            ],
+            "orbit_sizes": [
+              5,
+              10,
+              5
+            ],
+            "connected": true,
+            "undirected_internal_edges": 20,
+            "boundary_incidence": 40
+          }
+        ],
+        "pure_five_connected_examples": [
+          {
+            "orbit_indices": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "orbit_sizes": [
+              5,
+              5,
+              5,
+              5
+            ],
+            "connected": true,
+            "undirected_internal_edges": 20,
+            "boundary_incidence": 40
+          }
+        ]
+      },
+      "40": {
+        "invariant_unions": 3138,
+        "connected_unions": 63,
+        "pure_five_orbit_unions": 9,
+        "connected_pure_five_orbit_unions": 0,
+        "connected_examples": [
+          {
+            "orbit_indices": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              7
+            ],
+            "orbit_sizes": [
+              5,
+              5,
+              5,
+              5,
+              10,
+              10
+            ],
+            "connected": true,
+            "undirected_internal_edges": 60,
+            "boundary_incidence": 40
+          },
+          {
+            "orbit_indices": [
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "orbit_sizes": [
+              5,
+              5,
+              5,
+              10,
+              5,
+              10
+            ],
+            "connected": true,
+            "undirected_internal_edges": 45,
+            "boundary_incidence": 70
+          },
+          {
+            "orbit_indices": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "orbit_sizes": [
+              5,
+              5,
+              5,
+              10,
+              5,
+              10
+            ],
+            "connected": true,
+            "undirected_internal_edges": 50,
+            "boundary_incidence": 60
+          },
+          {
+            "orbit_indices": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              8
+            ],
+            "orbit_sizes": [
+              5,
+              5,
+              5,
+              5,
+              10,
+              5,
+              5
+            ],
+            "connected": true,
+            "undirected_internal_edges": 55,
+            "boundary_incidence": 50
+          }
+        ],
+        "pure_five_connected_examples": []
+      }
+    }
+  },
+  "module_3": {
+    "six_node_residual": [
+      "A",
+      "S_01_00",
+      "S_01_01",
+      "S_01_02",
+      "S_01_03",
+      "S_01_04"
+    ],
+    "hundred_node_complement_connected": true,
+    "five_by_twenty_block_system": null,
+    "abc_orientation_node_map": null
+  },
+  "module_4": {
+    "commuting_law_valid": true,
+    "dihedral_law_valid": true,
+    "historical_selection": null,
+    "one_turn_quotient_return": true,
+    "one_turn_exact_return": false,
+    "two_turn_exact_return": true,
+    "ilau": {
+      "retained": [
+        "sector after full turn",
+        "package",
+        "quotient class"
+      ],
+      "lost": [],
+      "introduced": [],
+      "unresolved": [
+        "Janus law selection",
+        "X20-to-Q106 node map",
+        "five-block decomposition"
+      ]
+    }
+  },
+  "layered_test": {
+    "D20": {
+      "status": "PASS_EXACT",
+      "formula": "n=400z+20y+x",
+      "samples": {
+        "1729": [
+          4,
+          6,
+          9
+        ],
+        "417": [
+          1,
+          0,
+          17
+        ],
+        "1836": [
+          4,
+          11,
+          16
+        ],
+        "378": [
+          0,
+          18,
+          18
+        ],
+        "718": [
+          1,
+          15,
+          18
+        ]
+      }
+    },
+    "P20": {
+      "status": "INFORMATION_LOST_AS_EXPECTED",
+      "formula": "(z,y,x)->(x+y/2,z)",
+      "injective": false,
+      "collision_witness": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ]
+    },
+    "namespace_boundary": {
+      "status": "PASS_SEPARATE_TYPES",
+      "V5_cardinality": 5,
+      "C20_cardinality": 20,
+      "typed_map": null
+    },
+    "C30_to_C6": {
+      "status": "PASS_ADDRESS_ONLY",
+      "fibre_profile": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "phase_29_successor": 0
+    },
+    "beta_janus": {
+      "status": "OPEN",
+      "beta_candidates": 720,
+      "beta_selected": null,
+      "commuting_janus_valid": true,
+      "dihedral_janus_valid": true,
+      "historical_janus_selected": null
+    },
+    "fibonacci_rail": {
+      "status": "PASS_EXACT_RAIL_OPEN_TRANSPORT",
+      "Q5": [
+        [
+          8,
+          5
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "Q5_determinant": -1,
+      "Q5_trace": 11,
+      "Q10": [
+        [
+          89,
+          55
+        ],
+        [
+          55,
+          34
+        ]
+      ],
+      "seam_selected_by_determinant": false,
+      "signed_reciprocal_return": {
+        "plus": "+I after two",
+        "minus": "-I after two; +I after four"
+      },
+      "transport_to_D20_C20_X20_X40_Q106": null
+    }
+  },
+  "source_resolution": {
+    "ncs_script": {
+      "root": "nexah_repo",
+      "path": "EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/EXPERIMENTS/trinity_euler_riemann_ramanujan/scripts/v2_06_3_cubes_taxicab_regulator.py",
+      "sha256": "188063b6512766ecc05f09e4ada6ab0666c88d75ab73c13392c22dd69a691fca"
+    },
+    "q106_nodes": {
+      "root": "nexah_repo",
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/nodes.csv",
+      "sha256": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12"
+    },
+    "q106_edges": {
+      "root": "nexah_repo",
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/edges.csv",
+      "sha256": "6309b5c8807cf4d3352500d7eb1e7ce8d0c0da9be68d327c9196f9e54fd742b3"
+    },
+    "q106_automorphisms": {
+      "root": "nexah_repo",
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/automorphisms.json",
+      "sha256": "70750da9596d05ebdfac55f8fa46893f469b163751529cb225b2abc19ce5966e"
+    },
+    "a0_bl_045_q5_result": {
+      "root": "ecosystem",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_045_PASCAL_Q5_RETURN_FORK_2026-10-10/artifacts/PRIMARY_RESULT.json",
+      "sha256": "75407a13c602f6d97c8f1d83aa95aa79058e89710a60f963253b26979e3dec9f"
+    },
+    "a0_bl_045_double_pentagon_result": {
+      "root": "ecosystem",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_045_PASCAL_Q5_RETURN_FORK_2026-10-10/artifacts/DOUBLE_PENTAGON_PRIMARY_RESULT.json",
+      "sha256": "2fa814b742161e770501a586a477984f3cd78b0f939d36539e0c4a90dc027155"
+    }
+  },
+  "checks": [
+    {
+      "name": "existing identity reused without creation",
+      "status": "PASS",
+      "observed": {
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+        "source_object": "SCC-003 / Q106",
+        "parent_contract": "A0-BL-023:NCS_292_DUAL_AXIS_Q106_BRIDGE_AUDIT:V1",
+        "creates": []
+      },
+      "expected": {
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+        "creates": []
+      }
+    },
+    {
+      "name": "frozen source ncs_script",
+      "status": "PASS",
+      "observed": "188063b6512766ecc05f09e4ada6ab0666c88d75ab73c13392c22dd69a691fca",
+      "expected": "188063b6512766ecc05f09e4ada6ab0666c88d75ab73c13392c22dd69a691fca"
+    },
+    {
+      "name": "frozen source q106_nodes",
+      "status": "PASS",
+      "observed": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12",
+      "expected": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12"
+    },
+    {
+      "name": "frozen source q106_edges",
+      "status": "PASS",
+      "observed": "6309b5c8807cf4d3352500d7eb1e7ce8d0c0da9be68d327c9196f9e54fd742b3",
+      "expected": "6309b5c8807cf4d3352500d7eb1e7ce8d0c0da9be68d327c9196f9e54fd742b3"
+    },
+    {
+      "name": "frozen source q106_automorphisms",
+      "status": "PASS",
+      "observed": "70750da9596d05ebdfac55f8fa46893f469b163751529cb225b2abc19ce5966e",
+      "expected": "70750da9596d05ebdfac55f8fa46893f469b163751529cb225b2abc19ce5966e"
+    },
+    {
+      "name": "frozen source a0_bl_045_q5_result",
+      "status": "PASS",
+      "observed": "75407a13c602f6d97c8f1d83aa95aa79058e89710a60f963253b26979e3dec9f",
+      "expected": "75407a13c602f6d97c8f1d83aa95aa79058e89710a60f963253b26979e3dec9f"
+    },
+    {
+      "name": "frozen source a0_bl_045_double_pentagon_result",
+      "status": "PASS",
+      "observed": "2fa814b742161e770501a586a477984f3cd78b0f939d36539e0c4a90dc027155",
+      "expected": "2fa814b742161e770501a586a477984f3cd78b0f939d36539e0c4a90dc027155"
+    },
+    {
+      "name": "M1 four historical points recovered",
+      "status": "PASS",
+      "observed": 4,
+      "expected": 4
+    },
+    {
+      "name": "M1 NCS action is common xy translation with fixed z",
+      "status": "PASS",
+      "observed": {
+        "translation": [
+          0.20162249904753718,
+          0.20162249904753718,
+          0.0
+        ],
+        "pairwise_distances_preserved": true
+      },
+      "expected": {
+        "form": "(x,y,z)->(x+d,y+d,z)",
+        "pairwise_distances_preserved": true
+      }
+    },
+    {
+      "name": "M1 point-label action is identity rather than package permutation",
+      "status": "PASS",
+      "observed": {
+        "label_permutation": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "expected": {
+        "label_permutation": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "name": "M2 frozen Q106 and D5 action loaded",
+      "status": "PASS",
+      "observed": {
+        "nodes": 106,
+        "directed_edges": 180,
+        "actions": 10
+      },
+      "expected": {
+        "nodes": 106,
+        "directed_edges": 180,
+        "actions": 10
+      }
+    },
+    {
+      "name": "M2 Q106 orbit profile",
+      "status": "PASS",
+      "observed": {
+        "1": 1,
+        "5": 9,
+        "10": 6
+      },
+      "expected": {
+        "1": 1,
+        "5": 9,
+        "10": 6
+      }
+    },
+    {
+      "name": "M2 exhaustive invariant subset count for 15",
+      "status": "PASS",
+      "observed": [
+        138,
+        1
+      ],
+      "expected": [
+        138,
+        1
+      ]
+    },
+    {
+      "name": "M2 exhaustive invariant subset count for 20",
+      "status": "PASS",
+      "observed": [
+        357,
+        4
+      ],
+      "expected": [
+        357,
+        4
+      ]
+    },
+    {
+      "name": "M2 exhaustive invariant subset count for 40",
+      "status": "PASS",
+      "observed": [
+        3138,
+        63
+      ],
+      "expected": [
+        3138,
+        63
+      ]
+    },
+    {
+      "name": "M2 unique connected RootCube15-type three-ring interface",
+      "status": "PASS",
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "name": "M2 unique connected X20-type four-ring interface",
+      "status": "PASS",
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "name": "M2 no connected X40-type eight-ring interface",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "M3 unique connected D5-invariant six-node residual",
+      "status": "PASS",
+      "observed": {
+        "invariant_candidates": 9,
+        "connected_candidates": 1,
+        "nodes": [
+          "A",
+          "S_01_00",
+          "S_01_01",
+          "S_01_02",
+          "S_01_03",
+          "S_01_04"
+        ]
+      },
+      "expected": {
+        "invariant_candidates": 9,
+        "connected_candidates": 1,
+        "nodes": "apex plus first seam ring"
+      }
+    },
+    {
+      "name": "M3 residual complement is an invariant connected 100-node carrier",
+      "status": "PASS",
+      "observed": {
+        "size": 100,
+        "connected": true
+      },
+      "expected": {
+        "size": 100,
+        "connected": true
+      }
+    },
+    {
+      "name": "M3 ABC-orientation alphabet has six labels",
+      "status": "PASS",
+      "observed": 6,
+      "expected": 6
+    },
+    {
+      "name": "M3 five 20-node blocks remain explicitly undefined",
+      "status": "PASS",
+      "observed": {
+        "equation": "106=5*20+6",
+        "block_system": null,
+        "ABC_node_map": null
+      },
+      "expected": {
+        "block_system": null,
+        "ABC_node_map": null
+      }
+    },
+    {
+      "name": "M4 both Janus maps are involutions",
+      "status": "PASS",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "M4 commuting Janus law",
+      "status": "PASS",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "M4 dihedral Janus law",
+      "status": "PASS",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "M4 five rotations return exactly",
+      "status": "PASS",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "M4 Möbius seam gives quotient return after one turn and exact return after two",
+      "status": "PASS",
+      "observed": {
+        "one_turn_quotient": true,
+        "one_turn_exact": false,
+        "two_turn_exact": true
+      },
+      "expected": {
+        "one_turn_quotient": true,
+        "one_turn_exact": false,
+        "two_turn_exact": true
+      }
+    },
+    {
+      "name": "M6 D20 recovers the five base-20 states",
+      "status": "PASS",
+      "observed": {
+        "1729": [
+          4,
+          6,
+          9
+        ],
+        "417": [
+          1,
+          0,
+          17
+        ],
+        "1836": [
+          4,
+          11,
+          16
+        ],
+        "378": [
+          0,
+          18,
+          18
+        ],
+        "718": [
+          1,
+          15,
+          18
+        ]
+      },
+      "expected": {
+        "1729": [
+          4,
+          6,
+          9
+        ],
+        "417": [
+          1,
+          0,
+          17
+        ],
+        "1836": [
+          4,
+          11,
+          16
+        ],
+        "378": [
+          0,
+          18,
+          18
+        ],
+        "718": [
+          1,
+          15,
+          18
+        ]
+      }
+    },
+    {
+      "name": "M6 D20 digits satisfy their typed ranges",
+      "status": "PASS",
+      "observed": {
+        "1729": [
+          4,
+          6,
+          9
+        ],
+        "417": [
+          1,
+          0,
+          17
+        ],
+        "1836": [
+          4,
+          11,
+          16
+        ],
+        "378": [
+          0,
+          18,
+          18
+        ],
+        "718": [
+          1,
+          15,
+          18
+        ]
+      },
+      "expected": "z>=0 and x,y in C20"
+    },
+    {
+      "name": "M6 D20 round trips exactly",
+      "status": "PASS",
+      "observed": {
+        "1729": 1729,
+        "417": 417,
+        "1836": 1836,
+        "378": 378,
+        "718": 718
+      },
+      "expected": {
+        "1729": 1729,
+        "417": 417,
+        "1836": 1836,
+        "378": 378,
+        "718": 718
+      }
+    },
+    {
+      "name": "M7 P20 reproduces the recovered display coordinates",
+      "status": "PASS",
+      "observed": {
+        "1729": [
+          12.0,
+          4
+        ],
+        "417": [
+          17.0,
+          1
+        ],
+        "1836": [
+          21.5,
+          4
+        ],
+        "378": [
+          27.0,
+          0
+        ],
+        "718": [
+          25.5,
+          1
+        ]
+      },
+      "expected": {
+        "1729": [
+          12.0,
+          4
+        ],
+        "417": [
+          17.0,
+          1
+        ],
+        "1836": [
+          21.5,
+          4
+        ],
+        "378": [
+          27.0,
+          0
+        ],
+        "718": [
+          25.5,
+          1
+        ]
+      }
+    },
+    {
+      "name": "M7 P20 loss is explicit and reproducible",
+      "status": "PASS",
+      "observed": {
+        "states": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "shared_view": [
+          1.0,
+          0
+        ]
+      },
+      "expected": "distinct states with one shared view"
+    },
+    {
+      "name": "M8 V5 and C20 retain distinct cardinalities",
+      "status": "PASS",
+      "observed": {
+        "V5": 5,
+        "C20": 20
+      },
+      "expected": {
+        "V5": 5,
+        "C20": 20
+      }
+    },
+    {
+      "name": "M8 shared terminology does not assert a namespace identity",
+      "status": "PASS",
+      "observed": {
+        "identified": false,
+        "typed_map": null
+      },
+      "expected": {
+        "identified": false,
+        "typed_map": null
+      }
+    },
+    {
+      "name": "M9 C30-to-C6 address projection has six fibres of five",
+      "status": "PASS",
+      "observed": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "expected": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    {
+      "name": "M9 C30 phase successor wraps 29 to 0",
+      "status": "PASS",
+      "observed": {
+        "phase": 29,
+        "successor": 0,
+        "address": 5
+      },
+      "expected": {
+        "phase": 29,
+        "successor": 0,
+        "address": 5
+      }
+    },
+    {
+      "name": "M10 beta search space remains 6 factorial",
+      "status": "PASS",
+      "observed": 720,
+      "expected": 720
+    },
+    {
+      "name": "M10 beta and historical Janus selections remain open",
+      "status": "PASS",
+      "observed": {
+        "beta": null,
+        "canonical_seam": null,
+        "historical_janus": null
+      },
+      "expected": {
+        "beta": null,
+        "canonical_seam": null,
+        "historical_janus": null
+      }
+    },
+    {
+      "name": "M11 closed A0-BL-045 source results retain their classifications",
+      "status": "PASS",
+      "observed": {
+        "local": "RETURN_TYPE_UNDERDETERMINED",
+        "double": "SIGNED_DOUBLE_RETURN_IDENTIFIED"
+      },
+      "expected": {
+        "local": "RETURN_TYPE_UNDERDETERMINED",
+        "double": "SIGNED_DOUBLE_RETURN_IDENTIFIED"
+      }
+    },
+    {
+      "name": "M11 Fibonacci Q5 and invariants replay exactly",
+      "status": "PASS",
+      "observed": {
+        "Q5": [
+          [
+            8,
+            5
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "determinant": -1,
+        "trace": 11
+      },
+      "expected": {
+        "Q5": [
+          [
+            8,
+            5
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "determinant": -1,
+        "trace": 11
+      }
+    },
+    {
+      "name": "M11 determinant minus one does not select seam topology",
+      "status": "PASS",
+      "observed": {
+        "same_Q5": true,
+        "untwisted_boundaries": 2,
+        "twisted_boundaries": 1
+      },
+      "expected": {
+        "same_Q5": true,
+        "untwisted_boundaries": 2,
+        "twisted_boundaries": 1
+      }
+    },
+    {
+      "name": "M11 Fibonacci Q10 is exact and is not an identity return",
+      "status": "PASS",
+      "observed": {
+        "Q10": [
+          [
+            89,
+            55
+          ],
+          [
+            55,
+            34
+          ]
+        ],
+        "is_identity": false
+      },
+      "expected": {
+        "Q10": [
+          [
+            89,
+            55
+          ],
+          [
+            55,
+            34
+          ]
+        ],
+        "is_identity": false
+      }
+    },
+    {
+      "name": "M11 signed reciprocal bridge keeps exact and anti-return distinct",
+      "status": "PASS",
+      "observed": {
+        "plus_square": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "minus_square": [
+          [
+            -1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            -1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            -1
+          ]
+        ]
+      },
+      "expected": {
+        "plus_square": "+I",
+        "minus_square": "-I",
+        "minus_fourth_power": "+I"
+      }
+    },
+    {
+      "name": "M11 Fibonacci rail has no inferred cross-carrier transport",
+      "status": "PASS",
+      "observed": {
+        "transport": null,
+        "targets": [
+          "D20",
+          "C20",
+          "X20",
+          "X40",
+          "Q106"
+        ]
+      },
+      "expected": {
+        "transport": null,
+        "targets": "remain unbound"
+      }
+    }
+  ],
+  "claim_boundary": [
+    "formal finite replay and design validation only; not an admitted Study or PENT-08",
+    "the historical NCS animation recovers a common planar translation and identity label action, not a four-package permutation",
+    "D5-invariant subset existence does not provide an adjacency-preserving intertwiner from X20 or X40",
+    "106=5*20+6 is tested as a cardinality split; five 20-node blocks and an ABC labeling remain undefined",
+    "both Janus laws are valid candidate algebras; the sources do not select one",
+    "D20 is exact on the tested integers while P20 is deliberately lossy and must not be inverted",
+    "V5 and C20 remain separate typed namespaces despite shared legacy terminology",
+    "C30-to-C6 is an address projection with six five-element fibres; it does not choose a seam binding",
+    "720 beta candidates remain and no canonical beta is selected",
+    "Q^5 and Q^10 are exact Fibonacci rail controls reused from closed A0-BL-045; determinant -1 does not select seam topology",
+    "the signed reciprocal bridge is a conditional return law with explicitly supplied inverse leg and sign, not a recovered cross-carrier transport",
+    "no typed Fibonacci-to-D20, C20, X20, X40, or Q106 state map is supplied",
+    "the HTML is an instrument over this result and adds no evidence authority",
+    "no physical, E8, H3, prime-selector, resonance, identity, or publication claim"
+  ]
+}

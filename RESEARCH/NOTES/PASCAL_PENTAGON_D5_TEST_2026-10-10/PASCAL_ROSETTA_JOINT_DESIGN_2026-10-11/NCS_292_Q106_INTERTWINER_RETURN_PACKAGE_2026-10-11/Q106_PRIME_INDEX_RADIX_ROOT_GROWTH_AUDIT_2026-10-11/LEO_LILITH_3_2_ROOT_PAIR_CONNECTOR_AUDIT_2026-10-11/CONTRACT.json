@@ -1,0 +1,85 @@
+{
+  "contract_id": "A0-BL-023:LEO_LILITH_3_2_ROOT_PAIR_CONNECTOR_AUDIT:V1",
+  "date": "2026-10-11",
+  "status": "FORMAL_DESIGN_VALIDATION_AND_DOCUMENTARY_ARCHAEOLOGY_NOT_ADMITTED",
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "relates_to": "PASCAL_FIBONACCI_MOBIUS_LEO_LILITH_ARCHAEOLOGY_2026-10-10",
+    "parent_contract": "A0-BL-023:Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT:V1",
+    "creates": []
+  },
+  "question": "Does the existing Leo/Lilith archaeology contain a genuine 3:2 marker, does the consecutive-square prime-index ladder support a bounded root-pair connector, and does adding 1440 close the supplied 432 record/play ring as an exact finite return map?",
+  "modules": [
+    "M1_LEO_LILITH_ARCHAEOLOGY",
+    "M2_HISTORICAL_3_2_MARKER",
+    "M3_SQUARE_INDEX_PRIME_LADDER",
+    "M4_ROOT_PAIR_CONTROL_SCAN",
+    "M5_2_3_TO_4_5_LIFT",
+    "M6_CONNECTOR_CLASSIFICATION",
+    "M7_RECORD_PLAY_432_RING_RETURN",
+    "M8_Q432_COORDINATE_BRIDGE"
+  ],
+  "frozen_sources": {
+    "parent_contract": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT_2026-10-11/CONTRACT.json",
+      "sha256": "530a987f8ce1c65f1d69c08e7a06003fd520324cb69b653b6a3b35fa679a4b82"
+    },
+    "parent_result": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "330bc8a1b9b9a29bde53e77c43088b8487992252a86e63fdcee7701479d363d1"
+    },
+    "archaeology_readme": {
+      "path": "RESEARCH/HISTORY/PASCAL_FIBONACCI_MOBIUS_LEO_LILITH_ARCHAEOLOGY_2026-10-10/README.md",
+      "sha256": "9f3c63965c4f7c0bb81d12fbd7240049592045fc1d0107b7a6bc9bab4a238b8e"
+    },
+    "operator_addendum": {
+      "path": "RESEARCH/HISTORY/PASCAL_FIBONACCI_MOBIUS_LEO_LILITH_ARCHAEOLOGY_2026-10-10/OPERATOR_ORDER_RETURN_ARCHAEOLOGY_ADDENDUM.md",
+      "sha256": "967e3ad785003ccbeb4b7150c14e57589ef47bc61af68377a461334c1f4150f0"
+    },
+    "source_ledger": {
+      "path": "RESEARCH/HISTORY/PASCAL_FIBONACCI_MOBIUS_LEO_LILITH_ARCHAEOLOGY_2026-10-10/SOURCE_LEDGER.csv",
+      "sha256": "099c40e72df362e34859921340a36ea36b167221baf2b43606feeab1073f259e"
+    },
+    "lilith_janus_script": {
+      "path": "APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/ieee300/ieee300_real_tunable_v13.13_lilith_janus.py",
+      "sha256": "f99a342659774b07083e50a441d588890adc3bf47e64758b622b96249823456e"
+    },
+    "lilith_edge_script": {
+      "path": "APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/ieee9241/ieee9241_real_tunable_v13.9.12_stengel_lilith_zeta.py",
+      "sha256": "83caabb568545f84d639503faced13919af52adf3115da584abc5071290eaab6"
+    },
+    "leo_lilith_clamp_script": {
+      "path": "APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/real_grid_experiments/nexah_graviton_toroid_v17.7.py",
+      "sha256": "84b56cd5cf804f3fe63059c79e3622eae8aff360c24d4683daa17a25cd10d1e6"
+    }
+  },
+  "declared_tests": {
+    "square_index_ladder": "a_r=p_(r^2), r=1..5",
+    "adjacent_sums": "s_r=a_r+a_(r+1), r=1..4",
+    "control_scan": "r=1..100; fixed J150, decimal suffix and next-same-suffix index-gap conditions",
+    "seed_lift": "Lambda(2,3)=(2^2,2+3)=(4,5)",
+    "directed_ratio": "3/2 under reversal becomes 2/3",
+    "record_play_ring": "d=180k for k in (3,4,6,8); q=10*432/d=24/k",
+    "coordinate_bridge": "Q_432(x)=432/x; exact involution, factor-track replay, and bounded numerical constant-coordinate checks"
+  },
+  "outcomes": [
+    "PASS_ARITHMETIC_CONNECTOR_CANDIDATE_WITH_LILITH_3_2_SOURCE_MARKER",
+    "ARITHMETIC_ONLY_NO_ARCHAEOLOGICAL_MARKER",
+    "CONTRACT_INVALID"
+  ],
+  "stop_rule": "Stop before declaring Leo:Lilith=3:2, assigning the 4/5 root views to Leo/Lilith as recovered history, treating a source-local frequency term as a validated mechanism, or promoting the square-index ladder to a recursive law without out-of-sample continuation.",
+  "claim_boundary": [
+    "bounded documentary archaeology and exact finite arithmetic only",
+    "Lilith has a historical 3/2 source marker; a paired Leo 2/3 source marker is not recovered",
+    "the 2-3 to 4-5 lift is introduced in this audit, not recovered from history",
+    "the square-index ladder is exact through r=5 but selected in-sample",
+    "the 432 ring return is exact for the declared finite divisor set (3,4,6,8)",
+    "Q_432 is an exact involution for every nonzero input; the displayed pi and square-root-of-two coordinates reproduce numerically",
+    "the golden-angle comparison is a numerical near-match, not an identity or universal law",
+    "the displayed 432/phi value 267.0031 degrees is not reproduced by the standard golden ratio; the standard value is approximately 266.990683 degrees",
+    "yellow/blue/purple are display labels, not arithmetic causes",
+    "Leo/Lilith remain observer/display vocabulary unless separately operationalized",
+    "no physical, astronomical, calendar, resonance, prime-selector, or publication claim",
+    "no new identity, Study, Family, or canonical Navigator relation"
+  ]
+}

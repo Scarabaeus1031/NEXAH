@@ -1,0 +1,1100 @@
+{
+  "schema": "nexah.euler41-residual-switch-audit-result/1.0.0",
+  "date": "2026-10-11",
+  "status": "PASS_WITH_OPEN_SEAM_BINDING",
+  "classification": "PASS_EXACT_CONTROLLER_ARCHITECTURE_WITH_OPEN_SEAM_BINDING",
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "parent_contract": "A0-BL-023:NCS_292_Q106_INTERTWINER_RETURN_PACKAGE:V1",
+    "relates_to": [
+      "A0-BL-023",
+      "A0-BL-036",
+      "A0-BL-037",
+      "A0-BL-051",
+      "MRB-04",
+      "MRB-08",
+      "HMA-01",
+      "LIFE06B"
+    ],
+    "creates": []
+  },
+  "summary": {
+    "checks_passed": 60,
+    "checks_total": 60,
+    "prime_10": 29,
+    "prime_13": 41,
+    "controller_cardinality": 41,
+    "residual_fiber_profile": [
+      1,
+      5
+    ],
+    "compatible_added_seams": 6,
+    "c30_address_fibre_profile": [
+      5,
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "seam_pin_assignment_candidates": 720,
+    "gap_41_times_20": 820,
+    "base20_samples": 5,
+    "base20_projection_injective": false,
+    "vendissimal_namespaces_identified": false,
+    "canonical_seam_selected": null,
+    "historical_janus_law_selected": null
+  },
+  "modules": {
+    "M1_prime_euler_boundary": {
+      "primes_1_to_13": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19,
+        23,
+        29,
+        31,
+        37,
+        41
+      ],
+      "base13": {
+        "41": "32",
+        "reversal": "23",
+        "value": 29
+      },
+      "euler_break": {
+        "n": 41,
+        "u": 40,
+        "value": 1681
+      }
+    },
+    "M2_external_controller": {
+      "carrier": "X40",
+      "augmentation": "X40 disjoint-union {q}",
+      "cardinality": 41,
+      "q_role": "owner-declared external controller"
+    },
+    "M3_residual_readout": {
+      "nodes": [
+        "A",
+        "S_01_00",
+        "S_01_01",
+        "S_01_02",
+        "S_01_03",
+        "S_01_04"
+      ],
+      "rho": {
+        "A": 0,
+        "S_01_j": 1
+      },
+      "fiber_profile": [
+        1,
+        5
+      ],
+      "D5_invariant": true
+    },
+    "M4_seam_obstruction": {
+      "intrinsic_H1_dimension": 0,
+      "compatible_added_seam_orbits": 6,
+      "D5_equivariant_bijections_R6_to_seam_choices": 0,
+      "selected": null
+    },
+    "M5_fibonacci_rail": {
+      "Q5": [
+        [
+          8,
+          5
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "determinant": -1,
+      "thirteen_weights": [
+        1,
+        1,
+        2,
+        3,
+        5,
+        8,
+        13,
+        21,
+        34,
+        55,
+        89,
+        144,
+        233
+      ],
+      "topology_selected": false
+    },
+    "M6_magic_34_control": {
+      "magic_sum": 34,
+      "Durer_operator": "R180",
+      "Khajuraho_operator": "T(2,2) toric",
+      "operators_identical": false
+    },
+    "M7_owner_palette": {
+      "fibonacci_rail": "blue",
+      "euler_stair": "green-yellow",
+      "role": "display semantics only"
+    },
+    "M8_vigesimal_address_bus": {
+      "dual_ingress_value": 29,
+      "C30_phase": 29,
+      "next_phase": 0,
+      "C6_address": 5,
+      "fibre_profile": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "beta_candidates": 720,
+      "beta_selected": null,
+      "synchronization_cover": 120
+    },
+    "M9_gap_joint": {
+      "identity": "206^2-204^2=820=41*20",
+      "value": 820,
+      "arc_identity": false,
+      "physical_bridge": false
+    },
+    "M11_base20_decoder": {
+      "formula": "n=400z+20y+x",
+      "samples": {
+        "1729": {
+          "digits_zyx": [
+            4,
+            6,
+            9
+          ],
+          "view_rz": [
+            12.0,
+            4
+          ]
+        },
+        "417": {
+          "digits_zyx": [
+            1,
+            0,
+            17
+          ],
+          "view_rz": [
+            17.0,
+            1
+          ]
+        },
+        "1836": {
+          "digits_zyx": [
+            4,
+            11,
+            16
+          ],
+          "view_rz": [
+            21.5,
+            4
+          ]
+        },
+        "378": {
+          "digits_zyx": [
+            0,
+            18,
+            18
+          ],
+          "view_rz": [
+            27.0,
+            0
+          ]
+        },
+        "718": {
+          "digits_zyx": [
+            1,
+            15,
+            18
+          ],
+          "view_rz": [
+            25.5,
+            1
+          ]
+        }
+      },
+      "projection": "(z,y,x)->(x+y/2,z)",
+      "projection_injective": false,
+      "frame_step": 15
+    },
+    "M12_namespace_boundary": {
+      "V5": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "C20": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "identified": false,
+      "typed_map": null
+    }
+  },
+  "interpretation": {
+    "retained": [
+      "exact 29=p10 and 41=p13 prime-index relation",
+      "exact base-13 mirror 41=32_13 to 23_13=29",
+      "exact Euler n=1..40 prime run with n=41 break at 41^2",
+      "typed external 40+1 controller architecture",
+      "canonical D5-invariant apex-versus-ring binary residual readout",
+      "Fibonacci Q^5 determinant and dual magic-34 controls",
+      "distinct 28+1 and 40+1 external-controller ingress routes meeting at value 29",
+      "C30-to-C6 six-address quotient with five phases per address",
+      "exact square-gap factorization 206^2-204^2=820=41*20",
+      "exact base-20 layer/ring/point decoder for the five recovered Thread-V samples",
+      "lossy affine display projection kept distinct from the base-20 digit state",
+      "five-state and base-20 uses of vendissimal kept as distinct namespaces"
+    ],
+    "introduced": [
+      "X40 disjoint-union {q} as an owner-declared controller carrier",
+      "thirteen-step prime-index stair ending at 41",
+      "blue Fibonacci rail and green-yellow Euler stair palette"
+    ],
+    "open": [
+      "which of six added seam orbits is active",
+      "commuting versus dihedral Janus selection",
+      "typed Fibonacci-to-Pascal state map and transport law",
+      "adjacency-preserving X20-to-Q106 intertwiner",
+      "source-bound beta:C6-to-six-seam-orbits pin assignment"
+    ]
+  },
+  "checks": [
+    {
+      "name": "existing identity reused without creation",
+      "status": "PASS",
+      "observed": {
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+        "parent_contract": "A0-BL-023:NCS_292_Q106_INTERTWINER_RETURN_PACKAGE:V1",
+        "relates_to": [
+          "A0-BL-023",
+          "A0-BL-036",
+          "A0-BL-037",
+          "A0-BL-051",
+          "MRB-04",
+          "MRB-08",
+          "HMA-01",
+          "LIFE06B"
+        ],
+        "creates": []
+      },
+      "expected": {
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+        "creates": []
+      }
+    },
+    {
+      "name": "frozen source parent_result",
+      "status": "PASS",
+      "observed": "303e299694ebad23c422f2400532a521adc2e24a28686fc4a9d75cca162f6b0b",
+      "expected": "303e299694ebad23c422f2400532a521adc2e24a28686fc4a9d75cca162f6b0b"
+    },
+    {
+      "name": "frozen source intrinsic_seam_result",
+      "status": "PASS",
+      "observed": "fd4474b90516197f3299e3288e506b62e1ff187ac1c13aa58d8ac8e9cd0fc9b7",
+      "expected": "fd4474b90516197f3299e3288e506b62e1ff187ac1c13aa58d8ac8e9cd0fc9b7"
+    },
+    {
+      "name": "frozen source q106_nodes",
+      "status": "PASS",
+      "observed": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12",
+      "expected": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12"
+    },
+    {
+      "name": "frozen source q106_automorphisms",
+      "status": "PASS",
+      "observed": "70750da9596d05ebdfac55f8fa46893f469b163751529cb225b2abc19ce5966e",
+      "expected": "70750da9596d05ebdfac55f8fa46893f469b163751529cb225b2abc19ce5966e"
+    },
+    {
+      "name": "frozen source mrb04_result",
+      "status": "PASS",
+      "observed": "bf3c507dd77ee4d25f743164e8594295b03bb1ccef5e260a386df427d81c0c9b",
+      "expected": "bf3c507dd77ee4d25f743164e8594295b03bb1ccef5e260a386df427d81c0c9b"
+    },
+    {
+      "name": "frozen source pascal_fibonacci_mobius_archaeology",
+      "status": "PASS",
+      "observed": "9f3c63965c4f7c0bb81d12fbd7240049592045fc1d0107b7a6bc9bab4a238b8e",
+      "expected": "9f3c63965c4f7c0bb81d12fbd7240049592045fc1d0107b7a6bc9bab4a238b8e"
+    },
+    {
+      "name": "frozen source life06b_readme",
+      "status": "PASS",
+      "observed": "10d118d6660808d5143a09e7904ad03099f35c027dabc5eb9901c31dc8f5ed7b",
+      "expected": "10d118d6660808d5143a09e7904ad03099f35c027dabc5eb9901c31dc8f5ed7b"
+    },
+    {
+      "name": "frozen source q4_magic_square_instrument",
+      "status": "PASS",
+      "observed": "2a6b487171e2a0e8593696391a7d55c5907e6cdcd980ba46d643073ac25851e3",
+      "expected": "2a6b487171e2a0e8593696391a7d55c5907e6cdcd980ba46d643073ac25851e3"
+    },
+    {
+      "name": "frozen source mrb08_result",
+      "status": "PASS",
+      "observed": "17ba8bea8bb19bf8b9d776e43904608e7bbfca5a9f0198ca3debf12d79748295",
+      "expected": "17ba8bea8bb19bf8b9d776e43904608e7bbfca5a9f0198ca3debf12d79748295"
+    },
+    {
+      "name": "frozen source lissajous_mobius_result",
+      "status": "PASS",
+      "observed": "6ef488193f11771b0315c3c68741def357f7b4dd7419a0d5c5153489db41cb20",
+      "expected": "6ef488193f11771b0315c3c68741def357f7b4dd7419a0d5c5153489db41cb20"
+    },
+    {
+      "name": "frozen source hma01_visual_matrix",
+      "status": "PASS",
+      "observed": "cdfdf7df9647c7cdb882b8275c26035a81495b7e0e2f19651590226be088cc8f",
+      "expected": "cdfdf7df9647c7cdb882b8275c26035a81495b7e0e2f19651590226be088cc8f"
+    },
+    {
+      "name": "frozen source cheops_rath_visual",
+      "status": "PASS",
+      "observed": "b31008f1c18ccf8f19b028d2ac903915dc09c68b4959b7af208a7c8aec8069a7",
+      "expected": "b31008f1c18ccf8f19b028d2ac903915dc09c68b4959b7af208a7c8aec8069a7"
+    },
+    {
+      "name": "frozen source phi_fourier_source_inventory",
+      "status": "PASS",
+      "observed": "709523859d3034d5c3107dbde9cf03352c83a173c53422f980346934b2dd23cb",
+      "expected": "709523859d3034d5c3107dbde9cf03352c83a173c53422f980346934b2dd23cb"
+    },
+    {
+      "name": "frozen source desk10_1729_carrier_bridge",
+      "status": "PASS",
+      "observed": "cb72d33559c5c2e06486e86d42251e7b78fa03e2d17359795752920332bfc7b5",
+      "expected": "cb72d33559c5c2e06486e86d42251e7b78fa03e2d17359795752920332bfc7b5"
+    },
+    {
+      "name": "external module source thread_v_base20_projection",
+      "status": "PASS",
+      "observed": "dbfdc89af37f758e4e166aa71b9a9da882db032681e3126bc15f3f2b725b4c93",
+      "expected": "dbfdc89af37f758e4e166aa71b9a9da882db032681e3126bc15f3f2b725b4c93"
+    },
+    {
+      "name": "external module source codex_frame_alignment",
+      "status": "PASS",
+      "observed": "6bbaf263b06b32866e124b42bad7b8fe51c25fd1461dd7ff65ff2d65d68e89ac",
+      "expected": "6bbaf263b06b32866e124b42bad7b8fe51c25fd1461dd7ff65ff2d65d68e89ac"
+    },
+    {
+      "name": "external module source codex_energy_flow",
+      "status": "PASS",
+      "observed": "c25adc24311065cc9abf1eb0d512feb00e400d1fe38fe48d84941c836edfed0f",
+      "expected": "c25adc24311065cc9abf1eb0d512feb00e400d1fe38fe48d84941c836edfed0f"
+    },
+    {
+      "name": "external module source codex_trident",
+      "status": "PASS",
+      "observed": "4c4974b06a3d9a3769de13196e827d5499fee697b2ab57ffbad85949e5000dbd",
+      "expected": "4c4974b06a3d9a3769de13196e827d5499fee697b2ab57ffbad85949e5000dbd"
+    },
+    {
+      "name": "external module source codex_decoder_grid",
+      "status": "PASS",
+      "observed": "25f85aaf3284ac4a12592b961c98898c58a49c96069eef669a2c97804cfecd90",
+      "expected": "25f85aaf3284ac4a12592b961c98898c58a49c96069eef669a2c97804cfecd90"
+    },
+    {
+      "name": "external module source codex_prime_flake",
+      "status": "PASS",
+      "observed": "5bc06c14921204637e6de075f7697cdca8dece635ae48c15478950c32ea03eae",
+      "expected": "5bc06c14921204637e6de075f7697cdca8dece635ae48c15478950c32ea03eae"
+    },
+    {
+      "name": "external module source observer_rosetta_spiral_csv",
+      "status": "PASS",
+      "observed": "11d6bb217ced3a9d787365f96d32b46058db606b6218c82e9603f80055427168",
+      "expected": "11d6bb217ced3a9d787365f96d32b46058db606b6218c82e9603f80055427168"
+    },
+    {
+      "name": "external module source ucrt_trinary_readme",
+      "status": "PASS",
+      "observed": "40afbf7d122503a513e6f73050113bf8f7f7e8f8bbe1662d0468d8c9ce93e7d0",
+      "expected": "40afbf7d122503a513e6f73050113bf8f7f7e8f8bbe1662d0468d8c9ce93e7d0"
+    },
+    {
+      "name": "external module source ucrt_resonance_indices",
+      "status": "PASS",
+      "observed": "18ca47f2b3f0ade424fb68934631ccd10fe933826641cbd0737ddfe1ddb8cfad",
+      "expected": "18ca47f2b3f0ade424fb68934631ccd10fe933826641cbd0737ddfe1ddb8cfad"
+    },
+    {
+      "name": "external module source ucrt_vendissimal_pentagon",
+      "status": "PASS",
+      "observed": "b5ffe8227ea1e96f3bc17ebe536496398986d63d71750c12d81519e8d309d237",
+      "expected": "b5ffe8227ea1e96f3bc17ebe536496398986d63d71750c12d81519e8d309d237"
+    },
+    {
+      "name": "external module source ucrt_vendissimal_grid",
+      "status": "PASS",
+      "observed": "2f700d5dfd02847f8b579b412cbbb5b1f92404e8149ae98bbe7518dcb2488360",
+      "expected": "2f700d5dfd02847f8b579b412cbbb5b1f92404e8149ae98bbe7518dcb2488360"
+    },
+    {
+      "name": "external module source ucrt_unified_trinary_vendissimal",
+      "status": "PASS",
+      "observed": "df759c3f1bdcd453379676dddaa52b3a48ff911bdea6593a60af307a6775766f",
+      "expected": "df759c3f1bdcd453379676dddaa52b3a48ff911bdea6593a60af307a6775766f"
+    },
+    {
+      "name": "M1 29 is the tenth prime",
+      "status": "PASS",
+      "observed": 29,
+      "expected": 29
+    },
+    {
+      "name": "M1 41 is the thirteenth prime",
+      "status": "PASS",
+      "observed": 41,
+      "expected": 41
+    },
+    {
+      "name": "M1 base-13 reversal connects 41 to 29",
+      "status": "PASS",
+      "observed": {
+        "representation": "32",
+        "mirror_representation": "23",
+        "mirror_value": 29
+      },
+      "expected": {
+        "representation": "32",
+        "mirror_representation": "23",
+        "mirror_value": 29
+      }
+    },
+    {
+      "name": "M1 Euler run ends at n=40 and breaks at n=41",
+      "status": "PASS",
+      "observed": {
+        "n": 41,
+        "u": 40,
+        "value": 1681
+      },
+      "expected": {
+        "n": 41,
+        "u": 40,
+        "value": 1681
+      }
+    },
+    {
+      "name": "M2 declared X40 carrier has forty states",
+      "status": "PASS",
+      "observed": 40,
+      "expected": 40
+    },
+    {
+      "name": "M2 disjoint external controller produces 40+1 states",
+      "status": "PASS",
+      "observed": 41,
+      "expected": 41
+    },
+    {
+      "name": "M3 parent supplies the unique six-node residual",
+      "status": "PASS",
+      "observed": [
+        "A",
+        "S_01_00",
+        "S_01_01",
+        "S_01_02",
+        "S_01_03",
+        "S_01_04"
+      ],
+      "expected": "apex plus first seam ring"
+    },
+    {
+      "name": "M3 residual orbit classes are one fixed apex plus one five-ring",
+      "status": "PASS",
+      "observed": {
+        "fixed": [
+          "A"
+        ],
+        "fiber_sizes": [
+          1,
+          5
+        ]
+      },
+      "expected": {
+        "fixed": [
+          "A"
+        ],
+        "fiber_sizes": [
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "name": "M3 apex-versus-ring readout is D5 invariant and surjective",
+      "status": "PASS",
+      "observed": {
+        "D5_invariant": true,
+        "image": [
+          0,
+          1
+        ]
+      },
+      "expected": {
+        "D5_invariant": true,
+        "image": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "name": "M4 six D5-compatible added seam orbits remain",
+      "status": "PASS",
+      "observed": 6,
+      "expected": 6
+    },
+    {
+      "name": "M4 no D5-equivariant residual-node bijection selects the six invariant seam choices",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "M4 intrinsic Q106 H1 remains trivial",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "M5 Fibonacci Q fifth power and determinant",
+      "status": "PASS",
+      "observed": {
+        "Q5": [
+          [
+            8,
+            5
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "det": -1
+      },
+      "expected": {
+        "Q5": [
+          [
+            8,
+            5
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "det": -1
+      }
+    },
+    {
+      "name": "M5 thirteen-step Fibonacci rail can be indexed",
+      "status": "PASS",
+      "observed": [
+        1,
+        1,
+        2,
+        3,
+        5,
+        8,
+        13,
+        21,
+        34,
+        55,
+        89,
+        144,
+        233
+      ],
+      "expected": [
+        1,
+        1,
+        2,
+        3,
+        5,
+        8,
+        13,
+        21,
+        34,
+        55,
+        89,
+        144,
+        233
+      ]
+    },
+    {
+      "name": "M6 both plates have row column and diagonal sum 34",
+      "status": "PASS",
+      "observed": {
+        "Durer": {
+          "rows": [
+            34,
+            34,
+            34,
+            34
+          ],
+          "columns": [
+            34,
+            34,
+            34,
+            34
+          ],
+          "diagonals": [
+            34,
+            34
+          ]
+        },
+        "Khajuraho": {
+          "rows": [
+            34,
+            34,
+            34,
+            34
+          ],
+          "columns": [
+            34,
+            34,
+            34,
+            34
+          ],
+          "diagonals": [
+            34,
+            34
+          ]
+        }
+      },
+      "expected": "all sums 34"
+    },
+    {
+      "name": "M6 complement is realized by two distinct spatial operators",
+      "status": "PASS",
+      "observed": {
+        "Durer": "R180",
+        "Khajuraho": "T(2,2) toric"
+      },
+      "expected": {
+        "Durer": "R180",
+        "Khajuraho": "T(2,2) toric"
+      }
+    },
+    {
+      "name": "M8 MRB-08 keeps the 28 and 40 carriers in distinct dyadic families",
+      "status": "PASS",
+      "observed": {
+        "X28_family": "2^k*7",
+        "X40_family": "2^k*5"
+      },
+      "expected": {
+        "X28_family": "2^k*7",
+        "X40_family": "2^k*5"
+      }
+    },
+    {
+      "name": "M8 external-controller grammar gives 28+1 and 40+1 without carrier merger",
+      "status": "PASS",
+      "observed": {
+        "E28": 29,
+        "E40": 41,
+        "same_carrier": false
+      },
+      "expected": {
+        "E28": 29,
+        "E40": 41,
+        "same_carrier": false
+      }
+    },
+    {
+      "name": "M8 both ingress routes terminate at the integer 29",
+      "status": "PASS",
+      "observed": {
+        "from_E28": 29,
+        "from_E40_via_41_base13_reverse": 29
+      },
+      "expected": {
+        "from_E28": 29,
+        "from_E40_via_41_base13_reverse": 29
+      }
+    },
+    {
+      "name": "M8 verified C30 phase carrier projects to six equal address fibres",
+      "status": "PASS",
+      "observed": {
+        "C30_states": 30,
+        "C6_fibre_sizes": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      },
+      "expected": {
+        "C30_states": 30,
+        "C6_fibre_sizes": [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      }
+    },
+    {
+      "name": "M8 phase 29 advances to zero in C30",
+      "status": "PASS",
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "M8 six-address to six-seam pin assignment remains noncanonical",
+      "status": "PASS",
+      "observed": {
+        "candidate_bijections": 720,
+        "selected": null
+      },
+      "expected": {
+        "candidate_bijections": 720,
+        "selected": null
+      }
+    },
+    {
+      "name": "M8 common 10 20 30 40 synchronization cover is 120",
+      "status": "PASS",
+      "observed": 120,
+      "expected": 120
+    },
+    {
+      "name": "M9 square gap factors exactly as 41 times 20",
+      "status": "PASS",
+      "observed": {
+        "gap": 820,
+        "factorization": [
+          41,
+          20
+        ]
+      },
+      "expected": {
+        "gap": 820,
+        "factorization": [
+          41,
+          20
+        ]
+      }
+    },
+    {
+      "name": "M11 five source values decode to the displayed base-20 triples",
+      "status": "PASS",
+      "observed": {
+        "1729": [
+          4,
+          6,
+          9
+        ],
+        "417": [
+          1,
+          0,
+          17
+        ],
+        "1836": [
+          4,
+          11,
+          16
+        ],
+        "378": [
+          0,
+          18,
+          18
+        ],
+        "718": [
+          1,
+          15,
+          18
+        ]
+      },
+      "expected": {
+        "1729": [
+          4,
+          6,
+          9
+        ],
+        "417": [
+          1,
+          0,
+          17
+        ],
+        "1836": [
+          4,
+          11,
+          16
+        ],
+        "378": [
+          0,
+          18,
+          18
+        ],
+        "718": [
+          1,
+          15,
+          18
+        ]
+      }
+    },
+    {
+      "name": "M11 base-20 decoder round trips all five values",
+      "status": "PASS",
+      "observed": {
+        "1729": 1729,
+        "417": 417,
+        "1836": 1836,
+        "378": 378,
+        "718": 718
+      },
+      "expected": {
+        "1729": 1729,
+        "417": 417,
+        "1836": 1836,
+        "378": 378,
+        "718": 718
+      }
+    },
+    {
+      "name": "M11 affine display projection matches all five plotted coordinates",
+      "status": "PASS",
+      "observed": {
+        "1729": [
+          12.0,
+          4
+        ],
+        "417": [
+          17.0,
+          1
+        ],
+        "1836": [
+          21.5,
+          4
+        ],
+        "378": [
+          27.0,
+          0
+        ],
+        "718": [
+          25.5,
+          1
+        ]
+      },
+      "expected": {
+        "1729": [
+          12.0,
+          4
+        ],
+        "417": [
+          17.0,
+          1
+        ],
+        "1836": [
+          21.5,
+          4
+        ],
+        "378": [
+          27.0,
+          0
+        ],
+        "718": [
+          25.5,
+          1
+        ]
+      }
+    },
+    {
+      "name": "M11 projected horizontal coordinate is non-injective",
+      "status": "PASS",
+      "observed": {
+        "states": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "views": [
+          [
+            1.0,
+            0
+          ],
+          [
+            1.0,
+            0
+          ]
+        ]
+      },
+      "expected": {
+        "distinct_states": true,
+        "same_view": true
+      }
+    },
+    {
+      "name": "M11 recovered frame family is the 15-step progression from 1 through 121",
+      "status": "PASS",
+      "observed": [
+        1,
+        16,
+        31,
+        46,
+        61,
+        76,
+        91,
+        106,
+        121
+      ],
+      "expected": [
+        1,
+        16,
+        31,
+        46,
+        61,
+        76,
+        91,
+        106,
+        121
+      ]
+    },
+    {
+      "name": "M11 odd-eighth 3/8 axis is exactly 135 degrees",
+      "status": "PASS",
+      "observed": 135,
+      "expected": 135
+    },
+    {
+      "name": "M11 current Thread-V source matches the prior Science-Lab forensic hash",
+      "status": "PASS",
+      "observed": {
+        "inventory_rows": 1,
+        "inventory_hash": "dbfdc89af37f758e4e166aa71b9a9da882db032681e3126bc15f3f2b725b4c93",
+        "current_hash": "dbfdc89af37f758e4e166aa71b9a9da882db032681e3126bc15f3f2b725b4c93"
+      },
+      "expected": {
+        "inventory_rows": 1,
+        "inventory_hash_equals_current": true
+      }
+    },
+    {
+      "name": "M12 sources separately attest a five-state use and a base-20 use",
+      "status": "PASS",
+      "observed": {
+        "five_state_phrase": true,
+        "base20_layer_phrase": true,
+        "mod20_formula": true
+      },
+      "expected": {
+        "five_state_phrase": true,
+        "base20_layer_phrase": true,
+        "mod20_formula": true
+      }
+    },
+    {
+      "name": "M12 five-state alphabet is not the base-20 carrier",
+      "status": "PASS",
+      "observed": {
+        "V5_cardinality": 5,
+        "C20_cardinality": 20,
+        "identified": false
+      },
+      "expected": {
+        "V5_cardinality": 5,
+        "C20_cardinality": 20,
+        "identified": false
+      }
+    }
+  ],
+  "source_hashes_verified": {
+    "parent_result": "303e299694ebad23c422f2400532a521adc2e24a28686fc4a9d75cca162f6b0b",
+    "intrinsic_seam_result": "fd4474b90516197f3299e3288e506b62e1ff187ac1c13aa58d8ac8e9cd0fc9b7",
+    "q106_nodes": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12",
+    "q106_automorphisms": "70750da9596d05ebdfac55f8fa46893f469b163751529cb225b2abc19ce5966e",
+    "mrb04_result": "bf3c507dd77ee4d25f743164e8594295b03bb1ccef5e260a386df427d81c0c9b",
+    "pascal_fibonacci_mobius_archaeology": "9f3c63965c4f7c0bb81d12fbd7240049592045fc1d0107b7a6bc9bab4a238b8e",
+    "life06b_readme": "10d118d6660808d5143a09e7904ad03099f35c027dabc5eb9901c31dc8f5ed7b",
+    "q4_magic_square_instrument": "2a6b487171e2a0e8593696391a7d55c5907e6cdcd980ba46d643073ac25851e3",
+    "mrb08_result": "17ba8bea8bb19bf8b9d776e43904608e7bbfca5a9f0198ca3debf12d79748295",
+    "lissajous_mobius_result": "6ef488193f11771b0315c3c68741def357f7b4dd7419a0d5c5153489db41cb20",
+    "hma01_visual_matrix": "cdfdf7df9647c7cdb882b8275c26035a81495b7e0e2f19651590226be088cc8f",
+    "cheops_rath_visual": "b31008f1c18ccf8f19b028d2ac903915dc09c68b4959b7af208a7c8aec8069a7",
+    "phi_fourier_source_inventory": "709523859d3034d5c3107dbde9cf03352c83a173c53422f980346934b2dd23cb",
+    "desk10_1729_carrier_bridge": "cb72d33559c5c2e06486e86d42251e7b78fa03e2d17359795752920332bfc7b5"
+  },
+  "external_source_hashes_verified": {
+    "thread_v_base20_projection": "dbfdc89af37f758e4e166aa71b9a9da882db032681e3126bc15f3f2b725b4c93",
+    "codex_frame_alignment": "6bbaf263b06b32866e124b42bad7b8fe51c25fd1461dd7ff65ff2d65d68e89ac",
+    "codex_energy_flow": "c25adc24311065cc9abf1eb0d512feb00e400d1fe38fe48d84941c836edfed0f",
+    "codex_trident": "4c4974b06a3d9a3769de13196e827d5499fee697b2ab57ffbad85949e5000dbd",
+    "codex_decoder_grid": "25f85aaf3284ac4a12592b961c98898c58a49c96069eef669a2c97804cfecd90",
+    "codex_prime_flake": "5bc06c14921204637e6de075f7697cdca8dece635ae48c15478950c32ea03eae",
+    "observer_rosetta_spiral_csv": "11d6bb217ced3a9d787365f96d32b46058db606b6218c82e9603f80055427168",
+    "ucrt_trinary_readme": "40afbf7d122503a513e6f73050113bf8f7f7e8f8bbe1662d0468d8c9ce93e7d0",
+    "ucrt_resonance_indices": "18ca47f2b3f0ade424fb68934631ccd10fe933826641cbd0737ddfe1ddb8cfad",
+    "ucrt_vendissimal_pentagon": "b5ffe8227ea1e96f3bc17ebe536496398986d63d71750c12d81519e8d309d237",
+    "ucrt_vendissimal_grid": "2f700d5dfd02847f8b579b412cbbb5b1f92404e8149ae98bbe7518dcb2488360",
+    "ucrt_unified_trinary_vendissimal": "df759c3f1bdcd453379676dddaa52b3a48ff911bdea6593a60af307a6775766f"
+  },
+  "claim_boundary": [
+    "formal finite design validation and documentary archaeology only",
+    "no new Study, Run, evidence identity, Navigator identity, Family, PENT-08, or publication state",
+    "29 is the tenth prime and 41 is the thirteenth prime; the 29/41 bridge here is specifically the base-13 digit reversal 32_base13 to 23_base13",
+    "X40 disjoint-union {q} has cardinality 41, but q is a declared controller channel rather than a recovered carrier state",
+    "the apex-versus-ring quotient is a canonical D5-invariant binary readout of the unique six-node residual",
+    "that binary readout does not select one of six compatible added seams and does not select commuting versus dihedral Janus",
+    "Fibonacci and palette assignments are rail/display structure until a typed state map and transport law are supplied",
+    "the two magic-34 plates realize the same Q4 complement through different spatial operators",
+    "the 28+1 and 40+1 constructions reuse an external-controller grammar but do not identify X28 with X40",
+    "C30 supplies a six-address quotient via reduction modulo 6; the 720 possible seam pin assignments remain unselected",
+    "206^2-204^2=820=41*20 is exact arithmetic and does not validate the displayed angle, torsion, resonance or physical interpretation",
+    "the visual ledger preserves source intent and provenance but does not upgrade image labels into operators or evidence",
+    "the base-20 digit decoder is exact, while the plotted x+y/2 coordinate is a lossy display projection and cannot replace the digit state",
+    "the five-state alphabet and the base-20 carrier are distinct despite the shared legacy word vendissimal",
+    "no physical, biological, resonance, universal-law, or cross-domain identity claim"
+  ]
+}

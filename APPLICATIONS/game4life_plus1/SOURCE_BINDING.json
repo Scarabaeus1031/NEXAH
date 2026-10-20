@@ -1,0 +1,198 @@
+{
+  "schema": "nexah.game4life.source-binding.v1",
+  "application": "GAME 4 LIFE +1",
+  "custody": "10 NEXAH CORE/NEXAH/APPLICATIONS/game4life_plus1",
+  "identity_reuse": {
+    "study_id": "NEXAH_LIFE_BOUNDARY_CYLINDER_LIFE08_2026_10_11",
+    "a0_artifact_id": "ART:A0:MATHEMATICAL_JOINTS",
+    "navigator_lens_id": "NN:MRB_ACR_NCS_Q106_RETURN_CROSSWALK",
+    "pqb_type_control_id": "LIFE06D_PQB_CONJUGACY_IDENTIFIABILITY_AUDIT",
+    "builder_tool_id": "BT-044"
+  },
+  "application_role": "durable internal post-close instrument, non-evidentiary NCS view adapter and interactive P/B/Q Return teaching lens",
+  "ncs_source": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/NAVIGATION/EVIDENCE/MRB_ACR_NCS_Q106_RETURN_CROSSWALK_2026-10-11/MRB_ACR_NCS_Q106_RETURN_CROSSWALK_BINDER_V1_2026-10-11.json",
+  "source_authority": "Navigator binder supplies the bounded NCS reading contract; the closed LIFE08 package supplies the deterministic carrier and result authority",
+  "type_control": {
+    "source": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_LIFE_PQB_CONJUGACY_AUDIT_LIFE06D_2026-10-07/AUDIT_CONTRACT.json",
+    "use": "B is rendered as a derived binding record rather than an independent generator",
+    "non_identity": "The Game4Life NCS P/Q display is not identified with LIFE06D real scale conjugacy, integer realization or observation fibres."
+  },
+  "return_triplet_17_18_19": {
+    "authority": "HUMAN_OWNER_DECLARED_DISPLAY_GRAMMAR",
+    "small_schedule": [
+      { "value": 17, "symbol": "P", "role": "INPUT" },
+      { "value": 18, "symbol": "B", "role": "BINDER_MEDIATOR" },
+      { "value": 19, "symbol": "Q", "role": "OUTPUT" }
+    ],
+    "large_schedule_offset_24": [
+      { "value": 41, "role": "EULER" },
+      { "value": 42, "role": "MEDIATOR" },
+      { "value": 43, "role": "FIBONACCI" }
+    ],
+    "p17_tag": 29,
+    "b18_legacy_declared_tag": 36,
+    "q19_tag": "OPEN_NO_SOURCE_TAG",
+    "disposition": "17 to 29 remains the P declaration. The earlier 18 to 36 declaration remains B provenance and is not silently reassigned to Q19.",
+    "boundary": "The +24 crosswalk and P/B/Q role grammar are owner-declared display semantics, not a proved transport law."
+  },
+  "mediator_42_control": {
+    "authority": "EXACT_ARITHMETIC_WITH_SOURCE_BOUNDARY",
+    "source": "10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/PASCAL_FIBONACCI_MOBIUS_LEO_LILITH_ARCHAEOLOGY_2026-10-10/OPERATOR_ORDER_RETURN_ARCHAEOLOGY_ADDENDUM.md",
+    "carrier": "C6 x C7",
+    "exact": [
+      "gcd(6,7)=1",
+      "lcm(6,7)=6*7=42",
+      "6+7=13=p_6",
+      "T^13(0,0)=(1,6)",
+      "T^42(0,0)=(0,0)"
+    ],
+    "boundary": "42 is the joint return period; 13 is an additive prime-index readout. No causal prime-selection mechanism follows."
+  },
+  "double_mirror_bridge_7_17_24_42": {
+    "authority": "HUMAN_OWNER_DECLARED_DISPLAY_GRAMMAR_WITH_EXACT_ARITHMETIC_CONTROL",
+    "visual_reference_status": "OWNER_SUPPLIED_TRANSIENT_REFERENCE_NOT_CANONICAL_EVIDENCE",
+    "chain": [7, 17, 24, 42],
+    "exact_equations": [
+      "7+17=24",
+      "24+18=42",
+      "17+19=2*18",
+      "41+43=2*42",
+      "17+24=41",
+      "18+24=42",
+      "19+24=43",
+      "17*19=323"
+    ],
+    "reading": "The first reflection is 17-18-19 and the second is 41-42-43. Offset 24 maps the full first mirror to the second. The additive bridge reaches 24 from 7 and 17, then reaches 42 from 24 and the first mirror center 18.",
+    "identity_effect": "REUSES_NN_MRB_ACR_NCS_Q106_RETURN_CROSSWALK_NO_NEW_IDENTITY_OR_RELATION",
+    "boundary": "Exact arithmetic and reflection symmetry only. Double mirror is a display name, not a physical mechanism or proved canonical NCS transport."
+  },
+  "distribution_40_43": {
+    "authority": "HUMAN_OWNER_DECLARED_DISPLAY_SEMANTICS",
+    "schedule": [
+      { "value": 40, "role": "MEDIATOR", "status": "X40_CARRIER_BOUNDARY" },
+      { "value": 41, "role": "EULER", "status": "SOURCE_BACKED_MRB04_BOUNDARY" },
+      { "value": 42, "role": "MEDIATOR", "status": "DECLARED_TRANSFER_POSITION" },
+      { "value": 43, "role": "FIBONACCI", "status": "DECLARED_RAIL_DISPLAY" }
+    ],
+    "euler_source": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/EULER41_RESIDUAL_SWITCH_AUDIT_2026-10-11/RESULT.json",
+    "boundary": "41/Euler is source-backed; 43/Fibonacci and the two mediator assignments are display roles. No typed Fibonacci-to-X40 transport is asserted."
+  },
+  "root_seed_gate": {
+    "authority": "FORMAL_LOCAL_DERIVATION_PLUS_HUMAN_OWNER_PROPOSED_BRIDGE",
+    "identity_effect": "REUSES_NN_CROSSWALK_A0_BL_052_AND_CRT_11357_AUDIT_NO_NEW_IDENTITY",
+    "supported_sources": [
+      "00 EXECUTIVE/NEXAH-Mission-Control/00_LAB_RESEARCH_DIRECTOR_DESK/RETURN_2026-10-11_A0_BL_052_PASCAL_QUATERNION_FOUR_CHANNEL_RESULT.md",
+      "00 EXECUTIVE/NEXAH-Mission-Control/REVIEWS/DESK10_INCOMING_AUDITS_2026-09-01/CRT_11357_AUDIT/04_REPRODUCIBILITY_REPORT.md",
+      "00 EXECUTIVE/NEXAH-Mission-Control/REVIEWS/DESK10_INCOMING_AUDITS_2026-09-01/CRT_11357_AUDIT/03_CLAIMS_EVIDENCE_MATRIX.md"
+    ],
+    "verified_identities": [
+      "q=1+i+j+k; q^3=-8; q^4=-8q",
+      "sqrt(i)=(1+i)/sqrt(2); sqrt(i)^2=i; sqrt(2)*sqrt(i)=1+i",
+      "two equal-valued Fibonacci seeds remain distinct when their ordered addresses are retained"
+    ],
+    "status": "PASS_FORMAL_IDENTITIES_ADDRESS_SEPARATION_TRANSPORT_OPEN",
+    "boundary": "The gate does not make 1 prime, assert Fibonacci-to-X40 transport, or revive unsupported Mobius, biological or physical mechanism claims."
+  },
+  "logarithmic_gearbox": {
+    "authority": "EXACT_LOCAL_DERIVATION_PLUS_HUMAN_OWNER_DECLARED_INTERFACE_SEMANTICS",
+    "identity_effect": "REUSES_EXISTING_NAVIGATOR_LENS_NO_NEW_IDENTITY_OR_RELATION",
+    "visual_reference_status": "OWNER_SUPPLIED_VIDEO_TRANSCRIPT_AND_SCREENSHOT_NOT_CANONICAL_EVIDENCE",
+    "sources": [
+      "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/NAVIGATION/EVIDENCE/UNIFIED_TRANSITION_GEOMETRY_2026-10-06/ENVELOPE_ARCHAEOLOGY_AND_UTG_TYPING_2026-10-06.md",
+      "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_ROOT7_EULER_MIRROR_CONCORDANCE_INTAKE_2026-09-28/46_64_37_NEXUS_SELECTOR_01_RESULT_REPORT.md",
+      "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/ORI°N_MATH THE MATH_LAB REPORT/LAB MATH THE MATH _ COVER_Master/ORION_TECHNICAL_LAB_REPORT.md",
+      "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_PRIMEGRID_BLOCK02B_TRINARY_PASCAL_ANTIPODE_2026-10-07/NEXAH_PRIMEGRID_BLOCK02B_TRINARY_PASCAL_ANTIPODE_LAB.html",
+      "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_PRIMEGRID_BLOCK02B_TRINARY_PASCAL_ANTIPODE_2026-10-07/02_101_O8_PASCAL_BRIDGE_ADDENDUM.md",
+      "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_ROOT7_CUSTODY_2026-09-28/NEXAH_ROOT7_DELTA_INTAKT_SEIT_PRUEFPUNKT_19_2026-09-28/02_Neue_Pruefvisuals/NEXAH_X_XI_XII_HINGE_101_404_KORRIGIERT_2026-09-28.svg",
+      "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_ROOT7_CUSTODY_2026-09-28/NEXAH_ROOT7_DELTA_INTAKT_SEIT_PRUEFPUNKT_19_2026-09-28/02_Neue_Pruefvisuals/NEXAH_96_103_ZWEI_ACHSEN_PRUEFUNG_2026-09-28.svg",
+      "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT_2026-10-11/CONTRACT.json"
+    ],
+    "navigator_connections": {
+      "status": "SOURCE_BOUND_DISCOVERABILITY_LINKS_NO_NEW_CANONICAL_RELATION",
+      "reused_nodes": [
+        "NN:MRB_ACR_NCS_Q106_RETURN_CROSSWALK",
+        "ART:NUMBER:PRIMEGRID_BLOCK02B_TRINARY_ANTIPODE"
+      ],
+      "typed_route": [
+        "GAME 4 LIFE +1 logarithmic gearbox / zero-insertion projection",
+        "PrimeGrid Block 2B typed number handles and P21-to-P26 page approach",
+        "Root7 XI-hinge and two-axis verification visuals",
+        "Q106 prime-index / radix audit Base-50 mirror control"
+      ],
+      "shared_handles": [
+        "101 is both P26 and a_1 in the declared zero-insertion sequence",
+        "97-99-101 is the XI hinge; 97-100-103 is the distinct Janus axis",
+        "J_50 pairs 53 and 97 around fixed point 75"
+      ],
+      "type_boundary": "Shared numeric values provide navigation handles only. Prime index, decimal insertion, selected doubling channel and Base-50 reflection remain distinct typed relations."
+    },
+    "life_clock_coupling": {
+      "status": "ACTIVE_VIEW_ADAPTER_NO_DYNAMICS_EFFECT",
+      "source_signal": "lifecrystal:render.detail.generation",
+      "projection": "n = g mod 8; zeroCount = n; axis = hinge for even g and janus for odd g; k = g mod 6; prime = P_(21+k); c_k = 101*2^k",
+      "prime_channel_projection": "73,79,83,89,97,101 and 101,202,404,808,1616,3232 advance on the same k=g mod 6 address; the Base-50 mirror lane is a view gate only when prime=97 at k=4",
+      "inverse_status": "NON_INJECTIVE_PHASE_PROJECTION",
+      "information_loss": "The absolute generation collapses to an eight-phase address; axis parity is already contained in that address.",
+      "manual_mode": "Disabling Follow Life clock detaches the projection until explicitly re-enabled.",
+      "boundary": "This adapter controls the logarithmic gearbox view only. It does not modify the Life state, B3/S23 update, boundary operator, seed or history."
+    },
+    "three_domain_euler_view": {
+      "status": "ACTIVE_SHARED_READOUT_NO_FOURTH_DOMAIN_OPERATOR",
+      "surface": "three-domain-transition-test/index.html#eulerMotor",
+      "source_signal": "threedomain:render.detail",
+      "reused_identity": "ART:A0:MATHEMATICAL_JOINTS",
+      "phasor_map": "z_d = (C11-C00)/N + i(C01-C10)/N for each domain d",
+      "aggregate": "Z_bar = (z_chemistry + z_life + z_physics)/3",
+      "clock_projection": "n = g mod 8; zeroCount = n; axis = hinge for even g and janus for odd g; prime/channel address k = g mod 6",
+      "identity_effect": "EXTENDS_EXISTING_WINDOW_03_INSTRUMENT_AND_GAME4LIFE_GEARBOX_NO_NEW_NODE_OR_RELATION",
+      "boundary": "Euler View compares three normalized transition ledgers in one complex coordinate plane. It is not a fourth scientific domain, shared operator, causal mechanism, empirical law, Study result or canonical Navigator relation."
+    },
+    "exact_identities": [
+      "G_n=r^n; n=log_r(G_n); n->n+1 iff G_n->r*G_n",
+      "r^0=1 and r^n*r^(-n)=1 for r>0",
+      "pi=e^(ln pi); phi=e^(ln phi); sqrt(2)=e^(ln sqrt(2))",
+      "(1-10^-7)^(10^7) approximates e^-1",
+      "a_n=10^(n+1)+1 for n inserted zeros; a_(n+1)=10*a_n-9",
+      "a_7=10^8+1=100000001",
+      "next_prime(99)=101 and the bounded 97-99-101 prime hinge terminates at 101",
+      "97 and 101 are symmetric around 99; 97 and 103 are symmetric around 100",
+      "97, 101 and 103 are consecutive primes with gaps 4 and 2",
+      "J_50(x)=150-x pairs 53 with 97 and fixes 75"
+    ],
+    "declared_semantics": [
+      "B names the 0-to-1 keystone",
+      "P and Q name the positive and negative reciprocal mirror addresses"
+    ],
+    "boundary": "Exact progression, logarithm, reciprocal, finite-limit, zero-insertion, local prime-center and Base-50 mirror identities are mathematical controls. The Life-clock and Three-Domain clock maps are non-injective view projections and do not alter their source dynamics. The Euler complex-plane layer is a normalized ledger readout, not a fourth domain or shared mechanism. The 101/404 channel is a selected scaling convention and is not forced by the prime gap. Shared values connect Navigator views but do not identify their operators or carriers. The 97-101 and 109-111 strips are ordinary decimal place-value windows; visual symmetry around powers of ten does not imply symmetric factor behavior. P/B/Q naming is interface semantics, not a physical, biological or canonical NCS mechanism. A geometric progression alone is not a logarithmic spiral without an angle-to-radius map."
+  },
+  "temporal_z_cylinder": {
+    "status": "ACTIVE_POST_CLOSE_VIEW_ADAPTER_NON_EVIDENTIARY",
+    "surface": "index.html#boundaryWindowTitle",
+    "source_signal": "lifecrystal:render.detail",
+    "coordinate_contract": "theta = wrapped lattice coordinate; radius = remaining lattice coordinate; world Z = discrete generation",
+    "continuity_contract": "same native x,y address across adjacent discrete generations only",
+    "animation_contract": "moving sweep is visual interpolation and is not an intermediate Life state",
+    "export_contract": "GLB extras retain axis semantics, address sources, generation interval, boundary, projection_only and rule_unchanged",
+    "identity_effect": "REUSES_LIFE08_AND_GAME_4_LIFE_PLUS_1_NO_NEW_NODE_OR_RELATION",
+    "boundary": "The adapter changes neither B3/S23 nor the boundary operator, seed, trajectory, closed result or claim ceiling."
+  },
+  "claim_boundary": [
+    "no new LIFE rule",
+    "no Study reopen",
+    "no operator-equivariant Pascal-C3 to NCS-P4 adapter",
+    "no Q106 binding without X20 adjacency",
+    "no typed Fibonacci-to-X40 transport from the 40-43 display",
+    "no source tag inferred for Q19 and no silent reassignment of the earlier 18-to-36 declaration",
+    "no causal prime-selection mechanism inferred from 6+7=13=p_6",
+    "no physical mechanism or canonical transport inferred from the 7-17-24-42 double-mirror display",
+    "no inference that 1 is prime or that address separation changes primality",
+    "no Mobius or physical mechanism from repeated sqrt(i)",
+    "no logarithmic spiral inferred from a geometric progression alone",
+    "no symmetric factor behavior inferred from decimal symmetry around powers of ten",
+    "no fourth scientific domain or shared cross-domain mechanism inferred from the Euler View",
+    "no biological or physical mechanism",
+    "not public"
+  ],
+  "canonical_count_effect": "NONE",
+  "publication_authorized": false
+}

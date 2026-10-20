@@ -1,0 +1,134 @@
+{
+  "schema": "nexah.ncs-snc-292-929-order-envelope-return-result/1.0.0",
+  "date": "2026-10-11",
+  "status": "PASS_WITH_BOUNDARIES",
+  "classification": "PASS_TWO_ORDER_CLASSES_WITH_OPEN_HISTORICAL_BINDING",
+  "identity_reused": "A0OE:PASCAL_PENTAGON_D5_TEST",
+  "creates": [],
+  "summary": {
+    "checks_passed": 21,
+    "checks_total": 21,
+    "operator_words": ["NSC", "NCS", "SNC", "SCN", "CNS", "CSN"],
+    "distinct_order_classes": 2,
+    "order_classes": [
+      ["CNS", "NCS", "NSC"],
+      ["CSN", "SCN", "SNC"]
+    ],
+    "ncs_snc_different_states": 40,
+    "w20_node_count": 5,
+    "w20_weight_each": 20,
+    "w20_weighted_subtotal": 100,
+    "historical_ncs_decomposition_recovered": null,
+    "address_to_x40_map": null,
+    "x16_action": null
+  },
+  "module_1_typed_registers": {
+    "292_palindrome": true,
+    "929_palindrome": true,
+    "929_prime": true,
+    "929_prime_index": 158,
+    "2929_factors": [29, 101],
+    "29_prime_index": 10,
+    "101_prime_index": 26,
+    "2929_reverse": 9292,
+    "wobble_exact": "1069/365",
+    "wobble_decimal": 2.9287671232876713,
+    "distance_to_2_929": 0.00023287671232852247,
+    "171929_929171_reversal_pair": true,
+    "171929_prime": true,
+    "929171_prime": true,
+    "179129_factors": [17, 41, 257]
+  },
+  "module_2_w20": {
+    "indices": [83, 88, 93, 98, 103],
+    "node_ids": [
+      "I_00_06_03",
+      "I_01_06_03",
+      "I_02_06_03",
+      "I_03_06_03",
+      "I_04_06_03"
+    ],
+    "d5_orbit": [83, 88, 93, 98, 103],
+    "internal_edges": 0,
+    "incoming_per_node": {"83": 2, "88": 2, "93": 2, "98": 2, "103": 2},
+    "outgoing_edges": 0,
+    "weighted_subtotal": 100
+  },
+  "module_3_order_scan": {
+    "carrier": "X40 = C5 x P4 x C2",
+    "word_execution": "left-to-right",
+    "declared_candidate_operators": {
+      "N": "r(s,p,e)=(s+1 mod 5,p,e)",
+      "S": "Jd(s,p,e)=(-s mod 5,p,1-e)",
+      "C": "Jc(s,p,e)=(s,p,1-e)"
+    },
+    "classes": [
+      ["CNS", "NCS", "NSC"],
+      ["CSN", "SCN", "SNC"]
+    ],
+    "ncs_snc_different_states": 40
+  },
+  "module_4_envelope": {
+    "ALGO": {
+      "same_for_all_orders": true,
+      "fixed_ratio": "8/40 = 1/5",
+      "moved_ratio": "32/40 = 4/5",
+      "package_preservation_ratio": "40/40",
+      "layer_preservation_ratio": "40/40"
+    },
+    "OLGO": {
+      "same_mirror_law_for_all_orders": true,
+      "law": "f N f = N^-1",
+      "distinct_reflection_axes": [[2], [3]],
+      "class_axis_map": {
+        "CNS|NCS|NSC": [2],
+        "CSN|SCN|SNC": [3]
+      }
+    },
+    "OKO": {
+      "same_for_all_orders": true,
+      "cycle_profile": {"1": 8, "2": 16},
+      "permutation_order": 2,
+      "one_pass_exact_all_states": false,
+      "two_pass_exact_all_states": true
+    },
+    "interpretation": "Within the declared candidate algebra, operator order changes the mirror-axis placement but not the ALGO proportions or the OKO return topology."
+  },
+  "module_5_operator_16": {
+    "meaning": "typed composition record of ALGO, OLGO and OKO measurements; not sixteen component operators",
+    "record_count": 6,
+    "x16_cardinality": 16,
+    "x16_action": null
+  },
+  "ilau": {
+    "retained": [
+      "package coordinate",
+      "layer coordinate after the full three-operator word",
+      "1/5 fixed-state ratio",
+      "4/5 moved-state ratio",
+      "reflection conjugacy",
+      "two-pass exact return",
+      "W20 D5 orbit and weight"
+    ],
+    "lost": [],
+    "introduced": [
+      "declared N/S/C short names for the parent finite maps",
+      "ALGO/OLGO/OKO measurement-role crosswalk"
+    ],
+    "unresolved": [
+      "historical meaning of NCS letters",
+      "292/929 address map into X40",
+      "action on the separate sixteen-state carrier",
+      "canonical Operator identity"
+    ]
+  },
+  "claim_boundary": [
+    "formal finite design validation only; not an admitted Study, Lab activation or new Navigator identity",
+    "ALGO, OLGO and OKO are measurement roles in this package, not newly canonicalized Operators",
+    "Operator 16 is the composed measurement stack, not evidence for sixteen component operators",
+    "the 2^4 sixteen-state register remains a separate unmapped carrier",
+    "the W20 object contains five nodes of weight 20; it is not a five-by-twenty node block system",
+    "Möbius means one-pass orientation change with exact two-pass return only within the declared finite model",
+    "no physical, neutrino, temperature, prime-selector, universal-constant or publication claim"
+  ]
+}

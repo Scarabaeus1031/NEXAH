@@ -1,0 +1,410 @@
+{
+  "status": "PASS_CONDITIONAL_C30_COUNTERSTEP_WITH_P4_WOBBLE_TYPE_GATE",
+  "classification": "OWNER_DECLARED_17_29_18_36_PAIR_FORMS_OPPOSITE_ORDER5_C30_STEPS_AND_CONDITIONAL_P4_TAG",
+  "checks": {
+    "passed": 38,
+    "total": 38
+  },
+  "c30_c5_result": {
+    "P_transition": "17→29",
+    "Q_transition": "18→36",
+    "increments_C30": {
+      "P": 12,
+      "Q": 18
+    },
+    "opposite_relation": "18≡−12 mod 30",
+    "orders_in_C30": {
+      "12": 5,
+      "18": 5
+    },
+    "embedded_C5_steps": {
+      "P": 2,
+      "Q": -2
+    },
+    "mirror_rows": [
+      {
+        "time": 0,
+        "P_value": 17,
+        "Q_value": 18,
+        "P_signed_C5_state": 2,
+        "Q_signed_C5_state": 3,
+        "shared_display_index_under_numeric_address_convention": 2
+      },
+      {
+        "time": 1,
+        "P_value": 29,
+        "Q_value": 36,
+        "P_signed_C5_state": 4,
+        "Q_signed_C5_state": 1,
+        "shared_display_index_under_numeric_address_convention": 4
+      }
+    ],
+    "same_index_mirror_compatible": true,
+    "counterrotation_compatible": true
+  },
+  "phase_chart_gate": {
+    "charts_compatible_with_mirror_pairs_alone": 5,
+    "conditional_numeric_address_convention": "P(n)=n mod 5; Q(n)=−n mod 5",
+    "selected_chart_under_numeric_address_convention": 0,
+    "historical_phase_chart": null,
+    "chart_tests": [
+      {
+        "k": 0,
+        "same_index_pairs": true,
+        "numeric_address_exact": true
+      },
+      {
+        "k": 1,
+        "same_index_pairs": true,
+        "numeric_address_exact": false
+      },
+      {
+        "k": 2,
+        "same_index_pairs": true,
+        "numeric_address_exact": false
+      },
+      {
+        "k": 3,
+        "same_index_pairs": true,
+        "numeric_address_exact": false
+      },
+      {
+        "k": 4,
+        "same_index_pairs": true,
+        "numeric_address_exact": false
+      }
+    ]
+  },
+  "wobble_gate": {
+    "period": 4,
+    "full_phase_tag": {
+      "definition": "p=t mod 4",
+      "values": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3
+      },
+      "is_exact_P4_coordinate": true,
+      "closes_parent_four_state_bead_fibre": true,
+      "residual_bits": 2
+    },
+    "pulse_only": {
+      "definition": "w=1 iff t mod 4=0",
+      "values": {
+        "0": 1,
+        "1": 0,
+        "2": 0,
+        "3": 0
+      },
+      "fibre_profile": {
+        "1": 1,
+        "3": 1
+      },
+      "is_exact_P4_coordinate": false,
+      "closes_parent_four_state_bead_fibre": false
+    },
+    "anchor_numeric_residues_mod4": {
+      "P17": 1,
+      "P29": 1,
+      "Q18": 2,
+      "Q36": 0
+    },
+    "source_semantics_selected": null
+  },
+  "number_facts": {
+    "29_prime_index": 10,
+    "18": "3×6",
+    "36": [
+      "6×6",
+      "2²×3²",
+      "2×18"
+    ]
+  },
+  "maps": {
+    "x20_adjacency": null,
+    "glb_wobble_to_p4": null,
+    "typed_x20_to_q106_intertwiner": null,
+    "historical_clockwork_encoding": null
+  },
+  "sources": [
+    {
+      "name": "owner_contract",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/PQ_17_18_COUNTERROTATION_SELECTOR_AUDIT_2026-10-12/CLOCKWORK_BEAD_X40_P4_RESIDUAL_RETURN_AUDIT_2026-10-12/PQ_17_29_18_36_C30_P4_WOBBLE_AUDIT_2026-10-12/OWNER_CONTRACT.json",
+      "sha256": "54a6a5dd49bde2154d151ea93eccf02153f8980579d7529c8197863775a4ee66"
+    },
+    {
+      "name": "bead_x40_result",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/PQ_17_18_COUNTERROTATION_SELECTOR_AUDIT_2026-10-12/CLOCKWORK_BEAD_X40_P4_RESIDUAL_RETURN_AUDIT_2026-10-12/RESULT.json",
+      "sha256": "91b946ee5d8750639d7639f8f2b04cf93d46057b4afeb1db7c80d152f8d2d59a"
+    }
+  ],
+  "claim_boundary": "Owner-declared finite arithmetic/address audit only. The number pairs are exactly compatible with opposite order-five C30/C5 steps. The full mod-4 phase tag would close P4, but a binary every-four pulse would not; the source semantics remain unselected. Phase k=0 is selected only under the explicit numeric-address convention. No historical encoding, GLB wobble-to-P4 map, X20 adjacency, Q106 intertwiner, physical mechanism, A0 evidence promotion, Study admission or publication authority follows.",
+  "checks_detail": [
+    {
+      "name": "source exists: owner_contract",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/PQ_17_18_COUNTERROTATION_SELECTOR_AUDIT_2026-10-12/CLOCKWORK_BEAD_X40_P4_RESIDUAL_RETURN_AUDIT_2026-10-12/PQ_17_29_18_36_C30_P4_WOBBLE_AUDIT_2026-10-12/OWNER_CONTRACT.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: bead_x40_result",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/PQ_17_18_COUNTERROTATION_SELECTOR_AUDIT_2026-10-12/CLOCKWORK_BEAD_X40_P4_RESIDUAL_RETURN_AUDIT_2026-10-12/RESULT.json",
+      "expected": "file"
+    },
+    {
+      "name": "Owner authority class retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "parent X40 carrier retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "parent five-chart ambiguity retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "parent four-state P4 fibre retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Owner numeric anchors retained",
+      "passed": true,
+      "observed": [
+        17,
+        29,
+        18,
+        36
+      ],
+      "expected": [
+        17,
+        29,
+        18,
+        36
+      ]
+    },
+    {
+      "name": "29 is the tenth prime",
+      "passed": true,
+      "observed": 29,
+      "expected": 29
+    },
+    {
+      "name": "18 equals 3×6",
+      "passed": true,
+      "observed": 18,
+      "expected": 18
+    },
+    {
+      "name": "36 equals 6×6",
+      "passed": true,
+      "observed": 36,
+      "expected": 36
+    },
+    {
+      "name": "36 equals 2²×3²",
+      "passed": true,
+      "observed": 36,
+      "expected": 36
+    },
+    {
+      "name": "36 is twice 18",
+      "passed": true,
+      "observed": 36,
+      "expected": 36
+    },
+    {
+      "name": "branch increments are 12 and 18",
+      "passed": true,
+      "observed": [
+        12,
+        18
+      ],
+      "expected": [
+        12,
+        18
+      ]
+    },
+    {
+      "name": "increments close one C30 cycle",
+      "passed": true,
+      "observed": 30,
+      "expected": 30
+    },
+    {
+      "name": "increments are opposite in C30",
+      "passed": true,
+      "observed": 18,
+      "expected": 18
+    },
+    {
+      "name": "increments lie in embedded 6·C5",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "C5 steps are +2 and −2",
+      "passed": true,
+      "observed": [
+        2,
+        3
+      ],
+      "expected": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "C5 branch steps counter-rotate",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "both C30 increments generate five-state orbits",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "+2 is a C5 generator",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "−2 is a C5 generator",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "time 0 P/Q values are additive inverses in C5",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "time 0 numeric convention gives same-index mirror beads",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "time 1 P/Q values are additive inverses in C5",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "time 1 numeric convention gives same-index mirror beads",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "P display advances +2",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Q signed state advances −2",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "mirror pairs alone preserve all five phase charts",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "numeric-address convention conditionally selects k=0",
+      "passed": true,
+      "observed": [
+        0
+      ],
+      "expected": [
+        0
+      ]
+    },
+    {
+      "name": "Owner wobble period is four",
+      "passed": true,
+      "observed": 4,
+      "expected": 4
+    },
+    {
+      "name": "full residue tag represents all four P4 states",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "full residue tag gives exact P4 Return",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "binary every-four pulse has 1/3 fibre profile",
+      "passed": true,
+      "observed": {
+        "1": 1,
+        "3": 1
+      },
+      "expected": {
+        "1": 1,
+        "3": 1
+      }
+    },
+    {
+      "name": "binary pulse carries only two labels",
+      "passed": true,
+      "observed": 2,
+      "expected": 2
+    },
+    {
+      "name": "binary pulse cannot invert P4",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "anchor residues mod 4 recorded",
+      "passed": true,
+      "observed": {
+        "P17": 1,
+        "P29": 1,
+        "Q18": 2,
+        "Q36": 0
+      },
+      "expected": null
+    },
+    {
+      "name": "P increment preserves numeric P4 residue",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Q increment shifts numeric P4 residue by two",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    }
+  ]
+}

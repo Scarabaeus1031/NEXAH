@@ -1,0 +1,60 @@
+{
+  "contract_id": "A0-Q106:SQUARE_INDEX_PRIME_READOUT_AUDIT:V1",
+  "date": "2026-10-11",
+  "status": "OWNER_AUTHORIZED_BOUNDED_FORMAL_AUDIT",
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "carrier": "SCC-003 / Q106",
+    "parent_contract": "A0-BL-023:Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT:V1",
+    "creates": []
+  },
+  "question": "Does the frozen Q106 readout (F,O,L)=(9,16,25) form the exact 3-4-5 square triple, and does the standard one-based prime-index lift P_square(n)=p_(n^2) give an exact typed closure back to Q106 without implying a 53-node D5-invariant subcarrier?",
+  "modules": [
+    "M1_FROZEN_SOURCE_INTEGRITY",
+    "M2_Q106_SQUARE_READOUT",
+    "M3_SQUARE_INDEX_PRIME_LIFT",
+    "M4_Q106_C_CLOSURE",
+    "M5_TYPE_SEPARATION_CONTROLS",
+    "M6_D5_INVARIANT_53_NEGATIVE_CONTROL",
+    "M7_CONSECUTIVE_ROOT_UNIQUENESS_CONTROL"
+  ],
+  "frozen_sources": {
+    "pent04_result": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_3D_LIFT_TEST_2026-10-10/RESULT.json",
+      "sha256": "ed8173444e28fbb1f70e76dcb7f3997c6d3141259e76fcdb50f27098664b39cc"
+    },
+    "q106_prime_result": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "330bc8a1b9b9a29bde53e77c43088b8487992252a86e63fdcee7701479d363d1"
+    },
+    "square_prime_result": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT_2026-10-11/LEO_LILITH_3_2_ROOT_PAIR_CONNECTOR_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "47db2d4c60fa5633bc7f216ca1f27ba90abe2a30fd3c43a842656f89abb0ccf4"
+    }
+  },
+  "declared_tests": {
+    "carrier": "PENT-04 projects each hemisphere to the frozen 106-node carrier",
+    "square_readout": "(F,O,L)=(9,16,25)=(3^2,4^2,5^2) and F+O=L",
+    "double_square": "16=(2^2)^2=2^(2^2)=4^2",
+    "prime_lift": "P_square(n)=p_(n^2), n in {3,4,5}, gives (23,53,97)",
+    "closure": "p25-p16=44=4*p5; 106-p25=9; 44+9=p16; 106=2*p16",
+    "ladder": "p1+p4=9, p4+p9=30, p9+p16=76, p16+p25=150",
+    "type_control": "p_(n^2) is not (p_n)^2 and (23,53,97) is not a Pythagorean value triple",
+    "subcarrier_control": "no union of the frozen D5 orbit profile 1^1 5^9 10^6 has cardinality 53",
+    "uniqueness_control": "3 is the unique positive a<=10000 satisfying a^2+(a+1)^2=(a+2)^2"
+  },
+  "outcomes": [
+    "PASS_EXACT_SQUARE_INDEX_PRIME_READOUT_WITH_NO_D5_INVARIANT_53_SUBCARRIER",
+    "FAIL_ARITHMETIC_OR_SOURCE_INTEGRITY",
+    "CONTRACT_INVALID"
+  ],
+  "stop_rule": "Stop before treating the readout as a node embedding, asserting a prime-valued Pythagorean triple, introducing a new Prime Pascal Pyramid identity, or claiming an infinite prime law, physical mechanism, resonance or publication result.",
+  "claim_boundary": [
+    "exact finite arithmetic on frozen PENT-04 and Q106 records",
+    "P_square(n)=p_(n^2) is a prime-at-square-index readout, not a squared-prime operator",
+    "the 3-4-5 relation lives in the index/readout layer; the prime values 23,53,97 do not form a Pythagorean triple",
+    "53 is an exact readout value but no D5-invariant 53-node subcarrier exists",
+    "no adjacency-preserving prime-to-node embedding is established",
+    "no new Study, PENT layer, Family, Navigator identity, physical claim or publication authority"
+  ]
+}

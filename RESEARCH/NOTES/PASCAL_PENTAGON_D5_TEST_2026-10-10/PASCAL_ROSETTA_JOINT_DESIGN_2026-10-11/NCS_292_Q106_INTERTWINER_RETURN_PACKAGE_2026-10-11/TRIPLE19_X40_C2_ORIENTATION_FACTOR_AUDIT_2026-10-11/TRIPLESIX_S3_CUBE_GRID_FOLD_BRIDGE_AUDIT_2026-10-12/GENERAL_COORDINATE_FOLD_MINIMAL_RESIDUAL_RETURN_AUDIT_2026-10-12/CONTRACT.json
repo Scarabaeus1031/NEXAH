@@ -1,0 +1,50 @@
+{
+  "schema": "nexah.formal-design-audit-contract/1.0.0",
+  "contract_id": "A0-BL-025:GENERAL_COORDINATE_FOLD_MINIMAL_RESIDUAL_RETURN_AUDIT:V1",
+  "title": "General coordinate-fold fibre profile and minimal residual Return audit",
+  "status": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_NEW_STUDY",
+  "identity": {
+    "extends": "A0-BL-023:TRIPLESIX_S3_CUBE_GRID_FOLD_BRIDGE_AUDIT:V1",
+    "reuses": [
+      "ART:A0:MATHEMATICAL_JOINTS",
+      "NN:MRB_ACR_NCS_Q106_RETURN_CROSSWALK",
+      "F-A0-14",
+      "A0-BL-025"
+    ],
+    "creates": []
+  },
+  "question": "For the coordinatewise fold from 2m addresses to 2m-1 addresses in dimension d, what is the exact fibre profile and what residual information is necessary and sufficient for exact Return?",
+  "authority_boundary": "Internal bounded formal-design evidence only. This audit proves the finite coordinate-fold and Return statements it explicitly defines. It does not recover a historical visual generator, establish a physical cube or channel mechanism, complete the full Grid-Fold-Channel specification, admit A0-BL-025 as a Study, create a Navigator identity, or authorize publication.",
+  "frozen_sources": [
+    {
+      "source_id": "SRC:GCF:PARENT_TRIPLESIX_RESULT",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/TRIPLESIX_S3_CUBE_GRID_FOLD_BRIDGE_AUDIT_2026-10-12/RESULT.json",
+      "sha256": "5eedc70bdd713607fb2ade4d20752cd8e476b6dcc6c20ccaa7a309762291704d"
+    }
+  ],
+  "fold": {
+    "source": "X_m={0,...,2m-1}",
+    "target": "Y_m={0,...,2m-2}",
+    "one_coordinate": "q_m(i)=i for i<=m-1; q_m(i)=i-1 for i>=m",
+    "coordinatewise": "Q_{m,d}=q_m^d",
+    "central_pair": "q_m^-1(m-1)={m-1,m}",
+    "domain": "integers m>=1 and d>=1"
+  },
+  "declared_tests": [
+    "prove and exhaustively verify that a target with k central coordinates has fibre size 2^k",
+    "prove and exhaustively verify that the number of such targets is C(d,k)(2m-2)^(d-k)",
+    "verify target and source cardinality identities",
+    "construct exact Return from the target plus one bit for each central coordinate",
+    "verify the pointwise k-bit and uniform d-bit lower bounds by fibre cardinality",
+    "recover the 64-to-63 profiles in dimensions one, two and three",
+    "run non-identical controls m=1,d=4 and m=2,d=3",
+    "state the exact TripleSix capacity boundary"
+  ],
+  "stop_rules": [
+    "Do not identify the declared fold with a historical visual generator.",
+    "Do not infer a physical fold, channel or cube mechanism.",
+    "Do not claim that a six-state TripleSix carrier reconstructs an eight-state simultaneous three-axis fibre.",
+    "Do not mark the full A0-BL-025 Grid-Fold-Channel backlog item complete.",
+    "Do not create a new Study, Family, canonical Navigator identity or publication state."
+  ]
+}

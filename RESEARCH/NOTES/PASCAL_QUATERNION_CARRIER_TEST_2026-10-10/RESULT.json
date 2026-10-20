@@ -1,0 +1,37 @@
+{
+  "checks": {
+    "all_depths_have_layer_sum_3_pow_n": true,
+    "all_s3_coordinate_permutations_preserve_the_weighted_recurrence_carrier": true,
+    "generic_q37_fails_integer_lattice_membership_for_all_nontrivial_depths": true,
+    "proper_coordinate_permutation_subgroup_has_order_3": true,
+    "q120_matches_first_axis_cycle": true,
+    "q240_matches_inverse_axis_cycle": true
+  },
+  "claim_ceiling": "Exact finite carrier automorphism fixture only; no quaternion generation of Pascal coefficients, algebra identity, or physical mechanism is established.",
+  "classification": "BOUNDED_CANDIDATE_EVIDENCE_NOT_ADMITTED",
+  "depth_records": [
+    {"depth": 0, "node_count": 1, "layer_sum": 1, "expected_layer_sum": 1, "all_s3_preserve_carrier_weight_and_edges": true, "proper_rotation_count": 3, "generic_rotation_is_lattice_automorphism": null},
+    {"depth": 1, "node_count": 4, "layer_sum": 3, "expected_layer_sum": 3, "all_s3_preserve_carrier_weight_and_edges": true, "proper_rotation_count": 3, "generic_rotation_is_lattice_automorphism": false},
+    {"depth": 2, "node_count": 10, "layer_sum": 9, "expected_layer_sum": 9, "all_s3_preserve_carrier_weight_and_edges": true, "proper_rotation_count": 3, "generic_rotation_is_lattice_automorphism": false},
+    {"depth": 3, "node_count": 20, "layer_sum": 27, "expected_layer_sum": 27, "all_s3_preserve_carrier_weight_and_edges": true, "proper_rotation_count": 3, "generic_rotation_is_lattice_automorphism": false},
+    {"depth": 4, "node_count": 35, "layer_sum": 81, "expected_layer_sum": 81, "all_s3_preserve_carrier_weight_and_edges": true, "proper_rotation_count": 3, "generic_rotation_is_lattice_automorphism": false},
+    {"depth": 5, "node_count": 56, "layer_sum": 243, "expected_layer_sum": 243, "all_s3_preserve_carrier_weight_and_edges": true, "proper_rotation_count": 3, "generic_rotation_is_lattice_automorphism": false},
+    {"depth": 6, "node_count": 84, "layer_sum": 729, "expected_layer_sum": 729, "all_s3_preserve_carrier_weight_and_edges": true, "proper_rotation_count": 3, "generic_rotation_is_lattice_automorphism": false},
+    {"depth": 7, "node_count": 120, "layer_sum": 2187, "expected_layer_sum": 2187, "all_s3_preserve_carrier_weight_and_edges": true, "proper_rotation_count": 3, "generic_rotation_is_lattice_automorphism": false},
+    {"depth": 8, "node_count": 165, "layer_sum": 6561, "expected_layer_sum": 6561, "all_s3_preserve_carrier_weight_and_edges": true, "proper_rotation_count": 3, "generic_rotation_is_lattice_automorphism": false},
+    {"depth": 9, "node_count": 220, "layer_sum": 19683, "expected_layer_sum": 19683, "all_s3_preserve_carrier_weight_and_edges": true, "proper_rotation_count": 3, "generic_rotation_is_lattice_automorphism": false},
+    {"depth": 10, "node_count": 286, "layer_sum": 59049, "expected_layer_sum": 59049, "all_s3_preserve_carrier_weight_and_edges": true, "proper_rotation_count": 3, "generic_rotation_is_lattice_automorphism": false},
+    {"depth": 11, "node_count": 364, "layer_sum": 177147, "expected_layer_sum": 177147, "all_s3_preserve_carrier_weight_and_edges": true, "proper_rotation_count": 3, "generic_rotation_is_lattice_automorphism": false}
+  ],
+  "depths_tested": [0, 11],
+  "result": {
+    "full_coordinate_permutation_group": "S3",
+    "full_group_order": 6,
+    "generic_quaternion_rotation_is_discrete_lattice_automorphism": false,
+    "proper_subgroup_order": 3,
+    "quaternion_generation_of_pascal_recurrence": "NOT_ESTABLISHED",
+    "quaternion_realizable_proper_subgroup": "C3"
+  },
+  "schema": "nexah.pascal-quaternion-carrier-test/1.0.0",
+  "status": "PASS"
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "nexah.formal-design-audit-contract/1.0.0",
+  "contract_id": "A0-BL-025:GRID_FOLD_CHANNEL_INTERFACE_ASSEMBLY_UPDATE_RETURN_AUDIT:V1",
+  "title": "Grid–Fold–Channel interface, assembly, update and Return audit",
+  "status": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_NEW_STUDY",
+  "identity": {
+    "extends": "A0-BL-025:GENERAL_COORDINATE_FOLD_MINIMAL_RESIDUAL_RETURN_AUDIT:V1",
+    "reuses": [
+      "ART:A0:MATHEMATICAL_JOINTS",
+      "MOD:NUMBER_VIEW_SUITE",
+      "NN:MRB_ACR_NCS_Q106_RETURN_CROSSWALK",
+      "F-A0-15",
+      "A0-BL-025"
+    ],
+    "creates": []
+  },
+  "question": "Can carrier, fold, embedding, envelope, interface, assembly, update and exact Return be specified in one finite typed contract and validated on two non-identical controls?",
+  "authority_boundary": "Internal bounded formal-design evidence only. Passing establishes the declared finite interface contract and its two controls. It does not identify historical visuals with the construction, establish physical flow or stability, admit A0-BL-025 as a Study, create a canonical Navigator object, or authorize publication.",
+  "frozen_sources": [
+    {
+      "source_id": "SRC:GFC:PARENT_GENERAL_FOLD_RESULT",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/TRIPLESIX_S3_CUBE_GRID_FOLD_BRIDGE_AUDIT_2026-10-12/GENERAL_COORDINATE_FOLD_MINIMAL_RESIDUAL_RETURN_AUDIT_2026-10-12/RESULT.json",
+      "sha256": "b0d03440c0db6cff2eda79b2baa7f785a9ddf4ad8cd776e9db48affb718a2c86"
+    }
+  ],
+  "typed_chain": [
+    "carrier",
+    "fold",
+    "embedding",
+    "envelope",
+    "interface",
+    "assembly",
+    "update",
+    "Return"
+  ],
+  "controls": [
+    "PATH_SEAM_M2_D1_REFLECTION",
+    "SQUARE_BOUNDARY_M2_D2_QUARTER_ROTATION"
+  ],
+  "stop_rules": [
+    "Reject an update that does not preserve the declared interface.",
+    "Do not identify envelope with carrier or interface with adjacency.",
+    "Do not omit fold residuals or the branch bit at glued interface points.",
+    "Do not infer physical coupling, flow, resonance or stability.",
+    "Do not create a new Study, Family, canonical Navigator identity or publication state."
+  ]
+}

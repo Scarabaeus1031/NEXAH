@@ -1,0 +1,276 @@
+<div id="pq-switchyard" class="pq-app">
+  <style>
+    #pq-switchyard {
+      --pq-cyan: color-mix(in srgb, var(--color-info, #2aa7c8) 88%, var(--color-text-primary) 12%);
+      --pq-violet: color-mix(in srgb, #8b5cf6 82%, var(--color-text-primary) 18%);
+      --pq-gold: color-mix(in srgb, #d9a520 84%, var(--color-text-primary) 16%);
+      --pq-green: color-mix(in srgb, var(--color-success, #239b68) 86%, var(--color-text-primary) 14%);
+      --pq-red: color-mix(in srgb, var(--color-danger, #d64b5f) 85%, var(--color-text-primary) 15%);
+      --pq-muted: var(--color-text-secondary, #667085);
+      color: var(--color-text-primary, #18222d);
+      background: transparent;
+      font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
+      line-height: 1.35;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    #pq-switchyard * { box-sizing: border-box; }
+    #pq-switchyard .pq-header { display:flex; justify-content:space-between; gap:18px; align-items:flex-end; margin-bottom:14px; }
+    #pq-switchyard h1 { font-size:clamp(22px,3vw,38px); letter-spacing:-.035em; line-height:1.02; margin:0 0 6px; }
+    #pq-switchyard .pq-kicker { color:var(--pq-gold); font-weight:800; font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
+    #pq-switchyard .pq-sub { color:var(--pq-muted); max-width:800px; margin:0; font-size:14px; }
+    #pq-switchyard .pq-badge { white-space:nowrap; color:var(--pq-green); border:1px solid color-mix(in srgb,var(--pq-green) 38%,transparent); border-radius:999px; padding:7px 10px; font-size:12px; font-weight:750; }
+    #pq-switchyard .pq-controls { display:grid; grid-template-columns:minmax(170px,.9fr) minmax(180px,1.2fr) minmax(150px,.8fr); gap:12px; margin-bottom:14px; }
+    #pq-switchyard label { display:flex; flex-direction:column; gap:6px; color:var(--pq-muted); font-size:12px; font-weight:700; }
+    #pq-switchyard select, #pq-switchyard input[type="range"] { width:100%; accent-color:var(--pq-violet); }
+    #pq-switchyard select { color:var(--color-text-primary); background:var(--color-background-secondary,rgba(127,127,127,.07)); border:1px solid var(--color-border-secondary,rgba(127,127,127,.25)); border-radius:9px; padding:8px 10px; font:inherit; }
+    #pq-switchyard .pq-stage { position:relative; display:grid; grid-template-columns:minmax(260px,1fr) minmax(210px,.66fr) minmax(260px,1fr); gap:12px; align-items:stretch; min-height:420px; }
+    #pq-switchyard .pq-stage::before { content:""; position:absolute; top:49%; left:25%; right:25%; height:1px; background:linear-gradient(90deg,var(--pq-cyan),var(--pq-gold),var(--pq-violet)); opacity:.55; z-index:0; }
+    #pq-switchyard .pq-field { position:relative; z-index:1; padding:12px; border-top:2px solid var(--pq-cyan); background:linear-gradient(180deg,color-mix(in srgb,var(--pq-cyan) 5%,transparent),transparent 35%); }
+    #pq-switchyard .pq-field.after { border-color:var(--pq-violet); background:linear-gradient(180deg,color-mix(in srgb,var(--pq-violet) 5%,transparent),transparent 35%); }
+    #pq-switchyard .pq-field h2, #pq-switchyard .pq-core h2 { margin:0 0 2px; font-size:15px; letter-spacing:.04em; text-transform:uppercase; }
+    #pq-switchyard .pq-small { color:var(--pq-muted); font-size:12px; }
+    #pq-switchyard svg { width:100%; height:330px; display:block; overflow:visible; }
+    #pq-switchyard .pq-tri { fill:none; stroke:var(--color-border-secondary,rgba(127,127,127,.32)); stroke-width:1.4; }
+    #pq-switchyard .pq-grid { stroke:var(--color-border-tertiary,rgba(127,127,127,.18)); stroke-width:.8; }
+    #pq-switchyard .pq-node { cursor:pointer; fill:color-mix(in srgb,var(--pq-cyan) 72%,var(--color-background-primary)); stroke:var(--color-background-primary); stroke-width:1.5; transition:r .12s ease,opacity .12s ease; }
+    #pq-switchyard .after .pq-node { fill:color-mix(in srgb,var(--pq-violet) 72%,var(--color-background-primary)); }
+    #pq-switchyard .pq-node:hover { r:6.6px; }
+    #pq-switchyard .pq-node.selected { fill:var(--pq-gold); stroke:var(--color-text-primary); stroke-width:2.2; r:8px; }
+    #pq-switchyard .pq-vector { stroke:var(--pq-gold); stroke-width:2.6; marker-end:url(#pq-arrow); }
+    #pq-switchyard .pq-axis { fill:var(--pq-muted); font-size:11px; font-weight:800; }
+    #pq-switchyard .pq-label { fill:var(--color-text-primary); font-size:11px; font-weight:800; paint-order:stroke; stroke:var(--color-background-primary); stroke-width:3px; }
+    #pq-switchyard .pq-core { position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:10px 4px; }
+    #pq-switchyard .pq-wheel { position:relative; width:190px; height:190px; margin:10px auto 12px; }
+    #pq-switchyard .pq-wheel::before { content:""; position:absolute; inset:22px; border:1px solid var(--color-border-secondary); border-radius:50%; }
+    #pq-switchyard .pq-slot { position:absolute; width:54px; height:54px; border:2px solid currentColor; border-radius:50%; display:grid; place-items:center; font-weight:850; background:var(--color-background-primary); box-shadow:0 4px 18px color-mix(in srgb,currentColor 12%,transparent); }
+    #pq-switchyard .pq-slot small { display:block; font-size:10px; font-weight:650; color:var(--pq-muted); }
+    #pq-switchyard .pq-slot.q0 { inset:68px; color:var(--pq-gold); }
+    #pq-switchyard .pq-slot.q1 { left:68px; top:0; color:var(--pq-cyan); }
+    #pq-switchyard .pq-slot.qi { left:0; top:68px; color:var(--pq-violet); }
+    #pq-switchyard .pq-slot.qj { right:0; top:68px; color:var(--pq-green); }
+    #pq-switchyard .pq-slot.qk { left:68px; bottom:0; color:var(--pq-red); }
+    #pq-switchyard .pq-formula { font-family:var(--font-mono,ui-monospace,monospace); font-size:12px; color:var(--color-text-primary); background:var(--color-background-secondary,rgba(127,127,127,.07)); border-radius:9px; padding:8px 10px; max-width:230px; }
+    #pq-switchyard .pq-warning { color:var(--pq-violet); font-size:11px; font-weight:750; margin-top:7px; }
+    #pq-switchyard .pq-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:14px; }
+    #pq-switchyard .pq-card { border:1px solid var(--color-border-secondary,rgba(127,127,127,.25)); border-radius:12px; padding:12px; min-height:126px; background:color-mix(in srgb,var(--color-background-secondary,transparent) 45%,transparent); }
+    #pq-switchyard .pq-card h3 { margin:0 0 8px; font-size:13px; text-transform:uppercase; letter-spacing:.06em; }
+    #pq-switchyard .pq-metric { display:flex; justify-content:space-between; gap:8px; font-size:12px; padding:4px 0; border-bottom:1px solid var(--color-border-tertiary,rgba(127,127,127,.14)); }
+    #pq-switchyard .pq-metric:last-child { border-bottom:0; }
+    #pq-switchyard .pq-pass { color:var(--pq-green); font-weight:800; }
+    #pq-switchyard .pq-boundary { color:var(--pq-gold); font-weight:800; }
+    #pq-switchyard .pq-readout { font-family:var(--font-mono,ui-monospace,monospace); font-size:clamp(16px,2vw,24px); font-weight:850; color:var(--pq-cyan); margin:5px 0; }
+    #pq-switchyard .pq-foot { margin-top:12px; padding-top:10px; border-top:1px solid var(--color-border-secondary); display:flex; justify-content:space-between; gap:14px; color:var(--pq-muted); font-size:11px; }
+    #pq-switchyard .pq-foot strong { color:var(--color-text-primary); }
+    @media (max-width:820px) {
+      #pq-switchyard .pq-header { align-items:flex-start; flex-direction:column; }
+      #pq-switchyard .pq-controls, #pq-switchyard .pq-cards { grid-template-columns:1fr; }
+      #pq-switchyard .pq-stage { grid-template-columns:1fr; }
+      #pq-switchyard .pq-stage::before { display:none; }
+      #pq-switchyard svg { height:290px; }
+      #pq-switchyard .pq-core { order:-1; }
+      #pq-switchyard .pq-foot { flex-direction:column; }
+    }
+  </style>
+
+  <div class="pq-header">
+    <div>
+      <div class="pq-kicker">Introduced connector · exact test instrument</div>
+      <h1>Pascal × Quaternion Return Switchyard</h1>
+      <p class="pq-sub">Ein Pascal-Knoten wird als vierkanaliger Quaternion-Record gelesen. Q° wählt die Ansicht; Rückkehr, Gittertreue und Typgrenzen werden getrennt geprüft.</p>
+    </div>
+    <div class="pq-badge">C₃-Symmetrie verifiziert</div>
+  </div>
+
+  <div class="pq-controls" aria-label="Instrument controls">
+    <label>Pascal-Tiefe <span id="pq-depth-value">4</span>
+      <input id="pq-depth" type="range" min="2" max="7" step="1" value="4" />
+    </label>
+    <label>Q°-Operator
+      <select id="pq-operator">
+        <option value="identity">Identität</option>
+        <option value="cycle+">C₃ +120°: i → j → k</option>
+        <option value="cycle-">C₃ −120°: i → k → j</option>
+        <option value="reflection">S₃-Spiegelung: i ↔ j</option>
+        <option value="generic">Kontrollansicht: 37° um (1,2,3)</option>
+      </select>
+    </label>
+    <label>Record/Play-Denominator
+      <select id="pq-scalar">
+        <option value="540">540°</option>
+        <option value="720">720°</option>
+        <option value="1080">1080°</option>
+        <option value="1440">1440°</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="pq-stage">
+    <section class="pq-field" aria-labelledby="pq-before-title">
+      <h2 id="pq-before-title">1 · Pascal carrier</h2>
+      <div class="pq-small">Klicke einen Knoten der Schicht a+b+c=N.</div>
+      <svg id="pq-before" role="img" aria-label="Pascal simplex before the selected transformation"></svg>
+    </section>
+
+    <section class="pq-core" aria-labelledby="pq-core-title">
+      <h2 id="pq-core-title">2 · Vier Kanäle + Q°</h2>
+      <div class="pq-small">Record/Play-Operator</div>
+      <div class="pq-wheel" aria-label="Quaternion basis and separate view controller">
+        <div class="pq-slot q1">1<small id="pq-n">n=4</small></div>
+        <div class="pq-slot qi">i<small id="pq-a">a=2</small></div>
+        <div class="pq-slot qj">j<small id="pq-b">b=1</small></div>
+        <div class="pq-slot qk">k<small id="pq-c">c=1</small></div>
+        <div class="pq-slot q0">Q°<small>view</small></div>
+      </div>
+      <div id="pq-phi" class="pq-formula">Φ(2,1,1)=4·1+2i+j+k</div>
+      <div class="pq-warning">Q° steuert vier Basis-Slots — es ist keine fünfte Quaternion-Komponente.</div>
+    </section>
+
+    <section class="pq-field after" aria-labelledby="pq-after-title">
+      <h2 id="pq-after-title">3 · Crystal view</h2>
+      <div class="pq-small">Transformierte Darstellung desselben Records.</div>
+      <svg id="pq-after" role="img" aria-label="Pascal simplex after the selected transformation"></svg>
+    </section>
+  </div>
+
+  <div class="pq-cards">
+    <section class="pq-card">
+      <h3>Quaternion return</h3>
+      <div class="pq-metric"><span>Skalarteil n</span><span id="pq-scalar-fixed" class="pq-pass">fix</span></div>
+      <div class="pq-metric"><span>Rückkehrresidual</span><span id="pq-residual" class="pq-pass">0.000000</span></div>
+      <div class="pq-metric"><span>Operator-Typ</span><span id="pq-optype">Quaternion</span></div>
+    </section>
+    <section class="pq-card">
+      <h3>Carrier gate</h3>
+      <div class="pq-metric"><span>Ganzzahliges Gitter</span><span id="pq-lattice" class="pq-pass">PASS</span></div>
+      <div class="pq-metric"><span>Multinomialgewicht</span><span id="pq-weight" class="pq-pass">PASS</span></div>
+      <div class="pq-metric"><span>Grenze</span><span id="pq-scope">C₃ ⊂ S₃</span></div>
+    </section>
+    <section class="pq-card">
+      <h3>432 record/play</h3>
+      <div id="pq-record" class="pq-readout">432 / 720 = 0.6</div>
+      <div class="pq-metric"><span>zweiter Durchlauf</span><span id="pq-record-return" class="pq-pass">720</span></div>
+      <div class="pq-metric"><span>separater Readout</span><span>16→53 · 25→97</span></div>
+    </section>
+  </div>
+
+  <div class="pq-foot">
+    <span><strong>Verbindet:</strong> Pascal-Träger → Φ → Q°-Ansicht → Rückkehrtest.</span>
+    <span><strong>Beweisgrenze:</strong> formale Konstruktion; keine historische Quaternion-Zuordnung und kein Mechanismus-Claim.</span>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.getElementById('pq-switchyard');
+      if (!root || root.dataset.ready) return;
+      root.dataset.ready = '1';
+      const $ = (s) => root.querySelector(s);
+      const depth = $('#pq-depth');
+      const operator = $('#pq-operator');
+      const scalar = $('#pq-scalar');
+      let state = { depth: 4, operator: 'cycle+', scalar: 720, node: [2,1,1] };
+      const stored = window.openai?.widgetState?.privateContent?.pascalQuaternionSwitchyard;
+      if (stored) state = { ...state, ...stored };
+      depth.value = state.depth;
+      operator.value = state.operator;
+      scalar.value = state.scalar;
+
+      const fact = (n) => { let v=1; for(let i=2;i<=n;i++) v*=i; return v; };
+      const weight = (v) => fact(v[0]+v[1]+v[2])/(fact(v[0])*fact(v[1])*fact(v[2]));
+      const nodes = (N) => { const out=[]; for(let a=0;a<=N;a++) for(let b=0;b<=N-a;b++) out.push([a,b,N-a-b]); return out; };
+      const nearInt = (x) => Math.abs(x-Math.round(x)) < 1e-8;
+      const fmt = (x, d=3) => Math.abs(x-Math.round(x))<1e-9 ? String(Math.round(x)) : x.toFixed(d).replace(/0+$/,'').replace(/\.$/,'');
+      const sub = (a,b) => a.map((x,i)=>x-b[i]);
+      const norm = (a) => Math.hypot(...a);
+      const project = (v, N, transformed=false) => {
+        const [a,b,c]=v; const S=Math.max(N,1);
+        const x = 28 + 244*(b + .5*c)/S;
+        const y = 282 - 244*(.8660254*c)/S;
+        if (!transformed) return [x,y];
+        return [x,y];
+      };
+      const quat = (kind) => {
+        if(kind==='cycle+') return [.5,.5,.5,.5];
+        if(kind==='cycle-') return [.5,-.5,-.5,-.5];
+        if(kind==='generic') { const th=37*Math.PI/180, h=th/2, d=Math.sqrt(14); return [Math.cos(h),Math.sin(h)/d,2*Math.sin(h)/d,3*Math.sin(h)/d]; }
+        return [1,0,0,0];
+      };
+      const mul = (p,q) => [
+        p[0]*q[0]-p[1]*q[1]-p[2]*q[2]-p[3]*q[3],
+        p[0]*q[1]+p[1]*q[0]+p[2]*q[3]-p[3]*q[2],
+        p[0]*q[2]-p[1]*q[3]+p[2]*q[0]+p[3]*q[1],
+        p[0]*q[3]+p[1]*q[2]-p[2]*q[1]+p[3]*q[0]
+      ];
+      const conj = q => [q[0],-q[1],-q[2],-q[3]];
+      const rotate = (v,q) => mul(mul(q,[0,...v]),conj(q)).slice(1);
+      const transform = (v,kind) => kind==='reflection' ? [v[1],v[0],v[2]] : rotate(v,quat(kind));
+      const inverse = (v,kind) => kind==='reflection' ? [v[1],v[0],v[2]] : rotate(v,conj(quat(kind)));
+      const svgNS='http://www.w3.org/2000/svg';
+      const el=(name,attrs={})=>{ const e=document.createElementNS(svgNS,name); Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v)); return e; };
+
+      function draw(svg, after=false){
+        svg.replaceChildren(); svg.setAttribute('viewBox','0 0 300 315');
+        const defs=el('defs'); const marker=el('marker',{id:after?'pq-arrow-after':'pq-arrow',viewBox:'0 0 10 10',refX:'9',refY:'5',markerWidth:'5',markerHeight:'5',orient:'auto-start-reverse'}); marker.append(el('path',{d:'M 0 0 L 10 5 L 0 10 z',fill:'var(--pq-gold)'})); defs.append(marker); svg.append(defs);
+        const corners=[[28,282],[272,282],[150,70]];
+        svg.append(el('path',{class:'pq-tri',d:`M${corners[0]} L${corners[1]} L${corners[2]} Z`}));
+        const N=state.depth;
+        for(let i=1;i<N;i++){
+          const t=i/N;
+          const interp=(p,q)=>[p[0]+(q[0]-p[0])*t,p[1]+(q[1]-p[1])*t];
+          [[corners[0],corners[1],corners[2]],[corners[1],corners[2],corners[0]],[corners[2],corners[0],corners[1]]].forEach(([p,q,r])=>{
+            const u=interp(p,q), v=interp(p,r); svg.append(el('line',{class:'pq-grid',x1:u[0],y1:u[1],x2:v[0],y2:v[1]}));
+          });
+        }
+        const labelData=[['i / a',18,302],['j / b',254,302],['k / c',142,52]];
+        labelData.forEach(([txt,x,y])=>{const t=el('text',{class:'pq-axis',x,y});t.textContent=txt;svg.append(t);});
+        nodes(N).forEach(v=>{
+          const shown=after?transform(v,state.operator):v;
+          const p=project(shown,N,after);
+          const c=el('circle',{class:'pq-node'+(v.join(',')===state.node.join(',')?' selected':''),cx:p[0],cy:p[1],r:5,'data-node':v.join(','),tabindex:'0',role:'button','aria-label':`Pascal node ${v.join(', ')}`});
+          c.addEventListener('click',()=>{state.node=v;render();save();});
+          c.addEventListener('keydown',(ev)=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();state.node=v;render();save();}});
+          svg.append(c);
+          if(v.join(',')===state.node.join(',')){
+            const t=el('text',{class:'pq-label',x:p[0]+10,y:p[1]-10});t.textContent=after?`(${shown.map(x=>fmt(x,2)).join(', ')})`:`(${v.join(', ')})`;svg.append(t);
+          }
+        });
+      }
+
+      function validNode(){
+        if(state.node.reduce((a,b)=>a+b,0)!==state.depth){
+          const a=Math.ceil(state.depth/2), b=Math.floor((state.depth-a)/2); state.node=[a,b,state.depth-a-b];
+        }
+      }
+      function render(){
+        state.depth=+depth.value; state.operator=operator.value; state.scalar=+scalar.value; validNode();
+        $('#pq-depth-value').textContent=state.depth;
+        const [a,b,c]=state.node, n=a+b+c, out=transform(state.node,state.operator), back=inverse(out,state.operator);
+        const residual=norm(sub(back,state.node));
+        const lattice=out.every(nearInt) && out.every(x=>x>=-1e-8) && nearInt(out.reduce((x,y)=>x+y,0)-n);
+        const weightOK=lattice && Math.abs(weight(out.map(Math.round))-weight(state.node))<1e-8;
+        $('#pq-n').textContent=`n=${n}`; $('#pq-a').textContent=`a=${a}`; $('#pq-b').textContent=`b=${b}`; $('#pq-c').textContent=`c=${c}`;
+        const terms=[`${n}·1`,a?`${a===1?'':a}i`:'',b?`${b===1?'':b}j`:'',c?`${c===1?'':c}k`:''].filter(Boolean);
+        $('#pq-phi').textContent=`Φ(${a},${b},${c}) = ${terms.join(' + ')}`;
+        $('#pq-residual').textContent=residual.toExponential(2);
+        $('#pq-optype').textContent=state.operator==='reflection'?'S₃, nicht inner-quaternionisch':state.operator==='generic'?'Quaternion-Ansicht':'Quaternion';
+        $('#pq-lattice').textContent=lattice?'PASS':'VIEW ONLY'; $('#pq-lattice').className=lattice?'pq-pass':'pq-boundary';
+        $('#pq-weight').textContent=weightOK?'PASS':'NICHT ANWENDBAR'; $('#pq-weight').className=weightOK?'pq-pass':'pq-boundary';
+        $('#pq-scope').textContent=state.operator==='reflection'?'S₃ ∖ C₃':state.operator==='generic'?'SO(3), außerhalb Gitter':'C₃ ⊂ S₃';
+        const y=432/state.scalar, ret=432/y;
+        $('#pq-record').textContent=`432 / ${state.scalar} = ${fmt(y,4)}`; $('#pq-record-return').textContent=fmt(ret,6);
+        draw($('#pq-before')); draw($('#pq-after'),true);
+      }
+      function save(){
+        if(!window.openai?.setWidgetState) return;
+        const snapshot={depth:state.depth,operator:state.operator,scalar:state.scalar,node:[...state.node]};
+        window.openai.setWidgetState({modelContent:{pascalQuaternionSwitchyard:snapshot},privateContent:{pascalQuaternionSwitchyard:snapshot}}).catch(()=>{});
+      }
+      [depth,operator,scalar].forEach(control=>control.addEventListener('input',()=>{render();save();}));
+      window.addEventListener('openai:set_globals',(ev)=>{
+        const next=ev.detail?.globals?.widgetState?.privateContent?.pascalQuaternionSwitchyard;
+        if(!next) return; state={...state,...next}; depth.value=state.depth; operator.value=state.operator; scalar.value=state.scalar; render();
+      });
+      render();
+    })();
+  </script>
+</div>

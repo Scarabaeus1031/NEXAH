@@ -1,0 +1,59 @@
+{
+  "contract_id": "A0-BL-023:NCS_X20_TYPED_CARRIER_PCPD_Q106_INTERTWINER_AUDIT:V1",
+  "date": "2026-10-11",
+  "status": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_PENT_08",
+  "identity": {
+    "extends": "A0-BL-023:NCS_292_Q106_INTERTWINER_RETURN_PACKAGE:V1",
+    "reuses": [
+      "SCC-003",
+      "A0OE:PASCAL_PENTAGON_D5_TEST",
+      "ART:NUMBER:PRIMEGRID_BLOCK02B_TRINARY_ANTIPODE"
+    ],
+    "creates": []
+  },
+  "question": "Do the frozen NCS, MRB, ACR-44, OIL/RIS and Triple-19 sources independently define an X20 edge set, edge types and a Triple-19-to-X20 operator map strongly enough to test the twenty-four D5-equivariant X20-to-Q106 charts without importing Q106 structure backward?",
+  "method": "Hash-lock the source-side records; type each carrier, operator and map; close the source-contract gate before reading any target-fit result; enumerate the inherited twenty-four charts only as blocked candidates unless E_X, tau_X and a Triple-19-to-X20 map are independently supplied.",
+  "declared_source_carrier": {
+    "states": "X20=C5 x P4",
+    "P4": [
+      "carrier",
+      "frame_cut",
+      "transform_view",
+      "return_record"
+    ],
+    "rotation": "r_X(s,p)=(s+1 mod 5,p)",
+    "candidate_reflection": "j_X(s,p)=(-s mod 5,p)",
+    "edge_set": null,
+    "edge_types": null
+  },
+  "triple19_typing": {
+    "constructors": ["P_c", "P_d"],
+    "constructor_domain": "r in {0,...,6}",
+    "oriented_state_count": 14,
+    "involution": "A(r,c_r,sigma)=(6-r,c_r,-sigma)",
+    "correction": "P_c and P_d name oriented-state constructors; A is the involution.",
+    "map_to_x20": null,
+    "map_to_q106": null
+  },
+  "gates": [
+    "G1_SOURCE_HASH_AND_TYPE_FREEZE",
+    "G2_X20_ADJACENCY_AND_EDGE_TYPE_CONTRACT",
+    "G3_TRIPLE19_TO_X20_MAP",
+    "G4_D5_CHART_ADJACENCY_TEST",
+    "G5_PCPD_COMPATIBILITY_TEST",
+    "G6_UNIQUENESS_MODULO_AUTOMORPHISMS"
+  ],
+  "outcomes": [
+    "UNIQUE_TYPED_INTERTWINER",
+    "MULTIPLE_TYPED_INTERTWINERS",
+    "NO_TYPED_INTERTWINER",
+    "SOURCE_CONTRACT_UNRECOVERED",
+    "CONTRACT_INVALID"
+  ],
+  "stop_rule": "Stop before interpreting P4 as a path graph, importing Q106 adjacency into X20, treating P_c or P_d as the antipode involution, mapping the fourteen Triple-19 oriented states into twenty X20 states by cardinality alone, or selecting any of the twenty-four D5 charts by target fit.",
+  "authority_boundary": [
+    "formal source-contract audit only; not an admitted Study or scientific run",
+    "no new Navigator identity, Family, canonical operator, PENT-08 or publication state",
+    "a missing source contract is preserved as a null result rather than repaired by an attractive target representation"
+  ]
+}

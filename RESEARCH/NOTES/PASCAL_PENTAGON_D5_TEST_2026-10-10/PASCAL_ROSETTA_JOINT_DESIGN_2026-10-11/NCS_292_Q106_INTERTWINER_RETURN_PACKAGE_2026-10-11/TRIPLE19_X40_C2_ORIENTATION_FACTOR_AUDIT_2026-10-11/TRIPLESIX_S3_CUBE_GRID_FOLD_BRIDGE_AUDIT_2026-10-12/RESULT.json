@@ -1,0 +1,681 @@
+{
+  "status": "PASS_PARTIAL_AXIS_SIDE_BRIDGE_WITH_MULTIAXIS_FOLD_LOSS",
+  "classification": "S3_AXIS_C2_ADDRESS_SINGLE_AXIS_SUFFICIENT_MULTIAXIS_INSUFFICIENT",
+  "checks": {
+    "passed": 58,
+    "total": 58
+  },
+  "triplesix": {
+    "carrier": "S3",
+    "states": 6,
+    "digit_sum_invariant": 6,
+    "axis_pairs": {
+      "A": [
+        "123",
+        "321"
+      ],
+      "B": [
+        "132",
+        "231"
+      ],
+      "C": [
+        "213",
+        "312"
+      ]
+    },
+    "orientation_factor": "sign:S3->C2",
+    "state_address": "{A,B,C} x C2 (bijection of state sets, not direct-product group identity)"
+  },
+  "janus_comparison": {
+    "commuting_convention": "displayed right reversal with left axis rotation",
+    "dihedral_convention": "same-side actions",
+    "historical_selection": null,
+    "reason": "The visuals do not freeze left/right action semantics."
+  },
+  "grid_fold": {
+    "map": "q64_63(i)=i for i<=31 else i-1",
+    "one_dimensional_pivot_fibre": [
+      31,
+      32
+    ],
+    "profiles": {
+      "1": {
+        "1": 62,
+        "2": 1
+      },
+      "2": {
+        "1": 3844,
+        "2": 124,
+        "4": 1
+      },
+      "3": {
+        "1": 238328,
+        "2": 11532,
+        "4": 186,
+        "8": 1
+      }
+    },
+    "coordinatewise_section_choices": {
+      "1D": 2,
+      "2D": 4,
+      "3D": 8
+    },
+    "canonical_section": null
+  },
+  "bridge_limit": {
+    "single_selected_axis": "SUPPORTED_BY_AXIS_PLUS_ONE_ORIENTATION_BIT",
+    "two_axis_pivot": "NOT_RECONSTRUCTED_TWO_INDEPENDENT_SIDE_BITS_REQUIRED",
+    "three_axis_pivot": "IMPOSSIBLE_FROM_SIX_STATE_LABEL_ALONE_EIGHT_SOURCE_STATES_SHARE_ONE_TARGET",
+    "full_cube_grid_identity": false
+  },
+  "maps": {
+    "triplesix_to_axis_times_c2": "exact_bijection_of_state_sets",
+    "cube_64_to_63": "declared_coordinatewise_surjection",
+    "canonical_cube_63_to_64_inverse": null,
+    "historical_visual_generator": null,
+    "historical_janus_selection": null
+  },
+  "claim_boundary": "Internal bounded formal-design evidence only. The audit may establish an S3 axis/orientation address and an explicitly declared finite-grid quotient. It does not recover the historical visual generator, identify the visuals with a cube mechanism, establish a physical fold, select a historical Janus law, create a Study or Family, or authorize publication.",
+  "checks_detail": [
+    {
+      "name": "extends prior C2 audit",
+      "passed": true,
+      "observed": "A0-BL-023:TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT:V1",
+      "expected": "A0-BL-023:TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT:V1"
+    },
+    {
+      "name": "creates no identity",
+      "passed": true,
+      "observed": [],
+      "expected": []
+    },
+    {
+      "name": "formal non-admitted status",
+      "passed": true,
+      "observed": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_NEW_STUDY",
+      "expected": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_NEW_STUDY"
+    },
+    {
+      "name": "seven frozen sources",
+      "passed": true,
+      "observed": 7,
+      "expected": 7
+    },
+    {
+      "name": "source exists: SRC:TS6:PARENT_FACTOR_RESULT",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:TS6:PARENT_FACTOR_RESULT",
+      "passed": true,
+      "observed": "d8caf0e18e3aa7687d8d7a09e40169e4716cb73d1aebe430bb771b41e2ee01b6",
+      "expected": "d8caf0e18e3aa7687d8d7a09e40169e4716cb73d1aebe430bb771b41e2ee01b6"
+    },
+    {
+      "name": "source exists: SRC:TS6:PASCAL_QUATERNION_S3_RESULT",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:TS6:PASCAL_QUATERNION_S3_RESULT",
+      "passed": true,
+      "observed": "444f3e587b2cb8205e8f6a181d48d56caed5262f020dd16c0cfaa79f75860e0e",
+      "expected": "444f3e587b2cb8205e8f6a181d48d56caed5262f020dd16c0cfaa79f75860e0e"
+    },
+    {
+      "name": "source exists: VIS:TS6:SIX_PERMUTATIONS",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: VIS:TS6:SIX_PERMUTATIONS",
+      "passed": true,
+      "observed": "6daf8b788bd52b151c4d0c37989aa8d2433aae11d8185783c11a2d7c1cbc9276",
+      "expected": "6daf8b788bd52b151c4d0c37989aa8d2433aae11d8185783c11a2d7c1cbc9276"
+    },
+    {
+      "name": "source exists: VIS:TS6:THREE_AXIS_CORE",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: VIS:TS6:THREE_AXIS_CORE",
+      "passed": true,
+      "observed": "633ee92c57a48995828b92e30159bb1eae7b0a8de3fa8154ba045f3cb8f66e8f",
+      "expected": "633ee92c57a48995828b92e30159bb1eae7b0a8de3fa8154ba045f3cb8f66e8f"
+    },
+    {
+      "name": "source exists: VIS:TS6:GRID_63_64_DUAL_AXIS_FOLD",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: VIS:TS6:GRID_63_64_DUAL_AXIS_FOLD",
+      "passed": true,
+      "observed": "adafd1748aad552ecbd099aed8449bc3f83aabb04aae3a65d48ef0b33fe15171",
+      "expected": "adafd1748aad552ecbd099aed8449bc3f83aabb04aae3a65d48ef0b33fe15171"
+    },
+    {
+      "name": "source exists: VIS:TS6:ALPHA_OMEGA_CUBES_FOLD_AXES",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: VIS:TS6:ALPHA_OMEGA_CUBES_FOLD_AXES",
+      "passed": true,
+      "observed": "6c79819ab27b0ca7959a00487302d87d636a8019b2d3d544995f8f105fe83794",
+      "expected": "6c79819ab27b0ca7959a00487302d87d636a8019b2d3d544995f8f105fe83794"
+    },
+    {
+      "name": "source exists: VIS:TS6:ALPHA_OMEGA_CUBES_SUBGRIDS",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: VIS:TS6:ALPHA_OMEGA_CUBES_SUBGRIDS",
+      "passed": true,
+      "observed": "91c7a21b270f453a748605669280505e5e6581397b2a8b0406b6709c70642d72",
+      "expected": "91c7a21b270f453a748605669280505e5e6581397b2a8b0406b6709c70642d72"
+    },
+    {
+      "name": "S3 has six states",
+      "passed": true,
+      "observed": 6,
+      "expected": 6
+    },
+    {
+      "name": "all TripleSix glyphs have digit sum six",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "visual reversal is involutive",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "visual reversal is fixed-point-free",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "visual reversal flips parity",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "three displayed reversal pairs recovered",
+      "passed": true,
+      "observed": [
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ],
+        [
+          [
+            2,
+            1,
+            3
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            3,
+            1
+          ]
+        ],
+        [
+          [
+            2,
+            1,
+            3
+          ],
+          [
+            3,
+            1,
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "name": "axis plus parity address is bijective",
+      "passed": true,
+      "observed": 6,
+      "expected": 6
+    },
+    {
+      "name": "axis set has three values",
+      "passed": true,
+      "observed": [
+        "A",
+        "B",
+        "C"
+      ],
+      "expected": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "name": "orientation factor has two values",
+      "passed": true,
+      "observed": [
+        0,
+        1
+      ],
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "left axis rotation has order three",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "left axis rotation preserves parity",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "left rotation commutes with visual reversal",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "left rotation descends to displayed axis pairs",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "right rotation has order three",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "right-action reversal conjugates rotation to inverse",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "right rotation does not descend to displayed axis pairs",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "left reflection has dihedral law",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "existing Pascal carrier reports S3",
+      "passed": true,
+      "observed": "S3",
+      "expected": "S3"
+    },
+    {
+      "name": "existing Pascal proper subgroup reports C3",
+      "passed": true,
+      "observed": "C3",
+      "expected": "C3"
+    },
+    {
+      "name": "63 equals 7 times 9",
+      "passed": true,
+      "observed": 63,
+      "expected": 63
+    },
+    {
+      "name": "64 equals 8 times 8",
+      "passed": true,
+      "observed": 64,
+      "expected": 64
+    },
+    {
+      "name": "displayed four-factor count",
+      "passed": true,
+      "observed": 16257024,
+      "expected": 16257024
+    },
+    {
+      "name": "q64_63 is surjective",
+      "passed": true,
+      "observed": [
+        0,
+        1,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        2,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        3,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        4,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        5,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        6,
+        60,
+        61,
+        62,
+        7,
+        8,
+        9
+      ],
+      "expected": [
+        0,
+        1,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        2,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        3,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        4,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        5,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        6,
+        60,
+        61,
+        62,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "name": "q64_63 is non-injective",
+      "passed": true,
+      "observed": 63,
+      "expected": 63
+    },
+    {
+      "name": "one-dimensional pivot fibre",
+      "passed": true,
+      "observed": [
+        31,
+        32
+      ],
+      "expected": [
+        31,
+        32
+      ]
+    },
+    {
+      "name": "one-dimensional fibre profile",
+      "passed": true,
+      "observed": {
+        "1": 62,
+        "2": 1
+      },
+      "expected": {
+        "1": 62,
+        "2": 1
+      }
+    },
+    {
+      "name": "Q_1 fibre profile",
+      "passed": true,
+      "observed": {
+        "1": 62,
+        "2": 1
+      },
+      "expected": {
+        "1": 62,
+        "2": 1
+      }
+    },
+    {
+      "name": "Q_1 target-state count",
+      "passed": true,
+      "observed": 63,
+      "expected": 63
+    },
+    {
+      "name": "Q_1 source-state count reconstructed from fibres",
+      "passed": true,
+      "observed": 64,
+      "expected": 64
+    },
+    {
+      "name": "Q_2 fibre profile",
+      "passed": true,
+      "observed": {
+        "1": 3844,
+        "2": 124,
+        "4": 1
+      },
+      "expected": {
+        "1": 3844,
+        "2": 124,
+        "4": 1
+      }
+    },
+    {
+      "name": "Q_2 target-state count",
+      "passed": true,
+      "observed": 3969,
+      "expected": 3969
+    },
+    {
+      "name": "Q_2 source-state count reconstructed from fibres",
+      "passed": true,
+      "observed": 4096,
+      "expected": 4096
+    },
+    {
+      "name": "Q_3 fibre profile",
+      "passed": true,
+      "observed": {
+        "1": 238328,
+        "2": 11532,
+        "4": 186,
+        "8": 1
+      },
+      "expected": {
+        "1": 238328,
+        "2": 11532,
+        "4": 186,
+        "8": 1
+      }
+    },
+    {
+      "name": "Q_3 target-state count",
+      "passed": true,
+      "observed": 250047,
+      "expected": 250047
+    },
+    {
+      "name": "Q_3 source-state count reconstructed from fibres",
+      "passed": true,
+      "observed": 262144,
+      "expected": 262144
+    },
+    {
+      "name": "single-axis fold requires one side bit",
+      "passed": true,
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "name": "two-axis pivot requires two independent side bits",
+      "passed": true,
+      "observed": 2,
+      "expected": 2
+    },
+    {
+      "name": "three-axis pivot requires three independent side bits",
+      "passed": true,
+      "observed": 3,
+      "expected": 3
+    },
+    {
+      "name": "TripleSix address supplies one side bit",
+      "passed": true,
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "name": "TripleSix cannot cardinally label the 3D pivot fibre",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    }
+  ]
+}

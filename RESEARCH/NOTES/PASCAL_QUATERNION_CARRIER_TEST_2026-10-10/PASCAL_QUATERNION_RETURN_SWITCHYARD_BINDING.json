@@ -1,0 +1,58 @@
+{
+  "schema": "nexah.pascal-quaternion-return-switchyard-binding/1.0.0",
+  "date": "2026-10-11",
+  "status": "SUPPORTING_PROJECTION_BOUND_WITH_TESTED_SUCCESSOR",
+  "title": "Pascal × Quaternion Return Switchyard",
+  "owning_identity": "A0OE:PASCAL_QUATERNION_TEST",
+  "creates_identity": false,
+  "creates_module": false,
+  "creates_route": false,
+  "creates_study": false,
+  "creates_family": false,
+  "publication_authorized": false,
+  "artifact": {
+    "path": "RESEARCH/NOTES/PASCAL_QUATERNION_CARRIER_TEST_2026-10-10/PASCAL_QUATERNION_RETURN_SWITCHYARD.html",
+    "sha256": "939138b454b9605d87ae199ea7fe8174c4211fc61ab97624a9538470e072fac7",
+    "role": "interactive non-evidentiary projection of the existing bounded carrier/operator test"
+  },
+  "identity_reuse": [
+    "A0OE:PASCAL_QUATERNION_TEST",
+    "ART:NUMBER:PRIMEGRID_BLOCK02B_TRINARY_ANTIPODE",
+    "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "A0OE:T1_T7",
+    "NEXAH_PCA_PHASE_SPACE_CORE_2026_10_03",
+    "ART:HTML:EACDB0098430",
+    "ART:HTML:829A060DB56E",
+    "ILAU:RECORD_PLAY_432",
+    "ART:A0:MATHEMATICAL_JOINTS"
+  ],
+  "introduced_formal_connector": "Phi(a,b,c)=(a+b+c)*1+a*i+b*j+c*k",
+  "typed_returns": {
+    "quaternion_view": "R_u(x)=u*x*u^-1 with inverse-conjugation return",
+    "scalar_record_play": "Q_432(x)=432/x with Q_432(Q_432(x))=x for x!=0"
+  },
+  "tested_successor": {
+    "study_id": "A0_BL_052_PASCAL_QUATERNION_FOUR_CHANNEL_RETURN_2026_10_11",
+    "result_path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_052_PASCAL_QUATERNION_FOUR_CHANNEL_RETURN_2026-10-11/02_RESULT_ASSESSMENT.md",
+    "result_sha256": "9e93495e634cc865f963a7caf6e826f70c4974a59afda1d15383579338282ddf",
+    "classification": "EXACT_FOUR_CHANNEL_CONNECTOR_PASS",
+    "finding_id": "F-A0-12",
+    "owner_disposition": "OWNER_ACCEPTED_CLOSED_2026_10_11"
+  },
+  "boundaries": [
+    "Q° is controller metadata and not a fifth quaternion component.",
+    "The Phi embedding is introduced formal design, not historical recovery.",
+    "The 16 and 25 counts remain differently typed grids.",
+    "The 53 and 97 values remain prime-index readouts, not quaternion outputs.",
+    "A generic quaternion rotation is a valid view operator but not a discrete Pascal-carrier automorphism.",
+    "The HTML is not the scientific run; A0-BL-052 is the controlling tested successor and does not change the closed IJQ-01 negative result."
+  ],
+  "return_targets": {
+    "science_lab_lens": "SG:LENS:A0_ORIENTATION_EVIDENCE",
+    "science_lab_route": "#a0-orientation-evidence",
+    "mission_control_projection": "CURRENT/NAVIGATOR_CONTROL.md",
+    "mission_control_return": "00_LAB_RESEARCH_DIRECTOR_DESK/RETURN_2026-10-11_A0_PASCAL_QUATERNION_SWITCHYARD_SYNC.md",
+    "mission_control_source_field": "INTERNAL_NAVIGATOR/catalog.json",
+    "nn_record_play_lens": "SG:LENS:ILAU_ORIENTATION"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "nexah.owner-declared.pq-c30-p4-wobble-contract.v1",
+  "date": "2026-10-12",
+  "authority": "HUMAN_OWNER_DECLARED_CANDIDATE_CONTRACT",
+  "branches": {
+    "P": {
+      "from": 17,
+      "to": 29,
+      "label": "29 is P10, the tenth prime"
+    },
+    "Q": {
+      "from": 18,
+      "to": 36,
+      "label": "18=3x6; 36=6x6=2^2x3^2"
+    }
+  },
+  "wobble": {
+    "period": 4,
+    "description": "an extra tag occurs every four positions",
+    "candidate_full_phase_tag": "p=t mod 4",
+    "candidate_pulse_only": "w=1 iff t mod 4 equals 0"
+  },
+  "boundaries": [
+    "The numerical assignments are Owner-declared and are not recovered historical source facts.",
+    "The phrase every-four wobble does not by itself decide whether the stored datum is the full four-phase residue or only a binary pulse.",
+    "A numeric residue may select a bead phase only under an explicit number-to-bead address convention.",
+    "No X20 adjacency, Q106 intertwiner, physical mechanism, A0 evidence promotion or publication authority is declared."
+  ]
+}

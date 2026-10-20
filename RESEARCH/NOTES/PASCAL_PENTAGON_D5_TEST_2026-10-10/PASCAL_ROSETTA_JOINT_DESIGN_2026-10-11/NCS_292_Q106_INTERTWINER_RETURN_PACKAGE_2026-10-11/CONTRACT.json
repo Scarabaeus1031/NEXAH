@@ -1,0 +1,126 @@
+{
+  "contract_id": "A0-BL-023:NCS_292_Q106_INTERTWINER_RETURN_PACKAGE:V1",
+  "contract_revision": "1.2.0",
+  "date": "2026-10-11",
+  "status": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_PENT_08",
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "source_object": "SCC-003 / Q106",
+    "parent_contract": "A0-BL-023:NCS_292_DUAL_AXIS_Q106_BRIDGE_AUDIT:V1",
+    "creates": []
+  },
+  "question": "Which parts of the historical NCS-292 motion, the D5-invariant Q106 interfaces, the 106=100+6 residual, the recovered base-20 decoder chain, the closed Fibonacci Q5/Q10 controls, and the Janus return laws can be recovered as typed finite mechanisms without conflating state, view, namespace, address, rail, transport, or seam selection?",
+  "modules": [
+    "M1_NCS_OPERATOR_RECOVERY",
+    "M2_Q106_ORBIT_INTERFACE_SEARCH",
+    "M3_ABC_123_RESIDUAL_TEST",
+    "M4_JANUS_RETURN_TEST",
+    "M5_INTERACTIVE_INSTRUMENT",
+    "M6_BASE20_DECODER_D20",
+    "M7_LOSSY_VIEW_P20",
+    "M8_V5_C20_NAMESPACE_SEPARATION",
+    "M9_C30_TO_C6_ADDRESS_BUS",
+    "M10_BETA_JANUS_STOP_GATE",
+    "M11_FIBONACCI_Q5_Q10_RAIL"
+  ],
+  "frozen_sources": {
+    "ncs_script": {
+      "path": "EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/EXPERIMENTS/trinity_euler_riemann_ramanujan/scripts/v2_06_3_cubes_taxicab_regulator.py",
+      "sha256": "188063b6512766ecc05f09e4ada6ab0666c88d75ab73c13392c22dd69a691fca"
+    },
+    "q106_nodes": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/nodes.csv",
+      "sha256": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12"
+    },
+    "q106_edges": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/edges.csv",
+      "sha256": "6309b5c8807cf4d3352500d7eb1e7ce8d0c0da9be68d327c9196f9e54fd742b3"
+    },
+    "q106_automorphisms": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/automorphisms.json",
+      "sha256": "70750da9596d05ebdfac55f8fa46893f469b163751529cb225b2abc19ce5966e"
+    },
+    "a0_bl_045_q5_result": {
+      "root": "ecosystem",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_045_PASCAL_Q5_RETURN_FORK_2026-10-10/artifacts/PRIMARY_RESULT.json",
+      "sha256": "75407a13c602f6d97c8f1d83aa95aa79058e89710a60f963253b26979e3dec9f"
+    },
+    "a0_bl_045_double_pentagon_result": {
+      "root": "ecosystem",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_045_PASCAL_Q5_RETURN_FORK_2026-10-10/artifacts/DOUBLE_PENTAGON_PRIMARY_RESULT.json",
+      "sha256": "2fa814b742161e770501a586a477984f3cd78b0f939d36539e0c4a90dc027155"
+    }
+  },
+  "declared_carrier": {
+    "states": "X40 = C5 x P4 x C2_J",
+    "rotation": "r(s,p,e)=(s+1 mod 5,p,e)",
+    "horizontal_quotient": "q(s,p,e)=(s,p)",
+    "quotient_size": 20,
+    "root_cube_comparator_size": 15
+  },
+  "interface_targets": [15, 20, 40],
+  "residual_candidate": {
+    "equation": "106 = 5*20 + 6",
+    "local_alphabet": "ABC x {+,-}",
+    "typed_warning": "cardinality equality does not define a node map, block system, or operator"
+  },
+  "janus_hypotheses": {
+    "commuting": "Jc(s,p,e)=(s,p,1-e), so Jc r = r Jc",
+    "dihedral": "Jd(s,p,e)=(-s mod 5,p,1-e), so Jd r Jd = r^-1"
+  },
+  "layered_test_contract": {
+    "D20": {
+      "type": "exact state decoder",
+      "map": "D20(n)=(z,y,x) where n=400z+20y+x and 0<=x,y<20",
+      "expected": "exact round trip on the five recovered samples"
+    },
+    "P20": {
+      "type": "lossy display projection",
+      "map": "P20(z,y,x)=(x+y/2,z)",
+      "expected": "non-injective; collision is INFORMATION_LOST_AS_EXPECTED, not a decoder failure"
+    },
+    "namespace_boundary": {
+      "types": ["V5={-2,-1,0,+1,+2}", "C20=Z/20Z"],
+      "expected": "distinct carriers; no identity or typed map inferred from the shared legacy word vendissimal"
+    },
+    "address_bus": {
+      "map": "pi6:C30->C6, pi6(k)=k mod 6",
+      "expected": "six fibres of size five and phase successor 29->0"
+    },
+    "beta_janus_gate": {
+      "beta": "bijection from the six residual labels to six compatible seam choices",
+      "candidate_count": 720,
+      "expected": "open: beta=null and historical Janus selection=null"
+    },
+    "fibonacci_rail": {
+      "operator": "Q=[[1,1],[1,0]]",
+      "controls": ["Q^5=[[8,5],[5,3]]", "Q^10=[[89,55],[55,34]]"],
+      "expected": "exact rail and signed reciprocal-return controls; no seam selection and no typed transport to D20, C20, X20, X40, or Q106"
+    }
+  },
+  "outcomes": [
+    "RECOVERED_LAYERED_PIPELINE_WITH_OPEN_FIBONACCI_TRANSPORT_BETA_JANUS",
+    "RECOVERED_LAYERED_PIPELINE_WITH_OPEN_BETA_JANUS",
+    "RECOVERED_TRANSLATION_WITH_TYPED_Q106_INTERFACES",
+    "RECOVERED_TRANSLATION_OPEN_INTERTWINER",
+    "ARITHMETIC_ONLY",
+    "CONTRACT_INVALID"
+  ],
+  "stop_rule": "Stop before identifying NCS with a package permutation, treating P20 as invertible, identifying V5 with C20, treating a C6 address as a selected seam, using Q^5 determinant -1 to select Mobius topology, treating the Fibonacci rail as a state transport into D20/C20/X20/X40/Q106, identifying the 20-interface with an adjacency-preserving carrier image, identifying the six-node residual with ABC states, or selecting beta or either Janus law historically unless an explicit typed map or source law exists.",
+  "claim_boundary": [
+    "formal finite replay and design validation only; not an admitted Study or PENT-08",
+    "the historical NCS animation recovers a common planar translation and identity label action, not a four-package permutation",
+    "D5-invariant subset existence does not provide an adjacency-preserving intertwiner from X20 or X40",
+    "106=5*20+6 is tested as a cardinality split; five 20-node blocks and an ABC labeling remain undefined",
+    "both Janus laws are valid candidate algebras; the sources do not select one",
+    "D20 is exact on the tested integers while P20 is deliberately lossy and must not be inverted",
+    "V5 and C20 remain separate typed namespaces despite shared legacy terminology",
+    "C30-to-C6 is an address projection with six five-element fibres; it does not choose a seam binding",
+    "720 beta candidates remain and no canonical beta is selected",
+    "Q^5 and Q^10 are exact Fibonacci rail controls reused from closed A0-BL-045; determinant -1 does not select seam topology",
+    "the signed reciprocal bridge is a conditional return law with explicitly supplied inverse leg and sign, not a recovered cross-carrier transport",
+    "no typed Fibonacci-to-D20, C20, X20, X40, or Q106 state map is supplied",
+    "the HTML is an instrument over this result and adds no evidence authority",
+    "no physical, E8, H3, prime-selector, resonance, identity, or publication claim"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "base_label_set_sums_to_40": true,
+    "complementary_pairs_sum_to_20": true,
+    "drawn_five_position_sum_is_443_not_360": true,
+    "drawn_pentagon_has_five_positions_but_only_four_unique_labels": true,
+    "four_printed_labels_are_prime": true,
+    "four_printed_labels_sum_to_360": true,
+    "printed_quotient_rounds_to_0_000039": true,
+    "three_angle_interpretation_51_78_78_fails": true,
+    "three_dimensional_contract_is_incomplete": true,
+    "upper_pair_sums_to_30": true
+  },
+  "claim_ceiling": "Arithmetic identities and contradictions only; no pentagonal invariant, resonance law, historical meaning, physical mechanism or 3D pyramid is established.",
+  "classification": "BOUNDED_LABEL_AUDIT_NOT_ADMITTED",
+  "inputs": {
+    "base_label_set": [3, 7, 13, 17],
+    "conditional_angle_reading": [51, 78, 78],
+    "five_drawn_positions": [43, 83, 83, 97, 137],
+    "four_label_identity": [43, 97, 83, 137]
+  },
+  "result": {
+    "five_position_sum": 443,
+    "four_label_sum": 360,
+    "label_mapping_between_plates": "UNDEFINED",
+    "quotient": 3.898504696791531e-05,
+    "resonance_measure": "UNDEFINED",
+    "three_dimensional_lift": "NOT_READY",
+    "unique_pentagon_labels": 4
+  },
+  "schema": "nexah.pascal-pentagon-label-audit/1.0.0",
+  "status": "PASS_WITH_BOUNDARY"
+}

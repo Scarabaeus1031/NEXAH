@@ -1,0 +1,101 @@
+{
+  "contract_id": "A0-BL-023:NCS_292_DUAL_AXIS_Q106_BRIDGE_AUDIT:V1",
+  "date": "2026-10-11",
+  "status": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_PENT_08",
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "source_object": "SCC-003 / Q106",
+    "parent_contract": "A0-BL-023:PASCAL_ROSETTA_D30_AUDIT:V1",
+    "creates": []
+  },
+  "question": "Can the historical 292 NCS four-point control, the adjacent 97-101 and 97-103 cuts, a declared four-package two-layer carrier, and the frozen Q106 Pascal quotient be connected by typed maps rather than number recurrence alone?",
+  "frozen_sources": {
+    "ncs_readme": {
+      "path": "EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/EXPERIMENTS/trinity_euler_riemann_ramanujan/README.md",
+      "sha256": "94c85b099d26eb1b13a55f10a1f4d82441ba1b8eccd06e13290b0e077b422c35"
+    },
+    "ncs_script": {
+      "path": "EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/EXPERIMENTS/trinity_euler_riemann_ramanujan/scripts/v2_06_3_cubes_taxicab_regulator.py",
+      "sha256": "188063b6512766ecc05f09e4ada6ab0666c88d75ab73c13392c22dd69a691fca"
+    },
+    "q106_nodes": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/nodes.csv",
+      "sha256": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12"
+    },
+    "q106_edges": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/edges.csv",
+      "sha256": "6309b5c8807cf4d3352500d7eb1e7ce8d0c0da9be68d327c9196f9e54fd742b3"
+    }
+  },
+  "owner_visual_comparators": [
+    {
+      "role": "transition-gates-and-inbetween-geometry",
+      "sha256": "e47385465af1d08bc8219113c3908c900a90afb499a22130b3e238353b30a21f",
+      "declares": ["four gate roles", "gap as transition zone", "return loop"]
+    },
+    {
+      "role": "transition-gap-and-root-thread",
+      "sha256": "88424557ced01372b86c7894e5bb0435b05f32ab0d27fc0edf53ed7ceb989de5",
+      "declares": ["292 switch at critical crossing", "root thread return", "Root Cube v15 with 15 primary nodes"]
+    },
+    {
+      "role": "trinomial-antipode",
+      "sha256": "4e28c4699d5497dbb2efd879d7e6fe309587320333a3d3807749617c669d1f16",
+      "declares": ["three local paths", "orientation sign", "97-101-103 handle"]
+    },
+    {
+      "role": "adjacent-prime-axis",
+      "sha256": "574fbdb4768b171858a7976647225906f83bef6dd2615922faf7f65cd8b0bfe3",
+      "declares": ["97-101 midpoint 99", "97-103 midpoint 100"]
+    },
+    {
+      "role": "trinomial-antipode-addendum",
+      "sha256": "9d4e93685078b240259ad767b533d72ddcfc279ca8b6e8f10fa670039a933495",
+      "declares": ["P25=97", "P26=101", "P27=103", "typed roles remain separate"]
+    },
+    {
+      "role": "nested-prime-chain-mobius-loop",
+      "sha256": "5f9b8718f5fcb4bd0df54bf1e256a77104fce97bc450c74ef0b48267e68f1e46",
+      "declares": ["consecutive prime-index triplet", "Exit (26)", "hinge and reflection"]
+    }
+  ],
+  "typed_candidate": {
+    "sectors": "C5",
+    "packages": ["carrier", "frame_cut", "transform_view", "return_record"],
+    "janus_layers": ["A", "B"],
+    "unfolded_state": "(sector, package, layer) in C5 x P4 x C2_J",
+    "unfolded_cardinality": 40,
+    "horizontal_gluing": "(sector, package, A) ~ (sector, package, B)",
+    "quotient_cardinality": 20,
+    "root_cube_primary_nodes": 15,
+    "root_cube_role": "visual comparator only; not multiplied into the carrier"
+  },
+  "axis_contract": {
+    "xi_hinge": {"left": 97, "right": 101, "midpoint": 99},
+    "janus_axis": {"left": 97, "right": 103, "midpoint": 100},
+    "expected_right_endpoint_shift": 2,
+    "expected_midpoint_shift": 1,
+    "candidate_exit": {"source": 103, "step": 3, "target": 106}
+  },
+  "maps_required_for_identity": {
+    "ncs_points_to_packages": null,
+    "base20_quotient_to_q106": null,
+    "root_cube15_to_q106": null
+  },
+  "outcomes": [
+    "COMPILED_WITH_TYPED_INTERTWINERS",
+    "COMPILED_40_TO_20_CANDIDATE_OPEN_INTERTWINERS",
+    "ARITHMETIC_ONLY",
+    "CONTRACT_INVALID"
+  ],
+  "stop_rule": "Stop before operator identity if the NCS source supplies motion without a typed four-package permutation, or if no explicit adjacency-preserving map from the 20 quotient classes to Q106 is declared.",
+  "claim_boundary": [
+    "formal finite candidate validation only; not an admitted Study or PENT-08",
+    "owner visuals are hashed comparators and not executable evidence",
+    "292 is tested as an arithmetic word and historical four-point mover, not presumed to be a recovered operator law",
+    "the 40-to-20 quotient is a declared candidate construction, not a recovered historical mechanism",
+    "103+3=106 is a numeric bridge only until a node and edge map to Q106 is supplied",
+    "the Root Cube count 15 is source-local visual metadata and is not identified with the Pascal carrier",
+    "no physical, prime-selector, H3, E8, resonance or publication claim"
+  ]
+}

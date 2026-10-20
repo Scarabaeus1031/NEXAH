@@ -1,0 +1,93 @@
+{
+  "contract_id": "A0-BL-023:Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT:V1",
+  "date": "2026-10-11",
+  "classification": "PASS_EXACT_ORBIT_PRIME_RADIX_ROOT_GROWTH_WITH_FRACTAL_OPEN",
+  "summary": {
+    "passed": 28,
+    "total": 28,
+    "failed": 0
+  },
+  "source_hashes_verified": {
+    "parent_contract": "79a614a7806fad3084142c813f3d37d96d7253b637c32dff37f1be918f60295c",
+    "parent_result": "bde2386627926326602e089676c2c7a15747d5fbfce8a78f411c0221fc1d10a9",
+    "q106_nodes": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12",
+    "q106_automorphisms": "70750da9596d05ebdfac55f8fa46893f469b163751529cb225b2abc19ce5966e"
+  },
+  "modules": {
+    "M1_Q106_ROOT_GROWTH": {
+      "status": "PASS",
+      "level_counts": [1, 5, 10, 15, 20, 25, 30],
+      "q_sequence": [1, 6, 16, 31, 51, 76, 106],
+      "first_differences": [5, 10, 15, 20, 25, 30],
+      "second_differences": [5, 5, 5, 5, 5],
+      "residual_sequence": [105, 100, 90, 75, 55, 30, 0],
+      "residual_second_differences": [-5, -5, -5, -5, -5],
+      "parity": ["odd", "even", "even", "odd", "odd", "even", "even"]
+    },
+    "M2_235_SEED": {
+      "status": "PASS_WITH_TYPED_BOUNDARY",
+      "exact": ["2+3=5", "2*3=6=Q1", "Q2=16=2^4"],
+      "ratio": "2/3 = 0.666...; not integer 6",
+      "external_comparator": "2^3=8; 8 is absent from the Q sequence"
+    },
+    "M3_ORBIT_PRIME_INDEX_JOINT": {
+      "status": "PASS",
+      "orbit_profile": {"1": 1, "5": 9, "10": 6},
+      "O": 16,
+      "F": 9,
+      "L": 25,
+      "relations": ["O+F=L", "p16=53", "p25=97", "106=2*p16", "106-F=p25", "53+97=150"],
+      "prime_index_steps": 9,
+      "primes_strictly_between": 8
+    },
+    "M4_D5_HALF_OBSTRUCTION": {
+      "status": "PASS_NEGATIVE",
+      "target": 53,
+      "target_mod_5": 3,
+      "invariant_orbit_unions": 0,
+      "reason": "unions of orbit sizes 1, 5 and 10 have cardinality congruent to 0 or 1 mod 5"
+    },
+    "M5_RADIX_MIRROR": {
+      "status": "PASS_COORDINATE_DEPENDENT",
+      "coordinates": {
+        "53": {"20": [2, 13], "40": [1, 13], "50": [1, 3]},
+        "97": {"20": [4, 17], "40": [2, 17], "50": [1, 47]},
+        "100": {"20": [5, 0], "40": [2, 20], "50": [2, 0]},
+        "106": {"20": [5, 6], "40": [2, 26], "50": [2, 6]},
+        "150": {"20": [7, 10], "40": [3, 30], "50": [3, 0]}
+      },
+      "base20_to_base40": "53 and 97 preserve their columns while rows halve; 106 does not",
+      "J50": {"definition": "150-x", "swap": [53, 97], "fixed_point": 75, "involution": true}
+    },
+    "M6_FRACTAL_BOUNDARY": {
+      "status": "NOT_ESTABLISHED",
+      "quadratic_growth": true,
+      "constant_scale_ratio": false,
+      "recursive_substitution_supplied": false,
+      "scale_ratios": ["6", "8/3", "31/16", "51/31", "76/51", "53/38"]
+    }
+  },
+  "interpretation": {
+    "retained": [
+      "2-3-5 seed as exact arithmetic input to the fivefold triangular growth law",
+      "distinct parity and discrete-curvature observables",
+      "orbit-count and final-level-count prime-index bridge",
+      "coordinate-defined radix mirror"
+    ],
+    "rejected": [
+      "2/3 equals integer 6",
+      "2^3=8 is a recovered Q106 level count",
+      "53 is a D5-invariant half of Q106",
+      "quadratic growth alone proves a fractal"
+    ],
+    "open": [
+      "recursive root substitution law",
+      "scale-stable self-similarity",
+      "intrinsic graph meaning for the base-50 involution"
+    ]
+  },
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "creates": []
+  }
+}

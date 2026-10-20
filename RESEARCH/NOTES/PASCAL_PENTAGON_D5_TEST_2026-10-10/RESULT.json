@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "all_d5_actions_preserve_weights_and_recurrence_edges": true,
+    "all_ten_d5_actions_are_distinct": true,
+    "five_nadir_20_nodes_form_one_rotation_orbit": true,
+    "five_raw_faces_have_140_nodes": true,
+    "glued_fan_has_106_unique_nodes": true,
+    "glued_fan_is_connected": true,
+    "m_pow_2_is_identity": true,
+    "m_r_m_equals_r_inverse": true,
+    "nadir_20_set_is_preserved_by_d5": true,
+    "pascal_side_chains_are_weight_compatible_for_gluing": true,
+    "r_pow_5_is_identity": true
+  },
+  "claim_ceiling": "Finite binomial face-complex and D5 symmetry fixture only; no universal Pascal algebra, physical five-stage mechanism, or four-layer interior is established.",
+  "classification": "BOUNDED_CANDIDATE_EVIDENCE_NOT_ADMITTED",
+  "parameters": {
+    "depth": 6,
+    "faces": 5,
+    "layers": 7
+  },
+  "result": {
+    "base_center_orbit_size": 5,
+    "base_center_weight": 20,
+    "component_count_after_gluing": 1,
+    "four_inner_layers_interpretation": "UNDEFINED_IN_CURRENT_CONTRACT",
+    "operator_group": "D5",
+    "operator_group_order": 10,
+    "quotient_edge_count": 180,
+    "quotient_node_count": 106,
+    "raw_node_count": 140,
+    "rotation_subgroup": "C5",
+    "working_label": "Pascal pentagon",
+    "working_object": "five-face glued Pascal fan"
+  },
+  "schema": "nexah.pascal-pentagon-d5-test/1.0.0",
+  "status": "PASS"
+}

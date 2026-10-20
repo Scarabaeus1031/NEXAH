@@ -1,0 +1,134 @@
+{
+  "schema": "nexah.formal-source-contract-ledger/1.0.0",
+  "sources": [
+    {
+      "source_id": "SRC:X20:NCS_SCRIPT",
+      "root": "ecosystem",
+      "path": "10 NEXAH CORE/NEXAH/EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/EXPERIMENTS/trinity_euler_riemann_ramanujan/scripts/v2_06_3_cubes_taxicab_regulator.py",
+      "sha256": "188063b6512766ecc05f09e4ada6ab0666c88d75ab73c13392c22dd69a691fca",
+      "carrier": "four labelled 3D points",
+      "operator": "common x/y sinusoidal translation with z and point order fixed",
+      "x20_state_map": null,
+      "x20_adjacency": null,
+      "authority": "historical executable source"
+    },
+    {
+      "source_id": "SRC:X20:DUAL_AXIS_CONTRACT",
+      "root": "ecosystem",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_DUAL_AXIS_Q106_BRIDGE_AUDIT_2026-10-11/FORMAL_CONTRACT.md",
+      "sha256": "09bceee72068a79c55dffb7d63c0d856c4e1d9b225829a190c4ea5afa879a8a0",
+      "carrier": "declared X40=C5 x P4 x C2_J and quotient X20=C5 x P4",
+      "operator": "C5 rotation and horizontal layer quotient",
+      "x20_state_map": "declared state coordinates only",
+      "x20_adjacency": null,
+      "authority": "parent formal design contract"
+    },
+    {
+      "source_id": "SRC:X20:PARENT_CONTRACT",
+      "root": "ecosystem",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/CONTRACT.json",
+      "sha256": "ad9033568da4d7f2ea72ae2384554c689338ca08b3ffc9384588331d14bf75d5",
+      "carrier": "X40 with X20 quotient",
+      "operator": "rotation plus two candidate Janus laws",
+      "x20_state_map": "quotient coordinates",
+      "x20_adjacency": null,
+      "authority": "parent package contract"
+    },
+    {
+      "source_id": "SRC:X20:PRIOR_AUDIT",
+      "root": "ecosystem",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/NCS_X20_Q106_ADJACENCY_INTERTWINER_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "c89b58bd8178fde96b5669136450e1dddd8ef60c04c28449cfcdfdcc8fd0796e",
+      "carrier": "X20 and unique connected twenty-node Q106 target interface",
+      "operator": "C5 and candidate D5 equivariance",
+      "x20_state_map": "15000 C5 and 24 candidate D5 charts counted but not selected",
+      "x20_adjacency": null,
+      "authority": "immediate predecessor null-contract result"
+    },
+    {
+      "source_id": "SRC:X20:MRB06",
+      "root": "ecosystem",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/mrb/MRB06_KL_SPLIT_ROTATION_RETURN/MRB06_RESULTS.json",
+      "sha256": "032145a21e281b2a8c39635d6d85f9ad07bc7e5b73c3c8512eb7a72cc91eae59",
+      "carrier": "Z14",
+      "operator": "R, H=R^7 and typed K/L split",
+      "x20_state_map": null,
+      "x20_adjacency": null,
+      "authority": "separate exact MRB result; no transport to X20"
+    },
+    {
+      "source_id": "SRC:X20:MRB09",
+      "root": "ecosystem",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/mrb/MRB09_GRID_ZIPPER_CENTER_RETURN/MRB09_RESULTS.json",
+      "sha256": "075c034f377f2679d2cd015c533229edd16230f541a6c2ff1f3adf9ea032a6bb",
+      "carrier": "six-node partial 2x3 grid plus typed zipper",
+      "operator": "partial R/U grid maps, reversal and one auxiliary bit",
+      "x20_state_map": null,
+      "x20_adjacency": null,
+      "authority": "separate exact MRB result; no transport to X20"
+    },
+    {
+      "source_id": "SRC:X20:MRB10",
+      "root": "ecosystem",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/mrb/MRB10_YT_PASCAL_THREAD_GRID/MRB10_RESULTS.json",
+      "sha256": "47d004356ad7a45fbe78b57a1a7733da22ead41f937c8566c66940650efe4200",
+      "carrier": "Y/T incidence and Pascal thread multiplicities",
+      "operator": "path-count recurrence and representation comparison",
+      "x20_state_map": null,
+      "x20_adjacency": null,
+      "authority": "separate exact MRB result; shared graph vocabulary is not a carrier map"
+    },
+    {
+      "source_id": "SRC:X20:ACR44",
+      "root": "ecosystem",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/acr/NEXAH_ACR44_RESULTS.json",
+      "sha256": "2d013a7437664d49328367319e4dd03813e2dab3c4300e0fa5887124aeb37f46",
+      "carrier": "two-axis signal and Lissajous state space",
+      "operator": "linear M/S basis change with metadata gate",
+      "x20_state_map": null,
+      "x20_adjacency": null,
+      "authority": "separate signal reconstruction result"
+    },
+    {
+      "source_id": "SRC:X20:OIL_RIS",
+      "root": "ecosystem",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_OIL_RIS_VERTICAL_UTILITY_PILOT_2026-10-07/NEXAH_OIL_RIS_VERTICAL_UTILITY_RETURN.html",
+      "sha256": "2be9caa4ec6f292482fc83164b696c6e4746c57cdc9de9ab5736cffbf23ca7c4",
+      "carrier": "explanatory A-B-C-D-AE-A-prime return grammar",
+      "operator": "outer/inner/link rotation-inversion-shift with memory",
+      "x20_state_map": null,
+      "x20_adjacency": null,
+      "authority": "explanatory surface; no formal X20 carrier contract"
+    },
+    {
+      "source_id": "SRC:X20:TRIPLE19_BINDING",
+      "root": "ecosystem",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_PRIMEGRID_BLOCK02B_TRINARY_PASCAL_ANTIPODE_2026-10-07/TRIPLE19_ANTIPODE_PAIR_BRIDGE_BINDING.json",
+      "sha256": "2e20786a1c2c829acccef86af9c953e8d231602f68e0e8b642d88d2e7e69d786",
+      "carrier": "fourteen oriented states P_c(r), P_d(r), r=0..6",
+      "operator": "A exchanges P_c(r) with P_d(6-r)",
+      "x20_state_map": null,
+      "x20_adjacency": null,
+      "authority": "supporting representation bridge with explicitly null intertwiner"
+    },
+    {
+      "source_id": "SRC:X20:TRIPLE19_ADDENDUM",
+      "root": "ecosystem",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_PRIMEGRID_BLOCK02B_TRINARY_PASCAL_ANTIPODE_2026-10-07/03_TRIPLE19_ANTIPODE_PAIR_BRIDGE_ADDENDUM.md",
+      "sha256": "aea673d53ee59ba6e26763403b46658da9ae6d012ecda79c029de9f4103d98a7",
+      "carrier": "seven-site symmetric row with orientation sign",
+      "operator": "fixed-point-free oriented antipode A",
+      "x20_state_map": null,
+      "x20_adjacency": null,
+      "authority": "typed source for constructors P_c/P_d and involution A"
+    }
+  ],
+  "review_conclusion": {
+    "x20_edge_set": null,
+    "x20_edge_types": null,
+    "triple19_to_x20_map": null,
+    "triple19_to_q106_map": null,
+    "source_contract_complete": false,
+    "target_chart_evaluation_permitted": false
+  }
+}

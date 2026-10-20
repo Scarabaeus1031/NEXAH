@@ -1,0 +1,292 @@
+{
+  "id": "LIFE08-PACKAGE-AUDIT",
+  "status": "PASS",
+  "passed": 71,
+  "total": 71,
+  "checks": [
+    {
+      "id": "file:index.html",
+      "pass": true
+    },
+    {
+      "id": "file:styles.css",
+      "pass": true
+    },
+    {
+      "id": "file:app.js",
+      "pass": true
+    },
+    {
+      "id": "file:cylinder-engine.js",
+      "pass": true
+    },
+    {
+      "id": "file:crystal-projection.js",
+      "pass": true
+    },
+    {
+      "id": "file:crystal-scene.js",
+      "pass": true
+    },
+    {
+      "id": "file:cylinder-comparison.js",
+      "pass": true
+    },
+    {
+      "id": "file:crystal-tests.cjs",
+      "pass": true
+    },
+    {
+      "id": "file:ncs-return-lens.js",
+      "pass": true
+    },
+    {
+      "id": "file:ncs-return-lens.css",
+      "pass": true
+    },
+    {
+      "id": "file:ncs-return-lens-tests.cjs",
+      "pass": true
+    },
+    {
+      "id": "file:logarithmic-gearbox.js",
+      "pass": true
+    },
+    {
+      "id": "file:logarithmic-gearbox.css",
+      "pass": true
+    },
+    {
+      "id": "file:logarithmic-gearbox-tests.cjs",
+      "pass": true
+    },
+    {
+      "id": "file:SOURCE_BINDING.json",
+      "pass": true
+    },
+    {
+      "id": "file:orbit-regression.cjs",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/index.html",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/domain-engine.js",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/euler-view.js",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/euler-view.css",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/README.md",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/tests.cjs",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/transition-montage.js",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/transition-montage.css",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/replication-inline.js",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/replication-inline.css",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/replication-matrix/index.html",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/replication-matrix/app.js",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/replication-matrix/styles.css",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/replication-matrix/controls.css",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/replication-matrix/replication-engine.js",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/replication-matrix/tests.cjs",
+      "pass": true
+    },
+    {
+      "id": "file:three-domain-transition-test/replication-matrix/README.md",
+      "pass": true
+    },
+    {
+      "id": "file:vendor/three-0.147.0/three.min.js",
+      "pass": true
+    },
+    {
+      "id": "file:vendor/three-0.147.0/OrbitControls.js",
+      "pass": true
+    },
+    {
+      "id": "file:vendor/three-0.147.0/GLTFExporter.js",
+      "pass": true
+    },
+    {
+      "id": "file:vendor/three-0.147.0/LICENSE",
+      "pass": true
+    },
+    {
+      "id": "file:PREREGISTRATION.json",
+      "pass": true
+    },
+    {
+      "id": "file:PREREGISTRATION_LOCK.json",
+      "pass": true
+    },
+    {
+      "id": "file:RUN_CONTRACT.md",
+      "pass": true
+    },
+    {
+      "id": "file:04_POST_CLOSE_INSTRUMENT_FREEZE_2026-10-12.md",
+      "pass": true
+    },
+    {
+      "id": "file:freeze-instrument.cjs",
+      "pass": true
+    },
+    {
+      "id": "file:results/PRIMARY_RESULT.json",
+      "pass": true
+    },
+    {
+      "id": "file:results/REPLAY_RESULT.json",
+      "pass": true
+    },
+    {
+      "id": "file:results/LIFE08_VALIDATION_REPORT.json",
+      "pass": true
+    },
+    {
+      "id": "file:results/study-results.js",
+      "pass": true
+    },
+    {
+      "id": "file:zero-insertion-gate.css",
+      "pass": true
+    },
+    {
+      "id": "byte-identical-replay",
+      "pass": true
+    },
+    {
+      "id": "html-has-view-dynamics-split",
+      "pass": true
+    },
+    {
+      "id": "html-has-life-crystal-observatory",
+      "pass": true
+    },
+    {
+      "id": "crystal-declares-projection-boundary",
+      "pass": true
+    },
+    {
+      "id": "boundary-window-separates-view-and-dynamics",
+      "pass": true
+    },
+    {
+      "id": "orbit-camera-persists-across-live-rebuilds",
+      "pass": true
+    },
+    {
+      "id": "replication-matrix-preserves-claim-boundary",
+      "pass": true
+    },
+    {
+      "id": "three-domain-page-integrates-replication-layer",
+      "pass": true
+    },
+    {
+      "id": "ncs-return-lens-is-non-evidentiary-and-null-safe",
+      "pass": true
+    },
+    {
+      "id": "ncs-return-lens-reuses-navigator-source-identity",
+      "pass": true
+    },
+    {
+      "id": "ncs-pbq-pearl-is-addressed-binder-not-generator",
+      "pass": true
+    },
+    {
+      "id": "ncs-return-challenge-exposes-four-to-one-information-boundary",
+      "pass": true
+    },
+    {
+      "id": "ncs-40-43-distribution-separates-sourced-and-declared-roles",
+      "pass": true
+    },
+    {
+      "id": "ncs-17-18-19-return-triplet-preserves-open-q19-tag",
+      "pass": true
+    },
+    {
+      "id": "ncs-mediator-42-separates-return-period-and-prime-readout",
+      "pass": true
+    },
+    {
+      "id": "ncs-double-mirror-bridge-is-exact-and-owner-bounded",
+      "pass": true
+    },
+    {
+      "id": "root-seed-gate-verifies-algebra-and-preserves-open-transport",
+      "pass": true
+    },
+    {
+      "id": "logarithmic-gearbox-separates-exact-math-from-declared-stencil",
+      "pass": true
+    },
+    {
+      "id": "prime-channel-is-generation-synchronized-view-adapter",
+      "pass": true
+    },
+    {
+      "id": "life06d-is-bound-as-non-identity-type-control",
+      "pass": true
+    },
+    {
+      "id": "exact-transition-montage-reuses-a0-identity-with-boundary",
+      "pass": true
+    },
+    {
+      "id": "transition-ledger-is-exact-and-address-complete",
+      "pass": true
+    },
+    {
+      "id": "three-domain-euler-view-is-readout-not-fourth-domain",
+      "pass": true
+    },
+    {
+      "id": "post-close-freeze-preserves-authority-boundary",
+      "pass": true
+    }
+  ]
+}

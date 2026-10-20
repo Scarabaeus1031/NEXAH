@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WINDOW 03 · Three-Domain Transition Test</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="transition-montage.css">
+  <link rel="stylesheet" href="replication-inline.css">
+  <link rel="stylesheet" href="euler-view.css">
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <p class="eyebrow">NEXAH SCIENCE LAB · WINDOW 03 · EXPLORATORY MODEL BENCHMARK</p>
+      <h1>Three-Domain Transition Test</h1>
+      <p class="lede">Three independent operators. One declared 4+1 observation grammar. Comparable relations do not imply identical objects, causes or mechanisms.</p>
+    </div>
+    <div class="status"><span>AUTHORITY</span><b>UNADMITTED · MODEL-ONLY</b><small>LIFE08 reference lens</small></div>
+  </header>
+
+  <section class="controls" aria-label="Simulation controls">
+    <button id="play" class="primary" type="button">Start</button>
+    <button id="step" type="button">Step +1</button>
+    <button id="reset" type="button">Reset</button>
+    <label>Boundary
+      <select id="boundary"><option value="open">Native open edge</option><option value="cylinder-x" selected>Cylinder X</option></select>
+    </label>
+    <label>Chem threshold <b id="thresholdValue">0.22</b>
+      <input id="threshold" type="range" min="0.10" max="0.40" step="0.01" value="0.22">
+    </label>
+    <label>Speed
+      <select id="speed"><option value="700">0.5×</option><option value="360" selected>1×</option><option value="180">2×</option><option value="90">4×</option></select>
+    </label>
+    <label class="check"><input id="loop" type="checkbox" checked> Loop 240</label>
+    <span id="runStatus" aria-live="polite">Paused · generation 0 / 240</span>
+  </section>
+
+  <section class="domain-grid" aria-label="Independent model domains">
+    <article data-domain="chemistry">
+      <div class="domain-head"><div><p>LEFT · CHEMICAL MODEL</p><h2>Reaction–Diffusion</h2></div><span>Gray–Scott</span></div>
+      <p class="boundary-note">Continuous concentrations <i>u,v</i>; the 4+1 reader sees a declared thresholded field.</p>
+      <canvas id="chemistryCanvas" width="520" height="690" aria-label="Reaction diffusion field and four transition layers"></canvas>
+      <div class="metrics"><div><span>β₀ components</span><b id="chemistryB0">—</b></div><div><span>β₁ cycles</span><b id="chemistryB1">—</b></div><div><span>events</span><b id="chemistryEvents">—</b></div><div><span>boundary Δ</span><b id="chemistryResidual">—</b></div></div>
+    </article>
+    <article data-domain="life">
+      <div class="domain-head"><div><p>CENTER · ARTIFICIAL LIFE</p><h2>Conway B3/S23</h2></div><span>binary CA</span></div>
+      <p class="boundary-note">Exact binary cells; Birth, Survive and Death are native transition events.</p>
+      <canvas id="lifeCanvas" width="520" height="690" aria-label="Conway Life field and four transition layers"></canvas>
+      <div class="metrics"><div><span>β₀ components</span><b id="lifeB0">—</b></div><div><span>β₁ cycles</span><b id="lifeB1">—</b></div><div><span>events</span><b id="lifeEvents">—</b></div><div><span>boundary Δ</span><b id="lifeResidual">—</b></div></div>
+    </article>
+    <article data-domain="physics">
+      <div class="domain-head"><div><p>RIGHT · PHYSICAL MODEL</p><h2>Spin Field</h2></div><span>Glauber-like</span></div>
+      <p class="boundary-note">Deterministic-seed stochastic replay; positive and negative spin flips remain distinct.</p>
+      <canvas id="physicsCanvas" width="520" height="690" aria-label="Spin field and four transition layers"></canvas>
+      <div class="metrics"><div><span>β₀ components</span><b id="physicsB0">—</b></div><div><span>β₁ cycles</span><b id="physicsB1">—</b></div><div><span>events</span><b id="physicsEvents">—</b></div><div><span>boundary Δ</span><b id="physicsResidual">—</b></div></div>
+    </article>
+    <article data-domain="euler">
+      <div class="domain-head"><div><p>FOURTH · SHARED MATHEMATICAL VIEW</p><h2>Euler View</h2></div><span>projection only</span></div>
+      <p class="boundary-note">The three transition ledgers become complex phasors. This compares their readouts without creating a fourth model operator.</p>
+      <canvas id="eulerCanvas" width="520" height="690" aria-label="Euler complex-plane projection of the three transition domains"></canvas>
+      <div class="metrics"><div><span>|Z̄| coherence</span><b id="eulerCoherence">—</b></div><div><span>Σ events</span><b id="eulerEvents">—</b></div><div><span>zero gate</span><b id="eulerZero">—</b></div><div><span>prime axis</span><b id="eulerAxis">—</b></div></div>
+    </article>
+  </section>
+
+  <section class="euler-motor" id="eulerMotor" data-clock="three-domain" aria-labelledby="eulerMotorTitle">
+    <div class="euler-motor-head">
+      <div><p class="eyebrow">03·E · EULER VIEW · SHARED CLOCK ADAPTER</p><h2 id="eulerMotorTitle">Arithmetic step ⇄ exponential scale</h2><p>The common generation advances by <b>+1</b>; Euler's coordinate reads the same address as <b>eⁿ</b>. The view also drives the exact zero-insertion and prime-axis handles.</p></div>
+      <div class="euler-motor-status"><span>VIEW STATUS</span><b>3 DOMAINS → 1 EULER READOUT</b><small>no dynamics effect</small></div>
+    </div>
+    <div class="euler-motor-controls">
+      <div class="euler-base-buttons" aria-label="Select exponential base">
+        <button type="button" data-euler-base="euler" aria-pressed="true">e</button>
+        <button type="button" data-euler-base="two" aria-pressed="false">2</button>
+        <button type="button" data-euler-base="phi" aria-pressed="false">φ</button>
+        <button type="button" data-euler-base="root2" aria-pressed="false">√2</button>
+        <button type="button" data-euler-base="napier" aria-pressed="false">1−10⁻⁷</button>
+      </div>
+      <label>Phase n <input id="eulerPhase" type="range" min="0" max="7" value="0"><b id="eulerPhaseValue">0</b></label>
+      <button id="eulerStep" type="button">Step shared clock +1</button>
+      <label class="euler-follow"><input id="eulerFollow" type="checkbox" checked> Follow Three-Domain clock</label>
+    </div>
+    <div class="euler-live-path" id="eulerLivePath" data-mode="clock" aria-live="polite"><span>LIVE</span><b id="eulerGeneration">g0</b><i>→</i><b id="eulerN">n0</b><i>→</i><b id="eulerPower">e⁰ = 1</b><i>→</i><b id="eulerZeroValue">11</b><i>→</i><b id="eulerAxisValue">XI · 99</b></div>
+    <div class="euler-dual-readout">
+      <div><span>ARITHMETIC</span><b id="eulerArithmetic">0 → 1</b><code>n → n+1</code></div>
+      <div class="euler-keystone"><span>KEYSTONE</span><b>0 ⇄ 1</b><code id="eulerOperator">+1 ⇄ ×e</code></div>
+      <div><span>GEOMETRIC</span><b id="eulerGeometric">1 → 2.718282</b><code id="eulerFormula">Gₙ=eⁿ · ln(Gₙ)=n</code></div>
+    </div>
+    <div class="euler-rail" id="eulerRail" aria-label="Eight-step Euler address rail"></div>
+    <div class="euler-motor-grid">
+      <article><span>ZERO-INSERTION</span><h3 id="eulerZeroTitle">11</h3><div class="euler-zero-ladder" id="eulerZeroLadder"></div><code>aₙ=10ⁿ⁺¹+1 · aₙ₊₁=10aₙ−9</code></article>
+      <article><span>PRIME AXIS + CHANNEL</span><h3 id="eulerAxisTitle">XI hinge · 97—99—101</h3><div class="euler-axis-line"><b>97</b><i></i><b id="eulerAxisCenter">99</b><i></i><b id="eulerAxisRight">101</b></div><strong class="euler-channel" id="eulerPrimeChannel">k0 · P21=73 · c0=101</strong><code>axis = g mod 2 · channel k = g mod 6</code></article>
+      <article><span>BASE-50 RETURN</span><h3>53 ↔ 75 ↔ 97</h3><div class="euler-mirror"><b>53</b><i>J₅₀</i><b>75</b><i>J₅₀</i><b>97</b></div><code>J₅₀(x)=150−x · J₅₀(75)=75</code></article>
+    </div>
+    <p class="euler-boundary"><b>Boundary:</b> the Euler View is a reversible readout of each finite transition ledger plus a non-injective clock projection <code>n=g mod 8</code>. It neither identifies chemistry, Life and spin nor changes any of their update rules.</p>
+  </section>
+
+  <section class="transition-montage" aria-label="03 B Exact Transition Montage">
+    <div class="montage-head">
+      <div>
+        <p class="eyebrow">03·B · A0-BL-031 REPRESENTATION GRAMMAR REUSE</p>
+        <h2>Graph und Fläche sind zwei Ansichten derselben Montage.</h2>
+        <p>Jede Zelle eines Schritts wird exakt einmal gezählt. Links erscheint dieselbe 2×2-Transitionsrelation als Fläche, rechts als vier gewichtete Kanäle zwischen den Zustands-Pillars von <i>t</i> und <i>t+1</i>.</p>
+      </div>
+      <div class="montage-badge"><span>RELATION BINDING</span><b>ART:A0:MATHEMATICAL_JOINTS</b><small>reuse · no Pascal identity</small></div>
+    </div>
+    <div class="montage-equation" aria-label="Exact transition ledger equation">
+      <b>C₀₀ + C₀₁ + C₁₀ + C₁₁ = N</b>
+      <span>exact partition · source and target marginals preserved</span>
+    </div>
+    <div class="montage-grid">
+      <article data-montage="chemistry"><div><span>CHEMISTRY</span><b>Thresholded concentration</b></div><canvas id="montageChemistry" width="700" height="500" aria-label="Chemistry transition area and channel graph"></canvas><p id="montageChemistryEquation">awaiting state</p></article>
+      <article data-montage="life"><div><span>BIOLOGY LENS</span><b>Conway Life</b></div><canvas id="montageLife" width="700" height="500" aria-label="Life transition area and channel graph"></canvas><p id="montageLifeEquation">awaiting state</p></article>
+      <article data-montage="physics"><div><span>PHYSICS MODEL</span><b>Spin field</b></div><canvas id="montagePhysics" width="700" height="500" aria-label="Physics transition area and channel graph"></canvas><p id="montagePhysicsEquation">awaiting state</p></article>
+    </div>
+    <div class="montage-legend"><span class="c00"><b>C₀₀</b> 0→0 inactive</span><span class="c01"><b>C₀₁</b> 0→1 birth / positive</span><span class="c11"><b>C₁₁</b> 1→1 survive / retained</span><span class="c10"><b>C₁₀</b> 1→0 death / negative</span><span class="q"><b>Q°</b> model · boundary · threshold · time</span></div>
+    <p class="montage-boundary"><b>Claim boundary:</b> This is an exact finite transition ledger and a reversible change of representation. The common montage makes ratios comparable; it does not make chemistry, Life and spin dynamics the same object, mechanism or law.</p>
+  </section>
+
+  <section class="replication-inline" aria-label="Integrated replication matrix">
+    <div class="rep-head"><div><p class="eyebrow">INTEGRATED REPLICATION · SAME THREE VIEWS</p><h2>Boundary Sensitivity Atlas</h2><p>The live cards above show one synchronized moment. This layer repeats the same three operators across seed banks and records how much of each trajectory changes at the cylinder seam.</p></div><div class="rep-badge"><span>MODEL BENCHMARK</span><b id="repFingerprint">awaiting run</b></div></div>
+    <div class="rep-controls"><label>Seeds<select id="repSeedCount"><option value="6" selected>6 · quick</option><option value="12">12 · standard</option></select></label><label>Horizon<select id="repHorizon"><option value="40" selected>40</option><option value="60">60</option><option value="100">100</option></select></label><label>Base seed<input id="repBaseSeed" type="number" value="34017"></label><button id="repRun" type="button">Run / replay</button><button id="repNext" type="button">Next seed bank</button><span id="repStatus">Same setup returns the same curve.</span></div>
+    <div class="rep-summary"><article><span>CHEMISTRY</span><b id="repChem">—</b></article><article><span>LIFE</span><b id="repLife">—</b></article><article><span>SPIN</span><b id="repPhysics">—</b></article><article><span>RETURN ORDER</span><b id="repOrder">—</b></article></div>
+    <div class="rep-views"><div><h3>Response curves</h3><canvas id="repCurve" width="1000" height="380" aria-label="Integrated boundary response curves"></canvas></div><div><h3>Seed × reading</h3><div id="repMatrix" class="rep-matrix" role="table" aria-label="Integrated replication heatmap"></div></div></div>
+    <p id="repConclusion" class="rep-conclusion">The matrix remains a comparative lens: common measurement, distinct semantics and mechanisms.</p>
+  </section>
+
+  <section class="shared-test">
+    <div class="shared-head"><div><p class="eyebrow">COMMON MEASUREMENT · DISTINCT SEMANTICS</p><h2>Topology return</h2></div><div class="legend"><span class="chem">Chem model</span><span class="life">Artificial Life</span><span class="phys">Spin model</span></div></div>
+    <canvas id="historyCanvas" width="1600" height="330" aria-label="Component and cycle histories for all three models"></canvas>
+    <div class="grammar"><span><b>1</b> all active transitions</span><span><b>i</b> positive / birth / up-flip</span><span><b>j</b> retained / survive / positive hold</span><span><b>k</b> negative / death / down-flip</span><span><b>Q°</b> model · boundary · time</span></div>
+  </section>
+
+  <section class="audit">
+    <h2>ILAU translation audit</h2>
+    <div><b>I · retained</b><span>addressed state transition, time order, β₀/β₁ measurement and boundary comparator</span></div>
+    <div><b>L · lost</b><span>chemical amplitude is thresholded; microscopic chemistry and physical units are not represented</span></div>
+    <div><b>A · added</b><span>shared colors, 4+1 lane names and spatial separation are observation geometry</span></div>
+    <div><b>U · unresolved</b><span>no shared mechanism, causal identity, empirical biology or cross-domain law is established</span></div>
+  </section>
+
+  <footer><div><a href="../index.html">Return to GAME 4 LIFE +1</a> · <a href="replication-matrix/index.html">Window 04 · Replication matrix →</a></div><span>EXPLORATORY LENS · NOT A LIFE08 RESULT · NO PUBLICATION STATUS</span></footer>
+</main>
+<script src="domain-engine.js"></script>
+<script src="replication-matrix/replication-engine.js"></script>
+<script src="transition-montage.js"></script>
+<script src="../logarithmic-gearbox.js"></script>
+<script src="euler-view.js"></script>
+<script src="app.js"></script>
+<script src="replication-inline.js"></script>
+</body>
+</html>

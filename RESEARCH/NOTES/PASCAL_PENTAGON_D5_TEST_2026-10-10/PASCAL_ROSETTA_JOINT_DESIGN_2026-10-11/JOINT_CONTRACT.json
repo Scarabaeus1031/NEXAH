@@ -1,0 +1,44 @@
+{
+  "contract_id": "A0-BL-023:PASCAL_ROSETTA_JOINT_DESIGN:V1",
+  "date": "2026-10-11",
+  "status": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_ACTIVE",
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "source_object": "SCC-003",
+    "relations": ["A0-BL-023", "A0-BL-051"],
+    "creates": []
+  },
+  "domain": {
+    "raw": "C5 x T6",
+    "raw_cardinality": 140,
+    "quotient": "Q106",
+    "quotient_cardinality": 106
+  },
+  "codomain": {
+    "name": "G",
+    "product": ["C5_A", "C5_B", "C6_D", "C12_Q"],
+    "cardinality": 1800
+  },
+  "encoding": {
+    "input": "(f,n,k)",
+    "output": "(f, f+k mod 5, n mod 6, 2k-n mod 12)",
+    "type": "injective_on_frozen_raw_incidence_carrier"
+  },
+  "transitions": {
+    "left": "(a,b,d,q) -> (a,b,d+1,q-1)",
+    "right": "(a,b,d,q) -> (a,b+1,d+1,q+1)",
+    "equations": ["F o tL = TL o F", "F o tR = TR o F"]
+  },
+  "quotient_joint": {
+    "type": "relation",
+    "definition": "J(v)={F(x):pi(x)=v}",
+    "expected_fiber_profile": {"1": 75, "2": 30, "5": 1},
+    "return": "rho(F(x))=pi(x)"
+  },
+  "expected_negative_control": {
+    "name": "rotation_equivariant_single_address_selector",
+    "expected": "FAIL_NO_FIXED_ADDRESS_OVER_FIXED_APEX"
+  },
+  "claim_boundary": "Finite formal design validation only; no PENT-08, Family, admitted run, physical identity, novelty or publication claim."
+}
+

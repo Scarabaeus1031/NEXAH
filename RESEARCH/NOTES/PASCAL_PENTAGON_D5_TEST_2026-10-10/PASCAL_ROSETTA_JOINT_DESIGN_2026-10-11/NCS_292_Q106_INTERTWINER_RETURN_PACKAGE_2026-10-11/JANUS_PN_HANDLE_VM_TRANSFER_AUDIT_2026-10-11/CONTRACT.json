@@ -1,0 +1,120 @@
+{
+  "contract_id": "A0-BL-023:JANUS_PN_HANDLE_VM_TRANSFER_AUDIT:V1",
+  "date": "2026-10-11",
+  "status": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED",
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "source_object": "NCS-292 / Q106",
+    "parent_contract": "A0-BL-023:NCS_292_Q106_INTERTWINER_RETURN_PACKAGE:V1",
+    "creates": []
+  },
+  "question": "Do the 1729/1836 carriers, the 1929/1933/1939/1945 historical annotations, the prime-index transform, the 7-and-6 handle, Q106, and the 1461-to-5653 proposal form exact replayable joints; and what remains only a visual or damping hypothesis?",
+  "modules": [
+    "M1_PRIME_SIX_STEP_TRANSLATION",
+    "M2_NESTED_JANUS_CENTERS",
+    "M3_DUAL_CARRIER_RESIDUALS",
+    "M4_SUFFIX_PRIME_INDEX_TRANSFER",
+    "M5_1461_5653_HANDLE",
+    "M6_VM_ALIAS_BOUNDARY",
+    "M7_FIRST_FOUR_PRIME_RADIX_GRAMMAR"
+  ],
+  "frozen_sources": {
+    "ncs_snc_result": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/NCS_SNC_292_929_ORDER_ENVELOPE_RETURN_TEST_2026-10-11/RESULT.json",
+      "sha256": "9b957cdd6bccb70a98cd9197f8f68fb17fb7b3fc39d9faef8251eb36b8c3cc6a"
+    },
+    "q106_result": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "330bc8a1b9b9a29bde53e77c43088b8487992252a86e63fdcee7701479d363d1"
+    },
+    "crt_qrt_r17_readme": {
+      "absolute_path": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/NAVIGATION/EVIDENCE/CRT_QRT_37_CARRIER_LADDER_2026-10-11/README.md",
+      "sha256": "ba9f08c90c3c4e8c55a19dba5e379df11a36dc17ad3a48c1fd5b5f44eaf32c5c"
+    },
+    "historical_elevator_pdf": {
+      "absolute_path": "/Users/tho2020/Desktop/Desktop TASKS/DESKTOP_archy/THOOTH DASHBOARD/Nexahedron_Codex Staging Modules/AEON History pi phi pr|oof - Scarabline-Root7/CODEX_BIG_ELEVATOR_SCARABLINE/Codex Big Elevator.pdf",
+      "sha256": "b5a7df16018dc5ab5305f06696570806cd2986c97a8d57033ea3b793e4055c9f"
+    },
+    "historical_gallery_pdf": {
+      "absolute_path": "/Users/tho2020/Desktop/Desktop TASKS/DESKTOP_archy/THOOTH DASHBOARD/Nexahedron_Codex Staging Modules/AEON History pi phi pr|oof - Scarabline-Root7/CODEX_BIG_ELEVATOR_SCARABLINE/🌀 Visual Gallery · CODEX_BIG_ELEVATOR_1933_1945V2.pdf",
+      "sha256": "d6e5f1560dcce956750d12f9ebb1c2ad949adb818c091e5371a4a3924091efc1"
+    },
+    "vm_clarification_pdf": {
+      "absolute_path": "/Users/tho2020/Desktop/Desktop TASKS/DESKTOP_archy/x-1033_Release_some Symoblik stuff/Q-Space Λ — A Pre-Geometric Axiom Chain/Q° _ Vm _ & — Structural Clarification.pdf",
+      "sha256": "f951febd8b6ead5da7765acc6d11bca431c93912e17ec27224b673c9c2b50b45"
+    }
+  },
+  "visual_sources": {
+    "am_pm_vm_map": {
+      "absolute_path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/9/9895FE16-55CB-4D25-9642-1B3AB23EF9C9_1_105_c.jpeg",
+      "sha256": "dfd86f58940dc6a2511d8aa0fefcfca113b596b2486fd377afea3963ac89a084"
+    },
+    "visual_index": {
+      "absolute_path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/5/54FE91CA-2499-4144-852C-1552A9C2ADF0_1_105_c.jpeg",
+      "sha256": "2e639e4e403dcdcb94916078427f711e497496217c97e9d547bed8ee98260ec6"
+    },
+    "polygon_escape": {
+      "absolute_path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/5/5150EFB5-092E-4E78-9F0F-0886C67AD317_1_105_c.jpeg",
+      "sha256": "969c6584999ab303ee5da804b75eba50fe964ba5cdae58a2df7eeff553badab3"
+    },
+    "time_resonance_ring": {
+      "absolute_path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/E/E0A90C38-A8E0-4811-BB4A-8C726CA144FE_1_102_o.jpeg",
+      "sha256": "8664e95dd82c71ecb89a887d8d7bd15add6295c26c820386023fe3de7a080d1d"
+    },
+    "record_play_432": {
+      "absolute_path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/C/CFE7E871-BE6D-4035-A537-B601DB09D323_1_102_o.jpeg",
+      "sha256": "ffed3213181543dccc796b45f5808a151a2520414f33a42a9addedc2b5f1a342"
+    },
+    "intertwined_clefs": {
+      "absolute_path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/A/A4B64F9D-0E16-4A79-BB14-BBE4E1C26572_1_102_o.jpeg",
+      "sha256": "c8759c3bf0e99ee0c7ba3dd8ecaa22f42d8d1334d1ff2e5260da93985747d39d"
+    },
+    "relational_40_41_42": {
+      "absolute_path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/8/882C5AA8-B49F-4758-BA70-4783F2D863A3_1_102_o.jpeg",
+      "sha256": "52760dd5381f97cf04536344e89794b300e04abfc9e3bd193930593711ac01f1"
+    },
+    "crown_seam_root": {
+      "absolute_path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/5/5B2A4544-ED74-4632-A031-67A0D5B221F5_1_102_o.jpeg",
+      "sha256": "0a291d481b802dbeb1480a653b78a53cbcc0b90b705f5534f8b9404b227c9f80"
+    },
+    "orientation_machine": {
+      "absolute_path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/0/0171A167-BF38-40BB-88A2-9542B0A0F4C5_1_105_c.jpeg",
+      "sha256": "75218a040dfa4ffb26a2ab652f56cca32a8575098dae6b030452a403e6d4ad9b"
+    },
+    "khippu_cuts_knots_threads": {
+      "absolute_path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/9/9FE9E2D2-9D3E-441F-B71E-559378F30B90_1_105_c.jpeg",
+      "sha256": "9b6d3ed6146cd362906a2c6d3ede1f016fe9ae6554ce2a710116a97e22afc602"
+    },
+    "return_residual_bounded_lock": {
+      "absolute_path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/B/B7F52C2D-1C16-426B-837D-DBBF6C9EAADF_1_105_c.jpeg",
+      "sha256": "6c5560a81400f59b4782209f4a30afc162df706efc43013bae01171172c0d4d6"
+    },
+    "oeis_relation_machine": {
+      "absolute_path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/0/0F06661E-63E0-4EDC-B10B-DDF4DDEEF4D0_1_105_c.jpeg",
+      "sha256": "934ed50f1bd0101d4da21568a649401465643eb03e3190034ccc95243274021a"
+    },
+    "seam_reconstruction_gate": {
+      "absolute_path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/B/B7FB54C6-E673-4538-AD5C-E7E8FC253852_1_105_c.jpeg",
+      "sha256": "18dd4de4f772ece5d0c8c8a945a473345ed3a17e7291f6e19e66b5d9de8e29bd"
+    },
+    "ilau_cartography_extension": {
+      "absolute_path": "/Users/tho2020/Pictures/Photos Library.photoslibrary/resources/derivatives/4/4627982E-4082-4039-986E-F368C57034B5_1_105_c.jpeg",
+      "sha256": "89dc8acde2015aba7cdf50d0c332436690fa7d02dbb154335648c88c8f0e82fd"
+    }
+  },
+  "outcomes": [
+    "PASS_EXACT_JANUS_PN_SIX_STEP_INTERTWINER_WITH_RADIX_GRAMMAR_AND_DAMPING_OPEN",
+    "PARTIAL_PASS",
+    "CONTRACT_INVALID"
+  ],
+  "stop_rule": "Stop before identifying suffix extraction with factorization, digit reversal with an additive Janus map, decimal glyph similarity with arithmetic identity, a two-interval gain decrease with a damping law, or any visual VM label with another VM meaning without an explicit source operator.",
+  "claim_boundary": [
+    "formal finite arithmetic and source-provenance audit only",
+    "no new Navigator identity, Study, source, binder, or evidence promotion",
+    "historical PDFs and visuals are provenance or hypothesis sources, not scientific authorities",
+    "PN means the declared one-based prime-index map P(k)=p_k",
+    "AM, PM, VM, vm, vertical axis, and Vorstellungs-Medium remain source-typed labels",
+    "the observed two-step gain drop is not a fitted damping law",
+    "no physical, cosmological, biological, resonance, chronology-causation, or publication claim"
+  ]
+}

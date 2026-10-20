@@ -1,0 +1,74 @@
+{
+  "contract_id": "A0-BL-023:PASCAL_ROSETTA_D30_AUDIT:V1",
+  "date": "2026-10-11",
+  "status": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED",
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "related_backlog": ["A0-BL-023", "A0-BL-051"],
+    "creates": []
+  },
+  "source": {
+    "faces": 5,
+    "maximum_depth": 6,
+    "raw_incidences": 140,
+    "branch_edges": 210
+  },
+  "phase_lift": {
+    "modulus": 30,
+    "formula": "p=2*k-n mod 30",
+    "left_increment": -1,
+    "right_increment": 1,
+    "reflection": "p -> -p",
+    "degrees_per_step": 12
+  },
+  "d_registers": {
+    "labels": ["D1", "D2", "D3", "D4", "D5"],
+    "definition": "Dj is the one-based label of face f=j-1 in C5",
+    "phase_cover": "C5_D x C30_P",
+    "cover_capacity": 150,
+    "frozen_observed_register_phase_states": 65,
+    "raw_incidences_per_register": 28,
+    "branch_words_per_register": 127,
+    "rotation": "D1->D2->D3->D4->D5->D1",
+    "reflection": "D1 fixed; D2<->D5; D3<->D4",
+    "distinction": "D1..D5 are address registers; D5 without an index is the dihedral group"
+  },
+  "word_audit": {
+    "lengths": [0, 1, 2, 3, 4, 5, 6],
+    "words_per_face": 127,
+    "face_word_instances": 635,
+    "observed_phase_count": 13
+  },
+  "old_gear_character_audit": {
+    "domain": "C5 x C5 x C6 x C12",
+    "codomain": "C30",
+    "characters": 900,
+    "unit_schedule_candidates": 0,
+    "expected_result": "NO_FACTORIZATION"
+  },
+  "carrier_boundaries": {
+    "h3": {
+      "points": 30,
+      "nearest_edges": 60,
+      "degree": 4,
+      "coxeter_cycles": [10, 10, 10],
+      "identity_with_c30": false
+    },
+    "e8": {
+      "coordinate_lanes": 8,
+      "cycle_length": 30,
+      "positions": 240,
+      "oriented_coordinate_adapters": 480,
+      "canonical_adapter_selected": false
+    }
+  },
+  "claim_boundary": [
+    "no new Family or PENT-08",
+    "no admitted or active Study",
+    "no unique E8 adapter",
+    "D1..D5 are registers, not five new operators or identities",
+    "no H3/E8/Pascal carrier identity",
+    "no physical, astronomical, calendrical or resonance mechanism",
+    "no generalization beyond depth six"
+  ]
+}

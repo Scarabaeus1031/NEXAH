@@ -1,0 +1,289 @@
+{
+  "axis_metrics": {
+    "janus_midpoint": 100.0,
+    "midpoint_shift": 1,
+    "right_endpoint_shift": 2,
+    "xi_midpoint": 99.0
+  },
+  "checks": [
+    {
+      "expected": {
+        "creates": [],
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST"
+      },
+      "name": "identity reused without creation",
+      "observed": {
+        "creates": [],
+        "parent_contract": "A0-BL-023:PASCAL_ROSETTA_D30_AUDIT:V1",
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+        "source_object": "SCC-003 / Q106"
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "exists": true,
+        "sha256": "94c85b099d26eb1b13a55f10a1f4d82441ba1b8eccd06e13290b0e077b422c35"
+      },
+      "name": "frozen source ncs_readme",
+      "observed": {
+        "exists": true,
+        "path": "EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/EXPERIMENTS/trinity_euler_riemann_ramanujan/README.md",
+        "sha256": "94c85b099d26eb1b13a55f10a1f4d82441ba1b8eccd06e13290b0e077b422c35"
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "exists": true,
+        "sha256": "188063b6512766ecc05f09e4ada6ab0666c88d75ab73c13392c22dd69a691fca"
+      },
+      "name": "frozen source ncs_script",
+      "observed": {
+        "exists": true,
+        "path": "EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/EXPERIMENTS/trinity_euler_riemann_ramanujan/scripts/v2_06_3_cubes_taxicab_regulator.py",
+        "sha256": "188063b6512766ecc05f09e4ada6ab0666c88d75ab73c13392c22dd69a691fca"
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "exists": true,
+        "sha256": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12"
+      },
+      "name": "frozen source q106_nodes",
+      "observed": {
+        "exists": true,
+        "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/nodes.csv",
+        "sha256": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12"
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "exists": true,
+        "sha256": "6309b5c8807cf4d3352500d7eb1e7ce8d0c0da9be68d327c9196f9e54fd742b3"
+      },
+      "name": "frozen source q106_edges",
+      "observed": {
+        "exists": true,
+        "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/edges.csv",
+        "sha256": "6309b5c8807cf4d3352500d7eb1e7ce8d0c0da9be68d327c9196f9e54fd742b3"
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "point_rows": 4,
+        "x_shift": true,
+        "y_shift": true
+      },
+      "name": "historical NCS source declares and moves four points",
+      "observed": {
+        "point_rows": 4,
+        "x_shift": true,
+        "y_shift": true
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "left_sum": 11,
+        "palindrome": true,
+        "right_sum": 11
+      },
+      "name": "292 palindrome and balanced directional sums",
+      "observed": {
+        "left_sum": 11,
+        "palindrome": true,
+        "right_sum": 11
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": 29,
+      "name": "29 is the tenth prime",
+      "observed": 29,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "P23": 83,
+        "P24": 89,
+        "P25": 97,
+        "P26": 101,
+        "P27": 103
+      },
+      "name": "consecutive prime-index chain P23 through P27",
+      "observed": {
+        "P23": 83,
+        "P24": 89,
+        "P25": 97,
+        "P26": 101,
+        "P27": 103
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "janus_midpoint": 100.0,
+        "midpoint_shift": 1,
+        "right_endpoint_shift": 2,
+        "xi_midpoint": 99.0
+      },
+      "name": "adjacent-axis arithmetic",
+      "observed": {
+        "janus_midpoint": 100.0,
+        "midpoint_shift": 1,
+        "right_endpoint_shift": 2,
+        "xi_midpoint": 99.0
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "103_plus_3": 106,
+        "2_times_53": 106,
+        "53_squared": 2809,
+        "97_plus_3": 100,
+        "97_plus_4": 101
+      },
+      "name": "prime-index and P-exit arithmetic stay separated",
+      "observed": {
+        "103_plus_3": 106,
+        "2_times_53": 106,
+        "53_squared": 2809,
+        "97_plus_3": 100,
+        "97_plus_4": 101
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": 6,
+      "name": "oriented ABC/123 alphabet has six states",
+      "observed": 6,
+      "status": "PASS"
+    },
+    {
+      "expected": 40,
+      "name": "declared two-layer package carrier has forty states",
+      "observed": 40,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "classes": 20,
+        "fibre_sizes": [
+          2
+        ]
+      },
+      "name": "free horizontal layer quotient has twenty two-element fibres",
+      "observed": {
+        "classes": 20,
+        "fibre_sizes": [
+          2
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "directed_edges": 180,
+        "nodes": 106
+      },
+      "name": "frozen Q106 reference remains distinct and intact",
+      "observed": {
+        "directed_edges": 180,
+        "nodes": 106
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": null,
+      "name": "NCS-to-package intertwiner is explicitly absent",
+      "observed": null,
+      "status": "PASS"
+    },
+    {
+      "expected": null,
+      "name": "Base20-to-Q106 intertwiner is explicitly absent",
+      "observed": null,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "map": null,
+        "visual_count": 15
+      },
+      "name": "RootCube15-to-Q106 map is explicitly absent",
+      "observed": {
+        "map": null,
+        "visual_count": 15
+      },
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary": [
+    "formal finite candidate validation only; not an admitted Study or PENT-08",
+    "owner visuals are hashed comparators and not executable evidence",
+    "292 is tested as an arithmetic word and historical four-point mover, not presumed to be a recovered operator law",
+    "the 40-to-20 quotient is a declared candidate construction, not a recovered historical mechanism",
+    "103+3=106 is a numeric bridge only until a node and edge map to Q106 is supplied",
+    "the Root Cube count 15 is source-local visual metadata and is not identified with the Pascal carrier",
+    "no physical, prime-selector, H3, E8, resonance or publication claim"
+  ],
+  "classification": "COMPILED_40_TO_20_CANDIDATE_OPEN_INTERTWINERS",
+  "creates": [],
+  "date": "2026-10-11",
+  "exit_arithmetic": {
+    "103_plus_3": 106,
+    "2_times_53": 106,
+    "53_squared": 2809,
+    "97_plus_3": 100,
+    "97_plus_4": 101
+  },
+  "identity_reused": "A0OE:PASCAL_PENTAGON_D5_TEST",
+  "prime_chain": {
+    "P23": 83,
+    "P24": 89,
+    "P25": 97,
+    "P26": 101,
+    "P27": 103
+  },
+  "schema": "nexah.ncs-292-dual-axis-q106-bridge-audit-result/1.0.0",
+  "source_resolution": {
+    "ncs_readme": {
+      "exists": true,
+      "path": "EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/EXPERIMENTS/trinity_euler_riemann_ramanujan/README.md",
+      "sha256": "94c85b099d26eb1b13a55f10a1f4d82441ba1b8eccd06e13290b0e077b422c35"
+    },
+    "ncs_script": {
+      "exists": true,
+      "path": "EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/EXPERIMENTS/trinity_euler_riemann_ramanujan/scripts/v2_06_3_cubes_taxicab_regulator.py",
+      "sha256": "188063b6512766ecc05f09e4ada6ab0666c88d75ab73c13392c22dd69a691fca"
+    },
+    "q106_edges": {
+      "exists": true,
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/edges.csv",
+      "sha256": "6309b5c8807cf4d3352500d7eb1e7ce8d0c0da9be68d327c9196f9e54fd742b3"
+    },
+    "q106_nodes": {
+      "exists": true,
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/nodes.csv",
+      "sha256": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12"
+    }
+  },
+  "status": "PASS_WITH_VALIDATED_OPEN_BRIDGES",
+  "summary": {
+    "candidate_quotient_classes": 20,
+    "candidate_unfolded_states": 40,
+    "checks_passed": 18,
+    "checks_total": 18,
+    "historical_ncs_points": 4,
+    "q106_directed_edges": 180,
+    "q106_nodes": 106,
+    "required_intertwiners_defined": 0,
+    "required_intertwiners_total": 3,
+    "root_cube_visual_primary_nodes": 15
+  }
+}

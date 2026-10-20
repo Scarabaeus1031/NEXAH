@@ -1,0 +1,94 @@
+{
+  "schema": "nexah.formal-design-audit-contract/1.0.0",
+  "contract_id": "A0-BL-023:TRIPLESIX_S3_CUBE_GRID_FOLD_BRIDGE_AUDIT:V1",
+  "title": "TripleSix S3 axis/orientation and 64-to-63 cube-grid fold bridge audit",
+  "status": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_NEW_STUDY",
+  "identity": {
+    "extends": "A0-BL-023:TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT:V1",
+    "reuses": [
+      "SCC-003",
+      "A0OE:PASCAL_PENTAGON_D5_TEST",
+      "ART:NUMBER:PRIMEGRID_BLOCK02B_TRINARY_ANTIPODE",
+      "NN:MRB_ACR_NCS_Q106_RETURN_CROSSWALK",
+      "PASCAL_QUATERNION_CARRIER_TEST_2026-10-10"
+    ],
+    "creates": []
+  },
+  "question": "Do the six depicted TripleSix permutations provide an exact three-axis plus binary-orientation code, and how far can that code resolve the declared coordinatewise fold from a 64-grid to a 63-grid in one, two and three dimensions?",
+  "authority_boundary": "Internal bounded formal-design evidence only. The audit may establish an S3 axis/orientation address and an explicitly declared finite-grid quotient. It does not recover the historical visual generator, identify the visuals with a cube mechanism, establish a physical fold, select a historical Janus law, create a Study or Family, or authorize publication.",
+  "frozen_sources": [
+    {
+      "source_id": "SRC:TS6:PARENT_FACTOR_RESULT",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "d8caf0e18e3aa7687d8d7a09e40169e4716cb73d1aebe430bb771b41e2ee01b6"
+    },
+    {
+      "source_id": "SRC:TS6:PASCAL_QUATERNION_S3_RESULT",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_QUATERNION_CARRIER_TEST_2026-10-10/RESULT.json",
+      "sha256": "444f3e587b2cb8205e8f6a181d48d56caed5262f020dd16c0cfaa79f75860e0e"
+    },
+    {
+      "source_id": "VIS:TS6:SIX_PERMUTATIONS",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/TRIPLESIX_S3_CUBE_GRID_FOLD_BRIDGE_AUDIT_2026-10-12/visuals/TRIPLESIX_SIX_PERMUTATIONS.jpeg",
+      "sha256": "6daf8b788bd52b151c4d0c37989aa8d2433aae11d8185783c11a2d7c1cbc9276"
+    },
+    {
+      "source_id": "VIS:TS6:THREE_AXIS_CORE",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/TRIPLESIX_S3_CUBE_GRID_FOLD_BRIDGE_AUDIT_2026-10-12/visuals/TRIPLESIX_THREE_AXIS_CORE.jpeg",
+      "sha256": "633ee92c57a48995828b92e30159bb1eae7b0a8de3fa8154ba045f3cb8f66e8f"
+    },
+    {
+      "source_id": "VIS:TS6:GRID_63_64_DUAL_AXIS_FOLD",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/TRIPLESIX_S3_CUBE_GRID_FOLD_BRIDGE_AUDIT_2026-10-12/visuals/GRID_63_64_DUAL_AXIS_FOLD.jpeg",
+      "sha256": "adafd1748aad552ecbd099aed8449bc3f83aabb04aae3a65d48ef0b33fe15171"
+    },
+    {
+      "source_id": "VIS:TS6:ALPHA_OMEGA_CUBES_FOLD_AXES",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/TRIPLESIX_S3_CUBE_GRID_FOLD_BRIDGE_AUDIT_2026-10-12/visuals/ALPHA_OMEGA_CUBES_FOLD_AXES.jpeg",
+      "sha256": "6c79819ab27b0ca7959a00487302d87d636a8019b2d3d544995f8f105fe83794"
+    },
+    {
+      "source_id": "VIS:TS6:ALPHA_OMEGA_CUBES_SUBGRIDS",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/TRIPLESIX_S3_CUBE_GRID_FOLD_BRIDGE_AUDIT_2026-10-12/visuals/ALPHA_OMEGA_CUBES_SUBGRIDS.jpeg",
+      "sha256": "91c7a21b270f453a748605669280505e5e6581397b2a8b0406b6709c70642d72"
+    }
+  ],
+  "triplesix_carrier": {
+    "states": ["123", "132", "213", "231", "312", "321"],
+    "carrier": "S3 as permutations of (1,2,3)",
+    "visual_antipode": "V(p)=p o tau with tau=(13), displayed as digit reversal",
+    "axis_pairs": {
+      "A": ["123", "321"],
+      "B": ["132", "231"],
+      "C": ["213", "312"]
+    },
+    "orientation": "permutation parity in C2",
+    "address": "S3 -> {A,B,C} x C2 is a bijection of state sets",
+    "center_readout": "digit sum 1+2+3=6 for every state"
+  },
+  "grid_fold": {
+    "one_dimensional_map": "q64_63(i)=i for i<=31 and i-1 for i>=32",
+    "pivot_fibre": "q^-1(31)={31,32}",
+    "higher_dimensions": "Q_d applies q64_63 coordinatewise for d=2,3",
+    "declared_sizes": [63, 64],
+    "factorization": "63=7x9; 64=8x8=2^6"
+  },
+  "declared_tests": [
+    "verify all frozen-source hashes",
+    "verify the six S3 states, invariant digit sum and three fixed-point-free reversal pairs",
+    "verify the axis-pair plus parity address is bijective",
+    "compare commuting and dihedral action conventions without selecting historical intent",
+    "verify q64_63 is surjective, non-injective and has one two-element pivot fibre",
+    "enumerate exact fibre profiles of Q_2 and Q_3",
+    "verify the displayed 63x64x63x64 count",
+    "show that one selected-axis orientation bit resolves a single fold but not simultaneous multi-axis pivot choices"
+  ],
+  "stop_rules": [
+    "Do not identify S3 with a geometric cube.",
+    "Do not infer a physical fold or resonance from the visuals.",
+    "Do not treat the declared q64_63 map as recovered historical generator intent.",
+    "Do not claim that one TripleSix state reconstructs all 64^3 states from the 63^3 quotient.",
+    "Do not select J_c or J_d without a frozen action convention.",
+    "Do not create a new Study, Family, canonical Navigator identity or publication state."
+  ]
+}

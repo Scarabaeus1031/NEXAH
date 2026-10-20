@@ -1,0 +1,77 @@
+{
+  "schema": "nexah.formal-design-audit-contract/1.0.0",
+  "contract_id": "A0-BL-023:TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT:V1",
+  "title": "Triple-19 / X40 shared C2 orientation-factor audit",
+  "status": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_PENT_08",
+  "identity": {
+    "extends": "A0-BL-023:NCS_292_Q106_INTERTWINER_RETURN_PACKAGE:V1",
+    "reuses": [
+      "SCC-003",
+      "A0OE:PASCAL_PENTAGON_D5_TEST",
+      "ART:NUMBER:PRIMEGRID_BLOCK02B_TRINARY_ANTIPODE",
+      "NN:MRB_ACR_NCS_Q106_RETURN_CROSSWALK"
+    ],
+    "creates": []
+  },
+  "authority_boundary": "Internal bounded formal design evidence only. This audit establishes a shared C2 orientation factor and its loss under the declared X40-to-X20 quotient; it does not establish a Triple-19/X40 carrier identity, an X20 adjacency, a Q106 intertwiner, a historical Janus selection, a new Study, a Family, publication authority or a physical mechanism.",
+  "frozen_sources": [
+    {
+      "source_id": "SRC:FACTOR:PARENT_CONTRACT",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/CONTRACT.json",
+      "sha256": "ad9033568da4d7f2ea72ae2384554c689338ca08b3ffc9384588331d14bf75d5"
+    },
+    {
+      "source_id": "SRC:FACTOR:PARENT_RESULT",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/RESULT.json",
+      "sha256": "303e299694ebad23c422f2400532a521adc2e24a28686fc4a9d75cca162f6b0b"
+    },
+    {
+      "source_id": "SRC:FACTOR:X20_SOURCE_AUDIT",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/NCS_X20_TYPED_CARRIER_PCPD_Q106_INTERTWINER_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "0d50cc19cf69669ef84c247d1282f79c5ad47ccb6fcf0c61e2c1876ec1270fe6"
+    },
+    {
+      "source_id": "SRC:FACTOR:TRIPLE19_BINDING",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_PRIMEGRID_BLOCK02B_TRINARY_PASCAL_ANTIPODE_2026-10-07/TRIPLE19_ANTIPODE_PAIR_BRIDGE_BINDING.json",
+      "sha256": "2e20786a1c2c829acccef86af9c953e8d231602f68e0e8b642d88d2e7e69d786"
+    },
+    {
+      "source_id": "SRC:FACTOR:TRIPLE19_ADDENDUM",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_PRIMEGRID_BLOCK02B_TRINARY_PASCAL_ANTIPODE_2026-10-07/03_TRIPLE19_ANTIPODE_PAIR_BRIDGE_ADDENDUM.md",
+      "sha256": "aea673d53ee59ba6e26763403b46658da9ae6d012ecda79c029de9f4103d98a7"
+    }
+  ],
+  "triple19_carrier": {
+    "carrier": "T14 = C7 x C2_sigma",
+    "row_coordinate": "u=r-3 mod 7",
+    "constructors": ["P_c(r)=(r,c_r,+1)", "P_d(r)=(r,c_r,-1)"],
+    "antipode": "A(u,sigma)=(-u,-sigma)",
+    "orientation_projection": "pi_T(u,sigma)=sigma in C2"
+  },
+  "x40_carrier": {
+    "carrier": "X40 = C5 x P4 x C2_J",
+    "P4": ["carrier", "frame_cut", "transform_view", "return_record"],
+    "rotation": "r_X(s,p,e)=(s+1,p,e)",
+    "commuting_janus": "J_c(s,p,e)=(s,p,1-e)",
+    "dihedral_janus": "J_d(s,p,e)=(-s,p,1-e)",
+    "orientation_projection": "pi_X(s,p,e)=e in C2",
+    "quotient": "q(s,p,e)=(s,p) in X20"
+  },
+  "declared_tests": [
+    "verify all frozen-source hashes",
+    "verify T14 state count and fixed-point-free involution",
+    "verify X40 state count, rotation order and both Janus laws",
+    "verify both carriers project equivariantly to the same C2 flip",
+    "verify q has twenty two-element fibres and erases the orientation bit",
+    "prove no rho:X20->C2 satisfies rho after q = pi_X",
+    "enumerate homomorphisms C7->C5 and retain only the trivial map",
+    "retain null full-carrier intertwiner and null Janus selection"
+  ],
+  "stop_rules": [
+    "Do not infer X20 adjacency from Q106.",
+    "Do not promote a shared quotient factor to carrier identity.",
+    "Do not choose J_c or J_d from C2 compatibility alone.",
+    "Do not claim that every conceivable set map T14->X20 is impossible.",
+    "Do not admit PENT-08 or create a new Study, Family or Navigator identity."
+  ]
+}

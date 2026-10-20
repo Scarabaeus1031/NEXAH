@@ -1,0 +1,68 @@
+{
+  "schema": "nexah.formal-design.clockwork-pq-c2-lift-source-contract/1.0.0",
+  "audit_id": "A0-BL-023:CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT:V1",
+  "date": "2026-10-12",
+  "status": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_PENT_08",
+  "identity": {
+    "extends": "A0-BL-023:TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT:V1",
+    "reuses": [
+      "MOD:READOUT_RECONSTRUCTION",
+      "NN:MRB_ACR_NCS_Q106_RETURN_CROSSWALK"
+    ],
+    "creates": []
+  },
+  "question": "Does the source-bound Clockwork v7 p/q conjugate pair realize a two-sheet display lift of X20 compatible with the exact X40 C2 factor, and do the retained sources select a canonical orientation-bit-to-p/q labeling?",
+  "method": "Read-only source-contract and finite equivariance audit over the existing X40=C5xP4xC2 carrier and the retained Clockwork v7 GLB metadata.",
+  "x40_carrier": {
+    "definition": "X40=C5 x P4 x C2",
+    "P4": ["carrier", "frame_cut", "transform_view", "return_record"],
+    "quotient": "q(s,p,e)=(s,p) in X20",
+    "janus_candidates": {
+      "J_c": "(s,p,e)->(s,p,1-e)",
+      "J_d": "(s,p,e)->(-s,p,1-e)"
+    }
+  },
+  "candidate_display_lift": {
+    "carrier": "L_PQ=X20 x {p,q}",
+    "projection": "lambda((s,p),ell)=(s,p)",
+    "deck_flip": "tau((s,p),ell)=((s,p),swap(ell))",
+    "candidate_labelings": [
+      {"orientation_0": "p", "orientation_1": "q"},
+      {"orientation_0": "q", "orientation_1": "p"}
+    ]
+  },
+  "frozen_sources": [
+    {
+      "source_id": "SRC:CLOCKWORK_C2:PARENT_FACTOR_RESULT",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "d8caf0e18e3aa7687d8d7a09e40169e4716cb73d1aebe430bb771b41e2ee01b6"
+    },
+    {
+      "source_id": "SRC:CLOCKWORK_C2:V7_BUILDER",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/clockwork/generators/build_pq_conjugate_orbit_glb.mjs",
+      "sha256": "80e8ceb129eca4a8c1dc3a0fbead9e24ac4e0cb85b0c9f8ccae5df3e3d51a306"
+    },
+    {
+      "source_id": "SRC:CLOCKWORK_C2:V7_REFERENCE_GLB",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/clockwork/reference/nexah_pq_conjugate_orbit_v7.glb",
+      "sha256": "c390d4c6a6e1054116cfdd2c96953d810a333e97f654d815b2e1fe47cd60ecae"
+    },
+    {
+      "source_id": "SRC:CLOCKWORK_C2:NN_INTAKE_RESULT",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/results/INTAKE_AUDIT_RESULTS.json",
+      "sha256": "4f6ba83ba836015538d1b28a33cdbb0d06818f19856cfadab2a86f09cb9b6b4a"
+    }
+  ],
+  "expected_outcomes": [
+    "PASS_UNLABELED_C2_DISPLAY_LIFT",
+    "FAIL_NOT_A_TWO_SHEET_LIFT",
+    "CONTRACT_INVALID"
+  ],
+  "stop_conditions": [
+    "any frozen source hash differs",
+    "the v7 GLB lacks the declared p/q mirror pair",
+    "the candidate lift is not bijective with X40",
+    "either Janus candidate fails to induce the p/q sheet swap"
+  ],
+  "authority_boundary": "Internal bounded formal-design evidence only. The audit may establish a source-bound two-sheet display lift and its labeling ambiguity. It cannot create an X20 adjacency, Triple-19-to-X20 map, Q106 intertwiner, canonical Janus selection, physical orbit, new Study, Family, A0 evidence promotion or publication authority."
+}

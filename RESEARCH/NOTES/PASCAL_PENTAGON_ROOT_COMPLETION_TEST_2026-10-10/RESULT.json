@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "all_roots_are_unit_vectors": true,
+    "cartan_off_diagonal_is_negative_phi": true,
+    "completion_adds_five_equatorial_antipodes": true,
+    "coxeter_relations_2_5_2_hold": true,
+    "every_generated_action_preserves_root_set": true,
+    "four_turn_weight_subtotal_is_80": true,
+    "full_five_position_orbit_weight_is_100": true,
+    "generated_reflection_group_has_order_20": true,
+    "pentagonal_bipyramid_vertices_embed_as_7_roots": true,
+    "root_completion_has_10_H2_plus_2_A1_vectors": true,
+    "root_system_is_non_crystallographic": true,
+    "simple_reflections_preserve_all_12_roots": true,
+    "simple_root_gram_matrix_is_H2_direct_sum_A1": true
+  },
+  "claim_ceiling": "One standard finite H2 direct-sum A1 Coxeter-root realization of the verified D5 x C2 fixture; no Lie, prime-label, resonance, physical, historical, universal-solid or four-inner-layer claim is established.",
+  "classification": "BOUNDED_CANDIDATE_EVIDENCE_NOT_ADMITTED",
+  "result": {
+    "A1_root_count": 2,
+    "H2_root_count": 10,
+    "carrier_vertex_count": 7,
+    "cartan_H2_off_diagonal": -1.618033988749895,
+    "completion_vector_count": 5,
+    "coxeter_notation": "I2(5) direct-product A1",
+    "crystallographic": false,
+    "eighty_interpretation": "FOUR_TURN_SUBTOTAL_NOT_SECOND_INNER_PENTAGON",
+    "four_nonidentity_turns_at_weight_20": 80,
+    "full_five_position_orbit_at_weight_20": 100,
+    "rank": 3,
+    "reflection_group": "D5 x C2",
+    "reflection_group_order": 20,
+    "root_count": 12,
+    "root_system": "H2 direct-sum A1"
+  },
+  "schema": "nexah.pascal-pentagon-root-completion-test/1.0.0",
+  "status": "PASS"
+}

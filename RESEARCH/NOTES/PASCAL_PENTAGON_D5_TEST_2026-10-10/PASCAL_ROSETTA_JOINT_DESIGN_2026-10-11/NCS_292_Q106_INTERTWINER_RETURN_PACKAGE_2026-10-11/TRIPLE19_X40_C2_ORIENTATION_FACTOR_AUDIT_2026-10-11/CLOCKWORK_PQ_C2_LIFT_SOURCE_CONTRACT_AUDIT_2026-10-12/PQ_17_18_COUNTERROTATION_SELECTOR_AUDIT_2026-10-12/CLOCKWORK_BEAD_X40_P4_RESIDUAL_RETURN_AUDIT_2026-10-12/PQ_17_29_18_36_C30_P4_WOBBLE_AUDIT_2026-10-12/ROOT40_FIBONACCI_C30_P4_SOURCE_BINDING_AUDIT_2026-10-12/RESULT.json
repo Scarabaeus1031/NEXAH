@@ -1,0 +1,602 @@
+{
+  "status": "PASS_EXISTING_PASCAL_QUATERNION_CONNECTOR_REUSED_ROOT40_OUTSIDE_IMAGE_NCS_P4_ADAPTER_NULL",
+  "classification": "C30_SCHEDULE_CLOSES_EXISTING_PASCAL_FOUR_SLOT_SEMANTICS_REUSED_WITH_TYPED_NON_IDENTITY",
+  "checks": {
+    "passed": 59,
+    "total": 59
+  },
+  "source_closure": {
+    "root40_followon": "PASS_15_OF_15_EXISTING_VIEWS_CONNECTED_NO_NEW_RECURRENCE",
+    "root40_scientific_hash": "cc7d402a48416df4ad08875245c92384c625d66247abc8ce00b4b06a4ec523ee",
+    "ncs_address_bus": "pi6:C30→C6",
+    "ncs_phase_successor": "29→0",
+    "owner_P_endpoint": {
+      "value": 29,
+      "prime_index": 10
+    },
+    "owner_Q_endpoint": {
+      "value": 36,
+      "forms": [
+        "6×6",
+        "2²×3²",
+        "2×18"
+      ]
+    }
+  },
+  "c30_schedule": {
+    "c5_counter_steps": {
+      "P": 2,
+      "Q": -2
+    },
+    "fibonacci_pair_orbit_mod4": [
+      [
+        3,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "fibonacci_pair_period": 6,
+    "joint_period": 30,
+    "interpretation": "C5 counter-rotation schedule × C6 Fibonacci pair-state schedule; no state transport to X20/X40"
+  },
+  "root40_p4_gate": {
+    "quaternion_slots": [
+      "1",
+      "i",
+      "j",
+      "k"
+    ],
+    "coefficients": [
+      2,
+      2,
+      4,
+      4
+    ],
+    "norm": 40,
+    "ordered_signed_integer_norm40_records": 144,
+    "p4_roles": [
+      "carrier",
+      "frame_cut",
+      "transform_view",
+      "return_record"
+    ],
+    "possible_slot_to_role_bijections": 24,
+    "canonical_slot_to_role_map": null,
+    "coefficient_value_classes": {
+      "2": 2,
+      "4": 2
+    },
+    "value_only_closes_p4": false,
+    "labelled_slots_can_carry_chosen_p4_enumeration": true,
+    "source_selects_enumeration": false
+  },
+  "existing_pascal_quaternion_connector": {
+    "status": "CLOSED_OWNER_ACCEPTED_EXACT_FOUR_CHANNEL_CONNECTOR_PASS",
+    "formula": "Phi(a,b,c)=(a+b+c)1+ai+bj+ck",
+    "slot_semantics": {
+      "scalar": "depth=a+b+c",
+      "i": "a",
+      "j": "b",
+      "k": "c"
+    },
+    "c3_action": "Ad_u: i→j→k→i with u=(1+i+j+k)/2",
+    "inverse_return": "Ad(u^-1) o Ad(u)=id",
+    "scope": "all N>=0; faithful restricted carrier-action wording requires N>=1"
+  },
+  "root40_pascal_connector_test": {
+    "root40_quaternion": "2+2i+4j+4k",
+    "imaginary_coordinates": [
+      2,
+      4,
+      4
+    ],
+    "pascal_required_scalar": 10,
+    "observed_scalar": 2,
+    "in_pascal_phi_image": false,
+    "meaning": "Root-40 is a valid four-slot quaternion record but not a state of the proved Pascal Phi connector"
+  },
+  "existing_operator_controls": {
+    "triple19_antipode": "A(r,c_r,sigma)=(6-r,c_r,-sigma); A^2=id; full-carrier intertwiner null",
+    "con_dao": "13-state Janus carrier with J^2=id and fixed STILL; 8+4 is a grouping lens, not a shared generator"
+  },
+  "wobble_result": {
+    "full_four_phase_tag_can_carry_chosen_role_enumeration": true,
+    "binary_every_four_pulse_can_carry_p4": false,
+    "canonical_p4_role_assignment": null,
+    "glb_wobble_to_p4": null
+  },
+  "maps": {
+    "fibonacci_to_x20_or_x40": null,
+    "root40_slots_to_p4_roles": null,
+    "x20_adjacency": null,
+    "typed_x20_to_q106_intertwiner": null
+  },
+  "sources": [
+    {
+      "name": "wobble_result",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/PQ_17_18_COUNTERROTATION_SELECTOR_AUDIT_2026-10-12/CLOCKWORK_BEAD_X40_P4_RESIDUAL_RETURN_AUDIT_2026-10-12/PQ_17_29_18_36_C30_P4_WOBBLE_AUDIT_2026-10-12/RESULT.json",
+      "sha256": "68232d93343495fc067575a239a2c5c450733bc2890c966841c5c7610371c494"
+    },
+    {
+      "name": "ncs_contract",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/CONTRACT.json",
+      "sha256": "ad9033568da4d7f2ea72ae2384554c689338ca08b3ffc9384588331d14bf75d5"
+    },
+    {
+      "name": "ncs_readme",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/README.md",
+      "sha256": "ca52ed7ea286067985296d3ea1c8710531805248370527adc1dd55b3988ce43b"
+    },
+    {
+      "name": "root40_contract",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_ROOT7_EULER_MIRROR_CONCORDANCE_INTAKE_2026-09-28/11_PRIME_LENS_FOLLOWON_TEST_CONTRACT.md",
+      "sha256": "1c7c0a354fdf06a336d42fe0f5e4ce8f381c0859e15c23bfa2dac29d040aaa9d"
+    },
+    {
+      "name": "root40_result",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_ROOT7_EULER_MIRROR_CONCORDANCE_INTAKE_2026-09-28/prime_lens_followon_results.json",
+      "sha256": "4040cec20fe8c35c30544eb14017241828fbb7089be4970cb95a0f9274e1f904"
+    },
+    {
+      "name": "root40_addendum",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_ROOT7_EULER_MIRROR_CONCORDANCE_INTAKE_2026-09-28/12_PRIME_LENS_FOLLOWON_ADDENDUM.md",
+      "sha256": "8b0727e08b7e9a9eb6deb4763bdb764797221444e4406a29c55ebd29405a865b"
+    },
+    {
+      "name": "pascal_quaternion_result",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_052_PASCAL_QUATERNION_FOUR_CHANNEL_RETURN_2026-10-11/artifacts/PRIMARY_RESULT.json",
+      "sha256": "e015ce6430a4d3a66f520363b1738fb2bacebe2dd9bd316bff17d152371578f0"
+    },
+    {
+      "name": "pascal_quaternion_assessment",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_052_PASCAL_QUATERNION_FOUR_CHANNEL_RETURN_2026-10-11/02_RESULT_ASSESSMENT.md",
+      "sha256": "9e93495e634cc865f963a7caf6e826f70c4974a59afda1d15383579338282ddf"
+    },
+    {
+      "name": "pascal_quaternion_all_n_assessment",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_053_PASCAL_QUATERNION_SYMBOLIC_PROOF_REVIEW_2026-10-11/03_RESULT_ASSESSMENT.md",
+      "sha256": "27b2503f7eecffee753d7d4700d10a8c5676ab63b30c8f7e64dc5be3a600732f"
+    },
+    {
+      "name": "triple19_antipode_binding",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_PRIMEGRID_BLOCK02B_TRINARY_PASCAL_ANTIPODE_2026-10-07/TRIPLE19_ANTIPODE_PAIR_BRIDGE_BINDING.json",
+      "sha256": "2e20786a1c2c829acccef86af9c953e8d231602f68e0e8b642d88d2e7e69d786"
+    },
+    {
+      "name": "con_dao_model",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_CON_DAO_JANUS_BREATH_SEQUENCER_2026-10-06/breath-model.js",
+      "sha256": "30200f8a75d306602c1a44ff88cbc6be341cb2709568aecf6e87bdef3dd31b52"
+    },
+    {
+      "name": "con_dao_readme",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_CON_DAO_JANUS_BREATH_SEQUENCER_2026-10-06/README.md",
+      "sha256": "36e30677a8a857c315b6fe2d2fe593516c2c01db3eaf0f4b7f63eeaeacf30a18"
+    }
+  ],
+  "claim_boundary": "Source-bound arithmetic, connector reuse and typed non-identity only. The existing Pascal-quaternion connector already fixes scalar/i/j/k as depth/a/b/c and exact C3 Return, so no new four-slot discovery or 24-way Pascal slot search is claimed. Root-40's displayed quaternion is outside that connector image and its value 40 does not identify X40. The remaining null is specifically the adapter from Pascal slot semantics or Root-40 slots into the NCS P4 roles carrier/frame_cut/transform_view/return_record. Fibonacci closes a compatible C30 schedule but supplies no typed transport into X20/X40. Triple-19 and CON-DAO remain distinct exact operator controls. No physical mechanism, new identity, A0 evidence promotion, Study admission or publication authority follows.",
+  "checks_detail": [
+    {
+      "name": "source exists: wobble_result",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/PQ_17_18_COUNTERROTATION_SELECTOR_AUDIT_2026-10-12/CLOCKWORK_BEAD_X40_P4_RESIDUAL_RETURN_AUDIT_2026-10-12/PQ_17_29_18_36_C30_P4_WOBBLE_AUDIT_2026-10-12/RESULT.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: ncs_contract",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/CONTRACT.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: ncs_readme",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/README.md",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: root40_contract",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_ROOT7_EULER_MIRROR_CONCORDANCE_INTAKE_2026-09-28/11_PRIME_LENS_FOLLOWON_TEST_CONTRACT.md",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: root40_result",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_ROOT7_EULER_MIRROR_CONCORDANCE_INTAKE_2026-09-28/prime_lens_followon_results.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: root40_addendum",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_ROOT7_EULER_MIRROR_CONCORDANCE_INTAKE_2026-09-28/12_PRIME_LENS_FOLLOWON_ADDENDUM.md",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: pascal_quaternion_result",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_052_PASCAL_QUATERNION_FOUR_CHANNEL_RETURN_2026-10-11/artifacts/PRIMARY_RESULT.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: pascal_quaternion_assessment",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_052_PASCAL_QUATERNION_FOUR_CHANNEL_RETURN_2026-10-11/02_RESULT_ASSESSMENT.md",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: pascal_quaternion_all_n_assessment",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_053_PASCAL_QUATERNION_SYMBOLIC_PROOF_REVIEW_2026-10-11/03_RESULT_ASSESSMENT.md",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: triple19_antipode_binding",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_PRIMEGRID_BLOCK02B_TRINARY_PASCAL_ANTIPODE_2026-10-07/TRIPLE19_ANTIPODE_PAIR_BRIDGE_BINDING.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: con_dao_model",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_CON_DAO_JANUS_BREATH_SEQUENCER_2026-10-06/breath-model.js",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: con_dao_readme",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_CON_DAO_JANUS_BREATH_SEQUENCER_2026-10-06/README.md",
+      "expected": "file"
+    },
+    {
+      "name": "existing Root-40 follow-on result passes",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "existing Root-40 result passes 15/15",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "existing bounded classification retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "existing scientific hash retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Root-40 contract and claim ceiling retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "finite-source boundary retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "source-bound quaternion norm is 40",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "source-bound Euclidean Root-40 view closes",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "source-bound hyperbolic Root-40 view closes",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "source-bound additive recurrence retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "97→101 remains a cut, not recurrence continuation",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "whole/difference exact Return retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "existing Pascal-quaternion four-channel connector passes",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "existing connector fixes scalar/i/j/k slot semantics",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "existing connector fixes exact C3 coordinate action",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "existing connector has exact quaternion Return",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "existing finite connector formula retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "existing all-N symbolic generalization retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "NCS C30→C6 address bus retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "NCS phase successor 29→0 retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Owner counter-step audit supplies C5 +2/-2",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "29=P10 retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "36 decompositions retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "(3,1) recurrence has exact six-state pair orbit mod 4",
+      "passed": true,
+      "observed": [
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "expected": [
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "all six Fibonacci pair states are distinct",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "C5 counter-step and Fibonacci C6 orbit close at C30",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "C5×C6 joint phase has thirty states",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "C5 and C6 periods are coprime",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "four labelled quaternion slots reproduce norm 40",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "coefficient values form two doublets",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "quaternion slots and P4 roles have equal cardinality four",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "four slots admit 24 role bijections",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "NCS source types P4 as four roles",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Root-40 result declares no P4 map",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Root-40 contract declares no P4 map",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "norm 40 has 144 ordered signed integer quaternion records",
+      "passed": true,
+      "observed": 144,
+      "expected": 144
+    },
+    {
+      "name": "displayed quaternion is one norm-40 record",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "norm 40 does not identify one quaternion record",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Pascal Phi image requires scalar depth ten for Root-40 imaginary coordinates",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "displayed Root-40 quaternion is outside the Pascal Phi image",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "existing Triple-19 antipode operator retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Triple-19 full-carrier intertwiner remains null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "existing CON-DAO carrier identity retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "CON-DAO 8+4 lens retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "CON-DAO grouping non-identity boundary retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "full mod-four tag carries four enumerable addresses",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "binary every-four pulse remains insufficient",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    }
+  ]
+}

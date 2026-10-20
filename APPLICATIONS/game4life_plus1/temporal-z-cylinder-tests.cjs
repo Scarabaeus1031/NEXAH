@@ -1,0 +1,27 @@
+const assert=require("node:assert/strict");
+const fs=require("node:fs");
+const Z=require("./temporal-z-cylinder.js");
+
+const e={id:"r|cylinder-x|g0003|11|x002|y005",type:"survivals",x:2,y:5,generation:3};
+const p=Z.map(e,11,"cylinder-x",1,5,{height:8,baseRadius:2,laneDepth:2});
+assert.equal(p.thetaSource,"x");
+assert.equal(p.radiusSource,"y");
+assert.equal(p.radius,3);
+assert.equal(p.z,0);
+assert.ok(Math.abs(Math.hypot(p.x,p.y)-p.radius)<1e-12);
+const py=Z.map(e,11,"cylinder-y",1,5);
+assert.equal(py.thetaSource,"y");
+assert.equal(py.radiusSource,"x");
+const events=[{...e,generation:2,id:"a"},{...e,generation:3,id:"b"},{...e,generation:5,id:"c"},{...e,x:4,generation:3,id:"d"}];
+const segments=Z.consecutiveSegments(events,11,"cylinder-x",1,5);
+assert.equal(segments.length,1);
+assert.equal(segments[0].address,"2,5");
+const meta=Z.metadata({displayBoundary:"cylinder-x",schema:"source.v1"},1,5);
+assert.equal(meta.projection_only,true);
+assert.equal(meta.rule_unchanged,true);
+assert.equal(meta.z_source,"generation");
+assert.deepEqual(meta.generation_interval,[1,5]);
+const html=fs.readFileSync("index.html","utf8"),scene=fs.readFileSync("cylinder-comparison.js","utf8");
+for(const token of ["temporal-z","boundaryFlow","boundaryExport","temporal-z-cylinder.js"])assert.match(html,new RegExp(token));
+for(const token of ["TEMPORAL_Z_CYLINDER","PERSISTENT_ADDRESS_TRAILS","TEMPORAL_Z_SWEEP","projection_only","rule_unchanged"])assert.match(scene,new RegExp(token));
+console.log("PASS Temporal Z cylinder 21/21");

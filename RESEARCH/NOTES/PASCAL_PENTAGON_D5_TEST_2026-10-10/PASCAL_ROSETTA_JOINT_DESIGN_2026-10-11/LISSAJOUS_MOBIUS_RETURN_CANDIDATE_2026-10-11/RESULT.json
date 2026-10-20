@@ -1,0 +1,215 @@
+{
+  "checks": [
+    {
+      "expected": {
+        "creates": [],
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST"
+      },
+      "name": "identity reused without creation",
+      "observed": {
+        "creates": [],
+        "historical_target": "ORION T08 Mobius-to-Lissajous E0",
+        "parent_contract": "A0-BL-023:PASCAL_ROSETTA_D30_AUDIT:V1",
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+        "source_object": "SCC-003"
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "left_increment": -1,
+        "modulus": 30,
+        "right_increment": 1
+      },
+      "name": "parent D30 contract is the signed unit lift",
+      "observed": {
+        "degrees_per_step": 12,
+        "formula": "p=2*k-n mod 30",
+        "left_increment": -1,
+        "modulus": 30,
+        "reflection": "p -> -p",
+        "right_increment": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": 30,
+      "name": "C6 x C5 phase signature is an exact C30 chart",
+      "observed": 30,
+      "status": "PASS"
+    },
+    {
+      "expected": 30,
+      "name": "phase signature reconstructs every phase",
+      "observed": 30,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "fibre_profile": {
+          "1": 10,
+          "2": 10
+        },
+        "unique_points": 20
+      },
+      "name": "Lissajous display projection is lossy as declared",
+      "observed": {
+        "fibre_profile": {
+          "1": 10,
+          "2": 10
+        },
+        "unique_points": 20
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": "v(reflect(j))=-v(j)",
+      "name": "D-register reflection compiles to v negation",
+      "observed": {
+        "D1": {
+          "reflected": "D1",
+          "reflected_v": 0.0,
+          "v": 0.0
+        },
+        "D2": {
+          "reflected": "D5",
+          "reflected_v": -0.5,
+          "v": 0.5
+        },
+        "D3": {
+          "reflected": "D4",
+          "reflected_v": -1.0,
+          "v": 1.0
+        },
+        "D4": {
+          "reflected": "D3",
+          "reflected_v": 1.0,
+          "v": -1.0
+        },
+        "D5": {
+          "reflected": "D2",
+          "reflected_v": 0.5,
+          "v": -0.5
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": 300,
+      "name": "candidate state cardinality",
+      "observed": 300,
+      "status": "PASS"
+    },
+    {
+      "expected": 300,
+      "name": "cylinder one-turn exact return",
+      "observed": 300,
+      "status": "PASS"
+    },
+    {
+      "expected": 300,
+      "name": "Mobius one-turn monodromy",
+      "observed": 300,
+      "status": "PASS"
+    },
+    {
+      "expected": 300,
+      "name": "Mobius two-turn exact return",
+      "observed": 300,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "apparent_returns_without_e": 60,
+        "exact_returns": 0
+      },
+      "name": "orientation fibre prevents false fixed-register return",
+      "observed": {
+        "apparent_returns_without_e": 60,
+        "exact_returns": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": 0,
+      "name": "forward and reverse Mobius steps are mutual inverses",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "cylinder": 2,
+        "mobius": 1
+      },
+      "name": "cylinder and Mobius boundary controls separate",
+      "observed": {
+        "cylinder": 2,
+        "mobius": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "failures": 0,
+        "state_word_cases": 38100,
+        "words": 127
+      },
+      "name": "all bounded Pascal words have exact inverse transport",
+      "observed": {
+        "failures": 0,
+        "state_word_cases": 38100,
+        "words": 127
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": 0,
+      "name": "branch transport retains signed D30 endpoint phase",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "charted": 140,
+        "unique_register_phase": 65
+      },
+      "name": "all frozen Pascal incidences receive a candidate strip chart",
+      "observed": {
+        "charted": 140,
+        "unique_register_phase": 65
+      },
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary": [
+    "formal finite candidate validation only",
+    "no PENT-08 identity or admitted Study",
+    "no continuous surface embedding is inferred from the display curve",
+    "the Lissajous display projection is lossy and is not the state",
+    "the Mobius result is a declared discrete seam quotient, not a physical mechanism",
+    "no Pascal-to-Fibonacci conjugacy, H3/E8 identity, resonance or publication claim"
+  ],
+  "classification": "FORMAL_DESIGN_VALIDATION_NOT_SCIENCE_RUN_NOT_PENT_08",
+  "creates": [],
+  "identity_reused": "A0OE:PASCAL_PENTAGON_D5_TEST",
+  "input_hashes": {
+    "archaeology": "9f3c63965c4f7c0bb81d12fbd7240049592045fc1d0107b7a6bc9bab4a238b8e",
+    "contract": "c2a74b15c2ece78d0d4d8466a3bc08791bc58c7217a1bec2e59dc8da56508a66",
+    "d30_contract": "b704a389348f4c2af463901690d3659a4839f47c326e006aa58a94fcc55a19f0",
+    "face_incidence": "528a23dd7cde18916bfc736df7e567b578eb77058bc4e56cfbb5e287b9048113"
+  },
+  "schema": "nexah.pascal-lissajous-mobius-return-candidate-result/1.0.0",
+  "status": "PASS_WITH_BOUNDARY",
+  "summary": {
+    "bounded_branch_words": 127,
+    "candidate_states": 300,
+    "checks_passed": 16,
+    "checks_total": 16,
+    "cylinder_boundary_components": 2,
+    "display_points": 20,
+    "exact_lissajous_phase_states": 30,
+    "frozen_pascal_incidences_charted": 140,
+    "mobius_boundary_components": 1,
+    "state_word_cases": 38100
+  }
+}

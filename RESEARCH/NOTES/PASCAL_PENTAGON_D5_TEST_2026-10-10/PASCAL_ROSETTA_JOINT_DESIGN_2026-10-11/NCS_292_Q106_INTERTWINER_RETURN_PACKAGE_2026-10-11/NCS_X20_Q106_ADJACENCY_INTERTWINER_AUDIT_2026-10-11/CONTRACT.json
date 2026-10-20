@@ -1,0 +1,81 @@
+{
+  "schema": "nexah.ncs-x20-q106-adjacency-intertwiner-contract/1.0.0",
+  "contract_id": "A0-BL-023:NCS_X20_Q106_ADJACENCY_INTERTWINER_AUDIT:V1",
+  "date": "2026-10-11",
+  "status": "OWNER_AUTHORIZED_BOUNDED_FORMAL_AUDIT_NOT_NEW_STUDY",
+  "identity": {
+    "extends": "A0-BL-023:NCS_292_Q106_INTERTWINER_RETURN_PACKAGE:V1",
+    "reuses": [
+      "SCC-003",
+      "A0OE:PASCAL_PENTAGON_D5_TEST"
+    ],
+    "creates": []
+  },
+  "question": "Does the already declared X20 quotient carry enough independently specified structure to decide an adjacency- and D5-preserving bijection into the unique connected four-five-orbit interface of the frozen Q106 graph?",
+  "frozen_sources": {
+    "parent_result": {
+      "path": "../RESULT.json",
+      "sha256": "303e299694ebad23c422f2400532a521adc2e24a28686fc4a9d75cca162f6b0b"
+    },
+    "q106_nodes": {
+      "path": "../../../SCC_003_REFERENCE/artifacts/nodes.csv",
+      "sha256": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12"
+    },
+    "q106_edges": {
+      "path": "../../../SCC_003_REFERENCE/artifacts/edges.csv",
+      "sha256": "6309b5c8807cf4d3352500d7eb1e7ce8d0c0da9be68d327c9196f9e54fd742b3"
+    },
+    "q106_automorphisms": {
+      "path": "../../../SCC_003_REFERENCE/artifacts/automorphisms.json",
+      "sha256": "70750da9596d05ebdfac55f8fa46893f469b163751529cb225b2abc19ce5966e"
+    }
+  },
+  "source_carrier": {
+    "states": "X20=C5 x P4",
+    "state_labels": "(s,p), 0<=s<5, 0<=p<4",
+    "rotation": "r_X(s,p)=(s+1 mod 5,p)",
+    "candidate_reflection": "j_X(s,p)=(-s mod 5,p)",
+    "adjacency": null,
+    "edge_types": null,
+    "warning": "P4 is used by the parent as a four-package index set. No graph adjacency on P4 or X20 is declared."
+  },
+  "target_carrier": {
+    "carrier": "the unique connected Q106 invariant union of four five-node D5 orbits",
+    "adjacency": "induced undirected support of the frozen 180 directed Q106 edges",
+    "actions": "frozen D5 permutations r and m"
+  },
+  "decision_rules": {
+    "typed_intertwiner": "requires a bijection iota preserving declared source adjacency, target adjacency, rotation and the selected reflection/Janus law",
+    "rotation_equivariant_bijection_count": "4!*5^4",
+    "d5_equivariant_bijection_count": "4! after j_X and target m are declared",
+    "undefined_contract": "if source adjacency or edge types are null, adjacency preservation is undecidable and typed_intertwiner_to_q106 remains null",
+    "negative_result": "if a declared source graph exists and no candidate preserves it, report NO_INTERTWINER",
+    "positive_result": "only a fully checked map may populate typed_intertwiner_to_q106"
+  },
+  "comparators": [
+    "twenty isolated states",
+    "four disjoint C5 cycles",
+    "Cartesian product graph C5 square P4"
+  ],
+  "downstream_gates": {
+    "triple19_pc_pd_compatibility": "OPEN_UNTIL_IOTA_AND_A_TYPED_PC_PD_TO_X20_OR_Q106_MAP_EXIST",
+    "beta_selection": "OPEN_720_CANDIDATES",
+    "historical_janus_selection": "OPEN",
+    "navigator_binding": "SOURCE_BOUND_LENS_ONLY_NO_CANONICAL_COUNT_CHANGE"
+  },
+  "outcomes": [
+    "INTERTWINER_VERIFIED",
+    "NO_INTERTWINER_FOR_DECLARED_SOURCE_GRAPH",
+    "MULTIPLE_INTERTWINERS_NO_CANONICAL_SELECTION",
+    "UNDEFINED_CONTRACT_ADJACENCY_MISSING",
+    "CONTRACT_INVALID"
+  ],
+  "stop_rule": "Stop before importing Q106 adjacency back into X20, interpreting P4 as a path graph without a source declaration, selecting one of the 24 D5-equivariant charts, choosing beta or a historical Janus law, or treating Triple-19 Pc/Pd compatibility as established.",
+  "claim_boundary": [
+    "formal finite audit of already frozen records only",
+    "no new Study, Family, carrier identity, canonical count or publication state",
+    "equivariance without adjacency preservation is not a graph intertwiner",
+    "a coordinate chart on the target interface is not a source-derived X20 map",
+    "Triple-19 remains related and non-identical until a typed carrier map is supplied"
+  ]
+}

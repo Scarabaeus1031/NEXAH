@@ -1,0 +1,398 @@
+{
+  "status": "PASS_SOURCE_AUDIT_WITH_UNRECOVERED_CONTRACT",
+  "classification": "SOURCE_CONTRACT_UNRECOVERED",
+  "checks": {
+    "passed": 60,
+    "total": 60
+  },
+  "source_contract": {
+    "x20_states": 20,
+    "x20_edge_set": null,
+    "x20_edge_types": null,
+    "triple19_oriented_states": 14,
+    "triple19_to_x20_map": null,
+    "triple19_to_q106_map": null
+  },
+  "candidate_gate": {
+    "d5_equivariant_charts": 24,
+    "adjacency_tests_executed": 0,
+    "pcpd_tests_executed": 0,
+    "selected_chart": null,
+    "typed_intertwiner_to_q106": null
+  },
+  "correction": "P_c and P_d are oriented-state constructors; A is the Triple-19 involution.",
+  "next_required_input": "An independently sourced or explicitly Human-declared X20 edge set, edge types and Triple-19-to-X20 map, frozen before Q106 comparison.",
+  "claim_boundary": [
+    "formal source-contract audit only; not an admitted Study or scientific run",
+    "no new Navigator identity, Family, canonical operator, PENT-08 or publication state",
+    "a missing source contract is preserved as a null result rather than repaired by an attractive target representation"
+  ],
+  "checks_detail": [
+    {
+      "name": "contract identity extends A0-BL-023",
+      "passed": true,
+      "observed": "A0-BL-023:NCS_292_Q106_INTERTWINER_RETURN_PACKAGE:V1",
+      "expected": "A0-BL-023 parent"
+    },
+    {
+      "name": "no new identity",
+      "passed": true,
+      "observed": [],
+      "expected": []
+    },
+    {
+      "name": "formal non-admitted status",
+      "passed": true,
+      "observed": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_PENT_08",
+      "expected": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_PENT_08"
+    },
+    {
+      "name": "source ledger schema",
+      "passed": true,
+      "observed": "nexah.formal-source-contract-ledger/1.0.0",
+      "expected": "nexah.formal-source-contract-ledger/1.0.0"
+    },
+    {
+      "name": "eleven source-side records",
+      "passed": true,
+      "observed": 11,
+      "expected": 11
+    },
+    {
+      "name": "source IDs unique",
+      "passed": true,
+      "observed": 11,
+      "expected": 11
+    },
+    {
+      "name": "source inside ecosystem: SRC:X20:NCS_SCRIPT",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/EXPERIMENTS/trinity_euler_riemann_ramanujan/scripts/v2_06_3_cubes_taxicab_regulator.py",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:X20:NCS_SCRIPT",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:X20:NCS_SCRIPT",
+      "passed": true,
+      "observed": "188063b6512766ecc05f09e4ada6ab0666c88d75ab73c13392c22dd69a691fca",
+      "expected": "188063b6512766ecc05f09e4ada6ab0666c88d75ab73c13392c22dd69a691fca"
+    },
+    {
+      "name": "source inside ecosystem: SRC:X20:DUAL_AXIS_CONTRACT",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_DUAL_AXIS_Q106_BRIDGE_AUDIT_2026-10-11/FORMAL_CONTRACT.md",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:X20:DUAL_AXIS_CONTRACT",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:X20:DUAL_AXIS_CONTRACT",
+      "passed": true,
+      "observed": "09bceee72068a79c55dffb7d63c0d856c4e1d9b225829a190c4ea5afa879a8a0",
+      "expected": "09bceee72068a79c55dffb7d63c0d856c4e1d9b225829a190c4ea5afa879a8a0"
+    },
+    {
+      "name": "source inside ecosystem: SRC:X20:PARENT_CONTRACT",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/CONTRACT.json",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:X20:PARENT_CONTRACT",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:X20:PARENT_CONTRACT",
+      "passed": true,
+      "observed": "ad9033568da4d7f2ea72ae2384554c689338ca08b3ffc9384588331d14bf75d5",
+      "expected": "ad9033568da4d7f2ea72ae2384554c689338ca08b3ffc9384588331d14bf75d5"
+    },
+    {
+      "name": "source inside ecosystem: SRC:X20:PRIOR_AUDIT",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/NCS_X20_Q106_ADJACENCY_INTERTWINER_AUDIT_2026-10-11/RESULT.json",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:X20:PRIOR_AUDIT",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:X20:PRIOR_AUDIT",
+      "passed": true,
+      "observed": "c89b58bd8178fde96b5669136450e1dddd8ef60c04c28449cfcdfdcc8fd0796e",
+      "expected": "c89b58bd8178fde96b5669136450e1dddd8ef60c04c28449cfcdfdcc8fd0796e"
+    },
+    {
+      "name": "source inside ecosystem: SRC:X20:MRB06",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/mrb/MRB06_KL_SPLIT_ROTATION_RETURN/MRB06_RESULTS.json",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:X20:MRB06",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:X20:MRB06",
+      "passed": true,
+      "observed": "032145a21e281b2a8c39635d6d85f9ad07bc7e5b73c3c8512eb7a72cc91eae59",
+      "expected": "032145a21e281b2a8c39635d6d85f9ad07bc7e5b73c3c8512eb7a72cc91eae59"
+    },
+    {
+      "name": "source inside ecosystem: SRC:X20:MRB09",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/mrb/MRB09_GRID_ZIPPER_CENTER_RETURN/MRB09_RESULTS.json",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:X20:MRB09",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:X20:MRB09",
+      "passed": true,
+      "observed": "075c034f377f2679d2cd015c533229edd16230f541a6c2ff1f3adf9ea032a6bb",
+      "expected": "075c034f377f2679d2cd015c533229edd16230f541a6c2ff1f3adf9ea032a6bb"
+    },
+    {
+      "name": "source inside ecosystem: SRC:X20:MRB10",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/mrb/MRB10_YT_PASCAL_THREAD_GRID/MRB10_RESULTS.json",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:X20:MRB10",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:X20:MRB10",
+      "passed": true,
+      "observed": "47d004356ad7a45fbe78b57a1a7733da22ead41f937c8566c66940650efe4200",
+      "expected": "47d004356ad7a45fbe78b57a1a7733da22ead41f937c8566c66940650efe4200"
+    },
+    {
+      "name": "source inside ecosystem: SRC:X20:ACR44",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/acr/NEXAH_ACR44_RESULTS.json",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:X20:ACR44",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:X20:ACR44",
+      "passed": true,
+      "observed": "2d013a7437664d49328367319e4dd03813e2dab3c4300e0fa5887124aeb37f46",
+      "expected": "2d013a7437664d49328367319e4dd03813e2dab3c4300e0fa5887124aeb37f46"
+    },
+    {
+      "name": "source inside ecosystem: SRC:X20:OIL_RIS",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_OIL_RIS_VERTICAL_UTILITY_PILOT_2026-10-07/NEXAH_OIL_RIS_VERTICAL_UTILITY_RETURN.html",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:X20:OIL_RIS",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:X20:OIL_RIS",
+      "passed": true,
+      "observed": "2be9caa4ec6f292482fc83164b696c6e4746c57cdc9de9ab5736cffbf23ca7c4",
+      "expected": "2be9caa4ec6f292482fc83164b696c6e4746c57cdc9de9ab5736cffbf23ca7c4"
+    },
+    {
+      "name": "source inside ecosystem: SRC:X20:TRIPLE19_BINDING",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_PRIMEGRID_BLOCK02B_TRINARY_PASCAL_ANTIPODE_2026-10-07/TRIPLE19_ANTIPODE_PAIR_BRIDGE_BINDING.json",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:X20:TRIPLE19_BINDING",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:X20:TRIPLE19_BINDING",
+      "passed": true,
+      "observed": "2e20786a1c2c829acccef86af9c953e8d231602f68e0e8b642d88d2e7e69d786",
+      "expected": "2e20786a1c2c829acccef86af9c953e8d231602f68e0e8b642d88d2e7e69d786"
+    },
+    {
+      "name": "source inside ecosystem: SRC:X20:TRIPLE19_ADDENDUM",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_PRIMEGRID_BLOCK02B_TRINARY_PASCAL_ANTIPODE_2026-10-07/03_TRIPLE19_ANTIPODE_PAIR_BRIDGE_ADDENDUM.md",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:X20:TRIPLE19_ADDENDUM",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:X20:TRIPLE19_ADDENDUM",
+      "passed": true,
+      "observed": "aea673d53ee59ba6e26763403b46658da9ae6d012ecda79c029de9f4103d98a7",
+      "expected": "aea673d53ee59ba6e26763403b46658da9ae6d012ecda79c029de9f4103d98a7"
+    },
+    {
+      "name": "X20 has twenty unique source coordinates",
+      "passed": true,
+      "observed": 20,
+      "expected": 20
+    },
+    {
+      "name": "r_X has order five",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "j_X is involutive",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "j_X r_X j_X equals r_X inverse",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "X20 edge set remains null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "X20 edge types remain null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "source review agrees edge set null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "source review agrees edge types null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "P_c and P_d typed as constructors",
+      "passed": true,
+      "observed": [
+        "P_c",
+        "P_d"
+      ],
+      "expected": [
+        "P_c",
+        "P_d"
+      ]
+    },
+    {
+      "name": "Triple-19 has fourteen oriented states",
+      "passed": true,
+      "observed": 14,
+      "expected": 14
+    },
+    {
+      "name": "A is involutive",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "A is fixed-point-free on oriented states",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Triple-19 carrier is not X20 by cardinality",
+      "passed": true,
+      "observed": "14 != 20",
+      "expected": "14 != 20"
+    },
+    {
+      "name": "Triple-19 to X20 map remains null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Triple-19 to Q106 map remains null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "twenty-four inherited D5 orbit charts",
+      "passed": true,
+      "observed": 24,
+      "expected": 24
+    },
+    {
+      "name": "all charts blocked before target fit",
+      "passed": true,
+      "observed": 24,
+      "expected": 24
+    },
+    {
+      "name": "no adjacency chart test executed",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "no Pc/Pd chart test executed",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "target evaluation not permitted",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "name": "source contract incomplete",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    }
+  ]
+}

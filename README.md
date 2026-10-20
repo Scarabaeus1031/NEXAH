@@ -126,22 +126,18 @@ tag.
 
 ## Current Development Direction
 
-Broad exploratory research remains paused. The main programme is
-**Orientation**; the current product direction is **NEXAH Compare — Translation,
-Record & Return Stack**, a small Boundary and Transition instrument assembled
-from existing semantics, software and evidence. This is a strategy direction,
-not an active build or product-readiness claim.
+NEXAH's direction is an **open, Human-centered perspective and practice of
+orientation**. Its primary effect is not assigned in advance to culture,
+science, design, technology or practical application; context, evidence, use
+and responsible effect determine the weight of each expression. NEXAH makes
+source, question, selection, frame, transformation, uncertainty and residual
+inspectable so that meaning, judgment, decision and responsibility can remain
+with the Human.
 
-The next strategy decision is to select or decline one exact Human-usefulness
-wedge. If selected, the sequence is deliberately small:
-
-1. freeze one person, task, baseline, outcome and STOP rule;
-2. assemble the minimum inspectable comparison and Return path;
-3. test it against a strong equal-information baseline; and
-4. publish one bounded result with its residuals, uncertainty and claim limits.
-
-No wedge or research cycle is currently active. External Human usefulness,
-scientific novelty and an integrated product remain unvalidated.
+NEXAH Compare is retained as bounded comparison infrastructure, not as the
+strategic center or a validated product. Broad exploratory research remains
+paused; no successor build or research cycle is active. External Human
+usefulness, scientific novelty and an integrated product remain unvalidated.
 
 ---
 

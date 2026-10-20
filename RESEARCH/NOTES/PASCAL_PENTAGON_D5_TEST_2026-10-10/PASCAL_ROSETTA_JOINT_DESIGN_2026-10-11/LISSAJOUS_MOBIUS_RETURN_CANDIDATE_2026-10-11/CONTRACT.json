@@ -1,0 +1,62 @@
+{
+  "contract_id": "A0-BL-023:PASCAL_LISSAJOUS_MOBIUS_RETURN_CANDIDATE:V1",
+  "date": "2026-10-11",
+  "status": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_PENT_08",
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "source_object": "SCC-003",
+    "parent_contract": "A0-BL-023:PASCAL_ROSETTA_D30_AUDIT:V1",
+    "historical_target": "ORION T08 Mobius-to-Lissajous E0",
+    "creates": []
+  },
+  "carrier": {
+    "base": "C30",
+    "registers": "C5_D",
+    "orientation_fibre": "C2_E",
+    "state": "(j,p,e) in C5 x C30 x {+1,-1}",
+    "cardinality": 300
+  },
+  "lissajous": {
+    "theta": "2*pi*p/30",
+    "display": "x=cos(5*theta), y=sin(6*theta)",
+    "exact_phase_signature": "(p mod 6, p mod 5)",
+    "exact_period": 30,
+    "display_projection_expected_unique_points": 20,
+    "display_projection_is_lossy": true
+  },
+  "strip_chart": {
+    "u": "p/30",
+    "signed_register_coordinate": {
+      "D1": 0,
+      "D2": 1,
+      "D3": 2,
+      "D4": -2,
+      "D5": -1
+    },
+    "v": "signed_register_coordinate/2"
+  },
+  "controls": {
+    "cylinder_seam": "(j,29,e) -> (j,0,e)",
+    "mobius_seam": "(j,29,e) -> (-j mod 5,0,-e)",
+    "reverse_mobius_seam": "(j,0,e) -> (-j mod 5,29,-e)",
+    "expected_cylinder_boundary_components": 2,
+    "expected_mobius_boundary_components": 1,
+    "expected_first_mobius_return": "register reflection and orientation reversal",
+    "expected_second_mobius_return": "exact state return"
+  },
+  "branch_transport": {
+    "L": -1,
+    "R": 1,
+    "word_lengths": [0, 1, 2, 3, 4, 5, 6],
+    "words": 127,
+    "inverse_rule": "reverse word and exchange L/R"
+  },
+  "claim_boundary": [
+    "formal finite candidate validation only",
+    "no PENT-08 identity or admitted Study",
+    "no continuous surface embedding is inferred from the display curve",
+    "the Lissajous display projection is lossy and is not the state",
+    "the Mobius result is a declared discrete seam quotient, not a physical mechanism",
+    "no Pascal-to-Fibonacci conjugacy, H3/E8 identity, resonance or publication claim"
+  ]
+}

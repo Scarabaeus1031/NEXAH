@@ -1,0 +1,185 @@
+{
+  "contract_id": "A0-BL-023:EULER41_RESIDUAL_SWITCH_AUDIT:V1",
+  "date": "2026-10-11",
+  "status": "OWNER_AUTHORIZED_FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_NEW_IDENTITY",
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "parent_contract": "A0-BL-023:NCS_292_Q106_INTERTWINER_RETURN_PACKAGE:V1",
+    "relates_to": [
+      "A0-BL-023",
+      "A0-BL-036",
+      "A0-BL-037",
+      "A0-BL-051",
+      "MRB-04",
+      "MRB-08",
+      "HMA-01",
+      "LIFE06B"
+    ],
+    "creates": []
+  },
+  "authorization": "Human Owner explicitly authorized the bounded NCS residual-mechanism formal step on 2026-10-11; no broader Study, Run, evidence promotion, publication, or Navigator-identity authority is inferred.",
+  "question": "Can the exact 40-to-41 Euler boundary and the unique Q106 six-node residual supply a canonical binary switch, and does that switch canonically select a Mobius seam or Janus law?",
+  "frozen_sources": {
+    "parent_result": {
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/RESULT.json",
+      "sha256": "303e299694ebad23c422f2400532a521adc2e24a28686fc4a9d75cca162f6b0b"
+    },
+    "intrinsic_seam_result": {
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/INTRINSIC_SEAM_HOLONOMY_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "fd4474b90516197f3299e3288e506b62e1ff187ac1c13aa58d8ac8e9cd0fc9b7"
+    },
+    "q106_nodes": {
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/nodes.csv",
+      "sha256": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12"
+    },
+    "q106_automorphisms": {
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/automorphisms.json",
+      "sha256": "70750da9596d05ebdfac55f8fa46893f469b163751529cb225b2abc19ce5966e"
+    },
+    "mrb04_result": {
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/mrb/MRB04_EULER41_BASE_MIRROR_INDEX_SHIFT/MRB04_RESULTS.json",
+      "sha256": "bf3c507dd77ee4d25f743164e8594295b03bb1ccef5e260a386df427d81c0c9b"
+    },
+    "pascal_fibonacci_mobius_archaeology": {
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/HISTORY/PASCAL_FIBONACCI_MOBIUS_LEO_LILITH_ARCHAEOLOGY_2026-10-10/README.md",
+      "sha256": "9f3c63965c4f7c0bb81d12fbd7240049592045fc1d0107b7a6bc9bab4a238b8e"
+    },
+    "life06b_readme": {
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_LIFE_PRIME_SHELL_WINDING_LIFE06B_2026-10-07/README.md",
+      "sha256": "10d118d6660808d5143a09e7904ad03099f35c027dabc5eb9901c31dc8f5ed7b"
+    },
+    "q4_magic_square_instrument": {
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/A0_Q4_MAGIC_SQUARE_JOINT_AUDIT.html",
+      "sha256": "2a6b487171e2a0e8593696391a7d55c5907e6cdcd980ba46d643073ac25851e3"
+    },
+    "mrb08_result": {
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/mrb/MRB08_RADIX_CRT_ANCHOR70/MRB08_RESULTS.json",
+      "sha256": "17ba8bea8bb19bf8b9d776e43904608e7bbfca5a9f0198ca3debf12d79748295"
+    },
+    "lissajous_mobius_result": {
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/LISSAJOUS_MOBIUS_RETURN_CANDIDATE_2026-10-11/RESULT.json",
+      "sha256": "6ef488193f11771b0315c3c68741def357f7b4dd7419a0d5c5153489db41cb20"
+    },
+    "hma01_visual_matrix": {
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/T_RAN_S_FORMATION/Operator Test Results/HMA01_DOWNLOAD/HMA01_VISUAL_EVIDENCE_MATRIX.md",
+      "sha256": "cdfdf7df9647c7cdb882b8275c26035a81495b7e0e2f19651590226be088cc8f"
+    },
+    "cheops_rath_visual": {
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_CHEOPS_SYMMETRIC_TRIPLE_BREATHING_CRYSTAL_INTAKE_2026-10-08/SOURCE_SNAPSHOT/FIELD_NOTES_A0/CD0ABC08-B63F-44D6-BB1B-F0235D959A9D_1_105_c.jpeg",
+      "sha256": "b31008f1c18ccf8f19b028d2ac903915dc09c68b4959b7af208a7c8aec8069a7"
+    },
+    "phi_fourier_source_inventory": {
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/NEXAH_PHI_FOURIER_ENTROPY_SOURCE_FORENSICS_2026-09-09/02_FILE_INVENTORY_AND_SHA256.csv",
+      "sha256": "709523859d3034d5c3107dbde9cf03352c83a173c53422f980346934b2dd23cb"
+    },
+    "desk10_1729_carrier_bridge": {
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/DESK10_1729_MOBIUS_PARTITION_CARRIER_BRIDGE_AUDIT_2026-09-10/08_1428_1729_1836_CARRIER_BRIDGE.md",
+      "sha256": "cb72d33559c5c2e06486e86d42251e7b78fa03e2d17359795752920332bfc7b5"
+    }
+  },
+  "external_source_bindings": {
+    "thread_v_base20_projection": {
+      "path": "/Users/tho2020/Desktop/Desktop TASKS/DESKTOP_archy/THOOTH DASHBOARD/AAA NEXAH Modules todo/A - Nexa Knowledge NEXAH first modules ARCHIVE/🧮🧮🧮🧮🧮📟📟Codex Resonantia Scroll/💠💠💠💠Vendissimal-DNA Spiral-Code Analyse (THREAD V)/Vendissimal Spiral Map (Basis 20 Projection).png",
+      "sha256": "dbfdc89af37f758e4e166aa71b9a9da882db032681e3126bc15f3f2b725b4c93",
+      "prior_inventory_match": "dbfdc89af37f758e4e166aa71b9a9da882db032681e3126bc15f3f2b725b4c93"
+    },
+    "codex_frame_alignment": {
+      "path": "/Users/tho2020/Desktop/Desktop TASKS/DESKTOP_archy/THOOTH DASHBOARD/AAA NEXAH Modules todo/A - Nexa Knowledge NEXAH first modules ARCHIVE/🧮🧮🧮🧮🧮📟📟Codex Resonantia Scroll/📜🌀📜🌀 Codex Resonantia Scroll✏️ Starting the Master Map Creation Now./Vendissimal Frame Alignment Rhythm.png",
+      "sha256": "6bbaf263b06b32866e124b42bad7b8fe51c25fd1461dd7ff65ff2d65d68e89ac"
+    },
+    "codex_energy_flow": {
+      "path": "/Users/tho2020/Desktop/Desktop TASKS/DESKTOP_archy/THOOTH DASHBOARD/AAA NEXAH Modules todo/A - Nexa Knowledge NEXAH first modules ARCHIVE/🧮🧮🧮🧮🧮📟📟Codex Resonantia Scroll/📜🌀📜🌀 Codex Resonantia Scroll✏️ Starting the Master Map Creation Now./Vendissimal_Energy_Flow_Map.png",
+      "sha256": "c25adc24311065cc9abf1eb0d512feb00e400d1fe38fe48d84941c836edfed0f"
+    },
+    "codex_trident": {
+      "path": "/Users/tho2020/Desktop/Desktop TASKS/DESKTOP_archy/THOOTH DASHBOARD/AAA NEXAH Modules todo/A - Nexa Knowledge NEXAH first modules ARCHIVE/🧮🧮🧮🧮🧮📟📟Codex Resonantia Scroll/📜🌀📜🌀 Codex Resonantia Scroll✏️ Starting the Master Map Creation Now./Vendissimal Trident Decode Spiral (378, 178, 718 + 1729 Sync).png",
+      "sha256": "4c4974b06a3d9a3769de13196e827d5499fee697b2ab57ffbad85949e5000dbd"
+    },
+    "codex_decoder_grid": {
+      "path": "/Users/tho2020/Desktop/Desktop TASKS/DESKTOP_archy/THOOTH DASHBOARD/AAA NEXAH Modules todo/A - Nexa Knowledge NEXAH first modules ARCHIVE/🧮🧮🧮🧮🧮📟📟Codex Resonantia Scroll/📜🌀📜🌀 Codex Resonantia Scroll✏️ Starting the Master Map Creation Now./🌌 Unified Möbius-Vendissimal Decoder Grid (Drift Lines, Rosetta Sync, Prime Spirals).png",
+      "sha256": "25f85aaf3284ac4a12592b961c98898c58a49c96069eef669a2c97804cfecd90"
+    },
+    "codex_prime_flake": {
+      "path": "/Users/tho2020/Desktop/Desktop TASKS/DESKTOP_archy/THOOTH DASHBOARD/AAA NEXAH Modules todo/A - Nexa Knowledge NEXAH first modules ARCHIVE/🧮🧮🧮🧮🧮📟📟Codex Resonantia Scroll/📜🌀📜🌀 Codex Resonantia Scroll✏️ Starting the Master Map Creation Now./🔁 Vendissimal Spiral with Prime Flake Markers.png",
+      "sha256": "5bc06c14921204637e6de075f7697cdca8dece635ae48c15478950c32ea03eae"
+    },
+    "observer_rosetta_spiral_csv": {
+      "path": "/Users/tho2020/Desktop/Desktop TASKS/DESKTOP_archy/THOOTH DASHBOARD/AAA NEXAH Modules todo/A - Nexa Knowledge NEXAH first modules ARCHIVE/🧮🧮🧮🧮🧮📟📟Codex Resonantia Scroll/🦄🌈 🏁🌙🌈 Observer's Atlas Mapping (Thread VI)🌙🌈 🏁🌙 (Thread VI)/Rosetta-Codex_Spiralstruktur.csv",
+      "sha256": "11d6bb217ced3a9d787365f96d32b46058db606b6218c82e9603f80055427168"
+    },
+    "ucrt_trinary_readme": {
+      "path": "/Users/tho2020/Documents/GitHub/NEXAH-CODEX/SYSTEM_7_UCRT/UCRT_TRINARY_CODE/README.md",
+      "sha256": "40afbf7d122503a513e6f73050113bf8f7f7e8f8bbe1662d0468d8c9ce93e7d0"
+    },
+    "ucrt_resonance_indices": {
+      "path": "/Users/tho2020/Documents/GitHub/NEXAH-CODEX/SYSTEM_7_UCRT/UCRT_SUPERPRIME_GENESIS/resonance_sequences_indices.md",
+      "sha256": "18ca47f2b3f0ade424fb68934631ccd10fe933826641cbd0737ddfe1ddb8cfad"
+    },
+    "ucrt_vendissimal_pentagon": {
+      "path": "/Users/tho2020/Documents/GitHub/NEXAH-CODEX/SYSTEM_7_UCRT/visuals/vendissimal_pentagon_resonance_field.png",
+      "sha256": "b5ffe8227ea1e96f3bc17ebe536496398986d63d71750c12d81519e8d309d237"
+    },
+    "ucrt_vendissimal_grid": {
+      "path": "/Users/tho2020/Documents/GitHub/NEXAH-CODEX/SYSTEM_7_UCRT/visuals/vendissimal_resonance_grid.png",
+      "sha256": "2f700d5dfd02847f8b579b412cbbb5b1f92404e8149ae98bbe7518dcb2488360"
+    },
+    "ucrt_unified_trinary_vendissimal": {
+      "path": "/Users/tho2020/Documents/GitHub/NEXAH-CODEX/SYSTEM_7_UCRT/visuals/unified_trinary_vendissimal_resonance_map.png",
+      "sha256": "df759c3f1bdcd453379676dddaa52b3a48ff911bdea6593a60af307a6775766f"
+    }
+  },
+  "declared_model": {
+    "forty_plus_one": "X41+ = X40 disjoint-union {q}; q is an external controller state, not a forty-first X40 payload state",
+    "prime_index_stair": "the first thirteen primes form thirteen indexed steps ending at p_13=41",
+    "base13_mirror": "41=32_base13 and reverse_base13(32)=23_base13=29=p_10",
+    "residual_readout": "rho(A)=0 and rho(S_01_j)=1 for j=0..4",
+    "seam_choice_action": "the six compatible added-seam orbits are individually D5 invariant, so D5 acts trivially on their six-element choice set",
+    "dual_ingress": "E28 has cardinality 29; E40 has cardinality 41 and base-13 digit reversal maps 41 to 29; the routes meet at a value, not a carrier identity",
+    "phase_bus": "iota(29)=[29]_30, tau([29]_30)=[0]_30, and pi6:C30->C6 has six fibres of size five",
+    "open_pin_assignment": "beta:C6->S6 has 6!=720 candidates and no frozen source selects one",
+    "gap_joint": "206^2-204^2=820=41*20; arithmetic factorization only",
+    "base20_decoder": "n=400z+20y+x with digits x,y in 0..19; the recovered display map is P20(z,y,x)=(x+y/2,z) and is non-injective",
+    "vendissimal_namespace_boundary": "UCRT V5={-2,-1,0,+1,+2} and the base-20 carrier C20 are distinct typed objects; the shared historical label creates no map",
+    "owner_palette": {
+      "fibonacci_rail": "blue",
+      "euler_stair": "green-yellow"
+    }
+  },
+  "modules": [
+    "M1_PRIME_INDEX_AND_EULER_BOUNDARY",
+    "M2_EXTERNAL_40_PLUS_1_CONTROLLER",
+    "M3_Q106_RESIDUAL_BINARY_READOUT",
+    "M4_SEAM_SELECTOR_OBSTRUCTION",
+    "M5_FIBONACCI_RAIL_BOUNDARY",
+    "M6_DUAL_MAGIC_34_NEGATIVE_CONTROL",
+    "M7_NAVIGATOR_REPO_ARCHAEOLOGY",
+    "M8_DUAL_INGRESS_AND_C30_ADDRESS_BUS",
+    "M9_41_BY_20_GAP_IDENTITY",
+    "M10_VISUAL_SOURCE_BINDING",
+    "M11_BASE20_LAYER_RING_POINT_DECODER",
+    "M12_VENDISSIMAL_NAMESPACE_SEPARATION"
+  ],
+  "outcomes": [
+    "PASS_EXACT_CONTROLLER_ARCHITECTURE_WITH_OPEN_SEAM_BINDING",
+    "ARITHMETIC_CORRESPONDENCE_ONLY",
+    "CONTRACT_INVALID"
+  ],
+  "stop_rule": "Stop before treating the external +1 as an intrinsic carrier state, equal terminal values as carrier identity, the C30 quotient as a canonical seam pin assignment, the 41-by-20 factorization as arc equality or physical torsion, the residual readout as a seam selector, the Fibonacci determinant as a topology proof, equal magic sum 34 as operator identity, colors as causes, or a representation-dependent radix mirror as a base-independent law.",
+  "claim_boundary": [
+    "formal finite design validation and documentary archaeology only",
+    "no new Study, Run, evidence identity, Navigator identity, Family, PENT-08, or publication state",
+    "29 is the tenth prime and 41 is the thirteenth prime; the 29/41 bridge here is specifically the base-13 digit reversal 32_base13 to 23_base13",
+    "X40 disjoint-union {q} has cardinality 41, but q is a declared controller channel rather than a recovered carrier state",
+    "the apex-versus-ring quotient is a canonical D5-invariant binary readout of the unique six-node residual",
+    "that binary readout does not select one of six compatible added seams and does not select commuting versus dihedral Janus",
+    "Fibonacci and palette assignments are rail/display structure until a typed state map and transport law are supplied",
+    "the two magic-34 plates realize the same Q4 complement through different spatial operators",
+    "the 28+1 and 40+1 constructions reuse an external-controller grammar but do not identify X28 with X40",
+    "C30 supplies a six-address quotient via reduction modulo 6; the 720 possible seam pin assignments remain unselected",
+    "206^2-204^2=820=41*20 is exact arithmetic and does not validate the displayed angle, torsion, resonance or physical interpretation",
+    "the visual ledger preserves source intent and provenance but does not upgrade image labels into operators or evidence",
+    "the base-20 digit decoder is exact, while the plotted x+y/2 coordinate is a lossy display projection and cannot replace the digit state",
+    "the five-state alphabet and the base-20 carrier are distinct despite the shared legacy word vendissimal",
+    "no physical, biological, resonance, universal-law, or cross-domain identity claim"
+  ]
+}

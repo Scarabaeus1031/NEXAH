@@ -1,0 +1,46 @@
+{
+  "checks": {
+    "all_full_actions_are_euclidean_isometries_on_embedded_nodes": true,
+    "all_full_actions_preserve_weights_and_recurrence": true,
+    "all_radial_and_equatorial_seam_weights_are_compatible": true,
+    "both_hemispheres_project_to_same_106_node_carrier": true,
+    "carrier_euler_characteristic_is_2": true,
+    "carrier_has_7_vertices_15_edges_10_faces": true,
+    "five_shared_equatorial_midpoints_retain_weight_20": true,
+    "glued_bipyramid_has_182_unique_nodes": true,
+    "glued_bipyramid_is_connected": true,
+    "group_relations_hold": true,
+    "orientation_preserving_subgroup_has_order_10": true,
+    "ten_raw_faces_have_280_nodes": true,
+    "twenty_full_actions_are_distinct": true
+  },
+  "claim_ceiling": "One finite declared combinatorial and Euclidean 3D lift only; no prime-label, resonance, physical, historical, universal-solid or four-inner-layer claim is established.",
+  "classification": "BOUNDED_CANDIDATE_EVIDENCE_NOT_ADMITTED",
+  "parameters": {
+    "depth": 6,
+    "equatorial_vertices": 5,
+    "height": 1.0,
+    "layers_per_hemisphere": 7,
+    "tolerance": 1e-10
+  },
+  "result": {
+    "carrier_edges": 15,
+    "carrier_faces": 10,
+    "carrier_vertices": 7,
+    "component_count": 1,
+    "euler_characteristic": 2,
+    "four_inner_layers_interpretation": "UNDEFINED_IN_CURRENT_CONTRACT",
+    "full_action_count": 20,
+    "full_symmetry_fixture": "D5 x C2",
+    "orientation_preserving_action_count": 10,
+    "orientation_preserving_subgroup": "D5",
+    "projected_node_count_per_hemisphere": 106,
+    "quotient_edge_count": 360,
+    "quotient_node_count": 182,
+    "raw_face_local_node_count": 280,
+    "shared_equatorial_weight_20_orbit_size": 5,
+    "working_object": "depth-six Pascal lattice on a regular pentagonal bipyramid"
+  },
+  "schema": "nexah.pascal-pentagon-3d-lift-test/1.0.0",
+  "status": "PASS"
+}

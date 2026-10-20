@@ -1,0 +1,407 @@
+{
+  "schema": "nexah.game4life.post-close-freeze.v1",
+  "freeze_id": "G4L1-POST-CLOSE-INSTRUMENT-FREEZE-2026-10-12",
+  "date": "2026-10-12",
+  "status": "PASS_FROZEN_INTERNAL_INSTRUMENT_SNAPSHOT",
+  "custody": "10 NEXAH CORE/NEXAH/APPLICATIONS/game4life_plus1",
+  "scientific_authority": "UNCHANGED_CLOSED_LIFE08_STUDY",
+  "identity_effect": "REUSE_ONLY_NO_NEW_NAVIGATOR_NODE_OR_RELATION",
+  "canonical_count_effect": "NONE",
+  "active_research_cycle": "NONE",
+  "publication_authorized": false,
+  "verification": [
+    {
+      "label": "full component suite",
+      "status": "PASS",
+      "summaries": [
+        "PASS 20/20",
+        "PASS LIFE//CRYSTAL 19/19",
+        "PASS NCS Return Lens 95/95",
+        "PASS two: keystone 0 maps to 1",
+        "PASS two: +1 equals multiplication by base",
+        "PASS two: P/Q mirror product returns 1",
+        "PASS euler: keystone 0 maps to 1",
+        "PASS euler: +1 equals multiplication by base",
+        "PASS euler: P/Q mirror product returns 1",
+        "PASS phi: keystone 0 maps to 1",
+        "PASS phi: +1 equals multiplication by base",
+        "PASS phi: P/Q mirror product returns 1",
+        "PASS root2: keystone 0 maps to 1",
+        "PASS root2: +1 equals multiplication by base",
+        "PASS root2: P/Q mirror product returns 1",
+        "PASS napier: keystone 0 maps to 1",
+        "PASS napier: +1 equals multiplication by base",
+        "PASS napier: P/Q mirror product returns 1",
+        "PASS natural log handle reconstructs pi phi and root2",
+        "PASS Napier ten-million-step ratio approaches e^-1",
+        "PASS zero insertion ladder reaches 100000001",
+        "PASS zero insertion closed form and recurrence agree",
+        "PASS decimal boundary and 110 111 continuation are retained",
+        "PASS XI hinge and Janus axis keep distinct exact centers",
+        "PASS prime-index approach and selected 101 doubling channel are retained",
+        "PASS base-50 mirror pairs 53 and 97 around fixed point 75",
+        "PASS prime channel follows generation mod 6 and opens the Base-50 gate at 97",
+        "PASS Life clock projects every generation onto the eight-step gearbox",
+        "PASS Life clock rejects invalid generations",
+        "PASS unknown base and fractional address are rejected",
+        "PASS 27/27",
+        "PASS crystal-camera-state",
+        "PASS crystal-build-preserves-camera",
+        "PASS crystal-orbit-remains-live",
+        "PASS cylinder-camera-state",
+        "PASS cylinder-build-preserves-camera",
+        "PASS cylinder-orbit-remains-live",
+        "PASS 6/6",
+        "PASS THREE-DOMAIN 40/40",
+        "PASS REPLICATION MATRIX 18/18 · 6bd9c875"
+      ]
+    },
+    {
+      "label": "UI smoke suite",
+      "status": "PASS",
+      "summaries": [
+        "PASS UI smoke 18/18"
+      ]
+    },
+    {
+      "label": "package audit",
+      "status": "PASS",
+      "summaries": [
+        "PASS 20/20",
+        "PASS 71/71"
+      ]
+    }
+  ],
+  "open_register": [
+    "G4L1-O01_VISUAL_ACCESSIBILITY_REVIEW",
+    "G4L1-O02_INDEPENDENT_IMPLEMENTATION_OR_REPLICATION",
+    "G4L1-O03_NEW_FIXTURES_OR_BOUNDARY_REQUIRE_NEW_PREREGISTRATION",
+    "G4L1-O04_TYPED_TRANSPORT_AND_SOURCE_BINDINGS_REMAIN_OPEN",
+    "G4L1-O05_NO_FOURTH_DOMAIN_OR_SHARED_MECHANISM_CLAIM",
+    "G4L1-O06_REPOSITORY_VERSIONING_REQUIRES_EXPLICIT_DECISION",
+    "G4L1-O07_WORK_PROVENANCE_CLEANUP_REQUIRES_CUSTODY_DECISION"
+  ],
+  "file_count": 64,
+  "files": [
+    {
+      "path": "./00_MISSION_CONTROL_INTAKE.md",
+      "sha256": "ea4d3ce730603eeabf69d89e2e0020b568b6ee6225f655a21d9b03a3e2704ce0",
+      "bytes": 1629
+    },
+    {
+      "path": "./01_PREREGISTRATION.md",
+      "sha256": "ee0117bd96a2a2f0cc1d0d080ac1ad0a3008e4c6cd856b43c0d7c4294a60e1dc",
+      "bytes": 845
+    },
+    {
+      "path": "./02_RESULT_ASSESSMENT.md",
+      "sha256": "4663e9e1a1d00d1db7944750d60e20fef1b3a9f195ba74fb016e09b0795b1006",
+      "bytes": 2139
+    },
+    {
+      "path": "./03_OWNER_CLOSURE_RECORD.md",
+      "sha256": "1c24ab2ff8cec23b5ed3feff5a448f0d47297e3a0f7bacc2f7f6d7628c236a91",
+      "bytes": 1005
+    },
+    {
+      "path": "./04_POST_CLOSE_INSTRUMENT_FREEZE_2026-10-12.md",
+      "sha256": "875f9ab8de66da0f4870838dec062174f4b8ee0d955e332a26afbf2d70728f62",
+      "bytes": 4825
+    },
+    {
+      "path": "./app.js",
+      "sha256": "777ff7492ade6adc32cbdd63478917e4d3ca7aae162fe1381db4c47642774b41",
+      "bytes": 16843
+    },
+    {
+      "path": "./audit.cjs",
+      "sha256": "d5188301b078642d6b37f71beaac1d9dc272e3b0d8c877353dde02d9b59bcf71",
+      "bytes": 10965
+    },
+    {
+      "path": "./crystal-projection.js",
+      "sha256": "4fc56a891869314267fa56057f9d848d1ece25ed26ad6f860137c4132ba78c23",
+      "bytes": 5975
+    },
+    {
+      "path": "./crystal-scene.js",
+      "sha256": "9d7c4ff073292e0581a323ccfceac8414f4ae6fd9e66c3e1fcf453f9374c06f8",
+      "bytes": 14776
+    },
+    {
+      "path": "./crystal-tests.cjs",
+      "sha256": "2e7ed056935c00cd9d890b2fc74fb0b2e2803bcc34bb804567895505a968defa",
+      "bytes": 2201
+    },
+    {
+      "path": "./cylinder-comparison.js",
+      "sha256": "a07e317e637006437f461d89d4697bbec27ca76a7fdd91459879fcced74a108c",
+      "bytes": 9434
+    },
+    {
+      "path": "./cylinder-engine.js",
+      "sha256": "43ff8a5b4b72fba88c90821dba713d5cc4748845a90357f615e8646205ffcb08",
+      "bytes": 7874
+    },
+    {
+      "path": "./freeze-instrument.cjs",
+      "sha256": "c717f056df70c45ec10f31d1887ed612f65152bf49cb2b4b85b10ee2201d75eb",
+      "bytes": 3058
+    },
+    {
+      "path": "./freeze-protocol.cjs",
+      "sha256": "6941529cc17223d4d20fe81294a4735fb57427f47f1cfa4964e78b7a43e8919d",
+      "bytes": 518
+    },
+    {
+      "path": "./index.html",
+      "sha256": "0ff9ba18e9a675147ad8c7ea389eb7de315c1abbee4c05bae2c7724852f4dc57",
+      "bytes": 30172
+    },
+    {
+      "path": "./life-clock-coupler.css",
+      "sha256": "24bd4f47ec26d21d527abf138fde4757b79241d46fcb9289ff260d585eabaae1",
+      "bytes": 1067
+    },
+    {
+      "path": "./logarithmic-gearbox-tests.cjs",
+      "sha256": "4b0bd41da6820c76415e808b88633acb7b47619327bf4b96d18821aaf0991640",
+      "bytes": 3897
+    },
+    {
+      "path": "./logarithmic-gearbox.css",
+      "sha256": "dbd335515c7eb923edc7ef562d2c3196e1d18f4a94fe2de195b5e92c149565ec",
+      "bytes": 6158
+    },
+    {
+      "path": "./logarithmic-gearbox.js",
+      "sha256": "5df73859dbe9f6e5f3481275916ecc92ec275b6e5b0ad122f8573f8ff1850b5d",
+      "bytes": 12294
+    },
+    {
+      "path": "./ncs-return-lens-tests.cjs",
+      "sha256": "5707072bc4da58abbcb7b5a7b64ad3d2a189d892a500f8845399db65e1681cd1",
+      "bytes": 7057
+    },
+    {
+      "path": "./ncs-return-lens.css",
+      "sha256": "e108e288fd78882212af0a9da3bd4861e6d253b930a79e0b226664b814f9cfe8",
+      "bytes": 11594
+    },
+    {
+      "path": "./ncs-return-lens.js",
+      "sha256": "688ccba3be8231f0a0a1408847c6c6a1f9df08ac6ada1be53be5759839e5766d",
+      "bytes": 21563
+    },
+    {
+      "path": "./orbit-regression.cjs",
+      "sha256": "58c99c2b5a2445e439a8021e888e7f07d6801449215a365019ee85211a0f4a5c",
+      "bytes": 1034
+    },
+    {
+      "path": "./package.json",
+      "sha256": "b4067dd9ef33241bf08c8c4490a25f24cfd23bead562b86179ef88c370e00c92",
+      "bytes": 579
+    },
+    {
+      "path": "./PREREGISTRATION_LOCK.json",
+      "sha256": "6ada27ae606e5a68a288c801d2f48d32f28f4246c9ecf11aa8355e64dcf35161",
+      "bytes": 212
+    },
+    {
+      "path": "./PREREGISTRATION.json",
+      "sha256": "1f21d5ef334b5d2c37dc43069f3c6ff986657630fec1c210c7f4e6c8f031f218",
+      "bytes": 2285
+    },
+    {
+      "path": "./prime-axis-switchboard.css",
+      "sha256": "dd38142fdfbb02b67d3185f797518eb6f1f50ba6028bb15c5f6244a9b1d25a06",
+      "bytes": 4769
+    },
+    {
+      "path": "./README.md",
+      "sha256": "f5df97b25d60f7e91695382238574cc4722dd35d8fd09ab4497c0d2c89c22222",
+      "bytes": 12586
+    },
+    {
+      "path": "./results/LIFE08_VALIDATION_REPORT.json",
+      "sha256": "7edc85160bdeba66c40724e6a1e10eb330b414b8d53190a60be3d91c7a063f07",
+      "bytes": 452
+    },
+    {
+      "path": "./results/PACKAGE_AUDIT.json",
+      "sha256": "ca814f2c03b29f3feb87100fe7dd3759f5b3dbf77c683c60fb52d00776b6f207",
+      "bytes": 6434
+    },
+    {
+      "path": "./results/PRIMARY_RESULT.json",
+      "sha256": "dc3049a8935e26cc3cbb7b1bdd7dfe4a54e1fd2691941beff4696757fa0a4be7",
+      "bytes": 16200
+    },
+    {
+      "path": "./results/REPLAY_RESULT.json",
+      "sha256": "dc3049a8935e26cc3cbb7b1bdd7dfe4a54e1fd2691941beff4696757fa0a4be7",
+      "bytes": 16200
+    },
+    {
+      "path": "./results/study-results.js",
+      "sha256": "009af41b5dbf1ca0a5d2067cc319965070eebbb050298a34e1edaadaaf89e95e",
+      "bytes": 9086
+    },
+    {
+      "path": "./RUN_CONTRACT.md",
+      "sha256": "ec0426d89bcaf51a737b2104f8b9be89133879b14ef63e74b1cb1e4410469706",
+      "bytes": 1593
+    },
+    {
+      "path": "./run-study.cjs",
+      "sha256": "b8403874440a4da057170bec594418d672aca16b2e5fd7cff93fac343ebae274",
+      "bytes": 5379
+    },
+    {
+      "path": "./SHA256_MANIFEST.txt",
+      "sha256": "a4bb8fd226301832221b448df43c96a9fa8617f71fc8ce0b2f63da4c54b8d0ff",
+      "bytes": 5661
+    },
+    {
+      "path": "./SOURCE_BINDING.json",
+      "sha256": "584cc72d8e205a4bb7ca3eb74e821d1b7d314e8a65a11e0736de5c30f4fb843c",
+      "bytes": 13056
+    },
+    {
+      "path": "./styles.css",
+      "sha256": "4a6266a9a3733050187857aa5d6ec98433f09ee45e336032ffc43a1c87ac2f95",
+      "bytes": 10943
+    },
+    {
+      "path": "./tests.cjs",
+      "sha256": "26c4a1d3ac66008ad8d86a8b71c8039d3de7cbda0ad0f6fd023f1bec00628692",
+      "bytes": 1715
+    },
+    {
+      "path": "./three-domain-transition-test/app.js",
+      "sha256": "3053ebfa871e7f6193285fc8232ed4f9f206d39e3f7a0caa71634220a587dc39",
+      "bytes": 6769
+    },
+    {
+      "path": "./three-domain-transition-test/domain-engine.js",
+      "sha256": "79976c82543b76220d2991bf1c8fa61ac2b2c0dca0eeb04c9c4ca464b59c9f8e",
+      "bytes": 7967
+    },
+    {
+      "path": "./three-domain-transition-test/euler-view.css",
+      "sha256": "d7a3f8a0ef268c0b7c691c090938e1f47d7d8f1552384afc75b474a37996accf",
+      "bytes": 5489
+    },
+    {
+      "path": "./three-domain-transition-test/euler-view.js",
+      "sha256": "a424ae2dfae0efc25c24a159529e3e7b8c19eb90c420fe5490ec2a5f0389a603",
+      "bytes": 9144
+    },
+    {
+      "path": "./three-domain-transition-test/index.html",
+      "sha256": "89480df16a0e07560f07a7971c0e97e41a413476181bbd2537335d20944f08e5",
+      "bytes": 14395
+    },
+    {
+      "path": "./three-domain-transition-test/README.md",
+      "sha256": "7651a7e3157379124eada08ed151adf8ed62ea2086d70632d9b31782ea17af08",
+      "bytes": 1897
+    },
+    {
+      "path": "./three-domain-transition-test/replication-inline.css",
+      "sha256": "936ca7a34321b3071ee54c90d099279113f4fbf8557fbb126de71a62286645a8",
+      "bytes": 2708
+    },
+    {
+      "path": "./three-domain-transition-test/replication-inline.js",
+      "sha256": "21a9a11577fa48bd82bb04c824db3f0ec86340f02e2fbcebbf516a58a33b5c7d",
+      "bytes": 4854
+    },
+    {
+      "path": "./three-domain-transition-test/replication-matrix/app.js",
+      "sha256": "c89a825e1ae7635a187108ba1d2191b6aa46e0d6da484d2be94a5c9f602593c1",
+      "bytes": 6135
+    },
+    {
+      "path": "./three-domain-transition-test/replication-matrix/controls.css",
+      "sha256": "46033f8a2b3dc544173cd4c54b8cbe2bab188d7b896108938eece4a170874854",
+      "bytes": 248
+    },
+    {
+      "path": "./three-domain-transition-test/replication-matrix/index.html",
+      "sha256": "a86169f2e91c9d88e38ad26327e469ad23d7e9fc2454ce8585b557b923dc0d17",
+      "bytes": 4152
+    },
+    {
+      "path": "./three-domain-transition-test/replication-matrix/README.md",
+      "sha256": "51f6bc2eb9e054cce1275496d8f227b797ff122c14a37df18a4f6b46af2e2fb9",
+      "bytes": 756
+    },
+    {
+      "path": "./three-domain-transition-test/replication-matrix/replication-engine.js",
+      "sha256": "033253349202db9c004508c560c9c326b47f07f9ec708b7ddc0048519838b339",
+      "bytes": 3359
+    },
+    {
+      "path": "./three-domain-transition-test/replication-matrix/styles.css",
+      "sha256": "54d2afccafeeb9fac8ebe872b8b7ce1ce1af2756b34044b1e856be259ecd6208",
+      "bytes": 4611
+    },
+    {
+      "path": "./three-domain-transition-test/replication-matrix/tests.cjs",
+      "sha256": "0c2b86830eb844502f690ab4b50e2d80f75ee61dfe9403ed1242abe82b59bae5",
+      "bytes": 1007
+    },
+    {
+      "path": "./three-domain-transition-test/styles.css",
+      "sha256": "79092c70e724cb60a3abfc5f3787213fe0a848eefb8fae80da3aa94e300fda88",
+      "bytes": 5952
+    },
+    {
+      "path": "./three-domain-transition-test/tests.cjs",
+      "sha256": "72b8ab88d890536c97a6aebdc0d0cb1f50a51cf2f076dc17ef976b140796290c",
+      "bytes": 2960
+    },
+    {
+      "path": "./three-domain-transition-test/transition-montage.css",
+      "sha256": "03b270c3b62712c133f3addd9332a3a653a840f3732d2124595f7c7885ddef5e",
+      "bytes": 3363
+    },
+    {
+      "path": "./three-domain-transition-test/transition-montage.js",
+      "sha256": "0c2172e3b64a0dd49ac668f32556f18b4669ad7b4b6f73fed3988f6388b6dfcb",
+      "bytes": 4373
+    },
+    {
+      "path": "./ui-smoke.cjs",
+      "sha256": "59413878e8fe43018a7c115f72522af66b20b133ba8848e02503fd302d916d52",
+      "bytes": 4468
+    },
+    {
+      "path": "./vendor/three-0.147.0/GLTFExporter.js",
+      "sha256": "7ba9cf5888ff8c11768ff805d50081c383a91ae4dbf487750065bbbeccd45077",
+      "bytes": 64131
+    },
+    {
+      "path": "./vendor/three-0.147.0/LICENSE",
+      "sha256": "fbf3943930dacbf56aabb8dc5d816440bd16aa6f4cc78ddbdf12106ee1807832",
+      "bytes": 1081
+    },
+    {
+      "path": "./vendor/three-0.147.0/OrbitControls.js",
+      "sha256": "b4c6e53f98538535b11fd6655627d47fb5877b3ad972568bff0a7026c4b6d5c4",
+      "bytes": 26660
+    },
+    {
+      "path": "./vendor/three-0.147.0/three.min.js",
+      "sha256": "f34446bf875b5fb0dcd93819ffe1d9e182d46634ee855f5d904c6c4ac7cdbc95",
+      "bytes": 607784
+    },
+    {
+      "path": "./zero-insertion-gate.css",
+      "sha256": "fb13ed9b32a522c4f08581d7904916cb422e88fe870a31bb69e87a1fb38d98af",
+      "bytes": 3375
+    }
+  ]
+}

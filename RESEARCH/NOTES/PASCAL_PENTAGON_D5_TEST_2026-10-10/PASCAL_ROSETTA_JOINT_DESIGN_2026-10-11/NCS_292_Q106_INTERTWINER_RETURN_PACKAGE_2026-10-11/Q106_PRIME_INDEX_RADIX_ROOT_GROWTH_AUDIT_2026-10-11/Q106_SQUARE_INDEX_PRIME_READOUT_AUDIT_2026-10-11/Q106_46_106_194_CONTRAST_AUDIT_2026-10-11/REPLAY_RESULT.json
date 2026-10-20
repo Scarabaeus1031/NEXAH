@@ -1,0 +1,318 @@
+{
+  "contract_id": "A0-Q106:46_106_194_CONTRAST_AUDIT:V1",
+  "date": "2026-10-11",
+  "classification": "PASS_Q106_LOCAL_AND_BOUNDED_HOMOLOGUE_SELECTIVITY",
+  "summary": {
+    "passed": 16,
+    "total": 16,
+    "failed": 0
+  },
+  "source_resolution": {
+    "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT_2026-10-11/Q106_SQUARE_INDEX_PRIME_READOUT_AUDIT_2026-10-11/RESULT.json",
+    "sha256": "31e4315f9e1a3de86fdb0212d135b71d269de8ef3f3c18a6c859ca5724e02492"
+  },
+  "definitions": {
+    "prime_indexing": "p_n is the nth prime with one-based indexing",
+    "comparison_carrier": "C_k=2*p_(k^2)",
+    "left_center_right": "(p_((k-1)^2),p_(k^2),p_((k+1)^2))",
+    "return_equation": "E(k): 2*p_(k^2)-p_((k+1)^2)=(k-1)^2"
+  },
+  "result": {
+    "homologues": [
+      {
+        "k": 3,
+        "square_indices": [
+          4,
+          9,
+          16
+        ],
+        "square_index_primes": [
+          7,
+          23,
+          53
+        ],
+        "carrier": 46,
+        "return_residual": -7,
+        "target_square": 4,
+        "return_equation_holds": false
+      },
+      {
+        "k": 4,
+        "square_indices": [
+          9,
+          16,
+          25
+        ],
+        "square_index_primes": [
+          23,
+          53,
+          97
+        ],
+        "carrier": 106,
+        "return_residual": 9,
+        "target_square": 9,
+        "return_equation_holds": true
+      },
+      {
+        "k": 5,
+        "square_indices": [
+          16,
+          25,
+          36
+        ],
+        "square_index_primes": [
+          53,
+          97,
+          151
+        ],
+        "carrier": 194,
+        "return_residual": 43,
+        "target_square": 16,
+        "return_equation_holds": false
+      }
+    ],
+    "direct_homologue_hits": [
+      4
+    ],
+    "finite_scan": {
+      "minimum_k": 2,
+      "maximum_k": 1000,
+      "hits": [
+        4
+      ]
+    },
+    "root_pythagorean_hits": [
+      4
+    ],
+    "local_perturbations": [
+      {
+        "value": 104,
+        "minus_p25": 7,
+        "minus_2p16": -2,
+        "both_q106_closures": false
+      },
+      {
+        "value": 105,
+        "minus_p25": 8,
+        "minus_2p16": -1,
+        "both_q106_closures": false
+      },
+      {
+        "value": 106,
+        "minus_p25": 9,
+        "minus_2p16": 0,
+        "both_q106_closures": true
+      },
+      {
+        "value": 107,
+        "minus_p25": 10,
+        "minus_2p16": 1,
+        "both_q106_closures": false
+      },
+      {
+        "value": 108,
+        "minus_p25": 11,
+        "minus_2p16": 2,
+        "both_q106_closures": false
+      }
+    ],
+    "local_exact_hits": [
+      106
+    ]
+  },
+  "checks": [
+    {
+      "name": "existing identity reused with no created identity",
+      "status": "PASS",
+      "observed": {
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+        "carrier": "SCC-003 / Q106",
+        "parent_contract": "A0-Q106:SQUARE_INDEX_PRIME_READOUT_AUDIT:V1",
+        "creates": []
+      },
+      "expected": {
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+        "creates": []
+      }
+    },
+    {
+      "name": "frozen Q106 square-index source integrity",
+      "status": "PASS",
+      "observed": "31e4315f9e1a3de86fdb0212d135b71d269de8ef3f3c18a6c859ca5724e02492",
+      "expected": "31e4315f9e1a3de86fdb0212d135b71d269de8ef3f3c18a6c859ca5724e02492"
+    },
+    {
+      "name": "frozen source classification",
+      "status": "PASS",
+      "observed": "PASS_EXACT_SQUARE_INDEX_PRIME_READOUT_WITH_NO_D5_INVARIANT_53_SUBCARRIER",
+      "expected": "PASS_EXACT_SQUARE_INDEX_PRIME_READOUT_WITH_NO_D5_INVARIANT_53_SUBCARRIER"
+    },
+    {
+      "name": "C3/C4/C5 carrier values",
+      "status": "PASS",
+      "observed": [
+        46,
+        106,
+        194
+      ],
+      "expected": [
+        46,
+        106,
+        194
+      ]
+    },
+    {
+      "name": "homologue residuals",
+      "status": "PASS",
+      "observed": [
+        -7,
+        9,
+        43
+      ],
+      "expected": [
+        -7,
+        9,
+        43
+      ]
+    },
+    {
+      "name": "homologue target squares",
+      "status": "PASS",
+      "observed": [
+        4,
+        9,
+        16
+      ],
+      "expected": [
+        4,
+        9,
+        16
+      ]
+    },
+    {
+      "name": "Q106 is the sole direct homologue hit",
+      "status": "PASS",
+      "observed": [
+        4
+      ],
+      "expected": [
+        4
+      ]
+    },
+    {
+      "name": "Q106 is the sole hit in the declared finite scan",
+      "status": "PASS",
+      "observed": [
+        4
+      ],
+      "expected": [
+        4
+      ]
+    },
+    {
+      "name": "3-4-5 square root window is independently selective",
+      "status": "PASS",
+      "observed": [
+        4
+      ],
+      "expected": [
+        4
+      ]
+    },
+    {
+      "name": "root selectivity has exact factorization",
+      "status": "PASS",
+      "observed": "(k-1)^2+k^2-(k+1)^2=k(k-4)",
+      "expected": "identity holds"
+    },
+    {
+      "name": "106 is the sole local perturbation hit",
+      "status": "PASS",
+      "observed": [
+        106
+      ],
+      "expected": [
+        106
+      ]
+    },
+    {
+      "name": "local p25 residuals expose the one-step perturbation",
+      "status": "PASS",
+      "observed": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "expected": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "name": "local 2p16 residuals are centered on zero",
+      "status": "PASS",
+      "observed": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ],
+      "expected": [
+        -2,
+        -1,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "undefined R extensions remain excluded",
+      "status": "PASS",
+      "observed": [
+        "exact finite arithmetic for k=3,4,5 and 2<=k<=1000",
+        "46 and 194 are arithmetic comparison carriers only; no R(Q46) or R(Q194) is defined",
+        "the finite scan establishes bounded selectivity, not uniqueness for all positive integers",
+        "the test adds no Pascal coefficient transform and does not establish a Prime Pascal Pyramid",
+        "no new Study, PENT layer, Family, operator or Navigator identity"
+      ],
+      "expected": "explicit no R(Q46) or R(Q194) boundary"
+    },
+    {
+      "name": "finite scan remains non-universal",
+      "status": "PASS",
+      "observed": [
+        "exact finite arithmetic for k=3,4,5 and 2<=k<=1000",
+        "46 and 194 are arithmetic comparison carriers only; no R(Q46) or R(Q194) is defined",
+        "the finite scan establishes bounded selectivity, not uniqueness for all positive integers",
+        "the test adds no Pascal coefficient transform and does not establish a Prime Pascal Pyramid",
+        "no new Study, PENT layer, Family, operator or Navigator identity"
+      ],
+      "expected": "explicit bounded-only statement"
+    },
+    {
+      "name": "no new identity declared",
+      "status": "PASS",
+      "observed": [
+        "exact finite arithmetic for k=3,4,5 and 2<=k<=1000",
+        "46 and 194 are arithmetic comparison carriers only; no R(Q46) or R(Q194) is defined",
+        "the finite scan establishes bounded selectivity, not uniqueness for all positive integers",
+        "the test adds no Pascal coefficient transform and does not establish a Prime Pascal Pyramid",
+        "no new Study, PENT layer, Family, operator or Navigator identity"
+      ],
+      "expected": "explicit no-new-identity statement"
+    }
+  ],
+  "claim_boundary": [
+    "exact finite arithmetic for k=3,4,5 and 2<=k<=1000",
+    "46 and 194 are arithmetic comparison carriers only; no R(Q46) or R(Q194) is defined",
+    "the finite scan establishes bounded selectivity, not uniqueness for all positive integers",
+    "the test adds no Pascal coefficient transform and does not establish a Prime Pascal Pyramid",
+    "no new Study, PENT layer, Family, operator or Navigator identity"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "checks": {
+    "all_open_and_closed_seams_preserve_pascal_weights": true,
+    "archived_c5_c6_c6_shell_has_17_nodes_17_edges_3_components": true,
+    "archived_hub_fixture_has_18_nodes_34_edges_and_is_connected": true,
+    "c5_c6_clock_has_30_steps_and_one_shared_anchor_per_period": true,
+    "closure_identifies_6_nodes_and_recovers_106_node_carrier": true,
+    "closure_leaves_one_pentagonal_boundary_component": true,
+    "each_new_open_face_adds_21_pascal_nodes": true,
+    "each_open_attachment_consumes_one_edge_and_exposes_two": true,
+    "five_face_preclosure_has_112_nodes_and_7_boundary_edges": true,
+    "open_fan_node_formula_is_21f_plus_7": true,
+    "open_growth_remains_one_connected_disk": true
+  },
+  "claim_ceiling": "Finite combinatorial growth/closure and clock/topology controls only. The archived C5+C6+C6 fixture is a source comparator, not an identified image of the 106-node Pascal carrier. No resonance, physical mechanism, universal dynamic-boundary law or canonical Family is established.",
+  "classification": "BOUNDED_CANDIDATE_EVIDENCE_NOT_ADMITTED",
+  "parameters": {
+    "historical_control": "C5 + C6 + C6",
+    "maximum_faces_before_closure": 5,
+    "pascal_depth": 6
+  },
+  "result": {
+    "boundary_growth_rule": "B_open(f) = f + 2; B_closed(5) = 5",
+    "c5_c6_control": {
+      "hexagon_ticks": [0, 5, 10, 15, 20, 25],
+      "pentagon_ticks": [0, 6, 12, 18, 24],
+      "period_steps": 30,
+      "second_hexagon_effect_without_phase_map": "NO_CHANGE_TO_LCM",
+      "shared_ticks": [0],
+      "step_angle_degrees": 12
+    },
+    "closed_state": {
+      "boundary_components": 1,
+      "boundary_edges": 5,
+      "carrier_edges": 10,
+      "carrier_vertices": 6,
+      "closed": true,
+      "components": 1,
+      "euler_characteristic": 1,
+      "faces": 5,
+      "pascal_edges": 180,
+      "pascal_nodes": 106
+    },
+    "historical_c5_c6_c6_control": {
+      "hub_fixture_components": 1,
+      "hub_fixture_edges": 34,
+      "hub_fixture_nodes": 18,
+      "shell_components_without_hub": 3,
+      "shell_edges": 17,
+      "shell_nodes": 17,
+      "structural_reading": "the archived cycles are coupled by the declared center hub, not by Pascal edge gluing"
+    },
+    "node_growth_rule": "N_open(f) = 21f + 7; N_closed(5) = 106",
+    "one_hundred_six_arithmetic": "106 = 13*8 + 2; no structural 13-by-8 decomposition is established",
+    "one_hundred_six_equals_thirteen_times_eight": false,
+    "open_states": [
+      {"boundary_components": 1, "boundary_edges": 3, "carrier_edges": 3, "carrier_vertices": 3, "closed": false, "components": 1, "euler_characteristic": 1, "faces": 1, "pascal_edges": 42, "pascal_nodes": 28},
+      {"boundary_components": 1, "boundary_edges": 4, "carrier_edges": 5, "carrier_vertices": 4, "closed": false, "components": 1, "euler_characteristic": 1, "faces": 2, "pascal_edges": 78, "pascal_nodes": 49},
+      {"boundary_components": 1, "boundary_edges": 5, "carrier_edges": 7, "carrier_vertices": 5, "closed": false, "components": 1, "euler_characteristic": 1, "faces": 3, "pascal_edges": 114, "pascal_nodes": 70},
+      {"boundary_components": 1, "boundary_edges": 6, "carrier_edges": 9, "carrier_vertices": 6, "closed": false, "components": 1, "euler_characteristic": 1, "faces": 4, "pascal_edges": 150, "pascal_nodes": 91},
+      {"boundary_components": 1, "boundary_edges": 7, "carrier_edges": 11, "carrier_vertices": 7, "closed": false, "components": 1, "euler_characteristic": 1, "faces": 5, "pascal_edges": 186, "pascal_nodes": 112}
+    ],
+    "pascal_to_c5_c6_c6_intertwiner": "UNDEFINED_NO_INTERTWINER",
+    "state_rule": "carrier_(t+1) = carrier_t union_(one open radial edge) one new face",
+    "working_object": "sequential depth-six Pascal-face attachment with explicit closure"
+  },
+  "schema": "nexah.pascal-pentagon-dynamic-boundary-test/1.0.0",
+  "status": "PASS_WITH_BOUNDARY"
+}

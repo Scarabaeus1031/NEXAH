@@ -1,0 +1,299 @@
+{
+  "contract_id": "A0-Q106:SQUARE_INDEX_PRIME_READOUT_AUDIT:V1",
+  "date": "2026-10-11",
+  "classification": "PASS_EXACT_SQUARE_INDEX_PRIME_READOUT_WITH_NO_D5_INVARIANT_53_SUBCARRIER",
+  "summary": {
+    "passed": 17,
+    "total": 17,
+    "failed": 0
+  },
+  "source_resolution": {
+    "pent04_result": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_3D_LIFT_TEST_2026-10-10/RESULT.json",
+      "sha256": "ed8173444e28fbb1f70e76dcb7f3997c6d3141259e76fcdb50f27098664b39cc"
+    },
+    "q106_prime_result": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "330bc8a1b9b9a29bde53e77c43088b8487992252a86e63fdcee7701479d363d1"
+    },
+    "square_prime_result": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT_2026-10-11/LEO_LILITH_3_2_ROOT_PAIR_CONNECTOR_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "47db2d4c60fa5633bc7f216ca1f27ba90abe2a30fd3c43a842656f89abb0ccf4"
+    }
+  },
+  "readout": {
+    "Q106": {
+      "F": 9,
+      "O": 16,
+      "L": 25,
+      "N": 106
+    },
+    "square_roots": [
+      3,
+      4,
+      5
+    ],
+    "square_indices": [
+      9,
+      16,
+      25
+    ],
+    "square_index_primes": [
+      23,
+      53,
+      97
+    ],
+    "five_root_ladder": {
+      "indices": [
+        1,
+        4,
+        9,
+        16,
+        25
+      ],
+      "primes": [
+        2,
+        7,
+        23,
+        53,
+        97
+      ],
+      "adjacent_sums": [
+        9,
+        30,
+        76,
+        150
+      ]
+    },
+    "closure": {
+      "p25_minus_p16": 44,
+      "four_p5": 44,
+      "Q106_minus_p25": 9,
+      "four_p5_plus_3_squared": 53,
+      "two_p16": 106
+    },
+    "D5_invariant_53_witnesses": [],
+    "consecutive_root_hits_1_to_10000": [
+      3
+    ]
+  },
+  "checks": [
+    {
+      "name": "existing Pascal/Q106 identity reused",
+      "status": "PASS",
+      "observed": {
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+        "carrier": "SCC-003 / Q106",
+        "parent_contract": "A0-BL-023:Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT:V1",
+        "creates": []
+      },
+      "expected": {
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+        "creates": []
+      }
+    },
+    {
+      "name": "frozen source pent04_result",
+      "status": "PASS",
+      "observed": "ed8173444e28fbb1f70e76dcb7f3997c6d3141259e76fcdb50f27098664b39cc",
+      "expected": "ed8173444e28fbb1f70e76dcb7f3997c6d3141259e76fcdb50f27098664b39cc"
+    },
+    {
+      "name": "frozen source q106_prime_result",
+      "status": "PASS",
+      "observed": "330bc8a1b9b9a29bde53e77c43088b8487992252a86e63fdcee7701479d363d1",
+      "expected": "330bc8a1b9b9a29bde53e77c43088b8487992252a86e63fdcee7701479d363d1"
+    },
+    {
+      "name": "frozen source square_prime_result",
+      "status": "PASS",
+      "observed": "47db2d4c60fa5633bc7f216ca1f27ba90abe2a30fd3c43a842656f89abb0ccf4",
+      "expected": "47db2d4c60fa5633bc7f216ca1f27ba90abe2a30fd3c43a842656f89abb0ccf4"
+    },
+    {
+      "name": "M1 PENT-04 projects each hemisphere to Q106",
+      "status": "PASS",
+      "observed": 106,
+      "expected": 106
+    },
+    {
+      "name": "M2 Q106 readout is the 3-4-5 square triple",
+      "status": "PASS",
+      "observed": {
+        "readout": [
+          9,
+          16,
+          25,
+          106
+        ],
+        "roots": [
+          3,
+          4,
+          5
+        ]
+      },
+      "expected": {
+        "readout": [
+          9,
+          16,
+          25,
+          106
+        ],
+        "roots": [
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "name": "M2 Pythagorean index closure",
+      "status": "PASS",
+      "observed": "9+16=25",
+      "expected": "9+16=25"
+    },
+    {
+      "name": "M2 16 is a double square",
+      "status": "PASS",
+      "observed": {
+        "O": 16,
+        "(2^2)^2": 16,
+        "2^(2^2)": 16
+      },
+      "expected": 16
+    },
+    {
+      "name": "M3 standard one-based square-index prime lift",
+      "status": "PASS",
+      "observed": {
+        "roots": [
+          3,
+          4,
+          5
+        ],
+        "lifted": [
+          23,
+          53,
+          97
+        ]
+      },
+      "expected": {
+        "roots": [
+          3,
+          4,
+          5
+        ],
+        "lifted": [
+          23,
+          53,
+          97
+        ]
+      }
+    },
+    {
+      "name": "M3 five-root adjacent-sum ladder",
+      "status": "PASS",
+      "observed": [
+        9,
+        30,
+        76,
+        150
+      ],
+      "expected": [
+        9,
+        30,
+        76,
+        150
+      ]
+    },
+    {
+      "name": "M4 exact C-closure",
+      "status": "PASS",
+      "observed": {
+        "p25_minus_p16": 44,
+        "four_p5": 44,
+        "Q106_minus_p25": 9,
+        "four_p5_plus_3_squared": 53,
+        "two_p16": 106
+      },
+      "expected": {
+        "97-53": 44,
+        "4*p5": 44,
+        "106-97": 9,
+        "44+9": 53,
+        "2*p16": 106
+      }
+    },
+    {
+      "name": "M4 closure returns to p16 and Q106",
+      "status": "PASS",
+      "observed": {
+        "44+9": 53,
+        "97+9": 106,
+        "53+53": 106
+      },
+      "expected": {
+        "p16": 53,
+        "Q106": 106
+      }
+    },
+    {
+      "name": "M5 square-index primes remain distinct from squared primes",
+      "status": "PASS",
+      "observed": {
+        "p_(n^2)": [
+          23,
+          53,
+          97
+        ],
+        "(p_n)^2": [
+          25,
+          49,
+          121
+        ]
+      },
+      "expected": {
+        "distinct": true
+      }
+    },
+    {
+      "name": "M5 prime values are not a Pythagorean triple",
+      "status": "PASS",
+      "observed": {
+        "23^2+53^2": 3338,
+        "97^2": 9409
+      },
+      "expected": "not equal"
+    },
+    {
+      "name": "M6 no D5-invariant 53-node orbit union",
+      "status": "PASS",
+      "observed": [],
+      "expected": []
+    },
+    {
+      "name": "M7 3-4-5 is the unique positive consecutive-root hit through 10000",
+      "status": "PASS",
+      "observed": [
+        3
+      ],
+      "expected": [
+        3
+      ]
+    },
+    {
+      "name": "M7 exact uniqueness factorization",
+      "status": "PASS",
+      "observed": "a^2+(a+1)^2-(a+2)^2=(a-3)(a+1)",
+      "expected": "identity holds"
+    }
+  ],
+  "claim_boundary": [
+    "exact finite arithmetic on frozen PENT-04 and Q106 records",
+    "P_square(n)=p_(n^2) is a prime-at-square-index readout, not a squared-prime operator",
+    "the 3-4-5 relation lives in the index/readout layer; the prime values 23,53,97 do not form a Pythagorean triple",
+    "53 is an exact readout value but no D5-invariant 53-node subcarrier exists",
+    "no adjacency-preserving prime-to-node embedding is established",
+    "no new Study, PENT layer, Family, Navigator identity, physical claim or publication authority"
+  ]
+}

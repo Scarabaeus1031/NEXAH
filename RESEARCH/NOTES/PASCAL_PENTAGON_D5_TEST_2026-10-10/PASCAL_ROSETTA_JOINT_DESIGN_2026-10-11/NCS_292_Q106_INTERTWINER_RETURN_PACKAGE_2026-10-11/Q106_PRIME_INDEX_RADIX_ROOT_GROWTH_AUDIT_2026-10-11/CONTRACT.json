@@ -1,0 +1,61 @@
+{
+  "contract_id": "A0-BL-023:Q106_PRIME_INDEX_RADIX_ROOT_GROWTH_AUDIT:V1",
+  "date": "2026-10-11",
+  "status": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED",
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "source_object": "SCC-003 / Q106",
+    "parent_contract": "A0-BL-023:NCS_292_Q106_INTERTWINER_RETURN_PACKAGE:V1",
+    "creates": []
+  },
+  "question": "Which exact relations connect the 2-3-5 seed, Q106 layer growth, the frozen D5 orbit profile, prime indices 16 and 25, and radix-20/40/50 coordinates; and which proposed fractal interpretations remain open?",
+  "modules": [
+    "M1_Q106_ROOT_GROWTH",
+    "M2_235_SEED",
+    "M3_ORBIT_PRIME_INDEX_JOINT",
+    "M4_D5_HALF_OBSTRUCTION",
+    "M5_RADIX_MIRROR",
+    "M6_FRACTAL_BOUNDARY"
+  ],
+  "frozen_sources": {
+    "parent_contract": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/CONTRACT.json",
+      "sha256": "79a614a7806fad3084142c813f3d37d96d7253b637c32dff37f1be918f60295c"
+    },
+    "parent_result": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/RESULT.json",
+      "sha256": "bde2386627926326602e089676c2c7a15747d5fbfce8a78f411c0221fc1d10a9"
+    },
+    "q106_nodes": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/nodes.csv",
+      "sha256": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12"
+    },
+    "q106_automorphisms": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/automorphisms.json",
+      "sha256": "70750da9596d05ebdfac55f8fa46893f469b163751529cb225b2abc19ce5966e"
+    }
+  },
+  "declared_tests": {
+    "growth": "Q_m = 1 + 5*T_m for m=0..6",
+    "seed": ["2+3=5", "2*3=6", "2/3 is a repeating rational", "2^3=8 is a comparator"],
+    "prime_joint": ["p_16=53", "p_25=97", "106=2*p_16", "106-9=p_25", "53+97=150"],
+    "radices": [20, 40, 50],
+    "mirror": "J_50(x)=150-x on the interval [50,100]",
+    "fractal_requirement": "a recursive substitution or self-similarity law plus a declared scale relation"
+  },
+  "outcomes": [
+    "PASS_EXACT_ORBIT_PRIME_RADIX_ROOT_GROWTH_WITH_FRACTAL_OPEN",
+    "PARTIAL_PASS",
+    "CONTRACT_INVALID"
+  ],
+  "stop_rule": "Stop before treating decimal notation as geometry, radix coincidences as base-independent invariants, 2^3=8 as a recovered Q106 count, or quadratic layer growth as a fractal without a recursive substitution and scale law.",
+  "claim_boundary": [
+    "formal finite arithmetic and graph-action audit only",
+    "no new Navigator identity, Study, source, or evidence promotion",
+    "even/odd means parity; convex/concave means the sign of a discrete second difference",
+    "2/3=0.666... is a rational identity and is not the integer 6",
+    "base-50 mirror is a declared coordinate involution, not an intrinsic Q106 automorphism",
+    "fractal interpretation remains not established",
+    "no physical, cosmological, resonance, prime-selector, or publication claim"
+  ]
+}

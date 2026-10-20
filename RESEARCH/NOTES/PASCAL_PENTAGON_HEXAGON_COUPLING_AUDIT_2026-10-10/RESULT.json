@@ -1,0 +1,168 @@
+{
+  "checks": {
+    "all_declared_sources_exist_and_are_hashed": true,
+    "c5_and_c6_embed_as_anchor_sets_in_c30": true,
+    "c5_and_c6_have_no_bijection": true,
+    "c5_plus_c6_is_11_and_c6_plus_c6_is_12": true,
+    "historical_110_111_112_markers_have_distinct_factorizations": true,
+    "hub_fixture_reconstructs_archived_counts": true,
+    "interference_demo_declares_equations_but_no_random_seed": true,
+    "joint_c30_rotational_stabilizer_is_identity": true,
+    "modular_shadow_requires_declared_modulus": true,
+    "no_edge_preserving_graph_map_c5_to_c6": true,
+    "one_hundred_twelve_is_open_preclosure_count_not_5_6_sum": true,
+    "second_c6_needs_declared_correspondence": true,
+    "twelve_mode_axes_are_drawn_reference_lines_not_measured_modes": true,
+    "two_c6_cycles_have_12_dihedral_isomorphisms": true
+  },
+  "claim_ceiling": "Finite graph, cycle, phase-cover, source-code and arithmetic audit only. It establishes no resonance, 12-mode emergence, physical field, canonical role for 110/111/112, identity between the Pascal carrier and archived Core fixtures, or new NEXAH Family.",
+  "classification": "BOUNDED_CANDIDATE_EVIDENCE_NOT_ADMITTED",
+  "identity": "PENT-07 under existing A0OE:PASCAL_PENTAGON_D5_TEST lens identity",
+  "question": "Which existing pentagon/hexagon visuals instantiate a declared coupling, and which remain arithmetic, reference-axis or provenance markers?",
+  "result": {
+    "arithmetic_markers": {
+      "5_plus_6": 11,
+      "5_plus_6_plus_6": 17,
+      "6_plus_6": 12,
+      "interpretation": "cardinality ledger only; sums do not add coupling edges or define an operator"
+    },
+    "coupling_classes": {
+      "C5_C6_C6_common_hub": "PASS_AS_ARCHIVED_HUB_COUPLING",
+      "C6A_to_C6B": "PASS_ONLY_AFTER_SELECTING_ONE_OF_12_DIHEDRAL_ISOMORPHISMS",
+      "common_phase_cover_C30": "PASS_AS_ANCHOR_EMBEDDING_NOT_GRAPH_EDGE_EMBEDDING",
+      "direct_cycle_identification_C5_to_C6": "FAIL_CARDINALITY_AND_GRAPH_HOMOMORPHISM",
+      "interference_field": "EQUATIONS_DEFINED_TRAJECTORY_SAMPLE_UNSEEDED",
+      "pascal_carrier_intertwiner": "UNDEFINED_NO_NODE_EDGE_WEIGHT_OPERATOR_MAP",
+      "twelve_mode_emergence": "UNDEFINED_REFERENCE_AXES_DRAWN_NOT_INFERRED"
+    },
+    "historical_number_markers": {
+      "boundary": "A modular shadow is a function of a declared modulus. No canonical map connects 110, 111 or 112 to the C5/C6 coupling audit.",
+      "classification": "PROVENANCE_AND_SEARCH_MARKERS_ONLY",
+      "markers": {
+        "110": {
+          "mod_11": 0,
+          "mod_12": 2,
+          "mod_30": 20,
+          "mod_5": 0,
+          "mod_6": 2,
+          "prime_factors": [
+            2,
+            5,
+            11
+          ]
+        },
+        "111": {
+          "mod_11": 1,
+          "mod_12": 3,
+          "mod_30": 21,
+          "mod_5": 1,
+          "mod_6": 3,
+          "prime_factors": [
+            3,
+            37
+          ]
+        },
+        "112": {
+          "mod_11": 2,
+          "mod_12": 4,
+          "mod_30": 22,
+          "mod_5": 2,
+          "mod_6": 4,
+          "prime_factors": [
+            2,
+            2,
+            2,
+            2,
+            7
+          ]
+        }
+      },
+      "one_over_112": 0.008928571428571428
+    },
+    "hub_fixture": {
+      "hub_components": 1,
+      "hub_edges": 34,
+      "hub_nodes": 18,
+      "shell_components": 3,
+      "shell_edges": 17,
+      "shell_nodes": 17
+    },
+    "map_counts": {
+      "C5_to_C6_graph_homomorphisms": 0,
+      "C6_to_C5_graph_homomorphisms": 100,
+      "C6_to_C6_isomorphisms": 12
+    },
+    "phase_cover": {
+      "c5_stabilizer": [
+        0,
+        6,
+        12,
+        18,
+        24
+      ],
+      "c5_ticks": [
+        0,
+        6,
+        12,
+        18,
+        24
+      ],
+      "c6_stabilizer": [
+        0,
+        5,
+        10,
+        15,
+        20,
+        25
+      ],
+      "c6_ticks": [
+        0,
+        5,
+        10,
+        15,
+        20,
+        25
+      ],
+      "joint_stabilizer": [
+        0
+      ],
+      "modulus": 30,
+      "shared_ticks": [
+        0
+      ],
+      "step_degrees": 12
+    },
+    "sources": {
+      "draft_marker": {
+        "path": "EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/Riemann_IEEE_Connection.md",
+        "sha256": "bc0ff1b7b77a13601775ff58f67d121f6fdd1dfbb0bf629c4a0662fb7f0e1581"
+      },
+      "grid_history": {
+        "path": "RESEARCH/HISTORY/PRIME_BASE_MODE_ARCHAEOLOGY_2026-10-09.md",
+        "sha256": "c67b8387a7a5427c9ac08bc482e7277ee9fcdcb3738d8dabc14368b0b78e756e"
+      },
+      "hub_fixture": {
+        "path": "EXPERIMENTAL/BUILDER_LAB/ARCHIVE_ENGINE/archived/research/experiments/symmetry_graph_experiment/symmetry_graph_3cycle.py",
+        "sha256": "538578ac11d5205a8279ca1779b6aa6d387cbcc4e91941f92617b7aae2754c04"
+      },
+      "interference_demo": {
+        "path": "EXPERIMENTAL/BUILDER_LAB/ARCHIVE_ENGINE/archived/kernel/demos/pentagon/pentagon_hexagon_interference_field_demo.py",
+        "sha256": "27525cf65353b9e3d31d0b2829765d3ea11962faaab7c4938a6f618d22a2e010"
+      },
+      "no_hub_control": {
+        "path": "EXPERIMENTAL/BUILDER_LAB/ARCHIVE_ENGINE/archived/research/experiments/symmetry_graph_experiment/symmetry_graph_no_hub_experiment.py",
+        "sha256": "cdeee557acd5aa0e46acaadebcae4b0a72c1582d8a28151c3cbdfa1bd572dd69"
+      },
+      "partition_control": {
+        "path": "EXPERIMENTAL/BUILDER_LAB/ARCHIVE_ENGINE/archived/research/experiments/symmetry_graph_experiment/symmetry_graph_cycle_balance_test.py",
+        "sha256": "2774f6d7ac4dab051f5547ff088cbe53f8eadcb2277d2505c4202db962de182d"
+      },
+      "twelve_mode_demo": {
+        "path": "EXPERIMENTAL/BUILDER_LAB/ARCHIVE_ENGINE/archived/kernel/demos/pentagon/pentagon_hexagon_12_mode_resonance_demo.py",
+        "sha256": "34a4055d0f933431b00f57f810eb86c284f2183a4c5affef93e5338eec84937f"
+      }
+    }
+  },
+  "schema": "nexah.pascal-pentagon-hexagon-coupling-audit/1.0.0",
+  "status": "PASS_WITH_BOUNDARY"
+}

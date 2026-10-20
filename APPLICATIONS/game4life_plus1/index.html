@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GAME 4 LIFE +1 · Transition Observatory</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ncs-return-lens.css">
+  <link rel="stylesheet" href="logarithmic-gearbox.css">
+  <link rel="stylesheet" href="life-clock-coupler.css">
+  <link rel="stylesheet" href="zero-insertion-gate.css">
+  <link rel="stylesheet" href="prime-axis-switchboard.css">
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <p class="eyebrow">NEXAH SCIENCE LAB · GAME 4 LIFE +1 · B3/S23</p>
+      <h1>GAME 4 LIFE +1</h1>
+      <p class="lede">A transition observatory over the frozen LIFE08 Boundary Cylinder study. One deterministic run; field, carrier, event, phase and residual remain distinct.</p>
+    </div>
+    <div class="decision"><span>STUDY DECISION</span><b id="decision">—</b></div>
+  </header>
+
+  <section class="toolbar" aria-label="Cylinder controls">
+    <fieldset>
+      <legend>Operation</legend>
+      <label><input type="radio" name="viewMode" value="view" checked> View wrap</label>
+      <label><input type="radio" name="viewMode" value="dynamics"> Dynamics wrap</label>
+    </fieldset>
+    <label>Boundary
+      <select id="boundary"><option value="cylinder-x">Cylinder X</option><option value="cylinder-y">Cylinder Y</option></select>
+    </label>
+    <label>Fixture
+      <select id="fixture"></select>
+    </label>
+    <label>Channel
+      <select id="channel"><option value="all" selected>All events</option><option value="live">Live state</option><option value="births">Births</option><option value="survivals">Survivals</option><option value="deaths">Deaths</option><option value="residual">Boundary residual</option></select>
+    </label>
+    <label>Projection
+      <select id="projectionMode"><option value="cylinder">Cylinder</option><option value="four-plus-one" selected>4+1 event register</option><option value="phase-register">Phase register</option><option value="transition-rosette">Transition rosette</option></select>
+      <span class="inline-check"><input id="componentOutlines" type="checkbox" checked> Component outlines</span>
+    </label>
+    <label class="generation">Generation <b id="generationValue">0</b>
+      <input id="generation" type="range" min="0" value="0">
+    </label>
+  </section>
+
+  <section class="transport" aria-label="Playback controls">
+    <button id="playPause" type="button">Start</button>
+    <button id="stepForward" type="button">Step +1</button>
+    <button id="reset" type="button">Reset</button>
+    <button id="observeMode" class="observe-button" type="button">Observe ∞</button>
+    <label>Speed
+      <select id="speed"><option value="800">0.5×</option><option value="420" selected>1×</option><option value="210">2×</option><option value="105">4×</option></select>
+    </label>
+    <label>Run length
+      <select id="runLength"><option value="fixture">Fixture</option><option value="240">240</option><option value="520" selected>520</option><option value="1000">1,000</option><option value="2000">2,000</option></select>
+    </label>
+    <label class="loop-control"><input id="loopPlayback" type="checkbox" checked> Loop</label>
+    <span id="playbackStatus" aria-live="polite">Paused at generation 0</span>
+  </section>
+
+  <section class="mode-note" id="modeNote" aria-live="polite"></section>
+
+  <section class="explorer-note" aria-label="Evidence boundary">
+    <b>EXPLORATION LAYER</b>
+    <span>Playback, longer horizons, additional classic patterns and 4+1 views do not alter the frozen LIFE08 result.</span>
+  </section>
+
+  <section class="stage">
+    <article>
+      <div class="panel-head"><h2>Unwrapped carrier</h2><span id="flatLabel">—</span></div>
+      <canvas id="flat" width="760" height="620" aria-label="Unwrapped cellular automaton carrier"></canvas>
+    </article>
+    <article>
+      <div class="panel-head"><h2 id="projectionTitle">Cylinder projection</h2><span id="cylinderLabel">—</span></div>
+      <canvas id="cylinder" width="760" height="620" aria-label="Cellular automaton state projected on a cylinder or 4+1 plane stack"></canvas>
+    </article>
+  </section>
+
+  <section class="metrics">
+    <div><span>Live cells</span><b id="live">—</b></div>
+    <div><span>Event cells</span><b id="eventCount">—</b></div>
+    <div><span>Seam births</span><b id="seamBirths">—</b></div>
+    <div><span>vs finite-dead</span><b id="residual">—</b></div>
+    <div><span>Quaternion register</span><b id="quaternion">—</b></div>
+  </section>
+
+  <div class="dual-observatory-grid">
+  <section class="crystal-lab" aria-labelledby="crystalTitle">
+    <div class="crystal-head">
+      <div>
+        <p class="eyebrow">LIFE//CRYSTAL · MOD:LIFE_ORBIT · ART:LIFE:GLB_P3</p>
+        <h2 id="crystalTitle">4+1 Transition Observatory</h2>
+        <p>One Conway transition, five synchronized readings. Every event keeps its native cell address and persistent event ID across the field, register, rosette, braid and boundary residual.</p>
+      </div>
+      <div class="projection-badge"><span>PROJECTION STATUS</span><b id="crystalStatus">INITIALIZING…</b></div>
+    </div>
+    <div class="crystal-toolbar">
+      <label>Spatial composition
+        <select id="crystalLayout"><option value="parallel" selected>Parallel rooms</option><option value="superposition">Superposition</option><option value="exploded">Exploded atlas</option></select>
+      </label>
+      <label>History
+        <select id="crystalHistory"><option value="24">24 transitions</option><option value="60" selected>60 transitions</option><option value="120">120 transitions</option><option value="all">Full run to here</option></select>
+      </label>
+      <label>Layer spacing
+        <input id="crystalSpacing" type="range" min="4" max="18" value="9">
+      </label>
+      <label>Focus
+        <select id="crystalFocus"><option value="all">All rooms</option><option value="source">Source field</option><option value="register">4+1 register</option><option value="rosette">Transition rosette</option><option value="braid">Event braid</option><option value="residual">Boundary residual</option></select>
+      </label>
+      <button id="crystalCamera" type="button">Reset camera</button>
+      <button id="crystalRotate" type="button" aria-pressed="false">Orbit: off</button>
+      <button id="crystalExport" type="button">Export visible GLB</button>
+    </div>
+    <div class="crystal-stage">
+      <canvas id="crystalScene" aria-label="Interactive three-dimensional LIFE event observatory"></canvas>
+      <aside class="crystal-legend">
+        <h3>Shared event alphabet</h3>
+        <div><i class="event-e"></i><b>1 · EVENTS</b><span>union / identity</span></div>
+        <div><i class="event-b"></i><b>i · BIRTH</b><span>01 · +90°</span></div>
+        <div><i class="event-s"></i><b>j · SURVIVE</b><span>11 · 0°</span></div>
+        <div><i class="event-d"></i><b>k · DEATH</b><span>10 · −90°</span></div>
+        <div><i class="event-q"></i><b>Q° · CONTROL</b><span>rule · boundary · time</span></div>
+        <h3>Selected relation</h3>
+        <p id="crystalSelection">Select a node to trace the same event through every room.</p>
+        <p class="crystal-proof" id="crystalProof">Waiting for projection audit.</p>
+      </aside>
+    </div>
+    <div class="crystal-metrics">
+      <div><span>Visible event nodes</span><b id="crystalNodes">—</b></div>
+      <div><span>History interval</span><b id="crystalInterval">—</b></div>
+      <div><span>Current residual</span><b id="crystalResidual">—</b></div>
+      <div><span>Last export</span><b id="crystalHash">not exported</b></div>
+    </div>
+    <p class="claim-line"><b>Reading boundary:</b> this instrument adds synchronized, invertible views of an existing deterministic run. It does not add a fifth Life force, change B3/S23, or establish a biological mechanism.</p>
+  </section>
+
+  <section class="boundary-window" aria-labelledby="boundaryWindowTitle">
+    <div class="crystal-head">
+      <div>
+        <p class="eyebrow">WINDOW 02 · LIFE08 BOUNDARY RELATION</p>
+        <h2 id="boundaryWindowTitle">Flat Field ↔ Cylinder Carrier</h2>
+        <p>The same addressed cells are shown before and after the declared wrap. The seam is geometry; only Dynamics wrap changes the neighborhood operator.</p>
+      </div>
+      <div class="projection-badge"><span>COMPARISON STATUS</span><b id="boundaryWindowStatus">INITIALIZING…</b></div>
+    </div>
+    <div class="boundary-toolbar">
+      <label>Reading
+        <select id="boundaryReading"><option value="relation" selected>Carrier relation</option><option value="event-skin">Radial event skin</option><option value="temporal-z">Temporal Z cylinder</option><option value="residual">Residual only</option></select>
+      </label>
+      <label>Trail depth
+        <select id="boundaryTrail"><option value="12">12 transitions</option><option value="24" selected>24 transitions</option><option value="60">60 transitions</option></select>
+      </label>
+      <button id="boundaryCamera" type="button">Reset camera</button>
+      <button id="boundaryRotate" type="button" aria-pressed="false">Orbit: off</button>
+      <button id="boundaryFlow" type="button" aria-pressed="false">Z sweep: off</button>
+      <button id="boundaryExport" type="button">Export Z GLB</button>
+      <button id="boundaryDemo" class="accent-button" type="button">Show seam effect</button>
+    </div>
+    <div class="boundary-stage">
+      <canvas id="boundaryScene" aria-label="Three-dimensional comparison between a finite field and a cylindrical carrier"></canvas>
+      <div class="boundary-key">
+        <div><b>FLAT</b><span>finite-dead comparator</span></div>
+        <div><b>Δ</b><span>cell-exact residual</span></div>
+        <div><b>CYLINDER</b><span id="boundaryCarrierLabel">declared carrier</span></div>
+        <div><b>Σ</b><span>visible seam</span></div>
+        <div><b>Z</b><span>generation · visual sweep only</span></div>
+      </div>
+    </div>
+    <div class="crystal-metrics">
+      <div><span>Operator mode</span><b id="boundaryOperator">—</b></div>
+      <div><span>Seam-crossing births</span><b id="boundarySeam">—</b></div>
+      <div><span>Boundary residual</span><b id="boundaryDelta">—</b></div>
+      <div><span>Interpretation</span><b id="boundaryMeaning">—</b></div>
+    </div>
+  </section>
+  </div>
+
+  <section class="ncs-lens" aria-labelledby="ncsLensTitle">
+    <div class="ncs-head">
+      <div>
+        <p class="eyebrow">WINDOW 06 · NN-SOURCED NCS RETURN LENS · <span id="ncsGeneration">g0</span></p>
+        <h2 id="ncsLensTitle">P/B/Q Return Laboratory · C30</h2>
+        <p>The addressed LIFE transition is read through the existing NN return contract. P is input, B is the addressed binder at 18, and counter-rotating Q is output. None of these view metadata alter Conway dynamics or prove an NCS transport law.</p>
+      </div>
+      <div class="ncs-badge">VIEW ADAPTER · NON-EVIDENTIARY</div>
+    </div>
+    <div class="ncs-grid">
+      <article class="ncs-card ncs-pqb-card">
+        <h3>P / B / Q · INPUT / BINDER / OUTPUT</h3>
+        <div class="ncs-pqb">
+          <div class="ncs-rotor"><i class="ncs-needle" id="ncsPNeedle"></i><b id="ncsP">17</b><span>P · INPUT · Δ+12 · tag 29</span></div>
+          <div class="ncs-binding">
+            <i class="ncs-link left" aria-hidden="true"></i>
+            <div class="ncs-pearl" id="ncsPearl" data-state="hold">
+              <span>B · MEDIATOR</span>
+              <b id="ncsB">18</b>
+              <small id="ncsBMeta">P 17 ↔ Q 19 · P4 0</small>
+            </div>
+            <i class="ncs-link right" aria-hidden="true"></i>
+            <strong id="ncsBStatus">BOUND RECORD</strong>
+          </div>
+          <div class="ncs-rotor q"><i class="ncs-needle" id="ncsQNeedle"></i><b id="ncsQ">19</b><span>Q · OUTPUT · Δ−12 · tag open</span></div>
+        </div>
+        <p class="ncs-type-note">B is the fixed addressed center and derived binding record—not a third independent generator. The earlier 18→36 declaration remains attached to B provenance; it is not silently reassigned to Q19.</p>
+      </article>
+      <article class="ncs-card">
+        <h3>C5 × C6 ADDRESS CLOCK</h3>
+        <dl>
+          <div><dt>C5 P / Q</dt><dd id="ncsC5">0 / 0</dd></div>
+          <div><dt>C6 lane</dt><dd id="ncsC6">0</dd></div>
+          <div><dt>C30 address</dt><dd id="ncsC30">0</dd></div>
+          <div><dt>Fib pair mod 4</dt><dd id="ncsFib">(3,1)</dd></div>
+          <div><dt>Wobble / P4</dt><dd id="ncsWobble">phase 0</dd></div>
+        </dl>
+      </article>
+      <article class="ncs-card">
+        <h3>RETURN / RESIDUAL</h3>
+        <dl>
+          <div><dt>Event address</dt><dd id="ncsReturn">—</dd></div>
+          <div><dt>Boundary Δ cells</dt><dd id="ncsResidual">—</dd></div>
+          <div><dt>P4 fibre</dt><dd id="ncsFibre">4 states</dd></div>
+          <div><dt>Return budget</dt><dd>2 bits</dd></div>
+          <div><dt>Role labels</dt><dd>UNASSIGNED</dd></div>
+        </dl>
+      </article>
+      <article class="ncs-card">
+        <h3>ADAPTER GATE</h3>
+        <dl>
+          <div><dt>Static bijections</dt><dd>24</dd></div>
+          <div><dt>Equivariant</dt><dd>0</dd></div>
+          <div><dt>Canonical adapter</dt><dd class="null" id="ncsAdapter">0 equivariant · NULL</dd></div>
+          <div><dt>Q106</dt><dd>NO X20 ADJACENCY</dd></div>
+        </dl>
+      </article>
+    </div>
+    <section class="ncs-challenge" aria-labelledby="ncsChallengeTitle">
+      <div class="ncs-challenge-copy">
+        <p class="eyebrow">RETURN CHALLENGE</p>
+        <h3 id="ncsChallengeTitle">Can the visible state identify its source?</h3>
+        <p>Hide the retained two-bit residual and choose a possible P4 source phase. Reveal it again to test the prediction.</p>
+        <label class="ncs-switch"><input id="ncsResidualToggle" type="checkbox" checked> <span>Retain the 2-bit residual</span></label>
+      </div>
+      <div class="ncs-candidates" role="group" aria-label="Possible P4 source phases">
+        <button type="button" data-ncs-candidate="0">0</button>
+        <button type="button" data-ncs-candidate="1">1</button>
+        <button type="button" data-ncs-candidate="2">2</button>
+        <button type="button" data-ncs-candidate="3">3</button>
+      </div>
+      <div class="ncs-challenge-result" aria-live="polite">
+        <span id="ncsChallengeMode">RESIDUAL RETAINED</span>
+        <b id="ncsChallengeStatus">UNIQUE RETURN</b>
+        <p id="ncsChallengeExplanation">Two retained bits select one source phase from the four-state fibre.</p>
+      </div>
+    </section>
+    <section class="ncs-distributor" aria-labelledby="ncsDistributorTitle">
+      <div class="ncs-distributor-head">
+        <div>
+          <p class="eyebrow">OWNER-DECLARED DISPLAY · C4 DISTRIBUTION</p>
+          <h3 id="ncsDistributorTitle">40–43 · Mediator / Euler / Mediator / Fibonacci</h3>
+        </div>
+        <div class="ncs-distributor-readout"><span id="ncsDistributionPhase">phase 0 / 4</span><b id="ncsDistributionActive">40 · MEDIATOR</b></div>
+      </div>
+      <div class="ncs-distribution-track" aria-label="Four-position 40 to 43 distribution">
+        <div class="ncs-station mediator" data-ncs-station="40"><span>40</span><b>MITTLER</b><small>X40 carrier boundary</small></div>
+        <i aria-hidden="true">→</i>
+        <div class="ncs-station euler" data-ncs-station="41"><span>41</span><b>EULER</b><small>MRB-04 boundary / +1 control</small></div>
+        <i aria-hidden="true">→</i>
+        <div class="ncs-station mediator" data-ncs-station="42"><span>42</span><b>MITTLER</b><small>transfer position</small></div>
+        <i aria-hidden="true">→</i>
+        <div class="ncs-station fibonacci" data-ncs-station="43"><span>43</span><b>FIBONACCI</b><small>declared rail display</small></div>
+      </div>
+      <div class="ncs-triplet-crosswalk" aria-label="17 18 19 to 41 42 43 return crosswalk">
+        <div class="ncs-triplet-row small"><span><b>17</b><small>P · INPUT</small></span><i>→</i><span class="mediator"><b>18</b><small>B · BINDER</small></span><i>→</i><span><b>19</b><small>Q · OUTPUT</small></span></div>
+        <div class="ncs-triplet-offsets"><span>+24</span><span>+24</span><span>+24</span></div>
+        <div class="ncs-triplet-row large"><span><b>41</b><small>EULER</small></span><i>→</i><span class="mediator"><b>42</b><small>MEDIATOR</small></span><i>→</i><span><b>43</b><small>FIBONACCI</small></span></div>
+      </div>
+      <div class="ncs-double-mirror" aria-label="Double mirror bridge 7 to 17 to 24 to 42">
+        <div class="ncs-bridge-chain"><span>ADDITIVE BRIDGE</span><b id="ncsBridgeChain">7 → 17 → 24 → 42</b><small><i id="ncsBridgeEquationA">7+17=24</i><i id="ncsBridgeEquationB">24+18=42</i></small></div>
+        <div class="ncs-mirror-pair">
+          <article><span>FIRST MIRROR</span><b id="ncsSmallMirror">17 ← 18 → 19</b><small>P · B · Q</small></article>
+          <i class="ncs-mirror-lift">+24</i>
+          <article><span>SECOND MIRROR</span><b id="ncsLargeMirror">41 ← 42 → 43</b><small>Euler · Mediator · Fibonacci</small></article>
+        </div>
+        <p id="ncsMirrorProof">17+19=2×18 · 41+43=2×42</p>
+      </div>
+      <div class="ncs-mediator42">
+        <div><span>JOINT RETURN</span><b id="ncsMediatorProduct">6 × 7 = 42 = lcm(6,7)</b></div>
+        <div><span>ADDITIVE READOUT</span><b id="ncsMediatorSum">6 + 7 = 13 = p₆</b></div>
+        <div><span>C₆ × C₇ CONTROL</span><b id="ncsMediatorState">T¹³(0,0)=(1,6) · T⁴²(0,0)=(0,0)</b></div>
+      </div>
+      <p id="ncsDistributionExplanation">The active generation selects one display station. 40 and 42 mediate the handoff; 41 and 43 label the two declared rails.</p>
+      <p class="ncs-type-note">Boundary: the bridge sums, both reflection equalities, and the arithmetic of 42/13 are exact. “Double mirror”, the +24 crosswalk and the role names remain Owner-declared display semantics; they do not establish a physical mirror mechanism, Fibonacci-to-X40 transport or causal prime selector.</p>
+    </section>
+    <section class="root-seed-gate" aria-labelledby="rootSeedTitle">
+      <div class="root-seed-head">
+        <div>
+          <p class="eyebrow">ROOT SEED GATE · FORMAL LOCAL DERIVATION</p>
+          <h3 id="rootSeedTitle">√i × √2 · addressed Fibonacci intake</h3>
+        </div>
+        <div class="root-seed-status"><span>GATE STATUS</span><b id="rootSeedStatus">3/3 FORMAL CHECKS PASS</b></div>
+      </div>
+      <div class="root-seed-addresses" aria-label="Four quaternion coefficient addresses">
+        <span id="rootSeedScalar">1₁</span><i>+</i><span id="rootSeedI">1ᵢ</span><i>+</i><span id="rootSeedJ">1ⱼ</span><i>+</i><span id="rootSeedK">1ₖ</span>
+      </div>
+      <label class="ncs-switch root-seed-switch"><input id="rootSeedAddressToggle" type="checkbox" checked> <span>Retain the four coefficient addresses</span></label>
+      <div class="root-seed-grid">
+        <article>
+          <span>01 · QUATERNION CLOSURE</span>
+          <b>q = 1 + i + j + k</b>
+          <code>q³ = −8 · q⁴ = −8q</code>
+          <small id="rootSeedQuaternionCheck">PASS · exact multiplication</small>
+        </article>
+        <article>
+          <span>02 · ROOT SPLIT</span>
+          <b>√i = (1+i)/√2</b>
+          <code>(√i)² = i · √2√i = 1+i</code>
+          <small id="rootSeedRootCheck">PASS · unit half-rotation</small>
+        </article>
+        <article>
+          <span>03 · FIBONACCI INTAKE</span>
+          <b id="rootSeedFibSeeds">1₁, 1ᵢ → 2</b>
+          <code>1, 1, 2, 3, 5, 8, 13</code>
+          <small id="rootSeedFibCheck">PASS · equal value, distinct address</small>
+        </article>
+      </div>
+      <p id="rootSeedExplanation">The repeated coefficient is recoverable because its basis address is retained. Fibonacci accepts two equal-valued seeds as distinct ordered inputs.</p>
+      <p class="ncs-type-note"><b>Boundary:</b> this passes exact algebra and address separation only. It does not make 1 prime, prove a Fibonacci→X40 transport, or establish the historical Möbius/physical mechanism claims.</p>
+    </section>
+    <p class="ncs-proof" id="ncsProof">Waiting for the addressed snapshot.</p>
+    <p class="ncs-boundary"><b>Boundary:</b> the lens compares addresses and Return requirements. It does not identify 1/i/j/k with NCS carrier roles, promote P/Q to a biological mechanism, or create a Q106 graph binding.</p>
+  </section>
+
+  <section class="log-gearbox" id="logGearbox" aria-labelledby="logGearboxTitle">
+    <div class="gear-head">
+      <div>
+        <p class="eyebrow">WINDOW 07 · GAME HIGH FIVE OF LIFE +1 · LOGARITHMIC GEARBOX</p>
+        <h2 id="logGearboxTitle">Arithmetic Counter ⇄ Geometric Scale</h2>
+        <p>One address is read in two synchronized languages: the arithmetic rail advances by <b>+1</b>, while the geometric rail multiplies by the selected base. The keystone is the exact identity <b>0 ⇄ 1</b>.</p>
+      </div>
+      <div class="gear-status"><span>+1 RETURN</span><b id="gearReturnStatus">3/3 RETURN CHECKS PASS</b></div>
+    </div>
+    <div class="gear-controls">
+      <div class="gear-bases" aria-label="Select progression base">
+        <button type="button" data-gear-base="two" aria-pressed="true">2</button>
+        <button type="button" data-gear-base="euler" aria-pressed="false">e</button>
+        <button type="button" data-gear-base="phi" aria-pressed="false">φ</button>
+        <button type="button" data-gear-base="root2" aria-pressed="false">√2</button>
+        <button type="button" data-gear-base="napier" aria-pressed="false">Napier 1−10⁻⁷</button>
+      </div>
+      <label class="gear-exponent">Address n <input id="gearExponent" type="range" min="0" max="7" value="0"><b id="gearExponentValue">+0</b></label>
+      <button id="gearStep" type="button">Step +1</button>
+      <label><input id="gearZeroToggle" type="checkbox" checked> Zero-insertion gate</label>
+      <label class="gear-life-sync"><input id="gearLifeSync" type="checkbox" checked> Follow Life clock</label>
+    </div>
+    <div class="gear-coupler" id="gearCoupler" data-mode="life"><span>LIVE VIEW COUPLER</span><b id="gearLifeGeneration">g0</b><i>→</i><b id="gearLifePhase">n0</b><i>→</i><b id="gearLifeZero">11</b><i>→</i><b>AXIS <em id="gearLifeAxis">99</em></b><small>n = g mod 8 · axis = g mod 2 · projection only</small></div>
+    <div class="gear-engine">
+      <div class="gear-drive"><span>ARITHMETIC PROGRESSION</span><b id="gearArithmeticReadout">0 → 1</b><code>n → n + 1</code></div>
+      <div class="gear-keystone"><span>KEYSTONE B</span><b>0 ⇄ 1</b><small id="gearOperatorReadout">+1 ⇄ ×2</small></div>
+      <div class="gear-drive"><span>GEOMETRIC PROGRESSION</span><b id="gearGeometricReadout">1 → 2</b><code id="gearFormula">Gₙ = 2ⁿ · log₂(Gₙ) = n</code></div>
+    </div>
+    <div class="gear-rail-wrap">
+      <div class="gear-rail-labels"><span>COUNTER ADDRESS n</span><span>VALUE Gₙ = rⁿ</span></div>
+      <div class="gear-rail" id="gearRail" aria-label="Synchronized arithmetic and geometric progression"></div>
+    </div>
+    <div class="gear-lower">
+      <article class="gear-card">
+        <h3>P/B/Q reciprocal mirror</h3>
+        <p>Equal distance from B becomes a reciprocal pair on the scale rail.</p>
+        <div class="gear-mirror">
+          <div class="gear-mirror-node"><span>P · +|n|</span><b id="gearP">+0 · 1</b></div>
+          <div class="gear-mirror-center">B<br>0 ⇄ 1</div>
+          <div class="gear-mirror-node"><span>Q · −|n|</span><b id="gearQ">−0 · 1</b></div>
+        </div>
+        <div class="gear-invariant" id="gearMirrorProduct">1 × 1 = 1</div>
+        <div class="gear-napier" id="gearNapier">
+          <span>NAPIER FINITE-STEP ANCHOR</span>
+          <b id="gearNapierValue">10⁷(1−10⁻⁷)¹⁰⁰⁰⁰⁰⁰ ≈ 3.678794e6</b>
+          <small>The normalized factor approaches e⁻¹; this is a finite approximation, not exact equality.</small>
+        </div>
+      </article>
+      <article class="gear-card">
+        <h3>Natural coordinate handle</h3>
+        <p>Euler's exponential supplies one common coordinate system for distinct constants.</p>
+        <div class="gear-handle">
+          <div><b>π</b><code>π = e<sup>ln π</sup></code></div>
+          <div><b>φ</b><code>φ = e<sup>ln φ</sup></code></div>
+          <div><b>√2</b><code>√2 = e<sup>ln √2</sup></code></div>
+        </div>
+      </article>
+    </div>
+    <article class="gear-zero-gate" id="gearZeroGate">
+      <div class="zero-gate-head">
+        <div><span>DECIMAL PLACE-VALUE WINDOW</span><h3>Zero-Insertion Gate · 11 → 100000001</h3><p>The two boundary ones stay fixed while the decimal chamber inserts one new zero per step.</p></div>
+        <div class="zero-gate-controls"><label>Inserted zeros <input id="gearZeroCount" type="range" min="0" max="7" value="0"><b id="gearZeroCountValue">0</b></label><button id="gearInsertZero" type="button">Insert 0</button></div>
+      </div>
+      <div class="zero-gate-stage" aria-live="polite">
+        <b class="zero-one">1</b><div class="zero-chamber is-empty" id="gearZeroChamber"></div><b class="zero-one">1</b>
+        <strong id="gearZeroValue">11</strong>
+      </div>
+      <div class="zero-formulas"><code>aₙ = 10ⁿ⁺¹ + 1</code><code>aₙ₊₁ = 10aₙ − 9</code><span>n = inserted zero count</span></div>
+      <div class="zero-ladder" id="gearZeroLadder" aria-label="Zero insertion sequence from 11 to 100000001"></div>
+      <div class="zero-counter-window"><div><span>PLACE-VALUE HINGE</span><b>97 · 98 · 99 · <em>100</em> · 101</b></div><i>→</i><div><span>CONTINUATION</span><b>109 · <em>110</em> · 111</b></div></div>
+    </article>
+    <article class="gear-prime-axis" id="gearPrimeAxis" data-mode="hinge">
+      <div class="prime-axis-head">
+        <div><span>JANUS PRIME AXIS · VERIFIED LOCAL CUTS</span><h3>One number line · two centers</h3><p>The +1 moves the cut from 99 to 100; it does not translate the whole prime pair.</p></div>
+        <div class="prime-axis-controls" role="group" aria-label="Select prime axis cut"><button type="button" data-axis-mode="hinge" aria-pressed="true">Hinge · 99</button><button type="button" data-axis-mode="janus" aria-pressed="false">Janus · 100</button></div>
+      </div>
+      <div class="prime-axis-display" aria-live="polite">
+        <div class="axis-arc axis-arc-hinge"><span>97 ↔ 101</span></div><div class="axis-arc axis-arc-janus"><span>97 ↔ 103</span></div>
+        <div class="axis-number-line"><i></i><b data-value="96">96</b><b class="is-prime" data-value="97">97<small>P₂₅</small></b><b data-value="98">98</b><b class="is-center hinge-center" data-value="99">99</b><b class="is-center janus-center" data-value="100">100</b><b class="is-prime is-zero-join" data-value="101">101<small>P₂₆ · a₁</small></b><b data-value="102">102</b><b class="is-prime" data-value="103">103<small>P₂₇</small></b>
+        </div>
+        <div class="axis-live"><span id="gearAxisName">XI HINGE</span><b id="gearAxisEquation">97 — 99 — 101</b><em id="gearAxisRadius">±2</em></div>
+      </div>
+      <div class="prime-axis-lanes">
+        <div><span>PRIME-INDEX APPROACH</span><b><i data-prime-step="0">73</i> → <i data-prime-step="1">79</i> → <i data-prime-step="2">83</i> → <i data-prime-step="3">89</i> → <i data-prime-step="4">97</i> → <i data-prime-step="5">101</i></b><small>P₂₁ → P₂₆</small></div>
+        <div><span>SELECTED ×2 CHANNEL</span><b><i data-channel-step="0">101</i> → <i data-channel-step="1">202</i> → <i data-channel-step="2">404</i> → <i data-channel-step="3">808</i> → <i data-channel-step="4">1616</i> → <i data-channel-step="5">3232</i></b><small id="gearPrimeChannelReadout">k0 · P21=73 · c0=101</small><small>cₖ = 101·2ᵏ · selected convention, not forced by the gap</small></div>
+        <div id="gearBase50Lane"><span>BASE-50 MIRROR · 97 GATE</span><b><i>53</i> ↔ <em>75</em> ↔ <i>97</i></b><small>J₅₀(x)=150−x · active only when P₂₅=97</small></div>
+      </div>
+    </article>
+    <p class="gear-boundary"><b>Boundary:</b> +1 ⇄ ×r, rⁿr⁻ⁿ=1, the logarithmic coordinate, the Napier limit, aₙ=10ⁿ⁺¹+1, both displayed prime centers and J₅₀ are exact mathematical statements. The 101/404 channel is a selected scaling convention. Prime-index, zero-insertion and Base-50 lanes share values but remain differently typed views; no physical, biological or canonical NCS mechanism follows.</p>
+  </section>
+
+  <section class="findings">
+    <article><h2>What changes?</h2><p><b>View wrap</b> redraws the finite field. <b>Dynamics wrap</b> changes which edge cells are neighbours. The residual shows the cells for which this single operator change creates a different trajectory.</p></article>
+    <article><h2>Two register readings</h2><p><b>Event register</b> preserves event identity and position on 1, i, j, k. <b>Phase register</b> reads death as −90°, survival as 0° and birth as +90° with a four-step trail. This phase is a declared temporal view, not a new Life rule.</p></article>
+    <article><h2>Frozen gates</h2><div id="gates"></div></article>
+  </section>
+
+  <footer>
+    <a href="three-domain-transition-test/index.html">Window 03 · Three-domain test</a>
+    <a href="PREREGISTRATION.json">Frozen protocol</a>
+    <a href="RUN_CONTRACT.md">Run contract</a>
+    <a href="results/PRIMARY_RESULT.json">Primary result</a>
+    <a href="results/LIFE08_VALIDATION_REPORT.json">Validation</a>
+    <a href="SOURCE_BINDING.json">NCS source binding</a>
+  </footer>
+</main>
+<script src="vendor/three-0.147.0/three.min.js"></script>
+<script src="vendor/three-0.147.0/OrbitControls.js"></script>
+<script src="vendor/three-0.147.0/GLTFExporter.js"></script>
+<script src="cylinder-engine.js"></script>
+<script src="results/study-results.js"></script>
+<script src="crystal-projection.js"></script>
+<script src="temporal-z-cylinder.js"></script>
+<script src="ncs-return-lens.js"></script>
+<script src="logarithmic-gearbox.js"></script>
+<script src="crystal-scene.js"></script>
+<script src="cylinder-comparison.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

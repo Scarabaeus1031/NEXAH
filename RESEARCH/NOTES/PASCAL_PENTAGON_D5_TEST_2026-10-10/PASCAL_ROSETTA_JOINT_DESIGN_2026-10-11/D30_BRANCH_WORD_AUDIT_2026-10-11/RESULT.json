@@ -1,0 +1,404 @@
+{
+  "checks": [
+    {
+      "expected": {
+        "creates": [],
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST"
+      },
+      "name": "identity reuse and no creation",
+      "observed": {
+        "creates": [],
+        "related_backlog": [
+          "A0-BL-023",
+          "A0-BL-051"
+        ],
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST"
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": 127,
+      "name": "complete branch-word enumeration",
+      "observed": 127,
+      "status": "PASS"
+    },
+    {
+      "expected": 635,
+      "name": "five-face word instances",
+      "observed": 635,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "0,0": 1,
+        "1,0": 1,
+        "1,1": 1,
+        "2,0": 1,
+        "2,1": 2,
+        "2,2": 1,
+        "3,0": 1,
+        "3,1": 3,
+        "3,2": 3,
+        "3,3": 1,
+        "4,0": 1,
+        "4,1": 4,
+        "4,2": 6,
+        "4,3": 4,
+        "4,4": 1,
+        "5,0": 1,
+        "5,1": 5,
+        "5,2": 10,
+        "5,3": 10,
+        "5,4": 5,
+        "5,5": 1,
+        "6,0": 1,
+        "6,1": 6,
+        "6,2": 15,
+        "6,3": 20,
+        "6,4": 15,
+        "6,5": 6,
+        "6,6": 1
+      },
+      "name": "Pascal endpoint multiplicities",
+      "observed": {
+        "0,0": 1,
+        "1,0": 1,
+        "1,1": 1,
+        "2,0": 1,
+        "2,1": 2,
+        "2,2": 1,
+        "3,0": 1,
+        "3,1": 3,
+        "3,2": 3,
+        "3,3": 1,
+        "4,0": 1,
+        "4,1": 4,
+        "4,2": 6,
+        "4,3": 4,
+        "4,4": 1,
+        "5,0": 1,
+        "5,1": 5,
+        "5,2": 10,
+        "5,3": 10,
+        "5,4": 5,
+        "5,5": 1,
+        "6,0": 1,
+        "6,1": 6,
+        "6,2": 15,
+        "6,3": 20,
+        "6,4": 15,
+        "6,5": 6,
+        "6,6": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "D1": 28,
+        "D2": 28,
+        "D3": 28,
+        "D4": 28,
+        "D5": 28
+      },
+      "name": "five D-registers are balanced",
+      "observed": {
+        "D1": 28,
+        "D2": 28,
+        "D3": 28,
+        "D4": 28,
+        "D5": 28
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "D1": 127,
+        "D2": 127,
+        "D3": 127,
+        "D4": 127,
+        "D5": 127
+      },
+      "name": "complete branch-word set per D-register",
+      "observed": {
+        "D1": 127,
+        "D2": 127,
+        "D3": 127,
+        "D4": 127,
+        "D5": 127
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "capacity": 150,
+        "observed": 65
+      },
+      "name": "D-register phase-cover capacity and frozen occupancy",
+      "observed": {
+        "capacity": 150,
+        "observed": 65
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "1": 20,
+        "2": 20,
+        "3": 20,
+        "4": 5
+      },
+      "name": "lossy register-phase projection fibre profile",
+      "observed": {
+        "1": 20,
+        "2": 20,
+        "3": 20,
+        "4": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "reflection": {
+          "D1": "D1",
+          "D2": "D5",
+          "D3": "D4",
+          "D4": "D3",
+          "D5": "D2"
+        },
+        "rotation": {
+          "D1": "D2",
+          "D2": "D3",
+          "D3": "D4",
+          "D4": "D5",
+          "D5": "D1"
+        }
+      },
+      "name": "C5/D5 actions on D-register labels",
+      "observed": {
+        "reflection": {
+          "D1": "D1",
+          "D2": "D5",
+          "D3": "D4",
+          "D4": "D3",
+          "D5": "D2"
+        },
+        "rotation": {
+          "D1": "D2",
+          "D2": "D3",
+          "D3": "D4",
+          "D4": "D5",
+          "D5": "D1"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": 140,
+      "name": "F30 injective on frozen incidences",
+      "observed": 140,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "failures": 0,
+        "tested": 105
+      },
+      "name": "left D30 intertwining",
+      "observed": {
+        "failures": 0,
+        "tested": 105
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "failures": 0,
+        "tested": 105
+      },
+      "name": "right D30 intertwining",
+      "observed": {
+        "failures": 0,
+        "tested": 105
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "left_minus": 105,
+        "left_plus": 0,
+        "locked": 0,
+        "right_minus": 0,
+        "right_plus": 105
+      },
+      "name": "signed branch controls",
+      "observed": {
+        "left_minus": 105,
+        "left_plus": 0,
+        "locked": 0,
+        "right_minus": 0,
+        "right_plus": 105
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "failures": 0,
+        "tested": 140
+      },
+      "name": "reflection compiles to phase negation",
+      "observed": {
+        "failures": 0,
+        "tested": 140
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": 140,
+      "name": "D-register-depth-phase exact reconstruction",
+      "observed": 140,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "count": 13,
+        "full_cycle": false
+      },
+      "name": "bounded phase coverage remains partial",
+      "observed": {
+        "count": 13,
+        "phases": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": 900,
+      "name": "all old-gear characters enumerated",
+      "observed": 900,
+      "status": "PASS"
+    },
+    {
+      "expected": 0,
+      "name": "expected non-factorization through C12 gear",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "expected": 30,
+      "name": "H3 root orbit has 30 points",
+      "observed": 30,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "degree_profile": {
+          "4": 30
+        },
+        "edges": 60
+      },
+      "name": "H3 nearest-neighbour carrier",
+      "observed": {
+        "degree_profile": {
+          "4": 30
+        },
+        "edges": 60
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": [
+        10,
+        10,
+        10
+      ],
+      "name": "H3 Coxeter decomposition is 3x10",
+      "observed": [
+        10,
+        10,
+        10
+      ],
+      "status": "PASS"
+    },
+    {
+      "expected": 240,
+      "name": "E8 coordinate carrier size",
+      "observed": 240,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "candidate_adapters": 480,
+        "canonical_selected": false
+      },
+      "name": "E8 adapter non-uniqueness retained",
+      "observed": {
+        "candidate_adapters": 480,
+        "canonical_selected": false
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "left": "p-1",
+        "right": "p+1"
+      },
+      "name": "ordered reflections compile to signed unit rotations",
+      "observed": {
+        "left": "p-1",
+        "right": "p+1"
+      },
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary": [
+    "no new Family or PENT-08",
+    "no admitted or active Study",
+    "no unique E8 adapter",
+    "D1..D5 are registers, not five new operators or identities",
+    "no H3/E8/Pascal carrier identity",
+    "no physical, astronomical, calendrical or resonance mechanism",
+    "no generalization beyond depth six"
+  ],
+  "classification": "FORMAL_DESIGN_VALIDATION_NOT_SCIENCE_RUN",
+  "creates": [],
+  "identity_reused": "A0OE:PASCAL_PENTAGON_D5_TEST",
+  "input_hashes": {
+    "contract": "b704a389348f4c2af463901690d3659a4839f47c326e006aa58a94fcc55a19f0",
+    "face_edges": "7b85f1440191930c9be0c5a5a19395d0ea496bd2761adda7b6d29a76e8011bd2",
+    "face_incidence": "528a23dd7cde18916bfc736df7e567b578eb77058bc4e56cfbb5e287b9048113"
+  },
+  "schema": "nexah.pascal-rosetta-d30-audit-result/1.0.0",
+  "status": "PASS",
+  "summary": {
+    "branch_words": 127,
+    "checks_passed": 24,
+    "checks_total": 24,
+    "d_register_phase_capacity": 150,
+    "d_register_phase_states_observed": 65,
+    "d_registers": 5,
+    "e8_coordinate_adapter_candidates": 480,
+    "face_word_instances": 635,
+    "h3_coxeter_cycles": [
+      10,
+      10,
+      10
+    ],
+    "observed_phases": 13,
+    "old_gear_characters": 900,
+    "old_gear_unit_schedule_candidates": 0,
+    "raw_incidences": 140
+  }
+}

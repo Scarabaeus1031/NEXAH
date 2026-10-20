@@ -1,0 +1,484 @@
+{
+  "status": "PASS_CONDITIONAL_DIHEDRAL_BEAD_QUOTIENT_WITH_P4_RESIDUAL_RETURN",
+  "classification": "CLOCKWORK_BEADS_REALIZE_C5_COUNTERROTATING_C2_QUOTIENT_OF_X40_WITH_FIVE_PHASE_CHARTS_AND_FOUR_STATE_P4_FIBRES",
+  "checks": {
+    "passed": 49,
+    "total": 49
+  },
+  "carrier_attachment": {
+    "source": "X40=C5×P4×C2",
+    "display": "B10=C5×{P,Q}",
+    "owner_selector": {
+      "P": {
+        "register": 17,
+        "e": 1,
+        "turn": 1
+      },
+      "Q": {
+        "register": 18,
+        "e": 0,
+        "turn": -1
+      }
+    },
+    "map": "d_k(s,p,1)=P[s+k]; d_k(s,p,0)=Q[-s+k], indices mod 5",
+    "global_phase_charts": 5,
+    "historical_phase_chart": null,
+    "fibre_size": 4,
+    "lost_coordinate": "p∈P4",
+    "pointwise_minimal_residual_bits": 2,
+    "exact_return": "R_k(d_k(s,p,e),p)=(s,p,e) once global k is declared"
+  },
+  "operator_result": {
+    "display_mirror": "κ(i,P)=(i,Q), κ(i,Q)=(i,P)",
+    "selected_on_display_quotient": "J_d(s,p,e)=(-s mod 5,p,1-e)",
+    "rejected_on_display_quotient": "J_c(s,p,e)=(s,p,1-e)",
+    "scope": "conditional on source bead indices, counter-rotation and same-index q=mirror(p)",
+    "historical_ncs_janus_selection": null
+  },
+  "glb_node_mapping": {
+    "p_nodes": [
+      "TRANSFER_ORBIT_BEAD_01",
+      "TRANSFER_ORBIT_BEAD_02",
+      "TRANSFER_ORBIT_BEAD_03",
+      "TRANSFER_ORBIT_BEAD_04",
+      "TRANSFER_ORBIT_BEAD_05"
+    ],
+    "q_nodes": [
+      "Q_CONJUGATE_ORBIT_BEAD_01",
+      "Q_CONJUGATE_ORBIT_BEAD_02",
+      "Q_CONJUGATE_ORBIT_BEAD_03",
+      "Q_CONJUGATE_ORBIT_BEAD_04",
+      "Q_CONJUGATE_ORBIT_BEAD_05"
+    ],
+    "unique_glb_node_to_x40_state": null,
+    "unique_glb_node_to_x20_state": null,
+    "within_fixed_phase_chart_x20_candidates_per_bead": 4,
+    "without_phase_chart_x20_candidates_per_bead": 20
+  },
+  "chart_summaries": [
+    {
+      "phase_offset_k": 0,
+      "rotation_equivariant": true,
+      "fibre_profile": {
+        "4": 10
+      },
+      "jd_matches_all_40": true,
+      "jc_matches": 8
+    },
+    {
+      "phase_offset_k": 1,
+      "rotation_equivariant": true,
+      "fibre_profile": {
+        "4": 10
+      },
+      "jd_matches_all_40": true,
+      "jc_matches": 8
+    },
+    {
+      "phase_offset_k": 2,
+      "rotation_equivariant": true,
+      "fibre_profile": {
+        "4": 10
+      },
+      "jd_matches_all_40": true,
+      "jc_matches": 8
+    },
+    {
+      "phase_offset_k": 3,
+      "rotation_equivariant": true,
+      "fibre_profile": {
+        "4": 10
+      },
+      "jd_matches_all_40": true,
+      "jc_matches": 8
+    },
+    {
+      "phase_offset_k": 4,
+      "rotation_equivariant": true,
+      "fibre_profile": {
+        "4": 10
+      },
+      "jd_matches_all_40": true,
+      "jc_matches": 8
+    }
+  ],
+  "maps": {
+    "x20_adjacency": null,
+    "glb_nodes_to_q106": null,
+    "typed_x20_to_q106_intertwiner": null,
+    "triple19_to_x20": null
+  },
+  "sources": [
+    {
+      "name": "ncs_contract",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/CONTRACT.json",
+      "sha256": "ad9033568da4d7f2ea72ae2384554c689338ca08b3ffc9384588331d14bf75d5"
+    },
+    {
+      "name": "factor_result",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "d8caf0e18e3aa7687d8d7a09e40169e4716cb73d1aebe430bb771b41e2ee01b6"
+    },
+    {
+      "name": "clockwork_lift_result",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/RESULT.json",
+      "sha256": "8ffaf5d53433fbb685a0a6b0a40b663136c95e0986d6ed5c83f5a0aab48bd217"
+    },
+    {
+      "name": "selector_result",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/PQ_17_18_COUNTERROTATION_SELECTOR_AUDIT_2026-10-12/RESULT.json",
+      "sha256": "040bab1e9c0b1c44a00b765b0f8d66c796a0734ea59ac9283c03e459571a32d5"
+    },
+    {
+      "name": "clockwork_builder",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/clockwork/generators/build_pq_conjugate_orbit_glb.mjs",
+      "sha256": "80e8ceb129eca4a8c1dc3a0fbead9e24ac4e0cb85b0c9f8ccae5df3e3d51a306"
+    },
+    {
+      "name": "clockwork_glb",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/clockwork/reference/nexah_pq_conjugate_orbit_v7.glb",
+      "sha256": "c390d4c6a6e1054116cfdd2c96953d810a333e97f654d815b2e1fe47cd60ecae"
+    }
+  ],
+  "claim_boundary": "Conditional finite carrier/display audit only. The result selects Jd only on the declared C5×C2 bead quotient; it does not recover a historical phase chart or historical NCS Janus law, represent P4 in the GLB, define X20 adjacency, map GLB nodes to Q106, establish a physical orbit, admit a Study, modify A0 evidence or authorize publication.",
+  "checks_detail": [
+    {
+      "name": "source exists: ncs_contract",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/CONTRACT.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: factor_result",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/RESULT.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: clockwork_lift_result",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/RESULT.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: selector_result",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/PQ_17_18_COUNTERROTATION_SELECTOR_AUDIT_2026-10-12/RESULT.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: clockwork_builder",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/clockwork/generators/build_pq_conjugate_orbit_glb.mjs",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: clockwork_glb",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_DESKTOP_GOLD_CUSTODY_AND_NAVIGATOR_INTAKE_2026-10-07/sources/clockwork/reference/nexah_pq_conjugate_orbit_v7.glb",
+      "expected": "file"
+    },
+    {
+      "name": "declared X40 carrier retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "declared X40 rotation retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "parent C2 audit leaves both Janus laws open",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Owner-declared P/Q bit selector retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "five indexed P beads recovered from GLB",
+      "passed": true,
+      "observed": [
+        "TRANSFER_ORBIT_BEAD_01",
+        "TRANSFER_ORBIT_BEAD_02",
+        "TRANSFER_ORBIT_BEAD_03",
+        "TRANSFER_ORBIT_BEAD_04",
+        "TRANSFER_ORBIT_BEAD_05"
+      ],
+      "expected": [
+        "TRANSFER_ORBIT_BEAD_01",
+        "TRANSFER_ORBIT_BEAD_02",
+        "TRANSFER_ORBIT_BEAD_03",
+        "TRANSFER_ORBIT_BEAD_04",
+        "TRANSFER_ORBIT_BEAD_05"
+      ]
+    },
+    {
+      "name": "five indexed Q beads recovered from GLB",
+      "passed": true,
+      "observed": [
+        "Q_CONJUGATE_ORBIT_BEAD_01",
+        "Q_CONJUGATE_ORBIT_BEAD_02",
+        "Q_CONJUGATE_ORBIT_BEAD_03",
+        "Q_CONJUGATE_ORBIT_BEAD_04",
+        "Q_CONJUGATE_ORBIT_BEAD_05"
+      ],
+      "expected": [
+        "Q_CONJUGATE_ORBIT_BEAD_01",
+        "Q_CONJUGATE_ORBIT_BEAD_02",
+        "Q_CONJUGATE_ORBIT_BEAD_03",
+        "Q_CONJUGATE_ORBIT_BEAD_04",
+        "Q_CONJUGATE_ORBIT_BEAD_05"
+      ]
+    },
+    {
+      "name": "same-index mirror relation retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "P/Q counter-rotation retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "X40 has forty states",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "X20 has twenty states",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 0 intertwines X40 rotation with counter-rotation",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 0 has ten four-state P4 fibres",
+      "passed": true,
+      "observed": {
+        "4": 10
+      },
+      "expected": {
+        "4": 10
+      }
+    },
+    {
+      "name": "chart 0 returns exactly with P4 residual",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 0 same-index mirror realizes Jd",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 0 Jc matches only the s=0 orbit",
+      "passed": true,
+      "observed": 8,
+      "expected": 8
+    },
+    {
+      "name": "chart 1 intertwines X40 rotation with counter-rotation",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 1 has ten four-state P4 fibres",
+      "passed": true,
+      "observed": {
+        "4": 10
+      },
+      "expected": {
+        "4": 10
+      }
+    },
+    {
+      "name": "chart 1 returns exactly with P4 residual",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 1 same-index mirror realizes Jd",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 1 Jc matches only the s=0 orbit",
+      "passed": true,
+      "observed": 8,
+      "expected": 8
+    },
+    {
+      "name": "chart 2 intertwines X40 rotation with counter-rotation",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 2 has ten four-state P4 fibres",
+      "passed": true,
+      "observed": {
+        "4": 10
+      },
+      "expected": {
+        "4": 10
+      }
+    },
+    {
+      "name": "chart 2 returns exactly with P4 residual",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 2 same-index mirror realizes Jd",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 2 Jc matches only the s=0 orbit",
+      "passed": true,
+      "observed": 8,
+      "expected": 8
+    },
+    {
+      "name": "chart 3 intertwines X40 rotation with counter-rotation",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 3 has ten four-state P4 fibres",
+      "passed": true,
+      "observed": {
+        "4": 10
+      },
+      "expected": {
+        "4": 10
+      }
+    },
+    {
+      "name": "chart 3 returns exactly with P4 residual",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 3 same-index mirror realizes Jd",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 3 Jc matches only the s=0 orbit",
+      "passed": true,
+      "observed": 8,
+      "expected": 8
+    },
+    {
+      "name": "chart 4 intertwines X40 rotation with counter-rotation",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 4 has ten four-state P4 fibres",
+      "passed": true,
+      "observed": {
+        "4": 10
+      },
+      "expected": {
+        "4": 10
+      }
+    },
+    {
+      "name": "chart 4 returns exactly with P4 residual",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 4 same-index mirror realizes Jd",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 4 Jc matches only the s=0 orbit",
+      "passed": true,
+      "observed": 8,
+      "expected": 8
+    },
+    {
+      "name": "five global C5 phase charts remain",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Jd selected on displayed quotient in every phase chart",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Jc rejected on displayed quotient in every phase chart",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 0 display address is explicit",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 1 display address is explicit",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 2 display address is explicit",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 3 display address is explicit",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "chart 4 display address is explicit",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    }
+  ]
+}

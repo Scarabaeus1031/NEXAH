@@ -1,0 +1,13 @@
+{
+  "name": "nexah-life-boundary-cylinder-life08",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "freeze": "node freeze-protocol.cjs",
+    "freeze:instrument": "node freeze-instrument.cjs",
+    "test": "node tests.cjs && node crystal-tests.cjs && node temporal-z-cylinder-tests.cjs && node ncs-return-lens-tests.cjs && node logarithmic-gearbox-tests.cjs && node orbit-regression.cjs && node three-domain-transition-test/tests.cjs && node three-domain-transition-test/replication-matrix/tests.cjs",
+    "test:ui": "node ui-smoke.cjs",
+    "run": "node run-study.cjs",
+    "audit": "node audit.cjs"
+  }
+}

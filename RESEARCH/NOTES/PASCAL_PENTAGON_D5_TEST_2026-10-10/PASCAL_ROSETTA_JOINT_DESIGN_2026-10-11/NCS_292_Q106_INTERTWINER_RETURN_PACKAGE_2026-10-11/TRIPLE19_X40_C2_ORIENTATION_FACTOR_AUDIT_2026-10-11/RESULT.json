@@ -1,0 +1,373 @@
+{
+  "status": "PASS_SHARED_C2_ORIENTATION_FACTOR_WITH_QUOTIENT_LOSS",
+  "classification": "SHARED_C2_FACTOR_ORIENTATION_LOST_IN_X20_QUOTIENT",
+  "checks": {
+    "passed": 50,
+    "total": 50
+  },
+  "shared_factor": {
+    "factor": "C2_orientation",
+    "triple19_projection": "pi_T(u,sigma)=sigma",
+    "x40_projection": "pi_X(s,p,e)=e",
+    "induced_operator": "flip:0<->1",
+    "compatible_x40_operators": [
+      "J_c",
+      "J_d"
+    ],
+    "historical_janus_selection": null
+  },
+  "quotient": {
+    "map": "q:X40->X20, q(s,p,e)=(s,p)",
+    "fibres": 20,
+    "fibre_size": 2,
+    "orientation_values_per_fibre": [
+      0,
+      1
+    ],
+    "orientation_factors_through_x20": false,
+    "rho_x20_to_c2": null
+  },
+  "base_cycle_obstruction": {
+    "domain": "C7",
+    "codomain": "C5",
+    "homomorphism_generator_images": [
+      0
+    ],
+    "nontrivial_homomorphisms": 0
+  },
+  "maps": {
+    "triple19_to_x20": null,
+    "triple19_to_q106": null,
+    "full_carrier_intertwiner": null,
+    "typed_x20_to_q106_intertwiner": null
+  },
+  "claim_boundary": "Internal bounded formal design evidence only. This audit establishes a shared C2 orientation factor and its loss under the declared X40-to-X20 quotient; it does not establish a Triple-19/X40 carrier identity, an X20 adjacency, a Q106 intertwiner, a historical Janus selection, a new Study, a Family, publication authority or a physical mechanism.",
+  "checks_detail": [
+    {
+      "name": "extends A0-BL-023 parent",
+      "passed": true,
+      "observed": "A0-BL-023:NCS_292_Q106_INTERTWINER_RETURN_PACKAGE:V1",
+      "expected": "A0-BL-023 parent"
+    },
+    {
+      "name": "creates no identity",
+      "passed": true,
+      "observed": [],
+      "expected": []
+    },
+    {
+      "name": "formal non-admitted status",
+      "passed": true,
+      "observed": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_PENT_08",
+      "expected": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_PENT_08"
+    },
+    {
+      "name": "five frozen sources",
+      "passed": true,
+      "observed": 5,
+      "expected": 5
+    },
+    {
+      "name": "source inside ecosystem: SRC:FACTOR:PARENT_CONTRACT",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/CONTRACT.json",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:FACTOR:PARENT_CONTRACT",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:FACTOR:PARENT_CONTRACT",
+      "passed": true,
+      "observed": "ad9033568da4d7f2ea72ae2384554c689338ca08b3ffc9384588331d14bf75d5",
+      "expected": "ad9033568da4d7f2ea72ae2384554c689338ca08b3ffc9384588331d14bf75d5"
+    },
+    {
+      "name": "source inside ecosystem: SRC:FACTOR:PARENT_RESULT",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/RESULT.json",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:FACTOR:PARENT_RESULT",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:FACTOR:PARENT_RESULT",
+      "passed": true,
+      "observed": "303e299694ebad23c422f2400532a521adc2e24a28686fc4a9d75cca162f6b0b",
+      "expected": "303e299694ebad23c422f2400532a521adc2e24a28686fc4a9d75cca162f6b0b"
+    },
+    {
+      "name": "source inside ecosystem: SRC:FACTOR:X20_SOURCE_AUDIT",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/NCS_X20_TYPED_CARRIER_PCPD_Q106_INTERTWINER_AUDIT_2026-10-11/RESULT.json",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:FACTOR:X20_SOURCE_AUDIT",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:FACTOR:X20_SOURCE_AUDIT",
+      "passed": true,
+      "observed": "0d50cc19cf69669ef84c247d1282f79c5ad47ccb6fcf0c61e2c1876ec1270fe6",
+      "expected": "0d50cc19cf69669ef84c247d1282f79c5ad47ccb6fcf0c61e2c1876ec1270fe6"
+    },
+    {
+      "name": "source inside ecosystem: SRC:FACTOR:TRIPLE19_BINDING",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_PRIMEGRID_BLOCK02B_TRINARY_PASCAL_ANTIPODE_2026-10-07/TRIPLE19_ANTIPODE_PAIR_BRIDGE_BINDING.json",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:FACTOR:TRIPLE19_BINDING",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:FACTOR:TRIPLE19_BINDING",
+      "passed": true,
+      "observed": "2e20786a1c2c829acccef86af9c953e8d231602f68e0e8b642d88d2e7e69d786",
+      "expected": "2e20786a1c2c829acccef86af9c953e8d231602f68e0e8b642d88d2e7e69d786"
+    },
+    {
+      "name": "source inside ecosystem: SRC:FACTOR:TRIPLE19_ADDENDUM",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_PRIMEGRID_BLOCK02B_TRINARY_PASCAL_ANTIPODE_2026-10-07/03_TRIPLE19_ANTIPODE_PAIR_BRIDGE_ADDENDUM.md",
+      "expected": "/Users/tho2020/Documents/NEXAH ECOSYSTEM"
+    },
+    {
+      "name": "source exists: SRC:FACTOR:TRIPLE19_ADDENDUM",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "source hash: SRC:FACTOR:TRIPLE19_ADDENDUM",
+      "passed": true,
+      "observed": "aea673d53ee59ba6e26763403b46658da9ae6d012ecda79c029de9f4103d98a7",
+      "expected": "aea673d53ee59ba6e26763403b46658da9ae6d012ecda79c029de9f4103d98a7"
+    },
+    {
+      "name": "T14 has fourteen unique states",
+      "passed": true,
+      "observed": 14,
+      "expected": 14
+    },
+    {
+      "name": "Triple antipode is involutive",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Triple antipode is fixed-point-free",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Triple antipode reflects C7 coordinate",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Triple antipode flips C2",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Triple projection reaches both C2 values",
+      "passed": true,
+      "observed": [
+        0,
+        1
+      ],
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "X40 has forty unique states",
+      "passed": true,
+      "observed": 40,
+      "expected": 40
+    },
+    {
+      "name": "X40 rotation has order five",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "commuting Janus is involutive",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "dihedral Janus is involutive",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Jc commutes with rotation",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Jd conjugates rotation to inverse",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Jc flips X40 C2",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "Jd flips X40 C2",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "X40 projection reaches both C2 values",
+      "passed": true,
+      "observed": [
+        0,
+        1
+      ],
+      "expected": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "quotient image is X20",
+      "passed": true,
+      "observed": 20,
+      "expected": 20
+    },
+    {
+      "name": "all quotient fibres have size two",
+      "passed": true,
+      "observed": [
+        2
+      ],
+      "expected": [
+        2
+      ]
+    },
+    {
+      "name": "every fibre contains both orientation values",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "pi_X is not constant on q fibres",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "no rho:X20->C2 can factor pi_X through q",
+      "passed": true,
+      "observed": "obstructed in every fibre",
+      "expected": "no factorization"
+    },
+    {
+      "name": "factorization search space recorded without enumeration",
+      "passed": true,
+      "observed": 1048576,
+      "expected": 1048576
+    },
+    {
+      "name": "Hom(C7,C5) has only trivial generator image",
+      "passed": true,
+      "observed": [
+        0
+      ],
+      "expected": [
+        0
+      ]
+    },
+    {
+      "name": "no nontrivial cyclic base transport",
+      "passed": true,
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "T14 and X40 cardinalities differ",
+      "passed": true,
+      "observed": "14 != 40",
+      "expected": "14 != 40"
+    },
+    {
+      "name": "T14 and X20 cardinalities differ",
+      "passed": true,
+      "observed": "14 != 20",
+      "expected": "14 != 20"
+    },
+    {
+      "name": "prior source audit passed",
+      "passed": true,
+      "observed": "PASS_SOURCE_AUDIT_WITH_UNRECOVERED_CONTRACT",
+      "expected": "PASS_SOURCE_AUDIT_WITH_UNRECOVERED_CONTRACT"
+    },
+    {
+      "name": "prior Triple19-to-X20 map remains null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "prior X20 adjacency remains null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "both Janus laws survive factor test",
+      "passed": true,
+      "observed": [
+        "J_c",
+        "J_d"
+      ],
+      "expected": [
+        "J_c",
+        "J_d"
+      ]
+    },
+    {
+      "name": "historical Janus selection remains null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "full carrier intertwiner remains null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    }
+  ]
+}

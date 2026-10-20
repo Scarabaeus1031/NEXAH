@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "d5_preserves_regular_pentagon_vertex_distances": true,
+    "diagonal_over_side_equals_phi": true,
+    "five_weight_20_base_centres_form_metric_c5_orbit": true,
+    "pentagram_intersection_is_golden_section": true,
+    "quotient_embedding_is_injective_for_106_nodes": true,
+    "quotient_embedding_is_well_defined": true,
+    "reflection_is_equivariant_with_m": true,
+    "rotation_is_equivariant_with_r": true
+  },
+  "claim_ceiling": "Exact Euclidean realization of one finite declared carrier only; no prime-label, resonance, physical, generative or 3D-pyramid claim is established.",
+  "classification": "BOUNDED_CANDIDATE_EVIDENCE_NOT_ADMITTED",
+  "parameters": {
+    "circumradius": 1.0,
+    "depth": 6,
+    "faces": 5,
+    "layers": 7,
+    "tolerance": 1e-10
+  },
+  "result": {
+    "diagonal_length": 1.902113032590307,
+    "diagonal_side_ratio": 1.6180339887498947,
+    "golden_section_ratio": 1.618033988749895,
+    "metric_symmetry": "D5",
+    "phi": 1.618033988749895,
+    "quotient_node_count": 106,
+    "rotation_subgroup": "C5",
+    "side_length": 1.1755705045849463,
+    "three_dimensional_lift": "NOT_DEFINED",
+    "working_object": "regular-pentagon realization of the five-face glued Pascal fan"
+  },
+  "schema": "nexah.pascal-pentagon-metric-test/1.0.0",
+  "status": "PASS"
+}

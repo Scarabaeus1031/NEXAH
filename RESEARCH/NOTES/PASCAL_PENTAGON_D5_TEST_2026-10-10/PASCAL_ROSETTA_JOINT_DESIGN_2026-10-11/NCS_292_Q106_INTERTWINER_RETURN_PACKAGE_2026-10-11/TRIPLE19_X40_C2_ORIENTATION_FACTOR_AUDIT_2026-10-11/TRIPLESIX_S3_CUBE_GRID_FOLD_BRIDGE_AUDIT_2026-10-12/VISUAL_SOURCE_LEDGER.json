@@ -1,0 +1,51 @@
+{
+  "schema": "nexah.owner-supplied-visual-ledger/1.0.0",
+  "status": "HASHED_LOCAL_CUSTODY_DOCUMENTARY_NOT_EVIDENCE_AUTHORITY",
+  "visuals": [
+    {
+      "visual_id": "VIS:TS6:SIX_PERMUTATIONS",
+      "file": "visuals/TRIPLESIX_SIX_PERMUTATIONS.jpeg",
+      "sha256": "6daf8b788bd52b151c4d0c37989aa8d2433aae11d8185783c11a2d7c1cbc9276",
+      "dimensions": "856x918",
+      "role": "declares six permutation glyphs and three antipodal axes",
+      "evidence_state": "OWNER_SUPPLIED_VISUAL_HASHED_COPY",
+      "claim_boundary": "Supports the test question and literal labels only; group laws are independently checked."
+    },
+    {
+      "visual_id": "VIS:TS6:THREE_AXIS_CORE",
+      "file": "visuals/TRIPLESIX_THREE_AXIS_CORE.jpeg",
+      "sha256": "633ee92c57a48995828b92e30159bb1eae7b0a8de3fa8154ba045f3cb8f66e8f",
+      "dimensions": "886x886",
+      "role": "depicts a three-axis readout converging on the label 6",
+      "evidence_state": "OWNER_SUPPLIED_VISUAL_HASHED_COPY",
+      "claim_boundary": "The exact invariant tested is digit sum; resonance language remains illustrative."
+    },
+    {
+      "visual_id": "VIS:TS6:GRID_63_64_DUAL_AXIS_FOLD",
+      "file": "visuals/GRID_63_64_DUAL_AXIS_FOLD.jpeg",
+      "sha256": "adafd1748aad552ecbd099aed8449bc3f83aabb04aae3a65d48ef0b33fe15171",
+      "dimensions": "1238x634",
+      "role": "depicts 36x36 fold compass and 63x63/64x64 overlay",
+      "evidence_state": "OWNER_SUPPLIED_VISUAL_HASHED_COPY",
+      "claim_boundary": "The audit checks shown integer relations and an explicitly declared quotient; it does not recover the generator."
+    },
+    {
+      "visual_id": "VIS:TS6:ALPHA_OMEGA_CUBES_FOLD_AXES",
+      "file": "visuals/ALPHA_OMEGA_CUBES_FOLD_AXES.jpeg",
+      "sha256": "6c79819ab27b0ca7959a00487302d87d636a8019b2d3d544995f8f105fe83794",
+      "dimensions": "800x800",
+      "role": "depicts two cube frames with a shared fold pivot",
+      "evidence_state": "OWNER_SUPPLIED_VISUAL_HASHED_COPY",
+      "claim_boundary": "Illustrative embedding only; no cube identity or metric equivalence is inferred."
+    },
+    {
+      "visual_id": "VIS:TS6:ALPHA_OMEGA_CUBES_SUBGRIDS",
+      "file": "visuals/ALPHA_OMEGA_CUBES_SUBGRIDS.jpeg",
+      "sha256": "91c7a21b270f453a748605669280505e5e6581397b2a8b0406b6709c70642d72",
+      "dimensions": "872x900",
+      "role": "depicts subgrids and three fold axes around a shared pivot",
+      "evidence_state": "OWNER_SUPPLIED_VISUAL_HASHED_COPY",
+      "claim_boundary": "Motivates the three-coordinate test; it is not proof of the declared finite quotient."
+    }
+  ]
+}

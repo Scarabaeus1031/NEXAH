@@ -1,0 +1,82 @@
+{
+  "contract_id": "A0-BL-023:NCS_SNC_292_929_ORDER_ENVELOPE_RETURN:V1",
+  "date": "2026-10-11",
+  "status": "FORMAL_DESIGN_VALIDATION_NOT_ADMITTED_NOT_NEW_IDENTITY",
+  "identity": {
+    "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+    "parent_package": "A0-BL-023:NCS_292_Q106_INTERTWINER_RETURN_PACKAGE:V1",
+    "creates": []
+  },
+  "question": "When the parent package's rotation and two Janus maps are declared as candidate N, S and C operators, do all six operator orders agree, and what do ALGO ratio, OLGO mirror and OKO topology/return measurements retain?",
+  "operator_convention": {
+    "carrier": "X40 = C5 x P4 x C2",
+    "word_execution": "left-to-right",
+    "N": "r(s,p,e)=(s+1 mod 5,p,e)",
+    "S": "Jd(s,p,e)=(-s mod 5,p,1-e)",
+    "C": "Jc(s,p,e)=(s,p,1-e)",
+    "warning": "This N/S/C decomposition is a declared finite candidate assembled from the parent contract. It is not recovered as the historical meaning of the letters NCS."
+  },
+  "measurement_stack": {
+    "ALGO": "ratio track: fixed/moved proportions, preservation ratios and address ratios",
+    "OLGO": "mirror track: orientation reversal, reflection axis and conjugacy with N",
+    "OKO": "topology/return track: cycle profile, permutation order and exact return",
+    "OPERATOR_16": "typed composition record of ALGO, OLGO and OKO measurements; not sixteen component operators",
+    "X16_BOUNDARY": "the separate 2^4 sixteen-state carrier has no declared action or map in the frozen sources"
+  },
+  "typed_registers": {
+    "integer_address": 929,
+    "normalized_metric_candidate": 0.929,
+    "ratio_target_candidate": 2.929,
+    "exact_joint_integer": 2929,
+    "rule": "equal digit strings across unlike types are recorded as correspondences, not identities"
+  },
+  "frozen_sources": {
+    "parent_contract": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/CONTRACT.json",
+      "sha256": "79a614a7806fad3084142c813f3d37d96d7253b637c32dff37f1be918f60295c"
+    },
+    "parent_result": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/RESULT.json",
+      "sha256": "bde2386627926326602e089676c2c7a15747d5fbfce8a78f411c0221fc1d10a9"
+    },
+    "parent_formal_contract": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/FORMAL_CONTRACT.md",
+      "sha256": "6481224c3d494ec2de93dc0fe93da844a99f3a3859e702739594c9c069f8e154"
+    },
+    "q106_nodes": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/nodes.csv",
+      "sha256": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12"
+    },
+    "q106_edges": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/edges.csv",
+      "sha256": "6309b5c8807cf4d3352500d7eb1e7ce8d0c0da9be68d327c9196f9e54fd742b3"
+    },
+    "q106_automorphisms": {
+      "path": "RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/SCC_003_REFERENCE/artifacts/automorphisms.json",
+      "sha256": "70750da9596d05ebdfac55f8fa46893f469b163751529cb225b2abc19ce5966e"
+    }
+  },
+  "modules": [
+    "M1_TYPED_292_929_REGISTERS",
+    "M2_Q106_W20_ORBIT",
+    "M3_S3_OPERATOR_ORDER_SCAN",
+    "M4_ALGO_OLGO_OKO_ENVELOPE",
+    "M5_OPERATOR_16_AND_X16_BOUNDARY"
+  ],
+  "outcomes": [
+    "PASS_TWO_ORDER_CLASSES_WITH_OPEN_HISTORICAL_BINDING",
+    "PASS_ORDER_INDEPENDENT",
+    "UNDEFINED_OPERATOR_CONTRACT",
+    "CONTRACT_INVALID"
+  ],
+  "stop_rule": "Stop before identifying the candidate N/S/C maps with the historical acronym, mapping 292 or 929 into X40, treating 0.929, 2.929, 929 and 2929 as one number, or claiming an action on the separate sixteen-state carrier without an explicit map.",
+  "claim_boundary": [
+    "formal finite design validation only; not an admitted Study, Lab activation or new Navigator identity",
+    "ALGO, OLGO and OKO are measurement roles in this package, not newly canonicalized Operators",
+    "Operator 16 is the composed measurement stack, not evidence for sixteen component operators",
+    "the 2^4 sixteen-state register remains a separate unmapped carrier",
+    "the W20 object contains five nodes of weight 20; it is not a five-by-twenty node block system",
+    "Möbius means one-pass orientation change with exact two-pass return only within the declared finite model",
+    "no physical, neutrino, temperature, prime-selector, universal-constant or publication claim"
+  ]
+}

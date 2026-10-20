@@ -1,0 +1,321 @@
+{
+  "status": "PASS_NO_OPERATOR_EQUIVARIANT_ADAPTER_UNDER_DECLARED_NCS_ACTION",
+  "classification": "STATIC_24_RETURN_BIJECTIONS_ZERO_C3_INTERTWINERS",
+  "checks": {
+    "passed": 31,
+    "total": 31
+  },
+  "identity_effect": "REUSES_EXISTING_IDENTITIES_CREATES_NONE",
+  "source_action": {
+    "carrier": "Pascal quaternion slots",
+    "slots": [
+      "scalar",
+      "i",
+      "j",
+      "k"
+    ],
+    "operator": {
+      "scalar": "scalar",
+      "i": "j",
+      "j": "k",
+      "k": "i"
+    },
+    "cycle_type": [
+      1,
+      3
+    ]
+  },
+  "target_action": {
+    "carrier": "NCS P4 role set",
+    "roles": [
+      "carrier",
+      "frame_cut",
+      "transform_view",
+      "return_record"
+    ],
+    "declared_operator": {
+      "carrier": "carrier",
+      "frame_cut": "frame_cut",
+      "transform_view": "transform_view",
+      "return_record": "return_record"
+    },
+    "cycle_type": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "reason": "NCS rotation and both Janus candidates preserve p"
+  },
+  "enumeration": {
+    "static_bijections": 24,
+    "exact_address_return": 24,
+    "operator_equivariant_adapters": 0,
+    "distinct_induced_role_c3_actions": 8,
+    "adapters_per_induced_action": 3
+  },
+  "lexical_candidate": {
+    "map": {
+      "scalar": "carrier",
+      "i": "frame_cut",
+      "j": "transform_view",
+      "k": "return_record"
+    },
+    "source_declared": false,
+    "operator_equivariant": false,
+    "selected": false
+  },
+  "decision": {
+    "canonical_ncs_p4_adapter": null,
+    "root40_used_as_adapter": false,
+    "wobble_phase_supplies_role_semantics": false,
+    "x20_adjacency": null,
+    "typed_x20_to_q106_intertwiner": null
+  },
+  "minimal_new_source_input": [
+    "complete declared four-slot-to-role map",
+    "or an NCS role operator of cycle type (1,3) plus one typed slot-to-role anchor"
+  ],
+  "induced_action_boundary": "A chosen bijection can define f gamma f^-1 on role labels, but that transported action is not a recovered NCS source law.",
+  "sources": [
+    {
+      "name": "contract",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/PQ_17_18_COUNTERROTATION_SELECTOR_AUDIT_2026-10-12/CLOCKWORK_BEAD_X40_P4_RESIDUAL_RETURN_AUDIT_2026-10-12/PQ_17_29_18_36_C30_P4_WOBBLE_AUDIT_2026-10-12/ROOT40_FIBONACCI_C30_P4_SOURCE_BINDING_AUDIT_2026-10-12/PASCAL_QUATERNION_NCS_P4_ADAPTER_GATE_AUDIT_2026-10-12/CONTRACT.json",
+      "sha256": "2aaa5cbcce4e49e6e7189b312430b18a043c67b7c5cf3819da039313b9859912"
+    },
+    {
+      "name": "pascal_result",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_052_PASCAL_QUATERNION_FOUR_CHANNEL_RETURN_2026-10-11/artifacts/PRIMARY_RESULT.json",
+      "sha256": "e015ce6430a4d3a66f520363b1738fb2bacebe2dd9bd316bff17d152371578f0"
+    },
+    {
+      "name": "pascal_assessment",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_052_PASCAL_QUATERNION_FOUR_CHANNEL_RETURN_2026-10-11/02_RESULT_ASSESSMENT.md",
+      "sha256": "9e93495e634cc865f963a7caf6e826f70c4974a59afda1d15383579338282ddf"
+    },
+    {
+      "name": "pascal_all_n_closure",
+      "path": "30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_053_PASCAL_QUATERNION_SYMBOLIC_PROOF_REVIEW_2026-10-11/06_OWNER_CLOSURE_RECORD.md",
+      "sha256": "645fd58af18ab0e9bc887a009effd7c9273ce86c47bc3ad346d4c3325cd34208"
+    },
+    {
+      "name": "ncs_contract",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/CONTRACT.json",
+      "sha256": "ad9033568da4d7f2ea72ae2384554c689338ca08b3ffc9384588331d14bf75d5"
+    },
+    {
+      "name": "typed_p4_contract",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/NCS_X20_TYPED_CARRIER_PCPD_Q106_INTERTWINER_AUDIT_2026-10-11/CONTRACT.json",
+      "sha256": "27f086d5ec1bf4600af62aabd3e0e2a2048b3edb0bc5039c9625103bdb40f8f5"
+    },
+    {
+      "name": "typed_p4_result",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/NCS_X20_TYPED_CARRIER_PCPD_Q106_INTERTWINER_AUDIT_2026-10-11/RESULT.json",
+      "sha256": "0d50cc19cf69669ef84c247d1282f79c5ad47ccb6fcf0c61e2c1876ec1270fe6"
+    },
+    {
+      "name": "root40_gate_result",
+      "path": "10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/PQ_17_18_COUNTERROTATION_SELECTOR_AUDIT_2026-10-12/CLOCKWORK_BEAD_X40_P4_RESIDUAL_RETURN_AUDIT_2026-10-12/PQ_17_29_18_36_C30_P4_WOBBLE_AUDIT_2026-10-12/ROOT40_FIBONACCI_C30_P4_SOURCE_BINDING_AUDIT_2026-10-12/RESULT.json",
+      "sha256": "53970eccdce890b472abed6df6567d20ee5d820f2ef6c4d0a1ddbb2067973299"
+    }
+  ],
+  "claim_boundary": "Formal source-bound adapter audit only. The result distinguishes 24 reversible address encodings from zero operator-equivariant adapters under the declared NCS role action. It does not modify A0, declare an NCS C3 role law, select a semantic assignment, define X20 adjacency, create a Q106 intertwiner, recover a historical mechanism, admit a Study or authorize publication.",
+  "checks_detail": [
+    {
+      "name": "source exists: contract",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/PQ_17_18_COUNTERROTATION_SELECTOR_AUDIT_2026-10-12/CLOCKWORK_BEAD_X40_P4_RESIDUAL_RETURN_AUDIT_2026-10-12/PQ_17_29_18_36_C30_P4_WOBBLE_AUDIT_2026-10-12/ROOT40_FIBONACCI_C30_P4_SOURCE_BINDING_AUDIT_2026-10-12/PASCAL_QUATERNION_NCS_P4_ADAPTER_GATE_AUDIT_2026-10-12/CONTRACT.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: pascal_result",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_052_PASCAL_QUATERNION_FOUR_CHANNEL_RETURN_2026-10-11/artifacts/PRIMARY_RESULT.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: pascal_assessment",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_052_PASCAL_QUATERNION_FOUR_CHANNEL_RETURN_2026-10-11/02_RESULT_ASSESSMENT.md",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: pascal_all_n_closure",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/30 SCIENCE LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/A0_BL_053_PASCAL_QUATERNION_SYMBOLIC_PROOF_REVIEW_2026-10-11/06_OWNER_CLOSURE_RECORD.md",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: ncs_contract",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/CONTRACT.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: typed_p4_contract",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/NCS_X20_TYPED_CARRIER_PCPD_Q106_INTERTWINER_AUDIT_2026-10-11/CONTRACT.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: typed_p4_result",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/NCS_X20_TYPED_CARRIER_PCPD_Q106_INTERTWINER_AUDIT_2026-10-11/RESULT.json",
+      "expected": "file"
+    },
+    {
+      "name": "source exists: root40_gate_result",
+      "passed": true,
+      "observed": "/Users/tho2020/Documents/NEXAH ECOSYSTEM/10 NEXAH CORE/NEXAH/RESEARCH/NOTES/PASCAL_PENTAGON_D5_TEST_2026-10-10/PASCAL_ROSETTA_JOINT_DESIGN_2026-10-11/NCS_292_Q106_INTERTWINER_RETURN_PACKAGE_2026-10-11/TRIPLE19_X40_C2_ORIENTATION_FACTOR_AUDIT_2026-10-11/CLOCKWORK_PQ_C2_LIFT_SOURCE_CONTRACT_AUDIT_2026-10-12/PQ_17_18_COUNTERROTATION_SELECTOR_AUDIT_2026-10-12/CLOCKWORK_BEAD_X40_P4_RESIDUAL_RETURN_AUDIT_2026-10-12/PQ_17_29_18_36_C30_P4_WOBBLE_AUDIT_2026-10-12/ROOT40_FIBONACCI_C30_P4_SOURCE_BINDING_AUDIT_2026-10-12/RESULT.json",
+      "expected": "file"
+    },
+    {
+      "name": "audit creates no identity",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "closed Pascal connector retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Pascal connector formula source-bound",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "all-N symbolic result Owner-accepted and closed",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Root-40 remains outside Pascal Phi image",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "prior NCS source-contract boundary retained",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "canonical Pascal slots retained",
+      "passed": true,
+      "observed": [
+        "scalar",
+        "i",
+        "j",
+        "k"
+      ],
+      "expected": null
+    },
+    {
+      "name": "declared NCS roles retained",
+      "passed": true,
+      "observed": [
+        "carrier",
+        "frame_cut",
+        "transform_view",
+        "return_record"
+      ],
+      "expected": null
+    },
+    {
+      "name": "typed NCS audit agrees on P4 roles",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "NCS rotation fixes P4 role",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "both NCS Janus laws fix P4 role",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Pascal action has cycle type (1,3)",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "declared NCS role action is identity",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "all 24 static bijections enumerated",
+      "passed": true,
+      "observed": 24,
+      "expected": 24
+    },
+    {
+      "name": "all 24 bijections have exact address Return",
+      "passed": true,
+      "observed": 24,
+      "expected": 24
+    },
+    {
+      "name": "no bijection intertwines Pascal C3 with declared NCS identity action",
+      "passed": true,
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "chosen adapters induce eight distinct role C3 actions",
+      "passed": true,
+      "observed": 8,
+      "expected": 8
+    },
+    {
+      "name": "each induced role C3 action admits three adapters",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "all induced role actions have cycle type (1,3)",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "declared NCS identity is not an induced Pascal C3 action",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "lexical candidate fails operator-intertwiner gate",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "X20 adjacency remains null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "Q106 intertwiner remains null",
+      "passed": true,
+      "observed": null,
+      "expected": null
+    }
+  ]
+}

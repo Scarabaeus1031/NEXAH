@@ -165,6 +165,17 @@ The system preserves its structure.
 
 ---
 
+## 🔹 04 — Parked Domain-Specific Compare Candidates
+
+- [Archaeological Orientation Compare](ARCHAEOLOGICAL_ORIENTATION_COMPARE_CANDIDATE.md)
+  — source-bound Map/Sky/Evidence comparison with ILAU, uncertainty, residuals
+  and Human Return
+
+This is a concrete application candidate, not an active build or validated
+archaeological instrument.
+
+---
+
 ## 🔹 Core Components
 
 ```text

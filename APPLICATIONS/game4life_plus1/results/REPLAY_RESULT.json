@@ -1,0 +1,749 @@
+{
+  "boundaryEffectFixtures": [
+    {
+      "boundary": "cylinder-y",
+      "firstDivergence": 61,
+      "fixture": "GLIDER-C"
+    },
+    {
+      "boundary": "cylinder-x",
+      "firstDivergence": 7,
+      "fixture": "GLIDER-X-SEAM"
+    },
+    {
+      "boundary": "cylinder-y",
+      "firstDivergence": 1,
+      "fixture": "GLIDER-Y-SEAM"
+    },
+    {
+      "boundary": "cylinder-x",
+      "firstDivergence": 1,
+      "fixture": "RANDOM-17"
+    },
+    {
+      "boundary": "cylinder-y",
+      "firstDivergence": 1,
+      "fixture": "RANDOM-17"
+    }
+  ],
+  "claimCeiling": "Finite deterministic B3/S23 boundary comparison on six declared fixtures. No Prime specificity, universal Life code, biology, physics, Möbius mechanism or cross-domain identity.",
+  "date": "2026-10-11",
+  "decision": "BOUNDED_CYLINDER_RELATION_PASS",
+  "decisionBeforeReplay": "BOUNDARY_RELATION_READY_FOR_REPLAY",
+  "gates": {
+    "boundaryEffectDetected": true,
+    "cylinderXEquivariant": true,
+    "cylinderYEquivariant": true,
+    "deterministicReplay": true,
+    "negativeControlsStable": true,
+    "quaternionRegisterExact": true
+  },
+  "id": "LIFE08-BOUNDARY-CYLINDER-RESULT",
+  "protocolSha256": "1f21d5ef334b5d2c37dc43069f3c6ff986657630fec1c210c7f4e6c8f031f218",
+  "rule": "B3/S23",
+  "schedule": "synchronous",
+  "summaries": [
+    {
+      "boundary": "finite-dead",
+      "exactStateAgreementRate": 1,
+      "finalLive": 4,
+      "firstDivergence": null,
+      "fixture": "BLOCK-C",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "deaths": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "survivals": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 1,
+          "n": 38
+        },
+        "deaths": {
+          "mean": 1,
+          "n": 38
+        },
+        "survivals": {
+          "mean": 1,
+          "n": 38
+        }
+      },
+      "seamBirths": 0
+    },
+    {
+      "boundary": "cylinder-x",
+      "exactStateAgreementRate": 1,
+      "finalLive": 4,
+      "firstDivergence": null,
+      "fixture": "BLOCK-C",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "deaths": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "survivals": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 1,
+          "n": 38
+        },
+        "deaths": {
+          "mean": 1,
+          "n": 38
+        },
+        "survivals": {
+          "mean": 1,
+          "n": 38
+        }
+      },
+      "seamBirths": 0
+    },
+    {
+      "boundary": "cylinder-y",
+      "exactStateAgreementRate": 1,
+      "finalLive": 4,
+      "firstDivergence": null,
+      "fixture": "BLOCK-C",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "deaths": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "survivals": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 1,
+          "n": 38
+        },
+        "deaths": {
+          "mean": 1,
+          "n": 38
+        },
+        "survivals": {
+          "mean": 1,
+          "n": 38
+        }
+      },
+      "seamBirths": 0
+    },
+    {
+      "boundary": "finite-dead",
+      "exactStateAgreementRate": 1,
+      "finalLive": 3,
+      "firstDivergence": null,
+      "fixture": "BLINKER-C",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "deaths": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "survivals": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 1,
+          "n": 38
+        },
+        "deaths": {
+          "mean": 1,
+          "n": 38
+        },
+        "survivals": {
+          "mean": 1,
+          "n": 38
+        }
+      },
+      "seamBirths": 0
+    },
+    {
+      "boundary": "cylinder-x",
+      "exactStateAgreementRate": 1,
+      "finalLive": 3,
+      "firstDivergence": null,
+      "fixture": "BLINKER-C",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "deaths": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "survivals": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 1,
+          "n": 38
+        },
+        "deaths": {
+          "mean": 1,
+          "n": 38
+        },
+        "survivals": {
+          "mean": 1,
+          "n": 38
+        }
+      },
+      "seamBirths": 0
+    },
+    {
+      "boundary": "cylinder-y",
+      "exactStateAgreementRate": 1,
+      "finalLive": 3,
+      "firstDivergence": null,
+      "fixture": "BLINKER-C",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "deaths": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "survivals": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 1,
+          "n": 38
+        },
+        "deaths": {
+          "mean": 1,
+          "n": 38
+        },
+        "survivals": {
+          "mean": 1,
+          "n": 38
+        }
+      },
+      "seamBirths": 0
+    },
+    {
+      "boundary": "finite-dead",
+      "exactStateAgreementRate": 1,
+      "finalLive": 4,
+      "firstDivergence": null,
+      "fixture": "GLIDER-C",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 91,
+          "rate": 0.9680851063829787,
+          "trials": 94
+        },
+        "deaths": {
+          "hits": 91,
+          "rate": 0.9680851063829787,
+          "trials": 94
+        },
+        "survivals": {
+          "hits": 92,
+          "rate": 0.9787234042553191,
+          "trials": 94
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 0.3516483516483517,
+          "n": 91
+        },
+        "deaths": {
+          "mean": 0.46153846153846156,
+          "n": 91
+        },
+        "survivals": {
+          "mean": 0.48152173913043467,
+          "n": 92
+        }
+      },
+      "seamBirths": 0
+    },
+    {
+      "boundary": "cylinder-x",
+      "exactStateAgreementRate": 1,
+      "finalLive": 4,
+      "firstDivergence": null,
+      "fixture": "GLIDER-C",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 91,
+          "rate": 0.9680851063829787,
+          "trials": 94
+        },
+        "deaths": {
+          "hits": 91,
+          "rate": 0.9680851063829787,
+          "trials": 94
+        },
+        "survivals": {
+          "hits": 92,
+          "rate": 0.9787234042553191,
+          "trials": 94
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 0.3516483516483517,
+          "n": 91
+        },
+        "deaths": {
+          "mean": 0.46153846153846156,
+          "n": 91
+        },
+        "survivals": {
+          "mean": 0.48152173913043467,
+          "n": 92
+        }
+      },
+      "seamBirths": 0
+    },
+    {
+      "boundary": "cylinder-y",
+      "exactStateAgreementRate": 0.6288659793814433,
+      "finalLive": 4,
+      "firstDivergence": 61,
+      "fixture": "GLIDER-C",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 91,
+          "rate": 0.9680851063829787,
+          "trials": 94
+        },
+        "deaths": {
+          "hits": 91,
+          "rate": 0.9680851063829787,
+          "trials": 94
+        },
+        "survivals": {
+          "hits": 92,
+          "rate": 0.9787234042553191,
+          "trials": 94
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 0.32967032967032966,
+          "n": 91
+        },
+        "deaths": {
+          "mean": 0.44322344322344326,
+          "n": 91
+        },
+        "survivals": {
+          "mean": 0.46413043478260857,
+          "n": 92
+        }
+      },
+      "seamBirths": 4
+    },
+    {
+      "boundary": "finite-dead",
+      "exactStateAgreementRate": 1,
+      "finalLive": 4,
+      "firstDivergence": null,
+      "fixture": "GLIDER-X-SEAM",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 35,
+          "rate": 0.9210526315789473,
+          "trials": 38
+        },
+        "deaths": {
+          "hits": 35,
+          "rate": 0.9210526315789473,
+          "trials": 38
+        },
+        "survivals": {
+          "hits": 36,
+          "rate": 0.9473684210526315,
+          "trials": 38
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 0.8571428571428571,
+          "n": 35
+        },
+        "deaths": {
+          "mean": 0.8857142857142857,
+          "n": 35
+        },
+        "survivals": {
+          "mean": 0.875,
+          "n": 36
+        }
+      },
+      "seamBirths": 0
+    },
+    {
+      "boundary": "cylinder-x",
+      "exactStateAgreementRate": 0.17073170731707318,
+      "finalLive": 5,
+      "firstDivergence": 7,
+      "fixture": "GLIDER-X-SEAM",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "deaths": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "survivals": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 0,
+          "n": 38
+        },
+        "deaths": {
+          "mean": 0.1666666666666666,
+          "n": 38
+        },
+        "survivals": {
+          "mean": 0.2000000000000001,
+          "n": 38
+        }
+      },
+      "seamBirths": 11
+    },
+    {
+      "boundary": "cylinder-y",
+      "exactStateAgreementRate": 1,
+      "finalLive": 4,
+      "firstDivergence": null,
+      "fixture": "GLIDER-X-SEAM",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 35,
+          "rate": 0.9210526315789473,
+          "trials": 38
+        },
+        "deaths": {
+          "hits": 35,
+          "rate": 0.9210526315789473,
+          "trials": 38
+        },
+        "survivals": {
+          "hits": 36,
+          "rate": 0.9473684210526315,
+          "trials": 38
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 0.8571428571428571,
+          "n": 35
+        },
+        "deaths": {
+          "mean": 0.8857142857142857,
+          "n": 35
+        },
+        "survivals": {
+          "mean": 0.875,
+          "n": 36
+        }
+      },
+      "seamBirths": 0
+    },
+    {
+      "boundary": "finite-dead",
+      "exactStateAgreementRate": 1,
+      "finalLive": 4,
+      "firstDivergence": null,
+      "fixture": "GLIDER-Y-SEAM",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 37,
+          "rate": 0.9736842105263158,
+          "trials": 38
+        },
+        "deaths": {
+          "hits": 36,
+          "rate": 0.9473684210526315,
+          "trials": 38
+        },
+        "survivals": {
+          "hits": 36,
+          "rate": 0.9473684210526315,
+          "trials": 38
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 0.972972972972973,
+          "n": 37
+        },
+        "deaths": {
+          "mean": 1,
+          "n": 36
+        },
+        "survivals": {
+          "mean": 1,
+          "n": 36
+        }
+      },
+      "seamBirths": 0
+    },
+    {
+      "boundary": "cylinder-x",
+      "exactStateAgreementRate": 1,
+      "finalLive": 4,
+      "firstDivergence": null,
+      "fixture": "GLIDER-Y-SEAM",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 37,
+          "rate": 0.9736842105263158,
+          "trials": 38
+        },
+        "deaths": {
+          "hits": 36,
+          "rate": 0.9473684210526315,
+          "trials": 38
+        },
+        "survivals": {
+          "hits": 36,
+          "rate": 0.9473684210526315,
+          "trials": 38
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 0.972972972972973,
+          "n": 37
+        },
+        "deaths": {
+          "mean": 1,
+          "n": 36
+        },
+        "survivals": {
+          "mean": 1,
+          "n": 36
+        }
+      },
+      "seamBirths": 0
+    },
+    {
+      "boundary": "cylinder-y",
+      "exactStateAgreementRate": 0.024390243902439025,
+      "finalLive": 5,
+      "firstDivergence": 1,
+      "fixture": "GLIDER-Y-SEAM",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "deaths": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        },
+        "survivals": {
+          "hits": 38,
+          "rate": 1,
+          "trials": 38
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 0,
+          "n": 38
+        },
+        "deaths": {
+          "mean": 0.1666666666666666,
+          "n": 38
+        },
+        "survivals": {
+          "mean": 0.2000000000000001,
+          "n": 38
+        }
+      },
+      "seamBirths": 11
+    },
+    {
+      "boundary": "finite-dead",
+      "exactStateAgreementRate": 1,
+      "finalLive": 80,
+      "firstDivergence": null,
+      "fixture": "RANDOM-17",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 10,
+          "rate": 0.10638297872340426,
+          "trials": 94
+        },
+        "deaths": {
+          "hits": 1,
+          "rate": 0.010638297872340425,
+          "trials": 94
+        },
+        "survivals": {
+          "hits": 4,
+          "rate": 0.0425531914893617,
+          "trials": 94
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 0.11134986182598916,
+          "n": 10
+        },
+        "deaths": {
+          "mean": 0.13793103448275862,
+          "n": 1
+        },
+        "survivals": {
+          "mean": 0.4316798118167981,
+          "n": 4
+        }
+      },
+      "seamBirths": 0
+    },
+    {
+      "boundary": "cylinder-x",
+      "exactStateAgreementRate": 0.010309278350515464,
+      "finalLive": 144,
+      "firstDivergence": 1,
+      "fixture": "RANDOM-17",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 3,
+          "rate": 0.031914893617021274,
+          "trials": 94
+        },
+        "deaths": {
+          "hits": 5,
+          "rate": 0.05319148936170213,
+          "trials": 94
+        },
+        "survivals": {
+          "hits": 4,
+          "rate": 0.0425531914893617,
+          "trials": 94
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 0.031007751937984496,
+          "n": 3
+        },
+        "deaths": {
+          "mean": 0.06421451171561743,
+          "n": 5
+        },
+        "survivals": {
+          "mean": 0.2761329446507744,
+          "n": 4
+        }
+      },
+      "seamBirths": 268
+    },
+    {
+      "boundary": "cylinder-y",
+      "exactStateAgreementRate": 0.010309278350515464,
+      "finalLive": 51,
+      "firstDivergence": 1,
+      "fixture": "RANDOM-17",
+      "lag2CountReturn": {
+        "births": {
+          "hits": 21,
+          "rate": 0.22340425531914893,
+          "trials": 94
+        },
+        "deaths": {
+          "hits": 17,
+          "rate": 0.18085106382978725,
+          "trials": 94
+        },
+        "survivals": {
+          "hits": 19,
+          "rate": 0.20212765957446807,
+          "trials": 94
+        }
+      },
+      "lag2SpatialReturn": {
+        "births": {
+          "mean": 0.7685183689921176,
+          "n": 21
+        },
+        "deaths": {
+          "mean": 0.9411764705882353,
+          "n": 17
+        },
+        "survivals": {
+          "mean": 0.9176055117915348,
+          "n": 19
+        }
+      },
+      "seamBirths": 73
+    }
+  ]
+}

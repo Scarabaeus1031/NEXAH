@@ -2,6 +2,10 @@
 
 Kanonische Fassung seit: 2026-09-17
 
+Letzte kanonische Erweiterung: 2026-09-30
+
+Fassungsstand: `V2_TRANSITION_ARCHITECTURE_REGISTRY`
+
 Dokumenttyp: mathematische Grundordnung und Glossar
 
 Status: `CANONICAL_RESEARCH_GLOSSARY / NO_NEW_THEORY_CLAIM`
@@ -26,6 +30,25 @@ Die Leitfrage lautet:
 
 > Welche mathematischen Objekte, Abbildungen und erhaltenen oder verlorenen
 > Eigenschaften liegen in einer NEXAH-Darstellung tatsächlich vor?
+
+### 1.1 Registrierungsstatus
+
+Jeder neu aufgenommene Ausdruck muss mindestens einer der folgenden Klassen
+zugeordnet werden:
+
+```text
+DEFINITION            exakt deklarierter Begriff oder Operator
+DERIVED_QUANTITY      aus Definitionen berechnete Größe
+DIAGNOSTIC            beschreibende, nicht allein bestätigende Auswertung
+EMPIRICAL_RESULT      reproduzierbares Resultat mit gebundenem Datensatz
+RESEARCH_HYPOTHESIS   prüfbare, noch nicht bestätigte Verbindung
+VISUAL_MNEMONIC       kontrollierte Bild- oder Orientierungsbezeichnung
+OPEN_BRIDGE           noch nicht validierter Übergang zwischen Ebenen
+```
+
+Eine Bezeichnung darf mehrere Rollen besitzen, sofern jede Rolle separat
+ausgewiesen wird. Insbesondere wird eine Visualisierung nicht durch ihre
+Aufnahme in dieses Glossar zu einem empirischen Resultat.
 
 ## 2. Minimale Grundregel
 
@@ -100,6 +123,55 @@ Identität beantwortet, welches Objekt vorliegt. Eine Adresse gibt an, wo oder
 unter welchem Index es in einer Darstellung gefunden wird. Eine Änderung der
 Adresse muss keine Änderung des Objekts sein; identische Werte können aus
 verschiedenen Objekten oder Generatoren entstehen.
+
+### 3.6 Relationsobjekt, Meta-Relation und Generationsebene
+
+Eine getypte Relation kann selbst als Objekt einer weiteren, ausdrücklich
+deklarierten Relation behandelt werden. Der GEN01-Crosswalk verwendet dafür
+lokal:
+
+```text
+mathcal G_0 = getypte Quellobjekte
+mathcal G_1 = Relationen aus G_0, als getypte Objekte gespeichert
+mathcal G_2 = eine Meta-Ebene von Relationen zwischen G_1-Objekten
+```
+
+T5 bezeichnet in diesem Crosswalk den Lift `Relation -> Objekt`, T6 die
+Bildung einer Relation zwischen solchen Relationsobjekten und T7 den
+Darstellungs- und Rückvergleich. Die getestete Rekursion endet bei
+`mathcal G_2`; eine weitere Ebene wird nicht stillschweigend angenommen.
+
+Der Wert eines Relationsobjekts ist nicht seine vollständige Geschichte. Für
+eine Endpoint-Projektion
+
+```text
+pi(h) = result_value
+```
+
+können verschiedene getypte Historien dasselbe Bild besitzen. GEN01 zeigte
+dies konstruktiv in einem eingefrorenen History-Raum, während vollständige
+Records Operand, Operator, Ordnung, Parent und Generation unter den getesteten
+Darstellungswechseln exakt erhielten.
+
+`mathcal G_0/mathcal G_1/mathcal G_2` ist damit ein validierter case-lokaler
+Crosswalk, keine global kanonische NEXAH-Notation. Er ist insbesondere von
+`G2/G3/GR`, `G-01...G-06`, Gridauflösungen und der Dreifachrelation
+`G=A intersect B intersect C` zu unterscheiden.
+
+GEN02 prüfte die strukturelle Übertragbarkeit dieses Crosswalks über vier
+eingefrorene Relationsfamilien: gerichtete Nachfolge, symmetrische Äquivalenz,
+rollengetypte Inzidenz und ternäre Schnittbildung als Holdout. Ein gemeinsamer
+Feldvertrag für G0-, G1- und G2-Records blieb ohne Schemaänderung erhalten;
+T7 gab die vollständigen Records exakt zurück und T6-Metarelationen waren aus
+ihren referenzierten G1-Records reproduzierbar.
+
+Diese Übertragbarkeit betrifft den **Recordvertrag**, nicht eine gemeinsame
+Semantik. Jede Familie behielt einen expliziten semantischen Validator. Ein
+ungetypter Endpoint, eine bloße Teilnehmermenge oder eine generische
+Provenienzhülle ist kein vollständiges Relationsobjekt, wenn Relationstyp,
+Rollen, Richtung oder Payload fehlen. Der Befund validiert weder beliebige
+Relationsfamilien noch den `n+1`-Binder oder eine Ebene oberhalb von
+`mathcal G_2`.
 
 ## 4. Raum, Frame und Messung
 
@@ -465,6 +537,61 @@ Randpaar sind exakte Standardmathematik. Sie begründen ohne eine zusätzliche,
 vorab deklarierte Abbildung weder eine physikalische Kopplung noch eine
 Bevorzugung von 11 in kontinuierlichen Messdaten.
 
+### 8.6 Shadow-Cube-Lift und Informationsgrenze
+
+Für einen Restzustand `r in Z/qZ` kann ein modularer Shadow-Cube-Lift als
+
+```text
+chi_q(r) = (r^3-1, r^3, r^3+1) mod q
+```
+
+definiert werden. Dies ist eine deterministische Merkmalsabbildung. Sie kann
+Nachbarschaften, Symmetrien, Kompression oder einen modulübergreifenden
+Vergleich anders darstellen, enthält innerhalb eines festen Moduls aber keine
+Information, die nicht bereits in `r` enthalten war:
+
+```text
+chi_q(r) is a function of r
+=> no within-modulus information gain over the full residue state.
+```
+
+Ein beobachteter Vorteil des Lifts kann daher ein Vorteil der Repräsentation,
+Regularisierung oder Übertragung sein. Er ist nicht ohne Weiteres ein neuer
+arithmetischer Informationskanal. Ein Bezug zwischen einem kubischen
+Randfaktor und einem empirisch auffälligen Modul muss vor der Auswertung
+deklariert werden; eine nachträgliche Zuordnung ist explorativ.
+
+### 8.7 Prime-indexed prime und Index-Re-entry
+
+`P_n` bezeichnet die `n`-te Primzahl. Da `P_n` für jedes zulässige `n` prim
+ist, bezeichnet **prime-indexed prime** keinen neuen Primzahltyp, sondern die
+zusätzliche Indexbedingung
+
+```text
+n is prime and P_n is the n-th prime.
+```
+
+Der historische Ausdruck `prime-prime` wird nur in diesem typisierten Sinn
+geführt. Die Eigenschaft hängt vollständig von der Primalität des Index `n`
+ab.
+
+Ein **Prime-Index-Re-entry** in einem lokalen Dreierfenster bezeichnet
+
+```text
+n-1 prime,
+n composite,
+n+1 prime.
+```
+
+Der mittlere Index ist dann die zusammengesetzte Unterbrechung zwischen zwei
+prime-indexed primes. Dies ist eine Indexraum-Eigenschaft und keine Aussage
+über die Primwertlücken `P_n-P_(n-1)` oder `P_(n+1)-P_n`.
+
+Numerische Gleichheit zwischen einem Index und einem Primwert, etwa
+`I_7=P_4=7`, bewahrt nicht die Generatoridentität. In Formeln muss deshalb
+kenntlich bleiben, ob eine Zahl als Index, Primwert oder Restadresse verwendet
+wird.
+
 ## 9. Ordnung, Bahn und Dynamik
 
 ### 9.1 Sequenz und Pfad
@@ -517,6 +644,416 @@ Die unterstützte NEXAH-Kette lautet:
 Parameter -> Dynamik -> endliches Feld -> Beobachtung -> Rekonstruktionsmenge.
 ```
 
+### 9.6 Übergangszählung und Übergangsmatrix
+
+Für eine beobachtete Zustandsfolge `x_0,...,x_T` auf einer endlichen Menge `X`
+ist die Übergangszählung
+
+```text
+N_ij = #{t : x_t=i and x_(t+1)=j}.
+```
+
+Eine geglättete zeilenstochastische Übergangsmatrix kann durch
+
+```text
+P_ij = (N_ij + alpha_ij) / sum_k (N_ik + alpha_ik)
+```
+
+definiert werden. Datenausschnitt, Zustandsalphabet, Glättung, Randbehandlung
+und Zeitrichtung gehören zur Definition. Eine Übergangsmatrix beschreibt
+bedingte Häufigkeiten erster Ordnung; sie ist weder automatisch kausal noch
+eine vollständige Dynamik.
+
+### 9.7 Stationäre Verteilung, Verkehr und gerichteter Strom
+
+Eine stationäre Verteilung `pi` erfüllt
+
+```text
+pi P = pi,  sum_i pi_i = 1.
+```
+
+Der stationäre gerichtete Kantenstrom wird definiert als
+
+```text
+J_ij = pi_i P_ij - pi_j P_ji,
+```
+
+und ist antisymmetrisch. Ein symmetrischer Verkehrsoperator kann beispielsweise
+aus den Summen der beiden stationären Richtungsflüsse gebildet werden. Verkehr
+und Strom sind verschiedene Objekte: hoher Verkehr kann bei verschwindendem
+Netto-Strom auftreten. `Drift`, `transport` oder `circulation` dürfen nur auf
+eine erklärte Strom-, Inkrement- oder Bilanzgröße bezogen werden.
+
+### 9.8 Spektrum, Eigenraum und Spektralsubraum
+
+Das Spektrum eines Operators ist die Multimenge seiner Eigenwerte. Ein
+Eigenvektor ist bei einfachen Eigenwerten mindestens bis auf Skalierung und
+Vorzeichen unbestimmt; bei mehrfachen oder nahen Eigenwerten kann eine ganze
+Basis innerhalb eines invarianten Subraums rotieren. Daher gilt:
+
+```text
+stable spectrum != stable eigenvector coordinates
+stable subspace != stable hard partition
+```
+
+Ein Vergleich spektraler Darstellungen muss die relevante Gauge-Freiheit
+berücksichtigen, beispielsweise durch Projektoren, kanonische Winkel oder eine
+orthogonale Procrustes-Ausrichtung.
+
+### 9.9 Gauge und gauge-invarianter Vergleich
+
+`Gauge` bezeichnet hier eine Darstellungsfreiheit, durch die verschiedene
+Koordinatenbasen dasselbe mathematische Objekt repräsentieren. Für zwei
+orthonormale Basen `U` und `V` desselben `k`-dimensionalen Subraums kann
+
+```text
+U and VQ,  Q in O(k),
+```
+
+dieselbe Unterraumstruktur beschreiben. Aussagen über Stabilität sollen daher
+nach Möglichkeit auf Projektoren, Unterraumwinkel oder nach deklarierter
+Ausrichtung aufbauen und nicht auf ungeklärten Einzelkoordinaten.
+
+### 9.10 Harte Sheets und Soft Memberships
+
+Ein **Sheet** ist im gegenwärtigen NEXAH-Forschungsgebrauch eine deklarierte
+Aggregation von Zuständen, die aus einer Ähnlichkeits-, Operator- oder
+Clusteringregel gewonnen wird. Eine harte Sheet-Abbildung hat die Form
+
+```text
+s: X -> {1,...,K}.
+```
+
+Eine Soft Membership ordnet dagegen Gewichte zu:
+
+```text
+w: X -> Delta^(K-1),  sum_k w_k(x)=1.
+```
+
+Sheets sind abgeleitete Darstellungen, keine vorausgesetzten materiellen
+Schichten. Ihre Anzahl, Identifizierbarkeit, zeitliche Stabilität und
+Label-Invarianz müssen separat geprüft werden. Eine stabile Matrix oder ein
+stabiler Subraum erzwingt keine stabile harte Sheet-Partition.
+
+### 9.11 Regime und Basin
+
+Ein Regime ist eine unter einer festgelegten Regel zusammengefasste Menge von
+Zuständen oder Sheets. Ein Basin im dynamischen Sinn benötigt zusätzlich eine
+Dynamik und ein Attraktionsziel. Deshalb darf eine farbige Region einer
+Partition nur dann `basin` heißen, wenn ihre Attraktionseigenschaft definiert
+und geprüft ist; andernfalls ist `regime` oder `region` der neutrale Begriff.
+
+### 9.12 Phase als projektionsinduzierte Koordinate
+
+Für eine zweidimensionale Beobachtung `(x(t),y(t))` relativ zu einem erklärten
+Ursprung kann eine Kreisphase definiert werden als
+
+```text
+theta(t) = atan2(y(t), x(t)) in (-pi,pi].
+```
+
+Für einen Restzustand `r in Z/qZ` ist die rohe modulare Kreisadresse
+
+```text
+theta_raw(r) = 2*pi*r/q  mod 2*pi.
+```
+
+Beide Größen sind Koordinaten einer gewählten Abbildung. Sie sind nicht ohne
+zusätzliche Messdefinition physische Observablen und nicht automatisch
+systemübergreifend äquivalent. Ursprung, Projektion, Orientierung, Skalierung
+und Branch-Cut gehören zur Spezifikation.
+
+### 9.13 Spektrale Phase
+
+Seien `u_1,u_2` zwei Koordinaten eines deklarierten zweidimensionalen
+Operatorsubspaceraums. Dann kann eine spektrale Phase definiert werden durch
+
+```text
+z(x) = u_1(x) + i*u_2(x),
+theta_spec(x) = arg z(x).
+```
+
+Da die Basis `(u_1,u_2)` innerhalb ihres Subraums rotieren oder gespiegelt
+werden kann, ist `theta_spec` erst nach einer Gauge-Regel zwischen Fits
+vergleichbar. Die Stabilität des Subraums, die Stabilität der ausgerichteten
+Phase und die Stabilität daraus abgeleiteter Events sind drei getrennte
+Prüfgegenstände.
+
+### 9.14 Zirkuläres Inkrement, Unwrapping, Drift und Winding
+
+Das branch-invariante zirkuläre Phaseninkrement ist
+
+```text
+delta_theta_t = Arg(exp(i*(theta_(t+1)-theta_t))).
+```
+
+Ein Unwrapping erzeugt daraus unter einer erklärten Fortsetzungsregel eine
+reellwertige Sequenz `theta_unwrapped(t)`. Es ist nicht eindeutig, wenn Sprünge
+oder Abtastlücken die verwendete Regel verletzen. Mittlere Drift und endliche
+Winding-Rate können beispielsweise definiert werden als
+
+```text
+mu_delta = mean(delta_theta_t),
+w_T = (theta_unwrapped(T)-theta_unwrapped(0)) / (2*pi*T).
+```
+
+Diese Größen sind Diagnosen einer orientierten Phase. Eine topologische
+Windungszahl im strengen Sinn setzt die in Abschnitt 9.4 genannten Bedingungen
+voraus. Nichtverschwindende Drift allein beweist weder Topologie noch einen
+physischen Transportmechanismus.
+
+### 9.15 Gate, Plateau, Change Point und Transition Event
+
+Ein Gate ist eine vorab definierte Teilmenge oder Score-Region, in der ein
+Transitionskriterium erfüllt wird. Allgemein:
+
+```text
+G_tau = {x : g(x) >= tau}
+```
+
+mit Score `g`, Schwelle `tau` und festgelegter Schwellenauswahl. Ein Plateau ist
+ein Zeitintervall, in dem eine erklärte Änderungsgröße unter einer festen
+Toleranz bleibt. Ein Change Point bezeichnet eine durch ein deklariertes
+statistisches Verfahren erkannte Verteilungs- oder Parameteränderung.
+
+Ein binäres Transition Event beziehungsweise historisch benanntes `IOTA` ist
+eine abgeleitete Indikatorvariable. Wird seine Schwelle als Perzentil derselben
+auszuwertenden Stichprobe gewählt, ist die Ereignisrate teilweise konstruiert.
+Eine bestätigende Analyse benötigt eine auf Trainingsdaten eingefrorene Regel
+und eine unabhängige Kalibrations- oder Testmenge.
+
+### 9.16 Ereignisalphabet und Synchronisation
+
+Ein Ereignisalphabet ist eine endliche, reproduzierbar anwendbare Menge von
+Eventtypen. Cross-Modulus- oder Cross-System-Synchronisation benötigt zuerst
+stabile Einzelalphabete oder eine direkt definierte kontinuierliche
+Kopplungsstatistik. Instabile Clusterlabels dürfen nicht nachträglich als
+synchrone Ereignisse interpretiert werden.
+
+Für Phasen `theta_j(t)` ist der Kuramoto-Ordnungsparameter
+
+```text
+r(t) * exp(i*psi(t)) = (1/N) * sum_j exp(i*theta_j(t)),
+0 <= r(t) <= 1.
+```
+
+Er misst momentane Phasenkohärenz der deklarierten Oszillatorpopulation. Ein
+hohes `r(t)` beweist keine gemeinsame Ursache und überträgt sich nicht ohne
+eine explizite Brückenabbildung auf Primrestfolgen oder chaotische Attraktoren.
+
+### 9.17 Topologie aus Konnektivität: Aussagegrenze
+
+Ein Graph besitzt kombinatorische Konnektivität. Eine Ring-, Torus- oder
+Möbiusdarstellung kann dagegen bereits durch das gewählte Layout oder die
+Einbettung vorgegeben sein. Eine Aussage über emergente Topologie benötigt ein
+topologisches Objekt und eine layoutunabhängige Invariante, etwa Homologie,
+Persistenz, Spektralfolgen mit bewiesener Zuordnung oder einen expliziten
+Quotientenraum.
+
+```text
+circular layout != recovered circle topology
+phase embedding != emergent torus
+stable spectrum != identified topology
+```
+
+Die Kette `connectivity -> topology` ist daher eine Forschungshypothese, bis
+die entsprechende Invariante samt Nullvergleich spezifiziert und bestanden
+ist.
+
+### 9.18 Nullmodell, Surrogat und eingeschränkter Nullraum
+
+Ein Nullmodell beschreibt, welche Struktur unter einer Gegenhypothese erhalten
+bleibt. Ein Surrogat ist eine daraus erzeugte Vergleichssequenz oder ein
+Vergleichsoperator. Für Übergangsdaten sind unter anderem getrennt zu prüfen:
+
+- Zustandshäufigkeit erhaltende Permutationen;
+- Markov-Replays mit geschätztem `P`;
+- Gap- oder Kovariaten-konditionierte Surrogate;
+- Zeitumkehr zur Prüfung von Richtungseffekten;
+- Label-Permutationen zur Prüfung der Einbettungsabhängigkeit.
+
+Ein beobachteter Effekt besitzt nur Inhalt relativ zu der Struktur, die das
+gewählte Nullmodell bereits bewahrt. Mehrere Nullfamilien beantworten
+verschiedene Fragen und dürfen nicht als austauschbar behandelt werden.
+
+### 9.19 Split-Half-Stabilität, Replay und Blindbereich
+
+Split-Half-Stabilität vergleicht unabhängig geschätzte Objekte auf zwei
+deklarierten Entwicklungsteilmengen. Ein Replay wiederholt die vollständige
+Pipeline mit gebundenen Daten, Parametern, Seeds und Code. Ein identischer
+Resultathash bestätigt deterministische Reproduzierbarkeit des berechneten
+Ergebnisses, nicht dessen wissenschaftliche Wahrheit.
+
+Ein Blindbereich ist ein vor der Modell- und Schwellenwahl zurückgehaltener
+Datenabschnitt. Er bleibt blind, solange keine confirmatorische Regel
+eingefroren ist. Ein Fail-Closed-Gate bedeutet, dass ein abhängiger Test bei
+fehlender Zulassung nicht ausgeführt und kein ersatzweiser p-Wert erzeugt wird.
+
+### 9.20 Prädiktiver Mehrwert
+
+Prädiktiver Mehrwert ist eine held-out Verbesserung gegenüber einem vorab
+festgelegten Basismodell unter derselben Bewertungsregel, beispielsweise
+Log-Loss, Brier-Score oder proper scoring rule. Eine deterministische
+Transformation bereits enthaltener Prädiktoren kann Regularisierung oder
+Kompression verbessern, liefert aber nicht automatisch zusätzliche
+Information. Sehr kleine Verbesserungen aus instabilen, nachträglich
+selektierten Features gelten als diagnostisch, nicht als bestätigende Evidenz.
+
+### 9.21 Unified Transition Architecture
+
+`NEXAH Unified Transition Architecture` bezeichnet derzeit das folgende
+typisierte Forschungsprogramm:
+
+```text
+source sequence
+  -> transition operator
+  -> spectrum / current / invariant subspace
+  -> aligned phase coordinate
+  -> phase increments / drift / winding diagnostics
+  -> frozen gates or continuous coupling statistics
+  -> connectivity analysis
+  -> independently tested topology
+  -> separately specified synchronization model.
+```
+
+Die Pfeile bezeichnen Arbeitsbrücken, keine bereits bewiesene universelle
+Kausalkette. Insbesondere sind
+
+```text
+transitions -> universal phase,
+phase -> physical transport,
+connectivity -> topology,
+topology -> synchronization
+```
+
+gegenwärtig `OPEN_BRIDGE / RESEARCH_HYPOTHESIS`, sofern sie nicht in einem
+konkreten gebundenen Experiment separat operationalisiert werden.
+
+### 9.22 Zyklus, Rekurrenz und Cycle Core
+
+Ein gerichteter Zyklus in einem Graphen ist eine geschlossene Folge gerichteter
+Kanten. Rekurrenz bezeichnet die Rückkehr eines Prozesses in einen Zustand
+oder eine deklarierte Zustandsmenge; sie ist nicht identisch mit einem
+einzelnen Graphzyklus.
+
+`Cycle Core` bezeichnet in NEXAH eine abgeleitete Teilstruktur, die nach einer
+erklärten Regel besonders viel zyklischen Verkehr oder rekurrente
+Konnektivität trägt. Zulässige Regeln sind beispielsweise ein Schwellenwert
+auf Zyklusgewichten, eine stark zusammenhängende Komponente oder eine
+Optimierung in einem Zyklusraum. Ohne eine solche Regel ist der Cycle Core ein
+`VISUAL_MNEMONIC`, kein eindeutiges mathematisches Objekt.
+
+Eine Zerlegung
+
+```text
+flow = cycle component + residual or drift component
+```
+
+benötigt die Definition des Flussraums, einer inneren Produktstruktur und der
+Projektoren oder Optimierungsregel. Eine visuell plausible Ringkomponente
+allein beweist keine eindeutige Hodge- oder Zykluszerlegung.
+
+### 9.23 Empirische Dichte, Feld und Flow
+
+Eine empirische Dichte ist eine aus Stichproben geschätzte Verteilung und hängt
+von Kernel, Bandbreite, Raster und Normierung ab. Ein Vektorfeld ist eine
+Abbildung
+
+```text
+F: X -> T(X)
+```
+
+oder im euklidischen Fall `F: X -> R^d`. Ein kontinuierlicher Flow `Phi_t`
+erfüllt eine Evolutionsregel, zum Beispiel
+
+```text
+d x(t)/dt = F(x(t)).
+```
+
+Eine geglättete Pfeildarstellung diskreter Übergänge ist zunächst ein
+eingebettetes Übergangsfeld. Sie wird nicht allein durch Glättung zum
+kontinuierlichen dynamischen Flow. Übergangsstrom, empirische Dichte,
+Vektorfeld und Trajektorienflow sind deshalb getrennte Typen.
+
+### 9.24 Coherence, Residence und Gate Score
+
+`Coherence` ist kein skalenfreier Universalbegriff. Sie muss als konkrete
+Ähnlichkeits-, Varianz-, Spektral- oder Phasengröße definiert werden. Eine
+Residence-Größe misst die innerhalb einer Region verbrachte Zeit oder deren
+normalisierten Anteil unter einer erklärten Segmentierung.
+
+Ein zusammengesetzter Gate Score, etwa
+
+```text
+G(x) = (1-rho(x)) * (1-C(x)) * (1-R(x)),
+```
+
+ist nur definiert, wenn Dichte `rho`, Coherence `C`, Residence `R`, ihre
+Normierung und ihre Gültigkeitsbereiche feststehen. Die Multiplikation dieser
+Terme ist eine Modellentscheidung und kein allgemeiner mathematischer Satz.
+`Low density`, `low coherence` und `low residence` sind unterscheidbare
+Hypothesen über Übergangszonen.
+
+### 9.25 Phase Mismatch, Activation und IOTA-Score
+
+Ein Phase Mismatch ist eine erklärte Distanz zwischen einer beobachteten und
+einer Referenzphase oder zwischen ihren Geschwindigkeiten. Für Kreisphasen ist
+eine typische lokale Distanz
+
+```text
+M(theta,phi) = |Arg(exp(i*(theta-phi)))|.
+```
+
+Alternativ kann Mismatch auf geglätteten Phasengeschwindigkeiten beruhen; diese
+Definition ist ein anderes Objekt. Filter, Fensterbreite und Randbehandlung
+gehören zur Spezifikation.
+
+Eine Activation ist eine Funktion, die Diagnosen in einen kontinuierlichen
+Score oder ein binäres Event überführt. `IOTA` darf als historischer Name einer
+solchen Transition-Activation geführt werden, besitzt aber keine einheitliche
+Definition über Experimente hinweg. Jede Verwendung muss ihre konkrete Formel
+und eingefrorene Schwelle angeben.
+
+### 9.26 Manifold, Off-Manifold und strukturbewusste Kontrolle
+
+Eine Mannigfaltigkeit benötigt eine topologische und gegebenenfalls glatte
+Struktur; eine gezeichnete Kurve oder Punktwolke ist nicht automatisch eine
+identifizierte Mannigfaltigkeit. `Off-manifold` bezeichnet eine Abweichung nur
+relativ zu einer erklärten Referenzmenge und Metrik, beispielsweise
+
+```text
+d_M(x) = inf_{y in M} d(x,y).
+```
+
+Eine Kontrollpolitik wählt Eingriffe in Abhängigkeit von Zustand,
+Beobachtung oder Schätzung. `Phase-aware` oder `structure-aware control`
+bezeichnet eine Politik, die entsprechende registrierte Features verwendet.
+Ein gezeichneter Zielpfad ist noch kein Kontrollnachweis. Erforderlich sind
+Systemdynamik, zulässige Eingriffe, Kostenfunktion, Baselines, Störungen und
+held-out Erfolgsmaße.
+
+### 9.27 Cross-System-Brücke
+
+Diskrete Restfolgen, kontinuierliche chaotische Systeme und gekoppelte
+Oszillatoren besitzen unterschiedliche Träger und Dynamiken. Dass in allen
+drei Klassen eine Kreisphase konstruiert werden kann, liefert eine gemeinsame
+Vergleichssprache, aber noch keine Isomorphie oder gemeinsame Ursache.
+
+Eine belastbare Cross-System-Brücke muss mindestens angeben:
+
+```text
+source spaces
+observation maps
+phase gauges
+time parametrization
+dimensionless comparison statistic
+null family
+domain of claimed transfer.
+```
+
+Bis dahin bedeutet `unified` eine vereinheitlichte Analysesprache und ein
+Forschungsprogramm, nicht eine bewiesene universelle Dynamik.
+
 ## 10. QRT als endlicher Demonstrator
 
 Im geborgenen QRT-Demonstrator ist ein siebenstelliger Carrier definiert:
@@ -539,7 +1076,79 @@ SAME_OUTPUT != SAME_GENERATOR
 NUMERICAL_CLOSURE != INFORMATIONAL_CLOSURE
 ```
 
-## 11. Residual und Rückvergleich
+## 11. Empirisches Ergebnisregister: PMR01/PMR01A/PMR01B/PMR01C
+
+Die PMR-Piloten vom 2026-09-30 werden mit folgender Aussagegrenze registriert:
+
+```text
+PMR01:
+  hard residue sheets              NOT STABLE PANEL-WIDE
+  dependent synchronization test   NOT RUN / FAIL-CLOSED
+
+PMR01A:
+  global transition spectra        STRONGLY SPLIT-HALF STABLE
+  normalized directional current   STRONGLY SPLIT-HALF STABLE
+  low-dimensional subspaces        SUPPORTED FOR A SUBSET
+  thresholded soft events           STABLE ONLY FOR q=17,29
+  dependent synchronization test   NOT RUN / FAIL-CLOSED
+
+PMR01B:
+  gauge-aligned phase stability    SUPPORTED FOR 6 OF 10 MODULI
+  all constrained nulls            PASSED BY 4 OF 10 MODULI
+  full intersection                q=17,41 ONLY; 5 REQUIRED
+  F3-to-F4 panel bridge             NOT ESTABLISHED / FAIL-CLOSED
+  topology and synchronization     NOT RUN
+
+PMR01C:
+  nominal held-out log-loss gain   POSITIVE FOR 10 OF 10 MODULI
+  positive 99% bootstrap lower     10 OF 10 MODULI
+  spectral phase-label specificity q=13,17 ONLY; 5 REQUIRED
+  panel incremental utility        NOT ESTABLISHED / FAIL-CLOSED
+  blind, topology, synchronization NOT RUN
+```
+
+Damit ist als Entwicklungsergebnis zulässig:
+
+> Das gegenwärtig stabilere PMR-Objekt liegt näher am Übergangsoperator,
+> Spektrum, Strom oder Subraum als an einer harten Sheet-Partition oder einem
+> panelweit stabilen binären Ereignisalphabet.
+
+Nicht zulässig sind daraus Aussagen über Primzahlresonanz, physikalische
+Mechanismen, universelle Phase, Cross-Modulus-Synchronisation oder emergente
+Topologie. Die in einzelnen Piloten zugelassenen Moduli, darunter `17,29` in
+PMR01A, `17,41` in PMR01B und `13,17` in PMR01C, sind diagnostische
+Entwicklungsergebnisse und keine nachträglich freigegebenen confirmatorischen
+Ziele. Der PMR01C-Gewinn ist zudem als Repräsentations- oder
+Regularisierungseffekt begrenzt, weil beliebig permutierte Phasenlabels den
+Gewinn panelweit reproduzierten oder übertrafen.
+
+### 11.1 PIR01 Prime-Index-Re-entry-Census
+
+PIR01 registriert eine getrennte F2-Arithmetikbeobachtung. Im exakt
+enumerierten Register der ersten `1,000,000` Primindizes gilt:
+
+```text
+P_n = 2n+1                                      at n={5,6}
+P_n = 2n+1 plus prime-index re-entry            at n={6}
+P_(2n+1) = n(n+1)-1                             at n={6}
+P_(3n) = P_(n+2)+n(n+1)                         at n={2,3,5,6}
+complete frozen conjunction                     at n={6}
+```
+
+Für `n=6` ergibt sich damit exakt:
+
+```text
+P_6  = 13 = 6+7,
+P_13 = 41 = 6*7-1,
+P_18 = 61 = P_8+6*7 = 19+42.
+```
+
+Diese endliche Eindeutigkeit gilt im deklarierten Register. Die Regeln wurden
+nach Beobachtung des Falls gebildet; deshalb folgt daraus weder ein p-Wert noch
+eine globale Eindeutigkeit, ein neuer Primzahlsatz oder eine Erklärung der
+PMR-Zulassungen.
+
+## 12. Residual und Rückvergleich
 
 Für Quelle `x`, Beobachtung `y=O(x)` und Rekonstruktion `x_hat=R(y)` benötigt
 ein numerischer Rest eine deklarierte Metrik:
@@ -559,7 +1168,7 @@ numerisch | strukturell | außerhalb der Unterstützung | unaufgelöst
 
 Er ist nicht automatisch Messfehler, Substanz oder neue Physik.
 
-## 12. Mathematischer NEXAH-Kern
+## 13. Mathematischer NEXAH-Kern
 
 Die derzeit belastbare Architektur lautet:
 
@@ -579,7 +1188,7 @@ Diese Architektur verbindet bekannte Mathematik. Ihre derzeitige
 NEXAH-spezifische Leistung ist die typisierte Komposition, nicht ein neuer
 allgemeiner Satz.
 
-## 13. Was als exakt gilt
+## 14. Was als exakt gilt
 
 Zum bestehenden exakten Bestand gehören unter anderem:
 
@@ -592,11 +1201,16 @@ Zum bestehenden exakten Bestand gehören unter anderem:
 - bekannte gcd-Identitäten für `10^n-1` und die parity-gesteuerte `+1`-Variante;
 - reproduzierte endliche Julia-Escape-Arrays in einem gebundenen Fall;
 - exakte, lokal definierte Graph-, Raster- und Adressabbildungen.
+- deklarierte endliche Übergangszählungen und zeilenstochastische Operatoren;
+- algebraisch definierte stationäre Ströme und Gauge-invariante
+  Unterraumvergleiche;
+- reproduzierbare PMR01/PMR01A-Pipelineausführungen mit identischen
+  Resultathashes.
 
 Diese Resultate sind gültig, auch wenn die zugrunde liegenden allgemeinen
 Sätze bekannt sind.
 
-## 14. Was offen bleibt
+## 15. Was offen bleibt
 
 Noch nicht vorhanden sind:
 
@@ -611,8 +1225,16 @@ Noch nicht vorhanden sind:
   Mittels;
 - ein bewiesener Zusammenhang zwischen Primzahlmustern, Musiknotation und
   physikalischer Dynamik.
+- eine projektionsunabhängige universelle Phase über diskrete, kontinuierliche
+  und gekoppelte Systeme;
+- ein panelweit stabiles PMR-Sheet- oder Transition-Event-Alphabet;
+- ein confirmatorischer Nachweis von Cross-Modulus-Synchronisation;
+- eine layoutunabhängig rekonstruierte Torus-, Möbius- oder andere globale
+  Topologie aus den PMR-Übergangsdaten;
+- ein empirischer Informationsgewinn des Shadow-Cube-Lifts über den
+  vollständigen Restzustand innerhalb eines festen Moduls.
 
-## 15. Reihenfolge für das Grundlagenwerk
+## 16. Reihenfolge für das Grundlagenwerk
 
 Die mathematische Schule wird in dieser Reihenfolge aufgebaut:
 
@@ -625,10 +1247,16 @@ Die mathematische Schule wird in dieser Reihenfolge aufgebaut:
 7. Graph, Raster, Einbettung und Auflösung;
 8. Zahl, Schreibweise, Restklasse, Primzahl und CRT;
 9. Sequenz, Pfad, Iteration, Orbit und Windungszahl;
-10. Residual, Rückkehr, Provenienz und Vergleich;
-11. erst danach: Farbe, Licht, Wahrnehmung und historische Genealogie.
+10. Übergangsoperator, stationärer Verkehr und gerichteter Strom;
+11. Spektrum, Unterraum, Gauge und Stabilitätsvergleich;
+12. Phase, zirkuläres Inkrement, Drift und Winding-Diagnostik;
+13. Sheets, Regime, Gates, Events und Ereignisalphabet;
+14. Nullmodell, Replay, Blindbereich und prädiktiver Vergleich;
+15. Konnektivität, Topologie und Synchronisation;
+16. Residual, Rückkehr, Provenienz und Vergleich;
+17. erst danach: Farbe, Licht, Wahrnehmung und historische Genealogie.
 
-## 16. Parkgrenze
+## 17. Parkgrenze
 
 Die folgenden Themen sind wichtig, gehören aber nicht in diese erste
 mathematische Fixierung:
@@ -643,3 +1271,46 @@ mathematische Fixierung:
 Sie werden später als eigene Beobachtungs-, Wahrnehmungs- oder
 Genealogieschichten an die mathematischen Definitionen angebunden. Sie werden
 nicht verworfen und nicht vorzeitig vermischt.
+
+## 18. Provenienz der V2-Erweiterung
+
+Die Definitionen und Aussagegrenzen der Erweiterung vom 2026-09-30 wurden
+gegen folgende gebundene Quellen geprüft:
+
+```text
+RESEARCH/FINDINGS/TRANSITION_PHASE_DYNAMICS/phase_definition.md
+RESEARCH/FINDINGS/TRANSITION_PHASE_DYNAMICS/PHASE_UNIFICATION_SUMMARY.md
+
+NEXAH_PMR01_CROSS_MODULUS_STRUCTURAL_TRANSITION_PREDICTION_2026-09-30
+scientific result hash:
+d6571fd06fbf0f85f282b89f5c74e65abdb30dba0844eddf6b9b9fe08008c30f
+
+NEXAH_PMR01A_CYCLE_SPECTRUM_SOFT_MEMBERSHIP_STABILITY_2026-09-30
+scientific result hash:
+2d3cf88de2986aad19de85b201359a58a5992b3b4deb079f2a6df88c35c84ea8
+
+NEXAH_PMR01B_GAUGE_INVARIANT_SPECTRAL_PHASE_2026-09-30
+scientific result hash:
+f9ea79476ea51b6b9f67ba0c1b9e04e8951642779910599db7ca33824e7b9029
+
+NEXAH_PMR01C_INCREMENTAL_SPECTRAL_PHASE_UTILITY_2026-09-30
+scientific result hash:
+8850a0b78830472bae92521cfb54df4d13552351756dfb40c117d53147770150
+
+NEXAH_PIR01_PRIME_INDEX_REENTRY_MOTIF_2026-09-30
+scientific result hash:
+6094963ee23de2d3a70f5f54882074e32febfaed8316461d2549a493ae3b9cf2
+
+NEXAH_GEN01_RELATION_OBJECT_GENERATION_PRESERVATION_2026-09-30
+scientific result hash:
+b14595f8b7c798538900de0bdb6b49b9bd715a530a205984c9f01d448f0d3ae6
+
+NEXAH_GEN02_HETEROGENEOUS_RELATION_FAMILY_TRANSFER_2026-09-30
+scientific result hash:
+02317b749d8c9a7abe6b9cdd74310fee99fda4ebd954d7140457c9d3f895ed50
+```
+
+Historische Diagramme und System-Overview-Grafiken dienen als
+Orientierungsquellen und `VISUAL_MNEMONIC`. Wo deren Pfeilketten über die oben
+registrierten Definitionen hinausgehen, bleiben sie `OPEN_BRIDGE` und werden
+nicht als eigenständiger Beleg verwendet.

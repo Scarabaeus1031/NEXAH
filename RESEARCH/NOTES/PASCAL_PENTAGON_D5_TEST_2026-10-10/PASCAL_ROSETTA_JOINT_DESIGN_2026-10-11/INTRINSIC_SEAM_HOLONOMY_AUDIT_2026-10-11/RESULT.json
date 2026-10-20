@@ -1,0 +1,914 @@
+{
+  "checks": [
+    {
+      "expected": {
+        "components": 1,
+        "edges": 180,
+        "vertices": 106
+      },
+      "name": "frozen Q106 graph counts and connectivity",
+      "observed": {
+        "components": 1,
+        "edges": 180,
+        "vertices": 106
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "creates": [],
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST"
+      },
+      "name": "identity reused without creation",
+      "observed": {
+        "creates": [],
+        "parent_candidate": "A0-BL-023:PASCAL_LISSAJOUS_MOBIUS_RETURN_CANDIDATE:V1",
+        "reuse": "A0OE:PASCAL_PENTAGON_D5_TEST",
+        "source_object": "SCC-003 / Q106"
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "diamonds": 75,
+        "edge_counts": {
+          "4": 75
+        }
+      },
+      "name": "75 nondegenerate Pascal diamond cells",
+      "observed": {
+        "diamonds": 75,
+        "edge_counts": {
+          "4": 75
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": 75,
+      "name": "graph-only cycle rank",
+      "observed": 75,
+      "status": "PASS"
+    },
+    {
+      "expected": 75,
+      "name": "diamond boundaries are independent",
+      "observed": 75,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "cycle_rank": 75,
+        "diamond_rank": 75
+      },
+      "name": "diamond boundaries span the complete graph cycle space",
+      "observed": {
+        "cycle_rank": 75,
+        "diamond_rank": 75
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": 105,
+      "name": "vertex coboundary rank",
+      "observed": 105,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "H1_dimension": 0,
+        "closed_edge_labelings_dimension": 105
+      },
+      "name": "intrinsic Z2 cohomology is trivial",
+      "observed": {
+        "H1_dimension": 0,
+        "closed_edge_labelings_dimension": 105
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "actions": 10,
+        "diamonds": true,
+        "graph": true
+      },
+      "name": "all ten D5 actions preserve graph and diamond cells",
+      "observed": {
+        "actions": 10,
+        "diamonds": true,
+        "graph": true
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "orbits": 9,
+        "profile": {
+          "5": 3,
+          "10": 6
+        }
+      },
+      "name": "diamond D5 orbit profile",
+      "observed": {
+        "orbits": 9,
+        "profile": {
+          "5": 3,
+          "10": 6
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "1": 75
+      },
+      "name": "every single unsymmetrized diamond cut creates one holonomy degree",
+      "observed": {
+        "1": 75
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "count": 3,
+        "sizes": [
+          5,
+          5,
+          5
+        ]
+      },
+      "name": "centered size-five orbits reject odd invariant seam",
+      "observed": {
+        "count": 3,
+        "sizes": [
+          5,
+          5,
+          5
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "count": 6,
+        "sizes": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "name": "six off-center size-ten orbits admit an invariant added seam",
+      "observed": {
+        "count": 6,
+        "sizes": [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": 10,
+      "name": "minimal D5-compatible seam orbit has size ten",
+      "observed": 10,
+      "status": "PASS"
+    },
+    {
+      "expected": 13,
+      "name": "frozen source still supplies only partial D30 phase coverage",
+      "observed": 13,
+      "status": "PASS"
+    }
+  ],
+  "claim_boundary": [
+    "finite F2 cellular audit of the frozen SCC-003 reference only",
+    "Pascal diamonds are declared 2-cells because LR and RL commute to the same endpoint",
+    "graph-only cycles do not by themselves select topology",
+    "no continuous Mobius embedding or physical mechanism is inferred",
+    "no PENT-08 identity, admitted Study, new Family, publication or claim promotion"
+  ],
+  "classification": "ONLY_AFTER_ADDED_SEAM_SIX_NONCANONICAL_D5_COMPATIBLE_ORBITS",
+  "creates": [],
+  "identity_reused": "A0OE:PASCAL_PENTAGON_D5_TEST",
+  "input_hashes": {
+    "automorphisms": "70750da9596d05ebdfac55f8fa46893f469b163751529cb225b2abc19ce5966e",
+    "contract": "b587d8a7fbaabd06e9ff0b447fe6b3128a71fc38f3320a6c7552fb2635747e6a",
+    "d30_result": "4e04a684303342df3e85cdbbd77f9353d3d069450cdb9c1f8e6c4cd6327b246a",
+    "edges": "6309b5c8807cf4d3352500d7eb1e7ce8d0c0da9be68d327c9196f9e54fd742b3",
+    "face_incidence": "528a23dd7cde18916bfc736df7e567b578eb77058bc4e56cfbb5e287b9048113",
+    "nodes": "5907d6e9fa7d67e5b7461d5d91735d2921503251412b00baaece1f6e7aff4c12"
+  },
+  "orbit_results": [
+    {
+      "compatible_odd_invariant_seam": false,
+      "invariance_failures": null,
+      "matrix_rank": 165,
+      "members": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ]
+      ],
+      "orbit": 1,
+      "removed_cell_parities": [],
+      "representative": [
+        0,
+        0,
+        0
+      ],
+      "retained_cell_failures": null,
+      "size": 5,
+      "witness_edge_indices": [],
+      "witness_weight": null
+    },
+    {
+      "compatible_odd_invariant_seam": true,
+      "invariance_failures": 0,
+      "matrix_rank": 165,
+      "members": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          0
+        ],
+        [
+          4,
+          1,
+          1
+        ]
+      ],
+      "orbit": 2,
+      "removed_cell_parities": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "representative": [
+        0,
+        1,
+        0
+      ],
+      "retained_cell_failures": 0,
+      "size": 10,
+      "witness_edge_indices": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "witness_weight": 10
+    },
+    {
+      "compatible_odd_invariant_seam": true,
+      "invariance_failures": 0,
+      "matrix_rank": 165,
+      "members": [
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          4,
+          2,
+          0
+        ],
+        [
+          4,
+          2,
+          2
+        ]
+      ],
+      "orbit": 3,
+      "removed_cell_parities": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "representative": [
+        0,
+        2,
+        0
+      ],
+      "retained_cell_failures": 0,
+      "size": 10,
+      "witness_edge_indices": [
+        60,
+        63,
+        64,
+        67,
+        68,
+        71,
+        72,
+        75,
+        76,
+        79,
+        97,
+        98,
+        103,
+        104,
+        109,
+        110,
+        115,
+        116,
+        121,
+        122
+      ],
+      "witness_weight": 20
+    },
+    {
+      "compatible_odd_invariant_seam": false,
+      "invariance_failures": null,
+      "matrix_rank": 165,
+      "members": [
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          4,
+          2,
+          1
+        ]
+      ],
+      "orbit": 4,
+      "removed_cell_parities": [],
+      "representative": [
+        0,
+        2,
+        1
+      ],
+      "retained_cell_failures": null,
+      "size": 5,
+      "witness_edge_indices": [],
+      "witness_weight": null
+    },
+    {
+      "compatible_odd_invariant_seam": true,
+      "invariance_failures": 0,
+      "matrix_rank": 165,
+      "members": [
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          2,
+          3,
+          3
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          4,
+          3,
+          0
+        ],
+        [
+          4,
+          3,
+          3
+        ]
+      ],
+      "orbit": 5,
+      "removed_cell_parities": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "representative": [
+        0,
+        3,
+        0
+      ],
+      "retained_cell_failures": 0,
+      "size": 10,
+      "witness_edge_indices": [
+        95,
+        100,
+        101,
+        106,
+        107,
+        112,
+        113,
+        118,
+        119,
+        124,
+        142,
+        145,
+        150,
+        153,
+        158,
+        161,
+        166,
+        169,
+        174,
+        177
+      ],
+      "witness_weight": 20
+    },
+    {
+      "compatible_odd_invariant_seam": true,
+      "invariance_failures": 0,
+      "matrix_rank": 165,
+      "members": [
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          4,
+          3,
+          2
+        ]
+      ],
+      "orbit": 6,
+      "removed_cell_parities": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "representative": [
+        0,
+        3,
+        1
+      ],
+      "retained_cell_failures": 0,
+      "size": 10,
+      "witness_edge_indices": [
+        97,
+        98,
+        103,
+        104,
+        109,
+        110,
+        115,
+        116,
+        121,
+        122
+      ],
+      "witness_weight": 10
+    },
+    {
+      "compatible_odd_invariant_seam": true,
+      "invariance_failures": 0,
+      "matrix_rank": 165,
+      "members": [
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          4
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          4,
+          4
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          2,
+          4,
+          4
+        ],
+        [
+          3,
+          4,
+          0
+        ],
+        [
+          3,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          0
+        ],
+        [
+          4,
+          4,
+          4
+        ]
+      ],
+      "orbit": 7,
+      "removed_cell_parities": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "representative": [
+        0,
+        4,
+        0
+      ],
+      "retained_cell_failures": 0,
+      "size": 10,
+      "witness_edge_indices": [
+        140,
+        147,
+        148,
+        155,
+        156,
+        163,
+        164,
+        171,
+        172,
+        179
+      ],
+      "witness_weight": 10
+    },
+    {
+      "compatible_odd_invariant_seam": true,
+      "invariance_failures": 0,
+      "matrix_rank": 165,
+      "members": [
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          4,
+          3
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          2,
+          4,
+          3
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          4,
+          4,
+          1
+        ],
+        [
+          4,
+          4,
+          3
+        ]
+      ],
+      "orbit": 8,
+      "removed_cell_parities": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "representative": [
+        0,
+        4,
+        1
+      ],
+      "retained_cell_failures": 0,
+      "size": 10,
+      "witness_edge_indices": [
+        142,
+        145,
+        150,
+        153,
+        158,
+        161,
+        166,
+        169,
+        174,
+        177
+      ],
+      "witness_weight": 10
+    },
+    {
+      "compatible_odd_invariant_seam": false,
+      "invariance_failures": null,
+      "matrix_rank": 165,
+      "members": [
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          2,
+          4,
+          2
+        ],
+        [
+          3,
+          4,
+          2
+        ],
+        [
+          4,
+          4,
+          2
+        ]
+      ],
+      "orbit": 9,
+      "removed_cell_parities": [],
+      "representative": [
+        0,
+        4,
+        2
+      ],
+      "retained_cell_failures": null,
+      "size": 5,
+      "witness_edge_indices": [],
+      "witness_weight": null
+    }
+  ],
+  "schema": "nexah.pascal-intrinsic-seam-holonomy-audit-result/1.0.0",
+  "status": "PASS_WITH_VALIDATED_NEGATIVE_RESULT",
+  "summary": {
+    "checks_passed": 15,
+    "checks_total": 15,
+    "compatible_added_seam_orbits": 6,
+    "d5_diamond_orbits": 9,
+    "diamond_boundary_rank": 75,
+    "edges": 180,
+    "graph_cycle_rank": 75,
+    "intrinsic_H1_dimension": 0,
+    "minimum_d5_compatible_seam_size": 10,
+    "pascal_diamonds": 75,
+    "vertices": 106
+  }
+}
