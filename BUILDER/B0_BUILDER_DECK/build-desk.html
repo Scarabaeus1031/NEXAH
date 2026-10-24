@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="B0 Build Desk — Prioritäten, Chores, Build Cuts, Prüfungen und Returns des NEXAH Builder-Bestands.">
+  <title>B0 · Build Desk</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="area-page area-page-build">
+  <a class="skip-link" href="#main">Zum Inhalt</a>
+  <header class="topbar">
+    <a class="wordmark" href="index.html"><span class="mark">B0</span><span>BUILDER DECK</span></a>
+    <nav class="desk-nav" aria-label="B0 Arbeitsbereiche">
+      <a href="index.html"><span>00</span>Architect</a><a href="systems-desk.html"><span>01</span>Systems</a><a class="is-current" href="build-desk.html" aria-current="page"><span>02</span>Build</a><a href="public-field.html"><span>03</span>Public</a><a href="a0-tools.html"><span>04</span>A0</a><a href="archive.html"><span>05</span>Archive</a>
+    </nav>
+    <a class="mc-link" href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/INTERNAL_NAVIGATOR/index.html">Mission Control ↗</a>
+  </header>
+
+  <main id="main">
+    <section class="area-hero" id="top">
+      <div><p class="eyebrow">02 · BUILD DESK</p><h1>Bauen <em>&amp; Schließen.</em></h1><p>Priorität, Entscheidung, Ausführung, Prüfung und Return.</p></div>
+      <aside><span>ACTIVE PRIORITY</span><strong>M-PUB01 · GATE 0</strong><p>Receipts für NEXAH und Scarabæus schließen. Kein weiterer Release, bevor Currentness und Manifest sauber gebunden sind.</p></aside>
+    </section>
+
+    <section class="section" id="current-cut" aria-labelledby="current-cut-title">
+      <header class="section-head"><div><p class="eyebrow">CURRENT CUT · SOURCE-BOUND</p><h2 id="current-cut-title">Eine aktive Linie.</h2></div><p>Die Architektur darf groß sein; der aktive Schnitt bleibt klein. Mission Control hält Owner Gate und STOP.</p></header>
+      <div class="control-status-strip" aria-label="Aktueller Build-Schnitt">
+        <div><span>NOW</span><strong>M-PUB01</strong><small>Public Field 01</small></div><i aria-hidden="true">→</i>
+        <div><span>GATE</span><strong>0 · Consolidation</strong><small>Currentness · Census · Manifest</small></div><i aria-hidden="true">→</i>
+        <div><span>NEXT</span><strong>Receipts schließen</strong><small>NEXAH + Scarabæus</small></div><i aria-hidden="true">→</i>
+        <div><span>RETURN</span><strong>Mission Control</strong><small>Review · Gate · Stop</small></div>
+      </div>
+    </section>
+
+    <section class="section" id="workboard" aria-labelledby="workboard-title">
+      <header class="section-head"><div><p class="eyebrow">WORKBOARD</p><h2 id="workboard-title">To-dos nach Entscheidungstyp.</h2></div><p>Die Karten sind eine lesbare Projektion der Chores. Statusänderungen werden an der Quelle vorgenommen.</p></header>
+      <div class="build-board">
+        <article class="build-lane lane-now"><header><span>01</span><div><b>NOW</b><small>controlled</small></div></header><h3>M-PUB01 · Gate 0</h3><p>Bestehenden A0-Release bewahren; NEXAH- und Scarabæus-Receipts schließen.</p><footer>ACTIVE PRIORITY</footer></article>
+        <article class="build-lane lane-decide"><header><span>02</span><div><b>DECIDE</b><small>owner choice</small></div></header><h3>CH-014 · Book Identity</h3><p>Fieldbook-Identität, Titel und öffentliche Einordnung festlegen.</p><footer>DECISION NEEDED</footer></article>
+        <article class="build-lane"><header><span>03</span><div><b>VERIFY / BUILD</b><small>bounded work</small></div></header><h3>CH-007 · 009 · 010</h3><p>Link/GLB-Audit, Deployment-Commit binden und gemischte Worktrees paketieren.</p><footer>TEST + RECEIPT</footer></article>
+        <article class="build-lane lane-later"><header><span>04</span><div><b>LATER</b><small>separate gates</small></div></header><h3>CH-008 · CH-016</h3><p>Public-Navigator-Curation und privater Remote-Zugang bleiben geparkte, eigene Gates.</p><footer>NOT ACTIVE</footer></article>
+      </div>
+      <div class="boundary"><strong>Maintenance:</strong> CH-001–006/011 bewahren Navigation, Governance, Custody und ältere Views. Sie bilden keinen zweiten aktiven Arbeitsstrom.</div>
+    </section>
+
+    <section class="section" id="build-plan" aria-labelledby="build-plan-title">
+      <header class="section-head"><div><p class="eyebrow">BUILD PLAN</p><h2 id="build-plan-title">Orientieren. Verbinden. Benutzen.</h2></div><p>Drei wiederholbare Schnitte statt einer behaupteten Gesamtintegration.</p></header>
+      <div class="plan-board">
+        <article><span>01 / ORIENTIEREN</span><h3>Einen realen Case begrenzen.</h3><p>Owner, Aufgabe, Quelle, Carrier und Claim Ceiling bestimmen.</p><ul><li>eine Aufgabe</li><li>eine Baseline</li><li>ein sichtbares Ende</li></ul></article>
+        <article><span>02 / VERBINDEN</span><h3>Einen qualifizierten Pfad bauen.</h3><p>Vorhandene Semantik und genau den nötigen Prozessor- oder View-Schnitt verwenden.</p><ul><li>keine versteckte Kopplung</li><li>keine zweite Uhr</li><li>expliziter Übergang</li></ul></article>
+        <article><span>03 / BENUTZEN</span><h3>Ergebnis und Grenze zurückgeben.</h3><p>Test, Receipt, Residuum, Rückweg und menschliche Entscheidung sichtbar machen.</p><ul><li>replaybar</li><li>quellgebunden</li><li>STOP-fähig</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section" id="build-sources">
+      <div class="integration-boundary"><strong>Arbeitsquellen</strong><p>B0 kuratiert den Arbeitsblick; diese Quellen bleiben autoritativ.</p><nav><a href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/00_OVERVIEW/CHORES.md">Chores ↗</a><a href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/CURRENT/PORTFOLIO_TRUTH.json">Portfolio Truth ↗</a><a href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/CURRENT/OWNER_ACTIONS.csv">Owner Actions ↗</a><a href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/00_OVERVIEW/BUILDER_VIEW.md">Builder View ↗</a></nav></div>
+    </section>
+  </main>
+  <footer class="footer"><div><span class="mark">B0</span><p><strong>Build Desk</strong><br>Queue · cuts · checks · return</p></div><p>Was jetzt gebaut wird — und was ausdrücklich noch nicht aktiv ist.</p><a href="index.html">Architect Desk →</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>
