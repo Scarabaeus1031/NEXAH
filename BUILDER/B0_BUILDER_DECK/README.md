@@ -29,6 +29,10 @@ a compact source-bound work queue. The searchable Archive Desk binds 16
 controlling or operational source documents without copying their authority.
 Logs, release notes and backlogs remain at their owning sources.
 
+`BUILDER_POLICY.md` is the compact operating contract: one active cut, reuse
+before creation, proportional checks, one writer on shared files, explicit
+Return and a separate Owner gate for push, deployment or publication.
+
 The `Public Integration / Three Houses` section locally projects the existing
 `M-PUB01` release strategy into a Builder work path. It reuses the established
 NEXAH, NEXAHEDRON and Scarabæus public identities and adds no Navigator node,
