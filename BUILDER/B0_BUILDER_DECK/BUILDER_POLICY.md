@@ -2,7 +2,7 @@
 
 Status: `LOCAL OPERATING POLICY / OWNER-LED / SPEED-FIRST`
 
-Date: `2026-10-24`
+Date: `2026-10-25`
 
 ## Purpose
 
@@ -25,15 +25,18 @@ administration.
    existing validators.
 6. **Return the result.** A finished cut states what changed, what passed, what
    remains open and where authority returns.
-7. **Separate build from judgment.** Working software is not automatically a
+7. **Choice before depth.** Navigation shows the current route and only opens
+   the depth a person deliberately chooses. Every opened room, panel or detour
+   includes a visible close or Return path to the last orientation point.
+8. **Separate build from judgment.** Working software is not automatically a
    scientific Finding, product validation or publication approval.
-8. **Keep one current version.** Use Git for ordinary history. Preserve a
+9. **Keep one current version.** Use Git for ordinary history. Preserve a
    separate archive copy only when it has lasting provenance value; mark it
    `ARCHIVED` or `SUPERSEDED` and point to the current successor.
-9. **One writer on shared files.** Parallel chats may inspect or work on
+10. **One writer on shared files.** Parallel chats may inspect or work on
    disjoint files. Navigation, manifests, binders and generated projections
    have one active editor until validation and return are complete.
-10. **Local first.** Work and validate in the canonical local checkout. Commit
+11. **Local first.** Work and validate in the canonical local checkout. Commit
     a coherent checkpoint. Push, deployment and publication remain separate
     Owner decisions.
 
@@ -58,6 +61,7 @@ A Builder cut is done when:
 
 - the intended use works;
 - the relevant check passes;
+- opened depth can be closed and returns to a visible orientation point;
 - the current source and links are unambiguous;
 - displaced versions are classified rather than left competing;
 - the result has returned to Mission Control, or to the Science Desk when it
