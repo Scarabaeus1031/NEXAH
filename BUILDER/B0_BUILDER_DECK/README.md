@@ -17,10 +17,12 @@ Architect Desk; deeper inventories and work surfaces live on their own pages:
 
 - `index.html` — Architect Desk: Big Picture, priority, strategy and blueprint;
 - `systems-desk.html` — system roles, working inventory and technical map;
-- `build-desk.html` — Chore projection, decisions, build cuts and returns;
+- `build-desk.html` — Chore projection, decisions, build cuts, returns and the
+  twelve-entry `Latest Builds` inspection log;
 - `public-field.html` — Public Desk: nexah.de, NEXAHEDRON and Scarabæus;
 - `a0-tools.html` — A0 Builder Desk, Builder Log and the
-  explicit return to the A0 Science Desk.
+  direct Instrument Atlas / Latest Builds routes plus the explicit return to
+  the A0 Science Desk.
 - `archive.html` — searchable map of logs, releases, inventories and backlogs.
 
 The shared navigation keeps all six desks reachable without deep dropdowns.

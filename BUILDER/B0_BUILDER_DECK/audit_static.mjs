@@ -28,23 +28,51 @@ for (const [name, html] of Object.entries(pages)) {
 assert.match(architect, /B0 · Architect Desk/);
 assert.match(architect, /00 · ARCHITECT DESK/);
 assert.match(architect, /Bauplan &amp; Arbeitsstand/);
-assert.match(architect, /M-PUB01 · Gate 0 abschließen/);
-assert.match(architect, /CH-007 · CH-009 · CH-010/);
+assert.match(architect, /A0 \+ Currentness/);
+assert.match(architect, /466 Quellen · 0 Fehler/);
+assert.match(architect, /NEXAH \+ Scarabæus Receipts/);
+assert.match(architect, /CH-007\/009\/010/);
 assert.match(architect, /Building ist aktuell der dominante Modus/);
 assert.match(architect, /Jede Arbeit hat ihren eigenen Desk/);
 assert.doesNotMatch(architect, /BUILDER ARCHIVE · SOURCE-BOUND/);
 assert.doesNotMatch(architect, /Ein System\. Sieben klar getrennte Rollen/);
 
 assert.match(systems, /01 · SYSTEMS DESK/);
-assert.match(systems, /Sieben Rollen\. Ein prüfbarer Rückweg/);
+assert.match(systems, /Systemarchitektur/);
+assert.match(systems, /Bauräume &amp; Übergaben/);
+assert.match(systems, /Carrier &amp; Formate/);
+assert.match(systems, /Baupläne &amp; Systemkarten/);
 for (const label of ["A0", "OLS", "Kernel", "ORION", "Navigator", "THE EYE", "NEXAHEDRON"]) assert.match(systems, new RegExp(label));
-assert.match(systems, /BOUNDED COMPONENTS · NO UNIFIED RUNTIME/);
+for (const sectionId of ["big-picture", "build-rooms", "projects", "inventory", "carriers", "maturity", "blueprints", "laws", "sources"]) assert.match(systems, new RegExp(`id="${sectionId}"`));
+assert.match(systems, /keine technische Kopplung/);
+assert.match(systems, /Builder Laws/);
+assert.match(systems, /GOAL → SOURCE → SMALL CUT → CHECK → RETURN → CLOSE/);
+assert.match(systems, /BUILDER_POLICY\.md/);
+assert.match(systems, /A0 \/ THE MACHINA/);
+assert.match(systems, /NEXAH \+ NEXAHEDRON/);
+assert.match(systems, /BUILDER_TOOL_INVENTORY\.csv/);
+assert.equal([...systems.matchAll(/data-build-item/g)].length, 44);
 
 assert.match(build, /02 · BUILD DESK/);
-assert.match(build, /To-dos nach Entscheidungstyp/);
-assert.match(build, /CH-014 · Book Identity/);
-assert.match(build, /CH-008 · CH-016/);
+assert.match(build, /BUILDER NOTES · LETZTER STAND · 25\.10\.2026/);
+assert.match(build, /B0 Plateau 01/);
+assert.match(build, /71 \/ 71/);
+assert.match(build, /253 \/ 253/);
+assert.match(build, /466 Quellen · 0 Fehler/);
+assert.equal([...build.matchAll(/class="priority-project /g)].length, 3);
+assert.match(build, /M-PUB01/);
+assert.match(build, /NEXAH × NEXAHEDRON/);
+assert.match(build, /A0 \/ THE MACHINA/);
+assert.match(build, /Inventar vollständig · ein Staging-Paket reproduzierbar/);
 assert.match(build, /Orientieren\. Verbinden\. Benutzen/);
+assert.match(build, /BUILD REGISTER · SOURCE-BOUND/);
+assert.match(build, /Dreizehn Builds\. Ein Überblick\./);
+assert.match(build, /A0_BUILDER_TOY_STORE\.html#instrument-atlas/);
+assert.match(build, /A0_RESEARCH_DESK\.html#instrument-atlas-return-20261025/);
+assert.equal([...build.matchAll(/data-build-log-item/g)].length, 13);
+assert.match(build, /Crown → Shadow Contact Bench/);
+assert.match(build, /A0_CROWN_SHADOW_CONTACT_BENCH\.html/);
+assert.match(build, /110\/110 Hashes und 88\/88 Engineering-Checks/);
 
 assert.match(publicHtml, /ONE FIELD/);
 assert.match(publicHtml, /THREE HOUSES/);
@@ -59,6 +87,8 @@ assert.match(a0Html, /A0 Builder Log/);
 assert.match(a0Html, /A0 Science Desk/);
 assert.match(a0Html, /A0_RESEARCH_DESK\.html#desk-cabinet/);
 assert.match(a0Html, /NEXAHEDRON_BUILDER_BACKLOG\.md/);
+assert.match(a0Html, /12 CURRENT BUILDS/);
+assert.match(a0Html, /build-desk\.html#latest-builds/);
 
 assert.match(archive, /05 · ARCHIVE DESK/);
 assert.match(archive, /BUILDER ARCHIVE · SOURCE-BOUND/);
@@ -68,13 +98,20 @@ assert.match(archive, /A0_RESEARCH_BACKLOG\.html/);
 
 assert.match(css, /\.desk-nav/);
 assert.match(css, /\.workspace-grid/);
-assert.match(css, /\.system-blueprint/);
+assert.match(css, /\.architecture-map/);
+assert.match(css, /\.build-room-table/);
+assert.match(css, /\.builder-laws/);
+assert.match(css, /\.project-wall/);
+assert.match(css, /\.build-inventory-list/);
 assert.match(css, /\.build-board/);
+assert.match(css, /\.recent-build-list/);
+assert.match(css, /\.build-log-return/);
 assert.match(css, /@media \(max-width: 760px\)/);
 assert.match(css, /prefers-reduced-motion/);
 assert.match(js, /dataset\.filter/);
 assert.match(js, /archiveSearch/);
 assert.match(js, /data-archive-item/);
+assert.match(js, /buildInventorySearch/);
 
 const localLinks = Object.entries(pages).flatMap(([name, source]) =>
   [...source.matchAll(/href="([^"]+)"/g)]
@@ -82,7 +119,7 @@ const localLinks = Object.entries(pages).flatMap(([name, source]) =>
     .filter(({ href }) => !href.startsWith("#") && !href.startsWith("http"))
 );
 const missing = localLinks.filter(({ href }) => {
-  const target = decodeURIComponent(href.split("#")[0]);
+  const target = decodeURIComponent(href.split(/[?#]/)[0]);
   return !fs.existsSync(path.resolve(root, target));
 });
 assert.deepEqual(missing, []);

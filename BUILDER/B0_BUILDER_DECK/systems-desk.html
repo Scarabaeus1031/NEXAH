@@ -16,48 +16,278 @@
     </nav>
     <a class="mc-link" href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/INTERNAL_NAVIGATOR/index.html">Mission Control ↗</a>
   </header>
-  <main id="main">
-    <section class="area-hero" id="top">
-      <div><p class="eyebrow">01 · SYSTEMS DESK</p><h1>Systeme <em>&amp; Bestand.</em></h1><p>Rollen, Reife und begrenzte Verbindungen.</p></div>
-      <aside><span>INVENTORY READING</span><strong>BOUNDED COMPONENTS · NO UNIFIED RUNTIME</strong><p>Builder Atlas und Tool Inventory bleiben die technischen Originalregister.</p></aside>
+  <main id="main" class="systems-atlas">
+    <section class="systems-intro" id="top">
+      <div>
+        <p class="eyebrow">01 · SYSTEMS DESK / ARCHITEKTURATLAS</p>
+        <h1>Systemarchitektur.<br><em>Sechs Bauräume.</em></h1>
+        <p class="systems-lede">Bestand · Rollen · Schnittstellen · Carrier · Reife · Baupläne</p>
+      </div>
+      <dl class="systems-facts" aria-label="Bestandsübersicht">
+        <div><dt>Register</dt><dd><strong>44</strong> Builder-Objekte</dd></div>
+        <div><dt>Assembly</dt><dd><strong>19</strong> geprüfte Zeilen</dd></div>
+        <div><dt>Bauräume</dt><dd><strong>06</strong> Arbeitsfelder</dd></div>
+        <div><dt>Blueprints</dt><dd><strong>02</strong> formale Pläne</dd></div>
+      </dl>
     </section>
 
-    <section class="section" id="system-blueprint" aria-labelledby="system-blueprint-title">
-      <header class="section-head"><div><p class="eyebrow">SYSTEM BLUEPRINT</p><h2 id="system-blueprint-title">Sieben Rollen. Ein prüfbarer Rückweg.</h2></div><p>Verbindungen werden erst real, wenn der konkrete Schnitt implementiert, getestet und als Record zurückgegeben wurde.</p></header>
-      <div class="system-blueprint" aria-label="Systemfluss von Frame über Semantik und Prozessoren zu View und Return">
-        <a href="a0-tools.html"><span>01</span><strong>A0</strong><small>Frame · Grenze</small></a><i>→</i>
-        <a href="../../ORIENTATION_LANGUAGE/README.md"><span>02</span><strong>OLS</strong><small>Semantik</small></a><i>→</i>
-        <div class="system-blueprint-stack"><a href="../../nexah/START_HERE.md"><span>03</span><strong>Kernel</strong><small>Processor</small></a><a href="../../../../20%20ORION/NEXAH-ORION/README.md"><span>04</span><strong>ORION</strong><small>Processor</small></a></div><i>→</i>
-        <a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/SCIENCE_LAB/NAVIGATION/APP/index.html#atlas"><span>05</span><strong>Navigator</strong><small>Relations</small></a><i>→</i>
-        <div class="system-blueprint-stack"><a href="../../../../40%20EXPERIENCE%20PRODUCTION/NEXAHEDRON/docs/THE_EYE_LOCAL_RESULT_VIEW.md"><span>06</span><strong>THE EYE</strong><small>View</small></a><a href="../../../../40%20EXPERIENCE%20PRODUCTION/NEXAHEDRON/README.md"><span>07</span><strong>NEXAHEDRON</strong><small>Experience</small></a></div>
+    <nav class="systems-rail" aria-label="Systems Desk Abschnitte">
+      <a href="#big-picture">Big Picture</a><a href="#build-rooms">Bauräume</a><a href="#projects">Projekte</a><a href="#inventory">Inventar</a><a href="#carriers">Formate</a><a href="#maturity">Reife</a><a href="#blueprints">Baupläne</a><a href="#laws">Builder Laws</a><a href="#sources">Quellen</a>
+    </nav>
+
+    <section class="systems-sheet" id="big-picture" aria-labelledby="big-picture-title">
+      <header class="systems-section-head">
+        <div><p class="eyebrow">SYSTEM MAP · CURRENT READING</p><h2 id="big-picture-title">NEXAH Systemarchitektur.</h2></div>
+        <p>Rollen · Zuständigkeiten · Übergaben · Return</p>
+      </header>
+      <div class="architecture-map" role="img" aria-label="NEXAH Architektur mit sechs horizontalen Bauräumen von Forschung bis Erfahrung und einem Return-Pfad">
+        <div class="architecture-axis" aria-hidden="true"><span>SOURCE</span><i></i><span>RETURN</span></div>
+        <div class="architecture-lanes">
+          <article><span>01 · FOUNDATION</span><strong>A0 · OLS · CRIC · NRRC</strong><p>Frame · Semantik · Record · Claim Ceiling</p><b>OUTPUT · declared record</b></article>
+          <article><span>02 · PROCESS</span><strong>Kernel · ORION · Runtime</strong><p>Analyze · Compare · Structure · Replay</p><b>OUTPUT · bounded result</b></article>
+          <article><span>03 · APPLICATION</span><strong>Network · IEEE · Compare · G4L+1</strong><p>Domain · Task · Policy · Validation</p><b>OUTPUT · application record</b></article>
+          <article><span>04 · NAVIGATION</span><strong>Navigator · Registry · Gateway</strong><p>Identity · Relation · Provenance · Route</p><b>OUTPUT · relation view</b></article>
+          <article><span>05 · VIEW</span><strong>THE EYE · A0 Bench · Instruments</strong><p>Result · Boundary · Receipt · Return</p><b>OUTPUT · read-only view</b></article>
+          <article><span>06 · EXPERIENCE</span><strong>NEXAHEDRON · Public Field</strong><p>Workspace · Room · Sequence · Human Return</p><b>OUTPUT · bounded experience</b></article>
+        </div>
+        <div class="return-track"><span>RETURN</span><p>Resultat · Residuum · Test · Grenze · Provenienz</p><i>←</i></div>
       </div>
-      <div class="boundary"><strong>Return:</strong> Resultate, Residuen, Tests und Grenzen gehen zurück an die jeweilige Source Authority; Navigation ist keine Evidenzpromotion.</div>
+      <div class="architecture-note"><strong>Assembly rule</strong><p>Interface + Carrier + Test + Return. Nähe auf der Karte ist keine technische Kopplung.</p></div>
     </section>
 
-    <section class="deck section" id="roles" aria-labelledby="roles-title">
-      <header class="section-head"><div><p class="eyebrow">SYSTEM ROLES</p><h2 id="roles-title">Zuständigkeiten im Bestand.</h2></div></header>
-      <div class="system-grid">
-        <article class="system-card accent-gold"><span>01 / FRAME</span><h3>A0</h3><p>Quelle, Carrier, Cut, Operator, Residuum und Claim Ceiling.</p><a href="a0-tools.html">A0 Desk →</a></article>
-        <article class="system-card accent-cyan"><span>02 / MEANING</span><h3>OLS 1.0</h3><p>Normative Semantik und Konformitätsvokabular.</p><a href="../../ORIENTATION_LANGUAGE/README.md">Spezifikation ↗</a></article>
-        <article class="system-card accent-blue"><span>03 / PROCESSOR</span><h3>Kernel</h3><p>Begrenzter Python-Referenzpfad für analyze, compare und orient.</p><a href="../../nexah/START_HERE.md">Start ↗</a></article>
-        <article class="system-card accent-violet"><span>04 / PROCESSOR</span><h3>ORION</h3><p>Zertifizierter Struktur-, Provenienz- und Replay-Pfad.</p><a href="../../../../20%20ORION/NEXAH-ORION/README.md">Prüfen ↗</a></article>
-        <article class="system-card accent-green"><span>05 / RELATIONS</span><h3>Navigator</h3><p>Quellen, Identitäten, Relationen und Evidenzzustände.</p><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/SCIENCE_LAB/NAVIGATION/APP/index.html#atlas">Atlas ↗</a></article>
-        <article class="system-card accent-pink"><span>06 / VIEW</span><h3>THE EYE</h3><p>Versiegelte Resultate und Grenzen fester Demonstrationen.</p><a href="../../../../40%20EXPERIENCE%20PRODUCTION/NEXAHEDRON/docs/THE_EYE_LOCAL_RESULT_VIEW.md">Vertrag ↗</a></article>
-        <article class="system-card accent-orange"><span>07 / EXPERIENCE</span><h3>NEXAHEDRON</h3><p>Human-facing Workspace und begrenzter Auslieferungsraum.</p><a href="../../../../40%20EXPERIENCE%20PRODUCTION/NEXAHEDRON/README.md">Öffnen ↗</a></article>
+    <section class="systems-sheet" id="build-rooms" aria-labelledby="build-rooms-title">
+      <header class="systems-section-head">
+        <div><p class="eyebrow">BUILD ROOMS</p><h2 id="build-rooms-title">Bauräume &amp; Übergaben.</h2></div>
+        <p>Owner · Bestand · Output · Quelle</p>
+      </header>
+      <div class="build-room-table">
+        <article>
+          <header><span>01</span><div><h3>Foundations &amp; Records</h3><p>Begriffe, Frames und beweisbare Rückgaben</p></div><b class="room-state stable">STABIL</b></header>
+          <div><strong>Im Raum</strong><p>A0 · OLS 1.0 · Orientation Layer · CRIC · NRRC</p></div>
+          <div><strong>Übergabe</strong><p>Declared record · semantics · provenance</p></div>
+          <a href="a0-tools.html">A0 Desk →</a>
+        </article>
+        <article>
+          <header><span>02</span><div><h3>Processors &amp; Validation</h3><p>Ausführen, vergleichen, reproduzieren</p></div><b class="room-state bounded">BEGRENZT</b></header>
+          <div><strong>Im Raum</strong><p>Kernel v0.7 · ORION · Runtime 1.1 · LYRA · Proof Harness</p></div>
+          <div><strong>Übergabe</strong><p>Bounded result · validation · replay</p></div>
+          <a href="../../../../20%20ORION/NEXAH-ORION/README.md">ORION prüfen ↗</a>
+        </article>
+        <article>
+          <header><span>03</span><div><h3>Applications</h3><p>Aufgaben, Instrumente und Demonstratoren</p></div><b class="room-state active">AKTIV</b></header>
+          <div><strong>Im Raum</strong><p>GAME 4 LIFE +1 · Network Orientation · IEEE Geometry · NEXAH Compare</p></div>
+          <div><strong>Übergabe</strong><p>Application record · local claim boundary</p></div>
+          <a href="../../APPLICATIONS/game4life_plus1/">Referenz öffnen ↗</a>
+        </article>
+        <article>
+          <header><span>04</span><div><h3>Navigation &amp; Registry</h3><p>Identität, Relationen und Provenienz</p></div><b class="room-state active">AKTIV</b></header>
+          <div><strong>Im Raum</strong><p>Science Navigator · Source Graph · Mission Control · ORION Gateway</p></div>
+          <div><strong>Übergabe</strong><p>Identity · relation · route · release pointer</p></div>
+          <a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/SCIENCE_LAB/NAVIGATION/APP/index.html#atlas">Navigator ↗</a>
+        </article>
+        <article>
+          <header><span>05</span><div><h3>Views &amp; Instruments</h3><p>Resultate ansehen, ohne Claims zu erhöhen</p></div><b class="room-state active">AKTIV</b></header>
+          <div><strong>Im Raum</strong><p>THE EYE · Orientation Bench · Blue Body · Transfer Control · A0 Reader</p></div>
+          <div><strong>Übergabe</strong><p>Read-only result · receipt · return target</p></div>
+          <a href="../../../../40%20EXPERIENCE%20PRODUCTION/NEXAHEDRON/docs/THE_EYE_LOCAL_RESULT_VIEW.md">View-Vertrag ↗</a>
+        </article>
+        <article>
+          <header><span>06</span><div><h3>Experience &amp; Public Field</h3><p>Human View, Club, Räume und Veröffentlichung</p></div><b class="room-state forming">FORMT SICH</b></header>
+          <div><strong>Im Raum</strong><p>NEXAHEDRON · Human View · Club Machine · Public Windows</p></div>
+          <div><strong>Übergabe</strong><p>Bounded view · navigation context · Human return</p></div>
+          <a href="../../../../40%20EXPERIENCE%20PRODUCTION/NEXAHEDRON/README.md">NEXAHEDRON ↗</a>
+        </article>
       </div>
     </section>
 
-    <section class="applications section" id="applications" aria-labelledby="applications-title">
-      <header class="section-head"><div><p class="eyebrow">WORKING INVENTORY</p><h2 id="applications-title">Was tatsächlich benutzbar ist.</h2></div><div class="filter" role="group" aria-label="Anwendungen filtern"><button class="is-active" data-filter="all" type="button">Alle</button><button data-filter="usable" type="button">Benutzbar</button><button data-filter="component" type="button">Baustein</button><button data-filter="view" type="button">Ansicht</button></div></header>
-      <div class="application-grid">
-        <article class="application-card" data-kind="usable view"><div class="card-meta"><span>REFERENCE INSTRUMENT</span><b class="state state-verified">VERIFIED LOCAL</b></div><h3>GAME 4 LIFE +1</h3><p>Deterministischer Lauf, stabile Adressen, synchronisierte Views, Residuum und Rückweg.</p><footer><span>B4 · BOUNDED PATH</span><a href="../../APPLICATIONS/game4life_plus1/">Öffnen ↗</a></footer></article>
-        <article class="application-card" data-kind="usable view"><div class="card-meta"><span>A0 BUILD</span><b class="state state-local">LOCAL INSTRUMENTS</b></div><h3>A0 Werkbank</h3><p>Flagship-Räume, Instrumente, Quellen und Prüfwege.</p><footer><span>B2–B4 · PER CONTRACT</span><a href="a0-tools.html">Desk →</a></footer></article>
-        <article class="application-card" data-kind="component"><div class="card-meta"><span>REFERENCE PROCESSOR</span><b class="state state-bounded">BOUNDED</b></div><h3>NEXAH Kernel v0.7</h3><p>Ausführbare Referenzpfade; kein Ecosystem-Runtime.</p><footer><span>COMPONENT</span><a href="../../nexah/START_HERE.md">Start ↗</a></footer></article>
-        <article class="application-card" data-kind="component"><div class="card-meta"><span>CERTIFIED CORE</span><b class="state state-bounded">NARROW V1</b></div><h3>ORION</h3><p>Deterministische Strukturrepräsentation, Provenienz und Replay.</p><footer><span>COMPONENT</span><a href="../../../../20%20ORION/NEXAH-ORION/README.md">Prüfen ↗</a></footer></article>
-        <article class="application-card" data-kind="view"><div class="card-meta"><span>RESULT DISPLAY</span><b class="state state-sealed">SEALED DEMOS</b></div><h3>THE EYE</h3><p>Resultat- und Receipt-Ansicht für feste Demonstrationen.</p><footer><span>VIEW</span><a href="../../../../40%20EXPERIENCE%20PRODUCTION/NEXAHEDRON/docs/THE_EYE_LOCAL_RESULT_VIEW.md">Vertrag ↗</a></footer></article>
-        <article class="application-card" data-kind="view usable"><div class="card-meta"><span>HUMAN WORKSPACE</span><b class="state state-public">BOUNDED WINDOW</b></div><h3>NEXAHEDRON</h3><p>Human-facing Orientierungsraum mit begrenzten Erfahrungen.</p><footer><span>EXPERIENCE</span><a href="../../../../40%20EXPERIENCE%20PRODUCTION/NEXAHEDRON/README.md">Öffnen ↗</a></footer></article>
+    <section class="systems-sheet systems-split" id="carriers" aria-labelledby="carriers-title">
+      <div>
+        <header class="systems-section-head compact">
+          <div><p class="eyebrow">CARRIER LAYER</p><h2 id="carriers-title">Carrier &amp; Formate.</h2></div>
+        </header>
+        <div class="carrier-matrix" role="table" aria-label="Status der NEXAH Dateiformate und Carrier">
+          <div class="carrier-row carrier-head" role="row"><span role="columnheader">Träger</span><span role="columnheader">Heute</span><span role="columnheader">Regel</span></div>
+          <div class="carrier-row" role="row"><strong role="cell">GLB / glTF</strong><span role="cell">Etabliert</span><p role="cell">Geometrie; Semantik über <code>extras</code>, Extension oder Sidecar.</p></div>
+          <div class="carrier-row" role="row"><strong role="cell">JSON / CSV</strong><span role="cell">Etabliert</span><p role="cell">Records, Inventare und prüfbare Übergaben.</p></div>
+          <div class="carrier-row" role="row"><strong role="cell">HTML</strong><span role="cell">Etabliert</span><p role="cell">Lokaler Player und lesbare Ansicht, nicht Source Authority.</p></div>
+          <div class="carrier-row" role="row"><strong role="cell">.udf.json</strong><span role="cell">Prototyp</span><p role="cell">Mehrere Player vorhanden; Schema noch nicht eingefroren.</p></div>
+          <div class="carrier-row" role="row"><strong role="cell">.nxa / .scarab</strong><span role="cell">Prototyp</span><p role="cell">Experimentelle Carrier; Profil und Validator fehlen.</p></div>
+          <div class="carrier-row" role="row"><strong role="cell">.xva / .scrb / .q</strong><span role="cell">Geplant</span><p role="cell">Namen und Rollen erst nach Use Case, Schema und Roundtrip fixieren.</p></div>
+        </div>
       </div>
-      <div class="integration-boundary"><strong>Technische Tiefe</strong><p>Vollständige Einzelobjekte bleiben in den Originalregistern.</p><nav><a href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/CURRENT/BUILDER_ATLAS.md">Builder Atlas ↗</a><a href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/CURRENT/BUILDER_TOOL_INVENTORY.csv">Tool Inventory ↗</a><a href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/CURRENT/ENGINEERING_ASSEMBLY.csv">Engineering Assembly ↗</a></nav></div>
+      <aside class="carrier-principle">
+        <span>FORMAT RULE / 01</span>
+        <h3>Kein neues Format ohne Verlustbilanz.</h3>
+        <ol><li>Welche vorhandene Übergabe reicht nicht?</li><li>Welches Minimum muss transportiert werden?</li><li>Kann der Roundtrip getestet werden?</li><li>Wer validiert Version und Provenienz?</li></ol>
+      </aside>
+    </section>
+
+    <section class="systems-sheet" id="maturity" aria-labelledby="maturity-title">
+      <header class="systems-section-head">
+        <div><p class="eyebrow">MATURITY LANDSCAPE</p><h2 id="maturity-title">Reifestufen.</h2></div>
+        <p>Contracted · verified · active · prototype · lineage</p>
+      </header>
+      <div class="maturity-bands">
+        <article><span>01</span><strong>Current / Contracted</strong><p>OLS · A0 Governance · Mission Control Register</p></article>
+        <article><span>02</span><strong>Verified bounded</strong><p>Kernel · ORION · GAME 4 LIFE +1 · feste THE EYE Demos</p></article>
+        <article><span>03</span><strong>Active build</strong><p>Navigator · A0 Bench · Builder Deck · NEXAHEDRON Räume</p></article>
+        <article><span>04</span><strong>Prototype</strong><p>UDF Player · NXA · Scarab Carrier · neue Formatprofile</p></article>
+        <article><span>05</span><strong>Historical / lineage</strong><p>Transformation Engine · Field Layer · Discovery &amp; Archive Engines</p></article>
+      </div>
+    </section>
+
+    <section class="systems-sheet" id="projects" aria-labelledby="projects-title">
+      <header class="systems-section-head">
+        <div><p class="eyebrow">MAJOR BUILD SURFACES · SOURCE-BOUND</p><h2 id="projects-title">Große Bauvorhaben.</h2></div>
+        <p>Zwei reale Projektflächen. Status und Priorität bleiben bei Mission Control; B0 zeigt Baukörper, Grenze und Ursprung.</p>
+      </header>
+      <div class="project-wall">
+        <article class="project-panel project-panel-nexah">
+          <header><div><span>PROJECT 01 · COORDINATED UPDATE</span><h3>NEXAH + NEXAHEDRON</h3></div><b>CONTROLLED PROJECT · M-PUB01</b></header>
+          <div class="project-visual project-visual-split">
+            <a href="../../../../40%20EXPERIENCE%20PRODUCTION/NEXAH-Experience/dist/index.html" aria-label="NEXAH Experience öffnen"><img src="../../assets/readme/nexah-orientation-ecosystem-front-door.png" alt="NEXAH Ecosystem Front Door als Architekturansicht"></a>
+            <a href="../../../../40%20EXPERIENCE%20PRODUCTION/NEXAHEDRON/public/a0-human/start/index.html" aria-label="NEXAHEDRON Human View öffnen"><img src="../../../../40%20EXPERIENCE%20PRODUCTION/NEXAHEDRON/public/a0-human/start/assets/reading-sequence/01-state.png" alt="NEXAHEDRON Human View als Zustandsansicht"></a>
+          </div>
+          <div class="project-strip"><span>NEXAH · Institution / Methode / Quellen</span><span>NEXAHEDRON · Human View / Experience</span></div>
+          <details class="project-detail"><summary>Bild &amp; Projektgrenze lesen <span>↓</span></summary><div><p><strong>Bildlesung.</strong> Links liegt die institutionelle und methodische Front Door; rechts die menschlich lesbare Zustandsfläche. Es ist ein koordiniertes Update, aber keine Vermischung der Rollen.</p><p><strong>Gate.</strong> Mission Control führt M-PUB01. A0/NEXAHEDRON ist als Subgate geschlossen; offene Publikationsschnitte werden nicht von B0 aktiviert.</p><nav><a href="../../../../40%20EXPERIENCE%20PRODUCTION/NEXAH-Experience/dist/index.html">NEXAH Fläche ↗</a><a href="../../../../40%20EXPERIENCE%20PRODUCTION/NEXAHEDRON/public/a0-human/start/index.html">NEXAHEDRON Human View ↗</a></nav></div></details>
+        </article>
+        <article class="project-panel project-panel-machina">
+          <header><div><span>PROJECT 02 · A0 FLAGSHIP BUILD</span><h3>A0 / THE MACHINA</h3></div><b>SOURCE-BOUND · LOCAL</b></header>
+          <div class="project-visual">
+            <a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/A0_MACHINA_COCKPIT.html" aria-label="THE MACHINA Cockpit öffnen"><img src="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/assets/images/the-machina-nautilus-architecture-v1.png" alt="THE MACHINA Nautilus Architektur"></a>
+          </div>
+          <div class="project-strip"><span>A0 · Instrument / Bench / Viewer</span><span>THE MACHINA · eigener Projektkörper</span></div>
+          <details class="project-detail"><summary>Bild &amp; Projektgrenze lesen <span>↓</span></summary><div><p><strong>Bildlesung.</strong> Die Nautilus-Architektur zeigt THE MACHINA als eigenständigen Baukörper: Source, View, Pulse, Aperture und Return bleiben unterscheidbar.</p><p><strong>Grenze.</strong> THE MACHINA erhält eine eigene Viewer-Identität. Die Orientation Bench bleibt Werkbank und verweist auf den Viewer; sie wird nicht selbst zur Ausstellung.</p><nav><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/A0_MACHINA_COCKPIT.html">THE MACHINA öffnen ↗</a><a href="a0-tools.html">A0 Builder Desk →</a></nav></div></details>
+        </article>
+      </div>
+    </section>
+
+    <section class="systems-sheet" id="inventory" aria-labelledby="inventory-title">
+      <header class="systems-section-head">
+        <div><p class="eyebrow">COMPLETE BUILD INVENTORY · MC PROJECTION</p><h2 id="inventory-title">Nichts geht verloren.</h2></div>
+        <p>44 registrierte Objekte: Software, Instrumente, Records, Blueprints und offene Assemblies. Das CSV in Mission Control bleibt die Authority.</p>
+      </header>
+      <div class="build-inventory-toolbar">
+        <label for="build-inventory-search">Inventar suchen</label>
+        <input id="build-inventory-search" type="search" placeholder="z. B. ORION, THE EYE, Carrier, Blueprint" autocomplete="off">
+        <select id="build-inventory-group" aria-label="Inventar nach Gruppe filtern"><option value="all">Alle Gruppen</option><option value="FOUNDATION">Foundation</option><option value="PROCESSOR">Processor</option><option value="APPLICATION">Application</option><option value="VISUAL_INSTRUMENT">Visual Instrument</option><option value="MISSING_ASSEMBLY">Missing Assembly</option><option value="other">Weitere Gruppen</option></select>
+        <select id="build-inventory-state" aria-label="Inventar nach Laufstatus filtern"><option value="all">Alle Laufstände</option><option value="YES">Runnable</option><option value="PARTIAL">Partial</option><option value="NO">Nicht runnable</option></select>
+        <strong id="build-inventory-count">44 / 44</strong>
+      </div>
+      <div class="build-inventory-list" aria-live="polite">
+        <article class="inventory-item" data-build-item data-group="FOUNDATION" data-state="NO"><span>BT-001</span><strong>OLS 1.0</strong><small>FOUNDATION · semantic specification</small><b>RELEASED_AUTHORITY</b></article>
+        <article class="inventory-item" data-build-item data-group="FOUNDATION" data-state="YES"><span>BT-002</span><strong>NEXAH Orientation Layer</strong><small>FOUNDATION · typed contract library</small><b>IMPLEMENTED_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="PROCESSOR" data-state="YES"><span>BT-003</span><strong>NEXAH Kernel v0.7 CLI</strong><small>PROCESSOR · Python processor and CLI</small><b>IMPLEMENTED_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="APPLICATION" data-state="YES"><span>BT-004</span><strong>Network Orientation V1/V2</strong><small>APPLICATION · graph application and brief generator</small><b>VERIFIED_ILLUSTRATIVE</b></article>
+        <article class="inventory-item" data-build-item data-group="APPLICATION" data-state="YES"><span>BT-005</span><strong>IEEE Geometry V1</strong><small>APPLICATION · benchmark analysis and replay</small><b>VERIFIED_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="APPLICATION" data-state="YES"><span>BT-006</span><strong>NEXAH Demonstrator</strong><small>APPLICATION · verified reference demonstrator</small><b>VERIFIED_ENTRY</b></article>
+        <article class="inventory-item" data-build-item data-group="APPLICATION" data-state="YES"><span>BT-007</span><strong>Lorenz Demo</strong><small>APPLICATION · scientific visualization demo</small><b>EXPERIMENTAL_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="APPLICATION" data-state="PARTIAL"><span>BT-008</span><strong>Application adapters</strong><small>APPLICATION · domain adapter prototypes</small><b>EXPERIMENTAL</b></article>
+        <article class="inventory-item" data-build-item data-group="APPLICATION" data-state="YES"><span>BT-009</span><strong>Library command tools</strong><small>APPLICATION · registry editorial and release tooling</small><b>IMPLEMENTED_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="PROCESSOR" data-state="YES"><span>BT-010</span><strong>ORION V1 Certified Core</strong><small>PROCESSOR · deterministic structural processor</small><b>CERTIFIED_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="VALIDATION" data-state="YES"><span>BT-011</span><strong>ORION proof and conformance scripts</strong><small>VALIDATION · proof harness</small><b>VERIFIED_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="PROCESSOR" data-state="YES"><span>BT-012</span><strong>ORION Transformation Engine</strong><small>PROCESSOR · route planner and transformation implementation</small><b>HISTORICAL_IMPLEMENTED</b></article>
+        <article class="inventory-item" data-build-item data-group="RUNTIME" data-state="YES"><span>BT-013</span><strong>ORION Runtime 1.1 candidate</strong><small>RUNTIME · runtime and transport implementation</small><b>IMPLEMENTED_NOT_INTEGRATED</b></article>
+        <article class="inventory-item" data-build-item data-group="TRANSLATION" data-state="YES"><span>BT-014</span><strong>LYRA translator and explainer</strong><small>TRANSLATION · controlled-language boundary</small><b>HISTORICAL_IMPLEMENTED</b></article>
+        <article class="inventory-item" data-build-item data-group="REGISTRY" data-state="PARTIAL"><span>BT-015</span><strong>ORION Operator Registry</strong><small>REGISTRY · capability declaration registry</small><b>NONAUTHORITATIVE_REGISTRY</b></article>
+        <article class="inventory-item" data-build-item data-group="RECORD" data-state="YES"><span>BT-016</span><strong>CRIC-01 0.1.1</strong><small>RECORD · profile-bound execution record and runner</small><b>IMPLEMENTED_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="RECORD" data-state="YES"><span>BT-017</span><strong>NRRC P4A</strong><small>RECORD · neutral record candidate and validator</small><b>CANDIDATE_VALIDATED_LOCAL</b></article>
+        <article class="inventory-item" data-build-item data-group="FOUNDATION" data-state="YES"><span>BT-018</span><strong>THE EYE A1 / Gate-1 contracts and canonicalizer</strong><small>FOUNDATION · schema, hash, canonicalization and receipt</small><b>VERIFIED_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="INTERFACE" data-state="YES"><span>BT-019</span><strong>NEXAHEDRON Workspace</strong><small>INTERFACE · Human-facing web demonstrator</small><b>IMPLEMENTED_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="PRESENTATION" data-state="YES"><span>BT-020</span><strong>NEXAH Experience</strong><small>PRESENTATION · public website and intellectual entrance</small><b>PUBLICLY_DEPLOYED_BOUNDARY</b></article>
+        <article class="inventory-item" data-build-item data-group="CONTROL" data-state="YES"><span>BT-021</span><strong>Mission Control currentness validators</strong><small>CONTROL · control-plane tooling</small><b>IMPLEMENTED_CURRENT</b></article>
+        <article class="inventory-item" data-build-item data-group="RESEARCH_FIXTURE" data-state="YES"><span>BT-022</span><strong>Prime CRT QRTp tools</strong><small>RESEARCH FIXTURE · exact discrete profile family</small><b>IMPLEMENTED_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="RESEARCH_FIXTURE" data-state="YES"><span>BT-023</span><strong>NBV Neon visibility prototype</strong><small>RESEARCH FIXTURE · raster visibility profile</small><b>IMPLEMENTED_NEGATIVE_OR_MIXED</b></article>
+        <article class="inventory-item" data-build-item data-group="RESEARCH_FIXTURE" data-state="YES"><span>BT-024</span><strong>O8 exact operator realization</strong><small>RESEARCH FIXTURE · finite operator-grid tool</small><b>VALIDATED_IN_EXACT_SCOPE</b></article>
+        <article class="inventory-item" data-build-item data-group="VISUAL_INSTRUMENT" data-state="YES"><span>BT-025</span><strong>3+1 Dual Belt</strong><small>VISUAL INSTRUMENT · interactive HTML5 field instrument</small><b>EXPRESSION_AND_INSPECTION</b></article>
+        <article class="inventory-item" data-build-item data-group="VISUAL_INSTRUMENT" data-state="YES"><span>BT-026</span><strong>Milky Way Pineal Aperture Andromeda</strong><small>VISUAL INSTRUMENT · stellar-node instrument</small><b>EXPRESSION_AND_INSPECTION</b></article>
+        <article class="inventory-item" data-build-item data-group="VISUAL_INSTRUMENT" data-state="YES"><span>BT-027</span><strong>Tessarec Q Iota Pearl</strong><small>VISUAL INSTRUMENT · root/frame instrument</small><b>EXPRESSION_AND_INSPECTION</b></article>
+        <article class="inventory-item" data-build-item data-group="VISUAL_INSTRUMENT" data-state="YES"><span>BT-028</span><strong>Tesseract Root Space 8 to 16</strong><small>VISUAL INSTRUMENT · grid-space instrument</small><b>EXPRESSION_AND_INSPECTION</b></article>
+        <article class="inventory-item" data-build-item data-group="VISUAL_INSTRUMENT" data-state="YES"><span>BT-029</span><strong>Rödelheim Observatory Seven Views</strong><small>VISUAL INSTRUMENT · reference HTML instrument</small><b>EXPRESSION_AND_INSPECTION</b></article>
+        <article class="inventory-item" data-build-item data-group="VISUAL_INSTRUMENT" data-state="YES"><span>BT-030</span><strong>Local adapter and compass HTML drafts</strong><small>VISUAL INSTRUMENT · untracked local drafts</small><b>LOCAL_UNTRACKED</b></article>
+        <article class="inventory-item" data-build-item data-group="BLUEPRINT" data-state="NO"><span>BT-031</span><strong>SWM-01 software-machine blueprint</strong><small>BLUEPRINT · language-neutral Rust-facing blueprint</small><b>BLUEPRINT_ONLY</b></article>
+        <article class="inventory-item" data-build-item data-group="BLUEPRINT" data-state="NO"><span>BT-032</span><strong>TITAN-00 total-system inventory</strong><small>BLUEPRINT · component and gap audit</small><b>DOCUMENTARY_SYSTEM_AUDIT</b></article>
+        <article class="inventory-item" data-build-item data-group="MISSING_ASSEMBLY" data-state="NO"><span>BT-033</span><strong>OLS record processor crosswalk</strong><small>MISSING ASSEMBLY · semantic mapping</small><b>MISSING_DECISION</b></article>
+        <article class="inventory-item" data-build-item data-group="MISSING_ASSEMBLY" data-state="NO"><span>BT-034</span><strong>Shared capability and profile registry</strong><small>MISSING ASSEMBLY · cross-system registry</small><b>MISSING_COMPONENT</b></article>
+        <article class="inventory-item" data-build-item data-group="MISSING_ASSEMBLY" data-state="NO"><span>BT-035</span><strong>Shared result contract</strong><small>MISSING ASSEMBLY · processor-to-view record</small><b>MISSING_DECISION</b></article>
+        <article class="inventory-item" data-build-item data-group="MISSING_ASSEMBLY" data-state="NO"><span>BT-036</span><strong>General Case-to-view adapter</strong><small>MISSING ASSEMBLY · A5/A6 boundary extension</small><b>MISSING_COMPONENT</b></article>
+        <article class="inventory-item" data-build-item data-group="APPLICATION" data-state="YES"><span>BT-037</span><strong>NEXAH Compare v0.1</strong><small>APPLICATION · replayable local advisory instrument</small><b>IMPLEMENTED_REPLAYABLE_LOCAL_INSTRUMENT</b></article>
+        <article class="inventory-item" data-build-item data-group="VISUAL_INSTRUMENT" data-state="YES"><span>BT-038</span><strong>E8 DEMOS projection and quotient family</strong><small>VISUAL INSTRUMENT · immutable intake + Repair R1</small><b>EXPRESSION_AND_INSPECTION</b></article>
+        <article class="inventory-item" data-build-item data-group="PROCESSOR" data-state="YES"><span>BT-039</span><strong>THE EYE A2 bounded Rust Comparator</strong><small>PROCESSOR · deterministic comparator</small><b>VERIFIED_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="TRANSLATION" data-state="YES"><span>BT-040</span><strong>THE EYE A4 Kernel-to-EYE adapter</strong><small>TRANSLATION · lossless bounded adapter</small><b>IMPLEMENTED_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="INTERFACE" data-state="YES"><span>BT-041</span><strong>THE EYE A5/A6 NEXAHEDRON result boundary</strong><small>INTERFACE · verified presentation runtime</small><b>IMPLEMENTED_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="INTEGRATION" data-state="YES"><span>BT-042</span><strong>NEXAHEDRON ORION V1 Gateway and representation handoff</strong><small>INTEGRATION · certified-Core seam</small><b>IMPLEMENTED_BOUNDED</b></article>
+        <article class="inventory-item" data-build-item data-group="PRESENTATION" data-state="YES"><span>BT-043</span><strong>NEXAH Private 20-Minute Technical Readout</strong><small>PRESENTATION · critical-review path</small><b>READY_AS_PRIVATE_SOURCE</b></article>
+        <article class="inventory-item" data-build-item data-group="VISUAL_INSTRUMENT" data-state="YES"><span>BT-044</span><strong>GAME 4 LIFE +1 Transition Observatory</strong><small>VISUAL INSTRUMENT · frozen reference workbench</small><b>VERIFIED_INTERNAL_INSTRUMENT_FROZEN_2026_10_12</b></article>
+      </div>
+      <p class="inventory-authority"><strong>AUTHORITATIVE SOURCE</strong><span>Diese Liste ist eine lesbare Projektion, kein zweites Register.</span><a href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/CURRENT/BUILDER_TOOL_INVENTORY.csv">BUILDER_TOOL_INVENTORY.csv ↗</a></p>
+    </section>
+
+    <section class="systems-sheet" id="blueprints" aria-labelledby="blueprints-title">
+      <header class="systems-section-head">
+        <div><p class="eyebrow">BLUEPRINT REGISTER</p><h2 id="blueprints-title">Baupläne &amp; Systemkarten.</h2></div>
+        <p>Formal · working schematic · view map</p>
+      </header>
+      <div class="seam-list">
+        <article><span>SWM-01</span><strong>Semantic Work Machine</strong><p>Formaler Blueprint · Semantik, Operation und Return.</p><b>FORMAL</b></article>
+        <article><span>TITAN-00</span><strong>TITAN Architecture</strong><p>Formaler Blueprint · Komponenten und technische Grenzen.</p><b>FORMAL</b></article>
+        <article><span>B0-SYS</span><strong>System Atlas</strong><p>Arbeitskarte · sechs Bauräume und ihre Übergaben.</p><b>WORKING</b></article>
+        <article><span>PUB-01</span><strong>Public Field Map</strong><p>View Map · NEXAH, Science und NEXAHEDRON.</p><b>VIEW</b></article>
+      </div>
+    </section>
+
+    <section class="systems-sheet" id="laws" aria-labelledby="laws-title">
+      <header class="systems-section-head">
+        <div><p class="eyebrow">B0 BUILDER POLICY · LOCAL OPERATING LAW</p><h2 id="laws-title">Builder Laws.</h2></div>
+        <p>Owner-led · speed-first · source-bound</p>
+      </header>
+      <div class="builder-laws">
+        <article class="law-do">
+          <header><span>01</span><h3>Wir tun.</h3><b>BUILD</b></header>
+          <ol>
+            <li><strong>Ein aktiver Schnitt.</strong><span>Erst schließen, halten oder abschließen — dann den nächsten öffnen.</span></li>
+            <li><strong>Das kleinste nützliche Ding.</strong><span>Ziel und sichtbares Finish in einem Satz.</span></li>
+            <li><strong>Reuse vor Create.</strong><span>Komponente, Seite, Identität und Source zuerst suchen.</span></li>
+            <li><strong>Am Ursprung bauen.</strong><span>Code, Semantik, Evidenz und Geschichte bleiben beim Owner.</span></li>
+            <li><strong>Prüfen und zurückgeben.</strong><span>Relevanter Test, Resultat, Grenze, offener Rest und Return.</span></li>
+          </ol>
+        </article>
+        <article class="law-dont">
+          <header><span>02</span><h3>Wir tun nicht.</h3><b>BOUNDARY</b></header>
+          <ol>
+            <li><strong>Keine Parallelkopie.</strong><span>B0 zeigt auf Sources; es wird kein zweiter Wahrheitsort.</span></li>
+            <li><strong>Keine stille Promotion.</strong><span>Working Software ist kein Finding, keine Validierung und keine Freigabe.</span></li>
+            <li><strong>Keine künstliche Gesamtmaschine.</strong><span>Nähe, Look oder gemeinsames Menü beweisen keine Kopplung.</span></li>
+            <li><strong>Kein Archiv ohne Wert.</strong><span>Git hält Geschichte; Extrakopien brauchen Provenienz und Nachfolger.</span></li>
+            <li><strong>Kein implizites Publishing.</strong><span>Commit, Push, Deployment und Veröffentlichung bleiben getrennte Entscheidungen.</span></li>
+          </ol>
+        </article>
+        <article class="law-stop">
+          <header><span>03</span><h3>Hier stoppen wir.</h3><b>OWNER GATE</b></header>
+          <ul>
+            <li>Source Authority oder Return-Ziel ist unklar.</li>
+            <li>Die Wahl ändert Bedeutung, Autorität oder öffentlichen Scope.</li>
+            <li>Material würde überschrieben, gelöscht oder entwertet.</li>
+            <li>Eine Shared-Datei hat bereits einen aktiven Writer.</li>
+            <li>Der relevante Check oder die Finish Condition fehlt.</li>
+          </ul>
+          <div><span>DONE ≠ PUBLISHED</span><span>HOLD = VALID CLOSEOUT</span></div>
+        </article>
+      </div>
+      <div class="law-footer">
+        <code>GOAL → SOURCE → SMALL CUT → CHECK → RETURN → CLOSE</code>
+        <a href="BUILDER_POLICY.md">Vollständige Builder Policy ↗</a>
+      </div>
+    </section>
+
+    <section class="systems-sheet systems-sources" id="sources" aria-labelledby="sources-title">
+      <header class="systems-section-head compact"><div><p class="eyebrow">SOURCE AUTHORITY</p><h2 id="sources-title">Register &amp; Quellen.</h2></div></header>
+      <nav aria-label="Technische Originalregister">
+        <a href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/CURRENT/BUILDER_ATLAS.md"><span>01</span><strong>Builder Atlas</strong><small>Bauräume und Build Lanes</small></a>
+        <a href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/CURRENT/BUILDER_TOOL_INVENTORY.csv"><span>02</span><strong>Tool Inventory</strong><small>44 registrierte Objekte</small></a>
+        <a href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/CURRENT/ENGINEERING_ASSEMBLY.csv"><span>03</span><strong>Engineering Assembly</strong><small>19 Integrationszeilen</small></a>
+        <a href="archive.html"><span>04</span><strong>B0 Archiv</strong><small>Logs, Prototypen und Lineage</small></a>
+      </nav>
     </section>
   </main>
   <footer class="footer"><div><span class="mark">B0</span><p><strong>Systems Desk</strong><br>Inventory · roles · maturity</p></div><p>Bestand sichtbar machen, ohne aus Komponenten eine Gesamtmaschine zu behaupten.</p><a href="index.html">Architect Desk →</a></footer>

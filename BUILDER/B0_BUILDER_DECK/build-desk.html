@@ -20,28 +20,68 @@
   <main id="main">
     <section class="area-hero" id="top">
       <div><p class="eyebrow">02 · BUILD DESK</p><h1>Bauen <em>&amp; Schließen.</em></h1><p>Priorität, Entscheidung, Ausführung, Prüfung und Return.</p></div>
-      <aside><span>ACTIVE PRIORITY</span><strong>M-PUB01 · GATE 0</strong><p>Receipts für NEXAH und Scarabæus schließen. Kein weiterer Release, bevor Currentness und Manifest sauber gebunden sind.</p></aside>
+      <aside><span>ACTIVE PRIORITY</span><strong>M-PUB01 · PLATEAU 01</strong><p>Gate 0 ist dokumentiert. Jetzt den Bestand schließen, einen reproduzierbaren Staging-Cut vorbereiten und keinen breiten Worktree veröffentlichen.</p></aside>
     </section>
 
-    <section class="section" id="current-cut" aria-labelledby="current-cut-title">
-      <header class="section-head"><div><p class="eyebrow">CURRENT CUT · SOURCE-BOUND</p><h2 id="current-cut-title">Eine aktive Linie.</h2></div><p>Die Architektur darf groß sein; der aktive Schnitt bleibt klein. Mission Control hält Owner Gate und STOP.</p></header>
-      <div class="control-status-strip" aria-label="Aktueller Build-Schnitt">
-        <div><span>NOW</span><strong>M-PUB01</strong><small>Public Field 01</small></div><i aria-hidden="true">→</i>
-        <div><span>GATE</span><strong>0 · Consolidation</strong><small>Currentness · Census · Manifest</small></div><i aria-hidden="true">→</i>
-        <div><span>NEXT</span><strong>Receipts schließen</strong><small>NEXAH + Scarabæus</small></div><i aria-hidden="true">→</i>
-        <div><span>RETURN</span><strong>Mission Control</strong><small>Review · Gate · Stop</small></div>
+    <section class="section builder-notes" id="current-cut" aria-labelledby="current-cut-title">
+      <header class="section-head"><div><p class="eyebrow">BUILDER NOTES · LETZTER STAND · 25.10.2026</p><h2 id="current-cut-title">B0 Plateau 01.</h2></div><p>Bestand vollständig sehen, drei Projekte führen und genau einen stagingfähigen Cut vorbereiten. Strategie, Release und STOP bleiben bei Mission Control.</p></header>
+
+      <div class="builder-snapshot" aria-label="Letzter Builder-Stand">
+        <div><span>A0</span><strong>71 / 71</strong><small>Oberflächen gebunden</small></div>
+        <div><span>SCIENCE NAVIGATOR</span><strong>253 / 253</strong><small>Prüfungen bestanden</small></div>
+        <div><span>CURRENTNESS</span><strong>VALID</strong><small>466 Quellen · 0 Fehler</small></div>
+        <div><span>GATE 0</span><strong>2 DONE · 1 OPEN</strong><small>CH-009/010 zu · Safari-Witness offen</small></div>
       </div>
+
+      <div class="priority-projects" aria-label="Drei priorisierte Builder-Projekte">
+        <article class="priority-project priority-now">
+          <header><span>01 · NOW</span><b>M-PUB01</b></header>
+          <h3>Staging Cut</h3>
+          <p>Einen engen, reproduzierbaren Public-Field-Kandidaten aus dem gemischten Bestand schneiden.</p>
+          <ul><li>Safari-Witness für CH-007 nachholen</li><li>Include/Exclude-Manifest frieren</li><li>lokalen Staging-Build und Rückweg prüfen</li></ul>
+          <footer><strong>OPTION A · EMPFOHLEN</strong><span>Bounded static cut</span><small>Option B: bis zum sauberen Branch warten</small></footer>
+        </article>
+        <article class="priority-project priority-next">
+          <header><span>02 · NEXT</span><b>ONE UPDATE</b></header>
+          <h3>NEXAH × NEXAHEDRON</h3>
+          <p>NEXAH und Human View als gemeinsames Updateprojekt planen, ohne die beiden Rollen zu vermischen.</p>
+          <ul><li>gemeinsame visuelle Sprache festlegen</li><li>nexah.de als institutionelles Fenster führen</li><li>NEXAHEDRON als Human View ausarbeiten</li></ul>
+          <footer><strong>OPTION A · EMPFOHLEN</strong><span>Ein Designsystem, zwei Häuser</span><small>Option B: spätere Zusammenführung</small></footer>
+        </article>
+        <article class="priority-project priority-later">
+          <header><span>03 · LATER</span><b>FLAGSHIP VIEWER</b></header>
+          <h3>A0 / THE MACHINA</h3>
+          <p>THE MACHINA bekommt eine eigene Betrachtungsfläche und verweist nicht mehr als Hauptansicht in die Bench.</p>
+          <ul><li>eigener Viewer mit aktuellem Build-Snapshot</li><li>Human-View- und Science-Return trennen</li><li>Bench als Instrument statt Ausstellung führen</li></ul>
+          <footer><strong>OPTION A · EMPFOHLEN</strong><span>Standalone Viewer + A0 Return</span><small>Option B: späteres Showroom-Embedding</small></footer>
+        </article>
+      </div>
+
+      <div class="plateau-exit"><div><span>PLATEAU EXIT</span><strong>Inventar vollständig · ein Staging-Paket reproduzierbar · kein verwaister aktiver Build</strong></div><nav><a href="#latest-builds">Build-Register ↓</a><a href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/00_OVERVIEW/CHORES.md">Chores ↗</a><a href="../../../../00%20EXECUTIVE/NEXAH-Mission-Control/PUBLISHING/PUBLIC_FIELD_01/CH010_VERSIONING_PACKAGE_REVIEW_2026-10-25.md">Package Review ↗</a></nav></div>
     </section>
 
-    <section class="section" id="workboard" aria-labelledby="workboard-title">
-      <header class="section-head"><div><p class="eyebrow">WORKBOARD</p><h2 id="workboard-title">To-dos nach Entscheidungstyp.</h2></div><p>Die Karten sind eine lesbare Projektion der Chores. Statusänderungen werden an der Quelle vorgenommen.</p></header>
-      <div class="build-board">
-        <article class="build-lane lane-now"><header><span>01</span><div><b>NOW</b><small>controlled</small></div></header><h3>M-PUB01 · Gate 0</h3><p>Bestehenden A0-Release bewahren; NEXAH- und Scarabæus-Receipts schließen.</p><footer>ACTIVE PRIORITY</footer></article>
-        <article class="build-lane lane-decide"><header><span>02</span><div><b>DECIDE</b><small>owner choice</small></div></header><h3>CH-014 · Book Identity</h3><p>Fieldbook-Identität, Titel und öffentliche Einordnung festlegen.</p><footer>DECISION NEEDED</footer></article>
-        <article class="build-lane"><header><span>03</span><div><b>VERIFY / BUILD</b><small>bounded work</small></div></header><h3>CH-007 · 009 · 010</h3><p>Link/GLB-Audit, Deployment-Commit binden und gemischte Worktrees paketieren.</p><footer>TEST + RECEIPT</footer></article>
-        <article class="build-lane lane-later"><header><span>04</span><div><b>LATER</b><small>separate gates</small></div></header><h3>CH-008 · CH-016</h3><p>Public-Navigator-Curation und privater Remote-Zugang bleiben geparkte, eigene Gates.</p><footer>NOT ACTIVE</footer></article>
+    <section class="section recent-builds" id="latest-builds" aria-labelledby="latest-builds-title">
+      <header class="section-head"><div><p class="eyebrow">BUILD REGISTER · SOURCE-BOUND</p><h2 id="latest-builds-title">Dreizehn Builds. Ein Überblick.</h2></div><p>Jeder Eintrag nennt Build, Zweck und direkte Quelle. Aufnahme bedeutet Auffindbarkeit und technischen Return — nicht automatisch Science Finding, Aktivierung oder Release.</p></header>
+      <div class="recent-build-summary" aria-label="Build-Register Zusammenfassung"><div><span>RETURN</span><strong>25.10.2026</strong><small>letzter Registerstand</small></div><div><span>PLAY</span><strong>3</strong><small>Erlebnis &amp; Ensemble</small></div><div><span>OPERATE</span><strong>6</strong><small>Instrument &amp; Adapter</small></div><div><span>CHECK</span><strong>4</strong><small>Resultat &amp; Grenze</small></div></div>
+      <div class="build-register-toolbar"><label for="build-register-search">Builds durchsuchen</label><input id="build-register-search" type="search" placeholder="z. B. Crown, GLB, E8, Pascal" autocomplete="off"><label for="build-register-mode">Modus</label><select id="build-register-mode"><option value="all">Alle Modi</option><option value="PLAY">PLAY</option><option value="OPERATE">OPERATE</option><option value="CHECK">CHECK</option></select><strong id="build-register-count" aria-live="polite">13 / 13</strong></div>
+      <div class="recent-build-list">
+        <article data-build-log-item data-mode="PLAY"><div class="build-log-key"><b>01</b><span>PLAY</span></div><div><h3>OPIUM</h3><p>Plattenstack, Connector Chamber, elf Winds, Coil, Zipper, Ghost-Pentagone und Acht-Maske.</p></div><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/A0_OPIUM.html#entrance">Build prüfen ↗</a></article>
+        <article data-build-log-item data-mode="PLAY"><div class="build-log-key"><b>02</b><span>PLAY</span></div><div><h3>Game of Worlds</h3><p>LIFE, Three Domains und Number Lens unter einem sichtbaren, getrennt geführten Puls.</p></div><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/A0_GAME_OF_WORLDS_PLAY.html?world=pulse#pulse">Build prüfen ↗</a></article>
+        <article data-build-log-item data-mode="PLAY"><div class="build-log-key"><b>03</b><span>PLAY</span></div><div><h3>Living Blueprint</h3><p>Begehbare Form- und Orientierungszeichnung des bestehenden A0-Builds.</p></div><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/A0_LIVING_BLUEPRINT.html">Build prüfen ↗</a></article>
+        <article data-build-log-item data-mode="OPERATE"><div class="build-log-key"><b>04</b><span>OPERATE</span></div><div><h3>Grid → Orbit → Topology → View</h3><p>Family Synthesis für getrennte LOKI-, H3- und E8-Carrier.</p></div><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/E8_DEMOS_INTERACTIVE_ORIENTATION_2026-09-21/COXETER_ORBIT_TOPOLOGY_LAB_2026-10-05/NEXAH_FAMILY_SYNTHESIS_DEMONSTRATOR.html">Build prüfen ↗</a></article>
+        <article data-build-log-item data-mode="OPERATE"><div class="build-log-key"><b>05</b><span>OPERATE</span></div><div><h3>Carrier → Adapter → View → Return</h3><p>Typed Coupling mit expliziten Maps, Schnitten, Fasern und Residuen.</p></div><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/E8_DEMOS_INTERACTIVE_ORIENTATION_2026-09-21/COXETER_ORBIT_TOPOLOGY_LAB_2026-10-05/NEXAH_TYPED_COUPLING_WORKBENCH.html">Build prüfen ↗</a></article>
+        <article data-build-log-item data-mode="OPERATE"><div class="build-log-key"><b>06</b><span>OPERATE</span></div><div><h3>E8 Mutation Family Graph</h3><p>Root-, Return- und Coxeter-Brücke mit H3-Orbits und deklarierter Projektion.</p></div><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/E8_DEMOS_INTERACTIVE_ORIENTATION_2026-09-21/NEXAH_E8_MUTATION_FAMILY_GRAPH.html">Build prüfen ↗</a></article>
+        <article data-build-log-item data-mode="OPERATE"><div class="build-log-key"><b>07</b><span>OPERATE</span></div><div><h3>Blue Body Interior · CRT16</h3><p>Sechzehn Kanäle, Apertur und räumlicher Kontrast in vier Ansichten.</p></div><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/A0_TESSAREC_BLUE_BODY_LAB.html#blue-body-interior-crt16">Build prüfen ↗</a></article>
+        <article data-build-log-item data-mode="OPERATE"><div class="build-log-key"><b>08</b><span>OPERATE</span></div><div><h3>Pentagon · Knick · Apertur</h3><p>Rahmen, Gelenke, Ringöffnung, Zwischenräume und elf adressierte Richtungen.</p></div><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/downloads/A0_PENTAGON_KNICK_APERTURE_INTAKE_2026-10-25/NEXAH_PENTAGON_KNICK_APERTURE_LAB.html">Build prüfen ↗</a></article>
+        <article data-build-log-item data-mode="CHECK"><div class="build-log-key"><b>09</b><span>CHECK</span></div><div><h3>7 / 11 Typed Crosswalk</h3><p>Sieben Ansichten und elf Richtungen mit getrennten Namensräumen und Rückwegen.</p></div><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/A0_7_11_TYPED_CROSSWALK.html#crosswalk">Build prüfen ↗</a></article>
+        <article data-build-log-item data-mode="CHECK"><div class="build-log-key"><b>10</b><span>CHECK</span></div><div><h3>Pascal Threads · 11×11</h3><p>Zahlenwert gegen Struktur, Faser und Residual geprüft.</p></div><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_PRIMEGRID_BLOCK02A_PASCAL_THREAD_QUOTIENT_2026-10-07/NEXAH_PRIMEGRID_BLOCK02A_PASCAL_THREAD_LAB.html">Build prüfen ↗</a></article>
+        <article data-build-log-item data-mode="CHECK"><div class="build-log-key"><b>11</b><span>CHECK</span></div><div><h3>Prime Address Control</h3><p>N=8-Ring und Komplementkontrolle mit sichtbar erhaltenem negativem Befund.</p></div><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_PRIMEGRID_BLOCK03_PRIME_ADDRESS_CONTROL_2026-10-07/NEXAH_PRIMEGRID_BLOCK03_PRIME_ADDRESS_CONTROL_LAB.html">Build prüfen ↗</a></article>
+        <article data-build-log-item data-mode="CHECK"><div class="build-log-key"><b>12</b><span>CHECK</span></div><div><h3>Life × E8 Workbench</h3><p>Zwei Träger und Operatoren mit kontrollierter Projektion und getrenntem Return.</p></div><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/SCIENCE_LAB/CASE_STUDIES/NEXAH_LIFE_E8_DUAL_CLOCK_LIFE03_2026-10-07/index.html">Build prüfen ↗</a></article>
+        <article data-build-log-item data-mode="OPERATE"><div class="build-log-key"><b>13</b><span>OPERATE</span></div><div><h3>Crown → Shadow Contact Bench</h3><p>OPEN / CONTACT / RETURN, drei Ansichten, fünf Kontakte und zwei Lastfälle; 110/110 Hashes und 88/88 Engineering-Checks, Ergebnis bewusst PARTIAL.</p></div><a href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/A0_CROWN_SHADOW_CONTACT_BENCH.html">Build öffnen ↗</a></article>
       </div>
-      <div class="boundary"><strong>Maintenance:</strong> CH-001–006/011 bewahren Navigation, Governance, Custody und ältere Views. Sie bilden keinen zweiten aktiven Arbeitsstrom.</div>
+      <div class="build-log-return"><div><span>MASTER INDEX</span><strong>Build / Instrument Atlas</strong><p>Der Atlas ergänzt zu jedem Build Carrier, View, Return und Boundary. Diese Liste bleibt der schnelle Check im Builder Desk.</p></div><nav><a class="button button-primary" href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/A0_BUILDER_TOY_STORE.html#instrument-atlas">Alle Builds im Atlas ↗</a><a class="button" href="../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/A0_RESEARCH_DESK.html#instrument-atlas-return-20261025">Science Return ↗</a></nav></div>
+      <p class="archive-empty" id="build-register-empty" hidden>Kein registrierter Build passt zu dieser Suche.</p>
+      <div class="boundary"><strong>Register rule:</strong> Ein Build erhält Eintrag, Link und Beschreibung erst mit benennbarer Quelle, Status, Prüfpfad und Return. Die Aufnahme ist Navigation — keine neue Build-Identität, kein wissenschaftliches Finding und keine Aktivierung.</div>
     </section>
 
     <section class="section" id="build-plan" aria-labelledby="build-plan-title">
