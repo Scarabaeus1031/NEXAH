@@ -20,6 +20,11 @@ Architect Desk; deeper inventories and work surfaces live on their own pages:
 - `build-desk.html` — Chore projection, decisions, build cuts, returns and the
   thirteen-entry `Latest Builds` inspection log;
 - `public-field.html` — Public Desk: nexah.de, NEXAHEDRON and Scarabæus;
+- `public-nexahedron-page-shelf.html` — generated source-bound shelf for all 75
+  HTML pages and runtimes in the current NEXAHEDRON A0 Human View, including
+  surfaces not directly linked from the Aperture Journey;
+- `build-nexahedron-page-shelf.mjs` — regenerates that shelf from the owning
+  NEXAHEDRON source without copying or reclassifying its content;
 - `a0-tools.html` — A0 Builder Desk, Builder Log and the
   direct Instrument Atlas / Latest Builds routes plus the explicit return to
   the A0 Science Desk.
