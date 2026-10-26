@@ -16,6 +16,10 @@ The deck now uses a six-desk architecture. The start page is the operational
 Architect Desk; deeper inventories and work surfaces live on their own pages:
 
 - `index.html` — Architect Desk: Big Picture, priority, strategy and blueprint;
+- `achievements.html` — regenerierbarer Größen- und Werkbestand-Snapshot mit
+  Repository-, Commit-, Datei-, Datenvolumen- und Registerzahlen;
+- `build-ecosystem-achievements.mjs` — erzeugt die source-bound JSON- und
+  Direct-file-JavaScript-Snapshots für die Achievements-Seite;
 - `systems-desk.html` — system roles, working inventory and technical map;
 - `build-desk.html` — Chore projection, decisions, build cuts, returns and the
   fourteen-entry `Latest Builds` inspection log;
@@ -35,6 +39,10 @@ Architect Desk; deeper inventories and work surfaces live on their own pages:
 - `PROJECT_THE_MACHINA_EXHIBITION_2026-10-26.md` — parked source-bound project
   brief for the existing THE MACHINA exhibition, Machine Series, Parts Shelf
   and explicit Human Return; no build or publication activation.
+- `PROJECT_NEXAH_DE_DESIGN_DELTA_2026-10-26.md` — parked review brief for the
+  unfinished NEXAH.de design worktree: preserve its visual/editorial strengths,
+  replace the obsolete navigation and reconcile its A0 door before any build,
+  commit or deployment decision.
 
 The shared navigation keeps all six desks reachable without deep dropdowns.
 The Architect Desk opens with the controlling Mission, a visual blueprint and

@@ -2,7 +2,7 @@
 
 Status: `LOCAL OPERATING POLICY / OWNER-LED / SPEED-FIRST`
 
-Date: `2026-10-25`
+Date: `2026-10-26`
 
 ## Purpose
 
@@ -39,6 +39,13 @@ administration.
 11. **Local first.** Work and validate in the canonical local checkout. Commit
     a coherent checkpoint. Push, deployment and publication remain separate
     Owner decisions.
+12. **Website custody stays explicit.** `nexah.de`, A0, `nexahedron.com` and
+    `www.scarabaeus1033.net` retain separate canonical repositories. A0 may
+    stage and connect their views; B0 may route work and classify legacy pages.
+    Neither becomes a second website master. Generated bundles are rebuilt
+    from their declared source and manifest, never hand-edited. Commit only an
+    exact reviewed path set in the owning repository; push and deploy require
+    their own Owner gates.
 
 ## Minimum build card
 
@@ -50,6 +57,8 @@ Before work, only these fields are needed:
 - finish condition;
 - relevant check;
 - return destination.
+- for website work: public channel, canonical repository and whether the
+  touched path is `SOURCE`, `GENERATED_PROJECTION` or `LEGACY_DISPOSITION`.
 
 If one is unclear, make the narrowest reversible assumption and keep moving.
 Ask the Owner only when the choice changes meaning, authority, public scope or
