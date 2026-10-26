@@ -42,6 +42,8 @@ This module reconstructs:
 
 ```
 field_reconstruction/
+├── NEXAH_FIELD_RECONSTRUCTION_DEMONSTRATOR.html  # source-bound pipeline instrument
+├── demonstrator/     # UI assets, receipt export and integrity check
 ├── reconstruction/   # raw vs cleaned field reconstruction
 ├── dynamics/         # flow transitions (GIFs)
 ├── stability/        # invariant vs frame-dependent regions
@@ -49,6 +51,14 @@ field_reconstruction/
 ├── outputs/          # generated field visualizations
 ├── scripts/          # reproducible experiments
 ```
+
+## 🧭 Integrated Demonstrator
+
+Open [`NEXAH_FIELD_RECONSTRUCTION_DEMONSTRATOR.html`](NEXAH_FIELD_RECONSTRUCTION_DEMONSTRATOR.html)
+to traverse the existing reconstruction and navigation frames as one instrument.
+The optional open-U / I-seam / `C | RIS | T` and orange-spark overlays are
+explicitly separated from the calculated source frames. They are reading aids,
+not extracted observables or scientific claims.
 
 ---
 

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEXAH Field Reconstruction Demonstrator</title>
+  <link rel="stylesheet" href="demonstrator/field-reconstruction-demonstrator.css">
+</head>
+<body>
+  <header class="masthead">
+    <div>
+      <p class="eyebrow">NEXAH CORE · EXPERIMENTAL INSTRUMENT</p>
+      <h1>Field Reconstruction → Navigation</h1>
+      <p class="lede">One source-bound walk from a sampled trajectory to a reconstructed sheet, boundary, stability field, flow channels and target-guided path.</p>
+    </div>
+    <div class="identity-card">
+      <span>REUSED SOURCE</span>
+      <strong>ARCHITECTURE / CORE / field_reconstruction</strong>
+      <small>No new scientific identity · no generalized reconstruction claim</small>
+    </div>
+  </header>
+
+  <nav class="pipeline" aria-label="Demonstrator stages" id="pipeline"></nav>
+
+  <main>
+    <section class="instrument">
+      <div class="toolbar" aria-label="Demonstrator controls">
+        <button type="button" id="previous">← PREV</button>
+        <button type="button" id="play" class="primary">PLAY</button>
+        <button type="button" id="next">NEXT →</button>
+        <span class="separator" aria-hidden="true"></span>
+        <button type="button" id="toggleUi">U / I WINDOW</button>
+        <button type="button" id="toggleSpark">ORANGE SPARK</button>
+        <button type="button" id="toggleCompare">COMPARE</button>
+        <button type="button" id="exportReceipt">EXPORT RECEIPT</button>
+      </div>
+
+      <div class="stage-grid">
+        <article class="viewport" id="viewport">
+          <div class="frame-label">
+            <span id="stageNumber">01 / 16</span>
+            <span id="stageClass">SOURCE FRAME</span>
+          </div>
+          <div class="image-well">
+            <img id="stageImage" alt="">
+            <img id="compareImage" class="compare-image" alt="Comparison frame">
+            <svg id="uiOverlay" class="overlay" viewBox="0 0 1000 700" role="img" aria-label="Interpretive U and I overlay">
+              <path class="u-outer" d="M90 92 C28 255 30 445 100 610" />
+              <path class="u-outer" d="M910 92 C972 255 970 445 900 610" />
+              <path class="u-inner" d="M325 150 C280 275 280 425 325 550" />
+              <path class="u-inner" d="M675 150 C720 275 720 425 675 550" />
+              <line class="i-axis" x1="500" y1="80" x2="500" y2="620" />
+              <circle class="still" cx="500" cy="350" r="22" />
+              <text class="overlay-label orange" x="76" y="72">OPEN U</text>
+              <text class="overlay-label pink" x="500" y="65" text-anchor="middle">I · SEAM</text>
+              <text class="overlay-label white" x="500" y="660" text-anchor="middle">C | RIS | T</text>
+              <text class="overlay-label pink" x="500" y="358" text-anchor="middle">SP</text>
+            </svg>
+            <svg id="sparkOverlay" class="overlay" viewBox="0 0 1000 700" role="img" aria-label="Interpretive orange source markers">
+              <rect class="spark-box" x="28" y="22" width="165" height="102" rx="22" />
+              <circle class="spark-ring" cx="902" cy="154" r="64" />
+              <path class="spark" d="M90 82 l18 -34 l7 27 l30 -8 l-26 19 l13 26 l-25 -16 l-22 22 l10 -31 z" />
+              <text class="overlay-label orange" x="810" y="245">SOURCE? / SPARK</text>
+            </svg>
+            <div class="overlay-boundary">ANNOTATION LAYER · NOT A MEASUREMENT</div>
+          </div>
+          <div class="progress"><span id="progressBar"></span></div>
+        </article>
+
+        <aside class="readout" aria-live="polite">
+          <div class="readout-block">
+            <span>STAGE</span>
+            <strong id="stageTitle"></strong>
+          </div>
+          <div class="readout-block">
+            <span>OPERATION</span>
+            <strong id="stageOperation"></strong>
+          </div>
+          <div class="readout-block">
+            <span>INPUT / CARRIER</span>
+            <strong id="stageCarrier"></strong>
+          </div>
+          <div class="readout-block">
+            <span>PRODUCER</span>
+            <code id="stageProducer"></code>
+          </div>
+          <div class="readout-block warning">
+            <span>CLAIM BOUNDARY</span>
+            <p id="stageBoundary"></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="interpretation">
+      <article>
+        <span class="tag measured">SOURCE-BOUND</span>
+        <h2>What the package does</h2>
+        <p>It makes the existing generators and generated frames traversable as one pipeline. Every frame returns to its producing script; synthetic fixtures and IEEE-derived inputs stay visibly distinct.</p>
+      </article>
+      <article>
+        <span class="tag annotation">INTERPRETIVE WINDOW</span>
+        <h2>Open U · I · C | RIS | T</h2>
+        <p>The orange outer bracket, pink inner fold and central I/seam are optional reading aids. They are not extracted variables and do not alter the source image or calculation.</p>
+      </article>
+      <article>
+        <span class="tag unresolved">OPEN QUESTION</span>
+        <h2>The orange box / spark</h2>
+        <p>The bright corner and endpoint regions can be marked for inspection. Their cause must be tested against support density, interpolation, boundary handling and resolution before receiving a physical interpretation.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span>DISPLAY / COMPARISON INSTRUMENT</span>
+    <span>Current source status: experimental prototypes · mixed synthetic and IEEE-derived frames</span>
+  </footer>
+
+  <script id="stage-data" type="application/json">
+  [
+    {"id":"delay","group":"RECONSTRUCT","title":"Delay Embedding","operation":"X(t), X(t+τ), X(t+2τ)","carrier":"synthetic signal fixture","image":"dynamics/nexah_3d_field.png","compare":"outputs/demo/nexah_surface_sheet.png","producer":"scripts/run_3d_field_reconstruction.py","boundary":"Illustrates a delay-coordinate construction; it is not evidence for a unique latent geometry."},
+    {"id":"sheet","group":"RECONSTRUCT","title":"Point Cloud → Sheet","operation":"local PCA, normals, curvature","carrier":"seeded synthetic fixture","image":"outputs/demo/nexah_surface_sheet.png","compare":"outputs/demo/nexah_surface_mesh.png","producer":"scripts/run_boundary_surface_sheet.py","boundary":"Low-curvature points are a thresholded display class, not a recovered physical surface."},
+    {"id":"mesh","group":"RECONSTRUCT","title":"Sheet Mesh","operation":"Delaunay triangulation in α–β","carrier":"same seeded synthetic fixture","image":"outputs/demo/nexah_surface_mesh.png","compare":"outputs/demo/nexah_boundary_map.png","producer":"scripts/run_surface_mesh.py","boundary":"Triangulation fills gaps in projection space; filled triangles do not certify sampled support."},
+    {"id":"boundary","group":"BOUNDARY","title":"Boundary Detection","operation":"core / boundary classification","carrier":"reconstructed sheet fixture","image":"outputs/demo/nexah_boundary_map.png","compare":"outputs/demo/nexah_boundary_gradient.png","producer":"scripts/run_boundary_detection.py","boundary":"Red marks the declared numerical boundary rule, not a universal separatrix."},
+    {"id":"gradient","group":"BOUNDARY","title":"Boundary Strength","operation":"continuous boundary gradient","carrier":"reconstructed boundary fixture","image":"outputs/demo/nexah_boundary_gradient.png","compare":"outputs/demo/nexah_stability_flow.png","producer":"scripts/rund_body_gradient_map.py","boundary":"Color encodes the implemented score only; strength has no external unit here."},
+    {"id":"stability","group":"FLOW","title":"Stability Flow","operation":"direction field toward lower boundary score","carrier":"boundary-gradient fixture","image":"outputs/demo/nexah_stability_flow.png","compare":"outputs/demo/nexah_stability_flow_smooth.png","producer":"scripts/run_stability_flow_field.py","boundary":"Arrows visualize a constructed navigation field, not measured system velocity."},
+    {"id":"smooth","group":"FLOW","title":"Smoothed Stability Flow","operation":"field smoothing in α–β","carrier":"constructed stability field","image":"outputs/demo/nexah_stability_flow_smooth.png","compare":"outputs/demo/nexah_flow_channels.png","producer":"scripts/run_smoothed_stability_flow.py","boundary":"Smoothing changes local direction and may create or erase apparent channels."},
+    {"id":"channels","group":"FLOW","title":"Flow Channels","operation":"high-score corridor extraction","carrier":"smoothed stability field","image":"outputs/demo/nexah_flow_channels.png","compare":"outputs/demo/nexah_flow_trajectory.png","producer":"scripts/run_flow_channel_extraction.py","boundary":"Channels are parameter-dependent candidates inside this fixture."},
+    {"id":"trajectory","group":"NAVIGATE","title":"Field Trajectory","operation":"numerical path integration","carrier":"constructed navigation field","image":"outputs/demo/nexah_flow_trajectory.png","compare":"outputs/demo/nexah_target_navigation.png","producer":"scripts/run_flow_trajectory_simulation.py","boundary":"The red path is simulated; convergence is not a control guarantee."},
+    {"id":"target","group":"NAVIGATE","title":"Target-Guided Navigation","operation":"local field + target bias","carrier":"constructed field and declared target","image":"outputs/demo/nexah_target_navigation.png","compare":"reconstruction/nexah_ieee_field_v68.png","producer":"scripts/run_target_guided_navigation.py","boundary":"Target attraction does not establish reachability, optimality or safety."},
+    {"id":"v68","group":"IEEE FIELD","title":"IEEE Field · V68-like","operation":"sampled state-gradient density","carrier":"IEEE-derived trajectory input","image":"reconstruction/nexah_ieee_field_v68.png","compare":"reconstruction/nexah_ieee_field_v68_clean.png","producer":"scripts/run_ieee_field_reconstruction_v68.py","boundary":"A representation of the supplied series; grid occupancy is not mechanism."},
+    {"id":"v68-clean","group":"IEEE FIELD","title":"IEEE Field · V68 Clean","operation":"smoothed density reconstruction","carrier":"IEEE-derived trajectory input","image":"reconstruction/nexah_ieee_field_v68_clean.png","compare":"reconstruction/nexah_ieee_field_v69_clean.png","producer":"scripts/run_ieee_field_v68_clean.py","boundary":"Interpolation outside dense support can dominate the visual."},
+    {"id":"v69-clean","group":"IEEE FIELD","title":"IEEE Field · V69 Clean","operation":"density + constructed stream field","carrier":"IEEE-derived trajectory input","image":"reconstruction/nexah_ieee_field_v69_clean.png","compare":"stability/nexah_field_frame_stability.png","producer":"scripts/run_ieee_field_v69_clean.py","boundary":"Streamlines are reconstruction products and do not certify causal flow."},
+    {"id":"resolution","group":"TEST","title":"Frame Stability","operation":"40 / 80 / 120 grid comparison","carrier":"same IEEE-derived trajectory","image":"stability/nexah_field_frame_stability.png","compare":"stability/nexah_stable_field_mask.png","producer":"scripts/run_field_frame_stability_test.py","boundary":"Visible disagreement is a sensitivity warning; invariance must be quantified, not eyeballed."},
+    {"id":"stable-mask","group":"TEST","title":"Stable Field Mask","operation":"cross-resolution difference threshold","carrier":"three reconstructed grid frames","image":"stability/nexah_stable_field_mask.png","compare":"dynamics/v68_v69_real_transition.gif","producer":"scripts/run_stable_field_mask.py","boundary":"The mask depends on grid, smoothing and threshold; green does not mean physically true."},
+    {"id":"transition","group":"RETURN","title":"Structure → Flow Return","operation":"V68 / V69 visual transition","carrier":"IEEE-derived comparison frames","image":"dynamics/v68_v69_real_transition.gif","compare":"reconstruction/nexah_ieee_field_v69_clean.png","producer":"scripts/run_build_v68_v69_real_gif_2.py","boundary":"Animation is a comparison device. Temporal tweening is not an observed physical transition."}
+  ]
+  </script>
+  <script src="demonstrator/field-reconstruction-demonstrator.js"></script>
+</body>
+</html>
