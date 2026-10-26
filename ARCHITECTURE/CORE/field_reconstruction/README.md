@@ -43,7 +43,9 @@ This module reconstructs:
 ```
 field_reconstruction/
 ├── NEXAH_FIELD_RECONSTRUCTION_DEMONSTRATOR.html  # source-bound pipeline instrument
+├── NEXAH_FIELD_VISUAL_BENCH.html                  # cross-series atlas and receipt
 ├── demonstrator/     # UI assets, receipt export and integrity check
+├── bench/            # visual-bench UI, source catalog and integrity check
 ├── reconstruction/   # raw vs cleaned field reconstruction
 ├── dynamics/         # flow transitions (GIFs)
 ├── stability/        # invariant vs frame-dependent regions
@@ -59,6 +61,14 @@ to traverse the existing reconstruction and navigation frames as one instrument.
 The optional open-U / I-seam / `C | RIS | T` and orange-spark overlays are
 explicitly separated from the calculated source frames. They are reading aids,
 not extracted observables or scientific claims.
+
+## 🧪 Visual Bench
+
+Open [`NEXAH_FIELD_VISUAL_BENCH.html`](NEXAH_FIELD_VISUAL_BENCH.html) for the
+polished cross-series atlas spanning Core reconstruction, V6–V10 field
+decomposition, robustness, the Zeta bridge and explicitly non-computational
+motif lenses. Its receipt returns every displayed frame to its original asset
+and producer path.
 
 ---
 

@@ -1,0 +1,730 @@
+{
+  "instrument": "NEXAH_FIELD_VISUAL_BENCH",
+  "identity": "ARCHITECTURE/CORE/field_reconstruction",
+  "generatedOn": "2026-10-26",
+  "authority": "Source-bound display lens. Original assets and producers retain content and evidence authority.",
+  "graphEffect": "No new Source Graph identity, relation, Study, Family or canonical count.",
+  "claimBoundary": "Owner mnemonic tags are navigation vocabulary, not computed variables or evidence of one mechanism.",
+  "assetCount": 40,
+  "assets": [
+    {
+      "id": "core-v68",
+      "family": "CORE",
+      "version": "V68",
+      "title": "IEEE Field Reconstruction",
+      "image": "reconstruction/nexah_ieee_field_v68.png",
+      "producer": "scripts/run_ieee_field_reconstruction_v68.py",
+      "class": "IEEE-DERIVED FRAME",
+      "reading": "Sampled state-gradient density before the clean V69 stream construction.",
+      "boundary": "Grid occupancy and bright corners are representation effects until support, interpolation and boundary handling are tested.",
+      "relation": "Opens the Core reconstruction lane.",
+      "motifs": [
+        "grid",
+        "fold"
+      ],
+      "imageSha256": "3ee3af32c7fb0c0d60564c10c3ab6d8b977d4a16fe62835a4a9c5de862cf3a5c",
+      "producerSha256": "442457cc4623b5d9d26a271f64b29d881569378869825d8a5ab189fdd23de8c3"
+    },
+    {
+      "id": "core-v69",
+      "family": "CORE",
+      "version": "V69",
+      "title": "Clean Field + Stream Structure",
+      "image": "reconstruction/nexah_ieee_field_v69_clean.png",
+      "producer": "scripts/run_ieee_field_v69_clean.py",
+      "class": "IEEE-DERIVED FRAME",
+      "reading": "The familiar purple field, reconstructed path and white stream family.",
+      "boundary": "Streamlines are constructed from the implemented field; they do not certify causal flow.",
+      "relation": "Primary field plate for the existing demonstrator.",
+      "motifs": [
+        "friendly ghost",
+        "mouth",
+        "fold"
+      ],
+      "imageSha256": "5256cfb6895512d3680634c0b9c2ad9bdb7e49ab7ad734b70a81d9b0c96d27c5",
+      "producerSha256": "f369bd4532133ccf284355db001aefda8087365548623bdb5351c2fe0442ead7"
+    },
+    {
+      "id": "core-transition",
+      "family": "CORE",
+      "version": "V68→V69",
+      "title": "Real Frame Transition",
+      "image": "dynamics/v68_v69_real_transition.gif",
+      "producer": "scripts/run_build_v68_v69_real_gif_2.py",
+      "class": "COMPARISON ANIMATION",
+      "reading": "A visual handoff between two generated representations.",
+      "boundary": "Tweening is a display operation, not an observed physical transition.",
+      "relation": "Connects reconstruction frames without merging their operators.",
+      "motifs": [
+        "fold"
+      ],
+      "imageSha256": "f7b541dcbb74792c5371eb03c7d8b864eae162415270a1c9792889d97e1b3de0",
+      "producerSha256": "f021866c1ac280d874808a2d7cca95ab40e63c6f92bbcb2fda0e95a6ce673d0d"
+    },
+    {
+      "id": "core-stability",
+      "family": "CORE",
+      "version": "GRID",
+      "title": "Resolution Sensitivity",
+      "image": "stability/nexah_field_frame_stability.png",
+      "producer": "scripts/run_field_frame_stability_test.py",
+      "class": "SENSITIVITY CHECK",
+      "reading": "The same field reconstructed at several grid resolutions.",
+      "boundary": "Visible agreement or disagreement is a diagnostic, not proof of invariance.",
+      "relation": "Adds the requested grid before motif reading.",
+      "motifs": [
+        "grid"
+      ],
+      "imageSha256": "83dccfdf8b9bdae5bf34be337edb2a3aff3d51240eb0c0693aa47eb692837534",
+      "producerSha256": "ccfc75befca7d519dd9302f0f23ce4cd89469b0038b62e07513ad7ea1b1c79db"
+    },
+    {
+      "id": "v6-4",
+      "family": "V6",
+      "version": "V6.4",
+      "title": "Boundary Extraction Engine",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v6_4_boundary_extraction/v6_4_boundary_extraction.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v6_4_boundary_extraction.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Orbit classes, distance, separatrix candidates, projection and switching zone in one report.",
+      "boundary": "The plotted boundaries inherit the prototype classes and thresholds.",
+      "relation": "Structure becomes an explicit boundary object.",
+      "motifs": [
+        "matryoshka",
+        "mouth",
+        "grid"
+      ],
+      "imageSha256": "4d4cd635a99b00fa609075af8813f9b68d2856778bb6c2e872f856dc0928cd69",
+      "producerSha256": "43fa7336bf0e3f3a87c9da5f44661f8d3eaaa1c5c05d6e6909ca379c6f66aa81"
+    },
+    {
+      "id": "v7-2",
+      "family": "V7",
+      "version": "V7.2",
+      "title": "Transition Cost Map",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v7_2/v7_2_cost_map.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v7_2_transition_cost_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "A target-centered cost field exposes the narrow splinter-like passage.",
+      "boundary": "Cost is defined by the prototype; the wedge is not automatically a physical gate.",
+      "relation": "Introduces navigation cost over extracted structure.",
+      "motifs": [
+        "mouth",
+        "blindfold"
+      ],
+      "imageSha256": "24c7912337168fb203925ccfc6901a985e451dc729962a21bb1fc057a2de6a3c",
+      "producerSha256": "68443937ac2d09b32cba45ec57f101f9437ece06795ad1075330c1f1d4db5afa"
+    },
+    {
+      "id": "v7-3",
+      "family": "V7",
+      "version": "V7.3",
+      "title": "Cost Navigation Field",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v7_3/v7_3_navigation.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v7_3_cost_navigation.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Direction arrows and sample paths are laid over the cost landscape.",
+      "boundary": "Directional alignment follows the constructed objective and is not a universal optimum.",
+      "relation": "Turns structure into a candidate flow instruction.",
+      "motifs": [
+        "red bud",
+        "mouth"
+      ],
+      "imageSha256": "8ce1e761e3c7e10fce7c8fbfc5964bc7361d67094a493b0b60ca72cbc74ca3e6",
+      "producerSha256": "d3c67cdbbc1f828ca18ad1baf7a0577d745e38e679a1e8ee57b38760843769af"
+    },
+    {
+      "id": "v7-4",
+      "family": "V7",
+      "version": "V7.4",
+      "title": "Failure / Reachability Map",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v7_4/v7_4_failure_map.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v7_4_failure_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "The splinter passage is isolated as a reachability region.",
+      "boundary": "Reachability belongs to this discretization, dynamics and stopping rule.",
+      "relation": "Separates possible passage from surrounding field.",
+      "motifs": [
+        "friendly ghost",
+        "mouth"
+      ],
+      "imageSha256": "1a6f57f279adc04219071135e8aaf2c4e51cd6143cc7ee0c6cc1600c14b07491",
+      "producerSha256": "f99e0c2fde008bf526b933e068b40892ce77b9c4b160905bb51b0f2ad5703acc"
+    },
+    {
+      "id": "v7-6",
+      "family": "V7",
+      "version": "V7.6",
+      "title": "Controlled Splinter Crossing",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v7_6/v7_6_crossing.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v7_6_splinter_crossing.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Controlled trajectories probe the boundary from the launch region.",
+      "boundary": "A plotted crossing does not establish robustness or safety beyond the fixture.",
+      "relation": "Tests navigation against the extracted splinter.",
+      "motifs": [
+        "red bud",
+        "fold"
+      ],
+      "imageSha256": "6ab5bc4dbb56cb68f5ec9546adba900346af3be567480184ebd8d912cab3e791",
+      "producerSha256": "e2181453199fc2d4c8df080cc0fdce5f1d2c2f5b5d102632308a3d2fb3e951a9"
+    },
+    {
+      "id": "v7-7",
+      "family": "V7",
+      "version": "V7.7",
+      "title": "Minimal Control Energy",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v7_7/v7_7_energy_map.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v7_7_minimal_control_energy_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "A control-strength map around the passage and target.",
+      "boundary": "The score is not physical energy in an external unit.",
+      "relation": "Adds effort to reachability.",
+      "motifs": [
+        "mouth",
+        "blindfold"
+      ],
+      "imageSha256": "658c1d56bfaacd022010e514fc70c28349474fd0b953bfed750730b3b80374c4",
+      "producerSha256": "37d467f2a6bf270c5f3b06244ecf7191113a8c9e5bdfbe8908124c61cfb1a5b5"
+    },
+    {
+      "id": "v7-8",
+      "family": "V7",
+      "version": "V7.8",
+      "title": "Optimal Crossing Direction",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v7_8_optimal_crossing_direction_field/v7_8_optimal_crossing_direction_field.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v7_8_optimal_crossing_direction_field.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Candidate crossing directions are evaluated over the field.",
+      "boundary": "Optimality is internal to the declared objective and discretization.",
+      "relation": "Adds direction to the control surface.",
+      "motifs": [
+        "mouth",
+        "fold"
+      ],
+      "imageSha256": "12a1dcec20a97f2800cdc339036b1085324356900b66b80b642e9d752a4c59a5",
+      "producerSha256": "cf2b75dc7ef05ea5f672b6633322bead5e0bb96f711d40ac3b30367638b4a7c2"
+    },
+    {
+      "id": "v7-9",
+      "family": "V7",
+      "version": "V7.9",
+      "title": "Field Alignment Consistency",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v7_9_flow_alignment_map/v7_9_flow_alignment_map.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v7_9_flow_alignment_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Alignment of the proposed direction field with the existing flow geometry.",
+      "boundary": "High alignment is internal consistency, not external validation.",
+      "relation": "Checks whether navigation and field tell the same local story.",
+      "motifs": [
+        "fold"
+      ],
+      "imageSha256": "e0ca86490deb7f9849e85f68a2e16c2106f9acdffa6399418d3fdfa2fd186306",
+      "producerSha256": "30207673360b0bd16b23a30a885ba08dc07e129ad6781ffc73e575546a196811"
+    },
+    {
+      "id": "v7-10",
+      "family": "V7",
+      "version": "V7.10",
+      "title": "Extracted Transition Structure",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v7_10/v7_10_transition_structure.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v7_10_transiion_structure_extraction.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "An adaptive extraction of transition geometry.",
+      "boundary": "Extracted marks depend on thresholds and neighborhood rules.",
+      "relation": "Compresses the field into a transition carrier.",
+      "motifs": [
+        "flower",
+        "fold"
+      ],
+      "imageSha256": "d62ebf076c41d192f267fac18e47524f15c8665f0b11c10d1e9581c4218369c0",
+      "producerSha256": "6f52a50544c1f878b81b61c68b5539022cfd1e6c7f80850b093a42b425f0c956"
+    },
+    {
+      "id": "v7-11",
+      "family": "V7",
+      "version": "V7.11",
+      "title": "Transition Ridge",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v7_11/v7_11_transition_ridge.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v7_11_transition_ridge_extraction.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "A sparse ridge readout of the transition structure.",
+      "boundary": "Sparsity is produced by the extractor and must not be read as completeness.",
+      "relation": "Prepares a compact boundary object for V8 checks.",
+      "motifs": [
+        "friendly ghost",
+        "flower"
+      ],
+      "imageSha256": "af8837c2f6339ebcd213e360aa2d3f3c6c0f6bb144343fa3d5a4cc436fa643a7",
+      "producerSha256": "1d639ad846e208ffae127c27576571d37ee0ac2b3adfe29d74aa00241ae123cb"
+    },
+    {
+      "id": "v8-0",
+      "family": "V8",
+      "version": "V8.0",
+      "title": "Lyapunov Stability Field",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_0_lyapunov_map/v8_0_lyapunov_map.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_0_lyapunov_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "A stability landscape with declared comparison points.",
+      "boundary": "The plotted exponent is derived from this model and sampling scheme.",
+      "relation": "Tests whether the boundary coincides with instability.",
+      "motifs": [
+        "blindfold",
+        "fold"
+      ],
+      "imageSha256": "c0b561b883eca776b2ca769ae516a1e5af0bb3ca77ed2339df41b6a7947ccdb3",
+      "producerSha256": "568d32213059371b2af3cd551cbb9fa5a720a7c479be2ab8de064b4ef1ba43e2"
+    },
+    {
+      "id": "v8-1",
+      "family": "V8",
+      "version": "V8.1",
+      "title": "Boundary vs Lyapunov Ridge",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_1_overlay_splinter_vs_lyapunov/v8_1_overlay_splinter_vs_lyapunov.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_1_overlay_splinter_vs_lyapunov.py",
+      "class": "NEGATIVE COMPARISON",
+      "reading": "The cyan splinter boundary and white Lyapunov ridge do not overlap here.",
+      "boundary": "IoU=0 is preserved as a negative result for these masks, not as universal independence.",
+      "relation": "Keeps boundary and instability separate.",
+      "motifs": [
+        "mouth",
+        "blindfold"
+      ],
+      "imageSha256": "65539ae08e1ed6a5bf4b3acbf0ba6a9a991da4b147b8bb73454b590d2ce4567f",
+      "producerSha256": "d27ed2c7b44a91259fe0b09b6bc56d529f3ee1f7a25630e9a4c61024c4944dbf"
+    },
+    {
+      "id": "v8-2",
+      "family": "V8",
+      "version": "V8.2",
+      "title": "Distance to Boundary vs Lyapunov",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_2_distance_to_boundary_vs_lyapunov/v8_2_distance_to_boundary_vs_lyapunov.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_2_distance_to_boundary_vs_lyapunov.py",
+      "class": "GENERATED COMPARISON",
+      "reading": "Spatial distance and stability are compared directly.",
+      "boundary": "The trend summarizes this sampled field; it is not a general law.",
+      "relation": "Measures separation instead of relying on visual similarity.",
+      "motifs": [
+        "friendly ghost"
+      ],
+      "imageSha256": "c92851c55d986e42796032ef2316411f3dcfc60064d6c298df4cd943c721abcf",
+      "producerSha256": "5667355fc7bf62afd3721466812a20e05df9519fc5b893f922fab504ff06a898"
+    },
+    {
+      "id": "v8-3",
+      "family": "V8",
+      "version": "V8.3",
+      "title": "Lyapunov Along Boundary",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_3_lyapunov_along_boundary/v8_3_lyapunov_along_boundary.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_3_lyapunov_along_boundary.py",
+      "class": "GENERATED COMPARISON",
+      "reading": "Weak points are sampled along normalized boundary arc length.",
+      "boundary": "Peaks depend on boundary ordering and threshold.",
+      "relation": "Turns the boundary into a one-dimensional diagnostic carrier.",
+      "motifs": [
+        "grid"
+      ],
+      "imageSha256": "d8791e7cf3b539ec464825e47abd9da560d9da864d95fb33151c2124a3b99699",
+      "producerSha256": "d02dfb42ce89544649d43208906321a59a0c62a556b7693b5ccef0e5346725fe"
+    },
+    {
+      "id": "v8-5",
+      "family": "V8",
+      "version": "V8.5",
+      "title": "Injection Tests from Gate Points",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_5_injection_tests/v8_5_injection_tests.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_5_injection_tests.py",
+      "class": "PERTURBATION TEST",
+      "reading": "Perturbed paths are injected from extracted weak points.",
+      "boundary": "Displayed convergence is local to the test family and does not eliminate other branches.",
+      "relation": "Challenges candidate gates with trajectories.",
+      "motifs": [
+        "mouth",
+        "fold"
+      ],
+      "imageSha256": "42d76f883d5a14d03650b0118999b17ec01798424effee962ac8b54aee487e4d",
+      "producerSha256": "d3b98f731b3a054f8a1ee8a8c82352182f20b68eb8891ec337b50fc0ca65206f"
+    },
+    {
+      "id": "v8-6",
+      "family": "V8",
+      "version": "V8.6",
+      "title": "True Decision Gates",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_6_true_decision_gates/v8_6_true_decision_gates.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_6_true_decision_gates.py",
+      "class": "NEGATIVE RESULT",
+      "reading": "The declared comparison does not find branching decision points.",
+      "boundary": "This null result must not be rewritten as absence under every model.",
+      "relation": "Closes the gate test without forcing a positive story.",
+      "motifs": [
+        "blindfold"
+      ],
+      "imageSha256": "21c478764e5cf8585682795c1823353f78cb161ed92765bb158c2395cc6fe2c2",
+      "producerSha256": "86e209eb093388b8fd8b526818f31a8a8e73cf7dbdcb95e13111226c05661ec6"
+    },
+    {
+      "id": "v8-7",
+      "family": "V8",
+      "version": "V8.7",
+      "title": "Decision Skeleton",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_7/v8_7_decision_skeleton.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_7_decision_skeleton.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "A sparse skeleton derived from the decision structure.",
+      "boundary": "Skeleton pixels are representation-dependent extraction products.",
+      "relation": "A compact handoff from fields to graph candidates.",
+      "motifs": [
+        "friendly ghost",
+        "flower"
+      ],
+      "imageSha256": "ff28548dd30124a6c9e151b078e075bffd676bfdd9e35c157ce4cea50601b74c",
+      "producerSha256": "8de1f1cf9eec1b29c9aefd341369d29103e46e70a44d749b165acd30a934288a"
+    },
+    {
+      "id": "v8-9",
+      "family": "V8",
+      "version": "V8.9",
+      "title": "Clean Decision Graph",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_9/v8_9_clean_graph.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_9_graph_cleaning.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Cleaned graph candidates from the extracted skeleton.",
+      "boundary": "Cleanup removes material by rule; absent edges are not impossible transitions.",
+      "relation": "Prepares the V9 transport view.",
+      "motifs": [
+        "grid"
+      ],
+      "imageSha256": "7a286624cd8cd249ab97df26df5877ce1e40166bffe16b55e90735d0b311d726",
+      "producerSha256": "dfe628a49f7e6684ecc69ed7fc82e3ce22b5130aec40594d2e1b7b6cb1c87277"
+    },
+    {
+      "id": "v9-4",
+      "family": "V9",
+      "version": "V9.4",
+      "title": "Orbit Entry Map",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v9_4/v9_4_orbit_entry.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v9_4_orbit_entry_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "A large annular entry region with a small nested inner channel.",
+      "boundary": "Orbit entry is defined by this prototype classification and grid.",
+      "relation": "Makes the Matryoshka reading explicit without turning it into an operator.",
+      "motifs": [
+        "matryoshka",
+        "mouth",
+        "grid"
+      ],
+      "imageSha256": "fabac1eefdc8a51fd47d197812d63f2b0a147c3768749e186c581a39cc18c755",
+      "producerSha256": "b47827ca05d7e879bdc0ab4d81417599af31d5f2e2d4c3c842a60f9dd1056fad"
+    },
+    {
+      "id": "v9-5a",
+      "family": "V9",
+      "version": "V9.5",
+      "title": "Orbit Entry Channels",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v9_5/v9_5_channels.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v9_5_orbit_entry_channels.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Candidate channels around outer and inner orbit boundaries.",
+      "boundary": "Channel pixels are not automatically traversable paths.",
+      "relation": "Extracts passages from the V9.4 map.",
+      "motifs": [
+        "matryoshka",
+        "mouth"
+      ],
+      "imageSha256": "17401c8d3fa1a50e55ecfcbb2ea967531b1a0d0e61b33b9ab233360530accebe",
+      "producerSha256": "d16b2c4649290be5e5dc27dcf8a54d6b3e678396cf679726392e88e41d6f24b1"
+    },
+    {
+      "id": "v9-5b",
+      "family": "V9",
+      "version": "V9.5",
+      "title": "True Orbit Entry Channels",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v9_5/v9_5_true_channels.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v9_5_orbit_entry_channels.py",
+      "class": "FILTERED PROTOTYPE",
+      "reading": "The filtered channel mask over the annular entry field.",
+      "boundary": "‘True’ is historical script terminology, not a universal truth claim.",
+      "relation": "Filters candidates under the script rule.",
+      "motifs": [
+        "matryoshka",
+        "blindfold"
+      ],
+      "imageSha256": "f47a13fa52ff7851718df1b5bd47b7cdffde0f605b7f32eecdb59b5196d34b8b",
+      "producerSha256": "d16b2c4649290be5e5dc27dcf8a54d6b3e678396cf679726392e88e41d6f24b1"
+    },
+    {
+      "id": "v9-6",
+      "family": "V9",
+      "version": "V9.6",
+      "title": "Direction Field on Entry Channels",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v9_6/v9_6_direction_field.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v9_6_direction_field.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Angular direction is evaluated on entry channels.",
+      "boundary": "Colors are local phase angles in the implemented field.",
+      "relation": "Adds orientation to passage geometry.",
+      "motifs": [
+        "flower",
+        "matryoshka"
+      ],
+      "imageSha256": "d8a892a3d8aa663f8be317043558974e8e3cc58999f6397e54eeafcd57669244",
+      "producerSha256": "9ec9282a28f0bd78afb4cbe0a1cf97b6dd638f490400d2d9b6426bad4e0eed8f"
+    },
+    {
+      "id": "v9-7",
+      "family": "V9",
+      "version": "V9.7",
+      "title": "Transport Map · Entry to Outcome",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v9_7/v9_7_transport_map.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v9_7_transport_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Entry samples wind toward a compact outcome region.",
+      "boundary": "Transport lines are simulated under the prototype dynamics.",
+      "relation": "Moves from local direction to outcome mapping.",
+      "motifs": [
+        "flower",
+        "fold"
+      ],
+      "imageSha256": "f3e5ec0fe9151264ae7b0cf41fb2b1df27ce42689e0b390d8d7fe80503b34c18",
+      "producerSha256": "af60b68dcdfc9f25f27745a4c057d7ad17417e30e164401695e216556a6cfd50"
+    },
+    {
+      "id": "v9-7b",
+      "family": "V9",
+      "version": "V9.7b",
+      "title": "Transport Map · Symmetry Broken",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v9_7b/v9_7b_transport_map.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v9_7b_transport_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "The transport family opens into an asymmetric fold.",
+      "boundary": "Symmetry breaking is model-defined, not inferred from appearance alone.",
+      "relation": "Tests transport under changed symmetry.",
+      "motifs": [
+        "flower",
+        "friendly ghost",
+        "fold"
+      ],
+      "imageSha256": "adc43329ba3c57ad79f1e83dc999b7186f65b578ecab77aef5996161374971c0",
+      "producerSha256": "3929b63469c65ee5bcb5a5456341da0978cdd5748fcb4bace13b77114cf11735"
+    },
+    {
+      "id": "v9-8",
+      "family": "V9",
+      "version": "V9.8",
+      "title": "Multi-Regime Transport",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v9_8/v9_8_transport_map.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v9_8_multi_regime_field.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Several transport regimes share one frame.",
+      "boundary": "Color families are model regimes, not physical substances.",
+      "relation": "Expands transport beyond one regime.",
+      "motifs": [
+        "flower",
+        "fold"
+      ],
+      "imageSha256": "a63ae9c3819b7025bd11d3f601dff2f5f817d4f3585d7dbc92e3f803336c9755",
+      "producerSha256": "5f4e6a3dd303b887fe826ab36d98335595ba679c01dfd39e924e34393906f412"
+    },
+    {
+      "id": "v9-9",
+      "family": "V9",
+      "version": "V9.9",
+      "title": "Dynamic Regime Field",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v9_9/v9_9_dynamic_regime_field.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v9_9_dynamic_regime_field.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "A compact active regime remains inside the broader carrier.",
+      "boundary": "The active region inherits the model threshold and temporal rule.",
+      "relation": "Compresses transport into a dynamic field state.",
+      "motifs": [
+        "matryoshka",
+        "friendly ghost"
+      ],
+      "imageSha256": "b31df1a9accbc4194d02920ff698353e3ad81a1096474e4202c794b7c0339685",
+      "producerSha256": "343cdb570299f6f97cbd861a9cfc2c16c8da75dfabe67598988f51893d5b5b9e"
+    },
+    {
+      "id": "v10-0",
+      "family": "V10",
+      "version": "V10.0",
+      "title": "Regime Map",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v10_0/v10_0_regime_map.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v10_0_regime_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "The complete grid is classified into regime labels.",
+      "boundary": "Labels are algorithm output classes without independent scientific identity.",
+      "relation": "Turns dynamic transport into a categorical map.",
+      "motifs": [
+        "grid",
+        "matryoshka"
+      ],
+      "imageSha256": "88c9cde2c09643c623c3debd0588f1e60f1959c8f6612e5019b81383f007d0a3",
+      "producerSha256": "654fd25fc7d6c7fc2463ae91a0a430d8febc00d56ff460fae721e1379a3b5c2c"
+    },
+    {
+      "id": "v10-1s",
+      "family": "V10",
+      "version": "V10.1",
+      "title": "Boundary Strength",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v10_1/v10_1_boundary_strength.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v10_1_boundary_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Transition intensity concentrates along regime boundaries.",
+      "boundary": "Intensity is the script score and has no external physical unit here.",
+      "relation": "Returns regime classes to a continuous signal.",
+      "motifs": [
+        "flower",
+        "friendly ghost"
+      ],
+      "imageSha256": "b2be736b79651e8903a4848e2cc9fa915093f6e979d7e6d1a4b1bd39a62021c4",
+      "producerSha256": "d9f85493a468b32ac737070d6f3817b7154eb4b38be36953ac149b9adc181f03"
+    },
+    {
+      "id": "v10-1b",
+      "family": "V10",
+      "version": "V10.1",
+      "title": "Boundary · Separatrix",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v10_1/v10_1_boundary_raw.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v10_1_boundary_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "A binary skeleton across the regime map.",
+      "boundary": "The historical ‘separatrix’ title is bounded to this extraction.",
+      "relation": "Closes the V2–V10 sequence.",
+      "motifs": [
+        "grid",
+        "friendly ghost"
+      ],
+      "imageSha256": "2f6aa4ac7c53e39dda1fdd76be6bd7e74875e57cadc8fb0cb3d3a37f49a561da",
+      "producerSha256": "d9f85493a468b32ac737070d6f3817b7154eb4b38be36953ac149b9adc181f03"
+    },
+    {
+      "id": "noise-structure",
+      "family": "NOISE",
+      "version": "ROBUST",
+      "title": "Structure Comparison Under Noise",
+      "image": "robustness/nexah_structure_comparison.png",
+      "producer": "../../../APPLICATIONS/archive/root_demos/run_lorenz_vs_ieee_noise_robustness.py",
+      "class": "HISTORICAL DEMO FRAME",
+      "reading": "Oscillatory and real-signal traces are compared under noise.",
+      "boundary": "This retained demo is not a new validation run and receives no claim upgrade.",
+      "relation": "Tests the reading under a changed carrier.",
+      "motifs": [
+        "fold"
+      ],
+      "imageSha256": "e3752ad7a06f9d74a8c6b74d05d1bc48f17d78c56234e7d942690acc8bf21021",
+      "producerSha256": "17f1b324aff454beae7892aa96e0f5bf247c85902052bc532ce1afc99eabe1cb"
+    },
+    {
+      "id": "noise-robust",
+      "family": "NOISE",
+      "version": "ROBUST",
+      "title": "Noise Robustness",
+      "image": "robustness/nexah_noise_robustness_v3.png",
+      "producer": "../../../APPLICATIONS/archive/root_demos/run_noise_robustness_demo.py",
+      "class": "HISTORICAL DEMO FRAME",
+      "reading": "A robustness summary retained with this module.",
+      "boundary": "The bench verifies file provenance only; it does not replay the benchmark.",
+      "relation": "Adds a stress-test lane.",
+      "motifs": [
+        "grid"
+      ],
+      "imageSha256": "64c3ad1429071ef6efb8bb458e4af608dfabccc3190ea5d08ec9765a0330aace",
+      "producerSha256": "f06a7330a0c7976e501d5d21c82fe742750674d4d4ea6d21380a7aa07376d4ac"
+    },
+    {
+      "id": "zeta-demo",
+      "family": "ZETA",
+      "version": "ζ",
+      "title": "Rotating Contributions → Gate Candidates",
+      "image": "../../../PROTO_CORE/NEXAH_CORE/outputs/zeta_demo/zeta_nexah_demo.png",
+      "producer": "../../../PROTO_CORE/NEXAH_CORE/scripts/zeta_nexah_demo.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Rotating contributions, a ζ-like path and coherence minima together.",
+      "boundary": "Gate candidates are threshold products, not physical gate mechanisms.",
+      "relation": "A bounded bridge from interference to transition candidates.",
+      "motifs": [
+        "matryoshka",
+        "mouth",
+        "fold"
+      ],
+      "imageSha256": "1f98867eee078777cf6516ed57e0535980329bdc04fd337fab5be547f2d86c65",
+      "producerSha256": "cfe25973a0a2757d145423da10a89cd243b26d813fff5143ba9f7898be4bad67"
+    },
+    {
+      "id": "zeta-bridge",
+      "family": "ZETA",
+      "version": "VISUAL 08",
+      "title": "Zeta × NEXAH Bridge",
+      "image": "../../../PROTO_CORE/NEXAH_DEMONSTRATOR/visuals/core/NEXAH_LENS_on_the_ZETA_FIELD_ii.png",
+      "producer": "../../../PROTO_CORE/NEXAH_CORE/scripts/zeta_nexah_bridge.py",
+      "class": "BRIDGE VISUAL",
+      "reading": "Interference, field structure, coherence and candidates remain distinct layers.",
+      "boundary": "The visual does not prove Zeta and NEXAH are one mechanism.",
+      "relation": "Relates the lens without collapsing carriers.",
+      "motifs": [
+        "matryoshka",
+        "mouth",
+        "grid"
+      ],
+      "imageSha256": "18799e3c0720466345a1d0fd79ed85631da3f48084f938236e1472e23899687c",
+      "producerSha256": "25d058135a7cbebc2c4f944d9e8958d92a570a3250dec6abf5717782fcf66831"
+    },
+    {
+      "id": "lens",
+      "family": "ZETA",
+      "version": "VISUAL 07",
+      "title": "The NEXAH Lens",
+      "image": "../../../PROTO_CORE/NEXAH_DEMONSTRATOR/visuals/core/VISUAL_07_THE_NEXAH_LENS.png",
+      "producer": "../../../PROTO_CORE/NEXAH_CORE/scripts/zeta_nexah_bridge_vii.py",
+      "class": "BRIDGE VISUAL",
+      "reading": "Top view, 3D projection, signal and coherence expose multiple views.",
+      "boundary": "Each panel retains its own representation contract.",
+      "relation": "The Matryoshka principle as declared views.",
+      "motifs": [
+        "matryoshka",
+        "grid"
+      ],
+      "imageSha256": "7333190fc6999a6f02768a89c15ba487bd5c68080afbe39f8e5e1ec150de481c",
+      "producerSha256": "4578d7ea19c3705ca007277f10ede1cdf55b90c93af0710a775bc4b5dc7dc5cf"
+    },
+    {
+      "id": "ghost",
+      "family": "MOTIF",
+      "version": "VISUAL 06",
+      "title": "Full Structure vs Ghost Snake",
+      "image": "../../../PROTO_CORE/NEXAH_DEMONSTRATOR/visuals/core/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png",
+      "producer": "../../../PROTO_CORE/NEXAH_DEMONSTRATOR/visuals/core/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png",
+      "class": "INTERPRETIVE VISUAL",
+      "reading": "The repo already contains an explicit ghost/snake comparison.",
+      "boundary": "Ghost, mouth, blindfold, bud and flower are owner mnemonics unless an algorithm defines them.",
+      "relation": "Provides the friendly-ghost reading without relabeling computed features.",
+      "motifs": [
+        "friendly ghost",
+        "mouth",
+        "blindfold",
+        "fold"
+      ],
+      "imageSha256": "25f761cfc3932e6f68ef1c7cd1fa5c8335a4aad9a06c87ebe6f66804da35167c",
+      "producerSha256": "25f761cfc3932e6f68ef1c7cd1fa5c8335a4aad9a06c87ebe6f66804da35167c"
+    },
+    {
+      "id": "grid-field",
+      "family": "MOTIF",
+      "version": "VISUAL 01",
+      "title": "Grid vs Field",
+      "image": "../../../PROTO_CORE/NEXAH_DEMONSTRATOR/visuals/core/VISUAL01_GRIDvsFIELD.png",
+      "producer": "../../../PROTO_CORE/NEXAH_DEMONSTRATOR/visuals/core/VISUAL01_GRIDvsFIELD.png",
+      "class": "INTERPRETIVE VISUAL",
+      "reading": "A declared comparison between discrete support and continuous-looking field.",
+      "boundary": "This explains a distinction; it does not establish equivalence.",
+      "relation": "Names the carrier distinction behind the bench.",
+      "motifs": [
+        "grid",
+        "fold"
+      ],
+      "imageSha256": "f4bdacabea9e0972454120e07d8ef0aeb4efadd0f9f57d0f453065ca974f11dc",
+      "producerSha256": "f4bdacabea9e0972454120e07d8ef0aeb4efadd0f9f57d0f453065ca974f11dc"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NEXAH Field Visual Bench</title>
+  <link rel="stylesheet" href="bench/field-visual-bench.css">
+</head>
+<body>
+  <header class="masthead">
+    <div>
+      <p class="eyebrow">NEXAH CORE · SOURCE-BOUND VISUAL BENCH</p>
+      <h1>Field → Structure → Navigation → Stability → Transport → Time</h1>
+      <p class="lede">One polished atlas for the existing reconstruction, decomposition, robustness and Zeta bridge frames.</p>
+    </div>
+    <div class="identity-block">
+      <span>REUSED IDENTITY</span><strong>ARCHITECTURE / CORE / field_reconstruction</strong>
+      <small>Curated lens · no new Study · no claim promotion</small>
+    </div>
+  </header>
+  <nav class="phase-rail" id="phaseRail" aria-label="Visual families"></nav>
+  <main>
+    <section class="control-bar" aria-label="Bench controls">
+      <div class="mode-group" role="group" aria-label="View mode">
+        <button type="button" class="active" data-mode="atlas">ATLAS</button>
+        <button type="button" data-mode="compare">COMPARE</button>
+        <button type="button" data-mode="motifs">MOTIF LENS</button>
+        <button type="button" data-mode="receipt">RECEIPT</button>
+      </div>
+      <label class="search-label"><span>FIND</span><input id="search" type="search" placeholder="V9.5, boundary, ghost…"></label>
+      <button type="button" id="previous">←</button><button type="button" id="next">→</button>
+      <button type="button" id="exportReceipt">EXPORT RECEIPT</button>
+      <a class="button-link" href="NEXAH_FIELD_RECONSTRUCTION_DEMONSTRATOR.html">PIPELINE ↗</a>
+    </section>
+    <section class="bench-shell">
+      <aside class="asset-rail"><div class="rail-head"><span id="visibleCount">0</span><small>FRAMES</small></div><div id="assetRail"></div></aside>
+      <article class="viewer" aria-live="polite">
+        <div class="viewer-head"><div><span id="frameFamily" class="family-label"></span><h2 id="frameTitle"></h2></div><div id="frameIndex" class="frame-index"></div></div>
+        <div class="image-stage" id="imageStage">
+          <img id="primaryImage" alt="">
+          <div class="compare-layer" id="compareLayer"><img id="secondaryImage" alt="Comparison frame"></div><div class="seam" id="compareSeam"></div>
+          <div class="motif-overlay"><span class="motif-word motif-top">MATRYOSHKA</span><span class="motif-word motif-left">FRIENDLY GHOST</span><span class="motif-word motif-right">MOUTH / BLINDFOLD</span><span class="motif-word motif-bottom">RED BUD → FLOWER · GRID · FOLD</span></div>
+          <div class="state-flag" id="stateFlag"></div>
+        </div>
+        <label class="compare-control"><span>COMPARISON SEAM</span><input id="compareRange" type="range" min="0" max="100" value="50"><output id="compareValue">50%</output></label>
+        <div class="motif-strip" id="motifStrip"></div>
+      </article>
+      <aside class="inspector">
+        <section><span class="label">READING</span><strong id="frameReading"></strong></section>
+        <section><span class="label">SOURCE ASSET</span><code id="frameSource"></code></section>
+        <section><span class="label">PRODUCER</span><code id="frameProducer"></code></section>
+        <section><span class="label">EVIDENCE CLASS</span><strong id="frameClass"></strong></section>
+        <section class="boundary-panel"><span class="label">CLAIM BOUNDARY</span><p id="frameBoundary"></p></section>
+        <section><span class="label">BENCH RELATION</span><p id="frameRelation"></p></section>
+      </aside>
+    </section>
+    <section class="receipt-panel" id="receiptPanel" hidden><header><h2>Source Receipt</h2><span id="receiptSummary"></span></header><div class="receipt-grid" id="receiptGrid"></div></section>
+  </main>
+  <footer><span>OWNER MNEMONICS ≠ COMPUTED FEATURES</span><span>Source files remain authoritative at their original paths.</span></footer>
+  <script src="bench/field-visual-bench-data.js"></script>
+  <script src="bench/field-visual-bench.js"></script>
+</body>
+</html>
