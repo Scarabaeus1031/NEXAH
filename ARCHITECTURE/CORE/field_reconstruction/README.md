@@ -42,8 +42,10 @@ This module reconstructs:
 
 ```
 field_reconstruction/
+├── NEXAH_FIELD_RECONSTRUCTION_PACKAGE.html       # definitive package landing page
 ├── NEXAH_FIELD_RECONSTRUCTION_DEMONSTRATOR.html  # source-bound pipeline instrument
-├── NEXAH_FIELD_VISUAL_BENCH.html                  # cross-series atlas and receipt
+├── NEXAH_FIELD_VISUAL_BENCH.html                  # 61-frame atlas, wall and receipt
+├── package/          # package surface and closeout validator
 ├── demonstrator/     # UI assets, receipt export and integrity check
 ├── bench/            # visual-bench UI, source catalog and integrity check
 ├── reconstruction/   # raw vs cleaned field reconstruction
@@ -56,6 +58,10 @@ field_reconstruction/
 
 ## 🧭 Integrated Demonstrator
 
+Open [`NEXAH_FIELD_RECONSTRUCTION_PACKAGE.html`](NEXAH_FIELD_RECONSTRUCTION_PACKAGE.html)
+for the definitive package entry. It binds the pipeline, visual bench and hash
+receipt into one closed, source-bound handoff surface.
+
 Open [`NEXAH_FIELD_RECONSTRUCTION_DEMONSTRATOR.html`](NEXAH_FIELD_RECONSTRUCTION_DEMONSTRATOR.html)
 to traverse the existing reconstruction and navigation frames as one instrument.
 The optional open-U / I-seam / `C | RIS | T` and orange-spark overlays are
@@ -67,8 +73,9 @@ not extracted observables or scientific claims.
 Open [`NEXAH_FIELD_VISUAL_BENCH.html`](NEXAH_FIELD_VISUAL_BENCH.html) for the
 polished cross-series atlas spanning Core reconstruction, V6–V10 field
 decomposition, robustness, the Zeta bridge and explicitly non-computational
-motif lenses. Its receipt returns every displayed frame to its original asset
-and producer path.
+motif lenses. The 61-frame instrument includes Atlas, Guided Tour, Compare,
+Motif Lens, Visual Wall and Receipt modes. Its receipt returns every displayed
+frame to its original asset and producer path.
 
 ---
 

@@ -4,8 +4,10 @@
 `ARCHITECTURE/CORE/field_reconstruction` identity and references original
 assets at their owning paths.
 
-Modes: chronological **Atlas**, movable-seam **Compare**, explicitly
-non-computational **Motif Lens**, and complete **Receipt**. Matryoshka,
+Modes: chronological **Atlas**, autoplay **Guided Tour**, movable-seam
+**Compare**, explicitly non-computational **Motif Lens**, complete
+**Visual Wall**, and **Receipt**. The catalog contains 61 source-bound frames.
+Matryoshka,
 friendly ghost, mouth, blindfold, bud/flower, grid and fold are owner mnemonic
 tags only; they are not measured variables or evidence of a shared mechanism.
 

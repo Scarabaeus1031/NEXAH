@@ -42,7 +42,7 @@ h1 { font: 700 clamp(2rem, 5vw, 4.8rem)/.95 system-ui, sans-serif; letter-spacin
 .pipeline button.active { border-color: var(--pink); color: white; background: #251932; }
 .instrument { border: 1px solid #73531c; background: #0e1018e8; box-shadow: 0 28px 80px #0008; }
 .toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 14px; border-bottom: 1px solid var(--line); }
-.toolbar button { background: #181711; color: var(--white); border: 1px solid #66501c; border-radius: 7px; padding: 11px 14px; cursor: pointer; }
+.toolbar button, .toolbar .tool-link { background: #181711; color: var(--white); border: 1px solid #66501c; border-radius: 7px; padding: 11px 14px; cursor: pointer; font: inherit; text-decoration: none; }
 .toolbar button.primary, .toolbar button.active { background: var(--gold); color: #171006; border-color: #ffd471; }
 .separator { flex: 1; }
 .stage-grid { display: grid; grid-template-columns: minmax(0, 1fr) 330px; min-height: 740px; }

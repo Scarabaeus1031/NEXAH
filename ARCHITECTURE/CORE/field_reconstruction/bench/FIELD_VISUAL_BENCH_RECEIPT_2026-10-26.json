@@ -5,7 +5,7 @@
   "authority": "Source-bound display lens. Original assets and producers retain content and evidence authority.",
   "graphEffect": "No new Source Graph identity, relation, Study, Family or canonical count.",
   "claimBoundary": "Owner mnemonic tags are navigation vocabulary, not computed variables or evidence of one mechanism.",
-  "assetCount": 40,
+  "assetCount": 61,
   "assets": [
     {
       "id": "core-v68",
@@ -79,6 +79,114 @@
       "producerSha256": "ccfc75befca7d519dd9302f0f23ce4cd89469b0038b62e07513ad7ea1b1c79db"
     },
     {
+      "id": "v2",
+      "family": "V2–V5",
+      "version": "V2",
+      "title": "Field Separation",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v2_field_split_visual/v2_field_split_visual.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v2_field_split_visual.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "The first explicit separation of field structure.",
+      "boundary": "The split is a representation produced by the script, not a natural-kind claim.",
+      "relation": "Begins the field-emergence chronology.",
+      "motifs": [
+        "grid",
+        "fold"
+      ],
+      "imageSha256": "686e5199005f0c78c1070682fdc2b73ae99222e5abfd743f9bc5b7a5ed8a7cc9",
+      "producerSha256": "40236b803a1181e54736b6703fa30fef083bac6e87a55d79dbc4963da711c369"
+    },
+    {
+      "id": "v4",
+      "family": "V2–V5",
+      "version": "V4",
+      "title": "Unified Field View",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v4_unified_field_visual/v4_unified_field_visual.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v4_unified_field_visual.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Discrete components are presented as one continuous field object.",
+      "boundary": "Visual continuity does not establish physical continuity.",
+      "relation": "Recombines the early split into one declared view.",
+      "motifs": [
+        "friendly ghost",
+        "fold"
+      ],
+      "imageSha256": "8b26189a4f192f9b3507171b6871767b8cc76916abea23370b950263343abb32",
+      "producerSha256": "8ff875f917e45fd6145e0ed869671cd59ecca242ce74b57f532fec0e00ed7a26"
+    },
+    {
+      "id": "v5",
+      "family": "V2–V5",
+      "version": "V5",
+      "title": "Gradient vs Rotation",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v5_gradient_vs_rotation/v5_gradient_vs_rotation.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v5_gradient_vs_rotation.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Gradient and rotational components are compared in one carrier.",
+      "boundary": "The decomposition is method-defined and must not be universalized.",
+      "relation": "Prepares the move from field to geometry.",
+      "motifs": [
+        "flower",
+        "fold"
+      ],
+      "imageSha256": "b4f18550d5704bac7ab108d708ccdb1acfbf033bafc42fa7f841b2e5375d4330",
+      "producerSha256": "0d01e022bbad717c9d3584ca567ca4c14f6ac4525624a01375f4f8863cf12230"
+    },
+    {
+      "id": "v6-1",
+      "family": "V6",
+      "version": "V6.1",
+      "title": "Multi-View System",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v6_1_multi_view/v6_1_multi_view.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v6_1_multi_view.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Several representations of the same prototype are shown together.",
+      "boundary": "Cross-view resemblance is not independent confirmation.",
+      "relation": "Introduces declared view plurality.",
+      "motifs": [
+        "matryoshka",
+        "grid"
+      ],
+      "imageSha256": "0bc9dd4935abe1c9d7db91410662944d77247fe4241d052c528b8e824db24f94",
+      "producerSha256": "22abde11c73e2d7d3ff9e85cfd3ca6feae43b30831309263f8c77b65c970f212"
+    },
+    {
+      "id": "v6-2",
+      "family": "V6",
+      "version": "V6.2",
+      "title": "Orbit Landscape",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v6_2_landscape_orbits/v6_2_landscape_orbits.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v6_2_landscape_orbits.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Orbit families emerge over the landscape.",
+      "boundary": "Orbit families inherit the numerical integration and sampling choices.",
+      "relation": "Moves from continuous field to path families.",
+      "motifs": [
+        "matryoshka",
+        "flower"
+      ],
+      "imageSha256": "71efe732e9a9243eed761d22c35071a6a4703fa56f916affac9071c80481b459",
+      "producerSha256": "85bd4c3fda0cf9f00410ad4657eb84d3eec5477e5c8aee23e05e5a556f232605"
+    },
+    {
+      "id": "v6-3",
+      "family": "V6",
+      "version": "V6.3",
+      "title": "Orbit Class Map",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v6_3_orbit_class_map/v6_3_orbit_class_map.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v6_3_orbit_class_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "The orbit landscape is classified into dynamic regions.",
+      "boundary": "Class labels are algorithmic outputs, not independent identities.",
+      "relation": "Makes orbit regimes inspectable before boundary extraction.",
+      "motifs": [
+        "grid",
+        "blindfold"
+      ],
+      "imageSha256": "6b9949b5d3bab689fc674259369836f1fa3ac75373e51dde1b474156055fcb36",
+      "producerSha256": "80b1e6f679ff4ff604f72e247fa88b176e7511b4001d78799e655b97229662b8"
+    },
+    {
       "id": "v6-4",
       "family": "V6",
       "version": "V6.4",
@@ -96,6 +204,42 @@
       ],
       "imageSha256": "4d4cd635a99b00fa609075af8813f9b68d2856778bb6c2e872f856dc0928cd69",
       "producerSha256": "43fa7336bf0e3f3a87c9da5f44661f8d3eaaa1c5c05d6e6909ca379c6f66aa81"
+    },
+    {
+      "id": "v6-5",
+      "family": "V6",
+      "version": "V6.5",
+      "title": "Connected Boundaries",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v6_5_boundary_curves/v6_5_boundary_curves.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v6_5_boundary_curves.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Scattered boundary evidence is connected into candidate curves.",
+      "boundary": "Connectivity may be introduced by the extraction rule.",
+      "relation": "Turns boundary pixels into geometry.",
+      "motifs": [
+        "friendly ghost",
+        "fold"
+      ],
+      "imageSha256": "d6ebf162fbaf53bc00035c0cc73c8f97fd9177b64df6d1034ecbf8d0d90b16c5",
+      "producerSha256": "17f791baa09252ce8369db0e7b86c02bf32d688877ab1fe9985a770b5d47fb79"
+    },
+    {
+      "id": "v6-7",
+      "family": "V6",
+      "version": "V6.7",
+      "title": "Class Detection Map",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v6_7/v6_7_class_map.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v6_7_class_detection_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Detected field regions are summarized as classes.",
+      "boundary": "The map reports the classifier used by this prototype.",
+      "relation": "Closes the structure-extraction family.",
+      "motifs": [
+        "grid",
+        "mouth"
+      ],
+      "imageSha256": "333ced9f71312729fcb9df496aff22ef194d87b8c3ad3e859b660eb1c218aace",
+      "producerSha256": "eb53bd1564a57b7dfcf8d0ccdae9d7c924b068b1bf7e84e20db1eca12cbcf683"
     },
     {
       "id": "v7-2",
@@ -382,6 +526,167 @@
       "producerSha256": "8de1f1cf9eec1b29c9aefd341369d29103e46e70a44d749b165acd30a934288a"
     },
     {
+      "id": "v8-1-field",
+      "family": "V8",
+      "version": "V8.1",
+      "title": "Competing Attractor Field",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_1/v8_1_field.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_1_competing_field.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Competing attraction is displayed as a continuous field.",
+      "boundary": "The field is a constructed comparison, not evidence of autonomous agents.",
+      "relation": "Adds the broad attractor context behind the gate tests.",
+      "motifs": [
+        "mouth",
+        "blindfold"
+      ],
+      "imageSha256": "87d84219ad5019bd19353aed123caecdac7cfe9677eb9b40ef50b53d25593e2a",
+      "producerSha256": "58a9eefe4ca1cd91bab53a065052b4f2cec5eed11606d6db9123ba0370069039"
+    },
+    {
+      "id": "v8-1-trajectories",
+      "family": "V8",
+      "version": "V8.1",
+      "title": "Competing Flow Trajectories",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_1/v8_1_trajectories.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_1_competing_field.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Sample trajectories probe the competing field.",
+      "boundary": "Shown paths are selected simulations, not a complete phase portrait.",
+      "relation": "Connects field competition to visible motion.",
+      "motifs": [
+        "flower",
+        "fold"
+      ],
+      "imageSha256": "4b0a81e78d33da46ee6545b785b53be783be5a611d59c4d82e0f673d4065fc95",
+      "producerSha256": "58a9eefe4ca1cd91bab53a065052b4f2cec5eed11606d6db9123ba0370069039"
+    },
+    {
+      "id": "v8-2-delay",
+      "family": "V8",
+      "version": "V8.2",
+      "title": "Decision Delay Map",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_2/v8_2_delay_map.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_2_decision_delay_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Decision delay is mapped over the annular region.",
+      "boundary": "Delay inherits the stopping and classification rules.",
+      "relation": "Adds temporal cost to spatial competition.",
+      "motifs": [
+        "matryoshka",
+        "blindfold"
+      ],
+      "imageSha256": "733b9178f062d7533aa9b3ba616c18e63019b5ac1662aa69c6cc14a2733c45e8",
+      "producerSha256": "56da34c7a29a79243648ff8a2bf3e4a75881ee90fa3cff5fb54d364fb3813819"
+    },
+    {
+      "id": "v8-3-overlay",
+      "family": "V8",
+      "version": "V8.3",
+      "title": "Delay vs Lyapunov Overlay",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_3/overlay.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_3_delay_vs_lyapunov.py",
+      "class": "GENERATED COMPARISON",
+      "reading": "Delay and resampled stability are aligned in one view.",
+      "boundary": "Overlay proximity is not equivalence or causation.",
+      "relation": "Tests whether two diagnostics occupy the same regions.",
+      "motifs": [
+        "matryoshka",
+        "fold"
+      ],
+      "imageSha256": "c8c516baf297793181e479fba409876d068384e648dec84872a0cd7c0f09aceb",
+      "producerSha256": "285eb19b3148ef69fa640a6f586e4bd0c94270bdd18fb761c6d7906f3a5a8d7d"
+    },
+    {
+      "id": "v8-3-difference",
+      "family": "V8",
+      "version": "V8.3",
+      "title": "Delay vs Lyapunov Difference",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_3/difference.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_3_delay_vs_lyapunov.py",
+      "class": "GENERATED COMPARISON",
+      "reading": "Mismatch between delay and stability is preserved explicitly.",
+      "boundary": "Difference depends on resampling, normalization and thresholds.",
+      "relation": "Keeps residual structure visible.",
+      "motifs": [
+        "grid"
+      ],
+      "imageSha256": "0df834e871477a7ea83a176fb6d44336cec1455636a4f03e2be7740dbc81b177",
+      "producerSha256": "285eb19b3148ef69fa640a6f586e4bd0c94270bdd18fb761c6d7906f3a5a8d7d"
+    },
+    {
+      "id": "v8-4-outcome",
+      "family": "V8",
+      "version": "V8.4",
+      "title": "Decision Outcome Map",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_4/v8_4_outcome_map.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_4_decision_outcome_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Outcome classes divide the field into terminal regions.",
+      "boundary": "The binary outcome rule does not exhaust possible system states.",
+      "relation": "Prepares candidate decision boundaries.",
+      "motifs": [
+        "mouth",
+        "blindfold"
+      ],
+      "imageSha256": "8606ed2d376e50353c3c1ad38dacea79d81ef36499c01df4c7e2495570eac7fe",
+      "producerSha256": "5ec0e154ff539e4c521731c3983725725fa66c5ae2289a5dd39ddf6c0f6b62e2"
+    },
+    {
+      "id": "v8-5-entropy",
+      "family": "V8",
+      "version": "V8.5",
+      "title": "Direction Entropy Map",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_5/v8_5_entropy.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_5_directional_entropy_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Directional diversity is summarized as entropy.",
+      "boundary": "Entropy is calculated from the declared direction bins and neighborhood.",
+      "relation": "Locates uncertain directional structure.",
+      "motifs": [
+        "flower",
+        "grid"
+      ],
+      "imageSha256": "937c5ca2ac1fafdf8657de744938bac2d761add3f91cac00cba8b5275e0a038b",
+      "producerSha256": "3647ca9aa232dcaf0b5bb8b4d1c6d7d02fa2f11c634f97604d42883a400dd1d6"
+    },
+    {
+      "id": "v8-6-structure",
+      "family": "V8",
+      "version": "V8.6",
+      "title": "Decision Structure Map",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_6/v8_6_decision_structure.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_6_decision_structure_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "A structured map combines outcome and directional evidence.",
+      "boundary": "The composite inherits every upstream threshold.",
+      "relation": "Provides the source for skeleton extraction.",
+      "motifs": [
+        "flower",
+        "friendly ghost"
+      ],
+      "imageSha256": "de6d0d351932630ae907224746a485095119f954b048643230b146e3c2ace466",
+      "producerSha256": "ee816591a814e9d7120818eca0c3067aa95231c2b3453877f52df66e60e0fe78"
+    },
+    {
+      "id": "v8-8",
+      "family": "V8",
+      "version": "V8.8",
+      "title": "Decision Graph",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v8_8/v8_8_graph.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v8_8_graph_extraction.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Graph nodes and edges are extracted from the decision skeleton.",
+      "boundary": "Graph topology is conditional on the extraction and cleanup rules.",
+      "relation": "Creates the graph candidate before cleaning.",
+      "motifs": [
+        "grid",
+        "flower"
+      ],
+      "imageSha256": "00bc6aaa806867a215163ca9016afc0729285a7d01d5c99e7c7e3d1dc3afbaed",
+      "producerSha256": "3330888aae43c021ab284df235fc53eb1a220a268865bc6fe63aa1e2b60c5837"
+    },
+    {
       "id": "v8-9",
       "family": "V8",
       "version": "V8.9",
@@ -397,6 +702,78 @@
       ],
       "imageSha256": "7a286624cd8cd249ab97df26df5877ce1e40166bffe16b55e90735d0b311d726",
       "producerSha256": "dfe628a49f7e6684ecc69ed7fc82e3ce22b5130aec40594d2e1b7b6cb1c87277"
+    },
+    {
+      "id": "v9-0",
+      "family": "V9",
+      "version": "V9.0",
+      "title": "Flow Graph",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v9_0/v9_0_flow_graph.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v9_0_flow_graph.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Sparse connectivity appears between extracted nodes.",
+      "boundary": "The graph is an internal transport representation.",
+      "relation": "Starts the transport chronology.",
+      "motifs": [
+        "grid",
+        "fold"
+      ],
+      "imageSha256": "95ac8040ff9cafe50334de39ebeca5ae33d0effc17780bceb6923b6ac984d4a3",
+      "producerSha256": "49afa9caf8a14d492e53cd0db66ebdc155ac408331db53072f3ffc0960de9d36"
+    },
+    {
+      "id": "v9-1",
+      "family": "V9",
+      "version": "V9.1",
+      "title": "Node Extraction",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v9_1/v9_1_nodes.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v9_1_node_extraction.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Dense activity regions are represented as transport nodes.",
+      "boundary": "Node count and placement depend on extraction scale.",
+      "relation": "Distinguishes core and outer transport regions.",
+      "motifs": [
+        "matryoshka",
+        "grid"
+      ],
+      "imageSha256": "9aad2e4422c4fbc9b7fd95bca7b92a5981c1f5d94378fd3b94ecfc573367f81e",
+      "producerSha256": "c171885b86bbcb48d691645f0b5e9bc7313c63d8972d27a12211de0ce647a611"
+    },
+    {
+      "id": "v9-2",
+      "family": "V9",
+      "version": "V9.2",
+      "title": "Unique Density Field",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v9_2/v9_2_unique_density.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v9_2_unique_flow_density.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Layered flow density is shown as a field.",
+      "boundary": "Density uniqueness is bounded to the script's aggregation rule.",
+      "relation": "Adds a continuous carrier behind transport nodes.",
+      "motifs": [
+        "flower",
+        "friendly ghost"
+      ],
+      "imageSha256": "ca34434a0078d5eed08f1835f697035f165f5eff4e6d9dd1a74e18229ecc01bf",
+      "producerSha256": "aa6ac776fe579983a62b1af92c47c72b276b01c14149cfbde7356d9be9a1b75d"
+    },
+    {
+      "id": "v9-3",
+      "family": "V9",
+      "version": "V9.3",
+      "title": "Orbit Stability",
+      "image": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v9_3/v9_3_orbit_stability.png",
+      "producer": "../../../PROTO_CORE/FIELD_LAYER/FIELD_DECOMPOSITION/scripts/v9_3_orbit_stability_map.py",
+      "class": "GENERATED PROTOTYPE",
+      "reading": "Orbit stability is mapped before entry-channel extraction.",
+      "boundary": "Stability is model-local and resolution-dependent.",
+      "relation": "Bridges density to the V9.4 entry map.",
+      "motifs": [
+        "matryoshka",
+        "blindfold"
+      ],
+      "imageSha256": "1efbf5d71561ea28bb35a3a39dab50e45477c813ee44b1a54fefcce8c9be79e4",
+      "producerSha256": "f1776306b150e82b092efb7b784be24919e8e36edb7b4a03168cc38b87a63e0e"
     },
     {
       "id": "v9-4",

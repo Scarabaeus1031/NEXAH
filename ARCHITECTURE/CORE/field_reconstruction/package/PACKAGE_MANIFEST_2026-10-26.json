@@ -1,0 +1,22 @@
+{
+  "package": "NEXAH_FIELD_RECONSTRUCTION_PACKAGE",
+  "identity": "ARCHITECTURE/CORE/field_reconstruction",
+  "date": "2026-10-26",
+  "status": "R1_VERIFY_EXISTING",
+  "entrypoints": {
+    "home": "NEXAH_FIELD_RECONSTRUCTION_PACKAGE.html",
+    "pipeline": "NEXAH_FIELD_RECONSTRUCTION_DEMONSTRATOR.html",
+    "visualBench": "NEXAH_FIELD_VISUAL_BENCH.html",
+    "hashReceipt": "bench/FIELD_VISUAL_BENCH_RECEIPT_2026-10-26.json"
+  },
+  "counts": {
+    "pipelineStages": 17,
+    "visualFrames": 61,
+    "hashesPerFrame": 2
+  },
+  "modes": ["Atlas", "Guided Tour", "Compare", "Motif Lens", "Visual Wall", "Receipt"],
+  "spine": ["SAMPLE", "RECONSTRUCT", "BOUNDARY", "NAVIGATE", "STABILITY", "TRANSPORT", "TIME", "RETURN"],
+  "graphEffect": "No new Source Graph identity, relation, Study, Family, experiment or publication state.",
+  "claimBoundary": "Navigation labels and owner mnemonics are not computed variables or evidence of a shared mechanism.",
+  "stopCondition": "PACKAGE COMPLETE · VERIFY EXISTING · STOP"
+}

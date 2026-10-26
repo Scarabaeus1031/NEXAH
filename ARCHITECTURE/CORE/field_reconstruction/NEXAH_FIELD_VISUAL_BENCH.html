@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NEXAH Field Visual Bench</title>
   <link rel="stylesheet" href="bench/field-visual-bench.css">
+  <link rel="stylesheet" href="bench/field-visual-bench-final.css">
 </head>
 <body>
   <header class="masthead">
@@ -22,14 +23,17 @@
   <main>
     <section class="control-bar" aria-label="Bench controls">
       <div class="mode-group" role="group" aria-label="View mode">
+        <button type="button" id="playTour">▶ TOUR</button>
         <button type="button" class="active" data-mode="atlas">ATLAS</button>
         <button type="button" data-mode="compare">COMPARE</button>
         <button type="button" data-mode="motifs">MOTIF LENS</button>
+        <button type="button" data-mode="wall">VISUAL WALL</button>
         <button type="button" data-mode="receipt">RECEIPT</button>
       </div>
       <label class="search-label"><span>FIND</span><input id="search" type="search" placeholder="V9.5, boundary, ghost…"></label>
       <button type="button" id="previous">←</button><button type="button" id="next">→</button>
       <button type="button" id="exportReceipt">EXPORT RECEIPT</button>
+      <a class="button-link" href="NEXAH_FIELD_RECONSTRUCTION_PACKAGE.html">PACKAGE HOME ↗</a>
       <a class="button-link" href="NEXAH_FIELD_RECONSTRUCTION_DEMONSTRATOR.html">PIPELINE ↗</a>
     </section>
     <section class="bench-shell">
@@ -55,6 +59,7 @@
       </aside>
     </section>
     <section class="receipt-panel" id="receiptPanel" hidden><header><h2>Source Receipt</h2><span id="receiptSummary"></span></header><div class="receipt-grid" id="receiptGrid"></div></section>
+    <section class="wall-panel" id="wallPanel" hidden><header><h2>Visual Wall</h2><span>One carrier · many declared views</span></header><div class="wall-grid" id="wallGrid"></div></section>
   </main>
   <footer><span>OWNER MNEMONICS ≠ COMPUTED FEATURES</span><span>Source files remain authoritative at their original paths.</span></footer>
   <script src="bench/field-visual-bench-data.js"></script>
