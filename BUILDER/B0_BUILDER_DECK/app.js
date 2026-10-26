@@ -90,6 +90,7 @@ if (buildInventorySearch && buildInventoryGroup && buildInventoryState) {
 const buildRegisterSearch = document.getElementById("build-register-search");
 const buildRegisterMode = document.getElementById("build-register-mode");
 const buildRegisterItems = [...document.querySelectorAll("[data-build-log-item]")];
+const buildRegisterGroups = [...document.querySelectorAll("[data-build-log-group]")];
 const buildRegisterCount = document.getElementById("build-register-count");
 const buildRegisterEmpty = document.getElementById("build-register-empty");
 
@@ -102,6 +103,9 @@ if (buildRegisterSearch && buildRegisterMode) {
       const match = (mode === "all" || item.dataset.mode === mode) && (!query || item.textContent.toLocaleLowerCase("de").includes(query));
       item.hidden = !match;
       if (match) visible += 1;
+    });
+    buildRegisterGroups.forEach((group) => {
+      group.hidden = !group.querySelector("[data-build-log-item]:not([hidden])");
     });
     buildRegisterCount.textContent = `${visible} / ${buildRegisterItems.length}`;
     buildRegisterEmpty.hidden = visible !== 0;

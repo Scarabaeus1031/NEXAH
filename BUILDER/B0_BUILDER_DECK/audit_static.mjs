@@ -4,7 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.dirname(fileURLToPath(import.meta.url));
-const pageNames = ["index.html", "systems-desk.html", "build-desk.html", "public-field.html", "a0-tools.html", "archive.html"];
+const pageNames = ["index.html", "systems-desk.html", "build-desk.html", "public-field.html", "a0-tools.html", "archive.html", "project-a0-pentagon-body-return.html", "public-nexahedron-human-reading.html"];
 const pages = Object.fromEntries(pageNames.map((name) => [name, fs.readFileSync(path.join(root, name), "utf8")]));
 const architect = pages["index.html"];
 const systems = pages["systems-desk.html"];
@@ -49,6 +49,8 @@ assert.match(systems, /Builder Laws/);
 assert.match(systems, /GOAL → SOURCE → SMALL CUT → CHECK → RETURN → CLOSE/);
 assert.match(systems, /BUILDER_POLICY\.md/);
 assert.match(systems, /A0 \/ THE MACHINA/);
+assert.match(systems, /PROJECT_THE_MACHINA_EXHIBITION_2026-10-26\.md/);
+assert.match(systems, /Exhibition, Machine Series, Parts Shelf und Bench/);
 assert.match(systems, /NEXAH \+ NEXAHEDRON/);
 assert.match(systems, /BUILDER_TOOL_INVENTORY\.csv/);
 assert.equal([...systems.matchAll(/data-build-item/g)].length, 44);
@@ -63,10 +65,16 @@ assert.equal([...build.matchAll(/class="priority-project /g)].length, 3);
 assert.match(build, /M-PUB01/);
 assert.match(build, /NEXAH × NEXAHEDRON/);
 assert.match(build, /A0 \/ THE MACHINA/);
+assert.match(build, /PROJECT RECORDED · NO BUILD/);
+assert.match(build, /PROJECT_THE_MACHINA_EXHIBITION_2026-10-26\.md/);
+assert.match(build, /public-nexahedron-human-reading\.html/);
+assert.match(build, /Pentagon Body · Guided v2 \+ Exhibition/);
+assert.match(build, /A0_PENTAGON_BODY_RETURN_GUIDED\.html/);
+assert.match(build, /A0_PENTAGON_BODY_EXHIBITION\.html/);
 assert.match(build, /Inventar vollständig · ein Staging-Paket reproduzierbar/);
 assert.match(build, /Orientieren\. Verbinden\. Benutzen/);
 assert.match(build, /BUILD REGISTER · SOURCE-BOUND/);
-assert.match(build, /Dreizehn Builds\. Ein Überblick\./);
+assert.match(build, /Zwei Fenster\. Dreizehn Builds\./);
 assert.match(build, /A0_BUILDER_TOY_STORE\.html#instrument-atlas/);
 assert.match(build, /A0_RESEARCH_DESK\.html#instrument-atlas-return-20261025/);
 assert.equal([...build.matchAll(/data-build-log-item/g)].length, 13);
@@ -74,12 +82,30 @@ assert.match(build, /Crown → Shadow Contact Bench/);
 assert.match(build, /A0_CROWN_SHADOW_CONTACT_BENCH\.html/);
 assert.match(build, /110\/110 Hashes und 88\/88 Engineering-Checks/);
 
+const pentagonProject = pages["project-a0-pentagon-body-return.html"];
+assert.match(pentagonProject, /Pentagon \/ <em>Body Return/);
+assert.match(pentagonProject, /PLANNED · NO NEW ID/);
+assert.match(pentagonProject, /SOURCE BODY → MOVE → PROJECT → COMPARE → RETURN \/ CANNOT RETURN/);
+assert.match(pentagonProject, /114/);
+assert.match(pentagonProject, /PROJECT_A0_PENTAGON_BODY_RETURN_2026-10-25\.md/);
+assert.match(pentagonProject, /A0_PENTAGON_BODY_RETURN_GUIDED\.html/);
+
+const humanReadingProject = pages["public-nexahedron-human-reading.html"];
+assert.match(humanReadingProject, /Der Unterschied <em>wird lesbar/);
+assert.match(humanReadingProject, /CONCEPT FREEZE · LOCAL ONLY/);
+assert.match(humanReadingProject, /Dark Room/);
+assert.match(humanReadingProject, /Diamond Lens/);
+assert.match(humanReadingProject, /One Pulse/);
+assert.match(humanReadingProject, /PUBLIC_NEXAHEDRON_HUMAN_READING_2026-10-25\.md/);
+
 assert.match(publicHtml, /ONE FIELD/);
 assert.match(publicHtml, /THREE HOUSES/);
 assert.match(publicHtml, /NO HIDDEN COUPLING/);
 assert.match(publicHtml, /LOCAL DESIGN \/ NO DEPLOY/);
 assert.match(publicHtml, /How NEXAH Works — From Representation to Human Return/);
 assert.match(publicHtml, /M-PUB01_NEXAH_PUBLIC_FIELD\.md/);
+assert.match(publicHtml, /CURRENT LOCAL WEBSITE PROJECT/);
+assert.match(publicHtml, /public-nexahedron-human-reading\.html/);
 assert.match(publicHtml, /https:\/\/www\.scarabaeus1033\.net/);
 
 assert.match(a0Html, /04 · A0 BUILDER DESK/);
@@ -105,6 +131,7 @@ assert.match(css, /\.project-wall/);
 assert.match(css, /\.build-inventory-list/);
 assert.match(css, /\.build-board/);
 assert.match(css, /\.recent-build-list/);
+assert.match(css, /\.build-register-window/);
 assert.match(css, /\.build-log-return/);
 assert.match(css, /@media \(max-width: 760px\)/);
 assert.match(css, /prefers-reduced-motion/);
@@ -112,6 +139,13 @@ assert.match(js, /dataset\.filter/);
 assert.match(js, /archiveSearch/);
 assert.match(js, /data-archive-item/);
 assert.match(js, /buildInventorySearch/);
+assert.match(js, /buildRegisterGroups/);
+assert.equal([...build.matchAll(/data-build-log-group/g)].length, 2);
+assert.equal([...build.matchAll(/data-build-log-item/g)].length, 13);
+assert.match(build, /BUILD \/ MACHINE/);
+assert.match(build, /SCIENCE \/ INSTRUMENT/);
+assert.match(build, /5 BUILDS/);
+assert.match(build, /8 INSTRUMENTS/);
 
 const localLinks = Object.entries(pages).flatMap(([name, source]) =>
   [...source.matchAll(/href="([^"]+)"/g)]

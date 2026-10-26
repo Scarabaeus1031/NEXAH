@@ -18,18 +18,33 @@ Architect Desk; deeper inventories and work surfaces live on their own pages:
 - `index.html` — Architect Desk: Big Picture, priority, strategy and blueprint;
 - `systems-desk.html` — system roles, working inventory and technical map;
 - `build-desk.html` — Chore projection, decisions, build cuts, returns and the
-  twelve-entry `Latest Builds` inspection log;
+  thirteen-entry `Latest Builds` inspection log;
 - `public-field.html` — Public Desk: nexah.de, NEXAHEDRON and Scarabæus;
 - `a0-tools.html` — A0 Builder Desk, Builder Log and the
   direct Instrument Atlas / Latest Builds routes plus the explicit return to
   the A0 Science Desk.
 - `archive.html` — searchable map of logs, releases, inventories and backlogs.
+- `project-a0-pentagon-body-return.html` — source-bound Builder project for the
+  Pentagon/Lantern body, projection ambiguity and explicit return path; the
+  full gate plan lives in `PROJECT_A0_PENTAGON_BODY_RETURN_2026-10-25.md`.
+- `PROJECT_THE_MACHINA_EXHIBITION_2026-10-26.md` — parked source-bound project
+  brief for the existing THE MACHINA exhibition, Machine Series, Parts Shelf
+  and explicit Human Return; no build or publication activation.
 
 The shared navigation keeps all six desks reachable without deep dropdowns.
 The Architect Desk opens with the controlling Mission, a visual blueprint and
 a compact source-bound work queue. The searchable Archive Desk binds 16
 controlling or operational source documents without copying their authority.
 Logs, release notes and backlogs remain at their owning sources.
+
+## Parked design concept — NEXAH Aperture Compass
+
+The proposed NEXAH mark remains a Builder idea, not an adopted logo or a new
+brand identity. Its stable center may later carry a dynamic navigation halo:
+circle as field, axes as position, angle as selected view, aperture as current
+cut, depth arc as progress and an explicit Return. Any implementation must be
+tested first as a small SVG/CSS navigation instrument before a separate Human
+Owner brand decision.
 
 `BUILDER_POLICY.md` is the compact operating contract: one active cut, reuse
 before creation, proportional checks, one writer on shared files, explicit
