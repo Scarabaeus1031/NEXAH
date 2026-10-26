@@ -38,7 +38,7 @@
       <div class="stage-grid">
         <article class="viewport" id="viewport">
           <div class="frame-label">
-            <span id="stageNumber">01 / 16</span>
+            <span id="stageNumber">01 / 17</span>
             <span id="stageClass">SOURCE FRAME</span>
           </div>
           <div class="image-well">
@@ -84,6 +84,11 @@
             <span>PRODUCER</span>
             <code id="stageProducer"></code>
           </div>
+          <div class="readout-block">
+            <span>SOURCE BINDING / STATUS</span>
+            <code id="stageSources"></code>
+            <p id="stageStatus"></p>
+          </div>
           <div class="readout-block warning">
             <span>CLAIM BOUNDARY</span>
             <p id="stageBoundary"></p>
@@ -107,6 +112,11 @@
         <span class="tag unresolved">OPEN QUESTION</span>
         <h2>The orange box / spark</h2>
         <p>The bright corner and endpoint regions can be marked for inspection. Their cause must be tested against support density, interpolation, boundary handling and resolution before receiving a physical interpretation.</p>
+      </article>
+      <article>
+        <span class="tag annotation">BINDING FRAME</span>
+        <h2>Lantern on Pole</h2>
+        <p>`I`, `RR`, the open `U` and the existing Gelenklaterne can share one comparison frame. The actual hook remains open: typed symbols and units, `Aᵢ(L)`, transform `T`, null control and STOP gate.</p>
       </article>
     </section>
   </main>
@@ -133,7 +143,8 @@
     {"id":"v69-clean","group":"IEEE FIELD","title":"IEEE Field · V69 Clean","operation":"density + constructed stream field","carrier":"IEEE-derived trajectory input","image":"reconstruction/nexah_ieee_field_v69_clean.png","compare":"stability/nexah_field_frame_stability.png","producer":"scripts/run_ieee_field_v69_clean.py","boundary":"Streamlines are reconstruction products and do not certify causal flow."},
     {"id":"resolution","group":"TEST","title":"Frame Stability","operation":"40 / 80 / 120 grid comparison","carrier":"same IEEE-derived trajectory","image":"stability/nexah_field_frame_stability.png","compare":"stability/nexah_stable_field_mask.png","producer":"scripts/run_field_frame_stability_test.py","boundary":"Visible disagreement is a sensitivity warning; invariance must be quantified, not eyeballed."},
     {"id":"stable-mask","group":"TEST","title":"Stable Field Mask","operation":"cross-resolution difference threshold","carrier":"three reconstructed grid frames","image":"stability/nexah_stable_field_mask.png","compare":"dynamics/v68_v69_real_transition.gif","producer":"scripts/run_stable_field_mask.py","boundary":"The mask depends on grid, smoothing and threshold; green does not mean physically true."},
-    {"id":"transition","group":"RETURN","title":"Structure → Flow Return","operation":"V68 / V69 visual transition","carrier":"IEEE-derived comparison frames","image":"dynamics/v68_v69_real_transition.gif","compare":"reconstruction/nexah_ieee_field_v69_clean.png","producer":"scripts/run_build_v68_v69_real_gif_2.py","boundary":"Animation is a comparison device. Temporal tweening is not an observed physical transition."}
+    {"id":"transition","group":"RETURN","title":"Structure → Flow Return","operation":"V68 / V69 visual transition","carrier":"IEEE-derived comparison frames","image":"dynamics/v68_v69_real_transition.gif","compare":"reconstruction/nexah_ieee_field_v69_clean.png","producer":"scripts/run_build_v68_v69_real_gif_2.py","boundary":"Animation is a comparison device. Temporal tweening is not an observed physical transition."},
+    {"id":"lantern-bind","group":"BIND","title":"Lantern on Pole","operation":"source-bound synthesis + missing-gate ledger","carrier":"I/RR/U display roles + existing A0 Gelenklaterne sources","image":"demonstrator/lantern-pole-binding.svg","compare":"outputs/demo/nexah_target_navigation.png","producer":"demonstrator/lantern-pole-binding.svg","sources":["SRC:A0OE:PENTAGON_GELENKLATERNE_LAB","SRC:A0OE:PENTAGON_GELENKLATERNE_REPORT","A0-BL-045"],"status":"UNDEFINED_CONTRACT · engineering comparison view","boundary":"The frame relates existing display roles and source records; it does not identify the field reconstruction, RR fold, epsilon return operator and Gelenklaterne as one mechanism. I | Zε/T | 0 is a mnemonic address, P/T ?= R + L is an untyped candidate, and the pole remains a display axis until a carrier and anchor operator are declared."}
   ]
   </script>
   <script src="demonstrator/field-reconstruction-demonstrator.js"></script>

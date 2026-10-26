@@ -27,7 +27,7 @@ if not match:
 stages = json.loads(match.group(1))
 expected_ids = [
     "delay", "sheet", "mesh", "boundary", "gradient", "stability", "smooth", "channels",
-    "trajectory", "target", "v68", "v68-clean", "v69-clean", "resolution", "stable-mask", "transition",
+    "trajectory", "target", "v68", "v68-clean", "v69-clean", "resolution", "stable-mask", "transition", "lantern-bind",
 ]
 actual_ids = [stage["id"] for stage in stages]
 if actual_ids != expected_ids:
@@ -57,5 +57,17 @@ for asset in (
 for token in ("U / I WINDOW", "C | RIS | T", "ORANGE SPARK", "ANNOTATION LAYER · NOT A MEASUREMENT"):
     if token not in text:
         fail(f"annotation boundary token missing: {token}")
+
+lantern = stages[-1]
+required_sources = {
+    "SRC:A0OE:PENTAGON_GELENKLATERNE_LAB",
+    "SRC:A0OE:PENTAGON_GELENKLATERNE_REPORT",
+    "A0-BL-045",
+}
+if set(lantern.get("sources", [])) != required_sources:
+    fail("lantern binding must retain both source IDs and the separate A0-BL-045 neighbor")
+for token in ("UNDEFINED_CONTRACT", "mnemonic address", "untyped candidate", "display axis"):
+    if token not in lantern.get("status", "") + lantern["boundary"]:
+        fail(f"lantern boundary token missing: {token}")
 
 print(f"PASS: {len(stages)} stages, all assets/producers present, annotation boundary explicit")

@@ -69,13 +69,13 @@ h1 { font: 700 clamp(2rem, 5vw, 4.8rem)/.95 system-ui, sans-serif; letter-spacin
 .image-well.annotated .overlay-boundary { display: block; }
 .progress { height: 3px; background: #282b31; margin-top: 12px; }
 .progress span { display: block; width: 0; height: 100%; background: linear-gradient(90deg, var(--orange), var(--pink), var(--cyan)); transition: width .25s; }
-.readout { display: grid; grid-template-rows: repeat(4, minmax(110px, auto)) minmax(160px, 1fr); }
+.readout { display: grid; grid-template-rows: repeat(5, minmax(100px, auto)) minmax(150px, 1fr); }
 .readout-block { padding: 20px 17px; border-bottom: 1px solid #343027; overflow-wrap: anywhere; }
 .readout strong { font-size: 1rem; }
 .readout code { color: #ddd1ff; }
 .readout p { margin: 0; color: #d3d9dd; }
 .readout .warning { background: #21170c; border-left: 3px solid var(--orange); }
-.interpretation { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 18px; }
+.interpretation { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 18px; }
 .interpretation article { border: 1px solid #2e3d45; background: #10151c; padding: 20px; }
 .interpretation h2 { font: 650 1.12rem system-ui, sans-serif; }
 .interpretation p { color: #bac5cc; }

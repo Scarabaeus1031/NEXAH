@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">NEXAH Lantern on Pole binding frame</title>
+  <desc id="desc">A source-bound synthesis view separating known display roles, existing lantern evidence, exact neighboring epsilon return mathematics and missing binding gates.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="75%">
+      <stop offset="0" stop-color="#24203a"/>
+      <stop offset="1" stop-color="#07141c"/>
+    </radialGradient>
+    <radialGradient id="lamp" cx="50%" cy="40%" r="65%">
+      <stop offset="0" stop-color="#fff8b7"/>
+      <stop offset="0.38" stop-color="#ffc542"/>
+      <stop offset="1" stop-color="#ff7926" stop-opacity="0.08"/>
+    </radialGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      text{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;fill:#f5efe7}
+      .micro{font-size:18px;letter-spacing:2px;fill:#9fb0ba}
+      .label{font-size:22px;font-weight:700;letter-spacing:1px}
+      .value{font-size:25px;font-weight:800}
+      .title{font-family:system-ui,sans-serif;font-size:47px;font-weight:750;letter-spacing:-1px}
+      .gold{fill:#f5bd42}.orange{fill:#ff8a25}.pink{fill:#ee48ae}.cyan{fill:#4ecbd0}.muted{fill:#a9b5bd}
+      .panel{fill:#0d1119;stroke:#3e3b32;stroke-width:2}
+      .line{fill:none;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <text x="52" y="65" class="micro gold">NEXAH · SOURCE-BOUND SYNTHESIS / NOT A MECHANISM</text>
+  <text x="52" y="122" class="title">Lantern on Pole · Binding Frame</text>
+
+  <rect x="50" y="165" width="348" height="650" rx="18" class="panel"/>
+  <text x="78" y="208" class="micro cyan">ALREADY PRESENT</text>
+  <text x="78" y="257" class="value">I</text><text x="125" y="257" class="label">reference / seam axis</text>
+  <text x="78" y="313" class="value pink">RR</text><text x="146" y="313" class="label">bilateral fold view</text>
+  <text x="78" y="369" class="value orange">U</text><text x="125" y="369" class="label">open outer bracket</text>
+  <text x="78" y="425" class="value gold">L</text><text x="125" y="425" class="label">Gelenklaterne payload</text>
+  <line x1="78" y1="458" x2="370" y2="458" stroke="#3e5060"/>
+  <text x="78" y="500" class="micro">EXISTING LANTERN RESULT</text>
+  <text x="78" y="542" class="label gold">five-plane sliding iris</text>
+  <text x="78" y="579" class="label">sampled pin clearance</text>
+  <text x="78" y="616" class="label pink">rigid-skin local mobility:</text>
+  <text x="78" y="651" class="label pink">negative result</text>
+  <text x="78" y="711" class="micro">SRC:A0OE:</text>
+  <text x="78" y="739" class="micro">PENTAGON_GELENKLATERNE_LAB</text>
+  <text x="78" y="782" class="micro orange">ENGINEERING CANDIDATE ONLY</text>
+
+  <rect x="1002" y="165" width="348" height="650" rx="18" class="panel"/>
+  <text x="1030" y="208" class="micro orange">MISSING TO BIND</text>
+  <text x="1030" y="257" class="value orange">01</text><text x="1080" y="257" class="label">symbol types + units</text>
+  <text x="1030" y="313" class="value orange">02</text><text x="1080" y="313" class="label">anchor map Aᵢ(L)</text>
+  <text x="1030" y="369" class="value orange">03</text><text x="1080" y="369" class="label">declared transform T</text>
+  <text x="1030" y="425" class="value orange">04</text><text x="1080" y="425" class="label">baseline + null control</text>
+  <text x="1030" y="481" class="value orange">05</text><text x="1080" y="481" class="label">falsifier + STOP gate</text>
+  <line x1="1030" y1="516" x2="1322" y2="516" stroke="#4c3d2b"/>
+  <text x="1030" y="558" class="micro">OPEN SYMBOL LEDGER</text>
+  <text x="1030" y="602" class="label">P · T · R · L · Z · ε · n</text>
+  <text x="1030" y="651" class="micro pink">NO SILENT IDENTITIES</text>
+  <text x="1030" y="694" class="micro">pole = display axis until</text>
+  <text x="1030" y="722" class="micro">a physical carrier is declared</text>
+  <text x="1030" y="782" class="micro orange">STATUS · UNDEFINED_CONTRACT</text>
+
+  <path d="M465 238 C420 370 420 610 465 748" class="line" stroke="#ff8a25" stroke-width="13"/>
+  <path d="M935 238 C980 370 980 610 935 748" class="line" stroke="#ff8a25" stroke-width="13"/>
+  <path d="M565 285 C525 405 525 575 565 695" class="line" stroke="#ee48ae" stroke-width="10"/>
+  <path d="M835 285 C875 405 875 575 835 695" class="line" stroke="#ee48ae" stroke-width="10"/>
+  <text x="445" y="215" class="label orange">U</text><text x="546" y="262" class="label pink">R</text>
+  <text x="825" y="262" class="label pink">R</text><text x="930" y="215" class="label orange">U</text>
+
+  <line x1="700" y1="190" x2="700" y2="777" stroke="#f5efe7" stroke-width="5" stroke-dasharray="16 12"/>
+  <text x="718" y="222" class="label">I · POLE / SEAM</text>
+  <line x1="625" y1="760" x2="775" y2="760" stroke="#f5efe7" stroke-width="7"/>
+  <text x="700" y="805" text-anchor="middle" class="label">0 · declared reference</text>
+
+  <circle cx="700" cy="400" r="112" fill="url(#lamp)" opacity=".7" filter="url(#glow)"/>
+  <path d="M700 255 L790 330 L756 450 L644 450 L610 330 Z" class="line" stroke="#f5bd42" stroke-width="8" fill="#ff8a251a"/>
+  <path d="M610 330 L790 330 M644 450 L756 450 M700 255 L700 500 M610 330 L756 450 M790 330 L644 450" class="line" stroke="#fff2b0" stroke-width="4" opacity=".85"/>
+  <circle cx="700" cy="400" r="19" fill="#fff6d6" stroke="#ff8a25" stroke-width="7"/>
+  <path d="M700 500 L700 545" stroke="#f5bd42" stroke-width="12" stroke-linecap="round"/>
+  <text x="700" y="575" text-anchor="middle" class="micro gold">Aᵢ(L) · REQUIRED ANCHOR OPERATOR</text>
+
+  <rect x="500" y="600" width="400" height="122" rx="14" fill="#0c1018e8" stroke="#73531c" stroke-width="2"/>
+  <text x="700" y="642" text-anchor="middle" class="value">I | Zε/T | 0  →  nε</text>
+  <text x="700" y="678" text-anchor="middle" class="micro pink">MNEMONIC ADDRESS · SEMANTICS OPEN</text>
+  <text x="700" y="707" text-anchor="middle" class="label gold">P/T  ?=  R + L</text>
+
+  <rect x="415" y="828" width="570" height="48" rx="12" fill="#141120" stroke="#8a5ec4" stroke-width="2"/>
+  <text x="700" y="859" text-anchor="middle" class="micro">EXACT NEIGHBOR · NOT IDENTICAL: (Q′ε)² = εI · A0-BL-045</text>
+</svg>

@@ -9,6 +9,7 @@
     viewport: byId("viewport"), imageWell: document.querySelector(".image-well"),
     number: byId("stageNumber"), class: byId("stageClass"), title: byId("stageTitle"),
     operation: byId("stageOperation"), carrier: byId("stageCarrier"), producer: byId("stageProducer"),
+    sources: byId("stageSources"), status: byId("stageStatus"),
     boundary: byId("stageBoundary"), progress: byId("progressBar"), play: byId("play"),
     uiOverlay: byId("uiOverlay"), sparkOverlay: byId("sparkOverlay")
   };
@@ -33,6 +34,8 @@
     els.operation.textContent = stage.operation;
     els.carrier.textContent = stage.carrier;
     els.producer.textContent = stage.producer;
+    els.sources.textContent = stage.sources ? stage.sources.join(" · ") : "local source script + generated frame";
+    els.status.textContent = stage.status || "existing experimental frame";
     els.boundary.textContent = stage.boundary;
     els.progress.style.width = `${((state.index + 1) / stages.length) * 100}%`;
     [...els.pipeline.children].forEach((button, i) => button.classList.toggle("active", i === state.index));
