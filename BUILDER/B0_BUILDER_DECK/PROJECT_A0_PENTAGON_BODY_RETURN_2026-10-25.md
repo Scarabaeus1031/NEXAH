@@ -1,7 +1,7 @@
 # A0 Pentagon / Body Return · source-bound Builder project
 
-Stand: 25. Oktober 2026
-Status: `BUILD_STARTED / GUIDED_V1 / SOURCE-BOUND / NO NEW ID / NO PUBLICATION`
+Stand: 26. Oktober 2026
+Status: `GUIDED_ACCEPTED / FIELD_PACKAGE_RETURNED / BODY_WIRING_OPEN / SOURCE-BOUND / NO NEW ID / NO PUBLICATION`
 
 ## Builder decision
 
@@ -19,8 +19,8 @@ remain unchanged.
 
 | Body / surface | Primary role | Current state | Next gate |
 |---|---|---|---|
-| Pentagon · Knick · Aperture v7 | source body and motion model | packaged, checks and records present | host and guided cut |
-| Pentagon Gelenklaterne | spatial body candidate | source-bound engineering candidate | continuous-path and browser acceptance |
+| Pentagon · Knick · Aperture v7 | source body and motion model | packaged; guided source-host cut accepted locally | typed wiring contract |
+| Pentagon Gelenklaterne | spatial body candidate | source-bound; guided browser acceptance passed | continuous-path and engineering adapter |
 | Curtain | local fold / seam view | preserved source variant | compare against Lantern contract |
 | A9 + Teiler / Streifen | address and return instrument | preserved; standalone and package copy | browser acceptance and return boundary |
 | Pascal bracket tilt | exact projection sidecar | same image at `-60°` and `+60°`, different pose | expose lost depth and signed return data |
@@ -68,7 +68,7 @@ shell is added.
 - 26 PNGs, 13 HTML files and two animated GLBs retained;
 - no new canonical identity or relation created.
 
-### WP1 · Host and contract — NEXT
+### WP1 · Host and guided contract — GUIDED DONE / WIRING NEXT
 
 - choose the Pentagon / Lantern viewer as the first host;
 - freeze the five-state contract: `SOURCE`, `MOVE`, `PROJECT`, `COMPARE`,
@@ -113,7 +113,7 @@ Current implementation:
 
 Exit: a reader can correctly answer whether image, pose and record agree.
 
-### WP4 · Browser acceptance — `DOC-01`
+### WP4 · Guided browser acceptance — DONE / `DOC-01`
 
 - current browser at normal and narrow width;
 - keyboard and focus path;
@@ -123,6 +123,9 @@ Exit: a reader can correctly answer whether image, pose and record agree.
 - source and Science Desk return links.
 
 Exit: recorded acceptance receipt; no console-breaking error.
+
+Current state: the guided browser acceptance is complete. Continuous-path,
+engineering coupling and shared-clock acceptance are not included in that pass.
 
 ### WP5 · Engineering gates — SEPARATE
 
@@ -154,7 +157,104 @@ Build only this:
 - explicit `Reset` and `Return` controls;
 - links to source, Science Desk and receipt.
 
-Everything else stays in the inventory until this cut passes WP4.
+The guided cut has passed WP4. Everything outside that cut stays in the
+inventory until the typed wiring and engineering gates pass separately.
+
+## Field reconstruction return · 26 October 2026
+
+The Field Reconstruction package is now returned to Builder Deck as a bounded
+instrument package:
+
+- 17-stage reconstruction pipeline;
+- 61-frame visual bench;
+- 122 source-hash bindings;
+- package closeout at commit `ca1d6530`;
+- result: visual, navigation and provenance package `COMPLETE`;
+- body-level synthesis: `UNDEFINED_CONTRACT` until adapters, units, clocks and
+  return semantics are declared.
+
+This return adds navigation and currentness only. It does not add a Source
+Graph relation, scientific Finding, mechanism claim or new identity.
+
+## Body wiring matrix
+
+| Junction | What is already connected | Missing before it is a real coupling |
+|---|---|---|
+| Gate / Tor -> Bridge | visual adjacency, gate candidates and field-transition views | typed input, guard, output, null case and explicit return |
+| Bridge -> Body | source-bound comparison and guided state handoff | coordinate/pose map, units, loss and residual |
+| Body -> Pole | display axis and body-relative orientation cues | named frame, anchor, handedness and dimensional units |
+| Pole -> Lantern | source bodies and Lantern records are preserved | attachment map, admissible motion path, collision rule and reset state |
+| Lantern -> Return | guided record semantics and distinct Reset/Return are accepted | continuous-path receipt and complete return tuple |
+| Clock | no common body clock is admitted | declare clock type, unit, step/event semantics and synchronization policy, or mark the junction explicitly asynchronous |
+
+The visual frame sequence is therefore connected as an explanatory and
+provenance path. Gate, Bridge, Body, Pole and Lantern are not yet one executable
+mechanism.
+
+## Executable wiring plan
+
+### W0 · Currentness return — DONE
+
+- bind the Field Reconstruction package and closeout into the Build Register;
+- preserve existing A0, Lantern and engineering identities;
+- record `UNDEFINED_CONTRACT` for body synthesis.
+
+### W1 · Typed interface sheet — NEXT
+
+For every junction, freeze one row containing carrier/source state, input,
+output, units, guard, null case, failure state, clock requirement and return.
+No visual similarity may substitute for a field in this sheet.
+
+Exit: every proposed edge can be rejected deterministically when a required
+field is absent.
+
+### W2 · Adapter ledger — NEXT
+
+- map Gate -> Bridge, Bridge -> Body, Body -> Pole and Pole -> Lantern;
+- reuse the existing sources and routed engineering tasks;
+- distinguish view adapters from mechanical or dynamical adapters;
+- keep every unproven map at `CANDIDATE` or `UNDEFINED_CONTRACT`.
+
+Exit: one source-bound ledger with no new Navigator relation.
+
+### W3 · Local wiring fixture — AFTER W1/W2
+
+Build one local fixture that shows the declared state entering and leaving each
+adapter. It may visualize a coupling; it must not imply that the mechanism has
+been established.
+
+Exit: the full route can be replayed with a visible state and source record at
+each handoff.
+
+### W4 · Negative and null tests — REQUIRED
+
+Test missing carrier, incompatible units, clock mismatch, discontinuous motion,
+collision/invalid pose, impossible return and missing provenance. Each case must
+fail closed and name the broken junction.
+
+### W5 · Lantern engineering acceptance — `ENG-LANTERN-01`
+
+- run the continuous-path check;
+- verify attachment, collision and reset semantics;
+- repeat normal, narrow, reduced-motion and missing-source browser checks after
+  the typed adapter is added.
+
+Exit: a separate engineering receipt, not an automatic scientific promotion.
+
+### W6 · Return and owner gate
+
+- Builder Deck receives the fixture, matrix and acceptance receipts;
+- Science Desk receives evidence and claim ceiling;
+- Mission Control receives status, blockers and owner decision only;
+- Source Graph relation admission or scientific activation requires a separate
+  owner-governed action after Structure Freeze.
+
+## Wiring completion criteria
+
+`CONNECTED` may be used only when all junctions have a typed adapter, declared
+units, explicit clock or asynchronous policy, passing null tests, continuous
+path receipt and reversible source-bound return. Until then the honest overall
+state is `VISUAL_PACKAGE_COMPLETE / BODY_WIRING_OPEN`.
 
 ## STOP rules
 

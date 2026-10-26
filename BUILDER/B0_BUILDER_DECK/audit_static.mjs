@@ -56,7 +56,7 @@ assert.match(systems, /BUILDER_TOOL_INVENTORY\.csv/);
 assert.equal([...systems.matchAll(/data-build-item/g)].length, 44);
 
 assert.match(build, /02 · BUILD DESK/);
-assert.match(build, /BUILDER NOTES · LETZTER STAND · 25\.10\.2026/);
+assert.match(build, /BUILDER NOTES · LETZTER STAND · 26\.10\.2026/);
 assert.match(build, /B0 Plateau 01/);
 assert.match(build, /71 \/ 71/);
 assert.match(build, /253 \/ 253/);
@@ -74,21 +74,30 @@ assert.match(build, /A0_PENTAGON_BODY_EXHIBITION\.html/);
 assert.match(build, /Inventar vollständig · ein Staging-Paket reproduzierbar/);
 assert.match(build, /Orientieren\. Verbinden\. Benutzen/);
 assert.match(build, /BUILD REGISTER · SOURCE-BOUND/);
-assert.match(build, /Zwei Fenster\. Dreizehn Builds\./);
+assert.match(build, /Zwei Fenster\. Vierzehn Builds\./);
 assert.match(build, /A0_BUILDER_TOY_STORE\.html#instrument-atlas/);
 assert.match(build, /A0_RESEARCH_DESK\.html#instrument-atlas-return-20261025/);
-assert.equal([...build.matchAll(/data-build-log-item/g)].length, 13);
+assert.equal([...build.matchAll(/data-build-log-item/g)].length, 14);
 assert.match(build, /Crown → Shadow Contact Bench/);
 assert.match(build, /A0_CROWN_SHADOW_CONTACT_BENCH\.html/);
 assert.match(build, /110\/110 Hashes und 88\/88 Engineering-Checks/);
+assert.match(build, /Field Reconstruction Package/);
+assert.match(build, /61-frame bench und 122 Source-Hashes/);
+assert.match(build, /NEXAH_FIELD_RECONSTRUCTION_PACKAGE\.html/);
+assert.match(build, /Body\/Pole\/Lantern-Kopplung bleibt UNDEFINED_CONTRACT/);
 
 const pentagonProject = pages["project-a0-pentagon-body-return.html"];
 assert.match(pentagonProject, /Pentagon \/ <em>Body Return/);
-assert.match(pentagonProject, /PLANNED · NO NEW ID/);
+assert.match(pentagonProject, /GUIDED ACCEPTED · BODY WIRING OPEN/);
 assert.match(pentagonProject, /SOURCE BODY → MOVE → PROJECT → COMPARE → RETURN \/ CANNOT RETURN/);
 assert.match(pentagonProject, /114/);
 assert.match(pentagonProject, /PROJECT_A0_PENTAGON_BODY_RETURN_2026-10-25\.md/);
 assert.match(pentagonProject, /A0_PENTAGON_BODY_RETURN_GUIDED\.html/);
+assert.match(pentagonProject, /17 STAGES · 61 FRAMES · 122 HASHES/);
+assert.match(pentagonProject, /OPEN · GATE → BRIDGE/);
+assert.match(pentagonProject, /OPEN · BODY → POLE → LANTERN/);
+assert.match(pentagonProject, /keine Shared Clock/);
+assert.match(pentagonProject, /BODY SYNTHESIS UNDEFINED_CONTRACT/);
 
 const humanReadingProject = pages["public-nexahedron-human-reading.html"];
 assert.match(humanReadingProject, /Der Unterschied <em>wird lesbar/);
@@ -141,11 +150,11 @@ assert.match(js, /data-archive-item/);
 assert.match(js, /buildInventorySearch/);
 assert.match(js, /buildRegisterGroups/);
 assert.equal([...build.matchAll(/data-build-log-group/g)].length, 2);
-assert.equal([...build.matchAll(/data-build-log-item/g)].length, 13);
+assert.equal([...build.matchAll(/data-build-log-item/g)].length, 14);
 assert.match(build, /BUILD \/ MACHINE/);
 assert.match(build, /SCIENCE \/ INSTRUMENT/);
 assert.match(build, /5 BUILDS/);
-assert.match(build, /8 INSTRUMENTS/);
+assert.match(build, /9 INSTRUMENTS/);
 
 const localLinks = Object.entries(pages).flatMap(([name, source]) =>
   [...source.matchAll(/href="([^"]+)"/g)]
