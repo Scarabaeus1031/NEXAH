@@ -44,7 +44,7 @@ for (const entrypoint of Object.values(manifest.entrypoints)) {
 const home = fs.readFileSync(path.join(root, manifest.entrypoints.home), "utf8");
 const pipeline = fs.readFileSync(path.join(root, manifest.entrypoints.pipeline), "utf8");
 const bench = fs.readFileSync(path.join(root, manifest.entrypoints.visualBench), "utf8");
-for (const phrase of ["61-FRAME BENCH", "PACKAGE COMPLETE · VERIFY EXISTING · STOP"]) {
+for (const phrase of ["NEXAH CORE · BUILDER PATH", "SYSTEMS DESK", "WIRING RETURN", "61-FRAME BENCH", "PACKAGE COMPLETE · VERIFY EXISTING · STOP"]) {
   if (!home.includes(phrase)) failures.push(`home missing ${phrase}`);
 }
 if (!pipeline.includes("PACKAGE HOME")) failures.push("pipeline missing package link");
