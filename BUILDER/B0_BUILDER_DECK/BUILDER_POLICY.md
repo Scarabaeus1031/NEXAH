@@ -46,6 +46,12 @@ administration.
     from their declared source and manifest, never hand-edited. Commit only an
     exact reviewed path set in the owning repository; push and deploy require
     their own Owner gates.
+13. **Logs and drafts do not become copies.** The owning repository keeps code,
+    ordinary Git history and source-level drafts. B0 records the active cut,
+    disposition, verification and Return; A0 may expose a bounded Owner-review
+    projection. Retained predecessors are marked `ARCHIVED`, `SUPERSEDED` or
+    `REFERENCE` with a current successor. Do not paste a website or its
+    changelog into A0 or B0 as a second master.
 
 ## Minimum build card
 

@@ -4,12 +4,13 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.dirname(fileURLToPath(import.meta.url));
-const pageNames = ["index.html", "achievements.html", "systems-desk.html", "build-desk.html", "public-field.html", "a0-tools.html", "archive.html", "project-a0-pentagon-body-return.html", "public-nexahedron-human-reading.html"];
+const pageNames = ["index.html", "achievements.html", "systems-desk.html", "build-desk.html", "public-field.html", "a0-tools.html", "archive.html", "project-a0-pentagon-body-return.html", "public-nexahedron-human-reading.html", "project-scarabaeus-living-workshop.html"];
 const pages = Object.fromEntries(pageNames.map((name) => [name, fs.readFileSync(path.join(root, name), "utf8")]));
 const architect = pages["index.html"];
 const systems = pages["systems-desk.html"];
 const build = pages["build-desk.html"];
 const publicHtml = pages["public-field.html"];
+const scarabProject = pages["project-scarabaeus-living-workshop.html"];
 const a0Html = pages["a0-tools.html"];
 const archive = pages["archive.html"];
 const achievements = pages["achievements.html"];
@@ -19,6 +20,13 @@ const js = fs.readFileSync(path.join(root, "app.js"), "utf8");
 
 assert.match(publicHtml, /50%20PUBLISHING\/20%20WEBSITE%20STAGING\/index\.html/, "Public Field must point to the local staging shelf");
 assert.match(publicHtml, /50%20PUBLISHING\/20%20WEBSITE%20STAGING\/scarabaeus1033\/index\.html/, "Scarabæus house must expose its local staging view");
+assert.match(publicHtml, /project-scarabaeus-living-workshop\.html/);
+assert.match(publicHtml, /SCARABÆUS PROJECT · EXISTING IDENTITY/);
+assert.match(scarabProject, /The Living Workshop/);
+assert.match(scarabProject, /VISION REFERENCE · NOT A FACTUAL STATUS RECORD/);
+assert.match(scarabProject, /70%20SCARABAEUS1033%20WORKBENCH\/Scarabaeus-1033\/README\.md/);
+assert.match(scarabProject, /SCARABAEUS_NEXAH_CODEX_CUSTODY_OVERVIEW_2026-10-27\.md/);
+assert.match(scarabProject, /10-builder-ecosystem-map\.jpeg/);
 
 for (const [name, html] of Object.entries(pages)) {
   assert.match(html, /class="desk-nav"/, `${name}: shared desk navigation missing`);
@@ -187,7 +195,8 @@ assert.match(a0Html, /build-desk\.html#latest-builds/);
 
 assert.match(archive, /05 · ARCHIVE DESK/);
 assert.match(archive, /BUILDER ARCHIVE · SOURCE-BOUND/);
-assert.equal([...archive.matchAll(/data-archive-item/g)].length, 16);
+assert.equal([...archive.matchAll(/data-archive-item/g)].length, 17);
+assert.match(archive, /NEXAH\.de Live-Baseline/);
 assert.match(archive, /CURRENT\/ENGINEERING_ASSEMBLY\.csv/);
 assert.match(archive, /A0_RESEARCH_BACKLOG\.html/);
 
@@ -227,4 +236,4 @@ const missing = localLinks.filter(({ href }) => {
 });
 assert.deepEqual(missing, []);
 
-console.log(`PASS · B0 six-desk architecture, source-bound workspaces, searchable 16-entry archive and ${localLinks.length} local links verified.`);
+console.log(`PASS · B0 six-desk architecture, source-bound workspaces, searchable 17-entry archive and ${localLinks.length} local links verified.`);

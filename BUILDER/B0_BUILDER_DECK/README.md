@@ -43,10 +43,17 @@ Architect Desk; deeper inventories and work surfaces live on their own pages:
   unfinished NEXAH.de design worktree: preserve its visual/editorial strengths,
   replace the obsolete navigation and reconcile its A0 door before any build,
   commit or deployment decision.
+- `project-scarabaeus-living-workshop.html` and
+  `PROJECT_SCARABAEUS_LIVING_WORKSHOP_2026-10-27.md` — source-bound visual
+  dossier and active-cut project brief for the existing SCARABÆUS 1033
+  workshop. They bind the current repository, public-house role, shelf/work
+  page architecture, Rödelheim Observatory and ten supplied direction boards
+  without creating a second website identity. Source history remains in the
+  Scarabäus repository; B0 records status, dispositions and returns.
 
 The shared navigation keeps all six desks reachable without deep dropdowns.
 The Architect Desk opens with the controlling Mission, a visual blueprint and
-a compact source-bound work queue. The searchable Archive Desk binds 16
+a compact source-bound work queue. The searchable Archive Desk binds 17
 controlling or operational source documents without copying their authority.
 Logs, release notes and backlogs remain at their owning sources.
 
