@@ -4,6 +4,9 @@ Status: `LOCAL OPERATING POLICY / OWNER-LED / SPEED-FIRST`
 
 Date: `2026-10-29`
 
+Last clarification: `2026-10-30` · explicit NSNavigator return binding; no
+identity, relation or authority transfer
+
 ## Purpose
 
 Build the smallest useful thing, finish it cleanly and return it to its source.
@@ -64,6 +67,15 @@ administration.
     revision, rollback point and live smoke result to be visible again in the
     A0 frame. Any disagreement between source, A0 projection, artifact and live
     site is `VERSION_AMBIGUOUS` and stops further design work.
+16. **Declare the NSNavigator effect.** Every material source-bound tool,
+    demonstrator, HTML or GLB return names the reused NSNavigator identity or
+    binder, or states why the Source Graph is unaffected. The return separates
+    a reference-only link, a source-hash/currentness update and a proposed
+    semantic graph change; it reports node, relation and alias count effects
+    and the applicable validator results. Builder may route a graph delta to
+    Science Desk and Navigator governance but never creates identity or typed
+    relation through implementation, visual similarity or navigation
+    placement.
 
 ## Minimum build card
 
@@ -75,6 +87,8 @@ Before work, only these fields are needed:
 - finish condition;
 - relevant check;
 - return destination.
+- NSNavigator binding or explicit no-effect reason, including graph-count and
+  validator effects when the cut is source-bound.
 - for website work: public channel, canonical repository and whether the
   touched path is `SOURCE`, `GENERATED_PROJECTION` or `LEGACY_DISPOSITION`.
 - for an A0-framed website cut: source revision, preview class, production
@@ -97,6 +111,9 @@ A Builder cut is done when:
   its live receipt returned there;
 - the result has returned to Mission Control, or to the Science Desk when it
   affects scientific interpretation.
+- any source-bound Navigator effect has returned through the existing Science
+  Desk and governed Source Graph path, with currentness reconciled separately
+  from semantic graph change.
 
 `DONE` does not mean published. `HOLD` is a valid closeout when the missing
 input or decision is named.
