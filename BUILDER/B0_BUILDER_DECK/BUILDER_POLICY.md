@@ -2,7 +2,7 @@
 
 Status: `LOCAL OPERATING POLICY / OWNER-LED / SPEED-FIRST`
 
-Date: `2026-10-26`
+Date: `2026-10-29`
 
 ## Purpose
 
@@ -52,6 +52,18 @@ administration.
     projection. Retained predecessors are marked `ARCHIVED`, `SUPERSEDED` or
     `REFERENCE` with a current successor. Do not paste a website or its
     changelog into A0 or B0 as a second master.
+14. **A0 is the Owner control plane.** Website candidates are built in their
+    owning repository but reviewed only as an identified projection inside the
+    single A0 Owner frame. B0 records source repository, branch, exact commit
+    or dirty state, preview class and intended deployment target. A standalone
+    tab, temporary server or staging host is diagnostic only and cannot be the
+    accepted master.
+15. **Return the deployed revision to A0.** After Owner acceptance, Builder may
+    commit, push and deploy only the accepted revision through separately
+    authorized gates. Completion requires the production URL, deployed
+    revision, rollback point and live smoke result to be visible again in the
+    A0 frame. Any disagreement between source, A0 projection, artifact and live
+    site is `VERSION_AMBIGUOUS` and stops further design work.
 
 ## Minimum build card
 
@@ -65,6 +77,8 @@ Before work, only these fields are needed:
 - return destination.
 - for website work: public channel, canonical repository and whether the
   touched path is `SOURCE`, `GENERATED_PROJECTION` or `LEGACY_DISPOSITION`.
+- for an A0-framed website cut: source revision, preview class, production
+  target and current acceptance state.
 
 If one is unclear, make the narrowest reversible assumption and keep moving.
 Ask the Owner only when the choice changes meaning, authority, public scope or
@@ -79,6 +93,8 @@ A Builder cut is done when:
 - opened depth can be closed and returns to a visible orientation point;
 - the current source and links are unambiguous;
 - displaced versions are classified rather than left competing;
+- the exact candidate was reviewed in the A0 Owner frame and, if deployed,
+  its live receipt returned there;
 - the result has returned to Mission Control, or to the Science Desk when it
   affects scientific interpretation.
 
@@ -88,7 +104,8 @@ input or decision is named.
 ## Compact loop
 
 ```text
-GOAL → SOURCE → SMALL CUT → CHECK → RETURN → CLOSE
+GOAL → SOURCE → SMALL CUT → CHECK + RECEIPT → DESK CLASSIFICATION
+  → OWNER GATE → ALLOWLISTED RELEASE → LIVE RECEIPT → CLOSE
 ```
 
 No new Builder identity, scientific claim, Study, release or publication is

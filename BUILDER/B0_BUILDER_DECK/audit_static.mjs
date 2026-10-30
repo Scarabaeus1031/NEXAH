@@ -121,7 +121,7 @@ assert.match(systems, /PROJECT_THE_MACHINA_EXHIBITION_2026-10-26\.md/);
 assert.match(systems, /Exhibition, Machine Series, Parts Shelf und Bench/);
 assert.match(systems, /NEXAH \+ NEXAHEDRON/);
 assert.match(systems, /BUILDER_TOOL_INVENTORY\.csv/);
-assert.equal([...systems.matchAll(/data-build-item/g)].length, 44);
+assert.equal([...systems.matchAll(/data-build-item/g)].length, 45);
 
 assert.match(build, /02 · BUILD DESK/);
 assert.match(build, /BUILDER NOTES · LETZTER STAND · 26\.10\.2026/);
@@ -142,10 +142,12 @@ assert.match(build, /A0_PENTAGON_BODY_EXHIBITION\.html/);
 assert.match(build, /Inventar vollständig · ein Staging-Paket reproduzierbar/);
 assert.match(build, /Orientieren\. Verbinden\. Benutzen/);
 assert.match(build, /BUILD REGISTER · SOURCE-BOUND/);
-assert.match(build, /Zwei Fenster\. Vierzehn Builds\./);
+assert.match(build, /Zwei Fenster\. Fünfzehn Builds\./);
 assert.match(build, /A0_BUILDER_TOY_STORE\.html#instrument-atlas/);
 assert.match(build, /A0_RESEARCH_DESK\.html#instrument-atlas-return-20261025/);
-assert.equal([...build.matchAll(/data-build-log-item/g)].length, 14);
+assert.equal([...build.matchAll(/data-build-log-item/g)].length, 15);
+assert.match(build, /Breathing Crystal → V12 Orientation Handoff/);
+assert.match(build, /breathing-crystal-v12-builder-return-20261030/);
 assert.match(build, /Crown → Shadow Contact Bench/);
 assert.match(build, /A0_CROWN_SHADOW_CONTACT_BENCH\.html/);
 assert.match(build, /110\/110 Hashes und 88\/88 Engineering-Checks/);
@@ -190,7 +192,8 @@ assert.match(a0Html, /A0 Builder Log/);
 assert.match(a0Html, /A0 Science Desk/);
 assert.match(a0Html, /A0_RESEARCH_DESK\.html#desk-cabinet/);
 assert.match(a0Html, /NEXAHEDRON_BUILDER_BACKLOG\.md/);
-assert.match(a0Html, /12 CURRENT BUILDS/);
+assert.match(a0Html, /15 CURRENT BUILDS/);
+assert.match(a0Html, /CURRENT BUILDER RETURN · BT-045/);
 assert.match(a0Html, /build-desk\.html#latest-builds/);
 
 assert.match(archive, /05 · ARCHIVE DESK/);
@@ -219,11 +222,11 @@ assert.match(js, /data-archive-item/);
 assert.match(js, /buildInventorySearch/);
 assert.match(js, /buildRegisterGroups/);
 assert.equal([...build.matchAll(/data-build-log-group/g)].length, 2);
-assert.equal([...build.matchAll(/data-build-log-item/g)].length, 14);
+assert.equal([...build.matchAll(/data-build-log-item/g)].length, 15);
 assert.match(build, /BUILD \/ MACHINE/);
 assert.match(build, /SCIENCE \/ INSTRUMENT/);
 assert.match(build, /5 BUILDS/);
-assert.match(build, /9 INSTRUMENTS/);
+assert.match(build, /10 INSTRUMENTS/);
 
 const localLinks = Object.entries(pages).flatMap(([name, source]) =>
   [...source.matchAll(/href="([^"]+)"/g)]

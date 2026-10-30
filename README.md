@@ -6,7 +6,7 @@
 
 This repository preserves the research, framework, Orientation Language, experiments, applications, governance and historical development of the **NEXAH Orientation Ecosystem**.
 
-**Public path:** [Discover NEXAH](https://nexah.de) · [Use the Visitor Guide](https://nexah.de/visitor-guide/) · [Inspect Science Lab](https://github.com/Scarabaeus1031/NEXAH-Science-Lab) · [Try NEXAHEDRON](https://nexahedron.com) · [Inspect ORION](https://github.com/Scarabaeus1031/NEXAH-ORION)
+**Public path:** [Discover NEXAH](https://nexah.de) · [About NEXAH](https://nexah.de/about/) · [Use the Visitor Guide](https://nexah.de/visitor-guide/) · [Inspect Science Lab](https://github.com/Scarabaeus1031/NEXAH-Science-Lab) · [Try NEXAHEDRON](https://nexahedron.com) · [Inspect ORION](https://github.com/Scarabaeus1031/NEXAH-ORION)
 
 It is not the public landing page, Science Lab, the ORION repository or the
 Human-facing Workspace. It is the framework, semantic and implementation home
@@ -42,6 +42,7 @@ decision, and STOP remain with the Human.
 
 | I want to… | Begin here |
 |---|---|
+| Understand the complete ecosystem | **[About NEXAH](https://nexah.de/about/)** — the public definition, identity hierarchy, source authorities and boundaries |
 | Enter the public Experience | **[nexah.de](https://nexah.de)** — the public entrance to NEXAH |
 | Understand the adopted cross-repository research architecture | **[Research & Ecosystem Architecture](ARCHITECTURE/NEXAH_RESEARCH_ECOSYSTEM_ARCHITECTURE.md)** — research questions, responsibilities, methodological rails and public interfaces |
 | Inspect the certified deterministic Core | **[NEXAH-ORION](https://github.com/Scarabaeus1031/NEXAH-ORION)** — structural representation, relations, navigation, orientation map and certified expression |

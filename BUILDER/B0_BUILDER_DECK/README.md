@@ -22,7 +22,7 @@ Architect Desk; deeper inventories and work surfaces live on their own pages:
   Direct-file-JavaScript-Snapshots für die Achievements-Seite;
 - `systems-desk.html` — system roles, working inventory and technical map;
 - `build-desk.html` — Chore projection, decisions, build cuts, returns and the
-  fourteen-entry `Latest Builds` inspection log;
+  fifteen-entry `Latest Builds` inspection log;
 - `public-field.html` — Public Desk: nexah.de, NEXAHEDRON and Scarabæus;
 - `public-nexahedron-page-shelf.html` — generated source-bound shelf for all 75
   HTML pages and runtimes in the current NEXAHEDRON A0 Human View, including
