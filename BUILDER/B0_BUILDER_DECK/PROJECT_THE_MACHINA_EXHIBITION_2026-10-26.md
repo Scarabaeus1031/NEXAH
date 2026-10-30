@@ -140,3 +140,68 @@ push, deployment, publication or outreach.
 Return destination: B0 Builder Desk -> Mission Control. Scientific
 interpretation remains with the A0 Science Desk; source implementation remains
 with the owning A0 and NEXAHEDRON repositories.
+
+## Consolidated A0 thread delta return · 2026-10-30
+
+Status: `DOCUMENTATION_RETURN_BOUND / PROJECT_REMAINS_PARKED / NO BUILD`
+
+This is a delta inside the existing THE MACHINA project. It creates no project,
+Machine family, Bench identity, Navigator node, relation, Study or release
+object. The frozen A0 version remains the one maintained source surface.
+
+### Existing technical Bench door
+
+The current A0 Workbench Switchboard is the technical Bench door for this
+project. Its cable-patch reading keeps the existing modules and their roles
+separate:
+
+| Existing module | Switchboard role | Boundary |
+|---|---|---|
+| Lantern / Panel V | gold Orientation Rail | context only; `NO FEED` |
+| Tower | cyan return witness | own carrier, clock and provenance |
+| IOTA | violet T24 typed handoff | own carrier, clock and provenance |
+| Interlock | pink four-state comparator | only `11` returns; post-hoc, not causal |
+| TESA | existing glyph/zither and acoustic comparison module | address, display and audio types remain separate |
+| Typed Return | green | valid bounded view return |
+| HOLD / Boundary | grey | unresolved mechanism, measurement or physical claim |
+
+The reading order is not a production or causal pipeline. The Switchboard is a
+source-bound route lens over modules that already exist in A0.
+
+### Operator and naming separation
+
+The source comparison found related motifs but no duplicate method. Builder
+must preserve the following labels and contracts instead of collapsing them:
+
+| Label | Existing contract | Non-merge boundary |
+|---|---|---|
+| `CRT16 Reconstruction` | exact reconstruction from declared residue classes plus quotient | not QRT addressing and not an abbreviation for Carrier Return |
+| `QRT20 Address` | `n=20q+r` with an explicit quotient and remainder | shared column or suffix does not identify carriers |
+| `Carrier Return` | reverse the recorded suffix/shadow operator path to the full source carrier | spell out the name; do not introduce a second meaning for `CRT` |
+| `M37 Comparator` | `3×37, 5×37, 7×37` with step `74` | arithmetic comparison; only `111` is source-bound to GhostGrid |
+| `Z7×Z8 Orbit` | declared 56-state finite orbit with a seven-state negative control | not a residue decoder, carrier ladder or physical pipe |
+
+This naming gate is documentation and implementation routing only. It creates
+no canonical vocabulary decision, source merge, relation or build activation.
+
+### Receipts and returns
+
+- [Workbench Switchboard receipt](../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/results/a0-workbench-switchboard-return-2026-10-30.json)
+- [Lantern Clock/C5 comparator receipt](../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/results/a0-lantern-clock-c5-light-shadow-comparator-return-2026-10-30.json)
+- [TESA glyph/zither translator receipt](../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/results/a0-tesa-glyph-zither-translator-return-2026-10-30.json)
+- [TESA acoustic overlay receipt](../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/results/a0-tesa-acoustic-overlay-return-2026-10-30.json)
+- [Tower/IOTA return matrix receipt](../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/results/a0-iota-tower-return-matrix-2026-10-23.json)
+- [Consolidated Science Desk return](../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/A0_RESEARCH_DESK.html#a0-thread-return-20261030)
+- [A0 Builder Log pointer](../../../../30%20SCIENCE%20LAB/NEXAH-Science-Lab/RESEARCH_PROGRAM_B_MATHEMATICAL_FOUNDATIONS/AXIOM0_QMODE_ORIENTATION_TO_MEASUREMENT_FOUNDATION_PACKAGE_2026-10-01/A0_BOOK/A0_BUILDER_LOG.html#a0-thread-return-20261030)
+
+### Freeze and authority return
+
+Reused identities: `NEXAH_A0_ORIENTATION_CONTROLLER_BENCH`,
+`ART:A0:MATHEMATICAL_JOINTS`,
+`NEXAH:A0_ORIENTATION_EVIDENCE_LINEAGE:V1`,
+`A0_LANTERN_PANEL_V_CONTROL_LENS` and `A0_IOTA_BRIDGE_DEMONSTRATOR`.
+
+New IDs: `0`. Relation changes: `0`. Study activation: `0`. Build,
+deployment, publishing and outreach activation: `0`. The project stays
+`PARKED`; scientific HOLDs and claim ceilings return to the A0 Science Desk,
+while currentness and any later Owner gate return through Mission Control.
