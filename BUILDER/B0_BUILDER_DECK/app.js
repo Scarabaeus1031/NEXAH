@@ -115,6 +115,47 @@ if (buildRegisterSearch && buildRegisterMode) {
   filterBuildRegister();
 }
 
+const flagshipMapNodes = [...document.querySelectorAll("[data-flagship-node]")];
+const flagshipPanels = [...document.querySelectorAll("[data-flagship-panel]")];
+const flagshipInspector = document.getElementById("flagship-inspector");
+const flagshipInspectorClose = document.getElementById("flagship-inspector-close");
+
+if (flagshipMapNodes.length && flagshipPanels.length && flagshipInspector) {
+  let activeNode = null;
+  const activateFlagshipPanel = (id) => {
+    const panel = flagshipPanels.find((candidate) => candidate.dataset.flagshipPanel === id);
+    if (!panel) return;
+    flagshipInspector.hidden = false;
+    flagshipPanels.forEach((candidate) => { candidate.hidden = candidate !== panel; });
+    flagshipMapNodes.forEach((node) => {
+      const selected = node.dataset.flagshipNode === id;
+      node.classList.toggle("is-selected", selected);
+      node.setAttribute("aria-expanded", String(selected));
+      if (selected) activeNode = node;
+    });
+  };
+  const closeFlagshipInspector = ({ restoreFocus = false } = {}) => {
+    flagshipInspector.hidden = true;
+    flagshipPanels.forEach((panel) => { panel.hidden = true; });
+    flagshipMapNodes.forEach((node) => {
+      node.classList.remove("is-selected");
+      node.setAttribute("aria-expanded", "false");
+    });
+    if (restoreFocus && activeNode) activeNode.focus({ preventScroll: true });
+  };
+
+  flagshipMapNodes.forEach((node) => {
+    node.addEventListener("click", (event) => {
+      event.preventDefault();
+      activateFlagshipPanel(node.dataset.flagshipNode);
+    });
+  });
+  flagshipInspectorClose?.addEventListener("click", () => closeFlagshipInspector({ restoreFocus: true }));
+
+  const requestedPanel = window.location.hash.match(/^#flagship-detail-(.+)$/)?.[1];
+  if (requestedPanel) activateFlagshipPanel(requestedPanel);
+}
+
 const achievementSnapshot = globalThis.NEXAH_ECOSYSTEM_ACHIEVEMENTS;
 
 if (achievementSnapshot) {

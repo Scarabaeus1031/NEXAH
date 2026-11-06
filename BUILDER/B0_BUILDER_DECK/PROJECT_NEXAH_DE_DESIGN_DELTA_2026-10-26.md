@@ -1,10 +1,161 @@
 # NEXAH.de Design Delta
 
-Status: `LIVE_BASELINE_ARCHIVED_REFERENCE / DRAFT_OWNER_REVIEW_ACTIVE / SOFTWARE_VERIFIED / BROWSER_ACCEPTANCE_OPEN / NO_DEPLOY`
+Status: `LIVE_OWNER_ACCEPTED / FIVE_POINT_FINE_TUNE_DEPLOYED / LIVE_VERIFIED / TASK_CLOSED`
 
 Date: `2026-10-26`
 
 Reused inventory identity: `BT-020 · NEXAH Experience`
+
+## Deployment closeout · 30 October 2026
+
+The Human Owner accepted the exact five-point candidate and authorized the
+nexah.de update. Website revision
+`425d1c1c20a5a3a3d9f2e47f4d805b2dc291a333` and A0 public-source revision
+`bfa09a664deff650b08ce7216d4c3bf9d6a39fad` were committed and pushed before
+the verified composed artifact was deployed to OVH.
+
+The previous live release is recoverable from
+`40 EXPERIENCE PRODUCTION/NEXAH deployment backups/2026-10-30_13-16-27`.
+Root, About, Forschen, Library, Tours, Laboratory and the legal/index routes
+pass live HTTP verification; all six Lorenz media return `200`; sampled live
+pages are byte-identical to the composed artifact.
+
+The bounded five-point website task is closed. The three houses and registered
+channels remain standing. No Outreach, new route family, Study, claim,
+Navigator identity or scientific publication was activated. The controlling
+receipt is
+`00 EXECUTIVE/NEXAH-Mission-Control/PUBLISHING/PUBLIC_FIELD_01/CH009_NEXAH_DE_DEPLOYMENT_RECEIPT_2026-10-30.md`.
+
+## Human Owner live disposition · 30 October 2026
+
+The Human Owner confirms `https://nexah.de` as accepted and live, together
+with `https://nexahedron.com` and `https://www.scarabaeus1033.net`. The older
+four-route candidate gate is therefore closed as an acceptance question. A
+dated source-to-live deployment receipt remains useful custody work, but it
+does not reopen the visual or structural acceptance of the live site.
+
+Before any Outreach activation, Builder Desk holds one bounded NEXAH.de
+fine-tune pass. Its exact local candidate now covers these five items:
+
+1. make `Anwenden & erleben` experience-first by moving the 57-page
+   Fieldbook/Mathfield inventory behind the actual tour choices;
+2. remove or repair the two visible `BILD NICHT LADBAR` fallbacks in the
+   Lorenz reading section;
+3. choose and apply one explicit German/English rule for the public reader
+   routes, including a visible language transition where English source works
+   remain intentionally English;
+4. remove `Structure Freeze · 0 active` from the public website and retain the
+   operating state only in its A0 / Science Desk authority;
+5. simplify the narrow-width header and align skip-link/accessibility behavior
+   across Home, About, Forschen, Library and Tours.
+
+Finish condition: the five corrections are reviewed as one exact source cut,
+the four public routes remain intact, normal and 390 px layouts pass, and the
+live candidate returns to the A0 Owner frame. No new route, translation
+edition, Study, push, deployment or Outreach action is implied.
+
+NSNavigator effect: none. This is public presentation and interaction polish
+on existing routes; node, relation and alias counts remain `0 / 0 / 0` delta.
+
+### Activated sub-cut: German About body · 30 October 2026
+
+The Human Owner activated only the language/About part of item 3. The local
+candidate now uses German explanatory body copy on `/about/`, while English
+headings, named concepts and action labels remain English. This is a bounded
+presentation rule, not a complete English edition and not a change to the
+canonical NEXAH identity.
+
+The prior English About baseline remains recoverable from Git commit
+`4932d78` at `src/pages/about.astro`. Canonical English identity data remains
+in `src/data/nexah-identity.ts`; the new German presentation copy is isolated
+in `src/data/about-copy.de.ts`. A future English edition therefore has a clean
+source, but no route or edition has been activated.
+
+Local verification:
+
+- NEXAH site tests: `55 / 55 PASS`;
+- Astro diagnostics: `0` errors, warnings or hints;
+- static build: `211` pages;
+- desktop visual review: pass;
+- built-link review retains two inherited references from `/forschen/` to
+  `NEXAH_SCIENCE.html#overview`; they are not introduced by the About cut.
+
+This exact candidate now waits for Human Owner review in the A0 frame. The
+other four fine-tune items remain parked. No commit, push, deployment,
+publication or Outreach action has been performed. NSNavigator delta remains
+`0 / 0 / 0`.
+
+### Activated sub-cut: Tours hierarchy and Lorenz media · 30 October 2026
+
+The Human Owner additionally activated items 1 and 2. The canonical A0 Tours
+source now starts with three experience choices — `Geführt starten`,
+`Mathfield ausprobieren` and `Lorenz lesen`. The complete governed `57 / 57`
+Fieldbook–Mathfield inventory remains present but is subordinate and collapsed
+as `Complete Fieldbook Index`; no registered surface was deleted or
+reclassified.
+
+The Lorenz reading no longer depends on repository-relative Core paths that
+break in the public export. All six retained historical images are exported as
+hash-identical local media copies with their original SHA-256 provenance. The
+two initially visible `BILD NICHT LADBAR` fallbacks and the same latent failure
+on later reading steps are therefore removed without regenerating scientific
+outputs or changing their interpretation.
+
+Canonical source and projection paths:
+
+- `NEXAH-Science-Lab/.../A0_BOOK/A0_TOURS.html`;
+- `NEXAH-Science-Lab/.../A0_BOOK/a0-core-research-book.js`;
+- `NEXAH-Science-Lab/.../A0_BOOK/assets/core-research-book/`;
+- `NEXAH-Science-Lab/.../A0_BOOK/a0-public-export-manifest.json`;
+- composed local candidate: `NEXAH-Experience/dist/A0_TOURS.html`.
+
+Verification:
+
+- A0 research-book source/hash/interface test: `386 PASS`;
+- A0 public export: `13` pages, `110` files, all six Lorenz media present;
+- NEXAH site tests: `55 / 55 PASS`;
+- Astro diagnostics: `0` errors, warnings or hints;
+- static build: `211` pages;
+- composed link check: `224` HTML pages, no broken internal links;
+- desktop browser review: three experience choices, collapsed index and both
+  opening Lorenz images render correctly.
+
+The exact local candidate now contains fine-tune items 1, 2 and the About
+language sub-cut from item 3. Items 4 and 5 remain parked. No commit, push,
+deployment, publication or Outreach action has occurred. NSNavigator node,
+relation and alias delta remains `0 / 0 / 0` because this changes public
+ordering and media custody only.
+
+### Activated sub-cut: public operating-state boundary and mobile accessibility · 30 October 2026
+
+The Human Owner additionally activated items 4 and 5. `Structure Freeze` and
+`0 active` have been removed from the public Laboratory and generated A0
+public export. The scientific operating state itself is unchanged and remains
+in A0 / Science Desk authority; the website no longer exposes an internal
+work-control label as public programme or site status.
+
+The narrow public shell now retains only the NEXAH brand and `Navigation` at
+390 px. Home, About, Forschen, Library and Tours use the same German
+`Zum Inhalt` skip link, visible keyboard focus and Escape-to-close menu
+behavior. The wide Tours SVG remains horizontally scrollable inside its own
+map frame without creating page-level horizontal movement.
+
+Verification:
+
+- A0 public export: `13` pages, `110` files, zero public `Structure Freeze` or
+  `0 active` matches;
+- NEXAH site tests: `55 / 55 PASS`;
+- Astro diagnostics: `0` errors, warnings or hints;
+- static build: `211` pages;
+- composed link check: `224` HTML pages, no broken internal links;
+- browser acceptance at effective `389 / 390 px`: all five reader routes have
+  no page-level horizontal overflow, `Zum Inhalt` is first keyboard focus,
+  the primary link row is hidden, and Escape closes the navigation menu.
+
+The bounded five-point pass is therefore complete as one local Owner-review
+candidate. No commit, push, deployment, publication or Outreach action has
+occurred. The existing identities `BT-020` and `M-PUB01` are reused;
+NSNavigator node, relation and alias delta remains `0 / 0 / 0`.
 
 ## What this is
 

@@ -12,17 +12,30 @@ navigable operating deck without copying their authority. A human can use it
 to check Mission Control, direct the Builder Vision editorially, choose the
 next build and retrieve the history behind an implementation.
 
+The deck is the current **operational Building Truth projection**: it brings
+inventory, maturity, work routes and technical returns together without
+becoming a new source authority. Code, evidence and history remain with their
+owning repositories; Mission Control retains priority, activation, release and
+the integrated Owner return.
+
 The deck now uses a six-desk architecture. The start page is the operational
 Architect Desk; deeper inventories and work surfaces live on their own pages:
 
-- `index.html` — Architect Desk: Big Picture, priority, strategy and blueprint;
+- `index.html` — Architect Desk: Big Picture, priority, strategy, blueprint and
+  the visible entry into the source-bound Builder Vision;
 - `achievements.html` — regenerierbarer Größen- und Werkbestand-Snapshot mit
   Repository-, Commit-, Datei-, Datenvolumen- und Registerzahlen;
 - `build-ecosystem-achievements.mjs` — erzeugt die source-bound JSON- und
   Direct-file-JavaScript-Snapshots für die Achievements-Seite;
 - `systems-desk.html` — system roles, working inventory and technical map;
 - `build-desk.html` — Chore projection, decisions, build cuts, returns and the
-  fifteen-entry `Latest Builds` inspection log;
+  23-entry `Latest Builds` inspection log; the current delta also binds the
+  IOI/Open-Book freeze, guided IOTA Bridge and shared Machina phase/bridge
+  return without copying the A0 micro-chronology; Z100 remains a Science case
+  and is not counted as another build;
+- `builder-journey.html` — editorial six-chapter reading path from source
+  recovery through instruments and machine assembly to the Science Return;
+  the A0 Builder Log remains the complete source-bound chronology;
 - `public-field.html` — Public Desk: nexah.de, NEXAHEDRON and Scarabæus;
 - `public-nexahedron-page-shelf.html` — generated source-bound shelf for all 75
   HTML pages and runtimes in the current NEXAHEDRON A0 Human View, including
@@ -53,7 +66,9 @@ Architect Desk; deeper inventories and work surfaces live on their own pages:
 
 The shared navigation keeps all six desks reachable without deep dropdowns.
 The Architect Desk opens with the controlling Mission, a visual blueprint and
-a compact source-bound work queue. The searchable Archive Desk binds 17
+a compact source-bound work queue. Its `#builder-vision` gate makes the
+existing current Builder Vision directly reachable without copying its
+canonical Mission-Control source. The searchable Archive Desk binds 17
 controlling or operational source documents without copying their authority.
 Logs, release notes and backlogs remain at their owning sources.
 
