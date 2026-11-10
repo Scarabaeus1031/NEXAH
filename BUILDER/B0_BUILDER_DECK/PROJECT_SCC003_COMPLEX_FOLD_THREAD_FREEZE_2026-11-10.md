@@ -46,15 +46,20 @@ No chemistry, atom, planetary, acoustical-frequency, thermodynamic, biological-f
 
 ## Verification and known blockers
 
-- Experience SCC tests pass; the only full-suite/build blocker is the separately missing ORION checkout used by the prebuild step.
+- Experience ORION discovery now resolves the sibling `20 ORION` checkout without an environment override; `ORION_REPOSITORY_PATH` remains the authoritative explicit override.
+- Experience SCC tests and the complete verification path pass after the discovery repair.
 - A0 Source Graph validation reports the already-known pre-existing hash mismatches; this SCC-003 return introduces no graph identity or relation delta.
 - Graph delta: `0 nodes · 0 relations · 0 aliases · 0 new finding`.
 
 ## Frozen commits
 
-- Experience: `961cf6a` — `feat(scc-003): freeze complex fold return views`
-- Science: `811fde1d` — `docs(a0): freeze SCC-003 complex fold thread`
+- Experience: `bf6db39` — `feat(scc-003): qualify fold gates and repair ORION discovery`
+- Science: `45f767b6` — `docs(a0): bind SCC-003 qualification gates`
 
-## Re-open gate
+## Qualification gates 1–3
 
-Re-open only for one of three bounded tasks: physical origami constraint testing, a material/measurement protocol, or qualified external review. Further numerical associations remain notebook material until a declared operator and falsifiable test are supplied.
+1. **Topology receipt:** local necessary conditions pass for `G18,23` and `G20,23`; carrier choice and global mechanism remain open.
+2. **Material/load:** protocol ready, no physical run and no material result.
+3. **Qualified review:** packet ready, awaiting external review; no recipient transmission was performed.
+
+The artifacts are indexed at `NEXAH-Experience/public/review-assets/scc-003-r1/qualification/`. Further numerical associations remain notebook material until a declared operator and falsifiable test are supplied.
