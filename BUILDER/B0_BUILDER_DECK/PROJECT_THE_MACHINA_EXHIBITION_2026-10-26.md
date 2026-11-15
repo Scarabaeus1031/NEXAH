@@ -271,6 +271,26 @@ existing Blue Body, Pink Diamond, Blue x Pink/Cruiser and Janus Ladder sources;
 their runtimes, identities, evidence authority and claim boundaries remain
 separate. Pink Diamond remains `VIEW_ONLY`.
 
+The entrance now also provides one lazy source-bound module window. Opening it
+dips into the current scene's existing source; advancing the tour replaces the
+window with the next source, and closing it returns directly to the tour. The
+host is never framed recursively, module DOM is not scraped, and source state
+is not imported into THE MACHINA.
+
+The automatic route is choreographed as `TOUR -> MODULE OPEN -> MODULE CLOSE`
+for every scene. The curatorial tour remains visible above the module window;
+only after the current source window closes does the route advance. At the end
+the source scene is restored with the module window closed.
+
+Freeze closeout · 15 November 2026:
+
+- status: `HUMAN_OWNER_FIXED / LOCAL INTEGRATION FREEZE / NO DEPLOYMENT`;
+- A0 entry, Human View, Science View, Builder View and THE MACHINA are bound as
+  one current route;
+- the tour remains part of the existing THE MACHINA project and is not Build 24;
+- publication, deployment and push remain separate gates owned through Mission
+  Control.
+
 Acceptance evidence:
 
 - exactly `6` scenes and an exact route return;
