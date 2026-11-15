@@ -243,6 +243,52 @@ balloon return`). Science classification remains
 `SOURCE_BOUND_MATHFIELD_INSTRUMENT_PAPER_TBC`; this delta promotes no evidence
 or publication state.
 
+## Grand Return Tour curatorial reopen · 15 November 2026
+
+Status: `OWNER_AUTHORIZED_BOUNDED_CURATORIAL_CUT / COMPLETE / NOT_BUILD_24`
+
+The Human Owner explicitly reopened only the four requested actions: preserve
+and publish the completed Janus/Curtain binding, return it to Builder Desk,
+compose one Grand Return route and hold that route to at most six scenes. This
+does not reopen general Builder work or change the controlling scientific
+freeze.
+
+The resulting route lives inside the existing `A0_MACHINA_COCKPIT.html` and
+reuses `NEXAH_A0_ORIENTATION_CONTROLLER_BENCH`:
+
+```text
+SOURCE
+  -> BLUE CARRIER
+  -> PINK VIEW ONLY
+  -> BLUE x PINK HANDOFF
+  -> CURTAIN / JANUS
+  -> HUMAN RETURN / RECEIPT
+  -> SOURCE
+```
+
+The cut adds one effect-first entrance, not another machine. It references the
+existing Blue Body, Pink Diamond, Blue x Pink/Cruiser and Janus Ladder sources;
+their runtimes, identities, evidence authority and claim boundaries remain
+separate. Pink Diamond remains `VIEW_ONLY`.
+
+Acceptance evidence:
+
+- exactly `6` scenes and an exact route return;
+- dedicated pure-state and DOM-contract test;
+- source-bound A0 receipt;
+- Source Graph and Navigator application validation;
+- visible A0 Owner-frame browser check.
+
+Builder register effect: `0`; the register remains `7 Machine + 16 Instrument
+= 23 Builds`. Navigator effect: `0 IDs`, `0 relations`, `0 aliases`. New
+Flagship, Runtime, Engine, Study, Finding, deployment and publication: `0`.
+
+Canonical source:
+`A0_BOOK/A0_MACHINA_COCKPIT.html#machinaGrandReturnTour`.
+
+Receipt:
+`A0_BOOK/results/a0-machina-grand-return-tour-2026-11-15.json`.
+
 ## Existing Cockpit effect-tour delta · 2026-11-03
 
 Status: `LOCAL_DEMONSTRATOR_COMPLETE / EXISTING PROJECT / NO NEW TOOL`
