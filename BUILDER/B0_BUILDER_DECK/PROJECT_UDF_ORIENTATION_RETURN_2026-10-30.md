@@ -355,6 +355,44 @@ Canonical effect is `0` identities, `0` relations and `0` aliases.
 
 ## Backlog cut
 
+## Owner working lens · Ink × Mask × 432 — 11 November 2026
+
+State: `LOCAL_WORKING_LENS_COMPLETE / EXISTING_PROJECT_REUSED / NOT_ACTIVE`
+
+The BLU(E) polygonal reference is implemented as a bounded UDF switching
+contract, not as a new polygon, frequency or resonance operator:
+
+```text
+state s_t
+  + active_mask M_t ∈ {540, 720-A, 720-B, 1080}
+  + append-only ink_ledger I_t
+  + local home_register 432
+
+SELECT(m): I_{t+1} = I_t ⊕ trace(t, m, 432); active_mask := m
+RETURN:    active_mask := 432; I_{t+1} = I_t
+```
+
+`Mask` is the current view/operator selection. `Ink` is the ordered,
+non-destructive transition receipt. Return resets the active view while the
+trace history remains visible. `432` is only the local home/register value of
+this lens; it is not promoted to Hz, a physical coupling or a universal
+constant. The values `540`, `720` and `1080` likewise remain display registers
+unless a separate source contract types their geometric role.
+
+This makes the proposed algorithm rhythm concrete without claiming a superior
+single algorithm: UDF can carry a declared switch, its receipt and its exact
+view Return. A general switch policy, cross-instrument optimality and an
+advantage over the best fixed baseline remain unproven and unactivated.
+
+Owning implementation:
+
+- `A0_BOOK/assets/a0-field-notes/index.html#udf-ink-mask-432`;
+- `A0_BOOK/assets/a0-field-notes/udf-ink-mask.js`;
+- `A0_BOOK/assets/a0-field-notes/udf-ink-mask.css`.
+
+The existing identities `OP-UDF-01`, `BT-045` and `MOD:TESSAREC` are reused.
+Canonical effect remains `0` identities, `0` relations and `0` aliases.
+
 If Mission Control later activates this project, the smallest next build is a
 Bench load/save/validate panel for this one profile plus a replay receipt. The
 profile must remain versioned and experimental until a second genuinely
