@@ -8,8 +8,9 @@ to every file.
 | --- | --- | --- |
 | Software, tests, configuration, and implementation code | [Apache License 2.0](LICENSE) | Original NEXAH software unless a file states otherwise |
 | Original documentation and repository research material | [CC BY 4.0](LICENSE-DOCS.md) | Original NEXAH prose, specifications, research records, and explanatory material unless a file states otherwise |
+| Original machine-readable datasets and derived numerical results | [CC0 1.0](LICENSE-DATA.md) | Original NEXAH data published as data unless a file states otherwise; schemas, configuration, and executable models follow their functional class |
 | Third-party or source-derived material | Its stated source license | Not relicensed by NEXAH |
-| Datasets, media, Library Works, and released artifacts with local terms | Their local license or provenance record | Local terms take precedence over repository defaults |
+| Media, Library Works, and released artifacts with local terms | Their local license or provenance record | Local terms take precedence over repository defaults |
 
 ## Interpretation
 
@@ -20,6 +21,10 @@ Source records and artifact-specific notices must remain attached or directly
 linked when material is copied, adapted, or redistributed. If no license is
 stated for third-party material, do not assume that repository access grants
 permission to reuse it.
+
+Licensing does not grant authority to speak for NEXAH or present a modified
+distribution as official. See [TRADEMARKS.md](TRADEMARKS.md) for descriptive
+use of project names and marks and [NOTICE](NOTICE) for project origin.
 
 ## Contributions
 

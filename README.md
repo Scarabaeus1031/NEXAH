@@ -242,9 +242,12 @@ Current public-launch execution state is recorded once in
 
 Software is released under the **[Apache License 2.0](LICENSE)**.
 Original NEXAH documentation and repository research material are released
-under **[CC BY 4.0](LICENSE-DOCS.md)**. Third-party and source-derived material
-retains its stated license and provenance. See the complete
-**[Licensing Scope](LICENSES.md)** and **[CITATION.cff](CITATION.cff)**.
+under **[CC BY 4.0](LICENSE-DOCS.md)**. Original machine-readable datasets and
+derived numerical results published as data are released under
+**[CC0 1.0](LICENSE-DATA.md)**. Third-party and source-derived material retains
+its stated license and provenance. See the complete **[Licensing
+Scope](LICENSES.md)**, project-origin **[NOTICE](NOTICE)**, naming policy
+**[TRADEMARKS.md](TRADEMARKS.md)**, and **[CITATION.cff](CITATION.cff)**.
 
 ---
 

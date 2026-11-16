@@ -53,6 +53,8 @@ By submitting a contribution for inclusion in NEXAH, you agree that:
   provided under the Apache License 2.0;
 - original documentation and research contributions are provided under
   CC BY 4.0;
+- original machine-readable datasets and derived numerical results submitted
+  as data are provided under CC0 1.0;
 - third-party or source-derived material must retain its original license,
   attribution, and provenance and must be clearly identified; and
 - you have the right to provide the contribution under the applicable terms.
