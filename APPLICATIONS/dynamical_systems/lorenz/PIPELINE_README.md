@@ -82,6 +82,24 @@ APPLICATIONS/outputs/lorenz_density/
 └── lorenz_density_map.png
 ```
 
+### Black Egg
+
+The [NEXAH Orientation Architecture board](visuals/black-egg-orientation-architecture-source.jpeg)
+names *The Black Egg* in its Lorenz panel. Here, **mask** means the board's
+visual metaphor for what a projection leaves outside the view.
+
+The [archived Lorenz density map](../../core_demos/lorenz/outputs/lorenz_density/lorenz_density_map.png)
+shows sampled occupancy in the X–Z plane. Dark areas are at the low end of
+that scale. The [density script](attractor/lorenz_density_map.py) counts
+samples per bin without applying a Black Egg mask.
+
+A return to the original ordered 3D record could recover the sampled Y values
+and sequence for this run. With the matching bin edges it could also identify
+which samples fell into each projected bin. The density CSV stores only bin
+counts. The [trajectory pipeline](pipeline/lorenz_visual_pipeline.py) exports
+ordered X, Y, Z for a separate run. A matching 3D record for the archived
+density image was not located in Core.
+
 ---
 
 ## 3. 🔹 Field Visualization (Optional but Important)
