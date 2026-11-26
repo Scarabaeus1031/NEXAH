@@ -79,7 +79,8 @@ Outputs:
 ```
 APPLICATIONS/outputs/lorenz_density/
 ├── lorenz_density.csv
-└── lorenz_density_map.png
+├── lorenz_density_map.png
+└── lorenz_density_record.npz
 ```
 
 ### Black Egg
@@ -93,9 +94,21 @@ shows sampled occupancy in the X–Z plane. Dark areas are at the low end of
 that scale. The [density script](attractor/lorenz_density_map.py) counts
 samples per bin without applying a Black Egg mask.
 
-A return to the original ordered 3D record could recover the sampled Y values
-and sequence for this run. With the matching bin edges it could also identify
-which samples fell into each projected bin. The density CSV stores only bin
+Run the density stage on its own to open **Black Egg U-Turn** in a Matplotlib
+window.
+
+```bash
+python APPLICATIONS/dynamical_systems/lorenz/attractor/lorenz_density_map.py
+```
+
+Click an X–Z cell to highlight its samples in the 3D record. The lower plot
+shows their Y values against their original sample numbers. Click a point or
+use ↑ and ↓ to step through the cell's samples and read their X, Y and Z
+values. An empty cell reports zero samples in this run.
+
+The density and the ordered 3D record come from the same run. The NPZ stores
+the ordered `trajectory` (X, Y, Z by column), `density` (Z rows, X columns),
+and the matching `x_edges` and `z_edges`. The density CSV stores only bin
 counts. The [trajectory pipeline](pipeline/lorenz_visual_pipeline.py) exports
 ordered X, Y, Z for a separate run. A matching 3D record for the archived
 density image was not located in Core.
