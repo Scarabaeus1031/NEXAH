@@ -5,6 +5,7 @@ Runs a minimal pipeline:
 field → transition structure → navigation behavior
 """
 
+import argparse
 import subprocess
 import sys
 import os
@@ -17,13 +18,13 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
-def run(script_rel_path):
+def run(script_rel_path, *args):
     script_path = os.path.join(BASE_DIR, script_rel_path)
 
     print(f"\n▶ Running: {script_rel_path}\n")
 
     try:
-        subprocess.run([sys.executable, script_path], check=True)
+        subprocess.run([sys.executable, script_path, *args], check=True)
     except subprocess.CalledProcessError as e:
         print(f"❌ Error while running {script_rel_path}")
         print(e)
@@ -35,6 +36,18 @@ def run(script_rel_path):
 # ============================
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Run the NEXAH Demonstrator.")
+    parser.add_argument(
+        "--black-egg",
+        action="store_true",
+        help="Open the Lorenz Black Egg U-Turn with the example cell selected.",
+    )
+    if parser.parse_args().black_egg:
+        run(
+            "../../../APPLICATIONS/dynamical_systems/lorenz/attractor/lorenz_density_map.py",
+            "--example",
+        )
+        sys.exit(0)
 
     print("⚡ NEXAH Demonstrator — Quick Run")
 

@@ -293,6 +293,21 @@ unchanged: requesting six sheets currently yields seven observed labels because
 the maximum radius enters an additional `np.digitize` boundary bin. This is a
 recorded Demonstrator limitation, not an externally validated regime model.
 
+### Black Egg U-Turn
+
+```bash
+python PROTO_CORE/NEXAH_DEMONSTRATOR/scripts/run_demo.py --black-egg
+```
+
+This mode opens the X–Z density and its ordered 3D record with the cell
+containing sample 574 selected. Click another cell to inspect its samples.
+The lower plot shows Y against the sample number. Click a point or use
+↑ and ↓ to step through the cell in run order.
+
+The view uses the [Lorenz density pipeline](../../APPLICATIONS/dynamical_systems/lorenz/PIPELINE_README.md#black-egg).
+Its density and 3D record come from one new density run. The transition
+structure above uses its own reference trajectory.
+
 ---
 
 ## 📊 Key Outputs
