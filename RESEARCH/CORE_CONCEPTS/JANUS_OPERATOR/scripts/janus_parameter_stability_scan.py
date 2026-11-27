@@ -209,6 +209,7 @@ def compute_curvature(
     eps: float = 1.0e-8,
 ) -> Array:
 
+    # Each estimate belongs to the middle sample of its three-point stencil.
     r1 = states[1:-1] - states[:-2]
     r2 = states[2:] - states[1:-1]
 
@@ -246,18 +247,23 @@ def analyze_parameter(
         }
 
     _, janus = compute_janus(t, states)
-
     curvature = compute_curvature(states)
 
-    curvature = curvature[: len(janus)]
+    # Both stencils are centered on states[1:-1]. Check the expected length
+    # instead of truncating either series, which could hide an alignment error.
+    expected = (len(states) - 2,)
+    if janus.shape != expected or curvature.shape != expected:
+        raise ValueError("JANUS and curvature must have one value per interior sample")
 
+    return summarize_parameter(value, janus, curvature)
+
+
+def summarize_parameter(
+    value: float,
+    janus: Array,
+    curvature: Array,
+) -> Dict[str, float]:
     log_curv = np.log10(curvature + 1.0e-8)
-
-    n = min(len(janus), len(log_curv))
-
-    janus = janus[:n]
-    log_curv = log_curv[:n]
-    curvature = curvature[:n]
 
     if (
         np.std(janus) <= 1.0e-12
@@ -291,7 +297,7 @@ def analyze_parameter(
 
     return {
         "parameter": float(value),
-        "samples": float(n),
+        "samples": float(len(janus)),
         "janus_mean": float(np.mean(janus)),
         "janus_std": float(np.std(janus)),
         "curvature_mean": float(np.mean(curvature)),
@@ -299,49 +305,8 @@ def analyze_parameter(
         "overlap_fraction": float(overlap_fraction),
         "orientation_angle": float(angle),
     }
-    _, janus = compute_janus(t, states)
 
-    curvature = compute_curvature(states)
-    curvature = curvature[: len(janus)]
 
-    log_curv = np.log10(curvature + 1.0e-8)
-
-    n = min(len(janus), len(log_curv))
-
-    janus = janus[:n]
-    log_curv = log_curv[:n]
-    curvature = curvature[:n]
-
-    if np.std(janus) <= 1.0e-12 or np.std(log_curv) <= 1.0e-12:
-        r = 0.0
-    else:
-        r, _ = pearsonr(janus, log_curv)
-
-    low_threshold = np.quantile(janus, 0.08)
-    high_threshold = np.quantile(log_curv, 0.92)
-
-    low_mask = janus <= low_threshold
-    high_mask = log_curv >= high_threshold
-
-    overlap_mask = low_mask & high_mask
-
-    overlap_fraction = np.sum(overlap_mask) / max(np.sum(low_mask), 1)
-
-    angle = np.degrees(np.arctan2(overlap_fraction, r))
-
-    if angle > 180:
-        angle -= 360
-
-    return {
-        "parameter": float(value),
-        "samples": float(n),
-        "janus_mean": float(np.mean(janus)),
-        "janus_std": float(np.std(janus)),
-        "curvature_mean": float(np.mean(curvature)),
-        "r": float(r),
-        "overlap_fraction": float(overlap_fraction),
-        "orientation_angle": float(angle),
-    }
 # ------------------------------------------------------------
 # Plotting
 # ------------------------------------------------------------
@@ -397,8 +362,9 @@ def plot_orientation_paths(results: Dict[str, List[Dict[str, float]]], out_path:
 
         ax.plot(corr, overlap, marker="o", linewidth=2.0, label=system)
 
-        for i, p in enumerate(params):
-            ax.text(corr[i] + 0.006, overlap[i] + 0.004, f"{p:g}", fontsize=8)
+        for r, fraction, value in zip(corr, overlap, params):
+            if np.isfinite(r) and np.isfinite(fraction):
+                ax.text(r + 0.006, fraction + 0.004, f"{value:g}", fontsize=8)
 
     ax.set_title("JANUS Orientation Paths Under Parameter Variation")
     ax.set_xlabel("JANUS vs log-curvature correlation r")
@@ -425,16 +391,13 @@ def write_summary(results: Dict[str, List[Dict[str, float]]], out_path: Path) ->
         lines.append(system)
         lines.append("-" * len(system))
 
-        corr = np.array([r["r"] for r in rows])
-        overlap = np.array([r["overlap_fraction"] for r in rows])
-        angle = np.array([r["orientation_angle"] for r in rows])
-
-        lines.append(f"r mean: {np.mean(corr):.6f}")
-        lines.append(f"r std: {np.std(corr):.6f}")
-        lines.append(f"overlap mean: {np.mean(overlap):.6f}")
-        lines.append(f"overlap std: {np.std(overlap):.6f}")
-        lines.append(f"angle mean: {np.mean(angle):.6f}")
-        lines.append(f"angle std: {np.std(angle):.6f}")
+        valid = [row for row in rows if row["samples"] > 0]
+        lines.append(f"Successful integrations: {len(valid)}/{len(rows)}")
+        if valid:
+            for key, label in (("r", "r"), ("overlap_fraction", "overlap"), ("orientation_angle", "angle")):
+                values = [row[key] for row in valid]
+                lines.append(f"{label} mean: {np.mean(values):.6f}")
+                lines.append(f"{label} std: {np.std(values):.6f}")
         lines.append("")
 
         lines.append("parameter, samples, janus_mean, janus_std, curvature_mean, r, overlap_fraction, orientation_angle")
@@ -503,14 +466,12 @@ def run_experiment() -> None:
     print("================================================")
 
     for system, rows in results.items():
-        corr = np.array([r["r"] for r in rows])
-        overlap = np.array([r["overlap_fraction"] for r in rows])
-        angle = np.array([r["orientation_angle"] for r in rows])
-
-        print(system)
-        print(f"  r mean/std       : {np.mean(corr):.6f} / {np.std(corr):.6f}")
-        print(f"  overlap mean/std : {np.mean(overlap):.6f} / {np.std(overlap):.6f}")
-        print(f"  angle mean/std   : {np.mean(angle):.6f} / {np.std(angle):.6f}")
+        valid = [row for row in rows if row["samples"] > 0]
+        print(f"{system}: {len(valid)}/{len(rows)} successful integrations")
+        if valid:
+            for key, label in (("r", "r"), ("overlap_fraction", "overlap"), ("orientation_angle", "angle")):
+                values = [row[key] for row in valid]
+                print(f"  {label} mean/std: {np.mean(values):.6f} / {np.std(values):.6f}")
         print()
 
     print(f"outputs saved to: {output_cfg.output_dir.resolve()}")
