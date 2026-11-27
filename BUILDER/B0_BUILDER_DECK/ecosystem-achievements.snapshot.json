@@ -1,61 +1,61 @@
 {
   "schema": "nexah.builder.ecosystem-achievements-snapshot/1.0.0",
-  "asOf": "2026-11-19",
-  "generatedAt": "2026-11-20T03:07:26.406Z",
+  "asOf": "2026-11-18",
+  "generatedAt": "2026-11-27T01:13:43.975Z",
   "scope": "Local NEXAH ECOSYSTEM workspace; excludes Git object stores, node_modules, .work, tmp, Python caches and virtual environments.",
   "caution": "Footprint and commit counts measure corpus scale, not unique authorship, scientific validity, publication state or product readiness.",
   "filesystem": {
     "totals": {
-      "files": 69885,
-      "bytes": 17158621671,
-      "html": 7722,
-      "models3d": 149
+      "files": 70697,
+      "bytes": 17404721356,
+      "html": 8302,
+      "models3d": 146
     },
     "groups": {
       "code": {
-        "files": 23240,
-        "bytes": 533236593
+        "files": 23187,
+        "bytes": 559802326
       },
       "documents": {
-        "files": 12388,
-        "bytes": 593401246
+        "files": 12470,
+        "bytes": 594692536
       },
       "data": {
-        "files": 14276,
-        "bytes": 3625451724
+        "files": 14469,
+        "bytes": 3627787603
       },
       "images": {
-        "files": 18294,
-        "bytes": 9604201053
+        "files": 18867,
+        "bytes": 9789588282
       },
       "models3d": {
-        "files": 149,
-        "bytes": 148211469
+        "files": 146,
+        "bytes": 141123931
       },
       "media": {
-        "files": 69,
-        "bytes": 1106907701
+        "files": 70,
+        "bytes": 1125040733
       },
       "other": {
-        "files": 1469,
-        "bytes": 1547211885
+        "files": 1488,
+        "bytes": 1566685945
       }
     },
     "topLevels": [
       {
         "name": "30 SCIENCE LAB",
-        "files": 21974,
-        "bytes": 8471303539
+        "files": 22583,
+        "bytes": 8546394584
       },
       {
         "name": "10 NEXAH CORE",
-        "files": 11521,
-        "bytes": 3054620694
+        "files": 11522,
+        "bytes": 3054902684
       },
       {
         "name": "40 EXPERIENCE PRODUCTION",
-        "files": 19519,
-        "bytes": 2479014564
+        "files": 19710,
+        "bytes": 2648614726
       },
       {
         "name": "20 ORION",
@@ -64,8 +64,8 @@
       },
       {
         "name": "00 EXECUTIVE",
-        "files": 4184,
-        "bytes": 1086498133
+        "files": 4193,
+        "bytes": 1087591853
       },
       {
         "name": "70 SCARABAEUS1033 WORKBENCH",
@@ -98,14 +98,14 @@
         "bytes": 67714
       },
       {
+        "name": ".pnpm-store",
+        "files": 3,
+        "bytes": 40960
+      },
+      {
         "name": "A0_SCIENCE_2026-10-21_READ_RELATIONS_PREVIEW.html",
         "files": 1,
         "bytes": 22332
-      },
-      {
-        "name": ".pnpm-store",
-        "files": 1,
-        "bytes": 8192
       },
       {
         "name": "OWNERSHIP AND JOBS.md",
@@ -121,23 +121,23 @@
   },
   "git": {
     "repositoryCount": 10,
-    "commitSum": 15525,
-    "uniqueCommits": 9487,
-    "trackedFilesSum": 32028,
+    "commitSum": 18388,
+    "uniqueCommits": 9656,
+    "trackedFilesSum": 32459,
     "repositories": [
       {
         "name": "NEXAH-Mission-Control",
         "path": "00 EXECUTIVE/NEXAH-Mission-Control",
-        "commits": 193,
-        "trackedFiles": 3608,
-        "dirtyEntries": 79
+        "commits": 226,
+        "trackedFiles": 3622,
+        "dirtyEntries": 45
       },
       {
         "name": "NEXAH",
         "path": "10 NEXAH CORE/NEXAH",
-        "commits": 8748,
-        "trackedFiles": 9764,
-        "dirtyEntries": 28
+        "commits": 8755,
+        "trackedFiles": 9765,
+        "dirtyEntries": 29
       },
       {
         "name": "NEXAH-ORION-V1-CERTIFIED-d34fbb2f",
@@ -156,7 +156,7 @@
       {
         "name": "NEXAH-framework-ci",
         "path": "20 ORION/NEXAH-ORION/.workspace/repositories/NEXAH-framework-ci",
-        "commits": 5997,
+        "commits": 8691,
         "trackedFiles": 8986,
         "dirtyEntries": 2
       },
@@ -170,22 +170,22 @@
       {
         "name": "NEXAH-Science-Lab",
         "path": "30 SCIENCE LAB/NEXAH-Science-Lab",
-        "commits": 350,
-        "trackedFiles": 6960,
-        "dirtyEntries": 1224
+        "commits": 465,
+        "trackedFiles": 7371,
+        "dirtyEntries": 1152
       },
       {
         "name": "NEXAH-Experience",
         "path": "40 EXPERIENCE PRODUCTION/NEXAH-Experience",
-        "commits": 63,
-        "trackedFiles": 388,
+        "commits": 74,
+        "trackedFiles": 392,
         "dirtyEntries": 2
       },
       {
         "name": "NEXAHEDRON",
         "path": "40 EXPERIENCE PRODUCTION/NEXAHEDRON",
-        "commits": 95,
-        "trackedFiles": 1063,
+        "commits": 98,
+        "trackedFiles": 1064,
         "dirtyEntries": 0
       },
       {
@@ -204,7 +204,7 @@
     "nonRunnableBuilderObjects": 7,
     "researchResults": 66,
     "works": 82,
-    "controllingSources": 548,
+    "controllingSources": 555,
     "publicSurfaces": 5,
     "htmlArtifactsCovered": 326,
     "sourceGraphEntities": 332,
