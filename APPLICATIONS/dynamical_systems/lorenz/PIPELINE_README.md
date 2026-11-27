@@ -101,6 +101,14 @@ window.
 python APPLICATIONS/dynamical_systems/lorenz/attractor/lorenz_density_map.py
 ```
 
+Add `--example` to open the view with the X–Z cell containing sample 574
+selected (sample numbers start at 1). The option affects the initial view.
+Both invocations generate the same PNG, CSV, and NPZ files.
+
+```bash
+python APPLICATIONS/dynamical_systems/lorenz/attractor/lorenz_density_map.py --example
+```
+
 Click an X–Z cell to highlight its samples in the 3D record. The lower plot
 shows their Y values against their original sample numbers. Click a point or
 use ↑ and ↓ to step through the cell's samples and read their X, Y and Z

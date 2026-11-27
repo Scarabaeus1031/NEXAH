@@ -14,6 +14,7 @@ Files:
 - lorenz_density_record.npz
 """
 
+import argparse
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -127,7 +128,7 @@ def bin_index(values, edges):
     return np.minimum(index, len(edges) - 2)
 
 
-def black_egg_view(traj, density, xedges, zedges):
+def black_egg_view(traj, density, xedges, zedges, *, initial_sample=None):
     x_bins = bin_index(traj[:, 0], xedges)
     z_bins = bin_index(traj[:, 2], zedges)
     samples = np.empty(0, dtype=int)
@@ -216,6 +217,9 @@ def black_egg_view(traj, density, xedges, zedges):
 
     fig.canvas.mpl_connect("button_press_event", on_click)
     fig.canvas.mpl_connect("key_press_event", on_key)
+    if initial_sample is not None:
+        x, _, z = traj[initial_sample]
+        select_cell(x, z)
     return fig
 
 
@@ -236,7 +240,7 @@ def compute_field(density):
 # Main
 # ---------------------------------------------------
 
-def main():
+def main(*, show_example=False):
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     print("\n🧠 Generating Lorenz Density Map\n")
 
@@ -251,11 +255,15 @@ def main():
         record_path, trajectory=traj, density=density, x_edges=xedges, z_edges=zedges
     )
     print("Saved:", record_path)
-    black_egg_view(traj, density, xedges, zedges)
+    # The example cell contains sample 574 (one-based) from the density run.
+    initial_sample = 573 if show_example else None
+    black_egg_view(traj, density, xedges, zedges, initial_sample=initial_sample)
     plt.show()
 
     print("\n✅ Density map finished.\n")
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Explore the Lorenz density and 3D record.")
+    parser.add_argument("--example", action="store_true", help="Open with an example cell selected.")
+    main(show_example=parser.parse_args().example)
